@@ -1,0 +1,56 @@
+#!/bin/env bash
+
+_UNAME="$(uname)"
+
+if [[ ${_UNAME} == 'Linux' ]]; then
+  platform="linux"
+elif [[ ${_UNAME} == 'Darwin' ]]; then
+  platform="darwin"
+fi
+
+case "${platform}" in
+darwin)
+
+  PATH="$(brew --prefix coreutils)/libexec/gnubin:${HOME}/bin:${PATH}"
+  export PATH="${PATH}"
+
+  _BREW_REPO="$(/usr/local/bin/brew --repository)"
+  if [[ -f "${_BREW_REPO}/Library/Contributions/brew_bash_completion.sh" ]]; then
+    # shellcheck disable=SC1091
+    source "${_BREW_REPO}/usr/local/bin/brew --repository)/Library/Contributions/brew_bash_completion.sh"
+  fi
+
+  _BREW_PREFIX="$(brew --prefix)"
+  if [[ -f "${_BREW_PREFIX}/etc/bash_completion.d/vagrant" ]]; then
+    # shellcheck disable=SC1091
+    source "${_BREW_PREFIX}/etc/bash_completion.d/vagrant"
+  fi
+  if [[ -f "${_BREW_PREFIX}/etc/bash_completion.d/packer" ]]; then
+    # shellcheck disable=SC1091
+    source "${_BREW_PREFIX}/etc/bash_completion.d/packer"
+  fi
+  ;;
+
+linux)
+
+  [[ -d /media/vm/vagrant.d ]] && export VAGRANT_HOME=/media/vm/vagrant.d
+  ;;
+
+*)
+
+  echo "Platform '${platform}' not in .bashrd, please add it."
+  ;;
+
+esac
+
+[[ -d "${HOME}/bin" ]] && PATH="${HOME}/bin:${PATH}"
+[[ -d "${HOME}/bin" ]] && PATH="${HOME}/src/bin:${PATH}"
+
+[[ -f ~/.bash_aliases ]] && . "${HOME}/.bash_aliases"
+
+# shellcheck disable=SC2312
+[[ -x $(command -v terraform) ]] &&
+  complete -o nospace -C "$(command -v terraform)" terraform
+# shellcheck disable=SC2312
+[[ -x $(command -v vg) ]] &&
+  eval "$(vg eval --shell bash)"

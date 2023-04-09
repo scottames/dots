@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# https://github.com/direnv/direnv/wiki/Python#virtualenvwrapper
+
+layout_virtualenv() {
+  local venv_path="${1}"
+  # shellcheck disable=SC1091
+  source "${venv_path}/bin/activate"
+}
+
+layout_virtualenvwrapper() {
+  local venv_path="${PYENV_ROOT}/versions/${1}"
+  layout_virtualenv "${venv_path}"
+}

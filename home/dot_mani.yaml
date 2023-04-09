@@ -1,0 +1,41 @@
+import:
+  - ~/.mani-conf.yaml
+projects:
+  # personal
+  cmder:
+    path: ${SRC_DIR}/scottames/cmder
+    url: git@github.com:scottames/cmder.git
+    tags: [personal, util]
+  cv:
+    path: ${SRC_DIR}/scottames/cv
+    url: git@github.com:scottames/cv.git
+    tags: [personal]
+  misc:
+    path: ${SRC_DIR}/scottames/misc
+    url: git@github.com:scottames/misc.git
+    tags: [personal]
+  pm:
+    path: ${SRC_DIR}/scottames/pm
+    url: git@github.com:scottames/pm.git
+    tags: [personal, util]
+    # pub
+  magefile/mage:
+    path: ${SRC_DIR}/pub/magefile/mage
+    url: https://github.com/magefile/mage
+    tags: [pub, util]
+  paperwm/PaperWM:
+    path: ${SRC_DIR}/pub/paperwm/PaperWM
+    url: https://github.com/paperwm/PaperWM.git
+    tags: [pub, util]
+  rajasegar/alacritty-themes:
+    path: ~/.config/alacritty/alacritty-themes
+    url: https://github.com/rajasegar/alacritty-themes.git
+    tags: [pub, alacritty, themes]
+  catppuccin/alacritty:
+    path: ~/.config/alacritty/catppuccin
+    url: https://github.com/catppuccin/alacritty.git
+    tags: [pub, alacritty, themes, catppuccin]
+  catppuccin/bat:
+    path: ${SRC_DIR}/pub/catppuccin/bat
+    url: https://github.com/catppuccin/bat.git
+    tags: [pub, bat, themes, catppuccin]

@@ -1,0 +1,74 @@
+#!/usr/bin/env zsh
+
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+function setenv() { export "$1=$2"; }
+
+if [[ -f "${HOME}/.setenv" ]]
+then
+  source "${HOME}/.setenv"
+else
+  echo "⚠ '${HOME}/.setenv' not found!"
+fi
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ Tilix                                                    │
+#  ╰──────────────────────────────────────────────────────────╯
+if [ -n "${TILIX_ID}" ] || [ -n "${VTE_VERSION}" ]; then
+  [ -f /etc/profile.d/vte.sh ] && source /etc/profile.d/vte.sh
+fi
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ https://github.com/zplug/zplug                           │
+#  ╰──────────────────────────────────────────────────────────╯
+if [[ ! -d "${ZPLUG_HOME}" ]]; then
+  git clone --depth=1 https://github.com/zplug/zplug "${ZPLUG_HOME}" && \
+    source "${ZPLUG_HOME}/init.zsh" && zplug update --self-manage
+else
+  source "${ZPLUG_HOME}/init.zsh"
+fi
+
+source "${HOME}/.zsh/is_has.zsh"    # DONE
+source "${HOME}/.zsh/path.zsh"      # DONE
+source "${HOME}/.zsh/gpg.zsh"       # DONE
+source "${HOME}/.zsh/history.zsh"   # DONE
+source "${HOME}/.zsh/spectrum.zsh"  # DONE
+source "${HOME}/.zsh/prompt.zsh"    # DONE
+source "${HOME}/.zsh/zsh_hooks.zsh" # DONE
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+zplug load # --verbose
+
+if [ "${ZPLUG_UPDATE}" = true ] ; then
+  zplugs_install
+  zplug update
+fi
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ post zplug load                                          │
+#  ╰──────────────────────────────────────────────────────────╯
+source "${HOME}/.zsh/colors.zsh"     # DONE
+source "${HOME}/.zsh/completion.zsh" # DONE
+source "${HOME}/.zsh/app_init.zsh"   # DONE
+source "${HOME}/.zsh/bindkeys.zsh"   # DONE
+source "${HOME}/.zsh/aliases.zsh"    # DONE
+source "${HOME}/.zsh/functions.zsh"  # DONE
+source "${HOME}/.zsh/packages.zsh"   # DONE
+source "${HOME}/.zsh/setopt.zsh"     # DONE
+
+# untracked dotfile for sensative exports, etc
+if [[ -f ~/.untracked.zsh ]]
+then
+  source ~/.untracked.zsh # Done
+fi
+
+# work dotfile for work related exports, etc
+if [[ -f ~/.work.zsh ]]
+then
+  source ~/.work.zsh # Done
+fi

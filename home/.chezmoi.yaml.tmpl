@@ -1,0 +1,40 @@
+{{ $email := promptStringOnce . "email" "Email address" "scott@ames.sh" -}}
+{{ $name := promptStringOnce . "name" "Full name" "Scott Ames" -}}
+{{ $githubUser := promptStringOnce . "githubUser" "GitHub Username" "scottames" -}}
+
+{{ $isServer := false -}}
+{{ $isLaptop := false -}}
+
+{{- if eq .chezmoi.os "linux" -}}
+{{-   $chassis := output "hostnamectl" "chassis" | trim -}}
+{{-   if eq $chassis "server" -}}
+{{-     $isServer = true -}}
+{{-   else if eq $chassis "laptop" -}}
+{{-     $isLaptop = true -}}
+{{-   end -}}
+{{- end -}}
+
+{{ $isNoGUI := or (eq .chezmoi.os "android") $isServer -}}
+{{ $isGUI := and (not $isNoGUI) (eq .chezmoi.os "linux") -}}
+
+sourceDir: {{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots
+progress: true
+
+diff:
+  pager: delta
+  command: delta
+  args: ["--paging", "never"]
+  exclude: [dirs, scripts]
+
+data:
+  me:
+    email: {{ $email }}
+    name: {{ $name }}
+    github:
+      username: {{ $githubUser }}
+  chassis: {{ .chezmoi.os }}
+  is_no_gui: {{ $isNoGUI }}
+  is_laptop: {{ $isLaptop }}
+  is_linux_gui: {{ $isGUI }}
+  is_server: {{ $isServer }}
+  is_arch_linux: {{ not (not (and (eq .chezmoi.os "linux") (lookPath "pacman"))) }}

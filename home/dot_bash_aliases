@@ -1,0 +1,18 @@
+#!/bin/env bash
+
+if [[ -x /usr/bin/dircolors ]]; then
+  # shellcheck disable=SC2312
+  if test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)"; then
+    #shellcheck disable=SC2312
+    eval "$(dircolors -b)"
+  fi
+fi
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'

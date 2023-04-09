@@ -1,0 +1,13 @@
+packages:
+  - type: github_release
+    repo_owner: dim-an
+    repo_name: cod
+    asset: cod-{{.OS}}-{{.Arch}}.tgz
+    description: cod is a completion daemon for bash/fish/zsh
+    checksum:
+      enabled: false
+  - type: github_release
+    repo_owner: alajmo
+    repo_name: mani
+    asset: mani_{{trimV .Version}}_{{.OS}}_{{.Arch}}.tar.gz
+    description: 🤖 CLI tool to help you manage repositories

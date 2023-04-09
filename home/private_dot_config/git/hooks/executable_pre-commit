@@ -1,0 +1,57 @@
+#!/bin/env bash
+
+set -e
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ This is meant to be a 'global' pre-commit which is       │
+#  │  run on all repositories on the system.                  │
+#  │ It has 3 stages:                                         │
+#  │   1. If `!no-commit` is found in the changes, abort      │
+#  │  immediately                                             │
+#  │   2. Execute the 'global' pre-commit config              │
+#  │   3. Execute the pre-commit config local to the          │
+#  │  reposity, if exists                                     │
+#  ╰──────────────────────────────────────────────────────────╯
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ abort the commit if !nocommit found                      │
+#  ╰──────────────────────────────────────────────────────────╯
+#  shellcheck disable=2312
+if git commit -v --dry-run | grep '!nocommit' >/dev/null 2>&1; then
+  printf "\n[!] Remove the !nocommit string and try again.\n\n"
+  exit 1
+fi
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ execute the 'global' pre-commit config                   │
+#  ╰──────────────────────────────────────────────────────────╯
+if [[ -f "${HOME}/.pre-commit-config.yaml" ]]; then
+
+  _PRECOMMIT_GLOBAL_ARGS=(hook-impl --config="${HOME}/.pre-commit-config.yaml" --hook-type=pre-commit)
+  _HERE="$(cd "$(dirname "${0}")" && pwd)"
+  _PRECOMMIT_GLOBAL_ARGS+=(--hook-dir "${_HERE}" -- "${@}")
+
+  #  shellcheck disable=2312
+  if [[ -n $(command -v pre-commit) ]]; then
+    printf "\n[i] Running global pre-commit\n\n"
+
+    pre-commit "${_PRECOMMIT_GLOBAL_ARGS[@]}"
+  else
+    printf "\n[!] 'pre-commit' not found.  Did you forget to activate your virtualenv?\n\n" 1>&2
+    exit 1
+  fi
+
+fi
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ execute the local pre-commit hook if exists              │
+#  ╰──────────────────────────────────────────────────────────╯
+if [[ -e ./.git/hooks/pre-commit ]]; then
+  printf "\n[i] Running local pre-commit\n\n"
+
+  ./.git/hooks/pre-commit "${@}"
+else
+
+  printf "\n[i] No local pre-commit, ignoring...\n\n"
+  exit 0
+fi

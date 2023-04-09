@@ -1,0 +1,19 @@
+# vim: set ft=gitignore
+
+**/*.{bak,log,old,foo}
+.cache
+
+{{- if .is_no_gui }}
+# Ignored if no GUI environment
+.config/{alacritty,Code*,paperwm}
+.local/share/{fcitx5,mpd,rofimoji,Xresources*}
+.xprofile
+###
+{{- end }}
+
+{{- if not .is_arch_linux }}
+# Ignore if not Arch Linux
+{{- end }}
+
+# Symlinks
+aqua.yaml

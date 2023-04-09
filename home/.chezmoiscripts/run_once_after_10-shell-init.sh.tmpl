@@ -1,0 +1,49 @@
+#!/bin/env bash
+
+set -euo pipefail
+
+# Colors
+# red='\033[0;31m'
+# green='\033[0;32m'
+# blue='\033[0;34m'
+# magenta='\033[0;35m'
+cyan='\033[0;36m'
+yellow='\033[0;33m'
+clear='\033[0m'
+
+function setenv() { export "$1=$2"; }
+
+if [[ -f "${HOME}/.setenv" ]]; then
+  source "${HOME}/.setenv"
+else
+  echo -e "${yellow}⚠ '${HOME}/.setenv' not found!${clear}"
+fi
+
+if [[ -n $(command -v aqua) ]]; then
+  echo -e "${cyan}installing aquas${clear}"
+
+  [[ -d ${AQUA_ROOT_DIR} ]] && export PATH="${AQUA_ROOT_DIR}:${PATH}"           # aqua
+  [[ -d "${AQUA_ROOT_DIR}/bin" ]] && export PATH="${AQUA_ROOT_DIR}/bin:${PATH}" # aqua bins
+  [[ -f "${AQUA_CONFIG_DIR}/policy.yaml" ]] &&
+    export AQUA_POLICY_CONFIG="${AQUA_CONFIG_DIR}/policy.yaml"
+
+  aqua i -a
+else
+  echo -e "${yellow}⚠ aqua not found!${clear}"
+fi
+
+if [[ -n $(command -v fish) ]]; then
+  echo -e "${cyan}initializing fish${clear}"
+  fish -c "_init"
+else
+  echo -e "${yellow}⚠ fish not found!${clear}"
+fi
+
+if [[ -f "${HOME}/mani.yaml" ]] && [[ -n $(command -v mani) ]]; then
+  echo -e "${cyan}initializing mani${clear}"
+  mani sync
+else
+  echo -e "${yellow}⚠ mani not found!${clear}"
+fi
+
+# vi: ft=sh

@@ -1,0 +1,57 @@
+[user]
+	name = Scott Ames
+	email = scott@ames.sh
+	signingKey = 2BD39C22D95724B86F0FA7E162DD2F500AB076A0 #gitleaks:allow # TODO: template & pull from 1pass
+[commit]
+  gpgsign = true
+[url "git@github.com:scottames"]
+  insteadOf = https://github.com/scottames
+[include]
+	path = ~/.gitconfig-work
+[core]
+	excludesfile = ~/.config/git/ignore
+	hooksPath = ~/.config/git/hooks/
+  pager = delta
+[pull]
+	rebase = true
+[push]
+	default = simple
+[fetch]
+	prune = true
+[merge]
+    conflictstyle = diff3
+[tag]
+	forceSignAnnotated = false
+	gpgSign = true
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false
+[alias]
+  add-fzf = "!f(){ git add $(git ls-files --modified --others --exclude-standard | fzf -m --preview 'git diff --color=always {} | delta');}; f"
+  alias = "!git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /"
+	amend = commit --amend --no-edit
+	c = commit
+  com = "!f(){ git checkout $(git main-branch) $@;}; f"
+  diff-fzf = "!f(){ git diff $(git ls-files --modified --others --exclude-standard | fzf -m --preview 'git diff --color=always {} | delta');}; f"
+  down = "!f() { git pull --rebase origin $(git main-branch) $@;}; f" # see also update
+	downtags = fetch --tags
+	# fix commits up to a given hash (useful for fixing commit messages, user info, or signing)
+	fix-up-to = rebase --exec 'git commit --amend --no-edit -n -S' -i
+	last = log -1 HEAD
+	latest = show --name-only --oneline HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  main-branch = "!git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4"
+	nah = "!git reset --hard && git clean -df"
+  rebasem = "!f(){ git rebase -i --autosquash origin/$(git main-branch) --no-verify $@;}; f"
+	save = "!git add -A; git commit ."
+  show-fzf = "!f(){ git show $(git log --pretty=oneline | cut -c1-7 | fzf -m --preview 'git diff --color=always {} | delta');}; f"
+	up = push -u origin master
+  update = "!f() { git pull --rebase origin $(git main-branch) $@;}; f" # see also update
+  upm = "!f(){ git pull --rebase --autostash origin $(git main-branch) $@;}; f"
+	uptags = push --follow-tags
