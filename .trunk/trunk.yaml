@@ -56,6 +56,9 @@ lint:
       paths:
         # Generated files
         - "*.tmpl"
+    - linters: [markdownlint]
+      paths:
+        - CHANGELOG.md
 runtimes:
   enabled:
     - go@1.19.5
