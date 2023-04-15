@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - main
+  # yamllint disable-line rule:empty-values
   pull_request:
-    branches:
-      - main
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
