@@ -1,4 +1,4 @@
-name: Check
+name: trunk.io
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   getModules:
-    name: Check
+    name: trunk.io
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -1,0 +1,36 @@
+name: chezmoi init
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+jobs:
+  getModules:
+    name: chezmoi init
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2.1.0
+      - name: Set up docker buildx
+        uses: docker/setup-buildx-action@v2.2.1
+      - name: Build docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: assets/docker/archlinux/Dockerfile
+          load: true
+          push: false
+          tags: scottames/dots/archlinux:latest
+      - name: Run chezmoi init in arch linux docker container
+        uses: addnab/docker-run-action@v3
+        with:
+          image: scottames/dots/archlinux:latest
+          options: -v ${{ github.workspace }}:/home/container/src/scottames/dots
+          run: /home/container/src/scottames/dots/scripts/init.sh --no-tty
