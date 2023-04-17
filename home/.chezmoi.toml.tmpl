@@ -1,0 +1,51 @@
+{{ $githubUser := "scottames" -}}
+{{ $chassis    := "" -}}
+{{ $isDocker   := false -}}
+{{ $isServer   := false -}}
+{{ $isLaptop   := false -}}
+
+{{- if eq .chezmoi.os "linux" -}}
+{{-   if lstat "/.dockerenv" -}}
+{{-     $chassis = "docker" -}}
+{{-     $isDocker = true -}}
+{{-   else -}}
+{{-     $chassis = output "hostnamectl" "chassis" | trim -}}
+{{-     if eq $chassis "server" -}}
+{{-       $isServer = true -}}
+{{-     else if eq $chassis "laptop" -}}
+{{-       $isLaptop = true -}}
+{{-     end -}}
+{{-   end -}}
+{{- end -}}
+
+{{ $isNoGUI := or (eq .chezmoi.os "android") $isServer -}}
+{{ $isGUI := and (not $isNoGUI) (eq .chezmoi.os "linux") -}}
+
+sourceDir = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+progress = true
+
+{{ if lookPath "delta" -}}
+[diff]
+  pager = "delta"
+  command = "delta"
+  args = ["--paging", "never"]
+  exclude = ["dirs", "scripts"]
+
+{{ end -}}
+[data]
+  chassis = "{{       .chezmoi.os }}"
+  chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+  is_docker = "{{     $isDocker   }}"
+  is_no_gui = "{{     $isNoGUI    }}"
+  is_laptop = "{{     $isLaptop   }}"
+  is_linux_gui = "{{  $isGUI      }}"
+  is_server = "{{     $isServer   }}"
+  is_arch_linux = "{{ not (not (and (eq .chezmoi.os "linux") (lookPath "pacman"))) }}"
+
+  [data.me]
+    email = "scott@ames.sh"
+    name = "Scott Ames"
+    [data.me.github]
+      username = "{{  $githubUser }}"
+
+# vi: ft=toml

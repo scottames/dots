@@ -1,0 +1,24 @@
+[".pyenv"]
+    type = "git-repo"
+    url = "https://github.com/pyenv/pyenv.git"
+    refreshPeriod = "168h"
+
+[".pyenv/plugins/pyenv-virtualenv"]
+    type = "git-repo"
+    url = "https://github.com/pyenv/pyenv-virtualenv.git"
+    refreshPeriod = "168h"
+
+["$HOME/.local/bin/trunk"]
+    type = "file"
+    url = "https://trunk.io/releases/trunk"
+    executable = true
+    refreshPeriod = "0" # let trunk manage itself
+
+["$HOME/.local/bin/cht.sh"]
+    type = "file"
+    url = "https://cht.sh/:cht.sh"
+    executable = true
+    refreshPeriod = "168h"
+
+# vi: ft=toml
+

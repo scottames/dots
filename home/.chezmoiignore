@@ -6,8 +6,6 @@
 {{- if .is_no_gui }}
 # Ignored if no GUI environment
 .config/{alacritty,Code*,paperwm}
-.local/share/{fcitx5,mpd,rofimoji,Xresources*}
-.xprofile
 ###
 {{- end }}
 

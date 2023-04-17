@@ -1,11 +1,28 @@
 #!/bin/sh
 
-set -e # -e: exit on error
+set -e
+
+magenta='\033[0;35m'
+red='\033[0;31m'
+yellow='\033[0;33m'
+clear='\033[0m'
+
+err() {
+  printf "💥 ${red}%s${clear}\n" "${@}"
+  exit 1
+}
+
+if [ ! -x "$(command -v curl)" ]; then
+  err "curl required, but not found."
+fi
+if [ ! -x "$(command -v git)" ]; then
+  err "git required, but not found."
+fi
 
 _CHEZMOI_SOURCE="scottames/dots"
 _CHEZMOI_SOURCE_DIR="${HOME}/src/${_CHEZMOI_SOURCE}"
 
-if command -v chezmoi; then
+if ! command -v chezmoi; then
   _bin_dir="${HOME}/.local/bin"
   _chezmoi="${_bin_dir}/chezmoi"
   if command -v curl; then
@@ -13,12 +30,13 @@ if command -v chezmoi; then
   elif command -v wget; then
     sh -c "$(wget -qO- https://git.io/chezmoi)" -- -b "${_bin_dir}"
   else
-    echo "To install chezmoi, you must have curl or wget installed." >&2
-    exit 1
+    err "To install chezmoi, you must have curl or wget installed."
   fi
 else
   _chezmoi=chezmoi
 fi
 
+printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n\n" "${_CHEZMOI_SOURCE}" "${_CHEZMOI_SOURCE_DIR}"
+
 # exec: replace current process with chezmoi init
-exec "${_chezmoi}" init --apply "${_CHEZMOI_SOURCE}" "--source=${_CHEZMOI_SOURCE_DIR}"
+exec "${_chezmoi}" init --apply "${_CHEZMOI_SOURCE}" "--source=${_CHEZMOI_SOURCE_DIR}" "${@}"

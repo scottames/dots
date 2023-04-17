@@ -2,48 +2,66 @@
 
 set -euo pipefail
 
-# Colors
-# red='\033[0;31m'
-# green='\033[0;32m'
-# blue='\033[0;34m'
-# magenta='\033[0;35m'
-cyan='\033[0;36m'
-yellow='\033[0;33m'
-clear='\033[0m'
+_bashrc="${HOME}/.bashrc"
 
-function setenv() { export "$1=$2"; }
-
-if [[ -f "${HOME}/.setenv" ]]; then
-  source "${HOME}/.setenv"
-else
-  echo -e "${yellow}⚠ '${HOME}/.setenv' not found!${clear}"
+if [[ ! -f ${_bashrc} ]]; then
+  print_err "unable to find ${_bashrc}"
+  exit 1
 fi
 
+# shellcheck disable=SC1090
+source "${_bashrc}"
+
+_aqua_installer_version="v2.1.1" # TODO: renovate
+_aqua_installer_sha256sum="c2af02bdd15da6794f9c98db40332c804224930212f553a805425441f8331665"
+
+function aqua_install() {
+  if [[ ${GITHUB_TOKEN} == *"op://"* ]] && [[ -z $(command -v op) ]]; then
+    unset GITHUB_TOKEN
+  fi
+  curl -sSfL -O "https://raw.githubusercontent.com/aquaproj/aqua-installer/${_aqua_installer_version}/aqua-installer"
+  echo "${_aqua_installer_sha256sum}  aqua-installer" | sha256sum -c
+  chmod +x aqua-installer
+  ./aqua-installer && rm aqua-installer
+}
+
+aqua_install
+
 if [[ -n $(command -v aqua) ]]; then
-  echo -e "${cyan}installing aquas${clear}"
-
-  [[ -d ${AQUA_ROOT_DIR} ]] && export PATH="${AQUA_ROOT_DIR}:${PATH}"           # aqua
-  [[ -d "${AQUA_ROOT_DIR}/bin" ]] && export PATH="${AQUA_ROOT_DIR}/bin:${PATH}" # aqua bins
-  [[ -f "${AQUA_CONFIG_DIR}/policy.yaml" ]] &&
-    export AQUA_POLICY_CONFIG="${AQUA_CONFIG_DIR}/policy.yaml"
-
   aqua i -a
 else
-  echo -e "${yellow}⚠ aqua not found!${clear}"
+  print_warn "⚠ aqua not found!"
+fi
+
+if [[ -n $(command -v bob) ]]; then
+  print_info "installing nvim via bob"
+
+  bob install stable
+  bob use stable
+else
+  print_warn "⚠ bob not found!"
+fi
+
+if [[ -f "${HOME}/.mani.yaml" ]] && [[ -n $(command -v mani) ]]; then
+  print_info "init: mani"
+
+  mani sync
+else
+  printf_warn "⚠ mani not found!"
 fi
 
 if [[ -n $(command -v fish) ]]; then
-  echo -e "${cyan}initializing fish${clear}"
+  print_info "init: fish"
+
   fish -c "_init"
 else
-  echo -e "${yellow}⚠ fish not found!${clear}"
+  print_warn "⚠ fish not found!"
 fi
 
-if [[ -f "${HOME}/mani.yaml" ]] && [[ -n $(command -v mani) ]]; then
-  echo -e "${cyan}initializing mani${clear}"
-  mani sync
-else
-  echo -e "${yellow}⚠ mani not found!${clear}"
-fi
+print_success "All done! A shell restart is recommended."
+
+print_info "wrap it all up by runing:"
+# shellcheck disable=SC2016
+printf '  chsh -s $(which fish)\n\n'
 
 # vi: ft=sh

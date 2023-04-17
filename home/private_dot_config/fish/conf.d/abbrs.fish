@@ -9,17 +9,18 @@ abbr -a agi       "aqua g -i"
 abbr -a aia       "aqua i -a"
 abbr -a aquagi    "aqua g -i"
 abbr -a aquaia    "aqua i -a"
-abbr -a chz       "chezmoi"
-abbr -a chza      "chezmoi add"
-abbr -a chzcd     "cd (chezmoi source-path)"
-abbr -a chzd      "chezmoi diff"
-abbr -a chzet     "chezmoi execute-template" # + '{{ .chezmoi.hostname }}' OR < foo.tmpl
-abbr -a chzg      "chezmoi git --"
-abbr -a chzgm     "chezmoi git -- commit -m"
-abbr -a chzgmn    "chezmoi git -- commit -n -m"
-abbr -a chzm      "chezmoi merge"
-abbr -a chzs      "chezmoi status"
-abbr -a chzal     "chezmoi_add_and_unlink"
+abbr -a ch        "chezmoi"
+abbr -a cha       "chezmoi add"
+abbr -a chcd      "cd (chezmoi source-path)"
+abbr -a chd       "chezmoi diff"
+abbr -a che       "chezmoi edit"
+abbr -a chef      "chezmoi_edit_fzf"
+abbr -a chet      "chezmoi execute-template" # + '{{ .chezmoi.hostname }}' OR < foo.tmpl
+abbr -a chg       "chezmoi git --"
+abbr -a chgm      "chezmoi git -- commit -m"
+abbr -a chgmn     "chezmoi git -- commit -n -m"
+abbr -a chm       "chezmoi merge"
+abbr -a chs       "chezmoi status"
 abbr -a da        "direnv allow"
 abbr -a G         "grep -i"
 abbr -a dots      "cd $DOTS"
@@ -184,7 +185,7 @@ end
 # │ update & upgrade defaults                                │
 # ╰──────────────────────────────────────────────────────────╯
 set _default_upgrade "pip_upgrade && pip_upgrade_user && rust_upgrade"
-set _default_update "rustup update"
+set _default_update "aqua update-aqua && rustup update"
 
 if [ $IS_LINUX ]
   switch $DISTRO
