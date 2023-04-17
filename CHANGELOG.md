@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/scottames/dots/compare/v0.2.0...v0.3.0) (2023-04-17)
+
+
+### Features
+
+* **aqua:** add fd ([7370a9b](https://github.com/scottames/dots/commit/7370a9b13277ade6e5e609d00174b13048a63d80))
+* **mage:** testing with docker & go ([602dbe8](https://github.com/scottames/dots/commit/602dbe82e5abfea4cff6cba64feb7022c46282fe))
+
 ## [0.2.0](https://github.com/scottames/dots/compare/v0.1.0...v0.2.0) (2023-04-15)
 
 
