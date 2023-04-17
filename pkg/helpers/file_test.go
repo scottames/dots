@@ -6,6 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"golang.org/x/exp/slices"
+
 	"github.com/scottames/dots/pkg/helpers"
 )
 
@@ -165,5 +167,38 @@ func TestCreateSymlinks(t *testing.T) {
 	err = helpers.CreateSymlinks(map[string]string{"file3.txt": "/nonexistent/file"}, false)
 	if err == nil {
 		t.Errorf("CreateSymlinks failed to return error")
+	}
+}
+
+func TestListDirs(t *testing.T) {
+	// Create temporary directory and sub-directories for testing
+	tempDir, err := os.MkdirTemp("", "test")
+	if err != nil {
+		t.Fatalf("Failed to create temporary directory: %v", err)
+	}
+	defer os.RemoveAll(tempDir)
+
+	subDirs := []string{"subdir1", "subdir2", "subdir3"}
+	for _, subdir := range subDirs {
+		err = os.MkdirAll(tempDir+"/"+subdir, os.ModePerm)
+		if err != nil {
+			t.Fatalf("Failed to create sub-directory: %v", err)
+		}
+	}
+
+	// Call ListDirs function to get sub-directories
+	dirs, err := helpers.ListDirs(tempDir)
+	if err != nil {
+		t.Fatalf("ListDirs returned an error: %v", err)
+	}
+
+	// Check if the returned sub-directories match the created sub-directories
+	if len(dirs) != len(subDirs) {
+		t.Errorf("Expected %d sub-directories, but got %d", len(subDirs), len(dirs))
+	}
+	for _, subdir := range subDirs {
+		if !slices.Contains(dirs, subdir) {
+			t.Errorf("Expected sub-directory %s, but not found in returned dirs", subdir)
+		}
 	}
 }

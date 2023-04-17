@@ -18,6 +18,7 @@ const (
 	paruHome = "https://github.com/Morganamilo/paru"
 )
 
+// Paru - paru aur helper.
 type Paru mg.Namespace
 
 // About - print about.

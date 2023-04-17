@@ -78,6 +78,22 @@ func CreateSymlinks(sls map[string]string, ignoreErr bool) error {
 	return nil
 }
 
+// ListDirs - returns sub-directories in the given (target) directory and a possible error.
+func ListDirs(target string) ([]string, error) {
+	files, err := os.ReadDir(target)
+	if err != nil {
+		return nil, fmt.Errorf("cannot read dir: %w", err)
+	}
+
+	dirs := []string{}
+	for _, fileInfo := range files {
+		if fileInfo.IsDir() {
+			dirs = append(dirs, fileInfo.Name())
+		}
+	}
+	return dirs, nil
+}
+
 // SetupEnvRCs - symlink & `direnv allow` .envrc files.
 func SetupEnvRCs(sls map[string]string, ignoreErr bool) error {
 	const direnv = "direnv"
