@@ -2,13 +2,16 @@
 
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
+source "${HOME}/.zsh/is_has.zsh"
+
 function setenv() { export "$1=$2"; }
 
-if [[ -f "${HOME}/.setenv" ]]
+_SETENV="${HOME}/.setenv"
+if [[ -f "${_SETENV}" ]]
 then
-  source "${HOME}/.setenv"
+  source "${_SETENV}"
 else
-  echo "⚠ '${HOME}/.setenv' not found!"
+  echo "⚠ '${_SETENV}' not found!"
 fi
 
 #  ╭──────────────────────────────────────────────────────────╮
@@ -28,13 +31,12 @@ else
   source "${ZPLUG_HOME}/init.zsh"
 fi
 
-source "${HOME}/.zsh/is_has.zsh"    # DONE
-source "${HOME}/.zsh/path.zsh"      # DONE
-source "${HOME}/.zsh/gpg.zsh"       # DONE
-source "${HOME}/.zsh/history.zsh"   # DONE
-source "${HOME}/.zsh/spectrum.zsh"  # DONE
-source "${HOME}/.zsh/prompt.zsh"    # DONE
-source "${HOME}/.zsh/zsh_hooks.zsh" # DONE
+source "${HOME}/.zsh/path.zsh"
+source "${HOME}/.zsh/gpg.zsh"
+source "${HOME}/.zsh/history.zsh"
+source "${HOME}/.zsh/spectrum.zsh"
+source "${HOME}/.zsh/prompt.zsh"
+source "${HOME}/.zsh/zsh_hooks.zsh"
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -52,23 +54,23 @@ fi
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ post zplug load                                          │
 #  ╰──────────────────────────────────────────────────────────╯
-source "${HOME}/.zsh/colors.zsh"     # DONE
-source "${HOME}/.zsh/completion.zsh" # DONE
-source "${HOME}/.zsh/app_init.zsh"   # DONE
-source "${HOME}/.zsh/bindkeys.zsh"   # DONE
-source "${HOME}/.zsh/aliases.zsh"    # DONE
-source "${HOME}/.zsh/functions.zsh"  # DONE
-source "${HOME}/.zsh/packages.zsh"   # DONE
-source "${HOME}/.zsh/setopt.zsh"     # DONE
+source "${HOME}/.zsh/colors.zsh"
+source "${HOME}/.zsh/completion.zsh"
+source "${HOME}/.zsh/app_init.zsh"
+source "${HOME}/.zsh/bindkeys.zsh"
+source "${HOME}/.zsh/aliases.zsh"
+source "${HOME}/.zsh/functions.zsh"
+source "${HOME}/.zsh/packages.zsh"
+source "${HOME}/.zsh/setopt.zsh"
 
 # untracked dotfile for sensative exports, etc
 if [[ -f ~/.untracked.zsh ]]
 then
-  source ~/.untracked.zsh # Done
+  source ~/.untracked.zsh
 fi
 
 # work dotfile for work related exports, etc
 if [[ -f ~/.work.zsh ]]
 then
-  source ~/.work.zsh # Done
+  source ~/.work.zsh
 fi

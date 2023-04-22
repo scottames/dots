@@ -54,10 +54,6 @@ function add_to_known_hosts() {
   done <<< "${keys}"
 }
 
-# verbose alias printing
-function preexec(){ [ $1 != $2 ] && print -r -- "${POINTER} ${fg[white]}${2}${reset_color}" }
-
-
 function sh_startup_time() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time ${shell} -i -c exit; done
