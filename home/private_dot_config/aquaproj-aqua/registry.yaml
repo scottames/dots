@@ -11,3 +11,7 @@ packages:
     repo_name: mani
     asset: mani_{{trimV .Version}}_{{.OS}}_{{.Arch}}.tar.gz
     description: 🤖 CLI tool to help you manage repositories
+  - type: go_install
+    repo_owner: iwittkau
+    repo_name: mage-select
+    description: CLI frontend for mage based on promptui
