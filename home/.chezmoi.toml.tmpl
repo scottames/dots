@@ -1,14 +1,16 @@
-{{ $githubUser := "scottames" -}}
-{{ $chassis    := "" -}}
-{{ $isDocker   := false -}}
-{{ $isServer   := false -}}
-{{ $isLaptop   := false -}}
+{{ $githubUser  := "scottames" -}}
+{{ $chassis     := ""          -}}
+{{ $isDocker    := false       -}}
+{{ $isServer    := false       -}}
+{{ $isLaptop    := false       -}}
+{{ $isArchLinux := false       -}}
 
 {{- if eq .chezmoi.os "linux" -}}
 {{-   if lstat "/.dockerenv" -}}
 {{-     $chassis = "docker" -}}
 {{-     $isDocker = true -}}
 {{-   else -}}
+{{-     $isArchLinux = (eq .chezmoi.osRelease.id "arch") -}}
 {{-     $chassis = output "hostnamectl" "chassis" | trim -}}
 {{-     if eq $chassis "server" -}}
 {{-       $isServer = true -}}
@@ -33,16 +35,17 @@ progress = true
 
 {{ end -}}
 [data]
-  chassis = "{{       .chezmoi.os }}"
+  chassis = "{{       $chassis }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
-  is_docker = "{{     $isDocker   }}"
-  is_no_gui = "{{     $isNoGUI    }}"
-  is_laptop = "{{     $isLaptop   }}"
-  is_linux_gui = "{{  $isGUI      }}"
-  is_server = "{{     $isServer   }}"
-  is_arch_linux = "{{ not (not (and (eq .chezmoi.os "linux") (lookPath "pacman"))) }}"
+  is_arch_linux = {{ $isArchLinux }}
+  is_docker = {{     $isDocker    }}
+  is_laptop = {{     $isLaptop    }}
+  is_linux_gui = {{  $isGUI       }}
+  is_no_gui = {{     $isNoGUI     }}
+  is_server = {{     $isServer    }}
 
   [data.me]
+    user = "{{ .chezmoi.username }}"
     email = "scott@ames.sh"
     name = "Scott Ames"
     [data.me.github]
