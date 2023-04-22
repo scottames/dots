@@ -32,7 +32,7 @@ printf "\n${cyan}💧 aqua${clear}\n---\n${magenta} - latest: %s\n - current: %s
 if [[ ! $(command -v aqua) ]]; then
   # ensure AQUA vars are set
   function setenv() { export "$1=$2"; }
-  eval "$(grep AQUA < ~/.setenv)"
+  eval "$(grep AQUA < ${HOME}/.setenv)"
 
   pushd "$(mktemp -d)"
   _aqua_installer="aqua-installer"
@@ -48,7 +48,7 @@ if [[ ! $(command -v aqua) ]]; then
   "./${_aqua_installer}"
 
   # ensure aqua is in path
-  eval "$(grep AQUA < ~/.bashrc)"
+  eval "$(grep AQUA < ${HOME}/.bashrc)"
 
   popd
 elif [[ "${_aqua_latest}" != "${_aqua_current}" ]]; then

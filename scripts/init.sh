@@ -18,6 +18,9 @@ fi
 if [ ! -x "$(command -v git)" ]; then
   err "git required, but not found."
 fi
+if [ ! -x "$(command -v go)" ]; then
+  err "go required, but not found."
+fi
 
 _CHEZMOI_SOURCE="scottames/dots"
 _CHEZMOI_SOURCE_DIR="${HOME}/src/${_CHEZMOI_SOURCE}"
