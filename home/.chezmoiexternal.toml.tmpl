@@ -35,18 +35,23 @@
     type = "git-repo"
     url = "https://github.com/rajasegar/alacritty-themes.git"
     refreshPeriod = "168h"
+
 [".config/alacritty/catppuccin"]
     type = "git-repo"
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
+
 [".config/bat/themes"]
     type = "git-repo"
     url = "https://github.com/catppuccin/bat.git"
     refreshPeriod = "168h"
+
+{{ if not (eq "container" .me.user) -}}
 ["src/pub/magefile/mage"]
     type = "git-repo"
     url = "https://github.com/magefile/mage"
     refreshPeriod = "168h"
+
 {{ if eq .chezmoi.os "linux" -}}
 ["src/pub/paperwm/PaperWM"]
     type = "git-repo"
@@ -63,18 +68,22 @@
     type = "git-repo"
     url = "git@github.com:scottames/cmder.git"
     refreshPeriod = "0"
+
 ["src/scottames/cv"]
     type = "git-repo"
     url = "git@github.com:scottames/cv.git"
     refreshPeriod = "0"
+
 ["src/scottames/misc"]
     type = "git-repo"
     url = "git@github.com:scottames/misc.git"
     refreshPeriod = "0"
+
 ["src/scottames/pm"]
     type = "git-repo"
     url = "git@github.com:scottames/pm.git"
     refreshPeriod = "0"
 
+{{ end -}}
 {{ end -}}
 # vi: ft=toml

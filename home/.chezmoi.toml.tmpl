@@ -37,14 +37,15 @@ progress = true
 [data]
   chassis = "{{       $chassis }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+  is_arch_linux = {{ $isArchLinux }}
   is_docker = {{     $isDocker    }}
-  is_no_gui = {{     $isNoGUI     }}
   is_laptop = {{     $isLaptop    }}
   is_linux_gui = {{  $isGUI       }}
+  is_no_gui = {{     $isNoGUI     }}
   is_server = {{     $isServer    }}
-  is_arch_linux = {{ $isArchLinux }}
 
   [data.me]
+    user = "{{ .chezmoi.username }}"
     email = "scott@ames.sh"
     name = "Scott Ames"
     [data.me.github]
