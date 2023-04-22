@@ -11,6 +11,8 @@
 
 {{- if not .is_arch_linux }}
 # Ignore if not Arch Linux
+.config/paru/paru.conf
+.config/fish/custom_functions.d/parus.fish
 {{- end }}
 
 # Symlinks
