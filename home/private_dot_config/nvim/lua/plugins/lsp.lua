@@ -49,6 +49,8 @@ for server, _ in pairs(servers) do
   servers[server]["on_attach"] = on_attach
 end
 
+vim.lsp.set_log_level("off")
+
 return {
   {
     "b0o/SchemaStore.nvim",
