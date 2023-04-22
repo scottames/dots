@@ -4,7 +4,8 @@
 
 [![forthebadge](assets/image/built-for-linux.svg)](https://forthebadge.com) [![forthebadge](assets/image/works-on-my-machine.svg)](https://forthebadge.com)
 
-[![chezmoi init](https://github.com/scottames/dots/actions/workflows/pr_chezmoi_init.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_chezmoi_init.yaml) [![trunk.io](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml)
+[![chezmoi init](https://github.com/scottames/dots/actions/workflows/pr_chezmoi_init.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_chezmoi_init.yaml)
+[![trunk.io](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml)
 
 ## 🚀 init
 
