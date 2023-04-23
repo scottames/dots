@@ -52,7 +52,7 @@ return {
     },
     {
       key = "|",
-      mods = "LEADER",
+      mods = "LEADER|SHIFT",
       action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     },
     {
@@ -83,10 +83,9 @@ return {
     },
     { key = "l", mods = "LEADER", action = action.ShowLauncher },
     { key = "n", mods = "LEADER", action = action.SpawnWindow },
-    { key = "-", mods = "LEADER", action = action.DecreaseFontSize },
-    { key = "0", mods = "LEADER", action = action.ResetFontSize },
-    { key = "=", mods = "LEADER", action = action.IncreaseFontSize },
-    { key = "+", mods = "LEADER", action = action.IncreaseFontSize },
+    { key = "_", mods = "CTRL|SHIFT", action = action.DecreaseFontSize },
+    { key = "0", mods = "CTRL|SHIFT", action = action.ResetFontSize },
+    { key = "=", mods = "CTRL|SHIFT", action = action.IncreaseFontSize },
     { key = "y", mods = "LEADER", action = action.CopyTo("Clipboard") },
     { key = "p", mods = "LEADER", action = action.PasteFrom("PrimarySelection") },
   },

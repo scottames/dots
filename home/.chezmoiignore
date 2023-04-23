@@ -9,10 +9,20 @@
 ###
 {{- end }}
 
+{{- if not (eq .desktop_session "gnome") }}
+
+# PaperWM
+.config/paperwm*
+.local/share/gnome-shell/extensions/paperwm@hedning:matrix.org
+src/pub/paperwm*
+###
+{{- end}}
+
 {{- if not .is_arch_linux }}
 # Ignore if not Arch Linux
 .config/paru/paru.conf
 .config/fish/custom_functions.d/parus.fish
+###
 {{- end }}
 
 # Symlinks

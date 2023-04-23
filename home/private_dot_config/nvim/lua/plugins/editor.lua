@@ -24,27 +24,10 @@ return {
     end,
   },
 
-  --  ╭──────────────────────────────────────────────────────────╮
-  --  │   jump around | do not use it enough... disabling for now│
-  --  ╰──────────────────────────────────────────────────────────╯
-  -- - keys conflicts with autosurround
-  { -- https://github.com/ggandor/leap.nvim
-    "ggandor/leap.nvim",
-    enabled = false,
-  },
-  -- easily jump to any location and enhanced f/t motions for Leap
-  { -- https://github.com/ggandor/flit.nvim
-    "ggandor/flit.nvim",
-    enabled = false,
-  },
-
-  -- which-key (additional registers)
-  {
+  -- which-key
+  { -- https://github.com/folke/which-key.nvim
     "folke/which-key.nvim",
-    -- https://github.com/LazyVim/LazyVim/discussions/22#discussioncomment-4622345
-    config = function(plugin)
-      -- run original config
-      plugin._.super.config()
+    opts = function(_, opts)
       require("which-key").register({
         mode = { "n", "v" },
         ["<leader>m"] = { name = "+markdown/mm" },
@@ -53,14 +36,13 @@ return {
         ["<leader>gd"] = { name = "+diff" },
         ["<leader>i"] = { name = "+insert" },
       })
-    end,
-    opts = {
-      plugins = {
+      opts.plugins = {
+        spelling = true,
         presets = {
           operators = false,
         },
-      },
-    },
+      }
+    end,
   },
 
   -- file explorer

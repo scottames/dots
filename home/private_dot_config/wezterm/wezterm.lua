@@ -10,7 +10,7 @@ end
 c.color_scheme = "Catppuccin Mocha"
 c.default_cursor_style = "BlinkingBar"
 c.font = w.font("FiraCode Nerd Font Mono")
-c.font_size = 14.0
+c.font_size = 13.5
 c.hide_tab_bar_if_only_one_tab = true
 c.leader = k.leader
 c.keys = k.keys

@@ -4,7 +4,6 @@ on:
       - main
     paths:
       - pkg/**
-      - magefiles/**
       - CHANGELOG.md
       - go.*
 permissions:
