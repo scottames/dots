@@ -9,6 +9,8 @@
 
 ## 🚀 init
 
+Requirements: `curl`, `git`, and `go`
+
 > 🙈 Don't do this at home.
 
 ```shell
@@ -26,18 +28,20 @@ curl -fsSL -O "https://raw.githubusercontent.com/scottames/dots/main/scripts/ini
 
 ## 🔧 Tools of Note
 
-|               project                         |                                             description                                              |
-|:----------------------------------------------|:-----------------------------------------------------------------------------------------------------|
-| [alacritty](https://alacritty.org/)           | modern terminal emulator that comes with sensible defaults, but allows for extensive configuration   |
-| [aqua](https://aquaproj.github.io/)           | declarative cli version manager                                                                      |
-| [chezmoi](https://www.chezmoi.io/)            | manage your dotfiles across multiple diverse machines, securely                                      |
-| [fish](https://fishshell.com/)                | smart and user-friendly command line shell                                                           |
-| [mage](https://magefile.org/)                 | make/rake-like build tool using golang                                                               |
-| [neovim](https://neovim.io/)                  | hyperextensible Vim-based text editor                                                                |
-| [paperwm](https://github.com/paperwm/PaperWM) | experimental Gnome Shell extension providing scrollable tiling of windows and per monitor workspaces |
-| [starship](https://starship.rs/)              | minimal, blazing-fast, and infinitely customizable prompt for any shell!                             |
-| [trunk.io](https://trunk.io/)                 | check, merge, and monitor your code                                                                  |
-| [zellij](https://zellij.dev/)                 | terminal workspace with batteries included                                                           |
+|               project                               |                                             description                                              |
+|:----------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
+| [alacritty](https://alacritty.org/)                 | modern terminal emulator that comes with sensible defaults, but allows for extensive configuration   |
+| [aqua](https://aquaproj.github.io/)                 | declarative cli version manager                                                                      |
+| [chezmoi](https://www.chezmoi.io/)                  | manage your dotfiles across multiple diverse machines, securely                                      |
+| [fish](https://fishshell.com/)                      | smart and user-friendly command line shell                                                           |
+| [lazygit](https://github.com/jesseduffield/lazygit) | simple terminal UI for git commands                                                            |
+| [mage](https://magefile.org/)                       | make/rake-like build tool using golang                                                               |
+| [neovim](https://neovim.io/)                        | hyperextensible Vim-based text editor                                                                |
+| [paperwm](https://github.com/paperwm/PaperWM)       | experimental Gnome Shell extension providing scrollable tiling of windows and per monitor workspaces |
+| [starship](https://starship.rs/)                    | minimal, blazing-fast, and infinitely customizable prompt for any shell!                             |
+| [trunk.io](https://trunk.io/)                       | check, merge, and monitor your code                                                                  |
+| [wezterm](https://wezfurlong.org/wezterm/)          | a powerful cross-platform terminal emulator and multiplexer                                          |
+| [zellij](https://zellij.dev/)                       | terminal workspace with batteries included                                                           |
 
 ## 🧪 Testing
 
