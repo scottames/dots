@@ -15,7 +15,7 @@ function chezmoi_edit_fzf \
     printf_warn "No file selected\n"
     return 1
   else
-    echo chezmoi edit --apply "$HOME/$file_path"
+    chezmoi edit --apply "$HOME/$file_path"
   end
 end
 
