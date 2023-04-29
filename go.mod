@@ -6,7 +6,7 @@ require (
 	github.com/fatih/color v1.15.0
 	github.com/magefile/mage v1.14.0
 	github.com/scottames/cmder v0.3.0
-	golang.org/x/exp v0.0.0-20230420155640-133eef4313cb
+	golang.org/x/exp v0.0.0-20230425010034-47ecfdc1ba53
 )
 
 require (
