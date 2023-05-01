@@ -12,13 +12,13 @@ setenv AWS_PAGER                  ""
 setenv BOB_BIN                    "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                   1
 setenv EDITOR                     "vi"
-[ $HAS_VIM ] \
+$HAS_VIM \
   && setenv EDITOR                "vim"
-[ $HAS_NVIM ] \
+$HAS_NVIM \
   && setenv EDITOR                "nvim"
 setenv FISH_CONFIG                "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS           "--bind ctrl-j:down,ctrl-k:up"
-[ $HAS_OP ] \
+$HAS_OP \
   && setenv GITHUB_USER           "op://Private/github.com/username" \
   && setenv GITHUB_TOKEN          "op://private/github.com/token" \
   && setenv GITHUB_USERNAME       "$GITHUB_USER" \
@@ -28,7 +28,7 @@ setenv GOPRIVATE                  "github.com/scottames/*"
 setenv HOME_BIN                   "$HOME/bin"
 setenv HOME_LOCAL_BIN             "$HOME/.local/bin"
 setenv KREW_ROOT                  "$HOME/.krew"
-[ $HAS_DYFF ] \
+$HAS_DYFF \
   && setenv KUBECTL_EXTERNAL_DIFF "dyff between --omit-header --set-exit-code"
 setenv LANG                       "en_US.UTF-8"
 setenv LANG                       "en_US.UTF-8"
@@ -52,8 +52,9 @@ setenv ZPLUG_LOADFILE             "$HOME/.zsh/zplugs.zsh"
 
 setenv PAGER                      "less"
 setenv LESS                       "--ignore-case --raw-control-chars"
-[ $HAS_BAT ] \
-  && setenv PAGER                 "bat" \
+$HAS_BAT \
+  && setenv PAGER                 "bat"
+$HAS_BAT \
   && setenv MANPAGER              "sh -c 'col -bx | bat -l man -p'"
 
 # handy unicode
