@@ -7,6 +7,6 @@ function aqua \
   if $HAS_OP
     op run -- aqua $argv
   else
-    aqua $argv
+    command aqua $argv
   end
 end
