@@ -16,7 +16,7 @@ cyan='\033[0;36m'
 clear='\033[0m'
 
 # renovate: depName=aquaproj/aqua datasource=github-releases
-_aqua_latest=v2.3.6
+_aqua_latest_version=v2.3.6
 
 # renovate: depName=aquaproj/aqua-installer datasource=github-releases
 _aqua_installer_version=v1.2.0
@@ -27,7 +27,7 @@ else
   _aqua_current="none"
 fi
 
-printf "\n${cyan}💧 aqua${clear}\n---\n${magenta} - latest: %s\n - current: %s${clear}\n\n" "${_aqua_latest}" "${_aqua_current}"
+printf "\n${cyan}💧 aqua${clear}\n---\n${magenta} - latest: %s\n - current: %s${clear}\n\n" "${_aqua_latest_version}" "${_aqua_current}"
 
 if [[ ! $(command -v aqua) ]]; then
   # ensure AQUA vars are set
@@ -51,7 +51,7 @@ if [[ ! $(command -v aqua) ]]; then
   eval "$(grep AQUA < ${HOME}/.bashrc)"
 
   popd
-elif [[ "${_aqua_latest}" != "${_aqua_current}" ]]; then
+elif [[ "${_aqua_latest_version}" != "${_aqua_current}" ]]; then
   aqua update-aqua
 else
   printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" " aqua installed and up to date"
