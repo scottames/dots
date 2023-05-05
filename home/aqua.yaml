@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v3.159.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v3.161.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -18,7 +18,7 @@ packages:
   - name: marcosnils/bin@v0.16.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@428.0.0
-  - name: twpayne/chezmoi@v2.33.3
+  - name: twpayne/chezmoi@v2.33.4
   - name: zellij-org/zellij@v0.36.0
   - name: weaveworks/eksctl@v0.139.0
   - name: ogham/exa@v0.10.1
