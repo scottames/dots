@@ -41,3 +41,4 @@ packages:
   - name: helm/helm@v3.11.3
   - name: kubernetes-sigs/kustomize@kustomize/v5.0.1
   - name: stern/stern@v1.25.0
+  - name: charmbracelet/gum@v0.10.0

@@ -86,7 +86,7 @@
         'home/aqua.yaml',
         'home/private_dot_config/aquaproj-aqua/private_policy.yaml',
         'home/private_dot_config/aquaproj-aqua/registry.yaml',
-        '\\.chezmoiscripts\\/.+\\aqua.sh(?:\\.tmpl)?$'
+        '\\.chezmoiscripts\\/.+aqua\\.sh(?:\\.tmpl)?$'
       ],
       groupName: 'aqua',
       automerge: true,
