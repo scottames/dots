@@ -74,7 +74,8 @@
     refreshPeriod = "168h"
 
 {{ end -}}
-{{- if env "SSH_AUTH_SOCK" -}}
+{{- if and (lookPath "is-github-authed.sh") (eq (output "is-github-authed.sh") "true") -}}
+
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
 #  │ | personal                                               │

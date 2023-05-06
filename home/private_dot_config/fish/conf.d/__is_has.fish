@@ -12,6 +12,8 @@ if [ $UNAME = "Linux" ]
       set -g DISTRO "arch"
     else if [ ($_cat /proc/version | grep Ubuntu) ]
       set -g DISTRO "ubuntu"
+    else
+      set -g DISTRO "unknown"
     end
 else if [ $UNAME = "Darwin" ]
   set -g IS_MAC true
