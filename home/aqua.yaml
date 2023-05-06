@@ -42,3 +42,7 @@ packages:
   - name: kubernetes-sigs/kustomize@kustomize/v5.0.2
   - name: stern/stern@v1.25.0
   - name: charmbracelet/gum@v0.10.0
+  - name: dandavison/delta@0.15.1
+  - name: stedolan/jq@jq-1.6
+  - name: jtyr/gbt@v2.0.0
+  - name: junegunn/fzf@0.40.0
