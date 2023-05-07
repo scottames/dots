@@ -52,7 +52,11 @@ if [[ ! $(command -v aqua) ]]; then
 
   popd
 elif [[ "${_aqua_latest_version}" != "${_aqua_current}" ]]; then
-  aqua update-aqua
+  if [[ $(command -v op) ]]; then
+    op run -- aqua update-aqua || GITHUB_TOKEN="" aqua update-aqua
+  else
+    GITHUB_TOKEN="" aqua update-aqua
+  fi
 else
   printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" " aqua installed and up to date"
 fi
