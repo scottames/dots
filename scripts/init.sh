@@ -12,6 +12,12 @@ err() {
   exit 1
 }
 
+if [ -x "$(command -v distrobox)" ]; then
+  if [ -x "$(command -v docker)" ] || [ -x "$(command -v podman)" ]; then
+    err "distrobox found. init from distrobox instead."
+  fi
+fi
+
 if [ ! -x "$(command -v curl)" ]; then
   err "curl required, but not found."
 fi
@@ -21,9 +27,6 @@ fi
 if [ ! -x "$(command -v go)" ]; then
   err "go required, but not found."
 fi
-
-_CHEZMOI_SOURCE="scottames/dots"
-_CHEZMOI_SOURCE_DIR="${HOME}/src/${_CHEZMOI_SOURCE}"
 
 if ! command -v chezmoi; then
   _bin_dir="${HOME}/.local/bin"
@@ -39,7 +42,11 @@ else
   _chezmoi=chezmoi
 fi
 
-printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n\n" "${_CHEZMOI_SOURCE}" "${_CHEZMOI_SOURCE_DIR}"
+_CHEZMOI_SOURCE="scottames/dots"
+_CHEZMOI_SOURCE_DIR="${HOME}/src/${_CHEZMOI_SOURCE}"
+
+printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n\n" \
+  "${_CHEZMOI_SOURCE}" "${_CHEZMOI_SOURCE_DIR}"
 
 # exec: replace current process with chezmoi init
 exec "${_chezmoi}" init --apply "${_CHEZMOI_SOURCE}" "--source=${_CHEZMOI_SOURCE_DIR}" "${@}"
