@@ -3,14 +3,14 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.1.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.3.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
     type: local
 packages:
-  - name: charmbracelet/glow@v1.5.0
-  - name: cli/cli@v2.28.0
+  - name: charmbracelet/glow@v1.5.1
+  - name: cli/cli@v2.29.0
   - name: denisidoro/navi@v2.22.1
   - name: golangci/golangci-lint@v1.52.2
   - name: homeport/dyff@v1.5.7
@@ -37,9 +37,9 @@ packages:
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.32.2
   - name: kubernetes/kubectl@v1.27.1
-  - name: fluxcd/flux2@v2.0.0-rc.1
-  - name: helm/helm@v3.11.3
-  - name: kubernetes-sigs/kustomize@kustomize/v5.0.2
+  - name: fluxcd/flux2@v2.0.0-rc.2
+  - name: helm/helm@v3.12.0
+  - name: kubernetes-sigs/kustomize@kustomize/v5.0.3
   - name: stern/stern@v1.25.0
   - name: charmbracelet/gum@v0.10.0
   - name: dandavison/delta@0.15.1
