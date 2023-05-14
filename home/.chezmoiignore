@@ -3,13 +3,11 @@
 **/*.{bak,log,old,foo}
 .cache
 
-{{- if .is_no_gui }}
-# Ignored if no GUI environment
-.config/{alacritty,Code*,paperwm}
-###
-{{- end }}
-
 {{- if not (eq .desktop_session "gnome") }}
+### Ignore if not running gnome
+
+# Themes
+.chezmoiscripts/40_catppuccin.sh
 
 # PaperWM
 .config/paperwm*
@@ -18,10 +16,17 @@ src/pub/paperwm*
 ###
 {{- end}}
 
-{{- if not .is_arch_linux }}
-# Ignore if not Arch Linux
+{{- if not (eq .chezmoi.osRelease.id "arch") }}
+### Ignore if not Arch Linux
 .config/paru/paru.conf
 .config/fish/custom_functions.d/parus.fish
+###
+{{- end }}
+
+{{ if not (lookPath "fish") }}
+### Ignore if no fish
+.config/fish/
+.chezmoiscripts/30_fisher.fish
 ###
 {{- end }}
 

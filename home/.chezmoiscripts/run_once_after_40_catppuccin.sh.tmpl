@@ -1,0 +1,112 @@
+#!/bin/env bash
+
+cyan='\033[0;36m'
+clear='\033[0m'
+magenta='\033[0;35m'
+
+# https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=catppuccin%20GTK
+echo '
+ ██████╗ █████╗ ████████╗██████╗ ██████╗ ██╗   ██╗ ██████╗ ██████╗██╗███╗   ██╗
+██╔════╝██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗██║   ██║██╔════╝██╔════╝██║████╗  ██║
+██║     ███████║   ██║   ██████╔╝██████╔╝██║   ██║██║     ██║     ██║██╔██╗ ██║
+██║     ██╔══██║   ██║   ██╔═══╝ ██╔═══╝ ██║   ██║██║     ██║     ██║██║╚██╗██║
+╚██████╗██║  ██║   ██║   ██║     ██║     ╚██████╔╝╚██████╗╚██████╗██║██║ ╚████║
+ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝      ╚═════╝  ╚═════╝ ╚═════╝╚═╝╚═╝  ╚═══╝
+'
+
+gtk_themes=(
+  Catppuccin-Frappe-Standard-Blue-Dark
+  # Catppuccin-Frappe-Standard-Flamingo-Dark
+  # Catppuccin-Frappe-Standard-Green-Dark
+  # Catppuccin-Frappe-Standard-Lavender-Dark
+  # Catppuccin-Frappe-Standard-Maroon-Dark
+  # Catppuccin-Frappe-Standard-Mauve-Dark
+  # Catppuccin-Frappe-Standard-Peach-Dark
+  # Catppuccin-Frappe-Standard-Pink-Dark
+  # Catppuccin-Frappe-Standard-Red-Dark
+  # Catppuccin-Frappe-Standard-Rosewater-Dark
+  # Catppuccin-Frappe-Standard-Sapphire-Dark
+  # Catppuccin-Frappe-Standard-Sky-Dark
+  # Catppuccin-Frappe-Standard-Teal-Dark
+  # Catppuccin-Frappe-Standard-Yellow-Dark
+  # Catppuccin-Latte-Standard-Blue-Light
+  # Catppuccin-Latte-Standard-Flamingo-Light
+  # Catppuccin-Latte-Standard-Green-Light
+  # Catppuccin-Latte-Standard-Lavender-Light
+  # Catppuccin-Latte-Standard-Maroon-Light
+  # Catppuccin-Latte-Standard-Mauve-Light
+  # Catppuccin-Latte-Standard-Peach-Light
+  # Catppuccin-Latte-Standard-Pink-Light
+  # Catppuccin-Latte-Standard-Red-Light
+  # Catppuccin-Latte-Standard-Rosewater-Light
+  # Catppuccin-Latte-Standard-Sapphire-Light
+  # Catppuccin-Latte-Standard-Sky-Light
+  # Catppuccin-Latte-Standard-Teal-Light
+  # Catppuccin-Latte-Standard-Yellow-Light
+  # Catppuccin-Macchiato-Standard-Blue-Dark
+  # Catppuccin-Macchiato-Standard-Flamingo-Dark
+  # Catppuccin-Macchiato-Standard-Green-Dark
+  # Catppuccin-Macchiato-Standard-Lavender-Dark
+  # Catppuccin-Macchiato-Standard-Maroon-Dark
+  # Catppuccin-Macchiato-Standard-Mauve-Dark
+  # Catppuccin-Macchiato-Standard-Peach-Dark
+  # Catppuccin-Macchiato-Standard-Pink-Dark
+  # Catppuccin-Macchiato-Standard-Red-Dark
+  # Catppuccin-Macchiato-Standard-Rosewater-Dark
+  # Catppuccin-Macchiato-Standard-Sapphire-Dark
+  # Catppuccin-Macchiato-Standard-Sky-Dark
+  # Catppuccin-Macchiato-Standard-Teal-Dark
+  # Catppuccin-Macchiato-Standard-Yellow-Dark
+  # Catppuccin-Mocha-Standard-Blue-Dark
+  # Catppuccin-Mocha-Standard-Flamingo-Dark
+  # Catppuccin-Mocha-Standard-Green-Dark
+  # Catppuccin-Mocha-Standard-Lavender-Dark
+  # Catppuccin-Mocha-Standard-Maroon-Dark
+  # Catppuccin-Mocha-Standard-Mauve-Dark
+  # Catppuccin-Mocha-Standard-Peach-Dark
+  # Catppuccin-Mocha-Standard-Pink-Dark
+  # Catppuccin-Mocha-Standard-Red-Dark
+  # Catppuccin-Mocha-Standard-Rosewater-Dark
+  # Catppuccin-Mocha-Standard-Sapphire-Dark
+  # Catppuccin-Mocha-Standard-Sky-Dark
+  # Catppuccin-Mocha-Standard-Teal-Dark
+  # Catppuccin-Mocha-Standard-Yellow-Dark
+)
+
+gtk_themes_dir="${HOME}/.themes"
+
+# renovate: depName=catppuccin/gtk datasource=github-releases
+gtk_version="v0.5.0"
+gtk_version_existing=""
+gtk_version_file="${gtk_themes_dir}/.catppuccin_gtk_version"
+
+if [[ -f ${gtk_version_file} ]]; then
+  gtk_version_existing="$(cat "${gtk_version_file}")"
+fi
+
+printf "🐈\n  ${cyan}current:${clear} %s\n  ${cyan}latest:${clear}  %s\n\n" "${gtk_version_existing}" "${gtk_version}"
+
+if [[ ${gtk_version} != "${gtk_version_existing}" ]]; then
+  mkdir -p "${gtk_themes_dir}"
+  for theme in "${gtk_themes[@]}"; do
+    cd "$(mktemp -d)" || exit 1
+    file="${theme}.zip"
+    curl -fsSL -O "https://github.com/catppuccin/gtk/releases/download/${gtk_version}/${file}"
+    unzip -q "${file}"
+
+    if [[ -d "${gtk_themes_dir}/${theme}" ]]; then
+      printf "${magenta}replacing existing theme${clear} '%s'\n\n" "${theme}"
+      rm -rf "${gtk_themes_dir:?}/${theme}"
+    else
+      printf "${magenta}installed theme${clear} '%s'\n\n" "${theme}"
+
+    fi
+
+    cp -a --no-preserve=ownership \
+      "${theme}" "${gtk_themes_dir}"
+  done
+
+  printf "%s" "${gtk_version}" >"${gtk_version_file}"
+fi
+
+# vi: ft=bash

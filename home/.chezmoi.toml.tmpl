@@ -3,7 +3,6 @@
 {{ $isDocker       := false       -}}
 {{ $isServer       := false       -}}
 {{ $isLaptop       := false       -}}
-{{ $isArchLinux    := false       -}}
 {{ $desktopSession := env "DESKTOP_SESSION" -}}
 
 {{- if eq .chezmoi.os "linux" -}}
@@ -11,7 +10,6 @@
 {{-     $chassis = "docker" -}}
 {{-     $isDocker = true -}}
 {{-   else -}}
-{{-     $isArchLinux = (eq .chezmoi.osRelease.id "arch") -}}
 {{-     $chassis = output "hostnamectl" "chassis" | trim -}}
 {{-     if eq $chassis "server" -}}
 {{-       $isServer = true -}}
@@ -39,7 +37,6 @@ progress = true
   chassis = "{{       $chassis }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
   desktop_session = "{{ $desktopSession }}"
-  is_arch_linux = {{ $isArchLinux }}
   is_docker = {{     $isDocker    }}
   is_laptop = {{     $isLaptop    }}
   is_linux_gui = {{  $isGUI       }}
