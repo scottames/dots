@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.3.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.6.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -18,12 +18,12 @@ packages:
   - name: marcosnils/bin@v0.16.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@430.0.0
-  - name: twpayne/chezmoi@v2.33.4
+  - name: twpayne/chezmoi@v2.33.6
   - name: zellij-org/zellij@v0.36.0
-  - name: weaveworks/eksctl@v0.140.0
+  - name: weaveworks/eksctl@v0.141.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
-  - name: magefile/mage@v1.14.0
+  - name: magefile/mage@v1.15.0
   - name: starship/starship@v1.14.2
   - name: muesli/duf@v0.8.1
   - name: gokcehan/lf@r28
@@ -32,12 +32,12 @@ packages:
   - name: alajmo/mani@v0.23.0
     registry: dots
   - name: sharkdp/fd@v8.7.0
-  - name: iwittkau/mage-select@v1.4.2
+  - name: iwittkau/mage-select@v1.4.3
     registry: dots
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.32.2
-  - name: kubernetes/kubectl@v1.27.1
-  - name: fluxcd/flux2@v2.0.0-rc.2
+  - name: kubernetes/kubectl@v1.27.2
+  - name: fluxcd/flux2@v2.0.0-rc.3
   - name: helm/helm@v3.12.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.0.3
   - name: stern/stern@v1.25.0
