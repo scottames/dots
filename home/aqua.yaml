@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.21.1 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.23.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -13,14 +13,14 @@ packages:
   - name: cli/cli@v2.31.0
   - name: denisidoro/navi@v2.22.1
   - name: golangci/golangci-lint@v1.53.3
-  - name: homeport/dyff@v1.5.7
+  - name: homeport/dyff@v1.5.8
   - name: kubernetes-sigs/krew@v0.4.3
   - name: marcosnils/bin@v0.16.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@436.0.0
   - name: twpayne/chezmoi@v2.34.2
   - name: zellij-org/zellij@v0.37.2
-  - name: weaveworks/eksctl@v0.146.0
+  - name: weaveworks/eksctl@v0.147.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
