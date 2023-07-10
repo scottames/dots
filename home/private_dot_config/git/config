@@ -16,6 +16,7 @@
 	rebase = true
 [push]
 	default = simple
+	autoSetupRemote = true
 [fetch]
 	prune = true
 [merge]
