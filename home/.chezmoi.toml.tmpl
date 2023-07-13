@@ -1,26 +1,26 @@
 {{ $githubUser     := "scottames" -}}
 {{ $chassis        := ""          -}}
+{{ $isContainer    := false       -}}
+{{ $isDistroBox    := false       -}}
 {{ $isDocker       := false       -}}
-{{ $isServer       := false       -}}
-{{ $isLaptop       := false       -}}
+{{ $isPodman       := false       -}}
 {{ $desktopSession := env "DESKTOP_SESSION" -}}
 
 {{- if eq .chezmoi.os "linux" -}}
-{{-   if lstat "/.dockerenv" -}}
-{{-     $chassis = "docker" -}}
-{{-     $isDocker = true -}}
+{{-   if or (lstat "/.dockerenv") (lstat "/run/.dockerenv") (lstat ".containerenv") (lstat "/run/.containerenv") -}}
+{{-     $isContainer = true -}}
+{{-   end -}}
+{{-   if and $isContainer (lookPath "distrobox-host-exec")  -}}
+{{-     $isDistroBox = true -}}
+{{-   end -}}
+{{-   if $isDistroBox -}}
+{{-     $chassis = output "distrobox-host-exec" "hostnamectl" "chassis" | trim -}}
+{{-   else if $isContainer -}}
+{{-     $chassis = "container" }}
 {{-   else -}}
 {{-     $chassis = output "hostnamectl" "chassis" | trim -}}
-{{-     if eq $chassis "server" -}}
-{{-       $isServer = true -}}
-{{-     else if eq $chassis "laptop" -}}
-{{-       $isLaptop = true -}}
-{{-     end -}}
 {{-   end -}}
 {{- end -}}
-
-{{ $isNoGUI := or (eq .chezmoi.os "android") $isServer -}}
-{{ $isGUI := and (not $isNoGUI) (eq .chezmoi.os "linux") -}}
 
 sourceDir = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
 progress = true
@@ -37,11 +37,6 @@ progress = true
   chassis = "{{       $chassis }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
   desktop_session = "{{ $desktopSession }}"
-  is_docker = {{     $isDocker    }}
-  is_laptop = {{     $isLaptop    }}
-  is_linux_gui = {{  $isGUI       }}
-  is_no_gui = {{     $isNoGUI     }}
-  is_server = {{     $isServer    }}
 
   [data.me]
     user = "{{ .chezmoi.username }}"
