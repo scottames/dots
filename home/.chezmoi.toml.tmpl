@@ -7,7 +7,7 @@
 {{ $desktopSession := env "DESKTOP_SESSION" -}}
 
 {{- if eq .chezmoi.os "linux" -}}
-{{-   if or (lstat "/.dockerenv") (lstat "/run/.dockerenv") (lstat ".containerenv") (lstat "/run/.containerenv") -}}
+{{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
 {{-     $isContainer = true -}}
 {{-   end -}}
 {{-   if and $isContainer (lookPath "distrobox-host-exec")  -}}
