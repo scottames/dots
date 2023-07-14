@@ -1,0 +1,61 @@
+#!/bin/env bash
+
+cyan='\033[0;36m'
+clear='\033[0m'
+magenta='\033[0;35m'
+
+echo '
+ ██████╗ ██████╗ ██╗     ██╗      ██████╗ ██╗██████╗ 
+██╔════╝██╔═══██╗██║     ██║     ██╔═══██╗██║██╔══██╗
+██║     ██║   ██║██║     ██║     ██║   ██║██║██║  ██║
+██║     ██║   ██║██║     ██║     ██║   ██║██║██║  ██║
+╚██████╗╚██████╔╝███████╗███████╗╚██████╔╝██║██████╔╝
+ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝╚═════╝ 
+'
+
+cursor_themes_dir="${HOME}/.local/share/icons"
+
+# renovate: depName=vinceliuice/Colloid-icon-theme datasource=github-releases
+version="2023-07-01"
+version_existing=""
+version_file="${cursor_themes_dir}/.colloid_version"
+
+if [[ -f ${version_file} ]]; then
+  version_existing="$(cat "${version_file}")"
+fi
+
+printf "🐁 Colloid\n  ${cyan}current:${clear} %s\n  ${cyan}latest:${clear}  %s\n\n" "${version_existing}" "${version}"
+
+if [[ ${version} != "${version_existing}" ]]; then
+  cd "$(mktemp -d)" || exit 1
+  file="${version}.zip"
+  curl -fsSL -O "https://github.com/vinceliuice/Colloid-icon-theme/archive/refs/tags/${file}"
+  unzip -q "${file}"
+
+  src_dir="Colloid-icon-theme-${version}"
+  if [[ ! -d ${src_dir} ]]; then
+    echo "something went wrong, cannot find extracted icon theme at ${src_dir}"
+  else
+
+    mkdir -p "${cursor_themes_dir}"
+    if [[ -d "${cursor_themes_dir}/Colloid-cursors" ]]; then
+      rm -r "${cursor_themes_dir}/Colloid-cursors"
+    fi
+
+    cp -r "${src_dir}/cursors/dist" \
+      "${cursor_themes_dir}/Colloid-cursors"
+    printf "${magenta}installed theme${clear} 'Colloid'\n"
+
+    if [[ -d "${cursor_themes_dir}/Colloid-dark-cursors" ]]; then
+      rm -r "${cursor_themes_dir}/Colloid-dark-cursors"
+    fi
+
+    cp -r "${src_dir}/cursors/dist-dark" \
+      "${cursor_themes_dir}/Colloid-dark-cursors"
+    printf "${magenta}installed theme${clear} 'Colloid dark'\n"
+
+    printf "%s" "${version}" >"${version_file}"
+  fi
+fi
+
+# vi: ft=bash
