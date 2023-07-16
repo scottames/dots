@@ -47,3 +47,19 @@ packages:
   - name: jtyr/gbt@v2.0.0
   - name: junegunn/fzf@0.42.0
   - name: hadolint/hadolint@v2.12.0
+  - name: jesseduffield/lazygit@v0.38.2
+  - name: derailed/k9s@v0.27.4
+  - name: awslabs/amazon-ecr-credential-helper@v0.7.1
+  - name: 99designs/aws-vault@v7.2.0
+  - name: koalaman/shellcheck@v0.9.0
+  - name: sharkdp/bat@v0.23.0
+  - name: bitnami-labs/sealed-secrets@v0.22.0
+  - name: instrumenta/kubeval@v0.16.1
+  - name: kubernetes/minikube@v1.30.1
+  - name: GoogleContainerTools/skaffold@v2.6.1
+  - name: smallstep/cli@v0.24.4
+  - name: terraform-linters/tflint@v0.47.0
+  - name: dwisiswant0/tlder@v0.0.1
+  - name: itchyny/json2yaml@v0.1.4
+  - name: suzuki-shunsuke/yaml2json@v0.2.1
+  - name: mikefarah/yq@v4.34.2
