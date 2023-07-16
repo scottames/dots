@@ -33,6 +33,15 @@
     refreshPeriod = "168h"
     stripComponents = 1
 
+# renovate: depName=flyway/flyway datasource=github-releases
+{{ $flywayVersion := "9.20.1" -}}
+
+[".local/share/flyway"]
+    type = "archive"
+    url = "https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{ $flywayVersion }}/flyway-commandline-{{ $flywayVersion }}-linux-x64.tar.gz"
+    exact = true
+    refreshPeriod = "168h"
+
 {{ end -}}
 
 #  ╭──────────────────────────────────────────────────────────╮

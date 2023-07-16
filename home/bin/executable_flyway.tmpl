@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# renovate: depName=flyway/flyway datasource=github-releases
+{{ $flywayVersion := "9.20.1" -}}
+
+"$JAVA_HOME/bin/java" -Djava.security.egd=file:/dev/../dev/urandom -cp $HOME/.local/share/flyway/flyway-{{ $flywayVersion }}/lib/*:$HOME/.local/share/flyway/flyway-{{ $flywayVersion }}/lib/aad/*:$HOME/.local/share/flyway/flyway-{{ $flywayVersion }}/lib/oracle_wallet/*:$HOME/.local/share/flyway/flyway-{{ $flywayVersion }}/lib/community/*:$HOME/.local/share/flyway/flyway-{{ $flywayVersion }}/drivers/*:$HOME/.local/share/flyway/flyway-{{ $flywayVersion }}/drivers/gcp* org.flywaydb.commandline.Main "$@"
+
+# vi: set ft=sh

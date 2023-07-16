@@ -97,6 +97,7 @@
     {
       matchFiles: [
         'home/.chezmoiexternal.toml.tmpl',
+        'home/bin/executable_flyway.tmpl'
       ],
       groupName: 'chezmoiexternal',
       automerge: true,
