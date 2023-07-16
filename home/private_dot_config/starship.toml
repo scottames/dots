@@ -47,11 +47,11 @@ behind = "⇣${count} "
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 modified = "!"
 untracked = "?"
-stashed = ""
+stashed = "󰏖"
 staged = "+"
 renamed = "»"
 deleted = "x"
-up_to_date = ""
+up_to_date = "󰄬"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
