@@ -23,6 +23,16 @@
     url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ $nerdFontsVersion }}/RobotoMono.zip"
     exact = true
     refreshPeriod = "168h"
+
+{{ $ubuntuFontsVersion := "0.83" -}}
+
+[".local/share/fonts/ubuntu"]
+    type = "archive"
+    url = "https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-{{ $ubuntuFontsVersion }}.zip"
+    exact = true
+    refreshPeriod = "168h"
+    stripComponents = 1
+
 {{ end -}}
 
 #  ╭──────────────────────────────────────────────────────────╮
