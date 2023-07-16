@@ -1,0 +1,76 @@
+#!/bin/env bash
+
+# shellcheck disable=SC1054,SC1083
+{{ if eq .desktop_session "gnome" }}
+
+echo '
+ ██████╗ ███╗   ██╗ ██████╗ ███╗   ███╗███████╗
+██╔════╝ ████╗  ██║██╔═══██╗████╗ ████║██╔════╝
+██║  ███╗██╔██╗ ██║██║   ██║██╔████╔██║█████╗
+██║   ██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══╝
+╚██████╔╝██║ ╚████║╚██████╔╝██║ ╚═╝ ██║███████╗
+ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
+   ███████╗██╗  ██╗████████╗███████╗
+   ██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝
+   █████╗   ╚███╔╝    ██║   ███████╗
+   ██╔══╝   ██╔██╗    ██║   ╚════██║
+   ███████╗██╔╝ ██╗   ██║   ███████║
+   ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+'
+_gnome_extensions_installed=(
+  "user-theme@gnome-shell-extensions.gcampax.github.com"
+  "nightthemeswitcher@romainvigier.fr"
+)
+
+_gnome_extensions_removed=(
+)
+
+function dbhostexec() {
+  if ([[ -f /run/.containerenv ]] || [[ -f /.dockerenv ]]) &&
+    [[ $(command -v distrobox-host-exec) ]]; then
+    distrobox-host-exec "${@}"
+  else
+    "${@}"
+  fi
+}
+
+if dbhostexec which pyenv &>/dev/null; then
+  export PYENV_VERSION=system
+fi
+
+function _install_gnome_extensions() {
+  if ! dbhostexec which gext &>/dev/null; then
+
+    if [[ $(cat /proc/version | grep arch) ]]; then
+
+      if ! dbhostexec which pipx &>/dev/null; then
+        printf "Missing pipx! Cannot install gext\n"
+        return 1
+      fi
+
+      dbhostexec pipx install gnome-extensions-cli
+      dbhostexec pipx runpip gnome-extensions-cli install pygobject
+
+    else
+      dbhostexec pip install --upgrade gnome-extensions-cli
+    fi
+
+  else
+    echo "🚀 gext already installed!"
+  fi
+
+  for _ext in "${_gnome_extensions_removed[@]}"; do
+    dbhostexec gext uninstall "${_ext}"
+  done
+
+  for _ext in "${_gnome_extensions_installed[@]}"; do
+    dbhostexec gext install "${_ext}"
+  done
+}
+
+_install_gnome_extensions
+
+# shellcheck disable=SC1056,SC1072,SC1083,SC1009,SC1073
+{{ end -}}
+
+# vi: ft=bash
