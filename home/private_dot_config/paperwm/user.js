@@ -21,10 +21,16 @@ function init() {
   Examples = Extension.imports.examples;
   App = Extension.imports.app;
 
-  Tiling.defwinprop({
-    wm_class: "zoom",
-    scratch_layer: true,
-  });
+  Tiling.defwinprop(
+    {
+      wm_class: "zoom",
+      scratch_layer: true,
+    },
+    {
+      wm_class: "gnome-calculator",
+      scratch_layer: true,
+    },
+  );
 }
 
 function enable() {
