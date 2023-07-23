@@ -28,7 +28,7 @@ _gnome_extensions_removed=(
 
 function dbhostexec() {
   if ([[ -f /run/.containerenv ]] || [[ -f /.dockerenv ]]) &&
-    [[ $(command -v distrobox-host-exec) ]]; then
+  [[ $(command -v distrobox-host-exec) ]]; then
     distrobox-host-exec "${@}"
   else
     "${@}"
@@ -60,12 +60,14 @@ function _install_gnome_extensions() {
     echo "🚀 gext already installed!"
   fi
 
+  _gext="$(dbhostexec which gext)"
+
   for _ext in "${_gnome_extensions_removed[@]}"; do
-    dbhostexec gext uninstall "${_ext}"
+    dbhostexec $_gext uninstall "${_ext}"
   done
 
   for _ext in "${_gnome_extensions_installed[@]}"; do
-    dbhostexec gext install "${_ext}"
+    dbhostexec $_gext install "${_ext}"
   done
 }
 
