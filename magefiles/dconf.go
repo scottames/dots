@@ -23,6 +23,17 @@ var dirs = []string{
 	"/org/gnome/shell/extensions/paperwm/",           // https://github.com/paperwm/PaperWM
 	"/org/gnome/settings-daemon/plugins/media-keys/", // custom key bindings + media keys
 	"/org/gnome/desktop/wm/keybindings/",             // keybindings
+	// TODO: convert to gsettings (single file, one line per entry)
+	"/org/gnome/desktop/interface/",
+	"/org/gnome/desktop/peripherals/touchpad/",
+	"/org/gnome/desktop/privacy/",
+	"/org/gnome/desktop/search-providers/",
+	"/org/gnome/desktop/wm/preferences/",
+	"/org/gnome/settings-daemon/plugins/color/",
+	"/org/gnome/settings-daemon/plugins/power/",
+	"/org/gnome/shell/extensions/nightthemeswitcher/",
+	"/org/gnome/shell/weather/"
+	"/org/gnome/shell/world-clocks/",
 }
 
 // Dconf - Gnome Dconf settings.
