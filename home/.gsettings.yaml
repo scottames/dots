@@ -20,6 +20,12 @@ org.gnome.desktop.wm.preferences:
   titlebar-font: '''Roboto Bold 11'''
 org.gnome.settings-daemon.plugins.color:
   night-light-enabled: "true"
+org.gnome.settings-daemon.plugins.media-keys:
+  custom-keybindings: '[''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/'']'
+? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/
+: binding: '''<Control><Alt>b'''
+  command: '''flatpak run com.raggesilver.BlackBox'''
+  name: '''blackbox'''
 org.gnome.settings-daemon.plugins.power:
   sleep-inactive-ac-type: '''nothing'''
 org.gnome.shell.extensions.nightthemeswitcher.gtk-variants:
