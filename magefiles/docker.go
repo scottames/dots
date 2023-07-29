@@ -138,12 +138,12 @@ func (d Docker) run(target string, args []string, cmd *string) error {
 	return dr.Run()
 }
 
-// Run - run the given docker container (1).
+// Run - the given docker container (1).
 func (d Docker) Run(target string) error {
 	return d.run(target, nil, nil)
 }
 
-// Runcmd - run the given docker container (1) with the given command (2).
+// Runcmd - the given docker container (1) with the given command (2).
 func (d Docker) Runcmd(target, cmd string) error {
 	return d.run(target, nil, &cmd)
 }

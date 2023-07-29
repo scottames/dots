@@ -1,0 +1,37 @@
+org.gnome.desktop.interface:
+  cursor-theme: "'Colloid-cursors'"
+  document-font-name: "'Roboto 11'"
+  font-name: "'Roboto 11'"
+  monospace-font-name: "'FiraCode Nerd Font Mono 10'"
+  show-battery-percentage: "true"
+org.gnome.desktop.peripherals.touchpad:
+  tap-to-click: "true"
+org.gnome.desktop.privacy:
+  old-files-age: uint32 7
+  recent-files-max-age: "30"
+  remove-old-temp-files: "true"
+  remove-old-trash-files: "true"
+org.gnome.desktop.search-providers:
+  enabled: "['org.gnome.Weather.desktop', 'org.gnome.Characters.desktop']"
+org.gnome.desktop.wm.keybindings:
+  maximize-vertically: "@as []"
+  minimize: "@as []"
+org.gnome.desktop.wm.preferences:
+  titlebar-font: "'Roboto Bold 11'"
+org.gnome.settings-daemon.plugins.color:
+  night-light-enabled: "true"
+org.gnome.settings-daemon.plugins.power:
+  sleep-inactive-ac-type: "'nothing'"
+org.gnome.shell.extensions.nightthemeswitcher.gtk-variants:
+  day: "'Catppuccin-Frappe-Standard-Flamingo-dark'"
+  enabled: "true"
+  night: "'Catppuccin-Mocha-Standard-Flamingo-dark'"
+org.gnome.shell.extensions.nightthemeswitcher.shell-variants:
+  day: "'Catppuccin-Frappe-Standard-Flamingo-dark'"
+  enabled: "true"
+  night: "'Catppuccin-Mocha-Standard-Flamingo-dark'"
+org.gnome.shell.extensions.nightthemeswitcher.time:
+  sunrise: "6.0"
+  sunset: "19.0"
+org.gnome.shell.extensions.paperwm:
+  use-default-background: "true"

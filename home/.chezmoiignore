@@ -2,6 +2,7 @@
 
 **/*.{bak,log,old,foo}
 .cache
+.gsettings.yaml
 
 {{- if not (eq .desktop_session "gnome") }}
 ### Ignore if not running gnome

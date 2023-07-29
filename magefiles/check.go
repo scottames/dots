@@ -10,7 +10,7 @@ const (
 	trunk = "trunk"
 )
 
-// Check - run all checks (trunk).
+// Check - all checks (trunk).
 func Check() {
 	mg.Deps(
 		Trunk.Check,

@@ -5,9 +5,7 @@ import (
 )
 
 // Aliases - target aliases.
-var Aliases = map[string]interface{}{
-	"dconf:restore": Dconf.Loadall,
-}
+var Aliases = map[string]interface{}{}
 
 // All - wraps all commands into one.
 type All mg.Namespace
@@ -15,13 +13,13 @@ type All mg.Namespace
 // Backup - backup all.
 func (All) Backup() {
 	mg.Deps(
-		Dconf.Backupall,
+		Gs.Backupall,
 	)
 }
 
 // Restore - restore all.
 func (All) Restore() {
 	mg.Deps(
-		Dconf.Loadall,
+		Gs.Restore,
 	)
 }
