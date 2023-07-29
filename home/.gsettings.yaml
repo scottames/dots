@@ -1,3 +1,5 @@
+org.gnome.desktop.input-sources:
+  xkb-options: '[''caps:ctrl_modifier'']'
 org.gnome.desktop.interface:
   cursor-theme: '''Colloid-cursors'''
   document-font-name: '''Roboto 11'''
@@ -18,14 +20,25 @@ org.gnome.desktop.wm.keybindings:
   minimize: '@as []'
 org.gnome.desktop.wm.preferences:
   titlebar-font: '''Roboto Bold 11'''
+org.gnome.mutter:
+  experimental-features: '[''scale-monitor-framebuffer'']'
 org.gnome.settings-daemon.plugins.color:
   night-light-enabled: "true"
 org.gnome.settings-daemon.plugins.media-keys:
-  custom-keybindings: '[''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/'']'
+  custom-keybindings: '[''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/'']'
+  screensaver: '[''<Shift><Control><Alt>l'']'
 ? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/
 : binding: '''<Control><Alt>b'''
   command: '''flatpak run com.raggesilver.BlackBox'''
   name: '''blackbox'''
+? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/
+: binding: '''<Control><Alt>t'''
+  command: '''gnome-terminal'''
+  name: '''gnome-terminal'''
+? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/
+: binding: '''<Control><Alt>w'''
+  command: '''flatpak run org.wezfurlong.wezterm'''
+  name: '''wez'''
 org.gnome.settings-daemon.plugins.power:
   sleep-inactive-ac-type: '''nothing'''
 org.gnome.shell.extensions.nightthemeswitcher.gtk-variants:
@@ -41,3 +54,5 @@ org.gnome.shell.extensions.nightthemeswitcher.time:
   sunset: "19.0"
 org.gnome.shell.extensions.paperwm:
   use-default-background: "true"
+org.gtk.gtk4.Settings.FileChooser:
+  sort-directories-first: "true"

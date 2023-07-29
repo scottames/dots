@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"os"
 	"strings"
@@ -16,6 +17,7 @@ import (
 const (
 	gs                  = "gsettings"
 	gsBackupFile string = "./home/.gsettings.yaml"
+	indent              = 2
 )
 
 // GSettings - maps to a schema: key:value.
@@ -270,14 +272,21 @@ func (g Gs) Set(scope string, val string) error {
 
 // WriteBackup - write given gsettings to backup file.
 func (Gs) WriteBackup(gs GSettings) error {
-	data, err := yaml.Marshal(&gs)
+	var err error
+	var b bytes.Buffer
+
+	yamlEncoder := yaml.NewEncoder(&b)
+	yamlEncoder.SetIndent(indent)
+
+	err = yamlEncoder.Encode(&gs)
 	if err != nil {
 		return err
 	}
 
-	err = os.WriteFile(gsBackupFile, data, 0600)
+	err = os.WriteFile(gsBackupFile, b.Bytes(), 0600)
 	if err != nil {
 		return err
 	}
+
 	return nil
 }
