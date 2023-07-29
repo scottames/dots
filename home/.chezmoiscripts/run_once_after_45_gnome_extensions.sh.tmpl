@@ -28,7 +28,7 @@ _gnome_extensions_removed=(
 
 function dbhostexec() {
   if ([[ -f /run/.containerenv ]] || [[ -f /.dockerenv ]]) &&
-  [[ $(command -v distrobox-host-exec) ]]; then
+    [[ $(command -v distrobox-host-exec) ]]; then
     distrobox-host-exec "${@}"
   else
     "${@}"

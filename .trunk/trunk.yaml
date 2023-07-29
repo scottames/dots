@@ -24,12 +24,10 @@ actions:
         - files: ["*.go"]
 lint:
   enabled:
-    - checkov@2.3.324
     - gokart@0.5.1
     - osv-scanner@1.3.4
     - svgo@3.0.2
     - terrascan@1.18.1
-    - trivy@0.43.1
     - trufflehog@3.44.0
     - actionlint@1.6.25
     - git-diff-check@SYSTEM

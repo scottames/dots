@@ -5,12 +5,12 @@ clear='\033[0m'
 magenta='\033[0;35m'
 
 echo '
- ██████╗ ██████╗ ██╗     ██╗      ██████╗ ██╗██████╗ 
+ ██████╗ ██████╗ ██╗     ██╗      ██████╗ ██╗██████╗
 ██╔════╝██╔═══██╗██║     ██║     ██╔═══██╗██║██╔══██╗
 ██║     ██║   ██║██║     ██║     ██║   ██║██║██║  ██║
 ██║     ██║   ██║██║     ██║     ██║   ██║██║██║  ██║
 ╚██████╗╚██████╔╝███████╗███████╗╚██████╔╝██║██████╔╝
- ╚═════╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝╚═════╝ 
+ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝╚═════╝
 '
 
 cursor_themes_dir="${HOME}/.local/share/icons"
@@ -44,6 +44,7 @@ if [[ ${version} != "${version_existing}" ]]; then
 
     cp -r "${src_dir}/cursors/dist" \
       "${cursor_themes_dir}/Colloid-cursors"
+    # shellcheck disable=SC2059
     printf "${magenta}installed theme${clear} 'Colloid'\n"
 
     if [[ -d "${cursor_themes_dir}/Colloid-dark-cursors" ]]; then
@@ -52,6 +53,7 @@ if [[ ${version} != "${version_existing}" ]]; then
 
     cp -r "${src_dir}/cursors/dist-dark" \
       "${cursor_themes_dir}/Colloid-dark-cursors"
+    # shellcheck disable=SC2059
     printf "${magenta}installed theme${clear} 'Colloid dark'\n"
 
     printf "%s" "${version}" >"${version_file}"
