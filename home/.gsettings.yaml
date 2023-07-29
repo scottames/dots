@@ -20,8 +20,8 @@ org.gnome.desktop.wm.keybindings:
   minimize: '@as []'
 org.gnome.desktop.wm.preferences:
   titlebar-font: '''Roboto Bold 11'''
-org.gnome.mutter:
-  experimental-features: '[''scale-monitor-framebuffer'']'
+org.gnome.login-screen:
+  disable-user-list: "true"
 org.gnome.settings-daemon.plugins.color:
   night-light-enabled: "true"
 org.gnome.settings-daemon.plugins.media-keys:
