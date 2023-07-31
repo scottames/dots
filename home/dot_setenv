@@ -19,9 +19,12 @@ $HAS_NVIM \
 setenv FISH_CONFIG                "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS           "--bind ctrl-j:down,ctrl-k:up"
 $HAS_OP \
-  && setenv GITHUB_USER           "op://Private/github.com/username" \
-  && setenv GITHUB_TOKEN          "op://private/github.com/token" \
-  && setenv GITHUB_USERNAME       "$GITHUB_USER" \
+  && setenv GITHUB_USER           "op://Private/github.com/username"
+$HAS_OP \
+  && setenv GITHUB_TOKEN          "op://private/github.com/token"
+$HAS_OP \
+  && setenv GITHUB_USERNAME       "$GITHUB_USER"
+$HAS_OP \
   && setenv GITHUB_OAUTH_TOKEN    "$GITHUB_TOKEN"
 setenv GOPATH                     "$HOME/go"
 setenv GOPRIVATE                  "github.com/scottames/*"

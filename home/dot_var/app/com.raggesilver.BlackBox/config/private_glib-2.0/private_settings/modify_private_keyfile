@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+from sys import stdin
+import re
+
+# Docs: https://www.chezmoi.io/user-guide/manage-different-types-of-file/#manage-part-but-not-all-of-a-file
+# Example: https://github.com/twpayne/chezmoi/issues/1046#issuecomment-864343405
+
+header = """\
+[com/raggesilver/BlackBox]
+""".rstrip()
+
+ignored_lines = """\
+window-height=1041
+window-width=849
+""".rstrip()
+
+remaining = """\
+font='FiraCode Nerd Font Mono 12'
+terminal-bell=false
+use-custom-command=true
+theme-light='Catppuccin-Latte'
+theme-dark='Catppuccin-Mocha'
+easy-copy-paste=false
+custom-shell-command='distrobox enter at'
+""".rstrip()
+
+
+def main():
+    live = stdin.read()
+    pattern = r"^\s*window-.*=.*$"
+    ignored = re.findall(pattern, live, re.MULTILINE)
+
+    if ignored:
+        print(*ignored, sep="\n")
+    else:
+        print(ignored_lines)
+
+    print(remaining)
+
+
+if __name__ == "__main__":
+    main()
+
+# vi: ft=python

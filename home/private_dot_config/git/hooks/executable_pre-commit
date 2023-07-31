@@ -38,7 +38,7 @@ if [[ -f "${HOME}/.pre-commit-config.yaml" ]]; then
     pre-commit "${_PRECOMMIT_GLOBAL_ARGS[@]}"
   else
     printf "\n[!] 'pre-commit' not found.  Did you forget to activate your virtualenv?\n\n" 1>&2
-    exit 1
+    exit 0
   fi
 
 fi

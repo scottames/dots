@@ -5,6 +5,6 @@ function gh \
   if [ $HAS_OP ]
     op run -- gh $argv
   else
-    command gh
+    command gh $argv
   end
 end

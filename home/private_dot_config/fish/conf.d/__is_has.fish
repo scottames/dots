@@ -34,6 +34,7 @@ set has_bins \
   git        \
   gh         \
   go         \
+  gum        \
   hub        \
   kubectl    \
   mage       \
