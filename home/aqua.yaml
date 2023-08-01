@@ -3,28 +3,28 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.26.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.32.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
     type: local
 packages:
   - name: charmbracelet/glow@v1.5.1
-  - name: cli/cli@v2.32.0
+  - name: cli/cli@v2.32.1
   - name: denisidoro/navi@v2.22.1
   - name: golangci/golangci-lint@v1.53.3
   - name: homeport/dyff@v1.5.8
   - name: kubernetes-sigs/krew@v0.4.4
-  - name: marcosnils/bin@v0.16.2
+  - name: marcosnils/bin@v0.17.0
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@440.0.0
-  - name: twpayne/chezmoi@v2.34.3
+  - name: twpayne/chezmoi@v2.36.1
   - name: zellij-org/zellij@v0.37.2
-  - name: weaveworks/eksctl@v0.149.0
+  - name: weaveworks/eksctl@v0.150.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
-  - name: starship/starship@v1.15.0
+  - name: starship/starship@v1.16.0
   - name: muesli/duf@v0.8.1
   - name: gokcehan/lf@r28
   - name: BurntSushi/ripgrep@13.0.0
@@ -36,27 +36,27 @@ packages:
     registry: dots
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.32.3
-  - name: kubernetes/kubectl@v1.27.3
+  - name: kubernetes/kubectl@v1.27.4
   - name: fluxcd/flux2@v2.0.1
   - name: helm/helm@v3.12.2
-  - name: kubernetes-sigs/kustomize@kustomize/v5.1.0
+  - name: kubernetes-sigs/kustomize@kustomize/v5.1.1
   - name: stern/stern@v1.25.0
-  - name: charmbracelet/gum@v0.10.0
+  - name: charmbracelet/gum@v0.11.0
   - name: dandavison/delta@0.16.5
   - name: stedolan/jq@jq-1.6
   - name: jtyr/gbt@v2.0.0
   - name: junegunn/fzf@0.42.0
   - name: hadolint/hadolint@v2.12.0
-  - name: jesseduffield/lazygit@v0.38.2
+  - name: jesseduffield/lazygit@v0.39.4
   - name: derailed/k9s@v0.27.4
   - name: awslabs/amazon-ecr-credential-helper@v0.7.1
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.9.0
   - name: sharkdp/bat@v0.23.0
-  - name: bitnami-labs/sealed-secrets@v0.22.0
+  - name: bitnami-labs/sealed-secrets@v0.23.0
   - name: instrumenta/kubeval@v0.16.1
-  - name: kubernetes/minikube@v1.30.1
-  - name: GoogleContainerTools/skaffold@v2.6.1
+  - name: kubernetes/minikube@v1.31.1
+  - name: GoogleContainerTools/skaffold@v2.6.2
   - name: smallstep/cli@v0.24.4
   - name: terraform-linters/tflint@v0.47.0
   - name: dwisiswant0/tlder@v0.0.1
