@@ -31,6 +31,8 @@ def main():
     pattern = r"^\s*window-.*=.*$"
     ignored = re.findall(pattern, live, re.MULTILINE)
 
+    print(header)
+
     if ignored:
         print(*ignored, sep="\n")
     else:

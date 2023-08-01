@@ -89,7 +89,7 @@ style = "bright-black"
 [custom.containerenv]
 description = "The activated distrobox container"
 command = """
-grep -oP 'name="\K[^"]+' /var/run/.containerenv
+grep -oP 'name="\\K[^"]+' /var/run/.containerenv
 """
 when = "is_container.sh"
 style = "italic bright-black"
