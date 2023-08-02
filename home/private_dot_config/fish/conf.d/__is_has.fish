@@ -40,6 +40,7 @@ set has_bins \
   mage       \
   nvim       \
   op         \
+  podman     \
   paru       \
   rustup     \
   tldr       \
