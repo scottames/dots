@@ -21,6 +21,8 @@ $cmd_duration\
 $line_break\
 $character"""
 
+command_timeout = 1000
+
 [directory]
 truncation_length = 4
 style = "bold #cad0f2"
@@ -91,7 +93,7 @@ description = "The activated distrobox container"
 command = """
 grep -oP 'name="\\K[^"]+' /var/run/.containerenv
 """
-when = "is_container.sh"
+when = "command -v is_container.sh && is_container.sh"
 style = "italic bright-black"
 format = "[ $output]($style)"
 disabled = false
