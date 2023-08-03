@@ -25,7 +25,6 @@ return {
         "gitignore",
         "go",
         "hcl",
-        "help",
         "html",
         "javascript",
         "json",

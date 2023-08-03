@@ -13,26 +13,6 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-        config = function()
-          require("telescope").load_extension("fzf")
-        end,
-        -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
-        --
-        -- This means that the fzf syntax is supported:
-        --
-        -- | Token    | Match type                  | Description
-        --------------------------------------------------------------------------------
-        -- | sbtrkt	  | fuzzy-match                 | Items that match sbtrkt
-        -- | 'wild	  | exact-match (quoted)	      | Items that include wild
-        -- | ^music	  | prefix-exact-match	        | Items that start with music
-        -- | .mp3$	  | suffix-exact-match	        | Items that end with .mp3
-        -- | !fire	  | inverse-exact-match	        | Items that do not include fire
-        -- | !^music	| inverse-prefix-exact-match	| Items that do not start with music
-        -- | !.mp3$	  | inverse-suffix-exact-match	| Items that do not end with .mp3
-      },
       { -- https://github.com/someone-stole-my-name/yaml-companion.nvim
         "someone-stole-my-name/yaml-companion.nvim",
         config = function()
