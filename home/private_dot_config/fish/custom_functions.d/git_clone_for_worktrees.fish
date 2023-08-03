@@ -15,7 +15,7 @@ function git_clone_for_worktrees \
   set -l name (basename (string replace ".git" "" $url))
 
   mkdir -p $name
-  if not type -d $name
+  if not test -d $name
     printf_err "Unable to create directory '$name'\n"
     return 1
   end
@@ -44,7 +44,7 @@ function git_clone_for_worktrees \
   git worktree add $_git_main_branch $_git_main_branch
 
 
-  if not type -d $_git_main_branch
+  if not test -d $_git_main_branch
     printf_err "Unable to create initial worktree for '$_git_main_branch'\n"
     return 1
   end
