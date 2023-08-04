@@ -1,20 +1,30 @@
 #!/bin/env fish
 
 function getclip --wraps xclip
-  if $IS_LINUX
-    set -l login_session_type (loginctl show-session (loginctl | grep (whoami) | awk '{print $1}') -p Type)
-    set -l login_session (string split = $login_session_type)[2]
+  set -l loginctl
+  set -l paste
 
-    if [ $login_session = "wayland" ]
-      wl-paste $argv
-    else if [ $login_session = "x11" ]
-      xclip -selection c -o $argv
+  if $IS_LINUX
+    set -l dbe
+    set -l ls (login_session)
+
+    if is_container > /dev/null
+      set dbe "distrobox-host-exec"
+    end
+
+    if [ $ls = "wayland" ]
+      set paste "wl-paste"
+    else if [ $ls = "x11" ]
+      set paste "xclip -selection c -o"
     else
       echo "No clipboard handler found."
     end
+
   else if $IS_MAC
-    pbpaste
+    set paste "pbpaste"
   else
       echo "Only Linux & Mac supported."
   end
+
+    eval $dbe $paste $argv
 end

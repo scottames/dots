@@ -93,7 +93,7 @@ description = "The activated distrobox container"
 command = """
 grep -oP 'name="\\K[^"]+' /var/run/.containerenv
 """
-when = "command -v is_container.sh && is_container.sh"
+when = "is_container"
 style = "italic bright-black"
 format = "[ $output]($style)"
 disabled = false
