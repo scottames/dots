@@ -12,10 +12,18 @@
 
 # PaperWM
 .config/paperwm*
-.local/share/gnome-shell/extensions/paperwm@hedning:matrix.org
 src/pub/paperwm*
+
+# Gnome Wallpaper Config
+.local/share/gnome-background-properties/*
+
 ###
 {{- end}}
+
+# Gnome Wallpaper Config
+{{ if not (stat (joinPath .chezmoi.homeDir "src/scottames/walls")) }}
+.local/share/gnome-background-properties/*
+{{ end }}
 
 {{- if not (eq .chezmoi.osRelease.id "arch") }}
 ### Ignore if not Arch Linux

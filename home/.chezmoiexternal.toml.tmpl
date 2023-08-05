@@ -111,6 +111,7 @@
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
+# TODO: hook rebuilding cache on change: bat cache --build
 [".config/bat/themes"]
     type = "git-repo"
     url = "https://github.com/catppuccin/bat.git"
@@ -135,6 +136,11 @@
 #  │ git-repo                                                 │
 #  │ | personal                                               │
 #  ╰──────────────────────────────────────────────────────────╯
+["src/scottames/boxes"]
+    type = "git-repo"
+    url = "git@github.com:scottames/boxes.git"
+    refreshPeriod = "0"
+
 ["src/scottames/cmder"]
     type = "git-repo"
     url = "git@github.com:scottames/cmder.git"
@@ -150,9 +156,19 @@
     url = "git@github.com:scottames/misc.git"
     refreshPeriod = "0"
 
+["src/scottames/ublue"]
+    type = "git-repo"
+    url = "git@github.com:scottames/ublue.git"
+    refreshPeriod = "0"
+
 ["src/scottames/pm"]
     type = "git-repo"
     url = "git@github.com:scottames/pm.git"
+    refreshPeriod = "0"
+
+["src/scottames/walls"]
+    type = "git-repo"
+    url = "git@github.com:scottames/walls.git"
     refreshPeriod = "0"
 
 {{ end -}}
