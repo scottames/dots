@@ -7,6 +7,6 @@ local opt = vim.opt
 local time = os.date("*t")
 local hr = time.hour
 
-if hr > 6 and hr < 20 then
+if hr > 5 and hr < 19 then
   opt.background = "light"
 end

@@ -10,7 +10,7 @@ function zellij_attach --description "Attach to existing Zellij session(s) - if 
 
   if [ $session_count -ge 2 ]
     zellij attach \
-      (echo $sessions | fzf)
+      (printf "%s\n" $sessions | fzf)
   else
     zellij attach -c
   end
