@@ -19,6 +19,15 @@ else if [ $UNAME = "Darwin" ]
   set -g IS_MAC true
 end
 
+set -gx IS_LIGHT false
+set -gx IS_DARK  false
+set -l h (date +%k)
+if is_light > /dev/null
+  set -gx IS_LIGHT true
+else
+  set -gx IS_DARK true
+end
+
 set has_bins \
   apt        \
   aqua       \
