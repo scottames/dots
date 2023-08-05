@@ -15,10 +15,26 @@ import (
 )
 
 const (
-	gs                  = "gsettings"
-	gsBackupFile string = "./home/.gsettings.yaml"
-	indent              = 2
+	distroboxHostExec        = "distrobox-host-exec"
+	gs                       = "gsettings"
+	gsBackupFile      string = "./home/.gsettings.yaml"
+	indent                   = 2
 )
+
+// newDistroBoxCmd - returns a string slice with "distrobox-host-exec" prepended to the command
+// if the command is being executed in a container and "distrobox-host-exec" is available in path.
+func newDistroBoxCmd(cmd string) []string {
+	isContainer := isContainer()
+	cs := []string{}
+	if isContainer {
+		_, err := helpers.Which(distroboxHostExec)
+		if err == nil {
+			cs = append(cs, distroboxHostExec)
+		}
+	}
+	cs = append(cs, cmd)
+	return cs
+}
 
 // GSettings - maps to a schema: key:value.
 type GSettings map[string]GSetting
@@ -125,13 +141,15 @@ func (Gs) Compileschemas() error {
 		}
 	}
 
-	return cmder.New("glib-compile-schemas", schemasDir).Silent().Run()
+	cmd := newDistroBoxCmd("glib-compile-schemas")
+	return cmder.New(cmd...).Args(schemasDir).Silent().Run()
 }
 
 // Get - retrieve the value for a schema & key
 // returns the value and any possible error.
 func (Gs) Get(schema string, key string) (string, error) {
-	val, err := cmder.New(gs, "get", schema, key).Silent().CombinedOutput()
+	gsCmd := newDistroBoxCmd(gs)
+	val, err := cmder.New(gsCmd...).Args("get", schema, key).Silent().CombinedOutput()
 	if err != nil {
 		return "", fmt.Errorf("err getting '%s' '%s'\n %s", schema, key, strings.TrimSpace(string(val)))
 	}
@@ -187,7 +205,8 @@ func (g Gs) getToGSetting(gs GSettings, schema string, key string) (GSettings, e
 // ListKeys - lists the keys for the given schema
 // returns the keys and any possible error.
 func (Gs) ListKeys(schema string) ([]string, error) {
-	rawKeys, err := cmder.New(gs, "list-keys", schema).Silent().CombinedOutput()
+	gsCmd := newDistroBoxCmd(gs)
+	rawKeys, err := cmder.New(gsCmd...).Args("list-keys", schema).CombinedOutput()
 	if err != nil {
 		return nil, fmt.Errorf(string(rawKeys))
 	}
@@ -262,7 +281,8 @@ func (g Gs) Set(scope string, val string) error {
 		return err
 	}
 
-	out, err := cmder.New(gs, "set", schema, key, val).Silent().CombinedOutput()
+	gsCmd := newDistroBoxCmd(gs)
+	out, err := cmder.New(gsCmd...).Args("set", schema, key, val).Silent().CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("err setting: '%s' '%s' '%s'\n '%s'", schema, key, val, strings.TrimSpace(string(out)))
 	}

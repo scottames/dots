@@ -41,6 +41,8 @@ org.gnome.settings-daemon.plugins.media-keys:
   name: '''wez'''
 org.gnome.settings-daemon.plugins.power:
   sleep-inactive-ac-type: '''nothing'''
+org.gnome.shell:
+  favorite-apps: '[''firefox.desktop'', ''vivaldi-stable.desktop'', ''1password.desktop'', ''org.gnome.Software.desktop'', ''org.flameshot.Flameshot.desktop'', ''org.gnome.Nautilus.desktop'', ''org.wezfurlong.wezterm.desktop'']'
 org.gnome.shell.extensions.nightthemeswitcher.gtk-variants:
   day: '''Catppuccin-Frappe-Standard-Flamingo-dark'''
   enabled: "true"

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strings"
 	"time"
 
@@ -13,9 +14,21 @@ import (
 )
 
 const (
-	fs         = "/"
-	dockerfile = "Dockerfile"
+	fs           = "/"
+	dockerfile   = "Dockerfile"
+	dockerEnv    = "/.dockerenv"
+	containerEnv = "/run/.containerenv"
 )
+
+func isContainer() bool {
+	if _, err := os.Stat(containerEnv); err == nil {
+		return true
+	} else if _, err = os.Stat(dockerEnv); err == nil {
+		return true
+	}
+
+	return false
+}
 
 func dockerTagBase(org, proj, target string) string {
 	return org + fs + proj + fs + target
