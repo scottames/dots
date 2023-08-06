@@ -1,0 +1,9 @@
+#!/bin/env bash
+
+set -e
+
+if [[ -e ./.git/hooks/commit-msg ]]; then
+  printf "\n[i] Running local commit-msg\n\n"
+
+  ./.git/hooks/commit-msg "${@}"
+fi
