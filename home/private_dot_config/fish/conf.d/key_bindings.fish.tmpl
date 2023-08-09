@@ -16,4 +16,10 @@ function fish_user_key_bindings
   set -g fish_key_bindings fish_vi_key_bindings
   fish_default_key_bindings -M insert
   fish_vi_key_bindings --no-erase insert
+
+{{- if eq .chezmoi.os "linux" }}
+  bind -M insert \e1 'distrobox enter at;'
+{{ end -}}
 end
+
+# vi: ft=fish
