@@ -18,7 +18,6 @@ function init() {
   Tiling = Extension.imports.tiling;
   Utils = Extension.imports.utils;
   Keybindings = Extension.imports.keybindings;
-  Examples = Extension.imports.examples;
   App = Extension.imports.app;
 
   Tiling.defwinprop(
