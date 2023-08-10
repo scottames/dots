@@ -41,7 +41,7 @@ if [[ ! $(command -v aqua) ]]; then
   _aqua_installer_version=v2.1.2
   _aqua_installer_sha256sum="411caf1b5fcef4f5e74aa2a9fe99182ea13ab93ecd8ed4a983a7cff9f08edab9"
 
-  printf "\n${cyan}💧 aqua-installer version${magenta}: %s\n${clear}" "${_aqua_installer_version}"
+  printf "\n${cyan}💧 aqua-installer version${clear}:${magenta} %s\n${clear}" "${_aqua_installer_version}"
 
   curl -sSfL "https://raw.githubusercontent.com/aquaproj/aqua-installer/${_aqua_installer_version}/aqua-installer" \
     -o "${_aqua_installer}"
