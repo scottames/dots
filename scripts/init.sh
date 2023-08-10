@@ -45,8 +45,10 @@ fi
 _CHEZMOI_SOURCE="scottames/dots"
 _CHEZMOI_SOURCE_DIR="${HOME}/src/${_CHEZMOI_SOURCE}"
 
-printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n\n" \
+printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n  ${magenta}with args:${clear} " \
   "${_CHEZMOI_SOURCE}" "${_CHEZMOI_SOURCE_DIR}"
+printf "%s " "${@}"
+printf "\n\n"
 
 # exec: replace current process with chezmoi init
 exec "${_chezmoi}" init --apply "${_CHEZMOI_SOURCE}" "--source=${_CHEZMOI_SOURCE_DIR}" "${@}"

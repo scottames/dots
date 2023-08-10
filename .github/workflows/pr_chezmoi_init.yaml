@@ -13,9 +13,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Extract branch name
+        shell: bash
+        run: |
+          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
       - name: Run chezmoi init in arch linux docker container
         uses: addnab/docker-run-action@v3
         with:
-          image: ghcr.io/scottames/archlinux-toolbox:latest # https://github.com/scottames/boxes
+          # https://github.com/scottames/boxes
+          image: ghcr.io/scottames/archlinux-toolbox:latest
           options: -v ${{ github.workspace }}:/home/container/src/scottames/dots
-          run: /home/container/src/scottames/dots/scripts/init.sh --no-tty
+          run: |
+            /home/container/src/scottames/dots/scripts/init.sh \
+              --no-tty --branch "${{ steps.extract_branch.outputs.branch }}"
