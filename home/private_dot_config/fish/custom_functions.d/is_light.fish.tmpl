@@ -3,8 +3,8 @@
 function is_light --description "returns true if it is light (day) time"
 
   set -l h (date +%k)
-  if test $h -lt 6
-    or test $h -gt 18
+  if test $h -le {{ .hour_light }}
+    or test $h -ge {{ .hour_dark }}
     printf false
     return 1
   end
@@ -12,3 +12,5 @@ function is_light --description "returns true if it is light (day) time"
   printf true
   return 0
 end
+
+# vi: ft=fish

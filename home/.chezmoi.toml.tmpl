@@ -2,9 +2,9 @@
 {{ $chassis        := ""          -}}
 {{ $isContainer    := false       -}}
 {{ $isDistroBox    := false       -}}
-{{ $isDocker       := false       -}}
-{{ $isPodman       := false       -}}
 {{ $desktopSession := env "DESKTOP_SESSION" -}}
+{{ $hourDark       := 19 -}}
+{{ $hourLight      := 7 -}}
 
 {{- if eq .chezmoi.os "linux" -}}
 {{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
@@ -36,6 +36,8 @@ progress = true
 [data]
   chassis = "{{       $chassis }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+  hour_dark = {{ $hourDark }}
+  hour_light = {{ $hourLight }}
   desktop_session = "{{ $desktopSession }}"
 
   [data.me]

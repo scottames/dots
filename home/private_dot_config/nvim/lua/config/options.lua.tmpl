@@ -7,6 +7,8 @@ local opt = vim.opt
 local time = os.date("*t")
 local hr = time.hour
 
-if hr > 5 and hr < 19 then
+if hr >= {{ .hour_light }} and hr <= {{ .hour_dark }} then
   opt.background = "light"
 end
+
+-- vi: ft=lua
