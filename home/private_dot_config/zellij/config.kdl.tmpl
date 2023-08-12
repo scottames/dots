@@ -2,6 +2,13 @@ default_layout "compact"
 default_shell "fish"
 simplified_ui false
 theme "catppuccin-mocha"
+{{ if eq .chezmoi.os "darwin" -}}
+copy_command "pbcopy"
+{{- else if eq .login_session_type "wayland" -}}
+copy_command "wl-copy"
+{{- else if eq .login_session_type "x11" -}}
+copy_command "xclip -selection clipboard"
+{{- end }}
 
 keybinds clear-defaults=true {
     unbind "Ctrl h"
@@ -160,3 +167,5 @@ plugins {
 }
 
 // zellij setup --dump-config
+
+// vi: ft=kdl

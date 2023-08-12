@@ -6,6 +6,9 @@
 {{ $hourDark       := 19 -}}
 {{ $hourLight      := 7 -}}
 
+{{ $loginSession     := 0 -}}
+{{ $loginSessionType := "" -}}
+
 {{- if eq .chezmoi.os "linux" -}}
 {{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
 {{-     $isContainer = true -}}
@@ -15,6 +18,8 @@
 {{-   end -}}
 {{-   if $isDistroBox -}}
 {{-     $chassis = output "distrobox-host-exec" "hostnamectl" "chassis" | trim -}}
+{{      $loginSession = output "distrobox-host-exec" "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first }}
+{{      $loginSessionType = output "distrobox-host-exec" "loginctl" "show-session" $loginSession "-p" "Type" | replace "Type=" "" | trim -}}
 {{-   else if $isContainer -}}
 {{-     $chassis = "container" }}
 {{-   else -}}
@@ -39,6 +44,8 @@ progress = true
   hour_dark = {{ $hourDark }}
   hour_light = {{ $hourLight }}
   desktop_session = "{{ $desktopSession }}"
+  login_session = {{ $loginSession }}
+  login_session_type = "{{ $loginSessionType }}"
 
   [data.me]
     user = "{{ .chezmoi.username }}"
