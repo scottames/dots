@@ -123,13 +123,6 @@
     url = "https://github.com/magefile/mage"
     refreshPeriod = "168h"
 
-{{ if eq .chezmoi.os "linux" -}}
-["src/pub/paperwm/PaperWM"]
-    type = "git-repo"
-    url = "https://github.com/paperwm/PaperWM.git"
-    refreshPeriod = "168h"
-
-{{ end -}}
 {{- if and (lookPath "is-github-authed.sh") (eq (output "is-github-authed.sh") "true") -}}
 
 #  ╭──────────────────────────────────────────────────────────╮

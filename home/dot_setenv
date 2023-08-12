@@ -31,6 +31,8 @@ $HAS_OP \
 $HAS_OP \
   && setenv GITHUB_OAUTH_TOKEN    "$GITHUB_TOKEN"
 setenv GOPATH                     "$HOME/go"
+[ -f "$HOME/.gobrew/current/go" ] \
+  && setenv GOROOT                "$HOME/.gobrew/current/go"
 setenv GOPRIVATE                  "github.com/scottames/*"
 setenv HOME_BIN                   "$HOME/bin"
 setenv HOME_LOCAL_BIN             "$HOME/.local/bin"

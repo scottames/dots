@@ -42,21 +42,23 @@ else if $IS_LINUX
 end
 
 
-set -p _bin_dirs     \
-  $AQUA_ROOT_DIR     \
-  $AQUA_ROOT_DIR/bin \
-  $BOB_BIN           \
-  $HOME/.pyenv/shims \
-  $PYENV_ROOT/bin    \
-  $KREW_ROOT/bin     \
-  $HOME/.cargo/bin   \
-  $GOPATH/bin        \
-  $HOME/.local/bin   \
-  $HOME/bin          \
+set -a _bin_dirs            \
+  $AQUA_ROOT_DIR            \
+  $AQUA_ROOT_DIR/bin        \
+  $BOB_BIN                  \
+  $HOME/.pyenv/shims        \
+  $PYENV_ROOT/bin           \
+  $KREW_ROOT/bin            \
+  $HOME/.cargo/bin          \
+  $HOME/.gobrew/current/bin \
+  $HOME/.gobrew/bin         \
+  $GOPATH/bin               \
+  $HOME/.local/bin          \
+  $HOME/bin                 \
   $HOME/src/bin
 
 for dir in $_bin_dirs
   if test -d $dir
-    fish_add_path -p $dir
+    fish_add_path -m $dir
   end
 end

@@ -43,6 +43,7 @@ set has_bins \
   git        \
   gh         \
   go         \
+  gobrew     \
   gum        \
   hub        \
   kubectl    \
