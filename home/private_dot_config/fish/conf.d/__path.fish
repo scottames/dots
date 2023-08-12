@@ -32,10 +32,10 @@ if $IS_MAC
 else if $IS_LINUX
 
   set -a _bin_dirs          \
-    /usr/local/bin          \
     /usr/bin                \
-    /usr/local/sbin         \
     /usr/sbin               \
+    /usr/local/sbin         \
+    /usr/local/bin          \
     /var/lib/snapd/snap/bin \
     /usr/local/packer
 

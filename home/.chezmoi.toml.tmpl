@@ -23,6 +23,8 @@
 {{-   else if $isContainer -}}
 {{-     $chassis = "container" }}
 {{-   else -}}
+{{      $loginSession = output "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first }}
+{{      $loginSessionType = output "loginctl" "show-session" $loginSession "-p" "Type" | replace "Type=" "" | trim -}}
 {{-     $chassis = output "hostnamectl" "chassis" | trim -}}
 {{-   end -}}
 {{- end -}}
