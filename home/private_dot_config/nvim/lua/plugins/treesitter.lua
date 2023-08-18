@@ -15,6 +15,10 @@ return {
         "nvim-treesitter/nvim-treesitter-context",
         config = true,
       },
+      { -- https://github.com/'IndianBoy42/tree-sitter-just'
+        "IndianBoy42/tree-sitter-just",
+        config = true,
+      },
     },
     opts = function(_, opts)
       local ensure_installed = {
@@ -30,6 +34,7 @@ return {
         "json",
         "json5",
         "jsonc",
+        "just",
         "kdl",
         "lua",
         "make",
