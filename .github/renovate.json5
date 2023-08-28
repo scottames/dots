@@ -22,6 +22,7 @@
   pruneStaleBranches: true,
   rebaseWhen: 'behind-base-branch',
   schedule: 'after 4pm on thursday',
+  timezone: 'America/Los_Angeles',
   semanticCommitScope: 'deps',
   semanticCommitType: 'chore',
   semanticCommits: 'enabled',
