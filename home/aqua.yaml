@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.42.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.43.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -19,8 +19,8 @@ packages:
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@444.0.0
   - name: twpayne/chezmoi@v2.38.0
-  - name: zellij-org/zellij@v0.37.2
-  - name: weaveworks/eksctl@v0.154.0
+  - name: zellij-org/zellij@v0.38.1
+  - name: weaveworks/eksctl@v0.155.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
@@ -56,15 +56,15 @@ packages:
   - name: bitnami-labs/sealed-secrets@v0.23.1
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.31.2
-  - name: GoogleContainerTools/skaffold@v2.6.3
+  - name: GoogleContainerTools/skaffold@v2.7.0
   - name: smallstep/cli@v0.24.4
   - name: terraform-linters/tflint@v0.47.0
   - name: dwisiswant0/tlder@v0.0.1
   - name: itchyny/json2yaml@v0.1.4
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.35.1
-  - name: sigstore/cosign@v2.1.1
-  - name: nektos/act@v0.2.49
+  - name: sigstore/cosign@v2.2.0
+  - name: nektos/act@v0.2.50
   - name: casey/just@1.14.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.8.7
