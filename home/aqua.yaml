@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.48.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.48.1 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -19,8 +19,8 @@ packages:
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@444.0.0
   - name: twpayne/chezmoi@v2.39.1
-  - name: zellij-org/zellij@v0.38.1
-  - name: weaveworks/eksctl@v0.156.0
+  - name: zellij-org/zellij@v0.38.2
+  - name: weaveworks/eksctl@v0.157.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
@@ -36,7 +36,7 @@ packages:
     registry: dots
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.32.3
-  - name: kubernetes/kubectl@v1.28.1
+  - name: kubernetes/kubectl@v1.28.2
   - name: fluxcd/flux2@v2.1.0
   - name: helm/helm@v3.12.3
   - name: kubernetes-sigs/kustomize@kustomize/v5.1.1
@@ -53,10 +53,10 @@ packages:
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.9.0
   - name: sharkdp/bat@v0.23.0
-  - name: bitnami-labs/sealed-secrets@v0.23.1
+  - name: bitnami-labs/sealed-secrets@v0.24.0
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.31.2
-  - name: GoogleContainerTools/skaffold@v2.7.0
+  - name: GoogleContainerTools/skaffold@v2.7.1
   - name: smallstep/cli@v0.24.4
   - name: terraform-linters/tflint@v0.48.0
   - name: dwisiswant0/tlder@v0.0.1
@@ -67,6 +67,6 @@ packages:
   - name: nektos/act@v0.2.50
   - name: casey/just@1.14.0
   - name: tomnomnom/gron@v0.7.1
-  - name: kevincobain2000/gobrew@v1.9.0
+  - name: kevincobain2000/gobrew@v1.9.1
   - name: antonmedv/fx@24.1.0
   - name: wagoodman/dive@v0.11.0
