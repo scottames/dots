@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.48.1 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.48.2 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -57,6 +57,7 @@ packages:
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.31.2
   - name: GoogleContainerTools/skaffold@v2.7.1
+  - name: smallstep/certificates@v0.24.2
   - name: smallstep/cli@v0.24.4
   - name: terraform-linters/tflint@v0.48.0
   - name: dwisiswant0/tlder@v0.0.1
