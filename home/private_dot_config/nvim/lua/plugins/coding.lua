@@ -289,14 +289,6 @@ return {
     end,
   },
 
-  {
-    "zbirenbaum/copilot.lua",
-    opts = function(_, opts)
-      opts.suggestion = { enabled = true }
-      opts.panel = { enabled = true }
-    end,
-  },
-
   -- Symbols outline (right pane navigation)
   {
     "simrat39/symbols-outline.nvim",
