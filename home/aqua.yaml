@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.58.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.63.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -18,7 +18,7 @@ packages:
   - name: marcosnils/bin@v0.17.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@448.0.0
-  - name: twpayne/chezmoi@v2.40.0
+  - name: twpayne/chezmoi@v2.40.3
   - name: zellij-org/zellij@v0.38.2
   - name: weaveworks/eksctl@v0.161.0
   - name: ogham/exa@v0.10.1
@@ -37,8 +37,8 @@ packages:
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.32.3
   - name: kubernetes/kubectl@v1.28.2
-  - name: fluxcd/flux2@v2.1.1
-  - name: helm/helm@v3.13.0
+  - name: fluxcd/flux2@v2.1.2
+  - name: helm/helm@v3.13.1
   - name: kubernetes-sigs/kustomize@kustomize/v5.1.1
   - name: stern/stern@v1.26.0
   - name: charmbracelet/gum@v0.11.0
@@ -52,7 +52,7 @@ packages:
   - name: awslabs/amazon-ecr-credential-helper@v0.7.1
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.9.0
-  - name: sharkdp/bat@v0.23.0
+  - name: sharkdp/bat@v0.24.0
   - name: bitnami-labs/sealed-secrets@v0.24.1
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.31.2
@@ -66,7 +66,7 @@ packages:
   - name: mikefarah/yq@v4.35.2
   - name: sigstore/cosign@v2.2.0
   - name: nektos/act@v0.2.52
-  - name: casey/just@1.14.0
+  - name: casey/just@1.15.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@1.9.3
   - name: antonmedv/fx@30.2.0
