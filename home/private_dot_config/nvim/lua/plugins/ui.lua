@@ -1,18 +1,18 @@
 return {
   -- alpha | dashboard
-  { -- https://github.com/goolord/alpha-nvim
-    "goolord/alpha-nvim",
-    -- override defaults: https://github.com/LazyVim/LazyVim/blob/40113b2639ef8aa5cf44424ecfcec4dc1123c29a/lua/lazyvim/plugins/ui.lua#L220
-    -- set 'Find file' to respect hidden=true by default
-    opts = function(_, dashboard)
-      table.remove(dashboard.section.buttons.val, 1)
-      table.insert(
-        dashboard.section.buttons.val,
-        1,
-        dashboard.button("f", " " .. " Find file", ":Telescope find_files hidden=true <CR>")
-      )
-    end,
-  },
+  -- { -- https://github.com/goolord/alpha-nvim
+  --   "goolord/alpha-nvim",
+  --   -- override defaults: https://github.com/LazyVim/LazyVim/blob/40113b2639ef8aa5cf44424ecfcec4dc1123c29a/lua/lazyvim/plugins/ui.lua#L220
+  --   -- set 'Find file' to respect hidden=true by default
+  --   opts = function(_, dashboard)
+  --     table.remove(dashboard.section.buttons.val, 1)
+  --     table.insert(
+  --       dashboard.section.buttons.val,
+  --       1,
+  --       dashboard.button("f", " " .. " Find file", ":Telescope find_files hidden=true <CR>")
+  --     )
+  --   end,
+  -- },
 
   -- statusline
   { -- https://github.com/nvim-lualine/lualine.nvim
