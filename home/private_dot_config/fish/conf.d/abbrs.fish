@@ -159,10 +159,11 @@ abbr -a vr        "vagrant reload"
 abbr -a vs        "vagrant ssh"
 abbr -a vst       "vagrant status"
 abbr -a vu        "vagrant up"
+abbr -a ze        "zellij_new_tab_edit_split" # see functions
 abbr -a zj        "zellij" # see functions
 abbr -a zja       "zellij_attach" # see functions
 abbr -a zjac      "zellij action"
-abbr -a zje       "zellij edit"
+abbr -a zje       "zellij_new_tab_edit_split" # see functions
 abbr -a zjr       "zellij run --"
 abbr -a zjj       "zellij"
 
