@@ -1,6 +1,6 @@
 [at]
 image=ghcr.io/scottames/archlinux-toolbox:latest
-nvidia={{ (eq "nvidia" .gpu) }}
+nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
 replace=true
@@ -10,7 +10,7 @@ init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
 
 [fd]
 image=registry.fedoraproject.org/fedora-toolbox:38
-nvidia={{ (eq "nvidia" .gpu) }}
+nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
 replace=true
@@ -19,7 +19,7 @@ additional_packages="@Development Tools" zlib-devel bzip2 bzip2-devel readline-d
 
 [fdl]
 image=ghcr.io/ublue-os/fedora-distrobox:latest
-nvidia={{ (eq "nvidia" .gpu) }}
+nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
 replace=true

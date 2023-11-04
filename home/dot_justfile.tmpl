@@ -1,10 +1,10 @@
-{{- if lstat "/usr/share/ublue-os/justfile" -}}
+{{- if .host.is_ublue -}}
 !include /usr/share/ublue-os/justfile
 
 {{ end -}}
 # update system
 update:
-{{- if eq .chezmoi.osRelease.variant "Silverblue" }}
+{{- if eq .host.os_variant "silverblue" }}
   @echo '=> Updating rpm-ostree...'
   rpm-ostree update
   @echo '=> Updating flatpaks...'
@@ -15,3 +15,5 @@ update:
 {{- else }}
   @echo "=> No update available for {{ .chezmoi.os }}"
 {{- end }}
+
+# vi: ft=justfile
