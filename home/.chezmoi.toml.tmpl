@@ -1,5 +1,6 @@
 {{ $githubUser     := "scottames" -}}
 {{ $chassis        := ""          -}}
+{{ $gpu            := ""          -}}
 {{ $isContainer    := false       -}}
 {{ $isDistroBox    := false       -}}
 {{ $desktopSession := env "DESKTOP_SESSION" -}}
@@ -10,6 +11,7 @@
 {{ $loginSessionType := "" -}}
 
 {{- if eq .chezmoi.os "linux" -}}
+{{-   $gpu = output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'" | trim | lower }}
 {{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
 {{-     $isContainer = true -}}
 {{-   end -}}
@@ -41,8 +43,9 @@ progress = true
 
 {{ end -}}
 [data]
-  chassis = "{{       $chassis }}"
+  chassis = "{{ $chassis }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+  gpu = "{{ $gpu }}"
   hour_dark = {{ $hourDark }}
   hour_light = {{ $hourLight }}
   desktop_session = "{{ $desktopSession }}"
