@@ -15,3 +15,8 @@ packages:
     repo_owner: iwittkau
     repo_name: mage-select
     description: CLI frontend for mage based on promptui
+  - type: github_release
+    repo_owner: dkaslovsky
+    repo_name: nav
+    asset: nav_{{.OS}}_{{.Arch}}
+    description: Terminal navigator for interactive ls workflows
