@@ -1,0 +1,17 @@
+{{- if lstat "/usr/share/ublue-os/justfile" -}}
+!include /usr/share/ublue-os/justfile
+
+{{ end -}}
+# update system
+update:
+{{- if eq .chezmoi.osRelease.variant "Silverblue" }}
+  @echo '=> Updating rpm-ostree...'
+  rpm-ostree update
+  @echo '=> Updating flatpaks...'
+  flatpak update -y
+  @echo "=> Assembling and replacing distroboxes from ${HOME}/.config/distrobox/assemble.ini..."
+  distrobox assemble create --replace --file "${HOME}/.config/distrobox/assemble.ini"
+  @"${HOME}/.config/distrobox/exports.sh"
+{{- else }}
+  @echo "=> No update available for {{ .chezmoi.os }}"
+{{- end }}
