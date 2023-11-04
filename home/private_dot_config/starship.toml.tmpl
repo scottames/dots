@@ -12,7 +12,7 @@ $hostname\
 $directory\
 $git_branch\
 $git_state\
-$git_status \
+$git_status\
 ${custom.containerenv}\
 $kubernetes\
 $python\
@@ -80,7 +80,7 @@ show_notifications = false
 min_time_to_notify = 45_000
 
 [python]
-format = "[ $virtualenv]($style) "
+format = "[  $virtualenv]($style) "
 style = "bright-black"
 
 [kubernetes]
@@ -95,7 +95,7 @@ grep -oP 'name="\\K[^"]+' /var/run/.containerenv
 """
 when = "is_container"
 style = "italic bright-black"
-format = "[ $output]($style)"
+format = "[  $output]($style)"
 disabled = false
 
 [palettes.catppuccin_mocha]
