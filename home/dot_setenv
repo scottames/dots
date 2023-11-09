@@ -36,6 +36,7 @@ setenv GOPATH                     "$HOME/go"
 setenv GOPRIVATE                  "github.com/scottames/*"
 setenv HOME_BIN                   "$HOME/bin"
 setenv HOME_LOCAL_BIN             "$HOME/.local/bin"
+setenv IMMICH_TOKEN               "op://private/Immich/token"
 setenv KREW_ROOT                  "$HOME/.krew"
 $HAS_DYFF \
   && setenv KUBECTL_EXTERNAL_DIFF "dyff between --omit-header --set-exit-code"
@@ -46,6 +47,7 @@ setenv LC_CTYPE                   "en_US.UTF-8"
 setenv LSCOLORS                   "Gxfxcxdxbxegedabagacad"
 setenv MAGEFILE_ENABLE_COLOR      1
 setenv MAGEFILE_TARGET_COLOR      "BrightRed" # https://magefile.org/environment/
+setenv OP_ACCOUNT                 "my.1password.com"
 setenv PYENV_ROOT                 "$HOME/.pyenv"
 setenv SHRUG                      "¯\\_(ツ)_/¯"
 setenv TERM                       "xterm-256color"

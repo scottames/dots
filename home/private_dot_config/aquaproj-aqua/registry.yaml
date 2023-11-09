@@ -20,3 +20,11 @@ packages:
     repo_name: nav
     asset: nav_{{.OS}}_{{.Arch}}
     description: Terminal navigator for interactive ls workflows
+  - type: github_release
+    repo_owner: simulot
+    repo_name: immich-go
+    asset: immich-go_{{title .OS}}_{{.Arch}}.tar.gz
+    replacements:
+      amd64: x86_64
+    description: |
+      An alternative to the immich-CLI command that doesn't depend on nodejs installation. It tries its best for importing google photos takeout archives.
