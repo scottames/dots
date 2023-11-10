@@ -9,6 +9,8 @@ jobs:
   getModules:
     name: trunk.io
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
