@@ -83,6 +83,15 @@
     executable = true
     refreshPeriod = "168h"
 
+# renovate: depName=rvcas/room datasource=github-releases
+{{ $zellijRoomVersion := "v1.0.0" -}}
+
+[".config/zellij/plugins/room.wasm"]
+    type = "file"
+    url = "https://github.com/rvcas/room/releases/download/{{ $zellijRoomVersion }}/room.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
 #  │ | utils                                                  │

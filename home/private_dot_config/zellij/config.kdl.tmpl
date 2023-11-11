@@ -124,6 +124,12 @@ keybinds clear-defaults=true {
         bind "d" { Detach; }
     }
     shared_except "locked" {
+        bind "Ctrl y" {
+          LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+              floating true
+              ignore_case true
+          }
+        }
         bind "Ctrl g" { SwitchToMode "Locked"; }
         // bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
