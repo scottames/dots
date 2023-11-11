@@ -19,7 +19,7 @@ clear='\033[0m'
 _aqua_latest_version=v2.16.4
 
 # renovate: depName=aquaproj/aqua-installer datasource=github-releases
-_aqua_installer_version=v2.1.2
+_aqua_installer_version=v2.1.3
 
 if command -v aqua; then
   _aqua_current="$(aqua -v | head -n1 | cut -d" " -f3 | sed "s/^/v/")"
@@ -38,8 +38,8 @@ if [[ ! $(command -v aqua) ]]; then
   _aqua_installer="aqua-installer"
 
   # renovate: depName=aquaproj/aqua-installer datasource=github-releases
-  _aqua_installer_version=v2.1.2
-  _aqua_installer_sha256sum="411caf1b5fcef4f5e74aa2a9fe99182ea13ab93ecd8ed4a983a7cff9f08edab9"
+  _aqua_installer_version=v2.1.3
+  _aqua_installer_sha256sum="11ac5e48901aba04dbb33d82c5a39c6cd69d3740312feb8c096f0aae86dc8ed5"
 
   printf "\n${cyan}💧 aqua-installer version${clear}:${magenta} %s\n${clear}" "${_aqua_installer_version}"
 
