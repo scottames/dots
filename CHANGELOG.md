@@ -1,5 +1,47 @@
 # Changelog
 
+## [0.6.0](https://github.com/scottames/dots/compare/v0.5.0...v0.6.0) (2023-11-11)
+
+
+### Features
+
+* **act:** add act + hacky support for podman ([a28764a](https://github.com/scottames/dots/commit/a28764a8cf38bfc2c73e60b48962dd6e7c0003f7))
+* add gpg pub key + import ([a80bfdd](https://github.com/scottames/dots/commit/a80bfddbb66284ad8ccc69ebbc5536d5364bb733))
+* **aqua:** add dive ([af32f02](https://github.com/scottames/dots/commit/af32f02f5f78907a61a7f371c184663184189575))
+* **aqua:** add gron - make json grepable ([c8505a0](https://github.com/scottames/dots/commit/c8505a02e34caedd607091e2792c629cc16db245))
+* **aqua:** add smallstep/certificates ([88030ed](https://github.com/scottames/dots/commit/88030ed80b7afd6f888160bddea0950d8a293558))
+* **distrobox:** add fedora image ([34d8c93](https://github.com/scottames/dots/commit/34d8c932e9cbd09d735b151ee2a50ba873f5e91b))
+* **distrobox:** add ublue/fedora image + enable nvidia when appropriate ([b2b218b](https://github.com/scottames/dots/commit/b2b218b52959c0210eeaad9e7fd0d0218356427b))
+* **distrobox:** script to export apps & bins ([616822c](https://github.com/scottames/dots/commit/616822cbe8598229a722963dd2d9bd5d249dd9de))
+* **fish:** add function to quickly update git submodules in repo ([d90c2f8](https://github.com/scottames/dots/commit/d90c2f8d75d62f19616e2740c936d0c9c6981ae2))
+* **fish:** add gobrew ([5fe5415](https://github.com/scottames/dots/commit/5fe5415c2c114c991fe6cc8899e4fdb1c6e24435))
+* **fish:** keybinding to drop into distrobox ([b91b666](https://github.com/scottames/dots/commit/b91b666e201c25993b5a69875095fde1dbbb929f))
+* **fish:** more fun with light/dark ([ce92b74](https://github.com/scottames/dots/commit/ce92b74ca5b7148fad12ed4492394e1c206ebb1d))
+* **gsettings:** backup favs + support distrobox backup ([67cf73f](https://github.com/scottames/dots/commit/67cf73fa07d7b4d2012246254d21ab5aad778924))
+* **immich-go:** add to aqua + token export ([86f78f2](https://github.com/scottames/dots/commit/86f78f20fa7be46366c154d1d9f7fb433c6f9106))
+* **just:** add ~/.justfile (only ublue support today) ([a61c8e3](https://github.com/scottames/dots/commit/a61c8e38b8391d636a62ab9d42966e589f69cb93))
+* **nav:** add dkaslovsky/nav to aqua + helper funcs ([37f554a](https://github.com/scottames/dots/commit/37f554a04974fc9dd805de937c74755f30414a06))
+* **nvim/wezterm:** auto-change dark/light based on time ([8fd5d09](https://github.com/scottames/dots/commit/8fd5d0979589c0d01f7e53ac622ead78f9e53205))
+* **nvim/zellij:** dark/light based on hour ([dae9272](https://github.com/scottames/dots/commit/dae92723938368d7f8aad086d9f94d2867f5523a))
+* **nvim:** add justfile treesitter parser ([4076584](https://github.com/scottames/dots/commit/4076584c5dcffb7f138d783a65f2f9ca3204192f))
+* playing w/ custom wallpaper config ([f7bbbb9](https://github.com/scottames/dots/commit/f7bbbb9abd07d29bce85fab2f034760df83d7207))
+* **pre-commit:** add commit-msg local runner ([db45d30](https://github.com/scottames/dots/commit/db45d30553badaaead31e21f5cd218c9314fd16d))
+* small tweaks to distrobox assemble + add just to aqua ([4039ee2](https://github.com/scottames/dots/commit/4039ee226cb6f273106255784d40ff2c58cc7f01))
+* **zellij:** shortcut for new tab w/ editor in specified dir ([68dd3a3](https://github.com/scottames/dots/commit/68dd3a39fdcf951ebf4634fa674b9fc12cc98209))
+
+
+### Bug Fixes
+
+* **aqua:** revert installer version until they update their website ([86219a4](https://github.com/scottames/dots/commit/86219a43fad64f56b462ab7fd07f66fa15235837))
+* **chezmoi:** overly trimmed blackbox + starship escape ([4fae81d](https://github.com/scottames/dots/commit/4fae81d4cd9dda966db45c1ef98cd6511c61a98e))
+* **chezmoi:** properly handle ublue/not ([3f4f5bd](https://github.com/scottames/dots/commit/3f4f5bd7185c75423adc2eaf8e256d6e6dda97c5))
+* **fix:** s/test/type/ ([fa887df](https://github.com/scottames/dots/commit/fa887df1209cf9de196ef32da884cf234e37d0a8))
+* **nvim:** fix up catppuccin + other issues ([f7a10c6](https://github.com/scottames/dots/commit/f7a10c6e3b576ec4a66bfbe8ec2cde7c85e5dbf6))
+* **paperwm:** update user.js based on recent changes ([0fa2771](https://github.com/scottames/dots/commit/0fa27715b6fcaced25a8d4670bf0fb38974e4856))
+* path, cleanup db-assemble, chezmoi loginctl outside db ([df8295b](https://github.com/scottames/dots/commit/df8295be8d3b3cf80caeb4eccb8efadca66bae65))
+* **starship:** timeout + check custom ([972a7cf](https://github.com/scottames/dots/commit/972a7cf2e9d4068c6b1b0a7d6baee8654bf14065))
+* **zellij:** add copy_command based on desktop env ([1e063c8](https://github.com/scottames/dots/commit/1e063c821908c9ee3752f987f5c973e147e631e9))
+
 ## [0.5.0](https://github.com/scottames/dots/compare/v0.4.0...v0.5.0) (2023-07-29)
 
 
