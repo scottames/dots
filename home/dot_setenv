@@ -37,6 +37,7 @@ setenv GOPRIVATE                  "github.com/scottames/*"
 setenv HOME_BIN                   "$HOME/bin"
 setenv HOME_LOCAL_BIN             "$HOME/.local/bin"
 setenv IMMICH_TOKEN               "op://private/Immich/token"
+setenv JUST_UNSTABLE              "true"
 setenv KREW_ROOT                  "$HOME/.krew"
 $HAS_DYFF \
   && setenv KUBECTL_EXTERNAL_DIFF "dyff between --omit-header --set-exit-code"
