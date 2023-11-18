@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 # shellcheck disable=SC1054,SC1083
-{{ if eq .desktop_session "gnome" }}
+{{ if regexMatch "^gnome" .desktop_session }}
 
 echo '
  ██████╗ ███╗   ██╗ ██████╗ ███╗   ███╗███████╗
