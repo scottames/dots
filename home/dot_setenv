@@ -49,6 +49,7 @@ setenv LSCOLORS                   "Gxfxcxdxbxegedabagacad"
 setenv MAGEFILE_ENABLE_COLOR      1
 setenv MAGEFILE_TARGET_COLOR      "BrightRed" # https://magefile.org/environment/
 setenv OP_ACCOUNT                 "my.1password.com"
+setenv OPENAI_API_KEY             "op://private/OpenAI/token"
 setenv PYENV_ROOT                 "$HOME/.pyenv"
 setenv SHRUG                      "¯\\_(ツ)_/¯"
 setenv TERM                       "xterm-256color"
