@@ -65,6 +65,22 @@
         "# renovate: depName=(?<depName>.*) datasource=(?<datasource>.*)\\n.*?[vV][eE][rR][sS][iI][oO][nN]=(?<currentValue>.+)\\b"
       ],
     },
+    {
+      "datasourceTemplate": "npm",
+      "depNameTemplate": "trunk-io/launcher",
+      "fileMatch": [
+        'home/aqua.yaml',
+      ],
+      "matchStrings": [
+        " +(?:version|'version'|\"version\") *: +(?<currentValue>[^'\" \\n]+) +# renovate: depName=trunk-io/launcher[ \\n]",
+        " +(?:version|'version'|\"version\") *: +'(?<currentValue>[^'\" \\n]+)' +# renovate: depName=trunk-io/launcher[ \\n]",
+        " +(?:version|'version'|\"version\") *: +\"(?<currentValue>[^'\" \\n]+)\" +# renovate: depName=trunk-io/launcher[ \\n]",
+        " +(?:name|'name'|\"name\") *: +trunk-io/launcher@(?<currentValue>[^'\" \\n]+)",
+        " +(?:name|'name'|\"name\") *: +'trunk-io/launcher@(?<currentValue>[^'\" \\n]+)'",
+        " +(?:name|'name'|\"name\") *: +\"trunk-io/launcher@(?<currentValue>[^'\" \\n]+)\""
+      ],
+      "packageNameTemplate": "@trunkio/launcher"
+    }
   ],
   packageRules: [
     {
