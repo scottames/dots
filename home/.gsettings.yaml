@@ -52,8 +52,8 @@ org.gnome.shell.extensions.nightthemeswitcher.shell-variants:
   enabled: "true"
   night: '''Catppuccin-Mocha-Standard-Flamingo-dark'''
 org.gnome.shell.extensions.nightthemeswitcher.time:
-  sunrise: "6.0"
-  sunset: "19.0"
+  sunrise: "0.0"
+  sunset: "0.016666666666666666"
 org.gnome.shell.extensions.paperwm:
   use-default-background: "true"
   winprops: '[''{"wm_class":"zoom","title":"zoom","scratch_layer":true}'', ''{"wm_class":"gnome-calculator","title":"calc","scratch_layer":true}'']'
