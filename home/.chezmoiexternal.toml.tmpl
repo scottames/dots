@@ -57,6 +57,12 @@
 
 {{ end -}} # gnome .desktop_session
 
+[".local/bin/keymapp"]
+    type = "archive-file"
+    url = "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz"
+    path = "keymapp"
+    refreshPeriod = "168h"
+
 # renovate: depName=flyway/flyway datasource=github-releases
 {{ $flywayVersion := "9.20.1" -}}
 
