@@ -25,7 +25,7 @@ org.gnome.login-screen:
 org.gnome.settings-daemon.plugins.color:
   night-light-enabled: "true"
 org.gnome.settings-daemon.plugins.media-keys:
-  custom-keybindings: '[''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/'']'
+  custom-keybindings: '[''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/'']'
   screensaver: '[''<Shift><Control><Alt>l'']'
 ? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/
 : binding: '''<Control><Alt>b'''
@@ -56,6 +56,7 @@ org.gnome.shell.extensions.nightthemeswitcher.time:
   sunset: "19.0"
 org.gnome.shell.extensions.paperwm:
   use-default-background: "true"
+  winprops: '[''{"wm_class":"zoom","title":"zoom","scratch_layer":true}'', ''{"wm_class":"gnome-calculator","title":"calc","scratch_layer":true}'']'
 org.gnome.shell.extensions.paperwm.keybindings:
   barf-out: '[''<Super>o'']'
   center-horizontally: '[''<Super>c'']'
@@ -78,7 +79,7 @@ org.gnome.shell.extensions.paperwm.keybindings:
   move-up-workspace: '[''<Super><Ctrl>Page_Up'']'
   new-window: '[''<Super>Return'', ''<Super>n'']'
   paper-toggle-fullscreen: '[''<Super><shift>f'']'
-  previous-workspace: '[''<Super>apostrophe'']'
+  previous-workspace: '[''<Super>semicolon'']'
   previous-workspace-backward: '[''<Super><Shift>Above_Tab'']'
   resize-h-dec: '[''<Super><Shift>minus'']'
   resize-h-inc: '[''<Super><Shift>plus'']'
