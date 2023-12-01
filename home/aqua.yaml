@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.92.2 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.94.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -18,9 +18,9 @@ packages:
   - name: marcosnils/bin@v0.17.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@455.0.0
-  - name: twpayne/chezmoi@v2.42.0
-  - name: zellij-org/zellij@v0.39.1
-  - name: weaveworks/eksctl@v0.164.0
+  - name: twpayne/chezmoi@v2.42.1
+  - name: zellij-org/zellij@v0.39.2
+  - name: weaveworks/eksctl@v0.165.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
@@ -35,7 +35,7 @@ packages:
   - name: iwittkau/mage-select@v1.4.3
     registry: dots
   - name: neovim/neovim@stable
-  - name: direnv/direnv@v2.32.3
+  - name: direnv/direnv@v2.33.0
   - name: kubernetes/kubectl@v1.28.4
   - name: fluxcd/flux2@v2.1.2
   - name: helm/helm@v3.13.2
@@ -57,8 +57,8 @@ packages:
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.32.0
   - name: GoogleContainerTools/skaffold@v2.9.0
-  - name: smallstep/certificates@v0.25.0
-  - name: smallstep/cli@v0.25.0
+  - name: smallstep/certificates@v0.25.2
+  - name: smallstep/cli@v0.25.1
   - name: terraform-linters/tflint@v0.49.0
   - name: dwisiswant0/tlder@v0.0.1
   - name: itchyny/json2yaml@v0.1.4
@@ -73,8 +73,8 @@ packages:
   - name: wagoodman/dive@v0.11.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.8.7
+  - name: simulot/immich-go@0.8.8
     registry: dots
-  - name: sigoden/aichat@v0.10.0
+  - name: sigoden/aichat@v0.11.0
     registry: dots
   - name: trunk-io/launcher@1.2.7
