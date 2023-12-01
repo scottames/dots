@@ -65,7 +65,7 @@ packages:
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.40.3
   - name: sigstore/cosign@v2.2.1
-  - name: nektos/act@v0.2.54
+  - name: nektos/act@v0.2.55
   - name: casey/just@1.16.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.9.9
@@ -73,7 +73,7 @@ packages:
   - name: wagoodman/dive@v0.11.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.8.8
+  - name: simulot/immich-go@0.8.9
     registry: dots
   - name: sigoden/aichat@v0.11.0
     registry: dots
