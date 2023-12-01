@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.7.0](https://github.com/scottames/dots/compare/v0.6.0...v0.7.0) (2023-12-01)
+
+
+### Features
+
+* add aichat + openai token ([7f28922](https://github.com/scottames/dots/commit/7f28922dd56a910cad9402df1abc5d65d0ddc835))
+* **chezmoi:** add zsa keymap bin ([aeb0a96](https://github.com/scottames/dots/commit/aeb0a9632defdd2298000fa03e6c401b83cdb725))
+* **font:** Monaspace NerdFont ([0fc51b7](https://github.com/scottames/dots/commit/0fc51b7c88c8664264bdedb145f7282daf58980d))
+* **just:** Set unstable via env (v1.16+) ([a1649da](https://github.com/scottames/dots/commit/a1649da09db831b03c3b261c2ab7edf473cef027))
+* **paperwm:** scratch layer + custom keys ([c36a9ff](https://github.com/scottames/dots/commit/c36a9ff75c001bc61bd008c36450650482044900))
+* **zellij:** add room plugin ([ebe3f8d](https://github.com/scottames/dots/commit/ebe3f8d4d93af3c2a1b5c5b2fc8462b2a97d82c1))
+* **zellij:** enable session switcher keybindings ([dfb80d0](https://github.com/scottames/dots/commit/dfb80d056e534f1c62985c8982a53f783d84a16d))
+
+
+### Bug Fixes
+
+* **chezmoi:** match gnome* for desktop_session ([96bea85](https://github.com/scottames/dots/commit/96bea85d2adac0876922cdd07a9dc49168bc2650))
+* **init:** add instructions for init via db ([ea9957e](https://github.com/scottames/dots/commit/ea9957e7e5a6a27a71e20301f7642cd48bf3dd9f))
+
 ## [0.6.0](https://github.com/scottames/dots/compare/v0.5.0...v0.6.0) (2023-11-11)
 
 
