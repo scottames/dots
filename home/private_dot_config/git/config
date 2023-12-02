@@ -1,7 +1,7 @@
 [user]
 	name = Scott Ames
 	email = scott@ames.sh
-	signingKey = 2BD39C22D95724B86F0FA7E162DD2F500AB076A0 #gitleaks:allow # TODO: template & pull from 1pass
+	signingKey = 6207D796C3BDA7278077465F14E140E80951AB78 #gitleaks:allow # TODO: template & pull from 1pass
 [commit]
   gpgsign = true
 [url "git@github.com:scottames"]
