@@ -69,6 +69,13 @@
     path = "keymapp"
     refreshPeriod = "168h"
 
+[".local/share/yubico-authenticator"]
+    type = "archive"
+    url = "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
 # renovate: depName=flyway/flyway datasource=github-releases
 {{ $flywayVersion := "9.20.1" -}}
 
