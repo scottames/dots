@@ -6,7 +6,7 @@ require (
 	github.com/fatih/color v1.16.0
 	github.com/magefile/mage v1.15.0
 	github.com/scottames/cmder v0.3.0
-	golang.org/x/exp v0.0.0-20231206192017-f3f8817b8deb
+	golang.org/x/exp v0.0.0-20231214170342-aacd6d4b4611
 	gopkg.in/yaml.v3 v3.0.1
 )
 
