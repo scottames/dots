@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.104.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.110.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -18,9 +18,9 @@ packages:
   - name: marcosnils/bin@v0.17.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@457.0.0
-  - name: twpayne/chezmoi@v2.42.2
+  - name: twpayne/chezmoi@v2.42.3
   - name: zellij-org/zellij@v0.39.2
-  - name: weaveworks/eksctl@v0.166.0
+  - name: weaveworks/eksctl@v0.167.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
@@ -37,7 +37,7 @@ packages:
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.33.0
   - name: kubernetes/kubectl@v1.29.0
-  - name: fluxcd/flux2@v2.2.1
+  - name: fluxcd/flux2@v2.2.2
   - name: helm/helm@v3.13.3
   - name: kubernetes-sigs/kustomize@kustomize/v5.3.0
   - name: stern/stern@v1.27.0
@@ -65,15 +65,15 @@ packages:
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.40.5
   - name: sigstore/cosign@v2.2.2
-  - name: nektos/act@v0.2.55
-  - name: casey/just@1.16.0
+  - name: nektos/act@v0.2.56
+  - name: casey/just@1.17.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.5
   - name: antonmedv/fx@31.0.0
   - name: wagoodman/dive@v0.11.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.9.2
+  - name: simulot/immich-go@0.9.4
     registry: dots
   - name: sigoden/aichat@v0.11.0
     registry: dots
