@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.110.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.111.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -24,7 +24,7 @@ packages:
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
-  - name: starship/starship@v1.16.0
+  - name: starship/starship@v1.17.0
   - name: muesli/duf@v0.8.1
   - name: gokcehan/lf@r28
   - name: BurntSushi/ripgrep@14.0.3
@@ -48,7 +48,7 @@ packages:
   - name: junegunn/fzf@0.44.1
   - name: hadolint/hadolint@v2.12.0
   - name: jesseduffield/lazygit@v0.40.2
-  - name: derailed/k9s@v0.29.1
+  - name: derailed/k9s@v0.30.6
   - name: awslabs/amazon-ecr-credential-helper@v0.7.1
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.9.0
@@ -59,22 +59,22 @@ packages:
   - name: GoogleContainerTools/skaffold@v2.9.0
   - name: smallstep/certificates@v0.25.2
   - name: smallstep/cli@v0.25.1
-  - name: terraform-linters/tflint@v0.49.0
+  - name: terraform-linters/tflint@v0.50.0
   - name: dwisiswant0/tlder@v0.0.1
   - name: itchyny/json2yaml@v0.1.4
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.40.5
   - name: sigstore/cosign@v2.2.2
   - name: nektos/act@v0.2.56
-  - name: casey/just@1.17.0
+  - name: casey/just@1.19.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.5
   - name: antonmedv/fx@31.0.0
   - name: wagoodman/dive@v0.11.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.9.4
+  - name: simulot/immich-go@0.9.5
     registry: dots
-  - name: sigoden/aichat@v0.11.0
+  - name: sigoden/aichat@v0.12.0
     registry: dots
   - name: trunk-io/launcher@1.2.7
