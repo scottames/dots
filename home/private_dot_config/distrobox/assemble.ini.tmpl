@@ -28,7 +28,7 @@ root=false
 replace=true
 
 [bazzite-arch]
-{{- if (eq .desktop_session "gnome") }}
+{{- if regexMatch "^gnome" .desktop_session }}
 image=ghcr.io/ublue-os/bazzite-arch-gnome:latest
 {{- else }}
 image=ghcr.io/ublue-os/bazzite-arch:latest

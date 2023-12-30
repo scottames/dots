@@ -39,7 +39,7 @@
     refreshPeriod = "168h"
     stripComponents = 1
 
-{{- if (eq .desktop_session "gnome") }}
+{{- if and (regexMatch "^gnome" .desktop_session) (lookPath "flatpak") }}
 
 [".var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Frappe.json"]
     type = "file"
@@ -61,7 +61,7 @@
     url = "https://raw.githubusercontent.com/catppuccin/tilix/main/src/Catppuccin-Mocha.json"
     refreshPeriod = "168h"
 
-{{ end -}} # gnome .desktop_session
+{{ end -}} # gnome .desktop_session && flatpak found
 
 [".local/bin/keymapp"]
     type = "archive-file"

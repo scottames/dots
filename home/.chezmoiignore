@@ -4,10 +4,10 @@
 .cache
 .gsettings.yaml
 
-{{- if not (eq .desktop_session "gnome") }}
+{{- if not (regexMatch "^gnome" .desktop_session) }}
 ### Ignore if not running gnome
 
-# Themes
+# Chezmoi Scripts
 .chezmoiscripts/40_catppuccin.sh
 
 {{ if not (lookPath "flatpak") }}
