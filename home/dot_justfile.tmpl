@@ -16,4 +16,31 @@ update:
   @echo "=> No update available for {{ .chezmoi.os }}"
 {{- end }}
 
+{{ if eq .host.os_variant "silverblue" -}}
+# enable & enroll in fingerprint auth
+fingerprint-auth-enable:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    fprintd-enroll
+    sudo authselect enable-feature with-fingerprint
+
+# disable fingerprint auth
+fingerprint-auth-disable:
+    sudo authselect enable-feature with-fingerprint
+
+# enable u2f auth
+u2f-auth-enable:
+    ## Enroll key (primary)
+    # pamu2fcfg > ~/.config/Yubico/u2f_keys
+    ## Enroll key (backup)
+    # pamu2fcfg -n >> ~/.config/Yubico/u2f_keys
+
+    sudo authselect enable-feature with-pam-u2f
+
+# disable u2f auth
+u2f-auth-disable:
+    sudo authselect disable-feature with-pam-u2f
+{{- end }}
+
 # vi: ft=justfile

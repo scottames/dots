@@ -1,0 +1,5 @@
+{{ range (onepassword "sjrpoudvnyxodehtsujcjw7xdq").fields -}}
+{{   if and (eq .label "password") (eq .purpose "PASSWORD") -}}
+{{     .value -}}
+{{   end -}}
+{{ end -}}

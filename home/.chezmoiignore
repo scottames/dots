@@ -25,6 +25,11 @@ src/pub/paperwm*
 .local/share/gnome-background-properties/*
 {{ end }}
 
+{{- if not (eq .host.os_variant "silverblue") }}
+### Ignore if not Fedora Silverblue
+.config/Yubico/u2f_keys
+{{- end }}
+
 {{- if not (eq .chezmoi.osRelease.id "arch") }}
 ### Ignore if not Arch Linux
 .config/paru/paru.conf
