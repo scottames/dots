@@ -10,6 +10,10 @@
 # Themes
 .chezmoiscripts/40_catppuccin.sh
 
+{{ if not (lookPath "flatpak") }}
+.local/share/flatpak/overrides/com.valvesoftware.Steam
+{{- end}}
+
 # PaperWM
 .config/paperwm*
 src/pub/paperwm*
