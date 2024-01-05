@@ -3,7 +3,7 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.111.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.113.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
@@ -18,13 +18,13 @@ packages:
   - name: marcosnils/bin@v0.17.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@458.0.1
-  - name: twpayne/chezmoi@v2.42.3
+  - name: twpayne/chezmoi@v2.43.0
   - name: zellij-org/zellij@v0.39.2
   - name: weaveworks/eksctl@v0.167.0
   - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
-  - name: starship/starship@v1.17.0
+  - name: starship/starship@v1.17.1
   - name: muesli/duf@v0.8.1
   - name: gokcehan/lf@r28
   - name: BurntSushi/ripgrep@14.0.3
@@ -45,10 +45,10 @@ packages:
   - name: dandavison/delta@0.16.5
   - name: stedolan/jq@jq-1.6
   - name: jtyr/gbt@v2.0.0
-  - name: junegunn/fzf@0.44.1
+  - name: junegunn/fzf@0.45.0
   - name: hadolint/hadolint@v2.12.0
   - name: jesseduffield/lazygit@v0.40.2
-  - name: derailed/k9s@v0.30.6
+  - name: derailed/k9s@v0.30.8
   - name: awslabs/amazon-ecr-credential-helper@v0.7.1
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.9.0
@@ -65,15 +65,15 @@ packages:
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.40.5
   - name: sigstore/cosign@v2.2.2
-  - name: nektos/act@v0.2.56
-  - name: casey/just@1.20.0
+  - name: nektos/act@v0.2.57
+  - name: casey/just@1.22.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.5
   - name: antonmedv/fx@31.0.0
   - name: wagoodman/dive@v0.11.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.9.5
+  - name: simulot/immich-go@0.9.7
     registry: dots
   - name: sigoden/aichat@v0.12.0
     registry: dots
