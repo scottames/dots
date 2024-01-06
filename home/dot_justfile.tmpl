@@ -1,5 +1,5 @@
 {{- if .host.is_ublue -}}
-!include /usr/share/ublue-os/justfile
+import '/usr/share/ublue-os/justfile'
 
 {{ end -}}
 # update system
@@ -42,5 +42,25 @@ u2f-auth-enable:
 u2f-auth-disable:
     sudo authselect disable-feature with-pam-u2f
 {{- end }}
+{{- if (lookPath "distrobox") }}
+
+# assemble and replace distroboxes from ${HOME}/.config/distrobox/assemble.ini
+# https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md
+assemble:
+  echo 'Assembling and replacing distroboxes from ${HOME}/.config/distrobox/assemble.ini...'
+  distrobox assemble create --replace --file "${HOME}/.config/distrobox/assemble.ini"
+{{- end }}
+
+# enable user podman socket
+podman-socket:
+  systemctl --user enable --now podman.socket
+
+# enable tailscale
+tailscale-enable:
+  sudo systemctl enable tailscaled.service
+
+# run yafti
+yafti:
+  yafti /usr/share/ublue-os/firstboot/yafti.yml
 
 # vi: ft=justfile
