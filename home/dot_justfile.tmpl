@@ -1,7 +1,10 @@
-{{- if .host.is_ublue -}}
-import '/usr/share/ublue-os/justfile'
+_default:
+    @just --list --list-heading $'' --list-prefix $''
+{{- if .host.is_ublue }}
 
-{{ end -}}
+import '/usr/share/ublue-os/justfile'
+{{- end }}
+
 # update system
 update:
 {{- if eq .host.os_variant "silverblue" }}
@@ -29,20 +32,31 @@ fingerprint-auth-enable:
 fingerprint-auth-disable:
     sudo authselect enable-feature with-fingerprint
 
+{{ $gumBin := "gum" -}}
+{{ if lookPath "ugum" -}}
+{{ $gumBin = "ugum" -}}
+{{ end -}}
 # enable u2f auth
 u2f-auth-enable:
-    ## Enroll key (primary)
-    # pamu2fcfg > ~/.config/Yubico/u2f_keys
-    ## Enroll key (backup)
-    # pamu2fcfg -n >> ~/.config/Yubico/u2f_keys
-
-    sudo authselect enable-feature with-pam-u2f
+    #!/usr/bin/env bash
+    {{ $gumBin }} confirm "Setup primary user u2f_key?" && \
+      pamu2fcfg --pin-verification > ~/.config/Yubico/u2f_keys || \
+      echo '{{`{{{{ Color "99" "=>" }}`}} skipping adding primary key to user u2f_keys' | {{ $gumBin }} format -t template
+    {{ $gumBin }} confirm "Setup secondary user u2f_key?" && \
+      pamu2fcfg --nouser --pin-verification >> ~/.config/Yubico/u2f_keys || \
+      echo '{{`{{{{ Color "99" "=>" }}`}} skipping adding primary key to user u2f_keys' | {{ $gumBin }} format -t template
+    echo '{{`{{{{ Color "99" "=>" }}`}} enabling authselect feature with-pam-u2f' | {{ $gumBin }} format -t template
+    if authselect current | grep with-pam-u2f > /dev/null; then
+      echo '{{`{{{{ Color "99" "=>" }}`}} authselect feature already enabled!' | {{ $gumBin }} format -t template
+    else
+      sudo authselect enable-feature with-pam-u2f
+    fi
 
 # disable u2f auth
 u2f-auth-disable:
     sudo authselect disable-feature with-pam-u2f
 {{- end }}
-{{- if (lookPath "distrobox") }}
+{{- if lookPath "distrobox" }}
 
 # assemble and replace distroboxes from ${HOME}/.config/distrobox/assemble.ini
 # https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md

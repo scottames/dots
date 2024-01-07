@@ -7,6 +7,8 @@ replace=true
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/nmcli;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
 exported_bins="/usr/bin/aws"
 exported_bins="/usr/bin/zenity"
 exported_bins_path=~/.local/bin
@@ -17,6 +19,11 @@ nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
 replace=true
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/nmcli;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
 additional_packages="@Development Tools" zlib-devel bzip2 bzip2-devel readline-devel sqlite \
   sqlite-devel openssl-devel xz xz-devel libffi-devel findutils tk-devel
 
@@ -26,6 +33,11 @@ nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
 replace=true
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/nmcli;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
+init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
 
 [bazzite-arch]
 {{- if regexMatch "^gnome" .desktop_session }}
