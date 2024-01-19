@@ -3,14 +3,14 @@
 checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
 registries:
-  - ref: v4.115.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.121.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: registry.yaml
     type: local
 packages:
   - name: charmbracelet/glow@v1.5.1
-  - name: cli/cli@v2.42.0
+  - name: cli/cli@v2.42.1
   - name: denisidoro/navi@v2.23.0
   - name: golangci/golangci-lint@v1.55.2
   - name: homeport/dyff@v1.6.0
@@ -18,7 +18,7 @@ packages:
   - name: marcosnils/bin@v0.17.2
   - name: tfutils/tfenv@v3.0.0
   - name: twistedpair/google-cloud-sdk@458.0.1
-  - name: twpayne/chezmoi@v2.44.0
+  - name: twpayne/chezmoi@v2.45.0
   - name: zellij-org/zellij@v0.39.2
   - name: weaveworks/eksctl@v0.167.0
   - name: ogham/exa@v0.10.1
@@ -36,9 +36,9 @@ packages:
     registry: dots
   - name: neovim/neovim@stable
   - name: direnv/direnv@v2.33.0
-  - name: kubernetes/kubectl@v1.29.0
+  - name: kubernetes/kubectl@v1.29.1
   - name: fluxcd/flux2@v2.2.2
-  - name: helm/helm@v3.13.3
+  - name: helm/helm@v3.14.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.3.0
   - name: stern/stern@v1.28.0
   - name: charmbracelet/gum@v0.13.0
@@ -48,12 +48,12 @@ packages:
   - name: junegunn/fzf@0.45.0
   - name: hadolint/hadolint@v2.12.0
   - name: jesseduffield/lazygit@v0.40.2
-  - name: derailed/k9s@v0.31.4
+  - name: derailed/k9s@v0.31.7
   - name: awslabs/amazon-ecr-credential-helper@v0.7.1
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.9.0
   - name: sharkdp/bat@v0.24.0
-  - name: bitnami-labs/sealed-secrets@v0.24.5
+  - name: bitnami-labs/sealed-secrets@v0.25.0
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.32.0
   - name: GoogleContainerTools/skaffold@v2.10.0
@@ -66,14 +66,14 @@ packages:
   - name: mikefarah/yq@v4.40.5
   - name: sigstore/cosign@v2.2.2
   - name: nektos/act@v0.2.57
-  - name: casey/just@1.22.1
+  - name: casey/just@1.23.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.5
   - name: antonmedv/fx@31.0.0
   - name: wagoodman/dive@v0.11.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.9.9
+  - name: simulot/immich-go@0.9.10
     registry: dots
   - name: sigoden/aichat@v0.12.0
     registry: dots
