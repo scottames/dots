@@ -12,9 +12,11 @@ update:
   rpm-ostree update
   @echo '=> Updating flatpaks...'
   flatpak update -y
+{{- if or (lookPath "distrobox") (lookPath "distrobox-export") }}
   @echo "=> Assembling and replacing distroboxes from ${HOME}/.config/distrobox/assemble.ini..."
   distrobox assemble create --replace --file "${HOME}/.config/distrobox/assemble.ini"
   @"${HOME}/.config/distrobox/exports.sh"
+{{- end }}
 {{- else }}
   @echo "=> No update available for {{ .chezmoi.os }}"
 {{- end }}
@@ -56,11 +58,11 @@ u2f-auth-enable:
 u2f-auth-disable:
     sudo authselect disable-feature with-pam-u2f
 {{- end }}
-{{- if lookPath "distrobox" }}
+{{- if or (lookPath "distrobox") (lookPath "distrobox-export") }}
 
 # assemble and replace distroboxes from ${HOME}/.config/distrobox/assemble.ini
 # https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md
-assemble:
+db-assemble:
   echo 'Assembling and replacing distroboxes from ${HOME}/.config/distrobox/assemble.ini...'
   distrobox assemble create --replace --file "${HOME}/.config/distrobox/assemble.ini"
 {{- end }}
