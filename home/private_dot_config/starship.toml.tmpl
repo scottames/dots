@@ -84,7 +84,10 @@ format = "[  $virtualenv]($style) "
 style = "bright-black"
 
 [kubernetes]
+symbol = '☸ '
 disabled = false
+detect_files = ['Dockerfile']
+# format = '[$context(\[$namespace\])]($style) '
 format = '[$symbol$context( \($namespace\))]($style)'
 style = "bright-black"
 
