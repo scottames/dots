@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.8.0](https://github.com/scottames/dots/compare/v0.7.0...v0.8.0) (2024-02-03)
+
+
+### Features
+
+* **aqua:** add some packages ([9fb2691](https://github.com/scottames/dots/commit/9fb26916b8c77f94b432cbc4cc054802eecbecbc))
+* **distrobox:** bazzite-arch + use new exports feature ([6bf76f9](https://github.com/scottames/dots/commit/6bf76f9a13a5dacf60926884662e85820a9855b4))
+* Steam (flatpak) + MangoHud config ([efefd6a](https://github.com/scottames/dots/commit/efefd6a5149e1d800e092095cea5d911900b46fc))
+* **yubi:** Yubi u2f keys from 1pass ([214b6c8](https://github.com/scottames/dots/commit/214b6c8a65ed75577eac1bcb7ad51c12d3af4928))
+
+
+### Bug Fixes
+
+* **fish/git_status:** handle home printing /var ([97cd74a](https://github.com/scottames/dots/commit/97cd74af1e5ff9b001b073e64cc46c0bef5feb4e))
+* **justfile:** distrobox logic + conflict with ublue-os ([a314c5a](https://github.com/scottames/dots/commit/a314c5a7e39fee845020577ecedb08d7dcf1cfbe))
+* **just:** use new import + add targets from ublue ([76862cb](https://github.com/scottames/dots/commit/76862cbe1f46109770c2cca00c6a85364bddc08a))
+
 ## [0.7.0](https://github.com/scottames/dots/compare/v0.6.0...v0.7.0) (2023-12-09)
 
 
