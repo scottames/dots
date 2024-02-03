@@ -2,10 +2,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - pkg/**
-      - CHANGELOG.md
-      - go.*
 permissions:
   contents: write
   pull-requests: write
