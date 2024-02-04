@@ -1,8 +1,8 @@
 #!/bin/env fish
 
-function ls --wraps exa
-  if [ $HAS_EXA ]
-    exa --classify --group-directories-first $argv
+function ls --wraps eza
+  if [ $HAS_EZA ]
+    eza --classify --group-directories-first $argv
   else
     command ls $argv
   end

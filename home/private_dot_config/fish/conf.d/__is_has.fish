@@ -36,7 +36,7 @@ set has_bins \
   brew       \
   bob        \
   cargo      \
-  exa        \
+  eza        \
   fd         \
   direnv     \
   dyff       \

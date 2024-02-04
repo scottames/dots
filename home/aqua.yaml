@@ -21,7 +21,6 @@ packages:
   - name: twpayne/chezmoi@v2.46.0
   - name: zellij-org/zellij@v0.39.2
   - name: weaveworks/eksctl@v0.170.0
-  - name: ogham/exa@v0.10.1
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
   - name: starship/starship@v1.17.1
@@ -82,3 +81,4 @@ packages:
   - name: PaulJuliusMartinez/jless@v0.9.0
   - name: konradsz/igrep@v1.2.0
   - name: rhysd/hgrep@v0.3.4
+  - name: eza-community/eza@v0.18.0

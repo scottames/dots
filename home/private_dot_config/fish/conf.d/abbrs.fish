@@ -1,7 +1,7 @@
 #!/bin/env fish
 
 if [ $IS_LINUX ]
-  and ! [ $HAS_EXA ]
+  and ! [ $HAS_EZA ]
     set _ls_arg ' --color'
 end
 

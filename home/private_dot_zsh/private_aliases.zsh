@@ -84,8 +84,8 @@ alias lt='ls *(.m0)' # files (no directories) modified in last day
 alias lnew='ls *(.om[1,3])' # list three newest
 alias drs='dirs -v' # list recent directories - use ~ to select
 
-# if ls is using exa, ignore setting ls functions
-if [[ ! $(which ls | grep exa) ]]; then
+# if ls is using eza, ignore setting ls functions
+if [[ ! $(which ls | grep eza) ]]; then
   if [[ $IS_MAC -eq true ]]; then
     alias lh='ls -d .*'          # show hidden files/directories only
     alias lsd='ls -aFhl'
