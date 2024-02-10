@@ -37,3 +37,7 @@ packages:
     replacements:
       amd64: x86_64
     description: Use ChatGPT, LocalAI and other LLMs in the terminal.
+  - type: go_install
+    repo_owner: kisielk
+    repo_name: errcheck
+    description: errcheck checks that you checked errors.
