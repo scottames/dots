@@ -106,9 +106,8 @@ abbr -a lg        "lazygit"
 abbr -a lh        "ls -d .*$_ls_arg" # show hidden files/directories only
 abbr -a lsd       "ls -ld *$_ls_arg" # show directories
 abbr -a lsf       "ls -aFhl$_ls_arg"
-abbr -a l         "ls -al$_ls_arg"
-abbr -a ls        "ls -Fh$_ls_arg"   # Colorize output, add file type indicator, and put sizes in human readable format
-abbr -a ll        "ls -Fhl$_ls_arg"  # Same as above, but in long listing format
+abbr -a l         "ls -alh$_ls_arg"  # list all (including hidden)
+abbr -a ll        "ls -hl$_ls_arg"   # list long w/ headers
 abbr -a makepass  "openssl rand -base64 12"
 abbr -a md        "mkdir_cd"
 abbr -a mgt       "mage go:test"
