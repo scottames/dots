@@ -16,8 +16,11 @@ if [ -x "$(command -v distrobox)" ]; then
   if [ -x "$(command -v docker)" ] || [ -x "$(command -v podman)" ]; then
     err "distrobox found. init from distrobox instead.
 
-    distrobox create --image ghcr.io/scottames/archlinux-toolbox:latest --name at
+    distrobox create --image registry.fedoraproject.org/fedora-toolbox:38 --name fd
+    
+alternatively, arch: (may cause oddities with python install, etc. on fedora system)
 
+    distrobox create --image ghcr.io/scottames/arch-toolbox:latest --name at
 "
   fi
 fi
