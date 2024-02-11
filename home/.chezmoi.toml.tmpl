@@ -18,8 +18,8 @@
 {{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
 {{-     $isContainer = true -}}
 {{-   end -}}
-{{-   if and $isContainer (lookPath "distrobox-host-exec")  -}}
-{{-     $isDistroBox = true -}}
+{{-   if $isContainer -}}
+{{-     $isDistroBox = not (eq (env "DISTROBOX_ENTER_PATH") "") -}}
 {{-   end -}}
 {{-   if $isDistroBox -}}
 {{-     $chassis = output "distrobox-host-exec" "hostnamectl" "chassis" | trim -}}

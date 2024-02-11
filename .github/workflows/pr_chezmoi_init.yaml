@@ -22,7 +22,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           # https://github.com/scottames/boxes
-          image: ghcr.io/scottames/arch-toolbox:latest
+          image: ghcr.io/scottames/fedora-toolbox:latest
           options: -v ${{ github.workspace }}:/home/container/src/scottames/dots
           run: |
             /home/container/src/scottames/dots/scripts/init.sh \
