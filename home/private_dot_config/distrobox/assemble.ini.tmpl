@@ -14,7 +14,7 @@ exported_bins="/usr/bin/zenity"
 exported_bins_path=~/.local/bin
 
 [fd]
-image=registry.fedoraproject.org/fedora-toolbox:38
+image=ghcr.io/scottames/fedora-toolbox:latest
 nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
@@ -24,38 +24,5 @@ init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/nmcli;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
-additional_packages="@Development Tools" zlib-devel bzip2 bzip2-devel readline-devel sqlite \
-  sqlite-devel openssl-devel xz xz-devel libffi-devel findutils tk-devel
-
-[fdl]
-image=ghcr.io/ublue-os/fedora-distrobox:latest
-nvidia={{ (eq "nvidia" .host.gpu) }}
-pull=true
-root=false
-replace=true
-init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
-init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/nmcli;
-init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
-init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
-init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
-
-[bazzite-arch]
-{{- if regexMatch "^gnome" .desktop_session }}
-image=ghcr.io/ublue-os/bazzite-arch-gnome:latest
-{{- else }}
-image=ghcr.io/ublue-os/bazzite-arch:latest
-{{ end }}
-nvidia={{ (eq "nvidia" .host.gpu) }}
-pull=true
-unshare_netns=true
-root=false
-replace=true
-start_now=false
-init_hooks=ln -sf ~/.steam/steamcmd ~/.steam/steamcmd.sh;
-exported_apps="steam"
-exported_apps="lutris"
-exported_apps="protontricks"
-exported_bins="/usr/bin/steamcmd"
-exported_bins_path=~/.steam
 
 # vi: ft=dosini
