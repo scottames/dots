@@ -1,0 +1,11 @@
+[Unit]
+Description=Arch for distrobox fun
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/distrobox assemble create --replace --file {{ .chezmoi.homeDir }}/.config/distrobox/assemble.ini --name a
+ExecStart=/usr/bin/distrobox enter a
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Fedora for distrobox fun
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/distrobox assemble create --replace --file /home/scta/.config/distrobox/assemble.ini --name f
+ExecStart=/usr/bin/distrobox enter f
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target
