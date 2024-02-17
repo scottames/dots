@@ -13,14 +13,14 @@ set fish_cursor_visual blocks
 
 # https://fishshell.com/docs/current/interactive.html#vi-mode-commands
 function fish_user_key_bindings
-  set -g fish_key_bindings fish_vi_key_bindings
-  fish_default_key_bindings -M insert
-  fish_vi_key_bindings --no-erase insert
+    set -g fish_key_bindings fish_vi_key_bindings
+    fish_default_key_bindings -M insert
+    fish_vi_key_bindings --no-erase insert
 
-  {{- if eq .chezmoi.os "linux" }}
-  bind -M insert \e! 'distrobox enter at;'
-  bind -M insert \e@ 'distrobox enter fd;'
-  {{ end -}}
+    {{- if eq .chezmoi.os "linux" }}
+    bind -M insert \e! 'distrobox enter at;'
+    bind -M insert \e@ 'distrobox enter fd;'
+    {{ end -}}
 end
 
 # vi: ft=fish

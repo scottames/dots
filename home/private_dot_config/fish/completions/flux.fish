@@ -1,4 +1,4 @@
 #!/bin/env fish
 
 type -q kubectl
-  and kubectl completion fish | source
+and kubectl completion fish | source

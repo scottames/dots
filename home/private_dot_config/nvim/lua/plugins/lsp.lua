@@ -137,7 +137,7 @@ return {
         sources = {
           nls.builtins.formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),
           nls.builtins.formatting.black.with({ extra_args = { "--fast" } }),
-          -- nls.builtins.formatting.fish_indent,
+          nls.builtins.formatting.fish_indent,
           nls.builtins.formatting.fixjson,
           nls.builtins.formatting.gofumpt,
           nls.builtins.formatting.goimports_reviser,

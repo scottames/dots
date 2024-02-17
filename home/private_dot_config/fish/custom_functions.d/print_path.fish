@@ -1,8 +1,7 @@
 #!/bin/env fish
 
 function print_path --description "Pretty print PATH"
-  string replace ":" "\n" $PATH | \
-    awk "{
+    string replace ":" "\n" $PATH | awk "{
       sub(\"$HOME\",  \"$(set_color green  )$HOME$(set_color normal)\"); \
       sub(\"/usr\",   \"$(set_color green  )/usr$(set_color normal)\"); \
       sub(\"/bin\",   \"$(set_color blue   )/bin$(set_color normal)\"); \

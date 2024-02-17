@@ -1,4 +1,4 @@
 #!/bin/env fish
 
 type -q stern
-  and stern --completion fish | source
+and stern --completion fish | source
