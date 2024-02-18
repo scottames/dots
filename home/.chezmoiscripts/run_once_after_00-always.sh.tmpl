@@ -1,0 +1,22 @@
+#!/bin/env bash
+
+set -euo pipefail
+
+yellow='\033[0;33m'
+clear='\033[0m'
+
+warn() {
+  printf "${yellow}❕%s${clear}\n" "${@}"
+}
+
+if [[ ! -x "$(command -v fish)" ]]; then
+  warn "fish not found."
+fi
+
+if [[ ${CI:-false} == true ]]; then
+  chezmoi data | tee "{{ .chezmoi.sourceDir }}/.chezmoi.json"
+fi
+
+env | grep -e GITHUB -e CI | { grep -v grep || true; }
+
+# vi: ft=bash

@@ -18,12 +18,18 @@ jobs:
         run: |
           echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
         id: extract_branch
-      - name: Run chezmoi init in arch linux docker container
+      - name: Run chezmoi init in container
         uses: addnab/docker-run-action@v3
         with:
           # https://github.com/scottames/boxes
           image: ghcr.io/scottames/fedora-toolbox:latest
           options: -v ${{ github.workspace }}:/home/container/src/scottames/dots
+          shell: fish
           run: |
             /home/container/src/scottames/dots/scripts/init.sh \
               --no-tty --branch "${{ steps.extract_branch.outputs.branch }}"
+      - name: Capture chezmoi data
+        uses: actions/upload-artifact@v4
+        with:
+          name: chezmoi-data
+          path: .chezmoi.json

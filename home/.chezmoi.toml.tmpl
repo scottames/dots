@@ -7,8 +7,14 @@
 {{ $desktopSession := env "DESKTOP_SESSION" -}}
 {{ $hourDark       := 24 -}}
 {{ $hourLight      := 24 -}}
-{{ $osVariant      := "" }}
-{{ $ublueImageInfo := "" }}
+{{ $osVariant      := "" -}}
+{{ $ublueImageInfo := "" -}}
+
+{{ $githubActions := or (env "GITHUB_ACTIONS") false -}}
+{{ $isCI          := false -}}
+{{ if $githubActions -}}
+{{   $isCI = true }}
+{{ end -}}
 
 {{ $loginSession     := 0 -}}
 {{ $loginSessionType := "" -}}
@@ -58,6 +64,9 @@ progress = true
   hour_light = {{ $hourLight }}
   login_session = {{ $loginSession }}
   login_session_type = "{{ $loginSessionType }}"
+  [data.ci]
+    github_actions = {{ $githubActions }}
+    is_ci = {{ $isCI }}
   [data.host]
     chassis = "{{ $chassis }}"
     is_ublue = {{ $isUblue }}
