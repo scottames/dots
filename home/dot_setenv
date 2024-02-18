@@ -15,6 +15,7 @@ $IS_DARK \
   && setenv BAT_THEME             "Catppuccin-mocha"
 setenv BOB_BIN                    "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                   1
+setenv DISTROBOX_DEFAULT          "a"
 setenv EDITOR                     "vi"
 $HAS_VIM \
   && setenv EDITOR                "vim"

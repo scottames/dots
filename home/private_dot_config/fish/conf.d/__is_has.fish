@@ -36,6 +36,7 @@ set has_bins \
     brew \
     bob \
     cargo \
+    distrobox-host-exec \
     eza \
     fd \
     direnv \
@@ -62,7 +63,7 @@ set has_bins \
     zoxide
 
 for bin in $has_bins
-    set _upper_bin (string upper $bin | string replace "-" "")
+    set _upper_bin (string upper $bin | string replace -a "-" "")
 
     type -q $bin \
         && set -gx "HAS_$_upper_bin" true \

@@ -22,9 +22,13 @@ eclint_indent_style = unset
 [*.py]
 indent_size = 4
 
-[*.sh]
+[*.sh,*.sh.tpml]
 indent_style = space
 indent_size = 2
 
-[Dockerfile]
+[*.fish,*.fish.tpml]
+indent_style = space
+indent_size = 2
+
+[Containerfile,Dockerfile]
 indent_size = 4

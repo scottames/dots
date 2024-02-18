@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 # Enables & starts distrobox systemd oneshot services
 
 # Colors
@@ -10,9 +12,9 @@ magenta='\033[0;35m'
 cyan='\033[0;36m'
 yellow='\033[0;33m'
 clear='\033[0m'
-# print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
-print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n\n" "${@}"; }
+print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}" "${@}"; }
 print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; }
+# print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
 # print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; }
 
 # https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=distrobox
@@ -38,10 +40,12 @@ _services=(
 
 for service in "${_services[@]}"; do
   print_info "${service} status: "
-  if ! systemctl is-enabled "${service}"; then
+  if ! systemctl --user is-enabled "${service}"; then
     printf
-    print_success "enabling ${service}\n    follow: journalctl --user -exu'${service}'    status: systemctl status --user ${service}"
-    (systemctl enable --now "${service}" &)
+    print_success "enabling ${service}"
+    printf "    follow: journalctl --user -exu'%s'" "${service}"
+    printf "    status: systemctl status --user %s" "${service}"
+    (systemctl enable --now --user "${service}" &)
   fi
 done
 
