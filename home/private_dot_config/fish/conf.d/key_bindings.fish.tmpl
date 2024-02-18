@@ -18,8 +18,8 @@ function fish_user_key_bindings
     fish_vi_key_bindings --no-erase insert
 
     {{- if eq .chezmoi.os "linux" }}
-    bind -M insert \e! 'distrobox enter at;'
-    bind -M insert \e@ 'distrobox enter fd;'
+    bind -M insert \e! 'distrobox enter a;'
+    bind -M insert \e@ 'distrobox enter f;'
     {{ end -}}
 end
 
