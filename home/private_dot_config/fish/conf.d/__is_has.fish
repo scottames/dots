@@ -39,6 +39,7 @@ set has_bins \
     distrobox-host-exec \
     eza \
     fd \
+    fzf \
     direnv \
     dyff \
     git \
@@ -55,6 +56,7 @@ set has_bins \
     paru \
     rustup \
     tldr \
+    ugum \
     vagrant \
     vim \
     virtualenv \

@@ -22,8 +22,10 @@ _bins=(
   dyff
   hub
   gh
+  gum
   nvim
   op
+  ugum
   vim
   virtualenv
   yum
