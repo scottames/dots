@@ -4,6 +4,7 @@
 #   if not launched from inside container
 if status --is-login
     and not is_container >/dev/null
+
     if type -q distrobox-host-exec
         and type -q fzf
 

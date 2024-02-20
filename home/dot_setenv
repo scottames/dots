@@ -15,8 +15,9 @@ $IS_DARK \
   && setenv BAT_THEME             "Catppuccin-mocha"
 setenv BOB_BIN                    "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                   1
-setenv DISTROBOX_DEFAULT          "a"
-setenv DBX_CONTAINER_NAME         "$DISTROBOX_DEFAULT"
+setenv DBX_ASSEMBLE_DEFAULT       "$HOME/.config/distrobox/assemble.ini"
+setenv DBX_DEFAULT                "a"
+setenv DBX_CONTAINER_NAME         "$DBX_DEFAULT"
 setenv EDITOR                     "vi"
 $HAS_VIM \
   && setenv EDITOR                "vim"

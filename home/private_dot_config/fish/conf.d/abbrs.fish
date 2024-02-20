@@ -25,6 +25,7 @@ abbr -a da "direnv allow"
 abbr -a db distrobox
 abbr -a dba "distrobox assemble"
 abbr -a dbac "distrobox assemble create --replace --file $HOME/.config/distrobox/assemble.ini"
+abbr -a dbhe distrobox-host-exec
 abbr -a dc "distrobox create"
 abbr -a de "distrobox enter"
 abbr -a dep "distrobox ephemeral"
