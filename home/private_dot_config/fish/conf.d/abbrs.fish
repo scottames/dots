@@ -159,13 +159,18 @@ abbr -a vr "vagrant reload"
 abbr -a vs "vagrant ssh"
 abbr -a vst "vagrant status"
 abbr -a vu "vagrant up"
-abbr -a ze zellij_new_tab_edit_split # see functions
-abbr -a zj zellij # see functions
+abbr -a za zellij_attach # see functions
 abbr -a zja zellij_attach # see functions
+abbr -a ze zellij_edit # see functions
+abbr -a zef zellij_edit --floating # see functions
+abbr -a ze. "zellij_new_tab_edit_split $DOTS --name=." # see functions
+abbr -a zet zellij_new_tab_edit_split # see functions
+abbr -a zj zellij # see functions
 abbr -a zjac "zellij action"
-abbr -a zje zellij_new_tab_edit_split # see functions
 abbr -a zjr "zellij run --"
-abbr -a zjj zellij
+abbr -a zr zellij_run # see functions
+abbr -a zrt zellij_rename_tab # see functions
+abbr -a zte zellij_new_tab_edit_split # see functions
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ cd helpers                                               │

@@ -9,9 +9,12 @@ function zellij_attach --description "Attach to existing Zellij session(s) - if 
     set -l session_count (count $sessions)
 
     if [ $session_count -ge 2 ]
-        zellij attach \
-            (printf "%s\n" $sessions | fzf)
+        zellij attach (
+             printf %s\n $sessions \
+             | ugum filter --header="choose a session to attach to..." --placeholder="" \
+             | string split ' ' -f1
+        )
     else
-        zellij attach -c
+        zellij attach -c # creates a session if one does not exist
     end
 end
