@@ -1,4 +1,4 @@
-# vim: set ft=fish:
+# vi: ft=fish autoformat=false
 
 setenv AQUA_CONFIG_DIR            "$HOME/.config/aquaproj-aqua"
 setenv AQUA_GLOBAL_CONFIG         "$AQUA_CONFIG_DIR/aqua.yaml"

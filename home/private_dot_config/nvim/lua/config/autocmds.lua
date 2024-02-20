@@ -53,3 +53,15 @@ autocmd("User", {
     end
   end,
 })
+
+autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    -- Search in the current buffer for the "vi: autoformat=false" pattern
+    local result = vim.fn.search("^.*vi:.*autoformat=false", "nw")
+    -- If the pattern is found (result is not 0), set autoformat to false
+    if result ~= 0 then
+      vim.b.autoformat = false
+    end
+  end,
+})
