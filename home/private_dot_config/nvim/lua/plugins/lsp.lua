@@ -1,7 +1,10 @@
 ---@type lspconfig.options
 local servers = {
+  -- reference: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
   bashls = {},
+  bufls = {},
   cssls = {},
+  dagger = {},
   dockerls = {},
   golangci_lint_ls = {},
   gopls = {},
@@ -45,6 +48,21 @@ local on_attach = function(client, bufnr)
   end
 end
 
+local executable = function(bin)
+  return function(_)
+    local has_bin = vim.fn.executable(bin) == 1
+    if not has_bin then
+      vim.notify = require("notify")
+      vim.notify(
+        "(" .. tostring(has_bin) .. ")missing executable: " .. bin,
+        vim.log.levels.WARN,
+        { title = "LSP required bin missing" }
+      )
+    end
+    return has_bin
+  end
+end
+
 for server, _ in pairs(servers) do
   servers[server]["on_attach"] = on_attach
 end
@@ -79,24 +97,41 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       local ensure_installed = {
+        -- reference: https://mason-registry.dev/registry/list
+        "alex",
+        "buf",
+        "buf-language-server",
+        "checkmake",
+        "commitlint",
+        "snyk",
+        "typos",
+        "woke",
         "actionlint",
+        "ansible-lint",
         "bash-debug-adapter",
         "bash-language-server",
         "beautysh",
         "black",
+        "buf",
+        "buf-language-server",
+        "cuelsp",
         "cspell",
         "dockerfile-language-server",
+        "dprint",
         "editorconfig-checker",
-        "flake8",
+        -- "flake8", -- ruff instead
         "gitlint",
         "goimports",
         "goimports-reviser",
         "golangci-lint",
         "golangci-lint-langserver",
+        "gofumpt",
+        "golines",
         "gopls",
         "gotests",
         "gotestsum",
         "html-lsp",
+        "isort",
         "jq",
         "jq-lsp",
         "json-lsp",
@@ -106,19 +141,28 @@ return {
         "luacheck",
         "luaformatter",
         "markdownlint",
+        "markdown-toc",
         "marksman",
         "mypy",
         "nginx-language-server",
+        "prettier",
+        "prettierd",
         "pyproject-flake8",
         "pyright",
+        "ruff",
+        "ruff-lsp",
         "rust-analyzer",
         "rustfmt",
         "semgrep",
         "shellcheck",
+        "shellharden",
         "shfmt",
         "sql-formatter",
         "sqlls",
+        "sqlfluff",
         "stylua",
+        "stylelint",
+        "taplo",
         "textlint",
         "tflint",
         "yamlfmt",
@@ -127,99 +171,130 @@ return {
       opts.ensure_installed = require("util").merge_table(opts.ensure_installed, ensure_installed)
     end,
   }, -- formatters
+  -- TODO: merge _by_ft into one table and call function in conform/lint to get the appropriate table
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      -- reference:
+      --   https://github.com/folke/dot/blob/1007fc65738ad1f7a3e9c91432430017a6878378/nvim/lua/plugins/lsp.lua#L193
+      --   https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatter-options
+      formatters_by_ft = {
+        awk = { "awk" },
+        bash = { "shfmt" },
+        css = { "stylelint" },
+        cue = { "cue_fmt" },
+        containerfile = { "dprint" },
+        dockerfile = { "dprint" },
+        fish = { "fish_indent" },
+        go = { "goimports-reviser", "gofumpt", "golines" },
+        hcl = { "terragrunt_hclfmt" },
+        json = { { "prettierd_json", "prettier_json" } },
+        justfile = { "just" },
+        markdown = { "markdownlint", "markdown-toc" },
+        ["markdown.mdx"] = { { "prettierd", "prettier" } },
+        lua = { "stylua" },
+        packer = { "packer_fmt" },
+        python = { "auto_optional", "ruff_fix", "ruff_format", "isort" },
+        rust = { "rustfmt" },
+        sh = { "shfmt" },
+        sql = { "sqlfluff" },
+        terraform = { "terraform_fmt" },
+        toml = { "taplo" },
+        yaml = { "yamlfmt" },
+        zsh = { "beautysh" },
+      },
+      formatters = {
+        beautysh = {
+          prepend_args = { "--indent-size", "2" },
+        },
+        goimports_reviser = {
+          command = "goimports-reviser",
+          -- prepend_args = { "-rmunused", "-set-alias" },
+        },
+        markdownlint = {
+          prepend_args = { "--disable md013" },
+        },
+        dprint = {
+          condition = function(ctx)
+            return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
+          end,
+        },
+        shfmt = {
+          prepend_args = { "-i", "2", "-ci" },
+        },
+        -- Because they can only be installed via pip
+        auto_optional = {
+          condition = executable("auto-optional"),
+        },
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        ["*"] = { "typos", "snyk_iac", "woke" },
+        ansible = { "ansible_lint" },
+        cue = { "cue" },
+        bash = { "shellcheck" },
+        sh = { "shellcheck" },
+        fish = { "fish" },
+        git = { "commitlint" },
+        go = { "golangcilint" },
+        html = { "tidy" },
+        json = { "jsonlint" },
+        lua = { "selene", "luacheck" },
+        make = { "checkmake" },
+        markdown = { "alex", "markdownlint" },
+        protobuf = { "buf_lint" },
+        python = { "bandit", "blocklint", "ruff", "mypy" },
+        sql = { "sqlfluff" },
+        systemd = { "systemdlint" },
+        terraform = { "tfsec" },
+        yaml = { "actionlint", "yamllint" },
+        zsh = { "zsh" },
+      },
+      linters = {
+        actionlint = {
+          condition = function()
+            return string.find(vim.fn.expand("%:p"), ".github/workflows")
+          end,
+        },
+        -- Example of using selene only when a selene.toml file is present
+        selene = {
+          condition = function(ctx)
+            return vim.fs.find({ "selene.toml" }, { path = ctx.filename, upward = true })[1]
+          end,
+        },
+        -- Example of using luacheck only when a .luacheckrc file is present
+        luacheck = {
+          condition = function(ctx)
+            return vim.fs.find({ ".luacheckrc" }, { path = ctx.filename, upward = true })[1]
+          end,
+        },
+        yamllint = {
+          prepend_args = { "-d", "relaxed" },
+        },
+        -- Because they can only be installed via pip
+        bandit = {
+          condition = executable("bandit"),
+        },
+        blocklint = {
+          condition = executable("blocklint"),
+        },
+        systemdlint = {
+          condition = executable("systemdlint"),
+        },
+        tidy = {
+          condition = executable("tidy"),
+        },
+      },
+    },
+  },
   {
     "nvimtools/none-ls.nvim",
-    event = "BufReadPre",
-    dependencies = { "mason.nvim" },
-    opts = function()
-      local nls = require("null-ls")
-      return {
-        sources = {
-          nls.builtins.formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),
-          nls.builtins.formatting.black.with({ extra_args = { "--fast" } }),
-          nls.builtins.formatting.fish_indent,
-          nls.builtins.formatting.fixjson,
-          nls.builtins.formatting.gofumpt,
-          nls.builtins.formatting.goimports_reviser,
-          nls.builtins.formatting.jq,
-          -- nls.builtins.formatting.lua_format, -- causes this list to get all bunched up 😡
-          nls.builtins.formatting.markdown_toc,
-          nls.builtins.formatting.markdownlint.with({ extra_args = { "--disable md013" } }),
-          -- nls.builtins.formatting.mdformat, -- causes checklists and other things to get all wonky :\
-          nls.builtins.formatting.prettier.with({
-            filetypes = {
-              "css",
-              "graphql",
-              "handlebars",
-              "html",
-              "javascript",
-              "javascriptreact",
-              "json",
-              "jsonc",
-              "less",
-              "scss",
-              "toml",
-              "typescript",
-              "typescriptreact",
-              "vue",
-              -- "yaml",
-              ---- markdown formatting lists is all wonky :\
-              -- "markdown",
-              -- "markdown.mdx",
-            },
-            extra_args = {
-              "--no-semi",
-              "--jsx-single-quote",
-            },
-          }),
-          nls.builtins.formatting.rustfmt,
-          nls.builtins.formatting.sqlfluff,
-          nls.builtins.formatting.shfmt,
-          nls.builtins.formatting.stylua,
-          -- nls.builtins.formatting.terrafmt, -- causes neovim to freak out about file changed on markdown
-          nls.builtins.formatting.terraform_fmt,
-          nls.builtins.formatting.tidy,
-          nls.builtins.formatting.usort,
-          nls.builtins.formatting.yamlfmt, -- actions
-          nls.builtins.code_actions.cspell,
-          nls.builtins.code_actions.gitsigns,
-          nls.builtins.code_actions.gomodifytags,
-          nls.builtins.code_actions.shellcheck, --
-          nls.builtins.code_actions.refactoring.with({
-            extra_filetypes = { "terraform", "hcl" },
-          }),
-          --
-          -- completion
-          nls.builtins.completion.luasnip,
-          nls.builtins.completion.spell,
-
-          -- diagnostics
-          nls.builtins.diagnostics.actionlint,
-          nls.builtins.diagnostics.buildifier,
-          nls.builtins.diagnostics.cfn_lint,
-          nls.builtins.diagnostics.checkmake,
-          nls.builtins.diagnostics.commitlint,
-          nls.builtins.diagnostics.cspell.with({ extra_filetypes = { "markdown", "text" } }),
-          nls.builtins.diagnostics.dotenv_linter, -- diagnostics.editorconfig_checker,
-          nls.builtins.diagnostics.fish,
-          nls.builtins.diagnostics.flake8,
-          nls.builtins.diagnostics.gitlint,
-          nls.builtins.diagnostics.golangci_lint,
-          nls.builtins.diagnostics.jsonlint,
-          nls.builtins.diagnostics.luacheck.with({ extra_args = { "--globals vim lvim" } }),
-          nls.builtins.diagnostics.markdownlint.with({ extra_args = { "--disable md013" } }),
-          nls.builtins.diagnostics.mypy,
-          nls.builtins.diagnostics.protolint,
-          nls.builtins.diagnostics.semgrep,
-          nls.builtins.diagnostics.shellcheck,
-          nls.builtins.diagnostics.tidy,
-          nls.builtins.diagnostics.todo_comments,
-          nls.builtins.diagnostics.yamllint.with({ extra_args = { "-d relaxed" } }),
-          nls.builtins.diagnostics.zsh, -- hover
-          nls.builtins.hover.dictionary,
-        },
-      }
-    end,
+    enabled = false,
   },
   { -- https://github.com/ThePrimeagen/refactoring.nvim
     "ThePrimeagen/refactoring.nvim",

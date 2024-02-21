@@ -12,7 +12,7 @@ magenta='\033[0;35m'
 cyan='\033[0;36m'
 yellow='\033[0;33m'
 clear='\033[0m'
-print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}" "${@}"; }
+print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n" "${@}"; }
 print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; }
 # print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
 print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; }
