@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.9.0](https://github.com/scottames/dots/compare/v0.8.0...v0.9.0) (2024-02-21)
+
+
+### Features
+
+* **aqua:** add several new ([ab5f88b](https://github.com/scottames/dots/commit/ab5f88b6f3ba6eb5306e83b55124dddf04469907))
+* **aqua:** golang errcheck ([f705b0d](https://github.com/scottames/dots/commit/f705b0dc990b4e1ea8714808e863b6658c261b09))
+* **distrobox:** enable systemd oneshots for auto-updates ([694ad08](https://github.com/scottames/dots/commit/694ad08686c979fcda3d81686adb10c267739d9c))
+* **fish/zellij:** fish helpers for interactions with zellij ([08b01a4](https://github.com/scottames/dots/commit/08b01a4754a8fe725a5e106d0c0a96d6751c34ae))
+* **fish:** cleanup + misc distrobox/nvim related niceties ([acaaf74](https://github.com/scottames/dots/commit/acaaf7489497952fa2194bdb26136e18f523f475))
+* **fish:** launch fedora distrobox keymap ([914492b](https://github.com/scottames/dots/commit/914492b4406454fa4ba84e56589e8570d19b64b8))
+* **fish:** launch into distrobox if available ([9dedb0f](https://github.com/scottames/dots/commit/9dedb0f8797d26d2fe2b8607e5dfc4af7b51c9d6))
+* **fish:** zellij completion ([a614175](https://github.com/scottames/dots/commit/a61417543d42774fe70ece777731b0adcc1bf814))
+* **nvim:** autocmd to ignore formatting from vi comment ([de8d685](https://github.com/scottames/dots/commit/de8d685037c1feb5d9b891dd0dacc7b38608fd08))
+* **zellij:** additional edit abbrs / layouts ([a007380](https://github.com/scottames/dots/commit/a007380b8117b60ddc4791b13f34d9b8c471b0bc))
+
+
+### Bug Fixes
+
+* **chezmoi/distrobox:** handle case where XDG_RUNTIME_DIR missing ([d6b8aef](https://github.com/scottames/dots/commit/d6b8aef635cec11c764c109635e1a68d5c3bc991))
+* **distrobox:** misc cleanup ([a7d0e31](https://github.com/scottames/dots/commit/a7d0e314d28f6ae47c1ce834bdd88d689a1613db))
+* **fish/abbrs:** exa =&gt; eza flags ([d453331](https://github.com/scottames/dots/commit/d45333105b36e900bcfc9831970e667541a6c51b))
+* **fish:** keybindings to match distrobox containers ([3766aeb](https://github.com/scottames/dots/commit/3766aebf84d9bb7832cf44f2d6d3790ee6fd2901))
+
 ## [0.8.0](https://github.com/scottames/dots/compare/v0.7.0...v0.8.0) (2024-02-03)
 
 
