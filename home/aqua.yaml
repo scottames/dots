@@ -84,3 +84,9 @@ packages:
   - name: eza-community/eza@v0.18.3
   - name: kisielk/errcheck@v1.7.0
     registry: dots
+  - name: mvdan/sh@v3.8.0
+  - name: cue-lang/cue@v0.7.1
+  - name: dprint/dprint@0.45.0
+  - name: gruntwork-io/terragrunt@v0.55.4
+  - name: hashicorp/packer@v1.10.1
+  - name: snyk/cli@v1.1280.1
