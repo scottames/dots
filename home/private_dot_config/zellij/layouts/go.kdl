@@ -1,0 +1,10 @@
+layout {
+    pane command="nvim"
+    pane command="go" size="15%" {
+        args "test" "./..."
+        start_suspended true
+    }
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+    }
+}

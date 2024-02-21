@@ -164,7 +164,10 @@ abbr -a zja zellij_attach # see functions
 abbr -a ze zellij_edit # see functions
 abbr -a zef zellij_edit --floating # see functions
 abbr -a ze. "zellij_new_tab_edit_split $DOTS --name=." # see functions
-abbr -a zet zellij_new_tab_edit_split # see functions
+abbr -a zeb "zellij_new_tab_edit_split $MY_SRC_DIR/boxes --name='[]'"
+abbr -a zet zellij_new_tab_edit_split
+abbr -a zeu "zellij_new_tab_edit_split $MY_SRC_DIR/ublue"
+abbr -a zego "zellij_new_tab_edit_split --layout=go"
 abbr -a zj zellij # see functions
 abbr -a zjac "zellij action"
 abbr -a zjr "zellij run --"

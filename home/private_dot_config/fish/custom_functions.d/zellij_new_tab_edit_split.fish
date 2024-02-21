@@ -3,7 +3,7 @@
 function zellij_new_tab_edit_split \
     --description "Edit dir/file in new Zellij tab. Defaults to horizonal layout, can specify --vertical."
 
-    set -l _argparse_options h/horizontal v/vertical 'n/name=?'
+    set -l _argparse_options h/horizontal v/vertical 'n/name=?' 'l/layout=?'
     argparse -n ze $_argparse_options -- $argv
 
     set -l _DIR $HOME
@@ -11,6 +11,11 @@ function zellij_new_tab_edit_split \
     set -l _NVIM_EXTRA_ARGS ""
     set -l _ARGS ""
     set -l _SPLIT_DIRECTION horizontal
+    set _LAYOUT_FILE ""
+
+    function __cleanup
+        functions -e __cleanup
+    end
 
     if set -q _flag_vertical
         set _SPLIT_DIRECTION vertical
@@ -33,21 +38,18 @@ function zellij_new_tab_edit_split \
         set _TAB_NAME $_flag_name[1]
     end
 
-    printf "_TAB_NAME: "
-    set --show _TAB_NAME
-    printf "_flag_name: "
-    set --show _flag_name
+    if not set -q _flag_layout
 
-    if [ $_NVIM_EXTRA_ARGS ]
-        set _ARGS """ {
+        if [ $_NVIM_EXTRA_ARGS ]
+            set _ARGS """ {
                   args $_NVIM_EXTRA_ARGS
               }
 """
-    end
+        end
 
-    set _LAYOUT_CONTENT """
+        set _LAYOUT_CONTENT """
   layout {
-      tab name=\"$_TAB_NAME\" {
+      tab {
           pane split_direction=\"$_SPLIT_DIRECTION\" {
               pane command=\"nvim\"$_ARGS
               pane
@@ -59,13 +61,23 @@ function zellij_new_tab_edit_split \
   }
   """
 
-    set -l _LAYOUT_FILE (mktemp)
-    printf $_LAYOUT_CONTENT >"$_LAYOUT_FILE"
+        set _LAYOUT_FILE (mktemp)
+        printf $_LAYOUT_CONTENT >"$_LAYOUT_FILE"
+
+        function __cleanup
+            rm "$argv"
+            functions -e __cleanup
+        end
+    else
+        set _LAYOUT_FILE $_flag_layout
+    end
 
     if set -q _DIR
-        zellij action new-tab -c $_DIR --layout "$_LAYOUT_FILE"
+        zellij action new-tab -c $_DIR --layout "$_LAYOUT_FILE" --name $_TAB_NAME
     else
-        zellij action new-tab -c $HOME --layout "$_LAYOUT_FILE"
+        zellij action new-tab -c $HOME --layout "$_LAYOUT_FILE" --name $_TAB_NAME
     end
-    rm "$_LAYOUT_FILE"
+
+    __cleanup $_LAYOUT_FILE
+
 end
