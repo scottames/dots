@@ -1,0 +1,31 @@
+#!/bin/env bash
+
+# Colors
+# red='\033[0;31m'
+# green='\033[0;32m'
+# blue='\033[0;34m'
+magenta='\033[0;35m'
+# cyan='\033[0;36m'
+yellow='\033[0;33m'
+clear='\033[0m'
+print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n" "${@}"; }
+# print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; }
+# print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
+# print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; }
+
+# https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=rust
+echo '
+   ██████╗ ██╗   ██╗███████╗████████╗
+   ██╔══██╗██║   ██║██╔════╝╚══██╔══╝
+   ██████╔╝██║   ██║███████╗   ██║
+   ██╔══██╗██║   ██║╚════██║   ██║
+   ██║  ██║╚██████╔╝███████║   ██║
+🦀 ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝
+'
+
+if [[ -z $(command -v rustc) ]] || [[ -z $(command -v rustup) ]]; then
+  print_info "installing rust via rustup"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+# vi: ft=bash
