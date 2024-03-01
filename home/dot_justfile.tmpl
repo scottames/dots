@@ -12,11 +12,6 @@ update:
   rpm-ostree update
   @echo '=> Updating flatpaks...'
   flatpak update -y
-{{- if or (lookPath "distrobox") (lookPath "distrobox-export") }}
-  @echo "=> Assembling and replacing distroboxes from ${HOME}/.config/distrobox/assemble.ini..."
-  distrobox assemble create --replace --file "${HOME}/.config/distrobox/assemble.ini"
-  @"${HOME}/.config/distrobox/exports.sh"
-{{- end }}
 {{- else }}
   @echo "=> No update available for {{ .chezmoi.os }}"
 {{- end }}
@@ -60,11 +55,10 @@ u2f-auth-disable:
 {{- end }}
 {{- if or (lookPath "distrobox") (lookPath "distrobox-export") }}
 
-# assemble and replace distroboxes from ${HOME}/.config/distrobox/assemble.ini
-# https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md
-db-assemble:
-  echo 'Assembling and replacing distroboxes from ${HOME}/.config/distrobox/assemble.ini...'
-  distrobox assemble create --replace --file "${HOME}/.config/distrobox/assemble.ini"
+# assemble distroboxes via systemd oneshots
+distrobox-oneshot ACTION='restart':
+  systemctl --user {{ `{{ ACTION }}` }} distrobox-arch-oneshot.service
+  systemctl --user {{ `{{ ACTION }}` }} distrobox-fedora-oneshot.service
 {{- end }}
 
 # enable user podman socket
