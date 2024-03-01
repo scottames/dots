@@ -25,7 +25,7 @@ echo '
 
 if [[ -z $(command -v rustc) ]] || [[ -z $(command -v rustup) ]]; then
   print_info "installing rust via rustup"
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 fi
 
 # vi: ft=bash

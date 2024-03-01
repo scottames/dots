@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
         id: extract_branch
-      - name: Run chezmoi init in arch linux docker container
+      - name: Run chezmoi init in container
         uses: addnab/docker-run-action@v3
         with:
           # https://github.com/scottames/boxes
