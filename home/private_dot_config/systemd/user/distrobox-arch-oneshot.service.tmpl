@@ -1,11 +1,9 @@
 [Unit]
 Description=Arch for distrobox fun
-Wants=network-online.target
-After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/distrobox assemble create --replace --file {{ .chezmoi.homeDir }}/.config/distrobox/assemble.ini --name a
+ExecStart={{ .chezmoi.homeDir }}/bin/distrobox-assemble.sh a
 ExecStart=/usr/bin/distrobox enter a
 RemainAfterExit=true
 

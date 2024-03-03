@@ -34,6 +34,7 @@ if [[ ${XDG_RUNTIME_DIR:-false} == false ]]; then
 else
 
   # reload
+  #  {{ include "bin/executable_distrobox-assemble.sh.tmpl" | sha256sum }}
   #  {{ include "private_dot_config/distrobox/assemble.ini.tmpl" | sha256sum }}
   #  {{ include "private_dot_config/systemd/user/distrobox-arch-oneshot.service.tmpl" | sha256sum }}
   #  {{ include "private_dot_config/systemd/user/distrobox-fedora-oneshot.service.tmpl" | sha256sum }}

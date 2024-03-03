@@ -1,0 +1,28 @@
+#!/bin/env bash
+
+_dbcmd=(
+  /usr/bin/distrobox assemble
+  create
+  --replace
+  --file
+  {{ .chezmoi.homeDir }}/.config/distrobox/assemble.ini
+)
+if [[ -n ${1} ]]; then
+  _dbcmd+=(
+    --name
+    "${1}"
+  )
+  _name="-${1}"
+fi
+
+if ping -q -w 1 -c 1 8.8.8.8 >/dev/null 2>&1; then
+
+  logger -t "distrobox${_name}-oneshot" "assembling ${1}"
+
+  "${_dbcmd[@]}"
+
+else
+  logger -t "distrobox${_name}-oneshot" "offline - skipping assemble"
+fi
+
+# vi: ft=bash
