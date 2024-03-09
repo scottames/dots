@@ -1,0 +1,19 @@
+---
+name: update-aqua-checksums
+on:
+  pull_request:
+    paths:
+      - home/aqua.yaml
+      - home/private_dot_config/aquaproj-aqua/aqua-checksums.json
+permissions: read-all
+jobs:
+  update-aqua-checksums:
+    uses: aquaproj/update-checksum-workflow/.github/workflows/update-checksum.yaml@v0.1.9 # renovate: depName=aquaproj/update-checksum-workflow
+    permissions:
+      contents: read
+    with:
+      aqua_version: v2.23.2 # renovate: depName=aquaproj/aqua
+      prune: true
+    secrets:
+      gh_app_id: ${{secrets.APP_ID}}
+      gh_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
