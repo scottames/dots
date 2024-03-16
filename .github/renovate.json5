@@ -81,12 +81,14 @@
       matchFiles: [
         'magefiles'
       ],
-      commitMessageTopic: '⇡ mage {{depName}}'
+      commitMessageTopic: '⇡ mage {{depName}}',
+      groupName: '⇡ mage {{depName}}',
     },
     {
       matchManagers: ["github-actions"],
       automerge: true,
       commitMessageTopic: '⇡ github actions {{depName}}',
+      groupName: '⇡ github actions {{depName}}',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
@@ -95,27 +97,29 @@
       ],
       automerge: true,
       commitMessageTopic: '⇡ aquas {{depName}}',
+      groupName: '⇡ aquas {{depName}}',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
       matchPackageNames: ['aquaproj/aqua'],
       automerge: true,
       commitMessageTopic: '⇡ aqua',
+      groupName: '⇡ aqua',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
       matchPackageNames: ['aquaproj/aqua-installer'],
       automerge: false,
       commitMessageTopic: '⇡ aqua-installer',
+      groupName: '⇡ aqua-installer',
     },
     {
       matchFiles: [
         'home/.chezmoiexternal.toml.tmpl',
-        'home/bin/executable_flyway.tmpl'
       ],
       automerge: true,
       commitMessageTopic: '⇡ chezmoiexternal {{depName}}',
-      matchUpdateTypes: ['minor', 'patch']
+      matchUpdateTypes: ['minor', 'patch'],
     }
   ]
 }
