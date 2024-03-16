@@ -1,3 +1,4 @@
+---
 # aqua Policy
 # https://aquaproj.github.io/
 registries:
@@ -5,7 +6,7 @@ registries:
     ref: semver(">= 3.0.0")
   - name: dots
     type: local
-    path: registry.yaml
+    path: aqua-registry.yaml
 packages:
   - registry: standard
   - registry: dots

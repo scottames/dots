@@ -1,10 +1,18 @@
 # vi: ft=fish autoformat=false
 
+setenv SRC_DIR                    "$HOME/src"
+setenv MY_SRC_DIR                 "$SRC_DIR/scottames"
+setenv DOTS                       "$MY_SRC_DIR/dots"
+setenv DOTFILES                   "$DOTS"
+
 setenv AQUA_CONFIG_DIR            "$HOME/.config/aquaproj-aqua"
 setenv AQUA_GLOBAL_CONFIG         "$AQUA_CONFIG_DIR/aqua.yaml"
 setenv AQUA_LOG_COLOR             "always"
-[ -f "$AQUA_CONFIG_DIR/policy.yaml" ] \
-  && setenv AQUA_POLICY_CONFIG    "$AQUA_CONFIG_DIR/policy.yaml"
+[ -f "$AQUA_CONFIG_DIR/aqua-policy.yaml" ] \
+  && setenv AQUA_POLICY_CONFIG    "$AQUA_CONFIG_DIR/aqua-policy.yaml"
+# avoid aqua yelling about ignored policy
+[ -f "$DOTS/aqua/aqua-policy.yaml" ] \
+  && setenv AQUA_POLICY_CONFIG    "$AQUA_POLICY_CONFIG:$DOTS/aqua/aqua-policy.yaml"
 setenv AQUA_PROGRESS_BAR          "true"
 setenv AQUA_ROOT_DIR              "$HOME/.local/share/aquaproj-aqua/bin"
 setenv ARCHFLAGS                  "-arch x86_64"
@@ -59,10 +67,6 @@ setenv TERM                       "xterm-256color"
 setenv TMOUT                      0
 setenv VAGRANT_DEFAULT_PROVIDER   "virtualbox"
 
-setenv SRC_DIR                    "$HOME/src"
-setenv MY_SRC_DIR                 "$SRC_DIR/scottames"
-setenv DOTS                       "$MY_SRC_DIR/dots"
-setenv DOTFILES                   "$DOTS"
 setenv ZPLUG_HOME                 "$HOME/.zplug"
 setenv ZPLUG_LOADFILE             "$HOME/.zsh/zplugs.zsh"
 

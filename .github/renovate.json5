@@ -7,17 +7,11 @@
     'github>whitesource/merge-confidence:beta',
     "github>aquaproj/aqua-renovate-config#2.2.0" // renovate: depName=aquaproj/aqua-renovate-config
   ],
-  repositories: [
-    'scottames/dots'
-  ],
   automergeStrategy: 'squash',
   dependencyDashboard: true,
   labels: [
     'dependencies'
   ],
-  onboarding: false,
-  onboardingPrTitle: 'chore(deps): onboard with renovate',
-  platform: "github",
   platformAutomerge: true,
   pruneStaleBranches: true,
   rebaseWhen: 'behind-base-branch',
@@ -69,7 +63,7 @@
       "datasourceTemplate": "npm",
       "depNameTemplate": "trunk-io/launcher",
       "fileMatch": [
-        'home/aqua.yaml',
+        'aqua/aqua.yaml',
       ],
       "matchStrings": [
         " +(?:version|'version'|\"version\") *: +(?<currentValue>[^'\" \\n]+) +# renovate: depName=trunk-io/launcher[ \\n]",
@@ -87,7 +81,6 @@
       matchFiles: [
         'magefiles'
       ],
-      groupName: 'mage',
       commitMessageTopic: '⇡ mage {{depName}}'
     },
     {
@@ -98,23 +91,20 @@
     },
     {
       matchFiles: [
-        'home/aqua.yaml',
+        'aqua/aqua.yaml',
       ],
-      groupName: 'aqua managed bins',
       automerge: true,
       commitMessageTopic: '⇡ aquas {{depName}}',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
       matchPackageNames: ['aquaproj/aqua'],
-      groupName: 'aqua',
       automerge: true,
       commitMessageTopic: '⇡ aqua',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
       matchPackageNames: ['aquaproj/aqua-installer'],
-      groupName: 'aqua-installer',
       automerge: false,
       commitMessageTopic: '⇡ aqua-installer',
     },
@@ -123,7 +113,6 @@
         'home/.chezmoiexternal.toml.tmpl',
         'home/bin/executable_flyway.tmpl'
       ],
-      groupName: 'chezmoiexternal',
       automerge: true,
       commitMessageTopic: '⇡ chezmoiexternal {{depName}}',
       matchUpdateTypes: ['minor', 'patch']

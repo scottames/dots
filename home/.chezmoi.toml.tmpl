@@ -1,20 +1,20 @@
-{{ $githubUser     := "scottames" -}}
-{{ $chassis        := ""          -}}
-{{ $gpu            := ""          -}}
-{{ $isContainer    := false       -}}
-{{ $isDistroBox    := false       -}}
-{{ $isUblue        := false       -}}
-{{ $desktopSession := env "DESKTOP_SESSION" -}}
-{{ $hourDark       := 24 -}}
-{{ $hourLight      := 24 -}}
-{{ $osVariant      := "" }}
-{{ $ublueImageInfo := "" }}
+{{- $githubUser     := "scottames" -}}
+{{- $chassis        := ""          -}}
+{{- $gpu            := ""          -}}
+{{- $isContainer    := false       -}}
+{{- $isDistroBox    := false       -}}
+{{- $isUblue        := false       -}}
+{{- $desktopSession := env "DESKTOP_SESSION" -}}
+{{- $hourDark       := 24 -}}
+{{- $hourLight      := 24 -}}
+{{- $osVariant      := "" -}}
+{{- $ublueImageInfo := "" -}}
 
-{{ $loginSession     := 0 -}}
-{{ $loginSessionType := "" -}}
+{{- $loginSession     := 0 -}}
+{{- $loginSessionType := "" -}}
 
 {{- if eq .chezmoi.os "linux" -}}
-{{-   $gpu = output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'" | trim | lower }}
+{{-   $gpu = output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'" | trim | lower -}}
 {{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
 {{-     $isContainer = true -}}
 {{-   end -}}
@@ -23,20 +23,20 @@
 {{-   end -}}
 {{-   if $isDistroBox -}}
 {{-     $chassis = output "distrobox-host-exec" "hostnamectl" "chassis" | trim -}}
-{{-     $loginSession = output "distrobox-host-exec" "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first }}
+{{-     $loginSession = output "distrobox-host-exec" "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first -}}
 {{-     $loginSessionType = output "distrobox-host-exec" "loginctl" "show-session" $loginSession "-p" "Type" | replace "Type=" "" | trim -}}
-{{-     $osVariant = output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $VARIANT'" | trim | lower }}
-{{-     $ublueImageInfo = output "sh" "-c" "distrobox-host-exec cat /usr/share/ublue-os/image-info.json" }}
-{{-     $isUblue = not (empty $ublueImageInfo) }}
+{{-     $osVariant = output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $VARIANT'" | trim | lower -}}
+{{-     $ublueImageInfo = output "sh" "-c" "distrobox-host-exec cat /usr/share/ublue-os/image-info.json" -}}
+{{-     $isUblue = not (empty $ublueImageInfo) -}}
 {{-   else if $isContainer -}}
-{{-     $chassis = "container" }}
+{{-     $chassis = "container" -}}
 {{-   else -}}
-{{-     $loginSession = output "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first }}
+{{-     $loginSession = output "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first -}}
 {{-     $loginSessionType = output "loginctl" "show-session" $loginSession "-p" "Type" | replace "Type=" "" | trim -}}
 {{-     $chassis = output "hostnamectl" "chassis" | trim -}}
-{{-     $osVariant = output "sh" "-c" ". /etc/os-release && echo $VARIANT" | trim | lower }}
-{{-     $ublueImageInfo = cat "/usr/share/ublue-os/image-info.json" }}
-{{-     $isUblue = not (empty $ublueImageInfo) }}
+{{-     $osVariant = output "sh" "-c" ". /etc/os-release && echo $VARIANT" | trim | lower -}}
+{{-     $ublueImageInfo = cat "/usr/share/ublue-os/image-info.json" -}}
+{{-     $isUblue = not (empty $ublueImageInfo) -}}
 {{-   end -}}
 {{- end -}}
 
@@ -54,6 +54,7 @@ progress = true
 [data]
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
   desktop_session = "{{ $desktopSession }}"
+  dots = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots"
   hour_dark = {{ $hourDark }}
   hour_light = {{ $hourLight }}
   login_session = {{ $loginSession }}

@@ -32,7 +32,9 @@ printf "\n${cyan}💧 aqua${clear}\n---\n${magenta} - latest: %s\n - current: %s
 if [[ ! $(command -v aqua) ]]; then
   # ensure AQUA vars are set
   function setenv() { export "$1=$2"; }
-  eval "$(grep AQUA < ${HOME}/.setenv)"
+
+  DOTS="${DOTS:={{ .dots }}}"
+  eval "$(grep -i AQUA <"${HOME}"/.setenv)"
 
   pushd "$(mktemp -d)"
   _aqua_installer="aqua-installer"
@@ -50,7 +52,7 @@ if [[ ! $(command -v aqua) ]]; then
   "./${_aqua_installer}"
 
   # ensure aqua is in path
-  eval "$(grep AQUA < ${HOME}/.bashrc)"
+  eval "$(grep -i AQUA <"${HOME}"/.bashrc)"
 
   popd
 elif [[ "${_aqua_latest_version}" != "${_aqua_current}" ]]; then
@@ -65,7 +67,7 @@ fi
 
 printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" "ensure all aqua packages installed"
 
-# .config/aqua/aqua.yaml hash: {{ include "aqua.yaml" | sha256sum }}
+# .config/aqua/aqua.yaml hash: {{ include "../aqua/aqua.yaml" | sha256sum }}
 aqua install --all
 
 printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" "aqua done"
