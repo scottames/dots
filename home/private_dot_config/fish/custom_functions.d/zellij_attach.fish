@@ -5,7 +5,7 @@ function zellij_attach --description "Attach to existing Zellij session(s) - if 
         zellij attach $argv
     end
 
-    set -l sessions (zellij list-sessions)
+    set -l sessions (zellij list-sessions | grep -v EXITED)
     set -l session_count (count $sessions)
 
     if [ $session_count -ge 2 ]

@@ -170,6 +170,10 @@ abbr -a zeu "zellij_new_tab_edit_split $MY_SRC_DIR/ublue"
 abbr -a zego "zellij_new_tab_edit_split --layout=go"
 abbr -a zj zellij # see functions
 abbr -a zjac "zellij action"
+abbr -a zjpd "zellij action new-pane --direction down"
+abbr -a zjpl "zellij action new-pane --direction left"
+abbr -a zjpr "zellij action new-pane --direction right"
+abbr -a zjpu "zellij action new-pane --direction up"
 abbr -a zjr "zellij run --"
 abbr -a zr zellij_run # see functions
 abbr -a zrt zellij_rename_tab # see functions
