@@ -10,9 +10,6 @@ init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
-exported_bins="/usr/bin/aws"
-exported_bins="/usr/bin/zenity"
-exported_bins_path=~/.local/bin
 
 [f]
 image=ghcr.io/scottames/fedora-toolbox:latest
@@ -26,5 +23,8 @@ init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ugum;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
+exported_bins="/usr/bin/aws"
+exported_bins="/usr/bin/zenity"
+exported_bins_path=~/.local/bin
 
 # vi: ft=dosini
