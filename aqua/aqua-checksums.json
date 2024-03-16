@@ -61,23 +61,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.26.0/kubeseal-0.26.0-linux-amd64.tar.gz",
-      "checksum": "DE76D5031C0EB4DF47A5BC921DA8C52F9313E4F3DDDACE83CC68C7708A395940",
+      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.26.1/kubeseal-0.26.1-linux-amd64.tar.gz",
+      "checksum": "A1537AE726FC0CC93733092E8C12DFBC8413FAE6550F9548DBF3D91A3F9D65FD",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.26.0/kubeseal-0.26.0-linux-arm64.tar.gz",
-      "checksum": "EC7D6F5E10B8908157A046A1041D6CCB640A3F37320DEFCAF2E420A955992345",
+      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.26.1/kubeseal-0.26.1-linux-arm64.tar.gz",
+      "checksum": "731D51BA211F59549EF273DC5961755F9415B4D3741C230E51BDC94D06337862",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/casey/just/1.25.0/just-1.25.0-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "C73A41ACCE0F0913405E33009D60645824576A1177039BED9C7575F4C153EB0F",
+      "id": "github_release/github.com/casey/just/1.25.2/just-1.25.2-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "049D624255D150F18B0F3A1257A163366B0DC22E16526214773903125145E515",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/casey/just/1.25.0/just-1.25.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "1EEDA5D8B319CE7868EE43748687F849E5A9EC2D03F64E0EBEDA05AF08F67AF4",
+      "id": "github_release/github.com/casey/just/1.25.2/just-1.25.2-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "AD56BF1A804243B51EF2C2EEC4B3A8177F970CCC414CBBEE219C2E5C06F7BCC9",
       "algorithm": "sha256"
     },
     {
@@ -111,23 +111,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cue-lang/cue/v0.7.1/cue_v0.7.1_linux_amd64.tar.gz",
-      "checksum": "DBD548FF02567881CF81834D0E9E035C86A287C887587B9ABFD119763EBB9AEA",
+      "id": "github_release/github.com/cue-lang/cue/v0.8.0/cue_v0.8.0_linux_amd64.tar.gz",
+      "checksum": "E471126DC5E5E55A203066A4A4B1FB08D4CB027CF42517DFADC94C4E1B097767",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cue-lang/cue/v0.7.1/cue_v0.7.1_linux_arm64.tar.gz",
-      "checksum": "6BE1CF9AB36BAA62466056BBBC1C3FFE259522FD0C35EA196AD10463EAB29F75",
+      "id": "github_release/github.com/cue-lang/cue/v0.8.0/cue_v0.8.0_linux_arm64.tar.gz",
+      "checksum": "37027C826E6900A86D5D55803C64F1A28F063D5DB600A807F6911F4D87213FE0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/dandavison/delta/0.16.5/delta-0.16.5-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "8DD1A8540ECAC0EF746AE06A8EC4C79C67041BCB70C21306F630331D4E5FD381",
+      "id": "github_release/github.com/dandavison/delta/0.17.0/delta-0.17.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "8318BB267AB3A01F4E7B9480C4C3B2A5895C0287ABFC5586306F5A2F2825882B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/dandavison/delta/0.16.5/delta-0.16.5-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "737D318AB15D4CA68E3BDB0753867D0D3944FF78D37FC44C79941104FBBDBB12",
+      "id": "github_release/github.com/dandavison/delta/0.17.0/delta-0.17.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "0CB2C2E196A78C84E47C303119AD561D3D4DEBFC8CC93D3AB5AE866FB7EFD126",
       "algorithm": "sha256"
     },
     {
@@ -186,28 +186,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eksctl-io/eksctl/v0.173.0/eksctl_Linux_amd64.tar.gz",
-      "checksum": "0BA1256A6BCAF751B56D8518CF6676055E7AB8942EF5B16324476A6A9E2CFE43",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/eksctl-io/eksctl/v0.173.0/eksctl_Linux_arm64.tar.gz",
-      "checksum": "54CD9546705919DF577AC9EF898337FF44D496BEC9FB1E87971487AB8AFFB29B",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/eksctl-io/eksctl/v0.174.0/eksctl_Linux_amd64.tar.gz",
       "checksum": "99AA233106680CFA54A08F9542471A96A24ECBBDBA1B7DBCF158E0DC4DB1629F",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.6/eza_aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "191278367B7E889397FBE68A7DEBE7D2D3DAAF114ECAC0AD038CEEA6064C1EB8",
+      "id": "github_release/github.com/eksctl-io/eksctl/v0.174.0/eksctl_Linux_arm64.tar.gz",
+      "checksum": "1FF4F876FCC2F4F48E41B97737FB7C6253F2DC71471E836DAFDD7266019EF8B2",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.6/eza_x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "45E95B438E181F64C070C4178215C5ABD1B12024F32121E51AB896BA47FCC189",
+      "id": "github_release/github.com/eza-community/eza/v0.18.7/eza_aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "1762C1C4B1E1EB87FB327E67561D8F4A3C4D17823D5E4A79CCB5593BD9BA964B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/eza-community/eza/v0.18.7/eza_x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "B16A619A4171636F306BAC72AE91FC4F480F8F80FB836951C6BA766531CAB316",
       "algorithm": "sha256"
     },
     {
@@ -241,13 +236,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/gruntwork-io/terragrunt/v0.55.13/terragrunt_linux_amd64",
-      "checksum": "BD37AF798B34BEE86949917368A972200822A776F46136CF771E73E599CAD68C",
+      "id": "github_release/github.com/gruntwork-io/terragrunt/v0.55.16/terragrunt_linux_amd64",
+      "checksum": "F435207BA81F96D3A619E55D226EF8CDB4A4F4FC45151E087B42478E5FC770E0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/gruntwork-io/terragrunt/v0.55.13/terragrunt_linux_arm64",
-      "checksum": "AF438F299C26BD6FD73284A26BB674D87C1C0870A4A027E87D09A7FC2450D46B",
+      "id": "github_release/github.com/gruntwork-io/terragrunt/v0.55.16/terragrunt_linux_arm64",
+      "checksum": "5B183FD24D6EBC4C579F886504788A70F263C907870E89AAD7968DECBF835F09",
       "algorithm": "sha256"
     },
     {
@@ -273,6 +268,11 @@
     {
       "id": "github_release/github.com/instrumenta/kubeval/v0.16.1/kubeval-linux-amd64.tar.gz",
       "checksum": "2D6F9BDA1423B93787FA05D9E8DFCE2FC1190FEFBCD9D0936B9635F3F78BA790",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/int128/ghcp/v1.13.2/ghcp_linux_amd64.zip",
+      "checksum": "6B9D9C9A7B834237B6579353477DF3BB3730C11788170AD2A9E5D1230ABC6216",
       "algorithm": "sha256"
     },
     {
@@ -311,13 +311,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/0.46.1/fzf-0.46.1-linux_amd64.tar.gz",
-      "checksum": "6878DC810C0E464D392985E4E9D3525F7C4AF346985F4B094CA117CE1BB0838C",
+      "id": "github_release/github.com/junegunn/fzf/0.48.0/fzf-0.48.0-linux_amd64.tar.gz",
+      "checksum": "5B2F637AFBEF504EFAF3D39133F18587C88028581444AD705617BB1215229EDB",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/0.46.1/fzf-0.46.1-linux_arm64.tar.gz",
-      "checksum": "CF8896D8DFD51D7A1D184A7DB220D3050FAA7B508656ED013C905F51BE4DB09C",
+      "id": "github_release/github.com/junegunn/fzf/0.48.0/fzf-0.48.0-linux_arm64.tar.gz",
+      "checksum": "0038CCC53A3895C7F443029AC4A839A5BB6DA502D069011F9BF7BB300A0E80D5",
       "algorithm": "sha256"
     },
     {
@@ -386,13 +386,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/marcosnils/bin/v0.17.3/bin_0.17.3_linux_amd64",
-      "checksum": "48E2EB7CB48748829A7FED246C90191181A7820B5AB8E9FE850880A81BCF535E",
+      "id": "github_release/github.com/marcosnils/bin/v0.17.4/bin_0.17.4_linux_amd64",
+      "checksum": "2C0D899DD6623CA53F0466FF6B7F8C1E082532F11AD663D37B2794CBB665FD70",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/marcosnils/bin/v0.17.3/bin_0.17.3_linux_arm64",
-      "checksum": "8FC588128860BA65D3628F488820901F6BF71423B7792624FCAD9847D2DEC634",
+      "id": "github_release/github.com/marcosnils/bin/v0.17.4/bin_0.17.4_linux_arm64",
+      "checksum": "D299FC01B2D1C8FF414204F153B78F0A3DBD46021778FDB0D2E76D9B6C8EE8F9",
       "algorithm": "sha256"
     },
     {
@@ -481,13 +481,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/simulot/immich-go/0.11.0/immich-go_Linux_arm64.tar.gz",
-      "checksum": "EE29C3F653119BBD45D5FD660229876DD825AE3F8F4E2001F9FF94962018C77E",
+      "id": "github_release/github.com/simulot/immich-go/0.12.0/immich-go_Linux_arm64.tar.gz",
+      "checksum": "4938FF9E9A83A38F2011DA585D07751F8F1E2ED6C480F16B7D8ECD7B7E641F2F",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/simulot/immich-go/0.11.0/immich-go_Linux_x86_64.tar.gz",
-      "checksum": "64D7C6B868CF50F1A64E1E2A000BD604D95C6FE33E0293EA6975D13CA1014CA3",
+      "id": "github_release/github.com/simulot/immich-go/0.12.0/immich-go_Linux_x86_64.tar.gz",
+      "checksum": "A1DB6ACF5B2AD3D9FEA288B14786C019AF70EDB4E32EEB7DFEC84F6727F8CC08",
       "algorithm": "sha256"
     },
     {
@@ -511,13 +511,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/snyk/cli/v1.1283.0/snyk-linux",
-      "checksum": "A499683208E32B82A1EF0ED27FCD043908A4CEFC5B9F1C96C564BCF6C90E6690",
+      "id": "github_release/github.com/snyk/cli/v1.1284.0/snyk-linux",
+      "checksum": "67E6C1B93A4B02759B266F2A84774AAE4F5592107A1A0C4E00166020AC09FA32",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/snyk/cli/v1.1283.0/snyk-linux-arm64",
-      "checksum": "DCD247338CE59473BA4055A8DAF1283C4D9D16C4A9736B8E1A2C999E9CD29C42",
+      "id": "github_release/github.com/snyk/cli/v1.1284.0/snyk-linux-arm64",
+      "checksum": "BD11F70ACBBA4357A8F5617EB6DB182F4B89FDDBF4E61CD9B73A9F702C01257B",
       "algorithm": "sha256"
     },
     {
@@ -601,23 +601,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/dl.k8s.io/v1.29.2/bin/linux/amd64/kubectl",
-      "checksum": "7816D067740F47F949BE826AC76943167B7B3A38C4F0C18B902FFFA8779A5AFA",
+      "id": "http/dl.k8s.io/v1.29.3/bin/linux/amd64/kubectl",
+      "checksum": "89C0435CEC75278F84B62B848B8C0D3E15897D6947B6C59A49DDCCD93D7312BF",
       "algorithm": "sha256"
     },
     {
-      "id": "http/dl.k8s.io/v1.29.2/bin/linux/arm64/kubectl",
-      "checksum": "3507ECB4224CF05AE2151A98D4932253624E7762159936D5347B19FE037655CA",
+      "id": "http/dl.k8s.io/v1.29.3/bin/linux/arm64/kubectl",
+      "checksum": "191A96B27E3C6AE28B330DA4C9BFEFC9592762670727DF4FCF124C9F1D5A466A",
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v3.14.2-linux-amd64.tar.gz",
-      "checksum": "0885A501D586C1E949E9B113BF3FB3290B0BBF74DB9444A1D8C2723A143006A5",
+      "id": "http/get.helm.sh/helm-v3.14.3-linux-amd64.tar.gz",
+      "checksum": "3C90F24E180F8C207B8A18E5EC82CB0FA49858A7A0A86E4ED52A98398681E00B",
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v3.14.2-linux-arm64.tar.gz",
-      "checksum": "C65D6A9557BB359ABC2C0D26670DE850B52327DC3976AD6F9E14C298EA3E1B61",
+      "id": "http/get.helm.sh/helm-v3.14.3-linux-arm64.tar.gz",
+      "checksum": "85E1573E76FA60AF14BA7E9EC75DB2129B6884203BE866893FA0B3F7E41CCD5E",
       "algorithm": "sha256"
     },
     {
@@ -656,9 +656,9 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.150.0/registry.yaml",
-      "checksum": "B4100D0C3E5FD03947D8231B39B909DD9F10B00B5E43EB4F6050319E18985D42",
-      "algorithm": "sha256"
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.154.0/registry.yaml",
+      "checksum": "8DD34CC8E818D5B85DC29610AB7BCC758A01B269B3B94D6FBEF94F91D0D6D9CCBAE6A71AD06EC58B0EC93144FCD168CDA43CB3C4D5756A89BFA9B1CC7C56040A",
+      "algorithm": "sha512"
     }
   ]
 }
