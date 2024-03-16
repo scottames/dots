@@ -7,7 +7,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.150.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.154.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
