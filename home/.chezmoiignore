@@ -9,6 +9,7 @@
 
 # Chezmoi Scripts
 .chezmoiscripts/40_catppuccin.sh
+.chezmoiscripts/45_gnome_extensions.sh
 
 {{ if not (lookPath "flatpak") }}
 .local/share/flatpak/overrides/com.valvesoftware.Steam
