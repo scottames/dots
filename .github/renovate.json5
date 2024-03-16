@@ -81,14 +81,14 @@
       matchFiles: [
         'magefiles'
       ],
-      commitMessageTopic: '⇡ mage {{depName}}',
-      groupName: '⇡ mage {{depName}}',
+      commitMessageTopic: '⇡ magefiles {{depName}}',
+      groupName: 'magefiles',
     },
     {
       matchManagers: ["github-actions"],
       automerge: true,
       commitMessageTopic: '⇡ github actions {{depName}}',
-      groupName: '⇡ github actions {{depName}}',
+      groupName: 'github actions',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
@@ -97,21 +97,21 @@
       ],
       automerge: true,
       commitMessageTopic: '⇡ aquas {{depName}}',
-      groupName: '⇡ aquas {{depName}}',
+      groupName: 'aquas',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
       matchPackageNames: ['aquaproj/aqua'],
       automerge: true,
       commitMessageTopic: '⇡ aqua',
-      groupName: '⇡ aqua',
+      groupName: 'aqua',
       matchUpdateTypes: ['minor', 'patch']
     },
     {
       matchPackageNames: ['aquaproj/aqua-installer'],
       automerge: false,
       commitMessageTopic: '⇡ aqua-installer',
-      groupName: '⇡ aqua-installer',
+      groupName: 'aqua-installer',
     },
     {
       matchFiles: [
