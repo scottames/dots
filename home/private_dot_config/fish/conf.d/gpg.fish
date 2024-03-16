@@ -11,6 +11,10 @@ if test -f "$HOME/.gnupg/gpg-agent.conf"
     set -x GPG_TTY (tty)
     if type -q gpg-connect-agent
         # Refresh gpg-agent tty
-        gpg-connect-agent updatestartuptty /bye >/dev/null
+        if is_distrobox >/dev/null
+            distrobox-host-exec gpg-connect-agent updatestartuptty /bye >/dev/null
+        else
+            gpg-connect-agent updatestartuptty /bye >/dev/null
+        end
     end
 end
