@@ -5,15 +5,11 @@ function distrobox_enter \
 
     set -l gumBin
 
-    if $HAS_UGUM
-        set gumBin ugum
-    else if $HAS_GUM
-        set gumBin gum
-    else
+    if test -z $GUM_BINZ
         printf_err "missing gum/ugum!"
         return 1
     end
 
-    set -l box (distrobox ls | tail -n +2 | tr -s ' ' | cut -d ' ' -f 3,8-9 | $gumBin choose | cut -d ' ' -f 1)
+    set -l box (distrobox ls | tail -n +2 | tr -s ' ' | cut -d ' ' -f 3,8-9 | $GUM_BIN choose | cut -d ' ' -f 1)
     distrobox enter $box
 end
