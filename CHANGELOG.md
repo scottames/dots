@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.10.0](https://github.com/scottames/dots/compare/v0.9.0...v0.10.0) (2024-03-26)
+
+
+### Features
+
+* **aqua:** .aqua/ symlinks for dots for gh actions use ([a3447f8](https://github.com/scottames/dots/commit/a3447f8c2196f8522af9192b593bb743e31d14ab))
+* **aqua:** add checksums + small pruning ([75de87b](https://github.com/scottames/dots/commit/75de87b507062cf0d763c41131bfe1bbcd5d8321))
+* **aqua:** add ghcp ([89927e0](https://github.com/scottames/dots/commit/89927e017680a9caef636eb34175b8c5fd924872))
+* **chezmoi:** chezmoiscript to install rustup ([a79bb2d](https://github.com/scottames/dots/commit/a79bb2d2310797adbf76ffd06ce990b976dfe47f))
+* new dot, yamlfmt ([cbd7d2d](https://github.com/scottames/dots/commit/cbd7d2d0c932d306e663abadca41c921c9fb6b0f))
+
+
+### Bug Fixes
+
+* **chezmoi/rust:** run installer accepting defaults ([7dd6f96](https://github.com/scottames/dots/commit/7dd6f96c8a89622989fac0f5c0d609be62679360))
+* **distrobox:** add wrapper to handle starting oneshot offline ([ef7b67b](https://github.com/scottames/dots/commit/ef7b67badae62e2e247304b2cdcef844af74f3e4))
+
 ## [0.9.0](https://github.com/scottames/dots/compare/v0.8.0...v0.9.0) (2024-02-21)
 
 
