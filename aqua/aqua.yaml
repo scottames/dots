@@ -57,8 +57,8 @@ packages:
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.32.0
   - name: GoogleContainerTools/skaffold@v2.10.1
-  - name: smallstep/certificates@v0.25.2
-  - name: smallstep/cli@v0.25.2
+  - name: smallstep/certificates@v0.26.0
+  - name: smallstep/cli@v0.26.0
   - name: terraform-linters/tflint@v0.50.3
   - name: dwisiswant0/tlder@v0.0.1
   - name: itchyny/json2yaml@v0.1.4
