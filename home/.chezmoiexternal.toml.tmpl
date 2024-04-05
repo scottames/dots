@@ -96,6 +96,14 @@
     executable = false
     refreshPeriod = "168h"
 
+[".config/k9s/skins"]
+    type = "archive"
+    url = "https://github.com/catppuccin/k9s/archive/main.tar.gz"
+    include = ["*/dist/*.yaml"]
+    exact = true
+    stripComponents = 2
+    refreshPeriod = "168h"
+
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
 #  │ | utils                                                  │
