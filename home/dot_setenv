@@ -1,88 +1,91 @@
 # vi: ft=fish autoformat=false
 
-setenv SRC_DIR                    "$HOME/src"
-setenv MY_SRC_DIR                 "$SRC_DIR/scottames"
-setenv DOTS                       "$MY_SRC_DIR/dots"
-setenv DOTFILES                   "$DOTS"
+setenv SRC_DIR                     "$HOME/src"
+setenv MY_SRC_DIR                  "$SRC_DIR/scottames"
+setenv DOTS                        "$MY_SRC_DIR/dots"
+setenv DOTFILES                    "$DOTS"
+setenv VAR_HOME                    "/var$HOME"
 
-setenv AQUA_CONFIG_DIR            "$HOME/.config/aquaproj-aqua"
-setenv AQUA_GLOBAL_CONFIG         "$AQUA_CONFIG_DIR/aqua.yaml"
-setenv AQUA_LOG_COLOR             "always"
+setenv AQUA_CONFIG_DIR             "$HOME/.config/aquaproj-aqua"
+setenv AQUA_GLOBAL_CONFIG          "$AQUA_CONFIG_DIR/aqua.yaml"
+setenv AQUA_LOG_COLOR              "always"
 [ -f "$AQUA_CONFIG_DIR/aqua-policy.yaml" ] \
-  && setenv AQUA_POLICY_CONFIG    "$AQUA_CONFIG_DIR/aqua-policy.yaml"
+  && setenv AQUA_POLICY_CONFIG     "$AQUA_CONFIG_DIR/aqua-policy.yaml"
 # avoid aqua yelling about ignored policy
 [ -f "$DOTS/aqua/aqua-policy.yaml" ] \
-  && setenv AQUA_POLICY_CONFIG    "$AQUA_POLICY_CONFIG:$DOTS/aqua/aqua-policy.yaml"
-setenv AQUA_PROGRESS_BAR          "true"
-setenv AQUA_ROOT_DIR              "$HOME/.local/share/aquaproj-aqua/bin"
-setenv ARCHFLAGS                  "-arch x86_64"
-setenv AWS_PAGER                  ""
+  && setenv AQUA_POLICY_CONFIG     "$AQUA_POLICY_CONFIG:$DOTS/aqua/aqua-policy.yaml"
+# avoid aqua yelling about home really being mounted to /var/home
+[ -f "/var$AQUA_CONFIG_DIR/aqua-policy.yaml" ] \
+  && setenv AQUA_POLICY_CONFIG     "$AQUA_POLICY_CONFIG:/var$AQUA_CONFIG_DIR/aqua-policy.yaml"
+setenv AQUA_PROGRESS_BAR           "true"
+setenv AQUA_ROOT_DIR               "$HOME/.local/share/aquaproj-aqua/bin"
+setenv ARCHFLAGS                   "-arch x86_64"
+setenv AWS_PAGER                   ""
 $IS_LIGHT \
-  && setenv BAT_THEME             "Catppuccin-latte"
+  && setenv BAT_THEME              "Catppuccin-latte"
 $IS_DARK \
-  && setenv BAT_THEME             "Catppuccin-mocha"
-setenv BOB_BIN                    "$HOME/.local/share/bob/nvim-bin"
-setenv CLICOLOR                   1
-setenv DBX_ASSEMBLE_DEFAULT       "$HOME/.config/distrobox/assemble.ini"
-setenv DBX_DEFAULT                "a"
-setenv DBX_CONTAINER_NAME         "$DBX_DEFAULT"
-setenv EDITOR                     "vi"
+  && setenv BAT_THEME              "Catppuccin-mocha"
+setenv BOB_BIN                     "$HOME/.local/share/bob/nvim-bin"
+setenv CLICOLOR                    1
+setenv DBX_ASSEMBLE_DEFAULT        "$HOME/.config/distrobox/assemble.ini"
+setenv DBX_DEFAULT                 "a"
+setenv DBX_CONTAINER_NAME          "$DBX_DEFAULT"
+setenv EDITOR                      "vi"
 $HAS_VIM \
-  && setenv EDITOR                "vim"
+  && setenv EDITOR                 "vim"
 $HAS_NVIM \
-  && setenv EDITOR                "nvim"
-setenv FISH_CONFIG                "$XDG_CONFIG_HOME/fish"
-setenv FZF_DEFAULT_OPTS           "--bind ctrl-j:down,ctrl-k:up"
+  && setenv EDITOR                 "nvim"
+setenv FISH_CONFIG                 "$XDG_CONFIG_HOME/fish"
+setenv FZF_DEFAULT_OPTS            "--bind ctrl-j:down,ctrl-k:up"
 $HAS_OP \
-  && setenv GITHUB_USER           "op://Private/github.com/username"
+  && setenv GITHUB_USER            "op://Private/github.com/username"
 $HAS_OP \
-  && setenv GITHUB_TOKEN          "op://private/github.com/token"
+  && setenv GITHUB_TOKEN           "op://private/github.com/token"
 $HAS_OP \
-  && setenv GITHUB_USERNAME       "$GITHUB_USER"
+  && setenv GITHUB_USERNAME        "$GITHUB_USER"
 $HAS_OP \
-  && setenv GITHUB_OAUTH_TOKEN    "$GITHUB_TOKEN"
-setenv GOPATH                     "$HOME/go"
+  && setenv GITHUB_OAUTH_TOKEN     "$GITHUB_TOKEN"
+setenv GOPATH                      "$HOME/go"
 [ -f "$HOME/.gobrew/current/go" ] \
-  && setenv GOROOT                "$HOME/.gobrew/current/go"
-setenv GOPRIVATE                  "github.com/scottames/*"
-setenv HOME_BIN                   "$HOME/bin"
-setenv HOME_LOCAL_BIN             "$HOME/.local/bin"
-setenv IMMICH_TOKEN               "op://private/Immich/token"
-setenv JUST_UNSTABLE              "true"
-setenv KREW_ROOT                  "$HOME/.krew"
+  && setenv GOROOT                 "$HOME/.gobrew/current/go"
+setenv GOPRIVATE                   "github.com/scottames/*"
+setenv HOME_BIN                    "$HOME/bin"
+setenv HOME_LOCAL_BIN              "$HOME/.local/bin"
+setenv IMMICH_TOKEN                "op://private/Immich/token"
+setenv JUST_UNSTABLE               "true"
+setenv KREW_ROOT                   "$HOME/.krew"
 $HAS_DYFF \
-  && setenv KUBECTL_EXTERNAL_DIFF "dyff between --omit-header --set-exit-code"
-setenv LANG                       "en_US.UTF-8"
-setenv LANG                       "en_US.UTF-8"
-setenv LC_ALL                     "en_US.UTF-8"
-setenv LC_CTYPE                   "en_US.UTF-8"
-setenv LSCOLORS                   "Gxfxcxdxbxegedabagacad"
-setenv MAGEFILE_ENABLE_COLOR      1
-setenv MAGEFILE_TARGET_COLOR      "BrightRed" # https://magefile.org/environment/
-setenv OP_ACCOUNT                 "my.1password.com"
-setenv OPENAI_API_KEY             "op://private/OpenAI/token"
-setenv PYENV_ROOT                 "$HOME/.pyenv"
-setenv SHRUG                      "¯\\_(ツ)_/¯"
-setenv TERM                       "xterm-256color"
-setenv TMOUT                      0
-setenv VAGRANT_DEFAULT_PROVIDER   "virtualbox"
-setenv XAUTHLOCALHOSTNAME         "$(hostnamectl hostname)"
+  && setenv KUBECTL_EXTERNAL_DIFF  "dyff between --omit-header --set-exit-code"
+setenv LANG                        "en_US.UTF-8"
+setenv LANG                        "en_US.UTF-8"
+setenv LC_ALL                      "en_US.UTF-8"
+setenv LC_CTYPE                    "en_US.UTF-8"
+setenv LSCOLORS                    "Gxfxcxdxbxegedabagacad"
+setenv MAGEFILE_ENABLE_COLOR       1
+setenv MAGEFILE_TARGET_COLOR       "BrightRed" # https://magefile.org/environment/
+setenv OP_ACCOUNT                  "my.1password.com"
+setenv PYENV_ROOT                  "$HOME/.pyenv"
+setenv SHRUG                       "¯\\_(ツ)_/¯"
+setenv TERM                        "xterm-256color"
+setenv TMOUT                       0
+setenv VAGRANT_DEFAULT_PROVIDER    "virtualbox"
+setenv XAUTHLOCALHOSTNAME          "$(hostnamectl hostname)"
 
-setenv ZPLUG_HOME                 "$HOME/.zplug"
-setenv ZPLUG_LOADFILE             "$HOME/.zsh/zplugs.zsh"
+setenv ZPLUG_HOME                  "$HOME/.zplug"
+setenv ZPLUG_LOADFILE              "$HOME/.zsh/zplugs.zsh"
 
-setenv PAGER                      "less"
-setenv LESS                       "--ignore-case --raw-control-chars"
+setenv PAGER                       "less"
+setenv LESS                        "--ignore-case --raw-control-chars"
 $HAS_BAT \
-  && setenv PAGER                 "bat"
+  && setenv PAGER                  "bat"
 $HAS_BAT \
-  && setenv MANPAGER              "sh -c 'col -bx | bat -l man -p'"
+  && setenv MANPAGER               "sh -c 'col -bx | bat -l man -p'"
 
-setenv GUM_BIN                    ""
+setenv GUM_BIN                     ""
 $HAS_GUM \
-  && setenv GUM_BIN               "gum"
+  && setenv GUM_BIN                "gum"
 $HAS_UGUM \
-  && setenv GUM_BIN               "ugum"
+  && setenv GUM_BIN                "ugum"
 
 # handy unicode
 setenv TICK "✔"
