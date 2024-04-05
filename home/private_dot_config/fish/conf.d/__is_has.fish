@@ -44,6 +44,7 @@ set has_bins \
     dyff \
     git \
     gh \
+    gcloud \
     go \
     gobrew \
     gum \

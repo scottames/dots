@@ -5,6 +5,8 @@ if [ $IS_LINUX ]
     set _ls_arg ' --color'
 end
 
+abbr -a ax aws_ctx # see functions
+abbr -a axc "aws_ctx clear"
 abbr -a agi "aqua g -i"
 abbr -a aia "aqua i -a"
 abbr -a aquagi "aqua g -i"

@@ -16,6 +16,8 @@ $git_status\
 ${custom.containerenv}\
 $kubernetes\
 $python\
+$aws\
+$gcloud\
 $shlvl\
 $cmd_duration\
 $line_break\
@@ -47,7 +49,7 @@ format = "[](bright-black)[ $branch]($style)"
 style = "bright-black"
 
 [git_status]
-format = "[ $conflicted$stashed$staged$deleted$renamed$modified$untracked]($style)[ ]($style)[ $ahead_behind]($style)"
+format = "[ $conflicted$stashed$staged$deleted$renamed$modified$untracked]($style)[ ]($style)[ $ahead_behind]($style) "
 style = "bright-black"
 conflicted = "="
 ahead = "⇡${count}"
@@ -86,10 +88,10 @@ style = "bright-black"
 [kubernetes]
 symbol = '☸ '
 disabled = false
-detect_files = ['Dockerfile']
+# detect_files = ['Dockerfile']
 # format = '[$context(\[$namespace\])]($style) '
-format = '[$symbol$context( \($namespace\))]($style)'
-style = "bright-black"
+format = '[$symbol$context( \($namespace\))]($style) '
+# style = "bright-black"
 
 [custom.containerenv]
 description = "The activated distrobox container"
@@ -98,8 +100,23 @@ grep -oP 'name="\\K[^"]+' /var/run/.containerenv
 """
 when = "is_container"
 style = "italic bright-black"
-format = "[  $output]($style)"
+format = "[  $output]($style) "
 disabled = false
+
+[gcloud]
+format = '[$symbol$active(\($region\))]($style) '
+symbol = "☁️ "
+detect_env_vars = [
+  "CLOUDSDK_ACTIVE_CONFIG_NAME",
+  "GCLOUD_PROJECT",
+  "CLOUDSDK_CORE_PROJECT",
+]
+
+[aws]
+format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
+style = "bold yellow"
+symbol = "☁️ "
+expiration_symbol = "[](red)"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
