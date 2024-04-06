@@ -1,14 +1,10 @@
 return {
-  -- Markdown like keymaps for toggling text formatting
-  { -- https://github.com/antonk52/markdowny.nvim
-    "antonk52/markdowny.nvim",
+  -- Configurable tools for working with markdown files in Neovim.
+  { -- https://github.com/tadmccorkle/markdown.nvim
+    "tadmccorkle/markdown.nvim",
     config = true,
-    opts = {
-      filetypes = { "markdown", "txt" },
-    },
     ft = { "markdown", "txt" },
   },
-
   -- better markdown navigation
   --  + some extras
   { -- https://github.com/jakewvincent/mkdnflow.nvim
