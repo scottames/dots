@@ -141,6 +141,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/danielfoehrKn/kubeswitch/0.9.1/switcher_linux_amd64",
+      "checksum": "C7DF78EBA2688B53CEB88C5245A199A669D9FAAA26C71278C80A17D565D154C8",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/denisidoro/navi/v2.23.0/navi-v2.23.0-aarch64-unknown-linux-gnu.tar.gz",
       "checksum": "5CB511718B8DB1767DFF4E22EB02D2F296E91EBF4205AFF3CC84996BFD476C30",
       "algorithm": "sha256"
@@ -223,6 +228,16 @@
     {
       "id": "github_release/github.com/fluxcd/flux2/v2.3.0/flux_2.3.0_linux_arm64.tar.gz",
       "checksum": "29D2363CFDF13546D900986D265F336ED18C6BBB12D0530C624EAA2FF27B547E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/gabeduke/kubectl-iexec/v1.19.14/kubectl-iexec_v1.19.14_Linux_arm64.tar.gz",
+      "checksum": "AFB9D567810A03348B8BED82EEBBC4BD5F3C31DB98D0142AD01826F2F6447BF3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/gabeduke/kubectl-iexec/v1.19.14/kubectl-iexec_v1.19.14_Linux_x86_64.tar.gz",
+      "checksum": "F0F381A9214F67B5E298920BB0376DDB9E52B90D604030A6E2FAE2D075A8AF39",
       "algorithm": "sha256"
     },
     {

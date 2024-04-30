@@ -1,3 +1,4 @@
+---
 packages:
   - type: github_release
     repo_owner: dim-an
@@ -30,13 +31,6 @@ packages:
       An alternative to the immich-CLI command that doesn't depend on nodejs
       installation. It tries its best for importing google photos takeout
       archives.
-  - type: github_release
-    repo_owner: sigoden
-    repo_name: aichat
-    asset: aichat-{{.Version}}-{{.Arch}}-unknown-{{.OS}}-musl.tar.gz
-    replacements:
-      amd64: x86_64
-    description: Use ChatGPT, LocalAI and other LLMs in the terminal.
   - type: go_install
     repo_owner: kisielk
     repo_name: errcheck
