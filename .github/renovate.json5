@@ -75,6 +75,14 @@
       ],
       "packageNameTemplate": "@trunkio/launcher"
     }
+    {
+      "fileMatch": [
+        "home/private_dot_config/k9s/private_config.yaml.tmpl"
+      ],
+      "matchStrings": [
+        "renovate: depName=(?P<depName>\\w+).*?datasource=(?P<datasource>\\w+).*\\n\\s+image: .*?:(?P<currentValue>[v\\d].*?)\\s"
+      ]
+    },
   ],
   packageRules: [
     {
