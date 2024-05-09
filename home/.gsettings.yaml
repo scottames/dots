@@ -27,18 +27,14 @@ org.gnome.settings-daemon.plugins.color:
 org.gnome.settings-daemon.plugins.media-keys:
   custom-keybindings: '[''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/'', ''/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/'']'
   screensaver: '[''<Shift><Control><Alt>l'']'
-? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/
-: binding: '''<Control><Alt>b'''
-  command: '''flatpak run com.raggesilver.BlackBox'''
-  name: '''blackbox'''
 ? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/
 : binding: '''<Control><Alt>t'''
   command: '''gnome-terminal'''
   name: '''gnome-terminal'''
 ? org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/
 : binding: '''<Control><Alt>w'''
-  command: '''flatpak run org.wezfurlong.wezterm'''
-  name: '''wez'''
+  command: '''wezterm start --cwd .'''
+  name: '''wezterm'''
 org.gnome.settings-daemon.plugins.power:
   sleep-inactive-ac-type: '''nothing'''
 org.gnome.shell:
