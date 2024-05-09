@@ -11,7 +11,7 @@ if status --is-login
 
         set -l box (
           begin
-            distrobox ls | tail -n +2 | tr -s ' ' | cut -d '|' -f 2,4 | string trim | sort
+            distrobox ls --no-color | grep -v Exited | tail -n +2 | tr -s ' ' | cut -d '|' -f 2,4 | string trim | sort
             echo "none | default shell"
           end | $GUM_BIN filter --timeout=10s --header="distrobox?" --placeholder="" \
               | cut -d '|' -f 1 | string trim
