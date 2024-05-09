@@ -275,20 +275,6 @@ return {
     },
     keys = {
       {
-        "[ow",
-        function()
-          require("wrapping").soft_wrap_mode()
-        end,
-        desc = "Soft Wrap Mode",
-      },
-      {
-        "]ow",
-        function()
-          require("wrapping").hard_wrap_mode()
-        end,
-        desc = "Hard Wrap Mode",
-      },
-      {
         "<leader>tw",
         function()
           require("wrapping").toggle_wrap_mode()
