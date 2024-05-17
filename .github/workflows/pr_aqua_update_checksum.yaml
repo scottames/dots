@@ -7,7 +7,7 @@ on:
       - aqua/aqua-checksums.json
 jobs:
   update-aqua-checksums:
-    uses: aquaproj/update-checksum-workflow/.github/workflows/update-checksum.yaml@v1.0.0 # renovate: depName=aquaproj/update-checksum-workflow
+    uses: aquaproj/update-checksum-workflow/.github/workflows/update-checksum.yaml@v1.0.1 # renovate: depName=aquaproj/update-checksum-workflow
     permissions:
       contents: read
     with:
