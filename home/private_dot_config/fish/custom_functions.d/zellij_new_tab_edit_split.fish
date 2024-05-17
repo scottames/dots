@@ -30,7 +30,7 @@ function zellij_new_tab_edit_split \
         set _NVIM_EXTRA_ARGS " \"$_DIR\""
         set _DIR (path dirname $_DIR)
     else if ! test -d $_DIR
-        print_warn "'$_DIR' not exist, assuming edit new file w/ nvim"
+        printf_warn "'$_DIR' not exist, assuming edit new file w/ nvim"
         set _NVIM_EXTRA_ARGS " \"$_DIR\""
     end
 

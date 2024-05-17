@@ -39,7 +39,7 @@ function git_clone_for_worktrees \
     git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" # set remote origin fetch to fetch remote branches
     git fetch origin # fetch all branches from origin
 
-    set -l _git_main_branch (git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4)
+    set -l _git_main_branch (git remote show origin | sed -n '/HEAD branch/s/.*: //p')
     printf_info "Creating initial worktree for main branch: $_git_main_branch\n"
     git worktree add $_git_main_branch $_git_main_branch
 
