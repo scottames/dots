@@ -29,10 +29,15 @@ function git_clone_for_worktrees \
     # new-awesome-feature
     # hotfix-bug-12
     # ...
-    printf_info "Cloning to bare\n"
+    printf_info "Cloning to .bare in $name\n"
     pushd $name
 
-    git clone --bare $url .bare
+    if not test -d .bare
+        git clone --bare $url .bare
+    else
+        printf_warn ".bare directory exists, skipping clone\n"
+    end
+
     echo "gitdir: ./.bare" >.git
 
     printf_info "Setting up origin\n"
@@ -40,18 +45,22 @@ function git_clone_for_worktrees \
     git fetch origin # fetch all branches from origin
 
     set -l _git_main_branch (git remote show origin | sed -n '/HEAD branch/s/.*: //p')
-    printf_info "Creating initial worktree for main branch: $_git_main_branch\n"
-    git worktree add $_git_main_branch $_git_main_branch
-
-
     if not test -d $_git_main_branch
-        printf_err "Unable to create initial worktree for '$_git_main_branch'\n"
-        return 1
+        printf_info "Creating initial worktree for main branch: $_git_main_branch\n"
+        git worktree add $_git_main_branch $_git_main_branch
+
+        if not test -d $_git_main_branch
+            printf_err "Unable to create initial worktree for '$_git_main_branch'\n"
+            return 1
+        end
+        cd $_git_main_branch
+        git branch --set-upstream-to=origin/$_git_main_branch $_git_main_branch
+    else
+        printf_warn "Directory for branch '$_git_main_branch' exists, skipping initial worktree creation\n"
     end
-    cd $_git_main_branch
-    git branch --set-upstream-to=origin/$_git_main_branch $_git_main_branch
 
     popd
 
-    # source: https://morgan.cugerone.com/blog/workarounds-to-git-worktree-using-bare-repository-and-cannot-fetch-remote-branches/
+    # source inspiration:
+    #   https://morgan.cugerone.com/blog/workarounds-to-git-worktree-using-bare-repository-and-cannot-fetch-remote-branches/
 end

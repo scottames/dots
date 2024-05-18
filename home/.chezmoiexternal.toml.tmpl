@@ -139,7 +139,7 @@
     refreshPeriod = "168h"
 
 {{ if not (eq "container" .me.user) -}}
-["src/pub/magefile/mage"]
+["src/github.com/magefile/mage"]
     type = "git-repo"
     url = "https://github.com/magefile/mage"
     refreshPeriod = "168h"
@@ -150,40 +150,55 @@
 #  │ git-repo                                                 │
 #  │ | personal                                               │
 #  ╰──────────────────────────────────────────────────────────╯
-["src/scottames/boxes"]
+
+["src/github.com/scottames/boxes/.bare"]
     type = "git-repo"
     url = "git@github.com:scottames/boxes.git"
     refreshPeriod = "0"
+    ["src/github.com/scottames/boxes/.bare".clone]
+        args = ["--bare"]
 
-["src/scottames/cmder"]
+["src/github.com/scottames/cmder/.bare"]
     type = "git-repo"
     url = "git@github.com:scottames/cmder.git"
     refreshPeriod = "0"
+    ["src/github.com/scottames/cmder/.bare".clone]
+        args = ["--bare"]
 
-["src/scottames/cv"]
+["src/github.com/scottames/containers/.bare"]
+    type = "git-repo"
+    url = "git@github.com:scottames/containers.git"
+    refreshPeriod = "0"
+    ["src/github.com/scottames/containers/.bare".clone]
+        args = ["--bare"]
+
+["src/github.com/scottames/cv/.bare"]
     type = "git-repo"
     url = "git@github.com:scottames/cv.git"
     refreshPeriod = "0"
+    ["src/github.com/scottames/cv/.bare".clone]
+        args = ["--bare"]
 
-["src/scottames/misc"]
+["src/github.com/scottames/misc/.bare"]
     type = "git-repo"
     url = "git@github.com:scottames/misc.git"
     refreshPeriod = "0"
+    ["src/github.com/scottames/misc/.bare".clone]
+        args = ["--bare"]
 
-["src/scottames/pm"]
-    type = "git-repo"
-    url = "git@github.com:scottames/pm.git"
-    refreshPeriod = "0"
-
-["src/scottames/walls"]
-    type = "git-repo"
-    url = "git@github.com:scottames/walls.git"
-    refreshPeriod = "0"
-
-["src/scottames/ublue"]
+["src/github.com/scottames/ublue/.bare"]
     type = "git-repo"
     url = "git@github.com:scottames/ublue.git"
     refreshPeriod = "0"
+    ["src/github.com/scottames/ublue/.bare".clone]
+        args = ["--bare"]
+
+["src/github.com/scottames/walls/.bare"]
+    type = "git-repo"
+    url = "git@github.com:scottames/walls.git"
+    refreshPeriod = "0"
+    ["src/github.com/scottames/walls/.bare".clone]
+        args = ["--bare"]
 
 {{ end -}}
 {{ end -}}

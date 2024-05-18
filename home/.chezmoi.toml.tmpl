@@ -9,9 +9,16 @@
 {{- $hourLight      := 24 -}}
 {{- $osVariant      := "" -}}
 {{- $ublueImageInfo := "" -}}
+{{- $dots           := "dots" -}}
+
 
 {{- $loginSession     := 0 -}}
 {{- $loginSessionType := "" -}}
+
+{{- $useGitWorktrees := true -}}
+{{- if $useGitWorktrees -}}
+{{-   $dots = "dots/main" -}}
+{{- end -}}
 
 {{- if eq .chezmoi.os "linux" -}}
 {{-   $gpu = output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'" | trim | lower -}}
@@ -40,7 +47,7 @@
 {{-   end -}}
 {{- end -}}
 
-sourceDir = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+sourceDir = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}/home"
 progress = true
 
 {{ if lookPath "delta" -}}
@@ -52,9 +59,9 @@ progress = true
 
 {{ end -}}
 [data]
-  chezmoi_home = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots/home"
+  chezmoi_home = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}/home"
   desktop_session = "{{ $desktopSession }}"
-  dots = "{{ .chezmoi.homeDir }}/src/{{ $githubUser }}/dots"
+  dots = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}"
   hour_dark = {{ $hourDark }}
   hour_light = {{ $hourLight }}
   login_session = {{ $loginSession }}

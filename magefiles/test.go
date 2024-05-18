@@ -26,7 +26,7 @@ func dockerRunTest() error {
 		return fmt.Errorf("getting git project info: %w", err)
 	}
 
-	chezmoiSource := "/home/container/src/" + gp.Org + fs + gp.Name
+	chezmoiSource := "/home/container/src/github.com/" + gp.Org + fs + gp.Name
 	vol := gp.Root + ":" + chezmoiSource
 	args := []string{"-v", vol}
 	cmd := chezmoiSource + "/scripts/init.sh"

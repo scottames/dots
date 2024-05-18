@@ -17,7 +17,7 @@ if [ -x "$(command -v distrobox)" ]; then
     err "distrobox found. init from distrobox instead.
 
     distrobox create --image registry.fedoraproject.org/fedora-toolbox:38 --name fd
-    
+
 alternatively, arch: (may cause oddities with python install, etc. on fedora system)
 
     distrobox create --image ghcr.io/scottames/arch-toolbox:latest --name at
@@ -49,8 +49,14 @@ else
   _chezmoi=chezmoi
 fi
 
+GIT_WORKTREES="${GIT_WORKTREES:-true}"
+
 _CHEZMOI_SOURCE="scottames/dots"
-_CHEZMOI_SOURCE_DIR="${HOME}/src/${_CHEZMOI_SOURCE}"
+if [ "${GIT_WORKTREES}" = true ]; then
+  _CHEZMOI_SOURCE_DIR="${HOME}/src/github.com/${_CHEZMOI_SOURCE}/main"
+else
+  _CHEZMOI_SOURCE_DIR="${HOME}/src/github.com/${_CHEZMOI_SOURCE}"
+fi
 
 printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n  ${magenta}with args:${clear} " \
   "${_CHEZMOI_SOURCE}" "${_CHEZMOI_SOURCE_DIR}"

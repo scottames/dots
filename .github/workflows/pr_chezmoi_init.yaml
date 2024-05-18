@@ -27,7 +27,7 @@ jobs:
         with:
           # https://github.com/scottames/boxes
           image: ghcr.io/scottames/fedora-toolbox:latest
-          options: -v ${{ github.workspace }}:/home/container/src/scottames/dots
+          options: -v ${{ github.workspace }}:/home/container/src/github.com/scottames/dots/main
           run: |
-            /home/container/src/scottames/dots/scripts/init.sh \
+            /home/container/src/github.com/scottames/dots/main/scripts/init.sh \
               --no-tty --branch "${{ steps.extract_branch.outputs.branch }}"

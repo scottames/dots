@@ -1,8 +1,12 @@
 # vi: ft=fish autoformat=false
 
 setenv SRC_DIR                     "$HOME/src"
-setenv MY_SRC_DIR                  "$SRC_DIR/scottames"
-setenv DOTS                        "$MY_SRC_DIR/dots"
+setenv MY_SRC_DIR                  "$SRC_DIR/github.com/scottames"
+[ -d "$MY_SRC_DIR/dots" ] \
+  && setenv DOTS                   "$MY_SRC_DIR/dots"
+[ -d "$MY_SRC_DIR/dots/main" ] \
+  && setenv DOTS                   "$MY_SRC_DIR/dots/main"
+
 setenv DOTFILES                    "$DOTS"
 setenv VAR_HOME                    "/var$HOME"
 

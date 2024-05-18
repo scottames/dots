@@ -18,7 +18,7 @@
 
 # PaperWM
 .config/paperwm*
-src/pub/paperwm*
+src/github.com/paperwm*
 
 # Gnome Wallpaper Config
 .local/share/gnome-background-properties/*
@@ -27,7 +27,7 @@ src/pub/paperwm*
 {{- end}}
 
 # Gnome Wallpaper Config
-{{ if not (stat (joinPath .chezmoi.homeDir "src/scottames/walls")) }}
+{{ if not (stat (joinPath .chezmoi.homeDir "src/github.com/scottames/walls")) }}
 .local/share/gnome-background-properties/*
 {{ end }}
 
