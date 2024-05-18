@@ -375,6 +375,20 @@ return {
       },
     },
   },
+
+  -- yazi
+  { -- https://github.com/DreamMaoMao/yazi.nvim
+    "DreamMaoMao/yazi.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+
+    keys = {
+      { "<leader>y", "<cmd>Yazi<CR>", desc = "Yazi (toggle)" },
+    },
+  },
+
   -- Zellij nav
   { -- https://github.com/swaits/zellij-nav.nvim
     -- alt: https://github.com/numToStr/Navigator.nvim/compare/master...dynamotn:Navigator.nvim:master
