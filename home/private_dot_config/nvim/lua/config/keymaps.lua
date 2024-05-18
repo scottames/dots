@@ -75,10 +75,16 @@ map("n", "<leader>c/", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
 map("n", "<leader>bx", "<cmd>!chmod +x %<CR>", { desc = "chmod +x %", silent = true })
 
 -- Splits
+-- -- navigation
 map("n", "<leader>|", "<C-w>v", { desc = "split-window-right", silent = true })
 map("n", "<leader>-", "<C-w>s", { desc = "split-window-down", silent = true })
 map("n", "<leader>wv", "<C-w>v", { desc = "split-window-right", silent = true })
 map("n", "<leader>wo", "<C-w>o", { desc = "delete-other-windows", silent = true })
+-- -- resize
+map("n", "<M-l>", "<cmd>vertical resize +2<CR>", { desc = "resize-right", silent = true })
+map("n", "<M-h>", "<cmd>vertical resize -2<CR>", { desc = "resize-left", silent = true })
+map("n", "<M-j>", "<cmd>resize +2<CR>", { desc = "resize-down", silent = true })
+map("n", "<M-k>", "<cmd>resize -2<CR>", { desc = "resize-up", silent = true })
 
 --  quickfix list | https://neovim.io/doc/user/quickfix.html
 map("n", "]q", "<cmd>cnext<CR>zz", { desc = "Quickfix Next" })

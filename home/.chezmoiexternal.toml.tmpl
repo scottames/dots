@@ -96,6 +96,15 @@
     executable = false
     refreshPeriod = "168h"
 
+# renovate: depName=hiasr/vim-zellij-navigator datasource=github-releases
+{{ $vimZellijNavigatorVersion := "0.2.1" -}}
+
+[".config/zellij/plugins/vim-zellij-navigator.wasm"]
+    type = "file"
+    url = "https://github.com/hiasr/vim-zellij-navigator/releases/download/{{ $vimZellijNavigatorVersion }}/vim-zellij-navigator.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
 [".config/k9s/skins"]
     type = "archive"
     url = "https://github.com/catppuccin/k9s/archive/main.tar.gz"
