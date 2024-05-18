@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.10.0](https://github.com/scottames/dots/compare/v0.9.0...v0.10.0) (2024-05-18)
+
+
+### Features
+
+* **aqua:** .aqua/ symlinks for dots for gh actions use ([a3447f8](https://github.com/scottames/dots/commit/a3447f8c2196f8522af9192b593bb743e31d14ab))
+* **aqua/fish:** add dagger, kubeswitch, kubeiexec ([2b65a25](https://github.com/scottames/dots/commit/2b65a25cf9cda6851bb7e78bc42c4d11a7da79fe))
+* **aqua:** add checksums + small pruning ([75de87b](https://github.com/scottames/dots/commit/75de87b507062cf0d763c41131bfe1bbcd5d8321))
+* **aqua:** add dagger ([42c50f4](https://github.com/scottames/dots/commit/42c50f46ea4cddd21c3aaaa3502698e4816accd2))
+* **aqua:** add ghcp ([89927e0](https://github.com/scottames/dots/commit/89927e017680a9caef636eb34175b8c5fd924872))
+* **aqua:** add helix editor ([99991cd](https://github.com/scottames/dots/commit/99991cd521f684253447b9b3a7078923b3941af2))
+* **aqua:** upgrade neovim =&gt; v0.10.0 ([2fe3950](https://github.com/scottames/dots/commit/2fe39508b8223a4dd68fbc38a74e62e76c04b219))
+* **chezmoi:** add k9s config + themes ([d3f7b77](https://github.com/scottames/dots/commit/d3f7b7737595c7590cd486b617980b78d8c312e1))
+* **chezmoi:** chezmoiscript to install rustup ([a79bb2d](https://github.com/scottames/dots/commit/a79bb2d2310797adbf76ffd06ce990b976dfe47f))
+* **fish/starship:** + GCP/AWS context helper functions ([bb48bec](https://github.com/scottames/dots/commit/bb48bec8b4a9e2c3ef78e5fc7d885737e395e9e8))
+* **fish:** terraform abbrs ([9bf3e92](https://github.com/scottames/dots/commit/9bf3e92f94cf27e5e1a7de22d6c36aba1cb96713))
+* new dot, yamlfmt ([cbd7d2d](https://github.com/scottames/dots/commit/cbd7d2d0c932d306e663abadca41c921c9fb6b0f))
+* yazi - terminal file manager + nvim integration ([e59f2f8](https://github.com/scottames/dots/commit/e59f2f8af88c02908d5c8250aa16a3661462d1df))
+* **zellij/fish:** fix attach + adds abbrs ([333f8ea](https://github.com/scottames/dots/commit/333f8ea843d17173b1fcfca9af681eb42afe1c36))
+* **zellij/nvim:** better navigation ([eb4edd3](https://github.com/scottames/dots/commit/eb4edd3ea97b5d64922beb2318f01cda6b14087d))
+
+
+### Bug Fixes
+
+* **chezmoi/rust:** run installer accepting defaults ([7dd6f96](https://github.com/scottames/dots/commit/7dd6f96c8a89622989fac0f5c0d609be62679360))
+* **distrobox:** add wrapper to handle starting oneshot offline ([ef7b67b](https://github.com/scottames/dots/commit/ef7b67badae62e2e247304b2cdcef844af74f3e4))
+* **distrobox:** fish init - handle vars not set in wayland ([93563ae](https://github.com/scottames/dots/commit/93563aecef108bd567c12480b7245f53a91f55db))
+* **fish/distrobox:** ignore exited ([e38a140](https://github.com/scottames/dots/commit/e38a140a9018c2d17b1224c9351bba1072e80c12))
+* **fish/distrobox:** load order, after setenv + gum bin logic ([76dd39c](https://github.com/scottames/dots/commit/76dd39c8642a87f4b06a28e39b9cc5a4547ce3cd))
+* **fish:** gpg init inside distrobox ([eee025d](https://github.com/scottames/dots/commit/eee025d7dfd8d5bb216f90aebdf8695845f4625d))
+* **fish:** squash a couple bugs in fish funcs ([3d83b96](https://github.com/scottames/dots/commit/3d83b964a981f29d64036fb08b7ff0cfb85e953f))
+* **nvim:** kill conflicting text wrapping keymaps ([2befa97](https://github.com/scottames/dots/commit/2befa979193140af0f891c842d91342174b9ceb9))
+
 ## [0.9.0](https://github.com/scottames/dots/compare/v0.8.0...v0.9.0) (2024-02-21)
 
 
