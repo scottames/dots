@@ -8,20 +8,6 @@
 {{- if not (regexMatch "^gnome" .desktop_session) }}
 ### Ignore if not running gnome
 
-# Chezmoi Scripts
-.chezmoiscripts/40_catppuccin.sh
-.chezmoiscripts/45_gnome_extensions.sh
-
-{{ if not (lookPath "flatpak") }}
-.local/share/flatpak/overrides/com.valvesoftware.Steam
-{{- end}}
-
-# PaperWM
-.config/paperwm*
-src/github.com/paperwm*
-
-# Gnome Wallpaper Config
-.local/share/gnome-background-properties/*
 
 ###
 {{- end}}
