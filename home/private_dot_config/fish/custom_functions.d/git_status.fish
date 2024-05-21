@@ -5,7 +5,7 @@ function git_status --description "Git project status" --wraps "git status"
 
     if [ $_is_inside_git_repo ]
         printf_green_bold "\n🌳 worktrees\n\n"
-        git worktree list | string replace $HOME '~' | string replace /var ""
+        git worktree list | grep -v '.bare' | string replace $HOME '~' | string replace /var ""
 
         set -l _org "$( dirname (
       git config --get remote.origin.url \
@@ -25,13 +25,9 @@ function git_status --description "Git project status" --wraps "git status"
 
         printf "\n📂 "
         pwd | string replace $HOME '~' | string replace /var "" \
-            | awk "{
-        sub(\"$_org\",  \"$(set_color cyan -o  )$_org$( set_color normal)\"); \
-        sub(\"$_proj\", \"$(set_color magenta -o )$_proj$(set_color normal)\"); \
-        sub(\"$_base_pwd\", \"$(set_color yellow -o )$_base_pwd$(set_color normal)\"); \
-      print }"
-        printf "\n"
-        # "$(set_color magenta)foo$(set_color cyan)bar$(set_color yellow)bam$(set_color normal)\n"
+            | string replace -r "\/$_org\/([^/\s]+)" \
+            "/$(printf_color -c cyan -b $_org)/$(printf_color -c magenta -b $_proj)" \
+            | string replace "$_base_pwd" (printf_color -c yellow -b $_base_pwd)
     end
 
     git status $argv
