@@ -11,7 +11,6 @@ copy_command "xclip -selection clipboard"
 {{- end }}
 
 keybinds clear-defaults=true {
-    unbind "Ctrl o"
     normal {
     }
     locked {
@@ -116,7 +115,6 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session clear-defaults=true {
-        unbind "Ctrl o"
         bind "Ctrl x" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
@@ -136,6 +134,7 @@ keybinds clear-defaults=true {
               ignore_case true
           }
         }
+        bind "Ctrl o" { Clear; }
         bind "Ctrl g" { SwitchToMode "Locked"; }
         // bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
