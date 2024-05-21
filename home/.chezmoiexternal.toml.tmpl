@@ -41,26 +41,6 @@
 
 {{- if and (regexMatch "^gnome" .desktop_session) (lookPath "flatpak") }}
 
-[".var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Frappe.json"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/catppuccin/tilix/main/src/Catppuccin-Frappe.json"
-    refreshPeriod = "168h"
-
-[".var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Latte.json"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/catppuccin/tilix/main/src/Catppuccin-Latte.json"
-    refreshPeriod = "168h"
-
-[".var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Macchiato.json"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/catppuccin/tilix/main/src/Catppuccin-Macchiato.json"
-    refreshPeriod = "168h"
-
-[".var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Mocha.json"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/catppuccin/tilix/main/src/Catppuccin-Mocha.json"
-    refreshPeriod = "168h"
-
 {{ end -}} # gnome .desktop_session && flatpak found
 
 [".local/bin/keymapp"]
