@@ -416,4 +416,34 @@ return {
     },
     opts = {},
   },
+
+  -- establish good command workflow and quit bad habits
+  { -- https://github.com/m4xshen/hardtime.nvim
+    "m4xshen/hardtime.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    config = true,
+    event = "BufAdd",
+    keys = {
+      { "<leader>ux", "<cmd>Hardtime toggle<CR>", desc = "Toggle Hardtime" },
+    },
+    opts = {
+      disabled_filetypes = { "qf", "lazy", "mason", "neo-tree", "netrw", "NvimTree", "oil" },
+    },
+  },
+
+  -- virtual text and gutter signs to show available motions.
+  { -- https://github.com/tris203/precognition.nvim
+    "tris203/precognition.nvim",
+    config = true,
+    event = "BufAdd",
+    keys = {
+      {
+        "<leader>up",
+        function()
+          require("precognition").toggle()
+        end,
+        desc = "Toggle Precognition",
+      },
+    },
+  },
 }
