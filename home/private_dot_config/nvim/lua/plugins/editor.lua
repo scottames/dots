@@ -233,20 +233,22 @@ return {
       -- move_past_end_col = false,
     },
     keys = {
-      { mode = { "n" }, "<S-h>", "<Plug>GoNSMLeft", desc = "Move Left" },
-      { mode = { "n" }, "<S-j>", "<Plug>GoNSMDown", desc = "Move Down" },
-      { mode = { "n" }, "<S-k>", "<Plug>GoNSMUp", desc = "Move Up" },
-      { mode = { "n" }, "<S-l>", "<Plug>GoNSMRight", desc = "Move Right" },
+      -- TODO: something better? 🤔
+      -- { mode = { "n" }, "<S-h>", "<Plug>GoNSMLeft", desc = "Move Left" },
+      -- { mode = { "n" }, "<S-j>", "<Plug>GoNSMDown", desc = "Move Down" },
+      -- { mode = { "n" }, "<S-k>", "<Plug>GoNSMUp", desc = "Move Up" },
+      -- { mode = { "n" }, "<S-l>", "<Plug>GoNSMRight", desc = "Move Right" },
 
       { mode = { "n" }, "<A-H>", "<Plug>GoNSDLeft", desc = "Duplicate Left" },
       { mode = { "n" }, "<A-J>", "<Plug>GoNSDDown", desc = "Duplicate Down" },
       { mode = { "n" }, "<A-K>", "<Plug>GoNSDUp", desc = "Duplicate Up" },
       { mode = { "n" }, "<A-L>", "<Plug>GoNSDRight", desc = "Duplicate Right" },
 
-      { mode = { "x" }, "<S-h>", "<Plug>GoVSMLeft", desc = "Move Left" },
-      { mode = { "x" }, "<S-j>", "<Plug>GoVSMDown", desc = "Move Down" },
-      { mode = { "x" }, "<S-k>", "<Plug>GoVSMUp", desc = "Move Up" },
-      { mode = { "x" }, "<S-l>", "<Plug>GoVSMRight", desc = "Move Right" },
+      -- TODO: something better? 🤔
+      -- { mode = { "x" }, "<S-h>", "<Plug>GoVSMLeft", desc = "Move Left" },
+      -- { mode = { "x" }, "<S-j>", "<Plug>GoVSMDown", desc = "Move Down" },
+      -- { mode = { "x" }, "<S-k>", "<Plug>GoVSMUp", desc = "Move Up" },
+      -- { mode = { "x" }, "<S-l>", "<Plug>GoVSMRight", desc = "Move Right" },
 
       { mode = { "x" }, "<A-H>", "<Plug>GoVSDLeft", desc = "Duplicate Left" },
       { mode = { "x" }, "<A-J>", "<Plug>GoVSDDown", desc = "Duplicate Down" },
