@@ -86,7 +86,6 @@ packages:
   - name: mvdan/sh@v3.8.0
   - name: cue-lang/cue@v0.8.2
   - name: dprint/dprint@0.45.1
-  - name: gruntwork-io/terragrunt@v0.58.9
   - name: hashicorp/packer@v1.10.3
   - name: snyk/cli@v1.1291.0
   - name: aquasecurity/tfsec@v1.28.6
@@ -96,3 +95,6 @@ packages:
   - name: danielfoehrKn/kubeswitch@0.9.1
   - name: gabeduke/kubectl-iexec@v1.19.14
   - name: sxyazi/yazi@v0.2.5
+  - name: leg100/pug@v0.1.11 # Drive terraform at terminal velocity
+  - name: fujiwara/awslim@v0.1.1 # A simplified alternative to the AWS CLI for limited use cases
+  - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
