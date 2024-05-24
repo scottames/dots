@@ -428,6 +428,7 @@ return {
     },
     opts = {
       disabled_filetypes = { "qf", "lazy", "mason", "neo-tree", "netrw", "NvimTree", "oil" },
+      disable_mouse = false,
     },
   },
 
