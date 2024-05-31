@@ -5,7 +5,7 @@
     ':semanticCommitTypeAll(chore)',
     ':preserveSemverRanges',
     'github>whitesource/merge-confidence:beta',
-    "github>aquaproj/aqua-renovate-config#2.3.0" // renovate: depName=aquaproj/aqua-renovate-config
+    "github>aquaproj/aqua-renovate-config#2.3.1" // renovate: depName=aquaproj/aqua-renovate-config
   ],
   automergeStrategy: 'squash',
   dependencyDashboard: true,
