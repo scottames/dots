@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.11.0](https://github.com/scottames/dots/compare/v0.10.0...v0.11.0) (2024-06-02)
+
+
+### Features
+
+* **aqua:** a few new packages to play with :D ([a2652b7](https://github.com/scottames/dots/commit/a2652b7b4c8854e03d6a9241df2163bacd501c08))
+* **aqua:** add gh-dash ([3caa067](https://github.com/scottames/dots/commit/3caa067db5f5e80062bd7ca370655a660b80b97a))
+* **nvim:** navigation helper plugins ([712a060](https://github.com/scottames/dots/commit/712a060528e642ae1b2af80ec28fefc557b80697))
+* **zellij:** ctrl+o send Clear now that ctrl+l used for nav ([5c6af56](https://github.com/scottames/dots/commit/5c6af568168366c180eecc1e39ececcbc3df4207))
+
+
+### Bug Fixes
+
+* **chezmoi:** remove BlackBox externals ([46e0f8a](https://github.com/scottames/dots/commit/46e0f8a0844e171deb98ad1c76723a2d2419f5c6))
+* **fish:** git_status conflict when overlap in names ([9e47224](https://github.com/scottames/dots/commit/9e47224c9262c73e4967a72e4991e1bb3c43f1b9))
+* **nvim:** conflict with shift+&lt;h/l&gt; - use buffer nav for now ([3dfe5bc](https://github.com/scottames/dots/commit/3dfe5bc78e8aa478c9f39e6088943bee58915a51))
+* **nvim:** let me scroll when I need it! ([b537662](https://github.com/scottames/dots/commit/b53766269ef45b5de1b1bc1305e043550ec14d0e))
+
 ## [0.10.0](https://github.com/scottames/dots/compare/v0.9.0...v0.10.0) (2024-05-18)
 
 
