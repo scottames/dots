@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/scottames/dots/compare/v0.11.0...v0.12.0) (2024-06-07)
+
+
+### Features
+
+* **init:** install go via gobrew ([#264](https://github.com/scottames/dots/issues/264)) ([6524cd6](https://github.com/scottames/dots/commit/6524cd6cefd151311c2e72ce098b1739564eec12))
+
 ## [0.11.0](https://github.com/scottames/dots/compare/v0.10.0...v0.11.0) (2024-06-02)
 
 
