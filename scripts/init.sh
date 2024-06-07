@@ -19,10 +19,10 @@ install_gobrew() {
   info "no go found, attempting to install via gobrew"
   curl -sL https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
 
-  "${HOME}"/.gobrew/bin/gobrew install latest
-
   export PATH="${HOME}/.gobrew/current/bin:${HOME}/.gobrew/bin:${PATH}"
   export GOROOT="${HOME}/.gobrew/current/go"
+
+  "${HOME}"/.gobrew/bin/gobrew install latest
 
   if [ ! -x "$(command -v go)" ]; then
     err "go not found after attempting to install with gobrew."
