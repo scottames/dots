@@ -22,6 +22,7 @@ install_gobrew() {
   "${HOME}"/.gobrew/bin/gobrew install latest
 
   export PATH="${HOME}/.gobrew/current/bin:${HOME}/.gobrew/bin:${PATH}"
+  export GOROOT="${HOME}/.gobrew/current/go"
 
   if [ ! -x "$(command -v go)" ]; then
     err "go not found after attempting to install with gobrew."
