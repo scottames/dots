@@ -7,9 +7,28 @@ red='\033[0;31m'
 yellow='\033[0;33m'
 clear='\033[0m'
 
+info() {
+  printf "ℹ️ ${magenta}%s${clear}\n" "${@}"
+}
 err() {
   printf "💥 ${red}%s${clear}\n" "${@}"
   exit 1
+}
+
+install_gobrew() {
+  info "no go found, attempting to install via gobrew"
+  curl -sL https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
+
+  export PATH="${HOME}/.gobrew/current/bin:${HOME}/.gobrew/bin:${PATH}"
+  export GOROOT="${HOME}/.gobrew/current/go"
+
+  "${HOME}"/.gobrew/bin/gobrew install latest
+
+  if [ ! -x "$(command -v go)" ]; then
+    err "go not found after attempting to install with gobrew."
+  else
+    info "go installed via gobrew! if gobrew intended to be used via aqua, run: rm -rf ~/.gobrew/bin"
+  fi
 }
 
 if [ -x "$(command -v distrobox)" ]; then
@@ -32,7 +51,7 @@ if [ ! -x "$(command -v git)" ]; then
   err "git required, but not found."
 fi
 if [ ! -x "$(command -v go)" ]; then
-  err "go required, but not found."
+  install_gobrew
 fi
 
 if ! command -v chezmoi; then
