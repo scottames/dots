@@ -2,18 +2,18 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   configMigration: true,
   extends: [
-    'config:base',
+    'config:recommended',
     'config:recommended',
     'config:best-practices',
     ':semanticCommitTypeAll(chore)',
     ':preserveSemverRanges',
-    'github>whitesource/merge-confidence:beta',
-    "github>aquaproj/aqua-renovate-config#2.3.1" // renovate: depName=aquaproj/aqua-renovate-config
+    'mergeConfidence:all-badges',
+    'github>aquaproj/aqua-renovate-config#2.3.1',
   ],
   automergeStrategy: 'squash',
   dependencyDashboard: true,
   labels: [
-    'dependencies'
+    'dependencies',
   ],
   platformAutomerge: true,
   pruneStaleBranches: true,
@@ -25,112 +25,137 @@
   semanticCommits: 'enabled',
   postUpdateOptions: [
     'gomodTidy',
-    'gomodUpdateImportPaths'
+    'gomodUpdateImportPaths',
   ],
   gomod: {
     enabled: true,
-    commitMessageTopic: '⇡ golang module {{depName}}'
-  },
-  docker: {
-    enabled: true,
-    commitMessageTopic: '⇡ docker 🐳 {{depName}}'
+    commitMessageTopic: '⇡ golang module {{depName}}',
   },
   vulnerabilityAlerts: {
     enabled: true,
     labels: [
-      'security'
-    ]
+      'security',
+    ],
   },
   terraform: {
     commitMessageTopic: '⇡ terraform {{depName}}',
-    enabled: true
+    enabled: true,
   },
-  "regexManagers": [
+  customManagers: [
     {
-      "fileMatch": [
-        "\\.chezmoiexternal\\.toml(?:\\.tmpl)?$"
+      customType: 'regex',
+      fileMatch: [
+        '\\.chezmoiexternal\\.toml(?:\\.tmpl)?$',
       ],
-      "matchStrings": [
-        "# renovate: depName=(?<depName>.*) datasource=(?<datasource>.*)\\n.*?ersion := \"(?<currentValue>.+)\\b\""
-      ]
-    },
-    {
-      "fileMatch": [
-        "\\.chezmoiscripts\\/.+\\.sh(?:\\.tmpl)?$"
-      ],
-      "matchStrings": [
-        "# renovate: depName=(?<depName>.*) datasource=(?<datasource>.*)\\n.*?[vV][eE][rR][sS][iI][oO][nN]=(?<currentValue>.+)\\b"
+      matchStrings: [
+        '# renovate: depName=(?<depName>.*) datasource=(?<datasource>.*)\\n.*?ersion := "(?<currentValue>.+)\\b"',
       ],
     },
     {
-      "datasourceTemplate": "npm",
-      "depNameTemplate": "trunk-io/launcher",
-      "fileMatch": [
+      customType: 'regex',
+      fileMatch: [
+        '\\.chezmoiscripts\\/.+\\.sh(?:\\.tmpl)?$',
+      ],
+      matchStrings: [
+        '# renovate: depName=(?<depName>.*) datasource=(?<datasource>.*)\\n.*?[vV][eE][rR][sS][iI][oO][nN]=(?<currentValue>.+)\\b',
+      ],
+    },
+    {
+      customType: 'regex',
+      datasourceTemplate: 'npm',
+      depNameTemplate: 'trunk-io/launcher',
+      fileMatch: [
         'aqua/aqua.yaml',
       ],
-      "matchStrings": [
-        " +(?:version|'version'|\"version\") *: +(?<currentValue>[^'\" \\n]+) +# renovate: depName=trunk-io/launcher[ \\n]",
+      matchStrings: [
+        ' +(?:version|\'version\'|"version") *: +(?<currentValue>[^\'" \\n]+) +# renovate: depName=trunk-io/launcher[ \\n]',
         " +(?:version|'version'|\"version\") *: +'(?<currentValue>[^'\" \\n]+)' +# renovate: depName=trunk-io/launcher[ \\n]",
-        " +(?:version|'version'|\"version\") *: +\"(?<currentValue>[^'\" \\n]+)\" +# renovate: depName=trunk-io/launcher[ \\n]",
-        " +(?:name|'name'|\"name\") *: +trunk-io/launcher@(?<currentValue>[^'\" \\n]+)",
+        ' +(?:version|\'version\'|"version") *: +"(?<currentValue>[^\'" \\n]+)" +# renovate: depName=trunk-io/launcher[ \\n]',
+        ' +(?:name|\'name\'|"name") *: +trunk-io/launcher@(?<currentValue>[^\'" \\n]+)',
         " +(?:name|'name'|\"name\") *: +'trunk-io/launcher@(?<currentValue>[^'\" \\n]+)'",
-        " +(?:name|'name'|\"name\") *: +\"trunk-io/launcher@(?<currentValue>[^'\" \\n]+)\""
+        ' +(?:name|\'name\'|"name") *: +"trunk-io/launcher@(?<currentValue>[^\'" \\n]+)"',
       ],
-      "packageNameTemplate": "@trunkio/launcher"
+      packageNameTemplate: '@trunkio/launcher',
     },
     {
-      "fileMatch": [
-        "home/private_dot_config/k9s/private_config.yaml.tmpl"
+      customType: 'regex',
+      fileMatch: [
+        'home/private_dot_config/k9s/private_config.yaml.tmpl',
       ],
-      "matchStrings": [
-        "renovate: depName=(?<depName>\\w+).*?datasource=(?<datasource>\\w+).*\\n\\s+image: .*?:(?<currentValue>[v\\d].*?)\\s"
-      ]
+      matchStrings: [
+        'renovate: depName=(?<depName>\\w+).*?datasource=(?<datasource>\\w+).*\\n\\s+image: .*?:(?<currentValue>[v\\d].*?)\\s',
+      ],
     },
   ],
   packageRules: [
     {
-      matchFiles: [
-        'magefiles'
+      matchCategories: [
+        'docker',
+      ],
+      enabled: true,
+      commitMessageTopic: '⇡ docker 🐳 {{depName}}',
+    },
+    {
+      matchFileNames: [
+        'magefiles',
       ],
       commitMessageTopic: '⇡ magefiles {{depName}}',
       groupName: 'magefiles',
     },
     {
-      matchManagers: ["github-actions"],
+      matchManagers: [
+        'github-actions',
+      ],
       automerge: true,
       commitMessageTopic: '⇡ github actions {{depName}}',
       groupName: 'github actions',
-      matchUpdateTypes: ['minor', 'patch']
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
     },
     {
-      matchFiles: [
+      matchFileNames: [
         'aqua/aqua.yaml',
       ],
       automerge: true,
       commitMessageTopic: '⇡ aquas {{depName}}',
       groupName: 'aquas',
-      matchUpdateTypes: ['minor', 'patch']
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
     },
     {
-      matchPackageNames: ['aquaproj/aqua'],
+      matchPackageNames: [
+        'aquaproj/aqua',
+      ],
       automerge: true,
       commitMessageTopic: '⇡ aqua',
       groupName: 'aqua',
-      matchUpdateTypes: ['minor', 'patch']
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
     },
     {
-      matchPackageNames: ['aquaproj/aqua-installer'],
+      matchPackageNames: [
+        'aquaproj/aqua-installer',
+      ],
       automerge: false,
       commitMessageTopic: '⇡ aqua-installer',
       groupName: 'aqua-installer',
     },
     {
-      matchFiles: [
+      matchFileNames: [
         'home/.chezmoiexternal.toml.tmpl',
       ],
       automerge: true,
       commitMessageTopic: '⇡ chezmoiexternal {{depName}}',
-      matchUpdateTypes: ['minor', 'patch'],
-    }
-  ]
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
+    },
+  ],
 }
