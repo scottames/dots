@@ -172,7 +172,7 @@ return {
     end,
   }, -- formatters
   -- TODO: merge _by_ft into one table and call function in conform/lint to get the appropriate table
-  {
+  { -- https://github.com/stevearc/conform.nvim
     "stevearc/conform.nvim",
     optional = true,
     opts = {
