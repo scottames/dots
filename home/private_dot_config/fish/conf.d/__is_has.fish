@@ -36,6 +36,7 @@ set has_bins \
     brew \
     bob \
     cargo \
+    distrobox \
     distrobox-host-exec \
     eza \
     fd \

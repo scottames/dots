@@ -35,6 +35,7 @@ abbr -a dl "distrobox list"
 abbr -a dr "distrobox rm"
 abbr -a ds "distrobox stop"
 abbr -a du "distrobox upgrade"
+abbr -a f "distrobox enter f"
 abbr -a G "grep -i"
 abbr -a dots "cd $DOTS"
 abbr -a g git
@@ -195,13 +196,6 @@ abbr -a i "cd (cat ~/.save_dir)"
 # ╰──────────────────────────────────────────────────────────╯
 if type -q gitnow
     abbr -a stg stage
-end
-
-# ╭──────────────────────────────────────────────────────────╮
-# │ op                                                       │
-# ╰──────────────────────────────────────────────────────────╯
-if [ $HAS_OP ]
-    [ $HAS_GH ] && abbr -a gh "op run -- gh"
 end
 
 # ╭──────────────────────────────────────────────────────────╮
