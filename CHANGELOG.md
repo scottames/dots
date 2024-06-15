@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.13.0](https://github.com/scottames/dots/compare/v0.12.0...v0.13.0) (2024-06-15)
+
+
+### Features
+
+* **nvim:** some fun new editor plugins ([7e5b2e9](https://github.com/scottames/dots/commit/7e5b2e98aaf532dc8296d2b0d7b8a481f17991fb))
+* **nvim:** some new opts for ui & indent + filetype handling ([1202116](https://github.com/scottames/dots/commit/12021163b0989f9cd70ccb7b7a0bf41554090081))
+
 ## [0.12.0](https://github.com/scottames/dots/compare/v0.11.0...v0.12.0) (2024-06-07)
 
 
