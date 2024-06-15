@@ -427,7 +427,7 @@ return {
       { "<leader>ux", "<cmd>Hardtime toggle<CR>", desc = "Toggle Hardtime" },
     },
     opts = {
-      disabled_filetypes = { "qf", "lazy", "mason", "neo-tree", "netrw", "NvimTree", "oil", "trouble" },
+      disabled_filetypes = { "qf", "lazy", "mason", "neo-tree", "netrw", "NvimTree", "oil", "trouble", "" },
       disable_mouse = false,
     },
   },

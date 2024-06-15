@@ -159,6 +159,10 @@
     "branch": "main",
     "commit": "e6044aa28e61d4dd9ec86194d6f81743eced0c1c"
   },
+  "mini.splitjoin": {
+    "branch": "main",
+    "commit": "db26e1c991ff5f8cf377e800ef7fba6b5618306b"
+  },
   "mkdnflow.nvim": {
     "branch": "main",
     "commit": "ff300eb9a36e156e0f9d5f134d11c1a84870d7b3"
@@ -166,10 +170,6 @@
   "modes.nvim": {
     "branch": "main",
     "commit": "2cd194d1033ba391d87d386735e15963adbc5f51"
-  },
-  "neo-tree.nvim": {
-    "branch": "v3.x",
-    "commit": "29f7c215332ba95e470811c380ddbce2cebe2af4"
   },
   "neogen": {
     "branch": "main",
@@ -243,6 +243,14 @@
     "branch": "main",
     "commit": "f1f0699a1d49f28e607ffa4361f1bbe757ac5ebc"
   },
+  "nvim-tree-preview.lua": {
+    "branch": "main",
+    "commit": "32fd0943f844fbb783ace7438a72bfd750c818e9"
+  },
+  "nvim-tree.lua": {
+    "branch": "master",
+    "commit": "2086e564c4d23fea714e8a6d63b881e551af2f41"
+  },
   "nvim-treesitter": {
     "branch": "master",
     "commit": "a80fe081b4c5890980561e0de2458f64aaffbfc7"
@@ -303,6 +311,10 @@
     "branch": "master",
     "commit": "d2786877c91aa409c824f27b4ce8a9f560dda60a"
   },
+  "render-markdown": {
+    "branch": "main",
+    "commit": "e353f1f566195176b54e2af5b321b517ac240102"
+  },
   "sqlite.lua": {
     "branch": "master",
     "commit": "d0ffd703b56d090d213b497ed4eb840495f14a11"
@@ -318,10 +330,6 @@
   "tabout.nvim": {
     "branch": "master",
     "commit": "3d7fbc7f5e91ef0f96b4d787c78ad9f8820de3ec"
-  },
-  "telescope-fzf-native.nvim": {
-    "branch": "main",
-    "commit": "9ef21b2e6bb6ebeaf349a0781745549bbb870d27"
   },
   "telescope-live-grep-args.nvim": {
     "branch": "master",

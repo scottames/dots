@@ -1,4 +1,18 @@
 return {
+  { -- https://github.com/MeanderingProgrammer/markdown.nvim
+    "MeanderingProgrammer/markdown.nvim",
+    name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = true,
+    ft = { "markdown", "txt" },
+    init = function()
+      require("which-key").register({
+        mode = { "n", "v" },
+        ["<leader>tr"] = { name = "Toggle Markdown Render" },
+        ["<leader>mdr"] = { name = "Toggle Markdown Render" },
+      })
+    end,
+  },
   -- Configurable tools for working with markdown files in Neovim.
   { -- https://github.com/tadmccorkle/markdown.nvim
     "tadmccorkle/markdown.nvim",
