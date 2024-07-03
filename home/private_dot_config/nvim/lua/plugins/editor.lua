@@ -64,6 +64,10 @@ return {
       },
     },
     opts = {
+      respect_buf_cwd = true,
+      update_focused_file = {
+        enable = true,
+      },
       on_attach = function(bufnr)
         local function opts(desc)
           return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }

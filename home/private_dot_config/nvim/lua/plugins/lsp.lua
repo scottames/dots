@@ -120,6 +120,7 @@ return {
         "dprint",
         "editorconfig-checker",
         -- "flake8", -- ruff instead
+        "gci",
         "gitlint",
         "goimports",
         "goimports-reviser",
@@ -187,7 +188,11 @@ return {
         containerfile = { "dprint" },
         dockerfile = { "dprint" },
         fish = { "fish_indent" },
-        go = { "goimports-reviser", "gofumpt", "golines" },
+        go = {
+          "gci",
+          "gofumpt",
+          "golines",
+        },
         hcl = { "terragrunt_hclfmt" },
         json = { { "prettierd_json", "prettier_json" } },
         justfile = { "just" },
