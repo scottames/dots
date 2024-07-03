@@ -30,5 +30,6 @@ function git_status --description "Git project status" --wraps "git status"
             | string replace "$_base_pwd" (printf_color -c yellow -b $_base_pwd)
     end
 
+    set -q HAS_GT && PAGER="" gt ls
     git status $argv
 end

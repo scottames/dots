@@ -48,6 +48,7 @@ set has_bins \
     gcloud \
     go \
     gobrew \
+    gt \
     gum \
     hub \
     kubectl \
