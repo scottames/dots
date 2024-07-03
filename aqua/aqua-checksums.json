@@ -1,11 +1,6 @@
 {
   "checksums": [
     {
-      "id": "github_archive/github.com/tfutils/tfenv/v3.0.0",
-      "checksum": "463132E45A211FA3FAF85E62FDFAA9BB746343FF1954CCBAD91CAE743DF3B648",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/99designs/aws-vault/v7.2.0/aws-vault-linux-amd64",
       "checksum": "B92BCFC4A78AA8C547AE5920D196943268529C5DBC9C5ACA80B797A18A5D0693",
       "algorithm": "sha256"
@@ -633,6 +628,16 @@
     {
       "id": "github_release/github.com/terraform-linters/tflint/v0.51.1/tflint_linux_arm64.zip",
       "checksum": "918AE33A55B28252CDCB9ACC47F75A2A0DADB26B6B4F11600BEA05685EDD557F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tofuutils/tenv/v2.2.1/tenv_v2.2.1_Linux_arm64.tar.gz",
+      "checksum": "708948CC7D9540B8F42D9ECB5B17DFACE74122A108A389812ABA2A26A6DA9CA9",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tofuutils/tenv/v2.2.1/tenv_v2.2.1_Linux_x86_64.tar.gz",
+      "checksum": "B79C6AAF35ED45FC31EC50D5E78D4F8E72A4F93156697CC71C6B3661D931093D",
       "algorithm": "sha256"
     },
     {
