@@ -99,3 +99,6 @@ packages:
   - name: fujiwara/awslim@v0.3.0 # A simplified alternative to the AWS CLI for limited use cases
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
   - name: dlvhdr/gh-dash@v4.3.0
+  - name: withgraphite/gt
+    version: v1.3.10 # renovate: depName=withgraphite/homebrew-tap
+    registry: dots

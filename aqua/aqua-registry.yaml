@@ -35,3 +35,25 @@ packages:
     repo_owner: kisielk
     repo_name: errcheck
     description: errcheck checks that you checked errors.
+  - type: http
+    repo_owner: withgraphite
+    repo_name: gt
+    url: https://github.com/withgraphite/homebrew-tap/releases/download/{{.Version}}/gt-{{.OS}}{{if eq .OS "macos"}}-{{.Arch}}{{else}}{{end}}
+    asset: gt
+    replacements:
+      amd64: x64
+      darwin: macos
+    supported_envs:
+      - darwin
+      - linux
+    description: graphite.dev
+  - type: github_release
+    repo_owner: typedef-systems
+    repo_name: tpctools
+    asset: "tpctools-{{.OS}}-{{.Arch}}"
+    description: GitHub release of Typedef's tpctools fork
+    replacements:
+      darwin: macos
+    supported_envs:
+      - darwin
+      - linux
