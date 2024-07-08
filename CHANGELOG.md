@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.14.0](https://github.com/scottames/dots/compare/v0.13.0...v0.14.0) (2024-07-08)
+
+
+### Features
+
+* **aqua:** graphite cli ([6d206c3](https://github.com/scottames/dots/commit/6d206c3ba905ac8ca60af6e65c5d54c2f5d8a242))
+* **aqua:** s/tfenv/tenv/ ([6041afd](https://github.com/scottames/dots/commit/6041afd9298ea3995271384135547ee1bd458010))
+* **fish:** some fun with graphite ([dc42b91](https://github.com/scottames/dots/commit/dc42b913e92eef15fc539645cab00a6a84210290))
+
 ## [0.13.0](https://github.com/scottames/dots/compare/v0.12.0...v0.13.0) (2024-06-15)
 
 
