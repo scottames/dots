@@ -120,7 +120,6 @@ return {
         "dprint",
         "editorconfig-checker",
         -- "flake8", -- ruff instead
-        "gci",
         "gitlint",
         "goimports",
         "goimports-reviser",
@@ -189,7 +188,6 @@ return {
         dockerfile = { "dprint" },
         fish = { "fish_indent" },
         go = {
-          "gci",
           "gofumpt",
           "golines",
         },
