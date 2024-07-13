@@ -96,8 +96,11 @@ abbr -a gstp "git stash pop"
 abbr -a gsts "git stash save"
 abbr -a gsw "git switch"
 abbr -a gta "git tag -a -m"
+abbr -a gtd "gt down"
 abbr -a gtl "gt log"
 abbr -a gtls "gt ls"
+abbr -a gtu "gt up"
+abbr -a gtss "gt submit --stack --update-only"
 abbr -a gu git_update
 abbr -a guc gum_commit
 abbr -a gv "git log --pretty=format:'%s' | cut -d \" \" -f 1 | sort | uniq -c | sort -nr"
