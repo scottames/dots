@@ -221,9 +221,10 @@ return {
     "gorbit99/codewindow.nvim",
     config = true,
     init = function()
-      require("which-key").register({
+      require("which-key").add({
+        "<leader>mm",
+        group = "minimap",
         mode = { "n", "v" },
-        ["<leader>mm"] = { name = "+minimap" },
       })
     end,
     keys = {
@@ -328,58 +329,6 @@ return {
         "<leader>to",
         "<cmd>ColorizerToggle<cr>",
         desc = "Colorizer",
-      },
-    },
-  },
-
-  -- Pommodoro clock
-  {
-    "jackMort/pommodoro-clock.nvim",
-    init = function()
-      require("which-key").register({
-        mode = { "n", "v" },
-        ["<leader>tp"] = { name = "+pommodoro" },
-      })
-    end,
-    config = true,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-    keys = {
-      {
-        "<leader>tpw",
-        function()
-          require("pommodoro-clock").start("work")
-        end,
-        desc = "Start Pommodoro",
-      },
-      {
-        "<leader>tps",
-        function()
-          require("pommodoro-clock").start("short_break")
-        end,
-        desc = "Short Break",
-      },
-      {
-        "<leader>tpl",
-        function()
-          require("pommodoro-clock").start("long_break")
-        end,
-        desc = "Long Break",
-      },
-      {
-        "<leader>tpp",
-        function()
-          require("pommodoro-clock").toggle_pause()
-        end,
-        desc = "Toggle Pause",
-      },
-      {
-        "<leader>tpc",
-        function()
-          require("pommodoro-clock").close()
-        end,
-        desc = "Close",
       },
     },
   },

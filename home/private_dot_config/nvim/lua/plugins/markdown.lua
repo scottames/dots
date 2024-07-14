@@ -6,13 +6,13 @@ return {
     config = true,
     ft = { "markdown", "txt" },
     init = function()
-      require("which-key").register({
-        mode = { "n", "v" },
-        ["<leader>tr"] = { name = "Toggle Markdown Render" },
-        ["<leader>mdr"] = { name = "Toggle Markdown Render" },
+      require("which-key").add({
+        { "<leader>mdr", group = "Toggle Markdown Render", mode = { "n", "v" } },
+        { "<leader>tr", group = "Toggle Markdown Render", mode = { "n", "v" } },
       })
     end,
   },
+
   -- Configurable tools for working with markdown files in Neovim.
   { -- https://github.com/tadmccorkle/markdown.nvim
     "tadmccorkle/markdown.nvim",
@@ -26,10 +26,9 @@ return {
     config = true,
     ft = { "markdown", "txt" },
     init = function()
-      require("which-key").register({
-        mode = { "n", "v" },
-        ["<leader>md"] = { name = "+markdown" },
-        ["<leader>mdi"] = { name = "+insert" },
+      require("which-key").add({
+        { "<leader>md", group = "+markdown", mode = { "n", "v" } },
+        { "<leader>mdi", group = "+insert", mode = { "n", "v" } },
       })
     end,
     opts = {

@@ -28,13 +28,15 @@ return {
   { -- https://github.com/folke/which-key.nvim
     "folke/which-key.nvim",
     opts = function(_, opts)
-      require("which-key").register({
-        mode = { "n", "v" },
-        ["<leader>m"] = { name = "+markdown/mm" },
-        ["<leader>t"] = { name = "+toggle" },
-        ["<leader>z"] = { name = "+zen/focus" },
-        ["<leader>gd"] = { name = "+diff" },
-        ["<leader>i"] = { name = "+insert" },
+      require("which-key").add({
+        {
+          mode = { "n", "v" },
+          -- { "<leader>gd", group = "diff" },
+          { "<leader>i", group = "insert" },
+          { "<leader>m", group = "markdown/mm" },
+          { "<leader>t", group = "toggle" },
+          { "<leader>z", group = "zen/focus" },
+        },
       })
       opts.plugins = {
         spelling = true,
@@ -425,9 +427,8 @@ return {
       { mode = { "i" }, "<M-l>", "<Cmd>lua require('comment-box').cline()<CR>", desc = "Centered Line" },
     },
     init = function()
-      require("which-key").register({
-        mode = { "n" },
-        ["<leader>i"] = { name = "+insert" },
+      require("which-key").add({
+        { "<leader>i", group = "insert" },
       })
     end,
   },

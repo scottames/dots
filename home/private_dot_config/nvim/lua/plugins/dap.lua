@@ -20,9 +20,8 @@ return {
       { "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", desc = "Terminate DAP" },
     },
     config = function()
-      require("which-key").register({
-        mode = { "n" },
-        ["<leader>d"] = { name = "+dap" },
+      require("which-key").add({
+        { "<leader>d", group = "+dap" },
       })
 
       local dap_status_ok, dap = pcall(require, "dap")
