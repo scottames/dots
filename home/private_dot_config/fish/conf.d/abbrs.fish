@@ -99,6 +99,8 @@ abbr -a gta "git tag -a -m"
 abbr -a gtd "gt down"
 abbr -a gtl "gt log"
 abbr -a gtls "gt ls"
+abbr -a gtm "gt modify"
+abbr -a gtmc "gt modify -c -m"
 abbr -a gtu "gt up"
 abbr -a gtss "gt submit --stack --update-only"
 abbr -a gu git_update
