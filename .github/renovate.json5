@@ -88,11 +88,6 @@
   ],
   packageRules: [
     {
-      // TODO: remove once resolved
-      "matchPackageNames": ["eza-community/eza"],
-      "allowedVersions": "!/v0.18.18$/" // github release assets not available
-    },
-    {
       matchCategories: [
         'docker',
       ],
