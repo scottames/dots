@@ -52,7 +52,7 @@ org.gnome.shell.extensions.nightthemeswitcher.time:
   sunset: "0.016666666666666666"
 org.gnome.shell.extensions.paperwm:
   use-default-background: "true"
-  winprops: '[''{"wm_class":"gnome-calculator","title":"calc","scratch_layer":true}'', ''{"wm_class":"zoom","title":"zoom","scratch_layer":true}'', ''{"wm_class":"keymapp","title":"Keymapp","scratch_layer":true}'']'
+  winprops: '[''{"wm_class":"gnome-calculator","title":"calc","scratch_layer":true}'', ''{"wm_class":"keymapp","title":"keymapp","scratch_layer":true}'', ''{"wm_class":"Keymapp","title":"Keymapp","scratch_layer":true}'', ''{"wm_class":"zoom","title":"zoom","scratch_layer":true}'', ''{"wm_class":"zoom.real ","title":"zoom.real","scratch_layer":true}'', ''{"wm_class":"zoom.real","title":"zoom.real","scratch_layer":true}'']'
 org.gnome.shell.extensions.paperwm.keybindings:
   barf-out: '[''<Super>o'']'
   center-horizontally: '[''<Super>c'']'
