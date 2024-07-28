@@ -4,8 +4,13 @@ function aqua \
     --description "Declarative CLI Version manager. Runs behind op, if installed for GitHub API auth." \
     --wraps aqua
 
-    if $HAS_OP
-        op run -- aqua $argv
+    set -l _KEYRING_AUTH (command gh auth status | grep 'keyring' | grep '✓ Logged in')
+    if [ $_KEYRING_AUTH ]
+        set -l GITHUB_TOKEN (gh auth token)
+
+        command aqua $argv
+    else if [ $HAS_OP ]
+        op run -- gh $argv
     else
         command aqua $argv
     end

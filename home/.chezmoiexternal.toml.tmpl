@@ -3,7 +3,7 @@
 #  ╰──────────────────────────────────────────────────────────╯
 {{ if eq .chezmoi.os "linux" -}}
 
-# renovate: depName=ryanoasis/nerd-fonts datasource=github-releases
+# renovate: datasource=github-releases depName=ryanoasis/nerd-fonts
 {{ $nerdFontsVersion := "v3.2.1" -}}
 
 [".local/share/fonts/FiraCode"]
@@ -67,7 +67,7 @@
     executable = true
     refreshPeriod = "168h"
 
-# renovate: depName=rvcas/room datasource=github-releases
+# renovate: datasource=github-releases depName=rvcas/room
 {{ $zellijRoomVersion := "v1.0.1" -}}
 
 [".config/zellij/plugins/room.wasm"]
@@ -76,7 +76,7 @@
     executable = false
     refreshPeriod = "168h"
 
-# renovate: depName=hiasr/vim-zellij-navigator datasource=github-releases
+# renovate: datasource=github-releases depName=hiasr/vim-zellij-navigator
 {{ $vimZellijNavigatorVersion := "0.2.1" -}}
 
 [".config/zellij/plugins/vim-zellij-navigator.wasm"]
