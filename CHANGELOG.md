@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.15.0](https://github.com/scottames/dots/compare/v0.14.0...v0.15.0) (2024-07-28)
+
+
+### Features
+
+* **fish:** abbrs for graphit ([c789cb1](https://github.com/scottames/dots/commit/c789cb135b388379db2227dfd4873ec2b6d1e6b1))
+* **fish:** aqua improvements + gh/tf helpers ([9ce919a](https://github.com/scottames/dots/commit/9ce919a8c9fad2fbfac1c3ed39eb965a3af5aa39))
+* **fish:** more graphite abbrs ([ff29378](https://github.com/scottames/dots/commit/ff29378bef2df2a89c578418639db9df326d9628))
+* **nvim:** additional lazy extras + misc cleanup ([8480dcb](https://github.com/scottames/dots/commit/8480dcbc798ea7026cab1cf14d296a33fe4e9521))
+* **zsa/keymapp:** true-up desktop + paperwm config ([15f5224](https://github.com/scottames/dots/commit/15f52245a5c6f3714127b97219e46a485e478e35))
+
+
+### Bug Fixes
+
+* **aqua/renovate:** handle trunkio/launcher from npm ([9635e2c](https://github.com/scottames/dots/commit/9635e2cb9312cd0d0843ed229e3fc5cf8db3d0d2))
+* **gsettings/paperwm:** correct wm classes ([d861cd0](https://github.com/scottames/dots/commit/d861cd0cd45c3409513557f6d6bc83bb696704b0))
+* **nvim:** update which-key spec ([5eff17d](https://github.com/scottames/dots/commit/5eff17dc792e52d7b52bd8f5001b8b3c334b1131))
+
 ## [0.14.0](https://github.com/scottames/dots/compare/v0.13.0...v0.14.0) (2024-07-08)
 
 
