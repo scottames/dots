@@ -9,10 +9,28 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
+    --   https://www.lazyvim.org/extras
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    --   https://www.lazyvim.org/extras/ui/mini-animate
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    --   https://www.lazyvim.org/extras/coding/luasnip
     { import = "lazyvim.plugins.extras.coding.luasnip" },
+    --   https://www.lazyvim.org/extras/util/chezmoi
     { import = "lazyvim.plugins.extras.util.chezmoi" },
+    --   https://www.lazyvim.org/extras/coding/yanky
+    { import = "lazyvim.plugins.extras.coding.yanky" },
+    { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.lang.git" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
+    { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
+    { import = "lazyvim.plugins.extras.lang.terraform" },
+    { import = "lazyvim.plugins.extras.lang.toml" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
+
+    -- TODO: any other language extras? go? rust?
+
     -- import/override with your plugins
     { import = "plugins" },
   },

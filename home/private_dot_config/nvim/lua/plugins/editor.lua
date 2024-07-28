@@ -32,10 +32,15 @@ return {
         {
           mode = { "n", "v" },
           -- { "<leader>gd", group = "diff" },
-          { "<leader>i", group = "insert" },
-          { "<leader>m", group = "markdown/mm" },
-          { "<leader>t", group = "toggle" },
-          { "<leader>z", group = "zen/focus" },
+          { "<leader>d", group = "dap", icon = { icon = " ", color = "orange" } },
+          { "<leader>K", desc = "Keywordprg", icon = { icon = " ", color = "grey" } },
+          { "<leader>m", group = "markdown/mm", icon = { icon = "󰍔 ", color = "grey" } },
+          { "<leader>t", group = "toggle", icon = { icon = "󰔢 ", color = "blue" } },
+          { "<leader>z", group = "zen/focus", icon = { icon = "󰋱 ", color = "green" } },
+          -- code.terraform
+          { "<leader>ct", group = "terraform", icon = { icon = "󱁢 ", color = "purple" } },
+          { "<leader>cts", "<cmd>!tfsort %:S<cr>", desc = "tfsort file", mode = "n" },
+          { "<leader>ctf", "<cmd>!terraform fmt %:S<cr>", desc = "format file", mode = "n" },
         },
       })
       opts.modes = {
@@ -65,6 +70,11 @@ return {
       "nvim-lua/plenary.nvim",
     },
     config = true,
+    init = function()
+      require("which-key").add({
+        { "<leader>3", desc = "nvim-tree toggle", icon = { icon = "󰹩 ", color = "green" } },
+      })
+    end,
     keys = {
       {
         "<leader>3",
@@ -380,7 +390,10 @@ return {
     },
     init = function()
       require("which-key").add({
-        { "<leader>i", group = "insert" },
+        { "<leader>i", group = "insert", icon = { icon = " ", color = "blue" } },
+        { "<leader>ib", desc = "Box left-aligned", icon = { icon = "󰧭 ", color = "blue" } },
+        { "<leader>ic", desc = "Box centered", icon = { icon = "󰈚 ", color = "blue" } },
+        { "<leader>il", desc = "Line centered", icon = { icon = " ", color = "blue" } },
       })
     end,
   },

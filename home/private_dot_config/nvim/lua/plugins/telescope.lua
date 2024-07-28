@@ -74,7 +74,7 @@ return {
             ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ["<C-l>"] = actions.complete_tag,
             ["<c-t>"] = function(...)
-              return require("trouble.providers.telescope").open_with_trouble(...)
+              return require("trouble.sources.telescope").open(...)
             end,
             ["<C-i>"] = function()
               lazyvim_util.telescope("find_files", { no_ignore = true })()

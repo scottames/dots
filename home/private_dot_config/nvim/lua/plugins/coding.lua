@@ -222,51 +222,6 @@ return {
     end,
   },
 
-  -- Improved Yank and Put functionalities
-  { -- https://github.com/gbprod/yanky.nvim
-    "gbprod/yanky.nvim",
-    -- event = "BufReadPost",  -- load on keys instead
-    config = true,
-    opts = {
-      highlight = {
-        timer = 150,
-      },
-      preserve_cursor_position = {
-        enabled = true,
-      },
-      ring = {
-        storage = "sqlite",
-      },
-    },
-    keys = {
-      { mode = { "n", "x" }, "y", "<Plug>(YankyYank)", desc = "Yank" },
-      { mode = { "n", "x" }, "p", "<Plug>(YankyPutAfter)", desc = "Put After" },
-      { mode = { "n", "x" }, "P", "<Plug>(YankyPutBefore)", desc = "Put Before" },
-      { mode = { "n", "x" }, "gp", "<Plug>(YankyGPutAfter)", desc = "GPut After" },
-      { mode = { "n", "x" }, "gP", "<Plug>(YankyGPutBefore)", desc = "GPut Before" },
-      { mode = { "n" }, "<c-n>", "<Plug>(YankyCycleForward)", desc = "Yanky Cycle Forward" },
-      { mode = { "n" }, "<c-p>", "<Plug>(YankyCycleBackward)", desc = "Yanky Cycle Backward" },
-      { mode = { "n" }, "]p", "<Plug>(YankyPutIndentAfterLinewise)", desc = "Put Inent After Linewise" },
-      { mode = { "n" }, "]P", "<Plug>(YankyPutIndentAfterLinewise)", desc = "Put Inent After Linewise" },
-      { mode = { "n" }, "[p", "<Plug>(YankyPutIndentBeforeLinewise)", desc = "Put Inent Before Linewise" },
-      { mode = { "n" }, "[P", "<Plug>(YankyPutIndentBeforeLinewise)", desc = "Put Inent Before Linewise" },
-      { mode = { "n" }, ">p", "<Plug>(YankyPutIndentAfterShiftRight)", desc = "Put Inent After Shift Right" },
-      { mode = { "n" }, "<p", "<Plug>(YankyPutIndentAfterShiftLeft)", desc = "Put Indent After Shift Right" },
-      { mode = { "n" }, ">P", "<Plug>(YankyPutIndentBeforeShiftRight)", desc = "Put Indent Before Shift Right" },
-      { mode = { "n" }, "<P", "<Plug>(YankyPutIndentBeforeShiftLeft)", desc = "Put Indent Before Shift Right" },
-      { mode = { "n" }, "=p", "<Plug>(YankyPutAfterFilter)", desc = "Put After Filter" },
-      { mode = { "n" }, "=p", "<Plug>(YankyPutBeforeFilter)", desc = "Put Before Filter" },
-      {
-        mode = { "n" },
-        "<leader>P",
-        function()
-          require("telescope").extensions.yank_history.yank_history({})
-        end,
-        desc = "Paste from Yanky",
-      },
-    },
-  },
-
   -- better increase/descrease
   {
     "monaqa/dial.nvim",
