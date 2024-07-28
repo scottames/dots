@@ -1,10 +1,11 @@
+---
 version: 0.1
 cli:
-  version: 1.22.2
+  version: 1.22.2 # renovate: depName=FIXME: there is no way to track this :(
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.1
+      ref: v1.6.1 # renovate: depName=trunk-io/plugins
       uri: https://github.com/trunk-io/plugins
 actions:
   enabled:
@@ -24,30 +25,54 @@ actions:
         - files: ["*.go"]
 lint:
   enabled:
+    # renovate: depName=PyCQA/bandit
     - bandit@1.7.9
+    # renovate: depName=psf/black
     - black@24.4.2
+    # renovate: depName=Checkmarx/checkov
     - checkov@3.2.193
+    # renovate: depName=PyCQA/isort
     - isort@5.13.2
+    # renovate: depName=astral-sh/ruff
     - ruff@0.5.2
+    # renovate: depName=aquasecurity/trivy
     - trivy@0.53.0
+    # renovate: depName=go-kart/gokart
     - gokart@0.5.1
+    # renovate: depName=ossf/osv-scanner
     - osv-scanner@1.8.2
+    # renovate: depName=golang/svgo
     - svgo@3.3.2
+    # renovate: depName=accutify/terrascan
     - terrascan@1.19.1
+    # renovate: depName=dj-wasabi/trufflehog
     - trufflehog@3.79.0
+    # renovate: depName=actions/actionlint
     - actionlint@1.7.1
     - git-diff-check@SYSTEM
+    # renovate: depName=gitleaks/gitleaks
     - gitleaks@8.18.4
-    - gofmt@1.20.4
+    # renovate: depName=golang/go
+    - gofmt@1.22.4
+    # renovate: depName=golangci/golangci-lint
     - golangci-lint@1.59.1
+    # renovate: depName=hadolint/hadolint
     - hadolint@2.12.0
+    # renovate: depName=DavidAnson/markdownlint
     - markdownlint@0.41.0
+    # renovate: depName=prettier/prettier
     - prettier@3.3.3
+    # renovate: depName=renovatebot/renovate
     - renovate@37.432.0
+    # renovate: depName=koalaman/shellcheck
     - shellcheck@0.10.0
+    # renovate: depName=mvdan/sh
     - shfmt@3.6.0
+    # renovate: depName=styletools-dev/stylua
     - stylua@0.20.0
+    # renovate: depName=taplo/taplo
     - taplo@0.9.2
+    # renovate: depName=adrienverge/yamllint
     - yamllint@1.35.1
   files:
     - name: go-templates
@@ -72,6 +97,9 @@ lint:
         - CHANGELOG.md
 runtimes:
   enabled:
-    - go@1.21.0
+    # renovate: depName=golang/go
+    - go@1.22.5
+    # renovate: depName=nodejs/node
     - node@18.12.1
+    # renovate: depName=python/cpython
     - python@3.10.8
