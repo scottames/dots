@@ -73,7 +73,7 @@ return {
             ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
             ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ["<C-l>"] = actions.complete_tag,
-            ["<c-t>"] = function(...)
+            ["T"] = function(...)
               return require("trouble.sources.telescope").open(...)
             end,
             ["<C-i>"] = function()
