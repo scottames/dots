@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.1](https://github.com/scottames/dots/compare/v0.15.0...v0.15.1) (2024-08-08)
+
+
+### Bug Fixes
+
+* **nvim/telescope:** conflicting key for open in trouble ([57953fd](https://github.com/scottames/dots/commit/57953fdfa629613b6afdd445432b196835f49177))
+
 ## [0.15.0](https://github.com/scottames/dots/compare/v0.14.0...v0.15.0) (2024-07-28)
 
 
