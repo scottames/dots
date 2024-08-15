@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.15.1](https://github.com/scottames/dots/compare/v0.15.0...v0.15.1) (2024-08-15)
+
+
+### Bug Fixes
+
+* **fish:** gh auth properly ignore gh token ([ba7de3c](https://github.com/scottames/dots/commit/ba7de3c2ab2a275de9b5b2a787cc74d22c055b4d))
+* **fish:** gh auth status ([c719a00](https://github.com/scottames/dots/commit/c719a00bfc97a9a26c9e81abb1d44a6f95ccdd2d))
+* **nvim/telescope:** conflicting key for open in trouble ([57953fd](https://github.com/scottames/dots/commit/57953fdfa629613b6afdd445432b196835f49177))
+
 ## [0.15.0](https://github.com/scottames/dots/compare/v0.14.0...v0.15.0) (2024-07-28)
 
 
