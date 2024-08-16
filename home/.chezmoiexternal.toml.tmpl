@@ -85,6 +85,14 @@
     executable = false
     refreshPeriod = "168h"
 
+# renovate: datasource=github-releases depName=ThatOneCalculator/NerdFetch
+{{ $nerdfetchVersion := "v8.2.1" -}}
+
+[".local/bin/nerdfetch"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/{{ $nerdfetchVersion }}/nerdfetch"
+    executable = true
+
 [".config/k9s/skins"]
     type = "archive"
     url = "https://github.com/catppuccin/k9s/archive/main.tar.gz"
