@@ -13,7 +13,7 @@ registries:
     path: aqua-registry.yaml
     type: local
 packages:
-  - name: charmbracelet/glow@v1.5.1
+  - name: charmbracelet/glow@v2.0.0
   - name: cli/cli@v2.55.0
   - name: denisidoro/navi@v2.23.0
   - name: golangci/golangci-lint@v1.60.3
@@ -73,7 +73,7 @@ packages:
   - name: wagoodman/dive@v0.12.0
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
-  - name: simulot/immich-go@0.22.0
+  - name: simulot/immich-go@1.21.3
     registry: dots
   # renovate: datasource=npm depName=@trunkio/launcher
   - name: trunk-io/launcher@1.3.1
