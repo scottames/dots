@@ -4,7 +4,6 @@
 .cache
 .gsettings.yaml
 
-.chezmoiscripts/45_gnome_extensions.sh
 {{- if not (regexMatch "^gnome" .desktop_session) }}
 ### Ignore if not running gnome
 

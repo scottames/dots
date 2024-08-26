@@ -1,7 +1,6 @@
 #!/bin/env bash
 
-# shellcheck disable=SC1054,SC1083
-{{ if regexMatch "^gnome" .desktop_session }}
+set -ex
 
 echo '
  ██████╗ ███╗   ██╗ ██████╗ ███╗   ███╗███████╗
@@ -18,7 +17,6 @@ echo '
    ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
 '
 _gnome_extensions_installed=(
-  "nightthemeswitcher@romainvigier.fr"
   "pano@elhan.io"
   "paperwm@paperwm.github.com"
   "user-theme@gnome-shell-extensions.gcampax.github.com"
@@ -46,15 +44,14 @@ fi
 function _install_gnome_extensions() {
   if ! dbhostexec which gext &>/dev/null; then
 
-    if [[ $(cat /proc/version | grep arch) ]]; then
+    if [[ $(cat /proc/version | grep 'arch\|Red Hat') ]]; then
 
-      if ! dbhostexec which pipx &>/dev/null; then
+      if ! which pipx &>/dev/null; then
         printf "Missing pipx! Cannot install gext\n"
         return 1
       fi
 
-      dbhostexec pipx install gnome-extensions-cli
-      dbhostexec pipx runpip gnome-extensions-cli install pygobject
+      pipx install gnome-extensions-cli
 
     else
       dbhostexec pip install --upgrade gnome-extensions-cli
@@ -64,7 +61,7 @@ function _install_gnome_extensions() {
     echo "🚀 gext already installed!"
   fi
 
-  _gext="$(dbhostexec which gext)"
+  _gext="$(which gext)"
 
   for _ext in "${_gnome_extensions_removed[@]}"; do
     dbhostexec $_gext uninstall "${_ext}"
@@ -78,6 +75,5 @@ function _install_gnome_extensions() {
 _install_gnome_extensions
 
 # shellcheck disable=SC1056,SC1072,SC1083,SC1009,SC1073
-{{ end -}}
 
 # vi: ft=bash

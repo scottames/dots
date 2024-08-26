@@ -38,18 +38,7 @@ org.gnome.settings-daemon.plugins.media-keys:
 org.gnome.settings-daemon.plugins.power:
   sleep-inactive-ac-type: '''nothing'''
 org.gnome.shell:
-  favorite-apps: '[''firefox.desktop'', ''vivaldi-stable.desktop'', ''1password.desktop'', ''org.gnome.Software.desktop'', ''org.flameshot.Flameshot.desktop'', ''org.gnome.Nautilus.desktop'', ''org.wezfurlong.wezterm.desktop'']'
-org.gnome.shell.extensions.nightthemeswitcher.gtk-variants:
-  day: '''Catppuccin-Frappe-Standard-Flamingo-dark'''
-  enabled: "true"
-  night: '''Catppuccin-Mocha-Standard-Flamingo-dark'''
-org.gnome.shell.extensions.nightthemeswitcher.shell-variants:
-  day: '''Catppuccin-Frappe-Standard-Flamingo-dark'''
-  enabled: "true"
-  night: '''Catppuccin-Mocha-Standard-Flamingo-dark'''
-org.gnome.shell.extensions.nightthemeswitcher.time:
-  sunrise: "0.0"
-  sunset: "0.016666666666666666"
+  favorite-apps: '[''org.mozilla.firefox.desktop'', ''vivaldi-stable.desktop'', ''1password.desktop'', ''org.gnome.Software.desktop'', ''org.flameshot.Flameshot.desktop'', ''org.gnome.Nautilus.desktop'', ''org.wezfurlong.wezterm.desktop'']'
 org.gnome.shell.extensions.paperwm:
   use-default-background: "true"
   winprops: '[''{"wm_class":"gnome-calculator","title":"calc","scratch_layer":true}'', ''{"wm_class":"keymapp","title":"keymapp","scratch_layer":true}'', ''{"wm_class":"Keymapp","title":"Keymapp","scratch_layer":true}'', ''{"wm_class":"zoom","title":"zoom","scratch_layer":true}'', ''{"wm_class":"zoom.real ","title":"zoom.real","scratch_layer":true}'', ''{"wm_class":"zoom.real","title":"zoom.real","scratch_layer":true}'']'
