@@ -39,6 +39,8 @@ org.gnome.settings-daemon.plugins.power:
   sleep-inactive-ac-type: '''nothing'''
 org.gnome.shell:
   favorite-apps: '[''org.mozilla.firefox.desktop'', ''vivaldi-stable.desktop'', ''1password.desktop'', ''org.gnome.Software.desktop'', ''org.flameshot.Flameshot.desktop'', ''org.gnome.Nautilus.desktop'', ''org.wezfurlong.wezterm.desktop'']'
+org.gnome.shell.extensions.gravatar:
+  email: '''scott@ames.sh'''
 org.gnome.shell.extensions.paperwm:
   use-default-background: "true"
   winprops: '[''{"wm_class":"gnome-calculator","title":"calc","scratch_layer":true}'', ''{"wm_class":"keymapp","title":"keymapp","scratch_layer":true}'', ''{"wm_class":"Keymapp","title":"Keymapp","scratch_layer":true}'', ''{"wm_class":"zoom","title":"zoom","scratch_layer":true}'', ''{"wm_class":"zoom.real ","title":"zoom.real","scratch_layer":true}'', ''{"wm_class":"zoom.real","title":"zoom.real","scratch_layer":true}'']'
