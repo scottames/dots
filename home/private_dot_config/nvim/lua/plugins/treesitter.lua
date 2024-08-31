@@ -15,7 +15,7 @@ return {
         "nvim-treesitter/nvim-treesitter-context",
         config = true,
       },
-      { -- https://github.com/'IndianBoy42/tree-sitter-just'
+      { -- https://github.com/IndianBoy42/tree-sitter-just
         "IndianBoy42/tree-sitter-just",
         config = true,
       },
