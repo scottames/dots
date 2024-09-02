@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.16.0](https://github.com/scottames/dots/compare/v0.15.1...v0.16.0) (2024-09-02)
+
+
+### Features
+
+* add nerdfetch ([4478e27](https://github.com/scottames/dots/commit/4478e27d1d7fa44f7d9ea490ed7f49f641a87e39))
+* **gnome:** add gravatar extension ([c63a299](https://github.com/scottames/dots/commit/c63a299de14b1d4c56830042fae93b05b31be04a))
+* **keymapp:** autostart on gnome ([44e0efd](https://github.com/scottames/dots/commit/44e0efd61f759cff68aa85c96635301feff26f7a))
+* **tenv:** always autoinstall ([76a3f60](https://github.com/scottames/dots/commit/76a3f609e92e448d8d14a4055f3121248b0a090e))
+
+
+### Bug Fixes
+
+* **chezmoi/gnome-ext:** cleanup + no ignore ([0a02856](https://github.com/scottames/dots/commit/0a02856aab3d730217a999cc26e1b5cf73133b97))
+* init help message + unused comment in gh.fish ([354ee71](https://github.com/scottames/dots/commit/354ee7183c8776f7fca762db0b0d91abdd744133))
+
 ## [0.15.1](https://github.com/scottames/dots/compare/v0.15.0...v0.15.1) (2024-08-15)
 
 
