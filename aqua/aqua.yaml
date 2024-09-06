@@ -23,7 +23,7 @@ packages:
   - name: tofuutils/tenv@v3.1.0
   - name: twpayne/chezmoi@v2.52.1
   - name: zellij-org/zellij@v0.40.1
-  - name: weaveworks/eksctl@v0.189.0
+  - name: weaveworks/eksctl@v0.190.0
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
   - name: starship/starship@v1.20.1
@@ -68,7 +68,7 @@ packages:
   - name: nektos/act@v0.2.66
   - name: casey/just@1.35.0
   - name: tomnomnom/gron@v0.7.1
-  - name: kevincobain2000/gobrew@v1.10.10
+  - name: kevincobain2000/gobrew@v1.10.11
   - name: antonmedv/fx@35.0.0
   - name: wagoodman/dive@v0.12.0
   - name: dkaslovsky/nav@v1.1.0
@@ -81,7 +81,7 @@ packages:
   - name: PaulJuliusMartinez/jless@v0.9.0
   - name: konradsz/igrep@v1.2.0
   - name: rhysd/hgrep@v0.3.7
-  - name: eza-community/eza@v0.19.1
+  - name: eza-community/eza@v0.19.2
   - name: kisielk/errcheck@v1.7.0
     registry: dots
   - name: mvdan/sh@v3.9.0
@@ -95,9 +95,9 @@ packages:
   - name: helix-editor/helix@24.03
   - name: danielfoehrKn/kubeswitch@0.9.1
   - name: gabeduke/kubectl-iexec@v1.19.14
-  - name: sxyazi/yazi@v0.3.2
+  - name: sxyazi/yazi@v0.3.3
   - name: leg100/pug@v0.5.1 # Drive terraform at terminal velocity
-  - name: fujiwara/awslim@v0.3.4 # A simplified alternative to the AWS CLI for limited use cases
+  - name: fujiwara/awslim@v0.3.5 # A simplified alternative to the AWS CLI for limited use cases
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
   - name: dlvhdr/gh-dash@v4.5.4
   - name: withgraphite/gt
