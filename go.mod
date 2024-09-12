@@ -1,12 +1,14 @@
 module github.com/scottames/dots
 
-go 1.20
+go 1.22.0
+
+toolchain go1.23.1
 
 require (
 	github.com/fatih/color v1.17.0
 	github.com/magefile/mage v1.15.0
 	github.com/scottames/cmder v0.3.0
-	golang.org/x/exp v0.0.0-20240904232852-e7e105dedf7e
+	golang.org/x/exp v0.0.0-20240909161429-701f63a606c0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
