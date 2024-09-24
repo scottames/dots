@@ -7,21 +7,21 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.219.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.220.1 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
     type: local
 packages:
   - name: charmbracelet/glow@v2.0.0
-  - name: cli/cli@v2.55.0
+  - name: cli/cli@v2.56.0
   - name: denisidoro/navi@v2.23.0
-  - name: golangci/golangci-lint@v1.60.3
+  - name: golangci/golangci-lint@v1.61.0
   - name: homeport/dyff@v1.9.0
   - name: kubernetes-sigs/krew@v0.4.4
   - name: marcosnils/bin@v0.18.0
-  - name: tofuutils/tenv@v3.1.0
-  - name: twpayne/chezmoi@v2.52.1
+  - name: tofuutils/tenv@v3.2.2
+  - name: twpayne/chezmoi@v2.52.2
   - name: zellij-org/zellij@v0.40.1
   - name: weaveworks/eksctl@v0.190.0
   - name: keilerkonzept/terraform-module-versions@3.1.14
@@ -29,8 +29,8 @@ packages:
   - name: starship/starship@v1.20.1
   - name: muesli/duf@v0.8.1
   - name: gokcehan/lf@r28
-  - name: BurntSushi/ripgrep@14.1.0
-  - name: ajeetdsouza/zoxide@v0.9.4
+  - name: BurntSushi/ripgrep@14.1.1
+  - name: ajeetdsouza/zoxide@v0.9.5
   - name: sharkdp/fd@v10.2.0
   - name: iwittkau/mage-select@v1.4.3
     registry: dots
@@ -38,16 +38,16 @@ packages:
   - name: direnv/direnv@v2.34.0
   - name: kubernetes/kubectl@v1.31.0
   - name: fluxcd/flux2@v2.3.0
-  - name: helm/helm@v3.15.4
+  - name: helm/helm@v3.16.1
   - name: kubernetes-sigs/kustomize@kustomize/v5.4.3
   - name: stern/stern@v1.30.0
-  - name: charmbracelet/gum@v0.14.4
-  - name: dandavison/delta@0.18.1
+  - name: charmbracelet/gum@v0.14.5
+  - name: dandavison/delta@0.18.2
   - name: stedolan/jq@jq-1.6
   - name: jtyr/gbt@v2.0.0
   - name: junegunn/fzf@v0.55.0
   - name: hadolint/hadolint@v2.12.0
-  - name: jesseduffield/lazygit@v0.43.1
+  - name: jesseduffield/lazygit@v0.44.0
   - name: derailed/k9s@v0.32.5
   - name: awslabs/amazon-ecr-credential-helper@v0.8.0
   - name: 99designs/aws-vault@v7.2.0
@@ -55,7 +55,7 @@ packages:
   - name: sharkdp/bat@v0.24.0
   - name: bitnami-labs/sealed-secrets@v0.27.1
   - name: instrumenta/kubeval@v0.16.1
-  - name: kubernetes/minikube@v1.33.1
+  - name: kubernetes/minikube@v1.34.0
   - name: GoogleContainerTools/skaffold@v2.13.2
   - name: smallstep/certificates@v0.27.2
   - name: smallstep/cli@v0.27.2
@@ -65,7 +65,7 @@ packages:
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.44.3
   - name: sigstore/cosign@v2.4.0
-  - name: nektos/act@v0.2.66
+  - name: nektos/act@v0.2.67
   - name: casey/just@1.35.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.11
@@ -79,16 +79,16 @@ packages:
   - name: trunk-io/launcher@1.3.1
   - name: lsd-rs/lsd@v1.1.5
   - name: PaulJuliusMartinez/jless@v0.9.0
-  - name: konradsz/igrep@v1.2.0
+  - name: konradsz/igrep@v1.3.0
   - name: rhysd/hgrep@v0.3.7
-  - name: eza-community/eza@v0.19.2
+  - name: eza-community/eza@v0.19.3
   - name: kisielk/errcheck@v1.7.0
     registry: dots
   - name: mvdan/sh@v3.9.0
   - name: cue-lang/cue@v0.10.0
   - name: dprint/dprint@0.47.2
   - name: hashicorp/packer@v1.11.2
-  - name: snyk/cli@v1.1293.0
+  - name: snyk/cli@v1.1293.1
   - name: aquasecurity/tfsec@v1.28.10
   - name: int128/ghcp@v1.13.3
   - name: dagger/dagger@v0.12.7
