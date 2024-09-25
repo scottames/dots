@@ -36,7 +36,7 @@ packages:
     registry: dots
   - name: neovim/neovim@v0.10.1
   - name: direnv/direnv@v2.34.0
-  - name: kubernetes/kubectl@v1.31.0
+  - name: kubernetes/kubectl@v1.31.1
   - name: fluxcd/flux2@v2.3.0
   - name: helm/helm@v3.16.1
   - name: kubernetes-sigs/kustomize@kustomize/v5.4.3
