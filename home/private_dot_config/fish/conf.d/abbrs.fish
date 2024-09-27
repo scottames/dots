@@ -103,6 +103,8 @@ abbr -a gtls "gt ls"
 abbr -a gtm "gt modify"
 abbr -a gtmc "gt modify -c -m"
 abbr -a gtu "gt up"
+abbr -a gts "gt submit"
+abbr -a gtsd "gt submit --draft"
 abbr -a gtss "gt submit --stack --update-only"
 abbr -a gu git_update
 abbr -a guc gum_commit
@@ -126,6 +128,7 @@ abbr -a mgt "mage go:test"
 abbr -a mages mage-select
 abbr -a mg mage
 abbr -a mgs mage-select
+abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'
 abbr -a nmap_check_for_firewall "sudo nmap -sA -p1-65535 -v -T4"
 abbr -a nmap_check_for_vulns "nmap --script=vuln"
 abbr -a nmap_detect_versions "sudo nmap -sV -p1-65535 -O --osscan-guess -T4 -Pn"
