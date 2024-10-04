@@ -7,21 +7,21 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.226.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.228.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
     type: local
 packages:
   - name: charmbracelet/glow@v2.0.0
-  - name: cli/cli@v2.57.0
+  - name: cli/cli@v2.58.0
   - name: denisidoro/navi@v2.23.0
   - name: golangci/golangci-lint@v1.61.0
-  - name: homeport/dyff@v1.9.1
+  - name: homeport/dyff@v1.9.2
   - name: kubernetes-sigs/krew@v0.4.4
   - name: marcosnils/bin@v0.18.0
-  - name: tofuutils/tenv@v3.2.2
-  - name: twpayne/chezmoi@v2.52.2
+  - name: tofuutils/tenv@v3.2.3
+  - name: twpayne/chezmoi@v2.52.3
   - name: zellij-org/zellij@v0.40.1
   - name: weaveworks/eksctl@v0.191.0
   - name: keilerkonzept/terraform-module-versions@3.1.14
@@ -34,10 +34,10 @@ packages:
   - name: sharkdp/fd@v10.2.0
   - name: iwittkau/mage-select@v1.4.3
     registry: dots
-  - name: neovim/neovim@v0.10.1
+  - name: neovim/neovim@v0.10.2
   - name: direnv/direnv@v2.34.0
   - name: kubernetes/kubectl@v1.31.1
-  - name: fluxcd/flux2@v2.3.0
+  - name: fluxcd/flux2@v2.4.0
   - name: helm/helm@v3.16.1
   - name: kubernetes-sigs/kustomize@kustomize/v5.4.3
   - name: stern/stern@v1.30.0
@@ -64,9 +64,9 @@ packages:
   - name: itchyny/json2yaml@v0.1.4
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.44.3
-  - name: sigstore/cosign@v2.4.0
-  - name: nektos/act@v0.2.67
-  - name: casey/just@1.35.0
+  - name: sigstore/cosign@v2.4.1
+  - name: nektos/act@v0.2.68
+  - name: casey/just@1.36.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.11
   - name: antonmedv/fx@35.0.0
@@ -81,7 +81,7 @@ packages:
   - name: PaulJuliusMartinez/jless@v0.9.0
   - name: konradsz/igrep@v1.3.0
   - name: rhysd/hgrep@v0.3.7
-  - name: eza-community/eza@v0.20.0
+  - name: eza-community/eza@v0.20.1
   - name: kisielk/errcheck@v1.7.0
     registry: dots
   - name: mvdan/sh@v3.9.0
@@ -89,7 +89,7 @@ packages:
   - name: dprint/dprint@0.47.2
   - name: hashicorp/packer@v1.11.2
   - name: snyk/cli@v1.1293.1
-  - name: aquasecurity/tfsec@v1.28.10
+  - name: aquasecurity/tfsec@v1.28.11
   - name: int128/ghcp@v1.13.4
   - name: dagger/dagger@v0.13.3
   - name: helix-editor/helix@24.03
@@ -97,10 +97,10 @@ packages:
   - name: gabeduke/kubectl-iexec@v1.19.14
   - name: sxyazi/yazi@v0.3.3
   - name: leg100/pug@v0.5.3 # Drive terraform at terminal velocity
-  - name: fujiwara/awslim@v0.3.5 # A simplified alternative to the AWS CLI for limited use cases
+  - name: fujiwara/awslim@v0.3.6 # A simplified alternative to the AWS CLI for limited use cases
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
-  - name: dlvhdr/gh-dash@v4.5.4
+  - name: dlvhdr/gh-dash@v4.7.0
   - name: withgraphite/gt
     version: v1.4.6 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
-  - name: fastfetch-cli/fastfetch@2.25.0
+  - name: fastfetch-cli/fastfetch@2.26.1
