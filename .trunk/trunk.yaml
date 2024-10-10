@@ -25,25 +25,25 @@ actions:
 lint:
   enabled:
     - bandit@1.7.10
-    - black@24.8.0
-    - checkov@3.2.256
+    - black@24.10.0
+    - checkov@3.2.257
     - isort@5.13.2
-    - ruff@0.6.8
-    - trivy@0.55.2
+    - ruff@0.6.9
+    - trivy@0.56.1
     - gokart@0.5.1
     - osv-scanner@1.9.0
     - svgo@3.3.2
     - terrascan@1.19.1
-    - trufflehog@3.82.6
+    - trufflehog@3.82.7
     - actionlint@1.7.3
     - git-diff-check@SYSTEM
-    - gitleaks@8.19.3
+    - gitleaks@8.20.1
     - gofmt@1.20.4
     - golangci-lint@1.61.0
     - hadolint@2.12.0
     - markdownlint@0.42.0
     - prettier@3.3.3
-    - renovate@38.106.4
+    - renovate@38.115.1
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - stylua@0.20.0
