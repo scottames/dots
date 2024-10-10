@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.17.0](https://github.com/scottames/dots/compare/v0.16.0...v0.17.0) (2024-10-10)
+
+
+### Features
+
+* **aqua:** s/nerd/fast/fetch ([c24fee6](https://github.com/scottames/dots/commit/c24fee66a4ff2f9556e25b7f28687d622007a0ca))
+* **fish/abbrs:** more gt + minikube helpers ([518654e](https://github.com/scottames/dots/commit/518654eab73b2a5e3468754fd24b86e635ae72fb))
+
 ## [0.16.0](https://github.com/scottames/dots/compare/v0.15.1...v0.16.0) (2024-09-02)
 
 
