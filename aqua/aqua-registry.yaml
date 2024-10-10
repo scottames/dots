@@ -47,13 +47,3 @@ packages:
       - darwin
       - linux
     description: graphite.dev
-  - type: github_release
-    repo_owner: typedef-systems
-    repo_name: tpctools
-    asset: "tpctools-{{.OS}}-{{.Arch}}"
-    description: GitHub release of Typedef's tpctools fork
-    replacements:
-      darwin: macos
-    supported_envs:
-      - darwin
-      - linux
