@@ -210,7 +210,6 @@ return {
     opts = {
       -- https://github.com/LazyVim/LazyVim/issues/511#issuecomment-1493763938
       on_open = function(win)
-        vim.api.nvim_win_set_option(win, "winblend", 30)
         vim.api.nvim_win_set_config(win, { zindex = 100 })
       end,
     },
@@ -385,6 +384,31 @@ return {
     },
     opts = {
       disabled_filetypes = { "qf", "lazy", "mason", "neo-tree", "netrw", "NvimTree", "oil", "trouble", "" },
+      disabled_keys = {
+        -- enable arrow keys for use in custom layout layer
+        ["<Up>"] = {},
+        ["<Down>"] = {},
+        ["<Left>"] = {},
+        ["<Right>"] = {},
+      },
+      restricted_keys = {
+        ["<Up>"] = { "n", "x" },
+        ["<Down>"] = { "n", "x" },
+        ["<Left>"] = { "n", "x" },
+        ["<Right>"] = { "n", "x" },
+        ["h"] = { "n", "x" },
+        ["j"] = { "n", "x" },
+        ["k"] = { "n", "x" },
+        ["l"] = { "n", "x" },
+        ["-"] = { "n", "x" },
+        ["+"] = { "n", "x" },
+        ["gj"] = { "n", "x" },
+        ["gk"] = { "n", "x" },
+        ["<CR>"] = { "n", "x" },
+        ["<C-M>"] = { "n", "x" },
+        ["<C-N>"] = { "n", "x" },
+        ["<C-P>"] = { "n", "x" },
+      },
       disable_mouse = false,
     },
   },
