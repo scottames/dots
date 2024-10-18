@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.18.0](https://github.com/scottames/dots/compare/v0.17.0...v0.18.0) (2024-10-18)
+
+
+### Features
+
+* **aqua:** add typioca ([043f13b](https://github.com/scottames/dots/commit/043f13b261ade9187476638a02cfce429dade01d))
+* **nvim/hardtime:** enable arrow keys ([4ac6802](https://github.com/scottames/dots/commit/4ac6802b86dd1316dc1828040ac10617718823e1))
+
 ## [0.17.0](https://github.com/scottames/dots/compare/v0.16.0...v0.17.0) (2024-10-10)
 
 
