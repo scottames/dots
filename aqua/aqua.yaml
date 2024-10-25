@@ -7,26 +7,26 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.236.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.239.1 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
     type: local
 packages:
   - name: charmbracelet/glow@v2.0.0
-  - name: cli/cli@v2.59.0
+  - name: cli/cli@v2.60.1
   - name: denisidoro/navi@v2.23.0
   - name: golangci/golangci-lint@v1.61.0
   - name: homeport/dyff@v1.9.2
   - name: kubernetes-sigs/krew@v0.4.4
-  - name: marcosnils/bin@v0.18.0
-  - name: tofuutils/tenv@v3.2.4
+  - name: marcosnils/bin@v0.19.0
+  - name: tofuutils/tenv@v3.2.8
   - name: twpayne/chezmoi@v2.52.4
   - name: zellij-org/zellij@v0.40.1
-  - name: weaveworks/eksctl@v0.192.0
+  - name: weaveworks/eksctl@v0.194.0
   - name: keilerkonzept/terraform-module-versions@3.1.14
   - name: magefile/mage@v1.15.0
-  - name: starship/starship@v1.21.0
+  - name: starship/starship@v1.21.1
   - name: muesli/duf@v0.8.1
   - name: gokcehan/lf@r28
   - name: BurntSushi/ripgrep@14.1.1
@@ -81,14 +81,14 @@ packages:
   - name: PaulJuliusMartinez/jless@v0.9.0
   - name: konradsz/igrep@v1.3.0
   - name: rhysd/hgrep@v0.3.7
-  - name: eza-community/eza@v0.20.4
+  - name: eza-community/eza@v0.20.5
   - name: kisielk/errcheck@v1.8.0
     registry: dots
-  - name: mvdan/sh@v3.9.0
-  - name: cue-lang/cue@v0.10.0
-  - name: dprint/dprint@0.47.2
+  - name: mvdan/sh@v3.10.0
+  - name: cue-lang/cue@v0.10.1
+  - name: dprint/dprint@0.47.4
   - name: hashicorp/packer@v1.11.2
-  - name: snyk/cli@v1.1293.1
+  - name: snyk/cli@v1.1294.0
   - name: aquasecurity/tfsec@v1.28.11
   - name: int128/ghcp@v1.13.4
   - name: dagger/dagger@v0.13.5
@@ -101,7 +101,7 @@ packages:
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
   - name: dlvhdr/gh-dash@v4.7.0
   - name: withgraphite/gt
-    version: v1.4.6 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.4.7 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
-  - name: fastfetch-cli/fastfetch@2.27.1
+  - name: fastfetch-cli/fastfetch@2.28.0
   - name: bloznelis/typioca@3.1.0
