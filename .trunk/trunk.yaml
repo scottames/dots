@@ -26,15 +26,15 @@ lint:
   enabled:
     - bandit@1.7.10
     - black@24.10.0
-    - checkov@3.2.269
+    - checkov@3.2.276
     - isort@5.13.2
-    - ruff@0.7.0
+    - ruff@0.7.1
     - trivy@0.56.2
     - gokart@0.5.1
-    - osv-scanner@1.9.0
+    - osv-scanner@1.9.1
     - svgo@3.3.2
     - terrascan@1.19.1
-    - trufflehog@3.82.12
+    - trufflehog@3.83.1
     - actionlint@1.7.3
     - git-diff-check@SYSTEM
     - gitleaks@8.21.1
@@ -43,7 +43,7 @@ lint:
     - hadolint@2.12.0
     - markdownlint@0.42.0
     - prettier@3.3.3
-    - renovate@38.130.2
+    - renovate@38.135.2
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - stylua@0.20.0
