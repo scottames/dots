@@ -143,20 +143,6 @@ return {
   --   },
   -- },
 
-  -- buffer remove (additional keys)
-  {
-    "echasnovski/mini.bufremove",
-    keys = {
-      {
-        "<S-w>",
-        function()
-          require("mini.bufremove").delete(0, false)
-        end,
-        desc = "Delete Buffer",
-      },
-    },
-  },
-
   -- diff viewer
   { -- https://github.com/sindrets/diffview.nvim
     "sindrets/diffview.nvim",
