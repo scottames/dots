@@ -23,7 +23,13 @@ src/github.com/paperwm*
 .local/share/gnome-background-properties/*
 
 ###
-{{- end}}
+{{- end}} # end .desktop_session = gnome
+
+{{- if not (regexMatch "niri" .desktop_session) }}
+.config/niri/config.kdl
+.config/systemd/user/niri.service.wants/*
+{{- end}} # end .desktop_session = niri
+
 
 # Gnome Wallpaper Config
 {{ if not (stat (joinPath .chezmoi.homeDir "src/github.com/scottames/walls")) }}

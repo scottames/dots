@@ -26,7 +26,7 @@
 {{-     $isContainer = true -}}
 {{-   end -}}
 {{-   if $isContainer -}}
-{{-     $isDistroBox = not (eq (env "DISTROBOX_ENTER_PATH") "") -}}
+{{-     $isDistroBox = ne (env "DISTROBOX_ENTER_PATH") "" -}}
 {{-   end -}}
 {{-   if $isDistroBox -}}
 {{-     $chassis = output "distrobox-host-exec" "hostnamectl" "chassis" | trim -}}

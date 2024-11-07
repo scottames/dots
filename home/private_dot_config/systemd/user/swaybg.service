@@ -1,0 +1,8 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swaybg -m fill -i "%h/src/github.com/scottames/walls/main/wide/foggy-peaks-valley_catppuccin-oled_16_GaussianV1_0_20_512.png"
+Restart=on-failure
