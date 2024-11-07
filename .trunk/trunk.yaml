@@ -1,6 +1,6 @@
 version: 0.1
 cli:
-  version: 1.22.7
+  version: 1.22.8
 plugins:
   sources:
     - id: trunk
@@ -26,16 +26,16 @@ lint:
   enabled:
     - bandit@1.7.10
     - black@24.10.0
-    - checkov@3.2.276
+    - checkov@3.2.281
     - isort@5.13.2
-    - ruff@0.7.1
+    - ruff@0.7.2
     - trivy@0.56.2
     - gokart@0.5.1
     - osv-scanner@1.9.1
     - svgo@3.3.2
     - terrascan@1.19.1
-    - trufflehog@3.83.1
-    - actionlint@1.7.3
+    - trufflehog@3.83.4
+    - actionlint@1.7.4
     - git-diff-check@SYSTEM
     - gitleaks@8.21.1
     - gofmt@1.20.4
@@ -43,7 +43,7 @@ lint:
     - hadolint@2.12.0
     - markdownlint@0.42.0
     - prettier@3.3.3
-    - renovate@38.135.2
+    - renovate@39.7.1
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - stylua@0.20.0
