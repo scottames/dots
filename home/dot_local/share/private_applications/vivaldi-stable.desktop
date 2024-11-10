@@ -3,9 +3,7 @@ Version=1.0
 Name=Vivaldi
 GenericName=Web Browser
 Comment=Access the Internet
-Exec=/usr/bin/vivaldi-stable %U {{ if regexMatch "niri" .desktop_session -}}
---ozone-platform=wayland --password-store=gnome-libsecret
-{{- end }}
+Exec=/usr/bin/vivaldi-stable %U --ozone-platform=wayland --password-store=gnome-libsecret
 
 StartupNotify=true
 Terminal=false
@@ -17,14 +15,10 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window
-Exec=/usr/bin/vivaldi-stable --new-window {{ if regexMatch "niri" .desktop_session -}}
---ozone-platform=wayland --password-store=gnome-libsecret
-{{- end }}
+Exec=/usr/bin/vivaldi-stable --new-window --ozone-platform=wayland --password-store=gnome-libsecret
 
 
 [Desktop Action new-private-window]
 Name=New Private Window
-Exec=/usr/bin/vivaldi-stable --incognito {{ if regexMatch "niri" .desktop_session -}}
---ozone-platform=wayland --password-store=gnome-libsecret
-{{- end }}
+Exec=/usr/bin/vivaldi-stable --incognito --ozone-platform=wayland --password-store=gnome-libsecret
 

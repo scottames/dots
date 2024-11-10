@@ -1,4 +1,7 @@
+{{- $name           := "Scott Ames" -}}
+{{- $email          := "scott@ames.sh" -}}
 {{- $githubUser     := "scottames" -}}
+{{- $fontMonospace  := "FiraCode Nerd Font Mono" -}}
 {{- $chassis        := ""          -}}
 {{- $gpu            := ""          -}}
 {{- $isContainer    := false       -}}
@@ -9,18 +12,25 @@
 {{- $hourLight      := 24 -}}
 {{- $osVariant      := "" -}}
 {{- $ublueImageInfo := "" -}}
-{{- $dots           := "dots" -}}
+{{- $dotsStr        := "dots" -}}
 
 {{- $loginSession     := 0 -}}
 {{- $loginSessionType := "" -}}
 
 {{- $useGitWorktrees := true -}}
 {{- if $useGitWorktrees -}}
-{{-   $dots = "dots/main" -}}
+{{-   $dotsStr = "dots/main" -}}
 {{- end -}}
 
+{{- $gravatarID := trim (
+output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1" 
+) -}}
+
 {{- if eq .chezmoi.os "linux" -}}
-{{-   $gpu = output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'" | trim | lower -}}
+{{-
+  $gpu = lower ( trim (
+    output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'"
+   )) -}}
 {{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
 {{-     $isContainer = true -}}
 {{-   end -}}
@@ -28,19 +38,44 @@
 {{-     $isDistroBox = ne (env "DISTROBOX_ENTER_PATH") "" -}}
 {{-   end -}}
 {{-   if $isDistroBox -}}
-{{-     $chassis = output "distrobox-host-exec" "hostnamectl" "chassis" | trim -}}
-{{-     $loginSession = output "distrobox-host-exec" "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first -}}
-{{-     $loginSessionType = output "distrobox-host-exec" "loginctl" "show-session" $loginSession "-p" "Type" | replace "Type=" "" | trim -}}
-{{-     $osVariant = output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $VARIANT'" | trim | lower -}}
-{{-     $ublueImageInfo = output "sh" "-c" "distrobox-host-exec cat /usr/share/ublue-os/image-info.json" -}}
+{{-     $chassis = trim (
+           output "distrobox-host-exec" "hostnamectl" "chassis" 
+                        ) -}}
+{{-     $loginSession = fromJson (
+           output "distrobox-host-exec" "loginctl" "-o" "json" 
+         ) | jq (
+              printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username
+                ) | first -}}
+{{-     $loginSessionType = trim ( replace "Type=" "" (
+  output "distrobox-host-exec" "loginctl" "show-session" $loginSession "-p" "Type"
+                                  )) -}}
+{{-
+  $osVariant = lower ( trim (
+  output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $VARIANT'" 
+   )) -}}
+{{-
+  $ublueImageInfo = (
+  output "sh" "-c" "distrobox-host-exec cat /usr/share/ublue-os/image-info.json" 
+   ) -}}
 {{-     $isUblue = not (empty $ublueImageInfo) -}}
 {{-   else if $isContainer -}}
 {{-     $chassis = "container" -}}
 {{-   else -}}
-{{-     $loginSession = output "loginctl" "-o" "json" | fromJson | jq (printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) | first -}}
-{{-     $loginSessionType = output "loginctl" "show-session" $loginSession "-p" "Type" | replace "Type=" "" | trim -}}
+{{-     $loginSession = output "loginctl" "-o" "json" 
+          | fromJson
+          | jq (
+             printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) 
+          | first -}}
+{{-
+  $loginSessionType = output "loginctl" "show-session" $loginSession "-p" "Type"
+          | replace "Type=" ""
+          | trim
+   -}}
 {{-     $chassis = output "hostnamectl" "chassis" | trim -}}
-{{-     $osVariant = output "sh" "-c" ". /etc/os-release && echo $VARIANT" | trim | lower -}}
+{{-     $osVariant = output "sh" "-c" ". /etc/os-release && echo $VARIANT" 
+          | trim 
+          | lower
+   -}}
 {{-     $ublueImageInfo = cat "/usr/share/ublue-os/image-info.json" -}}
 {{-     $isUblue = not (empty $ublueImageInfo) -}}
 {{-   end -}}
@@ -49,7 +84,18 @@
 {{- $aquaRoot      := env "AQUA_ROOT_DIR" -}}
 {{- $aquaInstalled := ne $aquaRoot "" }}
 
-sourceDir = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}/home"
+{{- $srcDir       := printf "%s/src" .chezmoi.homeDir -}}
+{{- $srcGitHubDir := printf "%s/github.com/%s" $srcDir $githubUser -}}
+{{- $dots         := printf "%s/%s" $srcGitHubDir $dotsStr -}}
+{{- /* TODO: get from user input */ -}}
+{{- 
+  $wallpaper := printf
+  "%s/walls/main/wide/foggy-peaks-valley_catppuccin-oled_16_GaussianV1_0_20_512.png"
+     $srcGitHubDir
+  -}}
+{{- $chezmoiSourceDir := printf "%s/home" $dots -}}
+
+sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true
 
 {{ if lookPath "delta" -}}
@@ -64,13 +110,15 @@ progress = true
   aqua_installed = {{ $aquaInstalled }}
   aqua_bin_dir = "{{ $aquaRoot }}/bin"
   aqua_root = "{{ $aquaRoot }}"
-  chezmoi_home = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}/home"
+  chezmoi_home = "{{ $chezmoiSourceDir }}"
   desktop_session = "{{ $desktopSession }}"
-  dots = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}"
+  dots = "{{ $dots }}"
   hour_dark = {{ $hourDark }}
   hour_light = {{ $hourLight }}
   login_session = {{ $loginSession }}
   login_session_type = "{{ $loginSessionType }}"
+  monospace_font = "{{ $fontMonospace }}"
+  wallpaper = "{{ $wallpaper }}"
   [data.host]
     chassis = "{{ $chassis }}"
     is_ublue = {{ $isUblue }}
@@ -79,8 +127,10 @@ progress = true
 
   [data.me]
     user = "{{ .chezmoi.username }}"
-    email = "scott@ames.sh"
-    name = "Scott Ames"
+    email = "{{ $email }}"
+    name = "{{ $name }}"
+    [data.me.gravatar]
+      id = "{{ $gravatarID }}"
     [data.me.github]
       username = "{{  $githubUser }}"
 

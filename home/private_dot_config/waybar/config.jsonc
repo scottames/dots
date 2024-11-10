@@ -51,21 +51,6 @@
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "battery": {
-    // "states": {
-    //   "warning": 30,
-    //   "critical": 15
-    // },
-    // "format": "{icon}", // FIXME: percent?
-    // "format-charging": "󱐌", // FIXME: do better than these
-    // "format-plugged": "",
-    // "format-alt": "{icon}",
-    // "format-icons": [
-    //   "",
-    //   "",
-    //   "",
-    //   "",
-    //   ""
-    // ]
     "states": {
       "good": 75,
       "warning": 40,
@@ -78,16 +63,6 @@
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰂀", "󰂂", "󰁹"],
   },
   "pulseaudio": {
-    // // "scroll-step": 1, // %, can be a float
-    // "format": "{icon} {volume}%",
-    // "format-muted": "",
-    // "format-icons": {
-    //   "default": [
-    //     "",
-    //     "",
-    //     " "
-    //   ]
-    // },
     "format": "{icon} {volume}%",
     "format-muted": "",
     "on-click": "pavucontrol",
@@ -105,20 +80,9 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 14,
-    // "icon-theme": "Numix-Circle",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    // "ignore-list": [
-    //   "Alacritty"
-    // ],
-    // "app_ids-mapping": {
-    //   "firefoxdeveloperedition": "firefox-developer-edition"
-    // },
-    // "rewrite": {
-    //   "Firefox Web Browser": "Firefox",
-    //   "Foot Server": "Terminal"
-    // }
   },
   "custom/lock": {
     "tooltip": false,

@@ -7,6 +7,9 @@
   min-height: 0;
 }
 
+/* https://catppuccin.com/palette */
+/* TODO: import catppuccin.mocha CSS from chezmoiexternal */
+
 window#waybar {
   background: rgba(21, 18, 27, 0);
   color: #cdd6f4;
@@ -31,10 +34,7 @@ tooltip {
 }
 
 #workspaces button.focused {
-  /* color: #a6adc8; */
   color: #7287fd;
-  /* background: #eba0ac; */
-  /* background: #7287fd; */
   border-radius: 10px;
 }
 
@@ -112,7 +112,6 @@ tooltip {
   color: #f9e2af;
   border-radius: 10px;
   margin-left: 10px;
-  /* margin-right: 10px; */
 }
 
 #network {
