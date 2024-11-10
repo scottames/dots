@@ -4,6 +4,9 @@
 .cache
 .gsettings.yaml
 
+# TODO:completely remove
+.config/systemd/user/swayidle.service
+
 {{- if not (regexMatch "^gnome" .desktop_session) }}
 ### Ignore if not running gnome
 
@@ -28,8 +31,8 @@ src/github.com/paperwm*
 {{- if not (regexMatch "niri" .desktop_session) }}
 .config/niri/config.kdl
 .config/systemd/user/niri.service.wants/*
+.local/share/applications/vivaldi-stable.desktop
 {{- end}} # end .desktop_session = niri
-
 
 # Gnome Wallpaper Config
 {{ if not (stat (joinPath .chezmoi.homeDir "src/github.com/scottames/walls")) }}

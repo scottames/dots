@@ -11,7 +11,6 @@
 {{- $ublueImageInfo := "" -}}
 {{- $dots           := "dots" -}}
 
-
 {{- $loginSession     := 0 -}}
 {{- $loginSessionType := "" -}}
 
@@ -47,6 +46,9 @@
 {{-   end -}}
 {{- end -}}
 
+{{- $aquaRoot      := env "AQUA_ROOT_DIR" -}}
+{{- $aquaInstalled := ne $aquaRoot "" }}
+
 sourceDir = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}/home"
 progress = true
 
@@ -59,6 +61,9 @@ progress = true
 
 {{ end -}}
 [data]
+  aqua_installed = {{ $aquaInstalled }}
+  aqua_bin_dir = "{{ $aquaRoot }}/bin"
+  aqua_root = "{{ $aquaRoot }}"
   chezmoi_home = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}/home"
   desktop_session = "{{ $desktopSession }}"
   dots = "{{ .chezmoi.homeDir }}/src/github.com/{{ $githubUser }}/{{ $dots }}"
