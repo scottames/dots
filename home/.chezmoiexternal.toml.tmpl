@@ -61,6 +61,10 @@
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ file                                                     │
 #  ╰──────────────────────────────────────────────────────────╯
+[".face"]
+    type = "file"
+    url = "https://gravatar.com/avatar/{{ .me.gravatar.id }}?s=2048"
+
 [".local/bin/cht.sh"]
     type = "file"
     url = "https://cht.sh/:cht.sh"
@@ -100,6 +104,14 @@
     refreshPeriod = "168h"
     stripComponents = 1
     include = ["*/catppuccin-mocha.yazi/**"]
+
+[".config/hypr/themes"]
+    type = "archive"
+    url = "https://github.com/catppuccin/hyprland/archive/main.tar.gz"
+    exact = true
+    refreshPeriod = "168h"
+    stripComponents = 2
+    include = ["*/themes/**"]
 
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
