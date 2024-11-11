@@ -41,11 +41,9 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-     $chassis = trim (
            output "distrobox-host-exec" "hostnamectl" "chassis" 
                         ) -}}
-{{-     $loginSession = fromJson (
-           output "distrobox-host-exec" "loginctl" "-o" "json" 
-         ) | jq (
-              printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username
-                ) | first -}}
+{{-     $loginSession = trim (
+  output "distrobox-host-exec" "sh" "-c" "loginctl | grep user | awk '{print $1}'" 
+  ) -}}
 {{-     $loginSessionType = trim ( replace "Type=" "" (
   output "distrobox-host-exec" "loginctl" "show-session" $loginSession "-p" "Type"
                                   )) -}}
