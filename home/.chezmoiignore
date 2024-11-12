@@ -4,7 +4,7 @@
 .cache
 .gsettings.yaml
 
-{{- if not (regexMatch "^gnome" .desktop_session) }}
+{{- if not (regexMatch "^gnome" .desktop.session) }}
 ### Ignore if not running gnome
 
 # Chezmoi Scripts
@@ -23,14 +23,14 @@ src/github.com/paperwm*
 .local/share/gnome-background-properties/*
 
 ###
-{{- end}} # end .desktop_session = gnome
+{{- end}} # end .desktop.session = gnome
 
-{{- if not (regexMatch "niri" .desktop_session) }}
+{{- if not (regexMatch "niri" .desktop.session) }}
 .config/niri/config.kdl
 .config/systemd/user/niri.service.wants/*
 .config/systemd/user/swaybg.service
 .local/share/applications/vivaldi-stable.desktop
-{{- end}} # end .desktop_session = niri
+{{- end}} # end .desktop.session = niri
 
 # Gnome Wallpaper Config
 {{ if not (stat (

@@ -1,29 +1,30 @@
 {{- $name           := "Scott Ames" -}}
+{{- $dotsStr        := "dots" -}}
 {{- $email          := "scott@ames.sh" -}}
 {{- $githubUser     := "scottames" -}}
 {{- $fontMonospace  := "FiraCode Nerd Font Mono" -}}
-{{- $chassis        := ""          -}}
-{{- $gpu            := ""          -}}
-{{- $isContainer    := false       -}}
-{{- $isDistroBox    := false       -}}
-{{- $isUblue        := false       -}}
+
+{{- $chassis        := ""    -}}
 {{- $desktopSession := env "DESKTOP_SESSION" -}}
+{{- $gpu            := ""    -}}
+{{- $hostname       := ""    -}}
 {{- $hourDark       := 24 -}}
 {{- $hourLight      := 24 -}}
-{{- $osVariant      := "" -}}
-{{- $ublueImageInfo := "" -}}
-{{- $dotsStr        := "dots" -}}
-
+{{- $isContainer    := false -}}
+{{- $isDistroBox    := false -}}
+{{- $isUblue        := false -}}
 {{- $loginSession     := 0 -}}
 {{- $loginSessionType := "" -}}
-
+{{- $osVariant      := "" -}}
+{{- $ublueImageInfo := "" -}}
 {{- $useGitWorktrees := true -}}
+
 {{- if $useGitWorktrees -}}
-{{-   $dotsStr = "dots/main" -}}
+{{-   $dotsStr = printf "%s/main" $dotsStr -}}
 {{- end -}}
 
 {{- $gravatarID := trim (
-output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1" 
+output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 ) -}}
 
 {{- if eq .chezmoi.os "linux" -}}
@@ -40,6 +41,9 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-   if $isDistroBox -}}
 {{-     $chassis = trim (
            output "distrobox-host-exec" "hostnamectl" "chassis" 
+                        ) -}}
+{{-     $hostname = trim (
+           output "distrobox-host-exec" "hostnamectl" "hostname" 
                         ) -}}
 {{-     $loginSession = trim (
   output "distrobox-host-exec" "sh" "-c" "loginctl | grep user | awk '{print $1}'" 
@@ -95,41 +99,54 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 
 sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true
+{{- if lookPath "delta" }}
 
-{{ if lookPath "delta" -}}
 [diff]
   pager = "delta"
   command = "delta"
   args = ["--paging", "never"]
   exclude = ["dirs", "scripts"]
+{{- end }}
 
-{{ end -}}
 [data]
-  aqua_installed = {{ $aquaInstalled }}
-  aqua_bin_dir = "{{ $aquaRoot }}/bin"
-  aqua_root = "{{ $aquaRoot }}"
-  chezmoi_home = "{{ $chezmoiSourceDir }}"
-  desktop_session = "{{ $desktopSession }}"
-  dots = "{{ $dots }}"
-  hour_dark = {{ $hourDark }}
-  hour_light = {{ $hourLight }}
-  login_session = {{ $loginSession }}
-  login_session_type = "{{ $loginSessionType }}"
-  monospace_font = "{{ $fontMonospace }}"
-  wallpaper = "{{ $wallpaper }}"
+  [data.home]
+    chezmoi_home = "{{ $chezmoiSourceDir }}"
+    dots = "{{ $dots }}"
+
+    [data.home.aqua]
+      installed = {{ $aquaInstalled }}
+      bin_dir = "{{ $aquaRoot }}/bin"
+      root = "{{ $aquaRoot }}"
+
   [data.host]
+    name = "{{ $hostname }}"
     chassis = "{{ $chassis }}"
     is_ublue = {{ $isUblue }}
     os_variant = "{{ $osVariant }}"
     gpu = "{{ $gpu }}"
 
+  [data.desktop]
+    session = "{{ $desktopSession }}"
+    wallpaper = "{{ $wallpaper }}"
+
+    [data.desktop.fonts]
+      monospace = "{{ $fontMonospace }}"
+
+    [data.desktop.hour]
+      light = 24
+      dark = 24
+
+    [data.desktop.login]
+      session = {{ $loginSession }}
+      type = "{{ $loginSessionType }}"
+
   [data.me]
     user = "{{ .chezmoi.username }}"
     email = "{{ $email }}"
     name = "{{ $name }}"
+
     [data.me.gravatar]
       id = "{{ $gravatarID }}"
+
     [data.me.github]
       username = "{{  $githubUser }}"
-
-# vi: ft=toml

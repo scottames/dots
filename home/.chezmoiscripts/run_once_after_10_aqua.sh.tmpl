@@ -34,7 +34,7 @@ if [[ ! $(command -v aqua) ]]; then
   # ensure AQUA vars are set
   function setenv() { export "$1=$2"; }
 
-  DOTS="${DOTS:={{ .dots }}}"
+  DOTS="${DOTS:={{ .home.dots }}}"
   eval "$(grep -i AQUA <"${HOME}"/.setenv)"
 
   pushd "$(mktemp -d)"

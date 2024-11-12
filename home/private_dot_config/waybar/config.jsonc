@@ -1,9 +1,13 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["clock", "niri/workspaces", "niri/window"],
+  "modules-left": [
+    "clock",
+    "niri/workspaces",
+    "niri/window"
+  ],
   "modules-center": [
-    "custom/music",
+    "custom/music"
     // "wlr/taskbar"
   ],
   "modules-right": [
@@ -12,21 +16,21 @@
     "backlight",
     "battery",
     "custom/lock",
-    "custom/power",
+    "custom/power"
   ],
   "niri/window": {
     "icon": true,
-    "format": "",
+    "format": ""
   },
   "niri/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "default": "",
-    },
+      "default": ""
+    }
   },
   "tray": {
     "icon-size": 13,
-    "spacing": 10,
+    "spacing": 10
   },
   "custom/music": {
     "format": "  {}",
@@ -35,32 +39,51 @@
     "tooltip": false,
     "exec": "playerctl metadata --format='{{ title }}'",
     "on-click": "playerctl play-pause",
-    "max-length": 50,
+    "max-length": 50
   },
   "clock": {
     "timezone": "America/Los_Angeles",
     // "format": "{:%H:%M}"
     "format": "{:%R  %h %d}",
     "format-alt": "{:%d/%m/%Y}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "battery": {
     "states": {
       "good": 75,
       "warning": 40,
-      "critical": 25,
+      "critical": 25
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰂀", "󰂂", "󰁹"],
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -68,30 +91,34 @@
     "on-click": "pavucontrol",
     "scroll-step": 1,
     "format-icons": {
-      "default": ["", "", " "],
+      "default": [
+        "",
+        "",
+        " "
+      ],
       "headphone": "",
       "hands-free": "",
       "headset": "",
       "phone": "",
       "portable": "",
-      "car": "",
-    },
+      "car": ""
+    }
   },
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 14,
     "tooltip-format": "{title}",
     "on-click": "activate",
-    "on-click-middle": "close",
+    "on-click-middle": "close"
   },
   "custom/lock": {
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-    "format": "",
+    "format": ""
   },
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout &",
-    "format": "",
-  },
+    "format": ""
+  }
 }

@@ -2,7 +2,7 @@ source = $HOME/.config/hypr/themes/mocha.conf
 
 $accent = $mauve
 $accentAlpha = $mauveAlpha
-$font = {{ .monospace_font }}
+$font = {{ .desktop.fonts.monospace }}
 
 general {
     disable_loading_bar = true
@@ -11,7 +11,7 @@ general {
 
 background {
     monitor =
-    path = {{ .wallpaper }}
+    path = {{ .desktop.wallpaper }}
     blur_passes = 2
     color = $base
 }

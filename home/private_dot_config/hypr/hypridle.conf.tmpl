@@ -13,8 +13,9 @@ listener {
     timeout = 180
     on-timeout = niri msg action power-off-monitors
 }
+{{- if eq .host.chassis "laptop" }}
 
 listener {
     timeout = 5400 # 1.5hr
     on-timeout = systemctl suspend
-}
+}{{ end }}
