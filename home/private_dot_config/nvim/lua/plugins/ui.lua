@@ -204,17 +204,6 @@ return {
     },
   },
 
-  -- nvim-notify
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      -- https://github.com/LazyVim/LazyVim/issues/511#issuecomment-1493763938
-      on_open = function(win)
-        vim.api.nvim_win_set_config(win, { zindex = 100 })
-      end,
-    },
-  },
-
   -- minimap
   { -- https://github.com/gorbit99/codewindow.nvim
     "gorbit99/codewindow.nvim",
