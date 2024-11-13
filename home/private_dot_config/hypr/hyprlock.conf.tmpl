@@ -6,6 +6,7 @@ $font = {{ .desktop.fonts.monospace }}
 
 general {
     disable_loading_bar = true
+    enable_fingerprint = {{ eq .host.chassis "laptop" }}
     hide_cursor = true
 }
 

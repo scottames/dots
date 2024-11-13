@@ -41,7 +41,7 @@
 
 {{- if and (regexMatch "^gnome" .desktop.session) (lookPath "flatpak") }}
 
-{{ end -}} # gnome .desktop_session && flatpak found
+{{ end -}} # gnome .desktop.session && flatpak found
 
 [".local/bin/keymapp"]
     type = "archive-file"
