@@ -39,7 +39,7 @@
     refreshPeriod = "168h"
     stripComponents = 1
 
-{{- if and (regexMatch "^gnome" .desktop_session) (lookPath "flatpak") }}
+{{- if and (regexMatch "^gnome" .desktop.session) (lookPath "flatpak") }}
 
 {{ end -}} # gnome .desktop_session && flatpak found
 

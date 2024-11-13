@@ -4,11 +4,17 @@ simplified_ui false
 theme "catppuccin-mocha"
 {{ if eq .chezmoi.os "darwin" -}}
 copy_command "pbcopy"
-{{- else if eq .login_session_type "wayland" -}}
+{{- else if eq .desktop.login.type "wayland" -}}
 copy_command "wl-copy"
-{{- else if eq .login_session_type "x11" -}}
+{{- else if eq .desktop.login.type "x11" -}}
 copy_command "xclip -selection clipboard"
 {{- end }}
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
 
 keybinds clear-defaults=true {
     normal {
