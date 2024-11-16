@@ -1,8 +1,11 @@
 {{- $name           := "Scott Ames" -}}
 {{- $dotsStr        := "dots" -}}
 {{- $email          := "scott@ames.sh" -}}
+{{- $hourDark         := 24    -}}
+{{- $hourLight        := 24    -}}
 {{- $githubUser     := "scottames" -}}
 {{- $fontMonospace  := "FiraCode Nerd Font Mono" -}}
+{{- $useGitWorktrees  := true  -}}
 
 {{- /* TODO: source entire file into env and reference natively here? */ -}}
 
@@ -10,8 +13,6 @@
 {{- $desktopSession   := env "DESKTOP_SESSION" -}}
 {{- $gpu              := ""    -}}
 {{- $hostname         := ""    -}}
-{{- $hourDark         := 24    -}}
-{{- $hourLight        := 24    -}}
 {{- $isContainer      := false -}}
 {{- $isDistroBox      := false -}}
 {{- $isUblue          := false -}}
@@ -21,11 +22,10 @@
 {{- $osVariant        := ""    -}}
 {{- $osVersion        := ""    -}}
 {{- $ublueImageInfo   := ""    -}}
-{{- $useGitWorktrees  := true  -}}
 {{- $wallpaper        := ""    -}}
 
 {{- if $useGitWorktrees -}}
-{{-   $dotsStr = printf "%s/main" $dotsStr -}}
+{{-   $dotsStr = joinPath $dotsStr "main" -}}
 {{- end -}}
 
 {{- $gravatarID := trim (
@@ -99,10 +99,11 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{- $aquaRoot      := env "AQUA_ROOT_DIR" -}}
 {{- $aquaInstalled := ne $aquaRoot "" }}
 
-{{- $srcDir       := printf "%s/src" .chezmoi.homeDir -}}
-{{- $srcGitHubDir := printf "%s/github.com/%s" $srcDir $githubUser -}}
-{{- $dots         := printf "%s/%s" $srcGitHubDir $dotsStr -}}
-{{- $chezmoiSourceDir := printf "%s/home" $dots -}}
+{{- $srcDir           := joinPath .chezmoi.homeDir "src" -}}
+{{- $srcGitHubDir     := joinPath $srcDir "github.com" $githubUser -}}
+{{- $dots             := joinPath $srcGitHubDir $dotsStr -}}
+{{- $chezmoiSourceDir := joinPath $dots "home" -}}
+
 {{- if lstat (joinPath .chezmoi.homeDir ".wallpaper") -}}
 {{-   $wallpaper = trim (include (printf "%s/.wallpaper" .chezmoi.homeDir)) -}}
 {{- else -}}
