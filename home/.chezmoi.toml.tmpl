@@ -22,6 +22,7 @@
 {{- $osVersion        := ""    -}}
 {{- $ublueImageInfo   := ""    -}}
 {{- $useGitWorktrees  := true  -}}
+{{- $wallpaper        := ""    -}}
 
 {{- if $useGitWorktrees -}}
 {{-   $dotsStr = printf "%s/main" $dotsStr -}}
@@ -101,13 +102,13 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{- $srcDir       := printf "%s/src" .chezmoi.homeDir -}}
 {{- $srcGitHubDir := printf "%s/github.com/%s" $srcDir $githubUser -}}
 {{- $dots         := printf "%s/%s" $srcGitHubDir $dotsStr -}}
-{{- /* TODO: get from user input */ -}}
-{{- 
-  $wallpaper := printf
-  "%s/walls/main/wide/foggy-peaks-valley_catppuccin-oled_16_GaussianV1_0_20_512.png"
-     $srcGitHubDir
-  -}}
 {{- $chezmoiSourceDir := printf "%s/home" $dots -}}
+{{- if lstat (joinPath .chezmoi.homeDir ".wallpaper") -}}
+{{-   $wallpaper = trim (include (printf "%s/.wallpaper" .chezmoi.homeDir)) -}}
+{{- else -}}
+{{-   $wallpaperDefault := "/usr/share/backgrounds/gnome/adwaita-d.jxl" -}}
+{{-   $wallpaper = promptStringOnce . "desktop.wallpaper" "path to desktop wallpaper" $wallpaperDefault -}}
+{{- end -}}
 
 sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true

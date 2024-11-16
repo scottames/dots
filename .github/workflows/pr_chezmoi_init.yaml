@@ -20,14 +20,18 @@ jobs:
       - name: Extract branch name
         shell: bash
         run: |
-          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" \
+            >> "${GITHUB_OUTPUT}"
         id: extract_branch
       - name: Run chezmoi init in container
+        # yamllint disable-line rule:line-length
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3
         with:
           # https://github.com/scottames/boxes
           image: ghcr.io/scottames/fedora-toolbox:latest
+          # yamllint disable-line rule:line-length
           options: -v ${{ github.workspace }}:/home/container/src/github.com/scottames/dots/main
           run: |
             /home/container/src/github.com/scottames/dots/main/scripts/init.sh \
-              --no-tty --branch "${{ steps.extract_branch.outputs.branch }}"
+              --no-tty --branch "${{ steps.extract_branch.outputs.branch }}" \
+              --promptDefaults
