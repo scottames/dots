@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.19.0](https://github.com/scottames/dots/compare/v0.18.0...v0.19.0) (2024-11-16)
+
+
+### Features
+
+* add nwg-look ([c85495b](https://github.com/scottames/dots/commit/c85495b08f03f29e9d421a9a12d325fb7341adaa))
+* **distrobox/fedora:** use host release version ([d7d7e3f](https://github.com/scottames/dots/commit/d7d7e3f46e4de64c0cf2286004fe6004615b0f97))
+* niri wm config ([#369](https://github.com/scottames/dots/issues/369)) ([6d06211](https://github.com/scottames/dots/commit/6d06211ed9ab8f98d96fc8ab745efa07291bdfac))
+
+
+### Bug Fixes
+
+* **chezmoi:** workaround for systemd/systemd[#15275](https://github.com/scottames/dots/issues/15275) ([0797854](https://github.com/scottames/dots/commit/0797854b88cb1dba163ad7784504dfc713fa5c92))
+
 ## [0.18.0](https://github.com/scottames/dots/compare/v0.17.0...v0.18.0) (2024-10-18)
 
 
