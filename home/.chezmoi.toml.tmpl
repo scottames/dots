@@ -4,20 +4,24 @@
 {{- $githubUser     := "scottames" -}}
 {{- $fontMonospace  := "FiraCode Nerd Font Mono" -}}
 
-{{- $chassis        := ""    -}}
-{{- $desktopSession := env "DESKTOP_SESSION" -}}
-{{- $gpu            := ""    -}}
-{{- $hostname       := ""    -}}
-{{- $hourDark       := 24 -}}
-{{- $hourLight      := 24 -}}
-{{- $isContainer    := false -}}
-{{- $isDistroBox    := false -}}
-{{- $isUblue        := false -}}
-{{- $loginSession     := 0 -}}
-{{- $loginSessionType := "" -}}
-{{- $osVariant      := "" -}}
-{{- $ublueImageInfo := "" -}}
-{{- $useGitWorktrees := true -}}
+{{- /* TODO: source entire file into env and reference natively here? */ -}}
+
+{{- $chassis          := ""    -}}
+{{- $desktopSession   := env "DESKTOP_SESSION" -}}
+{{- $gpu              := ""    -}}
+{{- $hostname         := ""    -}}
+{{- $hourDark         := 24    -}}
+{{- $hourLight        := 24    -}}
+{{- $isContainer      := false -}}
+{{- $isDistroBox      := false -}}
+{{- $isUblue          := false -}}
+{{- $loginSession     := 0     -}}
+{{- $loginSessionType := ""    -}}
+{{- $osName           := ""    -}}
+{{- $osVariant        := ""    -}}
+{{- $osVersion        := ""    -}}
+{{- $ublueImageInfo   := ""    -}}
+{{- $useGitWorktrees  := true  -}}
 
 {{- if $useGitWorktrees -}}
 {{-   $dotsStr = printf "%s/main" $dotsStr -}}
@@ -54,6 +58,14 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-
   $osVariant = lower ( trim (
   output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $VARIANT'" 
+   )) -}}
+{{-
+  $osVersion = lower ( trim (
+  output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $VERSION_ID'" 
+   )) -}}
+{{-
+  $osName = lower ( trim (
+  output "sh" "-c" "distrobox-host-exec sh -c '. /etc/os-release && echo $NAME'" 
    )) -}}
 {{-
   $ublueImageInfo = (
@@ -123,6 +135,8 @@ progress = true
     chassis = "{{ $chassis }}"
     is_ublue = {{ $isUblue }}
     os_variant = "{{ $osVariant }}"
+    os_version = "{{ $osVersion }}"
+    os_name = "{{ $osName }}"
     gpu = "{{ $gpu }}"
 
   [data.desktop]

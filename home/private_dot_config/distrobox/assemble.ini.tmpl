@@ -13,7 +13,9 @@ init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/ujust;
 init_hooks=ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xclip;
 
 [f]
-image=ghcr.io/scottames/fedora-toolbox:latest
+image=ghcr.io/scottames/fedora-toolbox:{{
+  if regexMatch "^fedora" (lower  .host.os_name)
+    }}{{ .host.os_version }}{{ else }}latest{{ end }}
 nvidia={{ (eq "nvidia" .host.gpu) }}
 pull=true
 root=false
