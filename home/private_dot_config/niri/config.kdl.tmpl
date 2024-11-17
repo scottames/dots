@@ -265,6 +265,7 @@ binds {
     Mod+Shift+Space { spawn "rofi" "-show" "drun"; }
     Mod+Ctrl+Space { spawn "rofi" "-show" "window"; }
     Super+Alt+L { spawn "hyprlock"; }
+    // FIXME: launch default terminal w/ yari
     Super+Alt+Y { spawn "/var/home/scta/.local/share/aquaproj-aqua/bin/bin/yari"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -464,9 +465,10 @@ binds {
     Mod+Shift+C { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
     Mod+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
 
-    Print { screenshot; }
+    Super+Print { spawn "sh" "-c" "grim -t png - | satty --fullscreen --filename -"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
+    Print { screenshot; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }

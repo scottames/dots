@@ -49,6 +49,23 @@
     path = "keymapp"
     refreshPeriod = "168h"
 
+# renovate: datasource=github-releases depName=gabm/Satty
+{{ $sattyVersion := "v0.14.0" -}}
+
+[".local/bin/satty"]
+    type = "archive-file"
+    url = "https://github.com/gabm/Satty/releases/download/{{ $sattyVersion }}/satty-x86_64-unknown-linux-gnu.tar.gz"
+    path = "satty"
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".config/fish/completions/satty.fish"]
+  type = "archive-file"
+  url = "https://github.com/gabm/Satty/releases/download/{{ $sattyVersion }}/satty-x86_64-unknown-linux-gnu.tar.gz"
+  path = "completions/satty.fish"
+  stripComponents = 1
+  refreshPeriod = "168h"
+
 [".local/share/yubico-authenticator"]
     type = "archive"
     url = "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz"

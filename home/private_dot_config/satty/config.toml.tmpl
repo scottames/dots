@@ -1,0 +1,33 @@
+[general]
+annotation-size-factor = 1
+copy-command = "wl-copy"
+default-hide-toolbars = false
+disable-notifications = false
+# Exit directly after copy/save action
+early-exit = true
+fullscreen = false
+# Select the tool on startup
+#  possible values:
+#    pointer, crop, line, arrow, rectangle, text, marker, blur, brush
+initial-tool = "crop"
+# Filename to use for saving action
+# Omit to disable saving to file
+# Might contain format specifiers:
+#   https://docs.rs/chrono/latest/chrono/format/strftime/index.html
+output-filename = "{{ .chezmoi.homeDir }}/Pictures/Screenshots/satty-%Y-%m-%d_%H:%M:%S.png"
+save-after-copy = false
+primary-highlighter = "block"
+
+# Font to use for text annotations
+[font]
+family = "Roboto"
+style = "Bold"
+
+# custom colours for the colour palette
+[color-palette]
+first = "#00ffff"
+second = "#a52a2a"
+third = "#dc143c"
+fourth = "#ff1493"
+fifth = "#ffd700"
+custom = "#008000"
