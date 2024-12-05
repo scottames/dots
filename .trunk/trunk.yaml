@@ -25,29 +25,29 @@ actions:
         - files: ["*.go"]
 lint:
   enabled:
-    - bandit@1.7.10
+    - bandit@1.8.0
     - black@24.10.0
-    - checkov@3.2.296
+    - checkov@3.2.330
     - isort@5.13.2
-    - ruff@0.7.3
+    - ruff@0.8.1
     - trivy@0.56.2
     - gokart@0.5.1
     - osv-scanner@1.9.1
     - svgo@3.3.2
     - terrascan@1.19.1
-    - trufflehog@3.83.7
+    - trufflehog@3.84.2
     - actionlint@1.7.4
     - git-diff-check@SYSTEM
     - gitleaks@8.21.2
     - gofmt@1.20.4
-    - golangci-lint@1.62.0
+    - golangci-lint@1.62.2
     - hadolint@2.12.1-beta
-    - markdownlint@0.42.0
-    - prettier@3.3.3
-    - renovate@39.16.0
+    - markdownlint@0.43.0
+    - prettier@3.4.2
+    - renovate@39.49.3
     - shellcheck@0.10.0
     - shfmt@3.6.0
-    - stylua@0.20.0
+    - stylua@2.0.1
     - taplo@0.9.3
     - yamllint@1.35.1
   files:
