@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.20.0](https://github.com/scottames/dots/compare/v0.19.0...v0.20.0) (2024-12-11)
+
+
+### Features
+
+* **chezmoi:** get wallpaper from init input ([02e5b94](https://github.com/scottames/dots/commit/02e5b9472b7523848ab937ce335eb73181b73f71))
+* satty - screenshot util ([a2a1cd6](https://github.com/scottames/dots/commit/a2a1cd6a86d57d6566737f37e85f771962377f21))
+
 ## [0.19.0](https://github.com/scottames/dots/compare/v0.18.0...v0.19.0) (2024-11-16)
 
 
