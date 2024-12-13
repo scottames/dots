@@ -7,7 +7,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.274.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.275.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -20,7 +20,7 @@ packages:
   - name: homeport/dyff@v1.9.4
   - name: kubernetes-sigs/krew@v0.4.4
   - name: marcosnils/bin@v0.19.1
-  - name: tofuutils/tenv@v3.2.10
+  - name: tofuutils/tenv@v3.2.11
   - name: twpayne/chezmoi@v2.55.0
   - name: zellij-org/zellij@v0.41.2
   - name: weaveworks/eksctl@v0.198.0
@@ -87,7 +87,7 @@ packages:
   - name: cue-lang/cue@v0.11.0
   - name: dprint/dprint@0.47.6
   - name: hashicorp/packer@v1.11.2
-  - name: snyk/cli@v1.1294.2
+  - name: snyk/cli@v1.1294.3
   - name: aquasecurity/tfsec@v1.28.11
   - name: int128/ghcp@v1.13.5
   - name: dagger/dagger@v0.14.0
@@ -100,7 +100,7 @@ packages:
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
   - name: dlvhdr/gh-dash@v4.7.3
   - name: withgraphite/gt
-    version: v1.5.0 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.5.1 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   - name: fastfetch-cli/fastfetch@2.31.0
   - name: bloznelis/typioca@3.1.0
