@@ -1,27 +1,10 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-
 local map = require("util").map
 local opts_silent = { silent = true }
 local opts_noremap_silent = { noremap = true, silent = true }
 local opts_noremap_silent_expr = { noremap = true, silent = true, expr = true }
-
-if os.getenv("TMUX") ~= nil then -- see also, plugins/editor#8
-  -- remove the defaults for numToStr/Navigator.nvim
-  --   https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L31-L36
-  pcall(vim.keymap.del, "n", "<A-j>")
-  pcall(vim.keymap.del, "n", "<A-k>")
-  pcall(vim.keymap.del, "v", "<A-j>")
-  pcall(vim.keymap.del, "i", "<A-j>")
-  pcall(vim.keymap.del, "v", "<A-k>")
-  pcall(vim.keymap.del, "i", "<A-k>")
-  vim.keymap.set({ "n", "t" }, "<A-h>", "<CMD>NavigatorLeft<CR>")
-  vim.keymap.set({ "n", "t" }, "<A-l>", "<CMD>NavigatorRight<CR>")
-  vim.keymap.set({ "n", "t" }, "<A-k>", "<CMD>NavigatorUp<CR>")
-  vim.keymap.set({ "n", "t" }, "<A-j>", "<CMD>NavigatorDown<CR>")
-  vim.keymap.set({ "n", "t" }, "<A-p>", "<CMD>NavigatorPrevious<CR>")
-end
 
 -- Do not save deleted char to register
 map("n", "x", '"_x', opts_noremap_silent)
@@ -48,9 +31,6 @@ map("n", "N", "Nzzzv")
 -- addionally: (currently makes ctrl+d/u jump back weirdly)
 -- map("n", "<C-d>", "<C-d>zz")
 -- map("n", "<C-u>", "<C-u>zz")
-
--- https://crates.io/crates/tmux-sessionizer
-map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- easier write
 -- map("n", "<C-s>", ":w<CR>", {desc = "Write"}) -- save already mapped via LazyVim
@@ -106,53 +86,3 @@ map("v", ">", ">gv", opts_silent)
 -- Move selected lines
 map("v", "J", ":m '>+1<CR>gv=gv", opts_silent)
 map("v", "K", ":m '<-2<CR>gv=gv", opts_silent)
-
--- https://github.com/sabah1994/dotfiles/blob/354f4eaae7829686ac25c749f452bc1966a2e945/nvim/lua/keyMappings.lua#L10-L58
--- avoid repeating hjkl keys
-local avoid_hjkl_id
-local function avoid_hjkl(mode, mov_keys)
-  for _, key in ipairs(mov_keys) do
-    local count = 0
-    vim.keymap.set(mode, key, function()
-      if count >= 5 then
-        avoid_hjkl_id = vim.notify("Hold it Cowboy!", vim.log.levels.WARN, {
-          icon = "🤠",
-          replace = avoid_hjkl_id,
-          keep = function()
-            return count >= 5
-          end,
-        })
-      else
-        count = count + 1
-        -- after 5 seconds decrement
-        vim.defer_fn(function()
-          count = count - 1
-        end, 5000)
-        return key
-      end
-    end, { expr = true })
-  end
-end
-
--- Hard mode toggle
-HardMode = false
-function ToggleHardMode()
-  local modes = { "n", "v" }
-  local movement_keys = { "h", "j", "k", "l" }
-  if HardMode then
-    for _, mode in pairs(modes) do
-      for _, m_key in pairs(movement_keys) do
-        vim.api.nvim_del_keymap(mode, m_key)
-      end
-    end
-    vim.notify("Hard mode OFF", vim.log.levels.INFO, { timeout = 5 })
-  else
-    for _, mode in pairs(modes) do
-      avoid_hjkl(mode, movement_keys)
-    end
-    vim.notify("Hard mode ON", vim.log.levels.INFO, { timeout = 5 })
-  end
-  HardMode = not HardMode
-end
-
-map("n", "<leader>th", ":lua ToggleHardMode()<CR>", { noremap = true, silent = true, desc = "Hard Mode" })

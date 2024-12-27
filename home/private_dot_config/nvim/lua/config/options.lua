@@ -1,13 +1,12 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
-
 local opt = vim.opt
 
 local time = os.date("*t")
 local hr = time.hour
 
-if hr >= {{ .desktop.hour.light }} and hr <= {{ .desktop.hour.dark }} then
+if hr >= 24 and hr <= 24 then
   opt.background = "light"
 end
 
@@ -37,7 +36,7 @@ opt.smarttab = true
 
 -- title
 
-vim.o.titlestring = ' ❐ %t %r %m'
+vim.o.titlestring = " ❐ %t %r %m"
 vim.o.titleold = '%{fnamemodify(getcwd(), ":t")}'
 vim.o.title = true
 vim.o.titlelen = 70
