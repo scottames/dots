@@ -260,10 +260,11 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "alacritty"; }
+    Mod+G { spawn "ghostty"; }
     Mod+D { spawn "fuzzel"; }
-    Mod+Space { spawn "rofi" "-show" "combi"; }
-    Mod+Shift+Space { spawn "rofi" "-show" "drun"; }
-    Mod+Ctrl+Space { spawn "rofi" "-show" "window"; }
+    // Mod+Space { spawn "rofi" "-show" "combi"; }
+    // Mod+Shift+Space { spawn "rofi" "-show" "drun"; }
+    // Mod+Ctrl+Space { spawn "rofi" "-show" "window"; }
     Super+Alt+L { spawn "hyprlock"; }
     // FIXME: launch default terminal w/ yari
     Super+Alt+Y { spawn "/var/home/scta/.local/share/aquaproj-aqua/bin/bin/yari"; }
