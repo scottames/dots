@@ -17,9 +17,10 @@
     "temperature",
     "power-profiles-daemon",
     "disk",
-    "battery",
     "backlight",
     "network",
+    "custom/tailscale",
+    "battery",
     "pulseaudio",
     "custom/lock",
     "custom/power"
@@ -123,6 +124,20 @@
       "󰂂",
       "󰁹"
     ]
+  },
+  "custom/tailscale": {
+    "exec": "~/.config/waybar/scripts/tailscale.sh",
+    "interval": 10,
+    "format": "{}",
+    "tooltip": true,
+    "return-type": "json"
+  },
+  "network#tailscale": {
+    "interface": "tailscale0",
+    "format": "󰌆",
+    "format-disconnected": "󰌊",
+    "tooltip-format": "{ifname}: {bandwidthUpBits} {bandwidthDownBits}",
+    "tooltip-format-disconnected": "disconnected",
   },
   "network": {
     "format-wifi": " ",

@@ -57,6 +57,7 @@ tooltip {
 #custom-caffeine,
 #custom-lock,
 #custom-power,
+#custom-tailscale,
 #disk,
 #battery,
 #cpu,
@@ -98,7 +99,8 @@ tooltip {
 #battery {
   color: @green;
   border-left: 0px;
-  border-right: 0px;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
 #clock {
@@ -156,8 +158,17 @@ tooltip {
 #network {
   color: @text;
   border-left: 0px;
-  border-radius: 0 10px 10px 0;
-  margin-right: 10px;
+  border-right: 0px;
+}
+
+#custom-tailscale {
+  color: @text;
+  border-left: 0px;
+  border-right: 0px;
+  color: @red;
+}
+#custom-tailscale.enabled {
+  color: @green;
 }
 
 #custom-power {
