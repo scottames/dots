@@ -20,7 +20,7 @@ packages:
   - name: homeport/dyff@v1.9.4
   - name: kubernetes-sigs/krew@v0.4.4
   - name: marcosnils/bin@v0.19.1
-  - name: tofuutils/tenv@v3.2.10
+  - name: tofuutils/tenv@v4.2.4
   - name: twpayne/chezmoi@v2.55.0
   - name: zellij-org/zellij@v0.41.2
   - name: weaveworks/eksctl@v0.198.0
@@ -94,7 +94,7 @@ packages:
   - name: helix-editor/helix@24.03
   - name: danielfoehrKn/kubeswitch@0.9.2
   - name: gabeduke/kubectl-iexec@v1.19.14
-  - name: sxyazi/yazi@v0.4.1
+  - name: sxyazi/yazi@v25.2.26
   - name: leg100/pug@v0.5.5 # Drive terraform at terminal velocity
   - name: fujiwara/awslim@v0.3.10 # A simplified alternative to the AWS CLI for limited use cases
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
