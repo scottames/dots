@@ -452,6 +452,10 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
+    // Move the focused window between the floating and the tiling layout.
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
     // a matching layout switch hotkey configured in xkb options above.
@@ -464,7 +468,7 @@ binds {
     // clipboard with the compositor. For textual data you can do it manually
     // using wl-clipboard. https://github.com/YaLTeR/niri/wiki/Xwayland
     Mod+Shift+C { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
-    Mod+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
+    Mod+Ctrl+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
 
     Super+Print { spawn "sh" "-c" "grim -t png - | satty --fullscreen --filename -"; }
     Ctrl+Print { screenshot-screen; }
