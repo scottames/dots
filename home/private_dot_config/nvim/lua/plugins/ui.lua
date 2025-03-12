@@ -1,4 +1,16 @@
 return {
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = true, -- This makes hidden files visible by default
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+      },
+    },
+  },
   -- A VS Code like winbar for Neovim
   { -- https://github.com/utilyre/barbecue.nvim
     "utilyre/barbecue.nvim",
