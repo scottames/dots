@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.20.0](https://github.com/scottames/dots/compare/v0.19.0...v0.20.0) (2025-03-14)
+
+
+### Features
+
+* **chezmoi:** get wallpaper from init input ([02e5b94](https://github.com/scottames/dots/commit/02e5b9472b7523848ab937ce335eb73181b73f71))
+* **fish:** add y helper for yazi ([0a04555](https://github.com/scottames/dots/commit/0a0455546f29e3bfae44ecf13a7a609c769603ae))
+* **ghostty:** hype! ([5fe07fe](https://github.com/scottames/dots/commit/5fe07fe84c2951f7e1308a287df19829f460f548))
+* **niri:** add keybindings for floating windows ([8f06d50](https://github.com/scottames/dots/commit/8f06d502f3dbfb759bff5e61e1e46cbca906a799))
+* **niri:** keybinds for tabs ([d05eb49](https://github.com/scottames/dots/commit/d05eb49a3485769659649952643e27b3b8a90503))
+* **nvim/neo-tree:** always show hidden ([15fcfc7](https://github.com/scottames/dots/commit/15fcfc7d62a23400705906866738fc61552fd56e))
+* **nvim:** add avante ([f8a2bd4](https://github.com/scottames/dots/commit/f8a2bd49540c5f04d7e309a5c023f4db1929c046))
+* satty - screenshot util ([a2a1cd6](https://github.com/scottames/dots/commit/a2a1cd6a86d57d6566737f37e85f771962377f21))
+* **waybar:** add tailscale indicator ([e93df78](https://github.com/scottames/dots/commit/e93df78c688ce12812bb609e0029425d15803892))
+
+
+### Bug Fixes
+
+* **niri:** spawn mate polkit agent ([d6d0bb7](https://github.com/scottames/dots/commit/d6d0bb72e2596664ea50c060ff649da12a0744ab))
+
 ## [0.19.0](https://github.com/scottames/dots/compare/v0.18.0...v0.19.0) (2024-11-16)
 
 
