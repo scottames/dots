@@ -4,6 +4,7 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Overview
 
 environment {
+  DISPLAY ":0"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
@@ -181,6 +182,9 @@ layout {
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
+{{ if lookPath "xwayland-satellite" -}}
+spawn-at-startup "{{ lookPath "xwayland-satellite" }}"
+{{- end }}
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.

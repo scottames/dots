@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -ex
+
+# {{ include (joinPath .chezmoi.homeDir ".local/share/xwayland-satellite/.git/HEAD") }}
+
+if [[ -f "/usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h" ]]; then
+  export C_INCLUDE_PATH="/usr/lib/gcc/x86_64-redhat-linux/14/include:${C_INCLUDE_PATH}"
+fi
+
+cd ~/.local/share/xwayland-satellite
+cargo build --release
+cp target/release/xwayland-satellite ~/.local/bin/
+
+# vi: ft=bash
