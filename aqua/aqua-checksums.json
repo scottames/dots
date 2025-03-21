@@ -706,13 +706,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/dl.k8s.io/v1.32.2/bin/linux/amd64/kubectl",
-      "checksum": "4F6A959DCC5B702135F8354CC7109B542A2933C46B808B248A214C1F69F817EA",
+      "id": "http/dl.k8s.io/v1.32.3/bin/linux/amd64/kubectl",
+      "checksum": "AB209D0C5134B61486A0486585604A616A5BB2FC07DF46D304B3C95817B2D79F",
       "algorithm": "sha256"
     },
     {
-      "id": "http/dl.k8s.io/v1.32.2/bin/linux/arm64/kubectl",
-      "checksum": "7381BEA99C83C264100F324C2CA6E7E13738A73B8928477AC805991440A065CD",
+      "id": "http/dl.k8s.io/v1.32.3/bin/linux/arm64/kubectl",
+      "checksum": "6C2C91E760EFBF3FA111A5F0B99BA8975FB1C58BB3974ECA88B6134BCF3717E2",
       "algorithm": "sha256"
     },
     {
