@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.21.0](https://github.com/scottames/dots/compare/v0.20.0...v0.21.0) (2025-03-21)
+
+
+### Features
+
+* **chezmoi/niri:** add xwayland support ([c7496ac](https://github.com/scottames/dots/commit/c7496ac2e38d08855dfddb05ff71175fbcc8d4c0))
+* **nvim:** avante tweaks ([fb2a4e3](https://github.com/scottames/dots/commit/fb2a4e321b5462fb08321280afd0fec9da4c476c))
+
+
+### Bug Fixes
+
+* **chezmoi:** only build xw-sat when cloned ([99ba8bb](https://github.com/scottames/dots/commit/99ba8bb3f854263c35e388a810e7fb056daade3d))
+
 ## [0.20.0](https://github.com/scottames/dots/compare/v0.19.0...v0.20.0) (2025-03-14)
 
 
