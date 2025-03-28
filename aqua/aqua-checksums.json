@@ -66,13 +66,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.28.0/kubeseal-0.28.0-linux-amd64.tar.gz",
-      "checksum": "F6FBAEEA184AAF942298768AD58E20329EEDE6ECE7A8ECCD3A38258AC84B7BAA",
+      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.29.0/kubeseal-0.29.0-linux-amd64.tar.gz",
+      "checksum": "D7F146AC7003787023AE81324B9B980E2182B7F217DDB7F2DD591683FB322BD3",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.28.0/kubeseal-0.28.0-linux-arm64.tar.gz",
-      "checksum": "9278624A6F3D2094EB2E0A6EC06B89318AFE0F9BBEA52DC0FE614243E225CD6C",
+      "id": "github_release/github.com/bitnami-labs/sealed-secrets/v0.29.0/kubeseal-0.29.0-linux-arm64.tar.gz",
+      "checksum": "7A89F4F79D173C64A305F3F634F4CB2E863541C2A19BF0E19F048D7A1F4A33AE",
       "algorithm": "sha256"
     },
     {
@@ -221,13 +221,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eksctl-io/eksctl/v0.205.0/eksctl_Linux_amd64.tar.gz",
-      "checksum": "52F52276276D421F03790FBDC1B02E783C369F4863FC6DC83CF116F2F89CA5C4",
+      "id": "github_release/github.com/eksctl-io/eksctl/v0.206.0/eksctl_Linux_amd64.tar.gz",
+      "checksum": "06A7A46A83E250907C02A3AD07163E96498E11B63A692BB09B763809E59B3B97",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eksctl-io/eksctl/v0.205.0/eksctl_Linux_arm64.tar.gz",
-      "checksum": "182F1104FDF886D613EADA1AEE120BF7627D77D9886F30C3F78C28A5A3BF8C08",
+      "id": "github_release/github.com/eksctl-io/eksctl/v0.206.0/eksctl_Linux_arm64.tar.gz",
+      "checksum": "C771864A2CEA189C01EEE47902B69D3578B1BF3CEB8657A4CE1295113DBB29DD",
       "algorithm": "sha256"
     },
     {
@@ -516,13 +516,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.10.4/nvim-linux-arm64.tar.gz",
-      "checksum": "C819BF47A9878013BA35CEAE87125DD170EDE4A72844D049FB35F781045872EB",
+      "id": "github_release/github.com/neovim/neovim/v0.11.0/nvim-linux-arm64.tar.gz",
+      "checksum": "6959583F45042DA20E0A082DC65108725629A4739AB91246C678FD084ECAF50E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.10.4/nvim-linux-x86_64.tar.gz",
-      "checksum": "95AAA8E89473F5421114F2787C13AE0EC6E11EBBD1A13A1BD6FCF63420F8073F",
+      "id": "github_release/github.com/neovim/neovim/v0.11.0/nvim-linux-x86_64.tar.gz",
+      "checksum": "FE0A5BC79E64C5E4D9F844CD96157EBD3919EF1343B329E9EBC3F455924CC7D6",
       "algorithm": "sha256"
     },
     {
@@ -576,33 +576,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/smallstep/certificates/v0.28.3/step-ca_linux_0.28.3_amd64.tar.gz",
-      "checksum": "E0747AE6B14F4306D7F9D70A2D556645EA45CC0067246426CA6834272EEEFA6E",
+      "id": "github_release/github.com/smallstep/certificates/v0.28.3/step-ca_linux_amd64.tar.gz",
+      "checksum": "347E13D7F416844F1E6C89044BDF28A5E9A209BF519E962BEF6788C857678323",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/smallstep/certificates/v0.28.3/step-ca_linux_0.28.3_arm64.tar.gz",
-      "checksum": "0B42CF6AD0472407B67437837C910FD80A90D270CBB06CE5B63318B7B29AEB9A",
+      "id": "github_release/github.com/smallstep/certificates/v0.28.3/step-ca_linux_arm64.tar.gz",
+      "checksum": "26CA0A7D0BC9BD7663A2E2EC97F3EE6F25E9EC4B1DCC66DBF92DD92B237BD9A1",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/smallstep/cli/v0.28.6/step_linux_0.28.6_amd64.tar.gz",
-      "checksum": "0C1D8EEDDEF7DD4BA279C7985392602163C19412860EFC5BBAD05F9FFE3A7338",
+      "id": "github_release/github.com/smallstep/cli/v0.28.6/step_linux_amd64.tar.gz",
+      "checksum": "24EA2D500DAF1DDF32B478C992436089610D93FEF24072B3FC15D570F4DA08D8",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/smallstep/cli/v0.28.6/step_linux_0.28.6_arm64.tar.gz",
-      "checksum": "1475CE97BC41873D7665F947277D209D30010F23EEB8688D5F677DF6F0A11662",
+      "id": "github_release/github.com/smallstep/cli/v0.28.6/step_linux_arm64.tar.gz",
+      "checksum": "A1FEF013EE2C2C3CC25CC0390B92ECA5AA2CCD2290F5B3A76EE60B0A5C01CE97",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/snyk/cli/v1.1296.0/snyk-linux",
-      "checksum": "FB03583FFC0AE0C5DC8621A91764D840967FBBFC21B66956089107693F878982",
+      "id": "github_release/github.com/snyk/cli/v1.1296.1/snyk-linux",
+      "checksum": "8870D953730CF1FF0BF248D5DAAB10D605F341864417B6A2026432ACFFF8504D",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/snyk/cli/v1.1296.0/snyk-linux-arm64",
-      "checksum": "18B82A90742AD75D22C75C8674363D2ABE26A2C1E272A10FB146E09829828E0B",
+      "id": "github_release/github.com/snyk/cli/v1.1296.1/snyk-linux-arm64",
+      "checksum": "22292B00D4460D3A2DD5A009832352DB22C5EFDC3E26FAD47F39C464C4BFC163",
       "algorithm": "sha256"
     },
     {
@@ -656,13 +656,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tofuutils/tenv/v4.3.0/tenv_v4.3.0_Linux_arm64.tar.gz",
-      "checksum": "704BC1F9C71537144636674643D26BEF17DDA54386F5B382CCC135C48FB9EA9E",
+      "id": "github_release/github.com/tofuutils/tenv/v4.4.0/tenv_v4.4.0_Linux_arm64.tar.gz",
+      "checksum": "F3E056571D4A2DACE313EE11BC5216D1F74C60BFA64768CDAF02DFBCF7C1CCB1",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tofuutils/tenv/v4.3.0/tenv_v4.3.0_Linux_x86_64.tar.gz",
-      "checksum": "1F391FF8DE5C7768F3EDBE0FD8605B3864068EACC6C2F57595ADFA6073100DB0",
+      "id": "github_release/github.com/tofuutils/tenv/v4.4.0/tenv_v4.4.0_Linux_x86_64.tar.gz",
+      "checksum": "E5C37CEA3B3588ECB2BFD6D9A04CF00C9FC1CFA369E6AC5FFC0088C0B5B8870E",
       "algorithm": "sha256"
     },
     {
@@ -676,13 +676,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/twpayne/chezmoi/v2.60.1/chezmoi_2.60.1_linux-glibc_amd64.tar.gz",
-      "checksum": "75BF71930EB975E72D0A1C5A7912CD4638E55F47F091D595D4ED8D3F01E12C24",
+      "id": "github_release/github.com/twpayne/chezmoi/v2.61.0/chezmoi_2.61.0_linux-glibc_amd64.tar.gz",
+      "checksum": "D6513141E656C10A00ADC0DEBB3353F88502F508C53E3C37F815B42506BAFF28",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/twpayne/chezmoi/v2.60.1/chezmoi_2.60.1_linux_arm64.pkg.tar.zst",
-      "checksum": "200A427C60D37C0C7693CE1579CD93DDEE98B0A6506FE1930BE38A155F59A16A",
+      "id": "github_release/github.com/twpayne/chezmoi/v2.61.0/chezmoi_2.61.0_linux_arm64.pkg.tar.zst",
+      "checksum": "7B063D0F54B1AF067073282DD5FDADB5AF347B1A44A93AB01FB326836A93FD1B",
       "algorithm": "sha256"
     },
     {
@@ -726,8 +726,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.6.0/gt-linux",
-      "checksum": "F7678951FFFC2FBEE464016CD471C4820641EA35B4C6F476A863480B6E690CD9",
+      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.6.1/gt-linux",
+      "checksum": "865EFF8820D412B3CC7EBAE773B523B6922322402F45F675E369CC009E358137",
       "algorithm": "sha256"
     },
     {
@@ -766,8 +766,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.331.0/registry.yaml",
-      "checksum": "2230657D73B4CEC3E9D68406051D02D68086D4E752E81366B0CEF45074817B51DB77AA1004A6A9DCA8DA61149EC20582C58AC68D406DA05DC40EF58ED32281D0",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.333.0/registry.yaml",
+      "checksum": "32113D9414119FE8948C58C912E02D5C6BA2DFAFDA4F863E8B2E12392B778775D7E2505E4C4EC3371B46282A2A112F3BFCCA1DACA695692132A65BE0ADFBBD83",
       "algorithm": "sha512"
     }
   ]
