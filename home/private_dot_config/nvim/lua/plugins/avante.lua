@@ -2,6 +2,9 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   version = "*",
+  enabled = function()
+    return os.getenv("ANTHROPIC_API_KEY") == nil
+  end,
   opts = {
     behaviour = {
       auto_suggestions = true,
