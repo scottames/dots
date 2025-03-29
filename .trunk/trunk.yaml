@@ -27,29 +27,29 @@ lint:
   enabled:
     - bandit@1.8.3
     - black@25.1.0
-    - checkov@3.2.386
+    - checkov@3.2.392
     - isort@6.0.1
-    - ruff@0.11.0
+    - ruff@0.11.2
     - trivy@0.60.0
     - gokart@0.5.1
     - osv-scanner@2.0.0
     - svgo@3.3.2
     - terrascan@1.19.1
-    - trufflehog@3.88.17
+    - trufflehog@3.88.18
     - actionlint@1.7.7
     - git-diff-check@SYSTEM
-    - gitleaks@8.24.0
+    - gitleaks@8.24.2
     - gofmt@1.20.4
     - golangci-lint@1.64.8
     - hadolint@2.12.1-beta
     - markdownlint@0.44.0
     - prettier@3.5.3
-    - renovate@39.207.2
+    - renovate@39.213.6
     - shellcheck@0.10.0
     - shfmt@3.6.0
     - stylua@2.0.2
     - taplo@0.9.3
-    - yamllint@1.36.2
+    - yamllint@1.37.0
   files:
     - name: go-templates
       extensions:
