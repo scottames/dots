@@ -7,7 +7,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.333.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.336.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -23,7 +23,7 @@ packages:
   - name: tofuutils/tenv@v4.4.0
   - name: twpayne/chezmoi@v2.61.0
   - name: zellij-org/zellij@v0.42.1
-  - name: weaveworks/eksctl@v0.206.0
+  - name: weaveworks/eksctl@v0.207.0
   - name: keilerkonzept/terraform-module-versions@v3.3.7
   - name: magefile/mage@v1.15.0
   - name: starship/starship@v1.22.1
@@ -45,7 +45,7 @@ packages:
   - name: dandavison/delta@0.18.2
   - name: stedolan/jq@jq-1.6
   - name: jtyr/gbt@v2.0.0
-  - name: junegunn/fzf@v0.60.3
+  - name: junegunn/fzf@v0.61.0
   - name: hadolint/hadolint@v2.12.0
   - name: jesseduffield/lazygit@v0.48.0
   - name: derailed/k9s@v0.40.10
@@ -59,18 +59,18 @@ packages:
   - name: GoogleContainerTools/skaffold@v2.14.2
   - name: smallstep/certificates@v0.28.3
   - name: smallstep/cli@v0.28.6
-  - name: terraform-linters/tflint@v0.55.1
+  - name: terraform-linters/tflint@v0.56.0
   - name: dwisiswant0/tlder@v0.1.1
   - name: itchyny/json2yaml@v0.1.4
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.45.1
   - name: sigstore/cosign@v2.4.3
-  - name: nektos/act@v0.2.75
+  - name: nektos/act@v0.2.76
   - name: casey/just@1.40.0
   - name: tomnomnom/gron@v0.7.1
   - name: kevincobain2000/gobrew@v1.10.12
   - name: antonmedv/fx@35.0.0
-  - name: wagoodman/dive@v0.13.0
+  - name: wagoodman/dive@v0.13.1
   - name: dkaslovsky/nav@v1.1.0
     registry: dots
   - name: simulot/immich-go@1.21.3
@@ -80,7 +80,7 @@ packages:
   - name: PaulJuliusMartinez/jless@v0.9.0
   - name: konradsz/igrep@v1.3.0
   - name: rhysd/hgrep@v0.3.8
-  - name: eza-community/eza@v0.20.24
+  - name: eza-community/eza@v0.21.0
   - name: kisielk/errcheck@v1.9.0
     registry: dots
   - name: mvdan/sh@v3.11.0
@@ -98,9 +98,9 @@ packages:
   - name: leg100/pug@v0.6.2 # Drive terraform at terminal velocity
   - name: fujiwara/awslim@v0.3.11 # A simplified alternative to the AWS CLI for limited use cases
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
-  - name: dlvhdr/gh-dash@v4.13.0
+  - name: dlvhdr/gh-dash@v4.14.0
   - name: withgraphite/gt
     version: v1.6.1 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
-  - name: fastfetch-cli/fastfetch@2.39.1
+  - name: fastfetch-cli/fastfetch@2.40.0
   - name: bloznelis/typioca@3.1.0
