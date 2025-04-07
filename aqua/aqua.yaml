@@ -7,7 +7,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.336.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.340.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -21,7 +21,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.4.5
   - name: marcosnils/bin@v0.20.0
   - name: tofuutils/tenv@v4.4.0
-  - name: twpayne/chezmoi@v2.61.0
+  - name: twpayne/chezmoi@v2.62.0
   - name: zellij-org/zellij@v0.42.1
   - name: weaveworks/eksctl@v0.207.0
   - name: keilerkonzept/terraform-module-versions@v3.3.7
@@ -45,7 +45,7 @@ packages:
   - name: dandavison/delta@0.18.2
   - name: stedolan/jq@jq-1.6
   - name: jtyr/gbt@v2.0.0
-  - name: junegunn/fzf@v0.61.0
+  - name: junegunn/fzf@v0.61.1
   - name: hadolint/hadolint@v2.12.0
   - name: jesseduffield/lazygit@v0.48.0
   - name: derailed/k9s@v0.40.10
@@ -56,7 +56,7 @@ packages:
   - name: bitnami-labs/sealed-secrets@v0.29.0
   - name: instrumenta/kubeval@v0.16.1
   - name: kubernetes/minikube@v1.35.0
-  - name: GoogleContainerTools/skaffold@v2.14.2
+  - name: GoogleContainerTools/skaffold@v2.15.0
   - name: smallstep/certificates@v0.28.3
   - name: smallstep/cli@v0.28.6
   - name: terraform-linters/tflint@v0.56.0
@@ -84,7 +84,7 @@ packages:
   - name: kisielk/errcheck@v1.9.0
     registry: dots
   - name: mvdan/sh@v3.11.0
-  - name: cue-lang/cue@v0.12.0
+  - name: cue-lang/cue@v0.12.1
   - name: dprint/dprint@0.49.1
   - name: hashicorp/packer@v1.12.0
   - name: snyk/cli@v1.1296.1
@@ -102,5 +102,5 @@ packages:
   - name: withgraphite/gt
     version: v1.6.1 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
-  - name: fastfetch-cli/fastfetch@2.40.0
+  - name: fastfetch-cli/fastfetch@2.40.3
   - name: bloznelis/typioca@3.1.0
