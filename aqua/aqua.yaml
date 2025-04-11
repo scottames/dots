@@ -7,7 +7,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.340.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.344.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -38,7 +38,7 @@ packages:
   - name: direnv/direnv@v2.35.0
   - name: kubernetes/kubectl@v1.32.3
   - name: fluxcd/flux2@v2.5.1
-  - name: helm/helm@v3.17.2
+  - name: helm/helm@v3.17.3
   - name: kubernetes-sigs/kustomize@kustomize/v5.6.0
   - name: stern/stern@v1.32.0
   - name: charmbracelet/gum@v0.16.0
@@ -48,7 +48,7 @@ packages:
   - name: junegunn/fzf@v0.61.1
   - name: hadolint/hadolint@v2.12.0
   - name: jesseduffield/lazygit@v0.48.0
-  - name: derailed/k9s@v0.40.10
+  - name: derailed/k9s@v0.50.2
   - name: awslabs/amazon-ecr-credential-helper@v0.9.1
   - name: 99designs/aws-vault@v7.2.0
   - name: koalaman/shellcheck@v0.10.0
@@ -64,7 +64,7 @@ packages:
   - name: itchyny/json2yaml@v0.1.4
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   - name: mikefarah/yq@v4.45.1
-  - name: sigstore/cosign@v2.4.3
+  - name: sigstore/cosign@v2.5.0
   - name: nektos/act@v0.2.76
   - name: casey/just@1.40.0
   - name: tomnomnom/gron@v0.7.1
@@ -94,7 +94,7 @@ packages:
   - name: helix-editor/helix@24.03
   - name: danielfoehrKn/kubeswitch@0.9.3
   - name: gabeduke/kubectl-iexec@v1.19.14
-  - name: sxyazi/yazi@v25.3.2
+  - name: sxyazi/yazi@v25.4.8
   - name: leg100/pug@v0.6.2 # Drive terraform at terminal velocity
   - name: fujiwara/awslim@v0.3.11 # A simplified alternative to the AWS CLI for limited use cases
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
@@ -102,5 +102,5 @@ packages:
   - name: withgraphite/gt
     version: v1.6.1 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
-  - name: fastfetch-cli/fastfetch@2.40.3
+  - name: fastfetch-cli/fastfetch@2.40.4
   - name: bloznelis/typioca@3.1.0
