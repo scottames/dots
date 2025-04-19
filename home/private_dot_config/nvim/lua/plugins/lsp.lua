@@ -29,10 +29,6 @@ return {
         containerfile = { "dprint" },
         dockerfile = { "dprint" },
         fish = { "fish_indent" },
-        go = {
-          "gofumpt",
-          "golines",
-        },
         hcl = { "terragrunt_hclfmt" },
         json = { { "prettierd_json", "prettier_json" } },
         justfile = { "just" },
@@ -223,7 +219,6 @@ return {
         sh = { "shellcheck" },
         fish = { "fish" },
         git = { "commitlint" },
-        go = { "golangcilint" },
         html = { "tidy" },
         json = { "jsonlint" },
         lua = { "selene", "luacheck" },

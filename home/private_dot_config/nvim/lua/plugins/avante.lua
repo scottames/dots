@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   version = "*",
   enabled = function()
-    return os.getenv("ANTHROPIC_API_KEY") == nil
+    return os.getenv("ANTHROPIC_API_KEY") ~= nil
   end,
   opts = {
     behaviour = {
