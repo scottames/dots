@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env bash
 
 yellow='\033[0;33m'
 clear='\033[0m'

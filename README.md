@@ -7,6 +7,10 @@
 [![chezmoi init](https://github.com/scottames/dots/actions/workflows/pr_chezmoi_init.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_chezmoi_init.yaml)
 [![trunk.io](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml)
 
+- see also:
+    - [containers](https://github.com/scottames/containers) 
+        - my personal collection of container builds which uses Fedora Atomic to build my entire Linux experience outside the home directory
+
 ## 🚀 init
 
 Requirements: `curl`, `git`, and `go`
@@ -24,7 +28,28 @@ Optionally, pass additional params to `chezmoi init`
 curl -fsSL -O "https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh" && chmod +x init.sh && ./init.sh --branch <my_branch>
 ```
 
-> ⚠ written solely for Linux systems
+### MacOS (Darwin)
+
+nix flake is used to configure MacOS (Darwin) machines.
+
+> nix is not used for Linux machines
+
+Install nix ([lix](https://lix.systems/install/))
+
+- Note: flakes should be enabled (by default in lix)
+
+```bash
+curl -sSf -L https://install.lix.systems/lix | sh -s -- install
+```
+
+```bash
+cd /path/to/dots
+nix run .#install
+```
+
+- Note: `.#install` is unique to this flake (see bottom of
+  [flake.nix](./flake.nix)) that calls `darwin-rebuild switch --flake .#` under the hood
+
 
 ## 🔧 Tools of Note
 
@@ -34,8 +59,10 @@ curl -fsSL -O "https://raw.githubusercontent.com/scottames/dots/main/scripts/ini
 | [aqua](https://aquaproj.github.io/)                 | declarative cli version manager                                                                      |
 | [chezmoi](https://www.chezmoi.io/)                  | manage your dotfiles across multiple diverse machines, securely                                      |
 | [fish](https://fishshell.com/)                      | smart and user-friendly command line shell                                                           |
-| [lazygit](https://github.com/jesseduffield/lazygit) | simple terminal UI for git commands                                                            |
+| [lazygit](https://github.com/jesseduffield/lazygit) | simple terminal UI for git commands                                                                  |
 | [mage](https://magefile.org/)                       | make/rake-like build tool using golang                                                               |
+| [lix](https://lix.systems/) (nix)                   | A modern, implementation of the Nix package manager, focused on correctness, usability, and growth.  |
+| [nix-darwin](https://github.com/nix-darwin/nix-darwin) | nix modules for darwin  |
 | [neovim](https://neovim.io/)                        | hyperextensible Vim-based text editor                                                                |
 | [paperwm](https://github.com/paperwm/PaperWM)       | experimental Gnome Shell extension providing scrollable tiling of windows and per monitor workspaces |
 | [starship](https://starship.rs/)                    | minimal, blazing-fast, and infinitely customizable prompt for any shell!                             |

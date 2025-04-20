@@ -5,7 +5,7 @@
 {{- $hourLight        := 24    -}}
 {{- $githubUser     := "scottames" -}}
 {{- $fontMonospace  := "FiraCode Nerd Font Mono" -}}
-{{- $useGitWorktrees  := true  -}}
+{{- $useGitWorktrees  := false  -}}
 
 {{- /* TODO: source entire file into env and reference natively here? */ -}}
 
@@ -31,6 +31,13 @@
 {{- $gravatarID := trim (
 output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 ) -}}
+
+{{- if eq .chezmoi.os "darwin" -}}
+  {{- $osName = "macos" -}}
+  {{- $osVariant = "darwin" -}}
+  {{- $osVersion = trim (output "sh" "-c" "sw_vers -productVersion") -}}
+  {{- $hostname = trim (output "sh" "-c" "hostname | cut -d. -f1") -}}
+{{- end -}}
 
 {{- if eq .chezmoi.os "linux" -}}
 {{-

@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env bash
 
 ssh -T git@github.com >/dev/null 2>&1
 exit_status=$?

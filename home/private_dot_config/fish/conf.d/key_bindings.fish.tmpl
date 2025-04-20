@@ -20,7 +20,7 @@ function fish_user_key_bindings
     {{- if eq .chezmoi.os "linux" }}
     bind -M insert \e! 'distrobox enter a;'
     bind -M insert \e@ 'distrobox enter f;'
-    {{ end -}}
+    {{ end }}
 
     if set -q ZELLIJ
         bind -M insert \e, 'zellij_rename_tab;'

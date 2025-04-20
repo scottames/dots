@@ -1,0 +1,4 @@
+enable-ssh-support
+{{ if eq .chezmoi.os "linux" }}pinentry-program /usr/bin/pinentry-gnome3{{ end }}
+default-cache-ttl 60
+max-cache-ttl 120

@@ -4,6 +4,7 @@
 #   if not launched from inside container
 if status --is-login
     and not is_container >/dev/null
+    and not $IS_MAC
 
     if test -n $GUM_BIN
         and type -q distrobox-host-exec

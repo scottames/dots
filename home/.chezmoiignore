@@ -4,31 +4,36 @@
 .cache
 .gsettings.yaml
 
+# Symlinks
+aqua.yaml
+.config/nvim/lazylock.json
+.config/nvim/lazy-vim.json
+
 {{- if not (regexMatch "^gnome" .desktop.session) }}
 ### Ignore if not running gnome
 
-# Chezmoi Scripts
+.chezmoiscripts/42_colloid.sh
 .chezmoiscripts/40_catppuccin.sh
 .chezmoiscripts/45_gnome_extensions.sh
 
 {{ if not (lookPath "flatpak") }}
 .local/share/flatpak/overrides/com.valvesoftware.Steam
+.var/app/com.raggesilver.BlackBox
 {{- end}}
 
-# PaperWM
 .config/paperwm*
 src/github.com/paperwm*
-
-# Gnome Wallpaper Config
 .local/share/gnome-background-properties/*
 
-###
-{{- end}} # end .desktop.session = gnome
+{{- end }} # end .desktop.session = gnome
 
 {{- if not (regexMatch "niri" .desktop.session) }}
 .config/niri/config.kdl
+.config/nwg-look/
 .config/systemd/user/niri.service.wants/*
 .config/systemd/user/swaybg.service
+.config/waybar/
+.config/wlogout/
 .local/share/applications/vivaldi-stable.desktop
 {{- end}} # end .desktop.session = niri
 
@@ -41,25 +46,32 @@ src/github.com/paperwm*
 {{ end }}
 
 {{- if not (eq .host.os_variant "silverblue") }}
-### Ignore if not Fedora Silverblue
 .config/Yubico/u2f_keys
 {{- end }}
 
-{{- if not (eq .chezmoi.osRelease.id "arch") }}
-### Ignore if not Arch Linux
+{{- if and (hasKey .chezmoi "osRelease") (hasKey .chezmoi.osRelease "id") (not (eq .chezmoi.osRelease.id "arch")) }}
 .config/paru/paru.conf
 .config/fish/custom_functions.d/parus.fish
 ###
 {{- end }}
 
 {{ if not (lookPath "fish") }}
-### Ignore if no fish
 .config/fish/
 .chezmoiscripts/30_fisher.fish
 ###
 {{- end }}
 
-# Symlinks
-aqua.yaml
-.config/nvim/lazylock.json
-.config/nvim/lazy-vim.json
+{{ if eq .host.os_variant "darwin" }}
+.chezmoiscripts/20_distrobox.sh
+.chezmoiscripts/75_xwayland-satellite.sh
+
+.config/autostart/
+.config/hypr/
+.config/MangoHud/
+.config/rofi/
+.config/systemd/
+.config/satty/
+.config/wireplumber/
+
+.local/share/
+{{ end }}
