@@ -122,7 +122,9 @@ return {
         "toml",
         "tsx",
         "typescript",
+        "typos",
         "vim",
+        "woke",
         "yaml",
       })
     end,
