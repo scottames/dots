@@ -9,6 +9,9 @@ return {
     behaviour = {
       auto_suggestions = true,
     },
+    web_search_engine = os.getenv("KAGI_API_KEY") and {
+      provider = "kagi",
+    } or nil,
     -- -- add any opts here
     -- -- for example
     -- provider = "openai",
