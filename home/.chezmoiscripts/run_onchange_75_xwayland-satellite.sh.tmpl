@@ -33,10 +33,17 @@ if [[ -f "/usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h" ]]; then
   export C_INCLUDE_PATH="/usr/lib/gcc/x86_64-redhat-linux/14/include:${C_INCLUDE_PATH}"
 fi
 
-if [ -d "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite" ]; then
+if [[ -d "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite" ]]; then
     cd "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite"
     cargo build --release
-    cp target/release/xwayland-satellite "{{ .chezmoi.homeDir }}/.local/bin/"
+    if [[ -f "{{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite" ]]; then
+      cp target/release/xwayland-satellite "{{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite.new"
+      print_warn "xwayland-satellite already built, please manually update:"
+      echo "  cp {{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite.new {{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite"
+      echo
+    else
+      cp target/release/xwayland-satellite "{{ .chezmoi.homeDir }}/.local/bin/"
+    fi
 else
     print_warn "xwayland-satellite clone not found, skipping build"
 fi
