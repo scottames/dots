@@ -26,9 +26,9 @@ setenv AQUA_ROOT_DIR               "$HOME/.local/share/aquaproj-aqua/bin"
 setenv ARCHFLAGS                   "-arch x86_64"
 setenv AWS_PAGER                   ""
 $IS_LIGHT \
-  && setenv BAT_THEME              "Catppuccin-latte"
+  && setenv BAT_THEME              "Catppuccin Latte"
 $IS_DARK \
-  && setenv BAT_THEME              "Catppuccin-mocha"
+  && setenv BAT_THEME              "Catppuccin Mocha"
 setenv BOB_BIN                     "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                    1
 setenv DBX_ASSEMBLE_DEFAULT        "$HOME/.config/distrobox/assemble.ini"
