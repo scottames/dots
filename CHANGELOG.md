@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.21.0](https://github.com/scottames/dots/compare/v0.20.0...v0.21.0) (2025-04-24)
+
+
+### Features
+
+* add macos (darwin) support ([753bd01](https://github.com/scottames/dots/commit/753bd016d65eb845bb62df581dd8255ffe56d413))
+* **chezmoi/niri:** add xwayland support ([c7496ac](https://github.com/scottames/dots/commit/c7496ac2e38d08855dfddb05ff71175fbcc8d4c0))
+* **niri:** open keymapp in float ([b2e0812](https://github.com/scottames/dots/commit/b2e081231a98000df4fa497c6256aef239de7b5d))
+* **niri:** window rules ([3ca14b0](https://github.com/scottames/dots/commit/3ca14b020a75ac7cb2652374391f15c6daa7bda2))
+* **nvim:** avante tweaks ([fb2a4e3](https://github.com/scottames/dots/commit/fb2a4e321b5462fb08321280afd0fec9da4c476c))
+* **nvim:** avante use kagi api ([d4c1ea7](https://github.com/scottames/dots/commit/d4c1ea7ac476633e79c406570537aab82e5712d4))
+
+
+### Bug Fixes
+
+* **bat:** themes + completion ([d969f65](https://github.com/scottames/dots/commit/d969f6506d26c547c17e2f180e66db95e62357f0))
+* **chezmoi:** only build xw-sat when cloned ([99ba8bb](https://github.com/scottames/dots/commit/99ba8bb3f854263c35e388a810e7fb056daade3d))
+* **niri:** disable border + zen transparency ([f767980](https://github.com/scottames/dots/commit/f7679806d3b4a124e2cd5720465e46604963e5cb))
+* **nvim:** only load avante when key available ([3504bf3](https://github.com/scottames/dots/commit/3504bf3f282db9174063e061427cc3b3b381a302))
+* worktrees + xwayland-sat write issue ([f81b923](https://github.com/scottames/dots/commit/f81b923b5b4bfd78982c9e8d9c5278b5400fd156))
+
 ## [0.20.0](https://github.com/scottames/dots/compare/v0.19.0...v0.20.0) (2025-03-14)
 
 
