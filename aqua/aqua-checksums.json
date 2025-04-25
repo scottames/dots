@@ -261,16 +261,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/fujiwara/awslim/v0.4.0/awslim_0.4.0_linux_amd64.tar.gz",
-      "checksum": "C101612D00E360623B18C5B179CFC3CFA5FE5FDABE579BC0B00157425740316B",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/fujiwara/awslim/v0.4.0/awslim_0.4.0_linux_arm64.tar.gz",
-      "checksum": "A2C78305E45564C9FBCA1E28DAB2817B8586C36FFDE34912F6B20D8376B116A0",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/gabeduke/kubectl-iexec/v1.19.14/kubectl-iexec_v1.19.14_Linux_arm64.tar.gz",
       "checksum": "AFB9D567810A03348B8BED82EEBBC4BD5F3C31DB98D0142AD01826F2F6447BF3",
       "algorithm": "sha256"
@@ -711,13 +701,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/dl.k8s.io/v1.32.3/bin/linux/amd64/kubectl",
-      "checksum": "AB209D0C5134B61486A0486585604A616A5BB2FC07DF46D304B3C95817B2D79F",
+      "id": "http/dl.k8s.io/v1.33.0/bin/linux/amd64/kubectl",
+      "checksum": "9EFE8D3FACB23E1618CBA36FB1C4E15AC9DC3ED5A2C2E18109E4A66B2BAC12DC",
       "algorithm": "sha256"
     },
     {
-      "id": "http/dl.k8s.io/v1.32.3/bin/linux/arm64/kubectl",
-      "checksum": "6C2C91E760EFBF3FA111A5F0B99BA8975FB1C58BB3974ECA88B6134BCF3717E2",
+      "id": "http/dl.k8s.io/v1.33.0/bin/linux/arm64/kubectl",
+      "checksum": "48541D119455AC5BCC5043275CCDA792371E0B112483AA0B29378439CF6322B9",
       "algorithm": "sha256"
     },
     {
