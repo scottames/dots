@@ -56,13 +56,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/aquasecurity/tfsec/v1.28.13/tfsec_1.28.13_linux_amd64.tar.gz",
-      "checksum": "F643C390E6EABDF4BD64E807FF63ABFE977D4F027C0B535EEFE7A5C9F391FC28",
+      "id": "github_release/github.com/aquasecurity/tfsec/v1.28.14/tfsec_1.28.14_linux_amd64.tar.gz",
+      "checksum": "329AE7F67F2F1813EBE08DE498719EA7003C75D3CA24BB0B038369062508008E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/aquasecurity/tfsec/v1.28.13/tfsec_1.28.13_linux_arm64.tar.gz",
-      "checksum": "4AED1B122F817B684CC48DA9CDC4B98B891808969441914570C089883C85AC50",
+      "id": "github_release/github.com/aquasecurity/tfsec/v1.28.14/tfsec_1.28.14_linux_arm64.tar.gz",
+      "checksum": "13DCBD3602027BE49CE6CAB7E1C24B0A8E833F0143FE327B0A13B87686541CE0",
       "algorithm": "sha256"
     },
     {
@@ -111,13 +111,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.71.2/gh_2.71.2_linux_amd64.tar.gz",
-      "checksum": "6E52767D7AB14F6849C38B9DA1DAADE4C674F3FDE75E0434EDE33D921BB75D35",
+      "id": "github_release/github.com/cli/cli/v2.72.0/gh_2.72.0_linux_amd64.tar.gz",
+      "checksum": "FFD3A9791075CF6119531302B06554E658F38ED12675A7FBFBF4D6B114C77F38",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.71.2/gh_2.71.2_linux_arm64.tar.gz",
-      "checksum": "D94CF5F23041B70DFB670D45B70E79BB2E714D61ACD8E9B713989A1598269834",
+      "id": "github_release/github.com/cli/cli/v2.72.0/gh_2.72.0_linux_arm64.tar.gz",
+      "checksum": "30D3B41200B7A195C340D0F121BD214450A10770E4E5164FBF76540A8A68E384",
       "algorithm": "sha256"
     },
     {
@@ -231,23 +231,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.21.1/eza_aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "88DEBE2B2F8454B45C6D4B12BA32B5192FD345DE0FDC31C6E543EF12DAEA8870",
+      "id": "github_release/github.com/eza-community/eza/v0.21.2/eza_aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "D190401E0AB63C763F28EB45D57123EB62D1DD37A0E1384F9CE9A3D23040FC9E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.21.1/eza_x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "C9FFA0F9FA0C1ACC05E9D1BA0EFA0296C78CF55D5529A986A809BE0ED92B90C2",
+      "id": "github_release/github.com/eza-community/eza/v0.21.2/eza_x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "8D8B4D1BE5692111DFB8B09642127B6805AEA7F5D54678C4BB6364F0EF6C4BAD",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/fastfetch-cli/fastfetch/2.41.0/fastfetch-linux-aarch64.tar.gz",
-      "checksum": "2106DD88903260975292C6CB25C958427782CE6A0B2FABA304350F455564411C",
+      "id": "github_release/github.com/fastfetch-cli/fastfetch/2.42.0/fastfetch-linux-aarch64.tar.gz",
+      "checksum": "1117BCDECCC99BA338884D317A63905E74ED971B2DCE560A1B50CD0FD68D8780",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/fastfetch-cli/fastfetch/2.41.0/fastfetch-linux-amd64.tar.gz",
-      "checksum": "65F059EEFD1393BFC8A9230E319BF39449F1692A2D2D801089FAF8AA8D2206E2",
+      "id": "github_release/github.com/fastfetch-cli/fastfetch/2.42.0/fastfetch-linux-amd64.tar.gz",
+      "checksum": "21803136063447503C79FB4F6D50C9FCCB8E466351D253C39676F0BA2AA0C7D1",
       "algorithm": "sha256"
     },
     {
@@ -426,6 +426,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/kubernetes/minikube/v1.35.0/minikube-linux-amd64",
+      "checksum": "75369B2D64543284232BCF7578B77D42953DE213D1F19F745B414556239A3F0D",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/kubernetes/minikube/v1.35.0/minikube-linux-arm64",
+      "checksum": "75549BFDBC3FE483C060E5AA5B848374426552D7E346DF8BD15AD77532243767",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/leg100/pug/v0.6.2/pug_0.6.2_linux_amd64.zip",
       "checksum": "DEDBA47E6D9640E3696C754A903915CB3D291B5BEBCA92C0E5AFDC4E9E3140E4",
       "algorithm": "sha256"
@@ -456,13 +466,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/marcosnils/bin/v0.21.0/bin_0.21.0_linux_amd64",
-      "checksum": "728DD14A8B3557F4EB02CA2A7914612024B6F7FC54A8FD55785978A3DBFC2706",
+      "id": "github_release/github.com/marcosnils/bin/v0.21.1/bin_0.21.1_linux_amd64",
+      "checksum": "DA1AB3B3B05258DBD1F61D948BCD4229464E2FBDA3E8C7328B25C7184B98D692",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/marcosnils/bin/v0.21.0/bin_0.21.0_linux_arm64",
-      "checksum": "35D1F6909D7D27719D6660CA9C3447E36E5B4A093C32FE26807B121091CB91F7",
+      "id": "github_release/github.com/marcosnils/bin/v0.21.1/bin_0.21.1_linux_arm64",
+      "checksum": "5D7B355DBDBF84DB96B309B8E4C6D2F82321E20A367997E71CCEBFCA7FCE2580",
       "algorithm": "sha256"
     },
     {
@@ -496,23 +506,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/nektos/act/v0.2.76/act_Linux_arm64.tar.gz",
-      "checksum": "A715DA5585D7625DD4BAB08A7076373BD83363C66E2C1D0C226C9AB63C6A95B5",
+      "id": "github_release/github.com/nektos/act/v0.2.77/act_Linux_arm64.tar.gz",
+      "checksum": "A6C2B49FF3FD1BD3644CC0F4892E71660236DB3E122CD9547D334C69B14B9EC5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/nektos/act/v0.2.76/act_Linux_x86_64.tar.gz",
-      "checksum": "D4720E05E73CE634239FC0E7FA6B552F9AC79B4E6C878A8756BBFACCE3C56720",
+      "id": "github_release/github.com/nektos/act/v0.2.77/act_Linux_x86_64.tar.gz",
+      "checksum": "BE48669E49CFED33D36F4C34C4FCE2722C8261A47B174D66CEE751A219E75D8E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.11.0/nvim-linux-arm64.tar.gz",
-      "checksum": "6959583F45042DA20E0A082DC65108725629A4739AB91246C678FD084ECAF50E",
+      "id": "github_release/github.com/neovim/neovim/v0.11.1/nvim-linux-arm64.tar.gz",
+      "checksum": "6943991E601415DB6EED765AEB98F8BA70A4D74859E4CF5E99CA7EB2A1B5D384",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.11.0/nvim-linux-x86_64.tar.gz",
-      "checksum": "FE0A5BC79E64C5E4D9F844CD96157EBD3919EF1343B329E9EBC3F455924CC7D6",
+      "id": "github_release/github.com/neovim/neovim/v0.11.1/nvim-linux-x86_64.tar.gz",
+      "checksum": "92ECB2DBDFBD0C6D79B522E07C879F7743C5D395D0A4F13B0D4F668F8565527A",
       "algorithm": "sha256"
     },
     {
@@ -596,13 +606,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.22.1/starship-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "B82EDD21060F3ED112460442C48A3A9545C8DBF3B564154441F4E6B58EACC387",
+      "id": "github_release/github.com/starship/starship/v1.23.0/starship-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "D37040138C68B5F3334BBE16D4615F0A83829DEEBECC5D014E779C302E8270D8",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.22.1/starship-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "62C91B5ECC7F8C8C6EA7FFEA42A98BD2E6A2D29DAF61562FAC04DAECE18A6461",
+      "id": "github_release/github.com/starship/starship/v1.23.0/starship-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "8D06D2CC67AEDD6316FF58AB679FB80CDED0D85DE1DCD5727DF0633D35356D57",
       "algorithm": "sha256"
     },
     {
@@ -736,16 +746,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/storage.googleapis.com/minikube/releases/v1.35.0/minikube-linux-amd64",
-      "checksum": "75369B2D64543284232BCF7578B77D42953DE213D1F19F745B414556239A3F0D",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "http/storage.googleapis.com/minikube/releases/v1.35.0/minikube-linux-arm64",
-      "checksum": "75549BFDBC3FE483C060E5AA5B848374426552D7E346DF8BD15AD77532243767",
-      "algorithm": "sha256"
-    },
-    {
       "id": "http/storage.googleapis.com/skaffold/releases/v2.15.0/skaffold-linux-amd64",
       "checksum": "089D45BCA89437EF47739CF01F1D50C50855CCB483BF18B43A8303D12005C8C5",
       "algorithm": "sha256"
@@ -761,8 +761,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.353.0/registry.yaml",
-      "checksum": "F0FBA600DB5DE8DFA9148ACD68D45836CCF91E3ECF303B05395E39EB5BBCB2E64CA8B7C6F77102E942C5642010D0CE6F7ECC9E476E696577185C73F361A233D3",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.358.0/registry.yaml",
+      "checksum": "E9FE35B29735AC34AB45C52794E8ABE3713FD3C024BBE55F5AE784F92FB1AE399D969CEF241A605F1A644D6CD27C5922DE33B0487014F04561B3595705E52C9C",
       "algorithm": "sha512"
     }
   ]
