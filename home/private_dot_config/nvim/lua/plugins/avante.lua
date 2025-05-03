@@ -7,7 +7,8 @@ return {
   end,
   opts = {
     behaviour = {
-      auto_suggestions = true,
+      auto_suggestions = false,
+      enable_claude_text_editor_tool_mode = os.getenv("ANTHROPIC_API_KEY") ~= nil,
     },
     web_search_engine = os.getenv("KAGI_API_KEY") and {
       provider = "kagi",
