@@ -6,8 +6,8 @@
   customManagers: [
     {
       customType: 'regex',
-      fileMatch: [
-        'home/private_dot_config/k9s/private_config.yaml.tmpl',
+      managerFilePatterns: [
+        '/home/private_dot_config/k9s/private_config.yaml.tmpl/',
       ],
       matchStrings: [
         'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>\\w+).*\\n\\s+image: .*?:(?<currentValue>[v\\d].*?)\\s',
