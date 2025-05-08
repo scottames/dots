@@ -27,15 +27,15 @@ lint:
   enabled:
     - bandit@1.8.3
     - black@25.1.0
-    - checkov@3.2.413
+    - checkov@3.2.416
     - isort@6.0.1
-    - ruff@0.11.7
-    - trivy@0.61.1
+    - ruff@0.11.8
+    - trivy@0.62.1
     - gokart@0.5.1
     - osv-scanner@2.0.2
     - svgo@3.3.2
     - terrascan@1.19.1
-    - trufflehog@3.88.26
+    - trufflehog@3.88.28
     - actionlint@1.7.7
     - git-diff-check@SYSTEM
     - gitleaks@8.25.1
@@ -49,7 +49,7 @@ lint:
     - shfmt@3.6.0
     - stylua@2.1.0
     - taplo@0.9.3
-    - yamllint@1.37.0
+    - yamllint@1.37.1
   files:
     - name: go-templates
       extensions:
