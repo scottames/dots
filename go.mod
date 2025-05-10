@@ -2,13 +2,13 @@ module github.com/scottames/dots
 
 go 1.23.0
 
-toolchain go1.24.2
+toolchain go1.24.3
 
 require (
 	github.com/fatih/color v1.18.0
 	github.com/magefile/mage v1.15.0
 	github.com/scottames/cmder v0.3.0
-	golang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0
+	golang.org/x/exp v0.0.0-20250506013437-ce4c2cf36ca6
 	gopkg.in/yaml.v3 v3.0.1
 )
 
