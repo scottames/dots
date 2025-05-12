@@ -6,13 +6,11 @@ return {
     return os.getenv("ANTHROPIC_API_KEY") ~= nil
   end,
   opts = {
+    -- TODO: add '<leader>ac' AvanteClear keymap
     behaviour = {
       auto_suggestions = false,
       enable_claude_text_editor_tool_mode = os.getenv("ANTHROPIC_API_KEY") ~= nil,
     },
-    web_search_engine = os.getenv("KAGI_API_KEY") and {
-      provider = "kagi",
-    } or nil,
     -- -- add any opts here
     -- -- for example
     -- provider = "openai",
