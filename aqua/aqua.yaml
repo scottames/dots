@@ -7,21 +7,21 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   supported_envs:
     - linux
 registries:
-  - ref: v4.367.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.371.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
     type: local
 packages:
   - name: charmbracelet/glow@v2.1.0
-  - name: cli/cli@v2.72.0
+  - name: cli/cli@v2.73.0
   - name: denisidoro/navi@v2.24.0
   - name: golangci/golangci-lint@v2.1.6
   - name: homeport/dyff@v1.10.1
   - name: kubernetes-sigs/krew@v0.4.5
-  - name: marcosnils/bin@v0.21.1
+  - name: marcosnils/bin@v0.21.2
   - name: tofuutils/tenv@v4.6.2
-  - name: twpayne/chezmoi@v2.62.4
+  - name: twpayne/chezmoi@v2.62.5
   - name: zellij-org/zellij@v0.42.2
   - name: weaveworks/eksctl@v0.208.0
   - name: magefile/mage@v1.15.0
@@ -37,7 +37,7 @@ packages:
   - name: direnv/direnv@v2.36.0
   - name: kubernetes/kubectl@v1.33.1
   - name: fluxcd/flux2@v2.5.1
-  - name: helm/helm@v3.17.3
+  - name: helm/helm@v3.18.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.6.0
   - name: stern/stern@v1.32.0
   - name: charmbracelet/gum@v0.16.0
@@ -46,7 +46,7 @@ packages:
   - name: jtyr/gbt@v2.0.0
   - name: junegunn/fzf@v0.62.0
   - name: hadolint/hadolint@v2.12.0
-  - name: jesseduffield/lazygit@v0.50.0
+  - name: jesseduffield/lazygit@v0.51.1
   - name: derailed/k9s@v0.50.6
   - name: awslabs/amazon-ecr-credential-helper@v0.9.1
   - name: 99designs/aws-vault@v7.2.0
@@ -54,7 +54,7 @@ packages:
   - name: sharkdp/bat@v0.25.0
   - name: bitnami-labs/sealed-secrets@v0.29.0
   - name: instrumenta/kubeval@v0.16.1
-  - name: kubernetes/minikube@v1.35.0
+  - name: kubernetes/minikube@v1.36.0
   - name: GoogleContainerTools/skaffold@v2.16.0
   - name: smallstep/certificates@v0.28.3
   - name: smallstep/cli@v0.28.6
@@ -83,8 +83,8 @@ packages:
   - name: kisielk/errcheck@v1.9.0
     registry: dots
   - name: mvdan/sh@v3.11.0
-  - name: cue-lang/cue@v0.12.1
-  - name: dprint/dprint@0.49.1
+  - name: cue-lang/cue@v0.13.0
+  - name: dprint/dprint@0.50.0
   - name: hashicorp/packer@v1.12.0
   - name: snyk/cli@v1.1297.1
   - name: aquasecurity/tfsec@v1.28.14
@@ -98,7 +98,7 @@ packages:
   - name: Ph0enixKM/Amber@0.3.1-alpha # 💎 Amber the programming language compiled to bash
   - name: dlvhdr/gh-dash@v4.15.0
   - name: withgraphite/gt
-    version: v1.6.3 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.6.4 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
-  - name: fastfetch-cli/fastfetch@2.43.0
+  - name: fastfetch-cli/fastfetch@2.44.0
   - name: bloznelis/typioca@3.1.0
