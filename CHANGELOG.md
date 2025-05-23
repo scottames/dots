@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.22.0](https://github.com/scottames/dots/compare/v0.21.0...v0.22.0) (2025-05-23)
+
+
+### Features
+
+* fuzzel config ([f40ddad](https://github.com/scottames/dots/commit/f40ddade2c52a8b21fdf8e354713d613dfafa210))
+
+
+### Bug Fixes
+
+* **satty:** broken config ([d51daa5](https://github.com/scottames/dots/commit/d51daa52619a218468485b218855a2a3f800a96e))
+
 ## [0.21.0](https://github.com/scottames/dots/compare/v0.20.0...v0.21.0) (2025-04-24)
 
 
