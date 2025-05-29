@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.22.0](https://github.com/scottames/dots/compare/v0.21.0...v0.22.0) (2025-05-29)
+
+
+### Features
+
+* **distrobox/f:** init script ([a61d3c5](https://github.com/scottames/dots/commit/a61d3c5c01ebab14108dfd93dc9b5e8546f84bea))
+* fuzzel config ([f40ddad](https://github.com/scottames/dots/commit/f40ddade2c52a8b21fdf8e354713d613dfafa210))
+* **nvim:** lazy updates + fix vim.notify ([e3c3f64](https://github.com/scottames/dots/commit/e3c3f64c21befa12c32e6ab3b5a123145dd8b5ae))
+
+
+### Bug Fixes
+
+* misc small fixes ([70d11c8](https://github.com/scottames/dots/commit/70d11c85551fdc054afdc5757abd5546f0db8386))
+* **satty:** broken config ([d51daa5](https://github.com/scottames/dots/commit/d51daa52619a218468485b218855a2a3f800a96e))
+
 ## [0.21.0](https://github.com/scottames/dots/compare/v0.20.0...v0.21.0) (2025-04-24)
 
 
