@@ -144,6 +144,15 @@
     stripComponents = 2
     include = ["*/themes/**"]
 
+# TODO: hook rebuilding cache on change: bat cache --build
+[".config/bat/themes"]
+    type = "archive"
+    url = "https://github.com/catppuccin/bat/archive/main.tar.gz"
+    exact = true
+    refreshPeriod = "168h"
+    stripComponents = 2
+    include = ["*/themes/*.tmTheme"]
+
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
 #  │ | utils                                                  │
@@ -179,12 +188,6 @@
 [".config/alacritty/catppuccin"]
     type = "git-repo"
     url = "https://github.com/catppuccin/alacritty.git"
-    refreshPeriod = "168h"
-
-# TODO: hook rebuilding cache on change: bat cache --build
-[".config/bat/themes"]
-    type = "git-repo"
-    url = "https://github.com/catppuccin/bat.git"
     refreshPeriod = "168h"
 
 {{ if not (eq "container" .me.user) -}}
