@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.23.0](https://github.com/scottames/dots/compare/v0.22.0...v0.23.0) (2025-05-29)
+
+
+### Features
+
+* apply nwg-look on change ([c9c450c](https://github.com/scottames/dots/commit/c9c450cce69b31a87f154320e22e794b4d4b6da1))
+* **hyprpaper:** config ([2ae3051](https://github.com/scottames/dots/commit/2ae30516a0a0a3f13b47c349aa7c7a3031e5bb5e))
+
 ## [0.22.0](https://github.com/scottames/dots/compare/v0.21.0...v0.22.0) (2025-05-29)
 
 
