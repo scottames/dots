@@ -2,12 +2,7 @@ local executable = function(bin)
   return function(_)
     local has_bin = vim.fn.executable(bin) == 1
     if not has_bin then
-      vim.notify = require("notify")
-      vim.notify(
-        "(" .. tostring(has_bin) .. ")missing executable: " .. bin,
-        vim.log.levels.WARN,
-        { title = "LSP required bin missing" }
-      )
+      vim.notify("Missing executable: " .. bin, vim.log.levels.WARN, { title = "LSP required bin missing" })
     end
     return has_bin
   end
@@ -90,9 +85,13 @@ return {
     opts = function(_, opts)
       opts.rainbow = {
         enable = true,
-        -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-        max_file_lines = nil, -- Do not enable for files with more than n lines, int
+        -- list of languages you want to disable the plugin for
+        -- disable = { "jsx", "cpp" },
+        -- Also highlight non-bracket delimiters like html tags, boolean or
+        --   table: lang -> boolean
+        extended_mode = true,
+        -- Do not enable for files with more than n lines, int
+        max_file_lines = nil,
         -- colors = {}, -- table of hex strings
         -- termcolors = {} -- table of colour name strings
       }
@@ -122,9 +121,7 @@ return {
         "toml",
         "tsx",
         "typescript",
-        "typos",
         "vim",
-        "woke",
         "yaml",
       })
     end,
@@ -132,80 +129,81 @@ return {
 
   {
     "williamboman/mason.nvim",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+    },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        ensure_installed = {
-          -- reference: https://mason-registry.dev/registry/list
-          "alex",
-          "buf",
-          "buf-language-server",
-          "checkmake",
-          "commitlint",
-          "snyk",
-          "typos",
-          "woke",
-          "actionlint",
-          "ansible-lint",
-          "bash-debug-adapter",
-          "bash-language-server",
-          "beautysh",
-          "black",
-          "buf",
-          "buf-language-server",
-          "cuelsp",
-          "cspell",
-          "dockerfile-language-server",
-          "dprint",
-          "editorconfig-checker",
-          -- "flake8", -- ruff instead
-          "gitlint",
-          "goimports",
-          "goimports-reviser",
-          "golangci-lint",
-          "golangci-lint-langserver",
-          "gofumpt",
-          "golines",
-          -- "gopls",
-          "gotests",
-          "gotestsum",
-          "html-lsp",
-          "isort",
-          "jq",
-          "jq-lsp",
-          "json-lsp",
-          "json-to-struct",
-          "jsonlint",
-          "lua-language-server",
-          "luacheck",
-          "luaformatter",
-          "markdownlint",
-          "markdown-toc",
-          "marksman",
-          "mypy",
-          "nginx-language-server",
-          "prettier",
-          "prettierd",
-          "pyproject-flake8",
-          "pyright",
-          "ruff",
-          "ruff-lsp",
-          "rust-analyzer",
-          "rustfmt",
-          "semgrep",
-          "shellcheck",
-          "shellharden",
-          "shfmt",
-          "sql-formatter",
-          "sqlls",
-          "sqlfluff",
-          "stylua",
-          "stylelint",
-          "taplo",
-          "textlint",
-          "tflint",
-          "yamlfmt",
-          "yamllint",
-        },
+        -- reference: https://mason-registry.dev/registry/list
+        "alex",
+        "buf",
+        "buf-language-server",
+        "checkmake",
+        "commitlint",
+        "snyk",
+        "typos",
+        "woke",
+        "actionlint",
+        "ansible-lint",
+        "bash-debug-adapter",
+        "bash-language-server",
+        "beautysh",
+        "black",
+        "buf",
+        "buf-language-server",
+        "cuelsp",
+        "cspell",
+        "dockerfile-language-server",
+        "dprint",
+        "editorconfig-checker",
+        -- "flake8", -- ruff instead
+        "gitlint",
+        "goimports",
+        "goimports-reviser",
+        "golangci-lint",
+        "golangci-lint-langserver",
+        "gofumpt",
+        "golines",
+        -- "gopls",
+        "gotests",
+        "gotestsum",
+        "html-lsp",
+        "isort",
+        "jq",
+        "jq-lsp",
+        "json-lsp",
+        "json-to-struct",
+        "jsonlint",
+        "lua-language-server",
+        "luacheck",
+        "luaformatter",
+        "markdownlint",
+        "markdown-toc",
+        "marksman",
+        "mypy",
+        "nginx-language-server",
+        "prettier",
+        "prettierd",
+        "pyproject-flake8",
+        "pyright",
+        "ruff",
+        "ruff-lsp",
+        "rust-analyzer",
+        "rustfmt",
+        "semgrep",
+        "shellcheck",
+        "shellharden",
+        "shfmt",
+        "sql-formatter",
+        "sqlls",
+        "sqlfluff",
+        "stylua",
+        "stylelint",
+        "taplo",
+        "textlint",
+        "tflint",
+        "yamlfmt",
+        "yamllint",
       })
     end,
   },
