@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+magenta='\033[0;35m'
+yellow='\033[0;33m'
+clear='\033[0m'
+
+print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n" "${@}"; }
+
+echo '
+███╗   ██╗██╗    ██╗ ██████╗       ██╗      ██████╗  ██████╗ ██╗  ██╗
+████╗  ██║██║    ██║██╔════╝       ██║     ██╔═══██╗██╔═══██╗██║ ██╔╝
+██╔██╗ ██║██║ █╗ ██║██║  ███╗█████╗██║     ██║   ██║██║   ██║█████╔╝ 
+██║╚██╗██║██║███╗██║██║   ██║╚════╝██║     ██║   ██║██║   ██║██╔═██╗ 
+██║ ╚████║╚███╔███╔╝╚██████╔╝      ███████╗╚██████╔╝╚██████╔╝██║  ██╗
+╚═╝  ╚═══╝ ╚══╝╚══╝  ╚═════╝       ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝
+'
+
+function dbhostexec() {
+  if { [[ -f /run/.containerenv ]] || [[ -f /.dockerenv ]]; } &&
+    [[ $(command -v distrobox-host-exec) ]]; then
+    distrobox-host-exec "${@}"
+  else
+    "${@}"
+  fi
+}
+
+#  {{ include "dot_local/share/nwg-look/gsettings" | sha256sum }}
+#  {{ include "private_dot_config/nwg-look/config" | sha256sum }}
+
+print_info "Applying GTK config via nwg-look"
+
+dbhostexec nwg-look -a
+
+# vi: ft=bash
