@@ -5,6 +5,7 @@ yellow='\033[0;33m'
 clear='\033[0m'
 
 print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n" "${@}"; }
+print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; }
 
 echo '
 ███╗   ██╗██╗    ██╗ ██████╗       ██╗      ██████╗  ██████╗ ██╗  ██╗
@@ -27,8 +28,16 @@ function dbhostexec() {
 #  {{ include "dot_local/share/nwg-look/gsettings" | sha256sum }}
 #  {{ include "private_dot_config/nwg-look/config" | sha256sum }}
 
+{{- if or (not (lookPath "nwg-look")) (not (lookPath "distrobox-host-exec")) }}
+
+print_warn "Skipping... nwg-look nor distrobox-host-exec not found"
+
+{{- else }}
+
 print_info "Applying GTK config via nwg-look"
 
 dbhostexec nwg-look -a
+
+{{- end }}
 
 # vi: ft=bash

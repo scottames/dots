@@ -28,12 +28,17 @@ src/github.com/paperwm*
 
 {{- if not (regexMatch "niri" .desktop.session) }}
 .config/niri/config.kdl
-.config/nwg-look/
 .config/systemd/user/niri.service.wants/*
 .config/systemd/user/swaybg.service
 .config/waybar/
 .config/wlogout/
 .local/share/applications/vivaldi-stable.desktop
+
+{{- if not (lookPath "nwg-look") }}
+.config/nwg-look/
+.chezmoiscripts/run_once_after_47_nwg-look.sh
+{{- end}} # end .lookPath nwg-look
+
 {{- end}} # end .desktop.session = niri
 
 # Gnome Wallpaper Config
