@@ -14,6 +14,7 @@ abbr -a aquaia "aqua i -a"
 abbr -a ch chezmoi
 abbr -a cha "chezmoi add"
 abbr -a chcd "cd (chezmoi source-path)"
+abbr -a chdl "chezmoi data | jless"
 abbr -a chd "chezmoi diff"
 abbr -a che "chezmoi edit"
 abbr -a chef chezmoi_edit_fzf
