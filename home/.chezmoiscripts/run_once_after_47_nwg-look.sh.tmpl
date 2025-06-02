@@ -28,15 +28,15 @@ function dbhostexec() {
 #  {{ include "dot_local/share/nwg-look/gsettings" | sha256sum }}
 #  {{ include "private_dot_config/nwg-look/config" | sha256sum }}
 
-{{- if or (not (lookPath "nwg-look")) (not (lookPath "distrobox-host-exec")) }}
-
-print_warn "Skipping... nwg-look nor distrobox-host-exec not found"
-
-{{- else }}
+{{- if or (lookPath "nwg-look") (and (lookPath "distrobox-host-exec") (regexMatch "niri" .desktop.session)) }}
 
 print_info "Applying GTK config via nwg-look"
 
-dbhostexec nwg-look -a
+dbhostexec nwg-look -a # foo
+
+{{- else }}
+
+print_warn "Skipping... nwg-look nor distrobox-host-exec not found"
 
 {{- end }}
 
