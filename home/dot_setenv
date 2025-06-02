@@ -84,7 +84,7 @@ setenv LESS                        "--ignore-case --raw-control-chars"
 $HAS_BAT \
   && setenv PAGER                  "bat"
 $HAS_BAT \
-  && setenv MANPAGER               "sh -c 'col -bx | bat -l man -p'"
+  && setenv MANPAGER               "nvim +Man!"
 
 setenv GUM_BIN                     ""
 $HAS_GUM \
