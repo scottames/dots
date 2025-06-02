@@ -83,11 +83,7 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-   else if $isContainer -}}
 {{-     $chassis = "container" -}}
 {{-   else -}}
-{{-     $loginSession = output "loginctl" "-o" "json" 
-          | fromJson
-          | jq (
-             printf ".[] | select(.user==\"%s\") | .session" .chezmoi.username) 
-          | first -}}
+{{-     $loginSession = output "sh" "-c" "loginctl | grep user | awk '{print $1}'" -}}
 {{-
   $loginSessionType = output "loginctl" "show-session" $loginSession "-p" "Type"
           | replace "Type=" ""
