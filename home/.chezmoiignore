@@ -51,6 +51,7 @@ src/github.com/paperwm*
 
 {{- if not (eq .host.os_variant "silverblue") }}
 .config/Yubico/u2f_keys
+.local/bin/docker
 {{- end }}
 
 {{- if and (hasKey .chezmoi "osRelease") (hasKey .chezmoi.osRelease "id") (not (eq .chezmoi.osRelease.id "arch")) }}
