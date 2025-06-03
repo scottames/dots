@@ -1,4 +1,4 @@
-FROM archlinux/archlinux:base-devel@sha256:01bbb49afbf527b15d380e4b3137e5f055a4a6d580414d39dc0772396cd6ed53
+FROM archlinux/archlinux:base-devel@sha256:b5366e9d66caae0e1cb832df0ec85f33a2b5f39e10e9a7a8182da1c56212d11b
 
 RUN pacman -Syu --noconfirm --needed git sudo zsh fish curl go \
     && echo "container ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
