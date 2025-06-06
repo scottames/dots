@@ -20,3 +20,4 @@ jobs:
         with:
           prefix: "chore: "
           lowercase-title: true
+          sign-commits: true
