@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.23.0](https://github.com/scottames/dots/compare/v0.22.0...v0.23.0) (2025-06-06)
+
+
+### Features
+
+* apply nwg-look on change ([c9c450c](https://github.com/scottames/dots/commit/c9c450cce69b31a87f154320e22e794b4d4b6da1))
+* docker =&gt; podman ([9602871](https://github.com/scottames/dots/commit/960287183110810840063d983a81be0f6cbb41f1))
+* **fish:** abbr - chezmoi data | jless ([866a35d](https://github.com/scottames/dots/commit/866a35dcf14d07903ff3392338ef4bee6bc5a717))
+* **hyprpaper:** config ([2ae3051](https://github.com/scottames/dots/commit/2ae30516a0a0a3f13b47c349aa7c7a3031e5bb5e))
+* use nvim as man pager ([fa064d4](https://github.com/scottames/dots/commit/fa064d45db38a88ce56969348d75918a17737032))
+
+
+### Bug Fixes
+
+* **chezmoi:** init, login session ([6be6bbf](https://github.com/scottames/dots/commit/6be6bbf44d01864fee02bce6e7bd0979ac169ae1))
+* kill fqpath + not autostart keymapp ([9997ba1](https://github.com/scottames/dots/commit/9997ba1e281151a535c9d73c6eee976794418409))
+* properly run nwg-look script ([11650a8](https://github.com/scottames/dots/commit/11650a876c158074587c11361ea39c08c8cb84a6))
+* skip nwg-look script ([bff3383](https://github.com/scottames/dots/commit/bff3383e44176ed94ba3c1f87b86fb800b27c927))
+
 ## [0.22.0](https://github.com/scottames/dots/compare/v0.21.0...v0.22.0) (2025-05-29)
 
 
