@@ -1,0 +1,5 @@
+{{ range (onepassword "qdj67mei3zrhz5d2r2ihh46pxy").fields -}}
+{{   if (eq .label "notesPlain") -}}
+{{     .value -}}
+{{   end -}}
+{{ end }}

@@ -123,6 +123,7 @@ abbr -a lsd "ls -ld *$_ls_arg" # show directories
 abbr -a lsf "ls -aFhl$_ls_arg"
 abbr -a l "ls -alh$_ls_arg" # list all (including hidden)
 abbr -a ll "ls -hl$_ls_arg" # list long w/ headers
+abbr -a lt "load_env ~/.tkns"
 abbr -a makepass "openssl rand -base64 12"
 abbr -a md mkdir_cd
 abbr -a mgt "mage go:test"
