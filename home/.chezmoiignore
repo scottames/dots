@@ -81,3 +81,7 @@ src/github.com/paperwm*
 
 .local/share/
 {{ end }}
+
+{{ if not (eq (env "CHEZMOI_OP") "true") }}
+.tkns
+{{ end }}
