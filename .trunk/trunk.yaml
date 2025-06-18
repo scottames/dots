@@ -71,6 +71,7 @@ lint:
     - linters: [markdownlint]
       paths:
         - CHANGELOG.md
+        - home/dot_claude/**
 runtimes:
   enabled:
     - go@1.21.0
