@@ -1,0 +1,8 @@
+# https://docs.atuin.sh/configuration/config
+update_check = false
+invert = true
+enter_accept = true
+keymap_mode = "vim-insert"
+
+[sync]
+records = true
