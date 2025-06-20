@@ -26,6 +26,8 @@ jobs:
       - name: Run chezmoi init in container
         # yamllint disable-line rule:line-length
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # https://github.com/scottames/boxes
           image: ghcr.io/scottames/fedora-toolbox:latest
