@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.378.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.379.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -26,7 +26,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.74.1
+  - name: cli/cli@v2.74.2
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.1.6
@@ -74,7 +74,7 @@ packages:
   - name: kubernetes/kubectl@v1.33.1
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v3.18.2
+  - name: helm/helm@v3.18.3
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.6.0
@@ -112,7 +112,7 @@ packages:
   - name: kubernetes/minikube@v1.36.0
   # easy and repeatable kubernetes development
   #   https://github.com/GoogleContainerTools/skaffold
-  - name: GoogleContainerTools/skaffold@v2.16.0
+  - name: GoogleContainerTools/skaffold@v2.16.1
   # private certificate authority & ACME server
   #   https://github.com/smallstep/certificates
   - name: smallstep/certificates@v0.28.3
@@ -141,7 +141,7 @@ packages:
   - name: kevincobain2000/gobrew@v1.10.12
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@36.0.3
+  - name: antonmedv/fx@36.0.4
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -156,10 +156,10 @@ packages:
   - name: rhysd/hgrep@v0.3.8
   # a modern, maintained replacement for ls
   #   https://github.com/eza-community/eza
-  - name: eza-community/eza@v0.21.4
+  - name: eza-community/eza@v0.21.5
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
-  - name: int128/ghcp@v1.13.5
+  - name: int128/ghcp@v1.14.0
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
   - name: dagger/dagger@v0.18.10
