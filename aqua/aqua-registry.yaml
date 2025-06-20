@@ -1,29 +1,5 @@
 ---
 packages:
-  # cod https://github.com/dim-an/cod
-  - type: github_release
-    repo_owner: dim-an
-    repo_name: cod
-    asset: cod-{{.OS}}-{{.Arch}}.tgz
-    description: cod is a completion daemon for bash/fish/zsh
-    checksum:
-      enabled: false
-  # errcheck https://github.com/kisielk/errcheck
-  - type: go_install
-    repo_owner: kisielk
-    repo_name: errcheck
-    description: errcheck checks that you checked errors.
-  # immich-go https://github.com/simulot/immich-go
-  - type: github_release
-    repo_owner: simulot
-    repo_name: immich-go
-    asset: immich-go_{{title .OS}}_{{.Arch}}.tar.gz
-    replacements:
-      amd64: x86_64
-    description: |
-      An alternative to the immich-CLI command that doesn't depend on nodejs
-      installation. It tries its best for importing google photos takeout
-      archives.
   # gt https://graphite.dev
   - type: http
     repo_owner: withgraphite
@@ -37,20 +13,3 @@ packages:
       - darwin
       - linux
     description: graphite.dev
-  # mani https://github.com/alajmo/mani
-  - type: github_release
-    repo_owner: alajmo
-    repo_name: mani
-    asset: mani_{{trimV .Version}}_{{.OS}}_{{.Arch}}.tar.gz
-    description: 🤖 CLI tool to help you manage repositories
-  # mage-select https://github.com/iwittkau/mage-select
-  - type: go_install
-    repo_owner: iwittkau
-    repo_name: mage-select
-    description: CLI frontend for mage based on promptui
-  # nav https://github.com/dkaslovsky/nav
-  - type: github_release
-    repo_owner: dkaslovsky
-    repo_name: nav
-    asset: nav_{{.OS}}_{{.Arch}}
-    description: Terminal navigator for interactive ls workflows
