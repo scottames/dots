@@ -19,7 +19,20 @@ const (
 	gs                       = "gsettings"
 	gsBackupFile      string = "./home/.gsettings.yaml"
 	indent                   = 2
+
+	dockerEnv    = "/.dockerenv"
+	containerEnv = "/run/.containerenv"
 )
+
+func isContainer() bool {
+	if _, err := os.Stat(containerEnv); err == nil {
+		return true
+	} else if _, err = os.Stat(dockerEnv); err == nil {
+		return true
+	}
+
+	return false
+}
 
 // newDistroBoxCmd - returns a string slice with "distrobox-host-exec" prepended to the command
 // if the command is being executed in a container and "distrobox-host-exec" is available in path.
@@ -151,7 +164,12 @@ func (Gs) Get(schema string, key string) (string, error) {
 	gsCmd := newDistroBoxCmd(gs)
 	val, err := cmder.New(gsCmd...).Args("get", schema, key).Silent().CombinedOutput()
 	if err != nil {
-		return "", fmt.Errorf("err getting '%s' '%s'\n %s", schema, key, strings.TrimSpace(string(val)))
+		return "", fmt.Errorf(
+			"err getting '%s' '%s'\n %s",
+			schema,
+			key,
+			strings.TrimSpace(string(val)),
+		)
 	}
 
 	return strings.TrimSpace(string(val)), nil
@@ -208,7 +226,7 @@ func (Gs) ListKeys(schema string) ([]string, error) {
 	gsCmd := newDistroBoxCmd(gs)
 	rawKeys, err := cmder.New(gsCmd...).Args("list-keys", schema).CombinedOutput()
 	if err != nil {
-		return nil, fmt.Errorf(string(rawKeys))
+		return nil, fmt.Errorf("%s", string(rawKeys))
 	}
 	sc := bufio.NewScanner(strings.NewReader(string(rawKeys)))
 	keys := []string{}
@@ -263,7 +281,9 @@ func (g Gs) Restore() error {
 func (Gs) schemaKeySplit(scope string) (string, string, error) {
 	li := strings.LastIndex(scope, ".")
 	if li <= 0 {
-		return "", "", fmt.Errorf("invalid input, must be valid gsettings schema.value separated by dots (.)")
+		return "", "", fmt.Errorf(
+			"invalid input, must be valid gsettings schema.value separated by dots (.)",
+		)
 	}
 
 	schema := scope[:li]
@@ -284,7 +304,13 @@ func (g Gs) Set(scope string, val string) error {
 	gsCmd := newDistroBoxCmd(gs)
 	out, err := cmder.New(gsCmd...).Args("set", schema, key, val).Silent().CombinedOutput()
 	if err != nil {
-		return fmt.Errorf("err setting: '%s' '%s' '%s'\n '%s'", schema, key, val, strings.TrimSpace(string(out)))
+		return fmt.Errorf(
+			"err setting: '%s' '%s' '%s'\n '%s'",
+			schema,
+			key,
+			val,
+			strings.TrimSpace(string(out)),
+		)
 	}
 
 	return g.Backup(scope)

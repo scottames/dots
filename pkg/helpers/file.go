@@ -31,10 +31,12 @@ func Exists(path string) bool {
 
 // FindFiles - runs find on the given path, following symlinks, matching files with the given pattern.
 func FindFiles(path string, pattern string) ([]string, error) {
-	out, err := cmder.New("find", "-L", path, "-type", "f", "-name", pattern).Silent().CombinedOutput()
+	out, err := cmder.New("find", "-L", path, "-type", "f", "-name", pattern).
+		Silent().
+		CombinedOutput()
 	data := string(out)
 	if err != nil {
-		return nil, fmt.Errorf(data)
+		return nil, fmt.Errorf("%s", data)
 	}
 
 	return strings.Fields(data), nil
