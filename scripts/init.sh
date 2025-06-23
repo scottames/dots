@@ -8,10 +8,10 @@ yellow='\033[0;33m'
 clear='\033[0m'
 
 info() {
-  printf "ℹ️ ${magenta}%s${clear}\n" "${@}"
+  printf "ℹ️  ${magenta}%s${clear}\n" "${@}"
 }
 err() {
-  printf "💥 ${red}%s${clear}\n" "${@}"
+  printf "💥  ${red}%s${clear}\n" "${@}"
   exit 1
 }
 
@@ -27,7 +27,10 @@ install_gobrew() {
   if [ ! -x "$(command -v go)" ]; then
     err "go not found after attempting to install with gobrew."
   else
-    info "go installed via gobrew! if gobrew intended to be used via aqua, run: rm -rf ~/.gobrew/bin"
+    info "go installed via gobrew!
+
+  NOTE: if gobrew intended to be used via aqua, run: rm -rf ~/.gobrew/bin
+"
   fi
 }
 
