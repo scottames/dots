@@ -3,6 +3,7 @@ Description=Fedora for distrobox fun
 
 [Service]
 Type=oneshot
+{{ if stat "/usr/bin/fish" }}Environment="SHELL=/usr/bin/fish"{{ end }}
 ExecStart={{ .chezmoi.homeDir }}/bin/distrobox-assemble.sh f
 ExecStart=/usr/bin/distrobox enter f
 RemainAfterExit=true

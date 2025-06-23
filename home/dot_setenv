@@ -80,6 +80,8 @@ setenv XAUTHLOCALHOSTNAME          "$(command -v hostnamectl >/dev/null 2>&1 && 
 setenv ZPLUG_HOME                  "$HOME/.zplug"
 setenv ZPLUG_LOADFILE              "$HOME/.zsh/zplugs.zsh"
 
+$HAS_FISH \
+  && setenv SHELL                  "$(command -v fish)"
 setenv PAGER                       "less"
 setenv LESS                        "--ignore-case --raw-control-chars"
 $HAS_BAT \

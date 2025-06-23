@@ -40,6 +40,7 @@ set has_bins \
     distrobox-host-exec \
     eza \
     fd \
+    fish \
     fzf \
     direnv \
     dyff \
