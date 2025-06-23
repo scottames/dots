@@ -110,7 +110,7 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{- if lstat (joinPath .chezmoi.homeDir ".wallpaper") -}}
 {{-   $wallpaper = trim (include (printf "%s/.wallpaper" .chezmoi.homeDir)) -}}
 {{- else -}}
-{{-   $wallpaperDefault := "/usr/share/backgrounds/gnome/adwaita-d.jxl" -}}
+{{-   $wallpaperDefault := "/usr/share/backgrounds/gnome/adwaita-d.jpg" -}}
 {{-   $wallpaper = promptStringOnce . "desktop.wallpaper" "path to desktop wallpaper" $wallpaperDefault -}}
 {{- end -}}
 

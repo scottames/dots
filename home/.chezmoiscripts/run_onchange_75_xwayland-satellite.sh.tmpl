@@ -10,10 +10,10 @@ magenta='\033[0;35m'
 cyan='\033[0;36m'
 yellow='\033[0;33m'
 clear='\033[0m'
-print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n" "${@}"; }
-print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; }
+print_info() { printf "\n${yellow}⚡ ${magenta}%s${clear}\n" "${@}"; echo; }
+print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; echo; }
 # print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
-print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; }
+print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; echo; }
 
 echo '
 ██╗  ██╗██╗    ██╗ █████╗ ██╗   ██╗██╗      █████╗ ███╗   ██╗██████╗       ███████╗ █████╗ ████████╗███████╗██╗     ██╗     ██╗████████╗███████╗
@@ -24,14 +24,28 @@ echo '
 ╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝       ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝╚═╝   ╚═╝   ╚══════╝
 '
 
-{{ if (stat (joinPath .chezmoi.homeDir ".local/share/xwayland-satellite/.git/HEAD")) -}}
-# {{ include (joinPath .chezmoi.homeDir ".local/share/xwayland-satellite/.git/HEAD") }}
-{{ end -}}
+{{ $gitDir := joinPath .chezmoi.homeDir ".local/share/xwayland-satellite/.git" -}}
+{{ $headPath := joinPath $gitDir "HEAD" -}}
+{{ if (stat $headPath) -}}
+  {{ $head := include $headPath | trim -}}
+  {{ $sha := $head -}}
+  {{ $branch := base (trim (trimPrefix "ref:" $head)) -}}
+  {{ $refPath := joinPath $gitDir "refs" "heads" $branch -}}
+  {{ if (stat $refPath) }}{{ $sha = include $refPath | trim }}{{ end -}}
+print_info "building {{ $branch }} @ {{ $sha }}"
+{{- else -}}
+print_info "unable to determine git info for build"
+{{- end }}
 
+C_INCLUDE_FROM_GCC="$(gcc -print-file-name=include)"
 
-if [[ -f "/usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h" ]]; then
-  export C_INCLUDE_PATH="/usr/lib/gcc/x86_64-redhat-linux/14/include:${C_INCLUDE_PATH}"
+if [[ -d "${C_INCLUDE_FROM_GCC}" ]]; then
+  export C_INCLUDE_PATH="${C_INCLUDE_FROM_GCC}:${C_INCLUDE_PATH}"
+else
+  print_warn "C_INCLUDE_PATH not updated. ${C_INCLUDE_FROM_GCC} not found."
 fi
+
+print_info "C_INCLUDE_PATH: '${C_INCLUDE_PATH}'" 
 
 if [[ -d "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite" ]]; then
     cd "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite"
