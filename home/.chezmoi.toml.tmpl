@@ -44,7 +44,11 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
   $gpu = lower ( trim (
     output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'"
    )) -}}
-{{-   if or (lstat "/.dockerenv") (lstat "/run/.containerenv") -}}
+{{-   if or (
+           or (lstat "/.dockerenv") (lstat "/run/.containerenv")
+            ) (
+           ne (env "container") ""
+         ) -}}
 {{-     $isContainer = true -}}
 {{-   end -}}
 {{-   if $isContainer -}}
