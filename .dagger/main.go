@@ -24,9 +24,6 @@ func New(
 // Run init inside a container.
 func (m *Dots) Init(
 	ctx context.Context,
-	// branch to init against
-	// +optional
-	branch *string,
 	// container to pull from
 	//   see also: https://github.com/scottames/containers
 	// +optional
@@ -43,17 +40,10 @@ func (m *Dots) Init(
 			m.Source,
 		)
 
-	cmd := []string{
-		fmt.Sprintf("%s/scripts/init.sh", dotsMountPath),
-		"--no-tty",
-		"--promptDefaults",
-	}
-
-	if branch != nil {
-		cmd = append(cmd, "--branch", *branch)
-	}
-
 	return ctr.
 		From(from).
-		WithExec(cmd)
+		WithExec([]string{
+			fmt.Sprintf("%s/scripts/init.sh", dotsMountPath),
+			"--no-tty", "--promptDefaults",
+		})
 }

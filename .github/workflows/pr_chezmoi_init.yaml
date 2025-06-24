@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - name: Dagger Build and Publish (main)
+      - name: dagger call init
         # yamllint disable-line rule:line-length
         uses: dagger/dagger-for-github@e47aba410ef9bb9ed81a4d2a97df31061e5e842e # v8
         env:
@@ -26,4 +26,4 @@ jobs:
           version: v0.18.10
           cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
           module: .
-          call: init --branch "${{ github.ref_name }}"
+          call: init
