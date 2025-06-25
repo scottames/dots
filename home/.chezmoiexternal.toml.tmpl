@@ -94,6 +94,24 @@
     executable = false
     refreshPeriod = "168h"
 
+# renovate: datasource=github-releases depName=dj95/zjstatus
+{{ $zjstatusVersion := "v0.21.0" -}}
+
+[".config/zellij/plugins/zjstatus.wasm"]
+    type = "file"
+    url = "https://github.com/dj95/zjstatus/releases/download/{{ $zjstatusVersion }}/zjstatus.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
+# renovate: datasource=github-releases depName=b0o/zjstatus-hints
+{{ $zjstatusHintsVersion := "v0.1.4" -}}
+
+[".config/zellij/plugins/zjstatus-hints.wasm"]
+    type = "file"
+    url = "https://github.com/b0o/zjstatus-hints/releases/download/{{ $zjstatusHintsVersion }}/zjstatus-hints.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
 # renovate: datasource=github-releases depName=hiasr/vim-zellij-navigator
 {{ $vimZellijNavigatorVersion := "0.2.1" -}}
 
