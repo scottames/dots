@@ -36,10 +36,6 @@
     refreshPeriod = "168h"
     stripComponents = 1
 
-{{- if and (regexMatch "^gnome" .desktop.session) (lookPath "flatpak") }}
-
-{{ end -}} # gnome .desktop.session && flatpak found
-
 [".local/bin/keymapp"]
     type = "archive-file"
     url = "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz"
@@ -72,6 +68,21 @@
 
 {{ end -}} # linux
 
+{{- $qArch := "x86_64" }}
+{{- if eq .chezmoi.arch "aarch64" }}
+{{-   $qArch = "aarch64" }}
+{{- end }}
+{{- $qBins := list "q" "qchat" "qterm" -}}
+{{- range $qBin := $qBins }}
+[".local/bin/{{ $qBin }}"]
+type = "archive-file"
+url = "https://desktop-release.q.us-east-1.amazonaws.com/latest/q-{{ $qArch }}-{{ $.chezmoi.os }}.zip"
+extract = true
+path = "bin/{{ $qBin }}"
+stripComponents = 1
+refreshPeriod = "168h"
+{{ end -}}
+
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ file                                                     │
 #  ╰──────────────────────────────────────────────────────────╯
@@ -85,12 +96,39 @@
     executable = true
     refreshPeriod = "168h"
 
+# renovate: datasource=github-releases depName=karimould/zellij-forgot
+{{ $zellijForgotVersion := "0.4.2" -}}
+
+[".config/zellij/plugins/zellij-forgot.wasm"]
+    type = "file"
+    url = "https://github.com/karimould/zellij-forgot/releases/download/{{ $zellijForgotVersion }}/zellij_forgot.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
 # renovate: datasource=github-releases depName=rvcas/room
 {{ $zellijRoomVersion := "v1.2.0" -}}
 
 [".config/zellij/plugins/room.wasm"]
     type = "file"
     url = "https://github.com/rvcas/room/releases/download/{{ $zellijRoomVersion }}/room.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
+# renovate: datasource=github-releases depName=dj95/zjstatus
+{{ $zjstatusVersion := "v0.21.0" -}}
+
+[".config/zellij/plugins/zjstatus.wasm"]
+    type = "file"
+    url = "https://github.com/dj95/zjstatus/releases/download/{{ $zjstatusVersion }}/zjstatus.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
+# renovate: datasource=github-releases depName=b0o/zjstatus-hints
+{{ $zjstatusHintsVersion := "v0.1.4" -}}
+
+[".config/zellij/plugins/zjstatus-hints.wasm"]
+    type = "file"
+    url = "https://github.com/b0o/zjstatus-hints/releases/download/{{ $zjstatusHintsVersion }}/zjstatus-hints.wasm"
     executable = false
     refreshPeriod = "168h"
 
@@ -144,7 +182,6 @@
     stripComponents = 2
     include = ["*/themes/**"]
 
-# TODO: hook rebuilding cache on change: bat cache --build
 [".config/bat/themes"]
     type = "archive"
     url = "https://github.com/catppuccin/bat/archive/main.tar.gz"
@@ -190,7 +227,7 @@
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
-{{ if not (eq "container" .me.user) -}}
+{{ if not (eq "root" .me.user) -}} # skip if running in CI
 ["src/github.com/magefile/mage"]
     type = "git-repo"
     url = "https://github.com/magefile/mage"
@@ -252,7 +289,7 @@
     ["src/github.com/scottames/walls/.bare".clone]
         args = ["--bare"]
 
-{{ end -}}
-{{ end -}}
+{{ end -}} # end: is-github-authed
+{{ end -}} # end: not root user
 
 # vi: ft=toml
