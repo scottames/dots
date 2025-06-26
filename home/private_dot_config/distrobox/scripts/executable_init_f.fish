@@ -9,14 +9,18 @@ function install_vscode
 end
 
 function install_claude_code
-    sudo npm install -g @anthropic-ai/claude-code
+    npm install -g @anthropic-ai/claude-code
+end
+
+function install_gemini_cli
+    npm install -g @google/gemini-cli
 end
 
 function install_openai_codex
-    sudo npm install -g @openai/codex
+    npm install -g @openai/codex
 end
-
 
 install_vscode
 install_claude_code
+install_gemini_cli
 install_openai_codex

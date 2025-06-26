@@ -63,7 +63,7 @@ function zellij_new_tab_edit_split \
               }
           }
           pane size=1 borderless=true {
-              plugin location=\"zellij:compact-bar\"
+              plugin location=\"zjstatus\"
           }
       }
   }

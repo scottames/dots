@@ -1,4 +1,3 @@
-
 function addpaths
     contains -- $argv $fish_user_paths
     or set -U fish_user_paths $fish_user_paths $argv
@@ -41,11 +40,11 @@ else if $IS_LINUX
 
 end
 
-
 set -a _bin_dirs \
     $AQUA_ROOT_DIR \
     $AQUA_ROOT_DIR/bin \
     $BOB_BIN \
+    $HOME/.npm-global/bin \
     $HOME/.pyenv/shims \
     $PYENV_ROOT/bin \
     $KREW_ROOT/bin \
