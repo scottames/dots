@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.24.0](https://github.com/scottames/dots/compare/v0.23.0...v0.24.0) (2025-07-03)
+
+
+### Features
+
+* **aqua:** spacectl ([9508089](https://github.com/scottames/dots/commit/9508089c871d7ae93aa1a113e095b797075d9366))
+* **zellij:** quick tab nav ([f2b1ba0](https://github.com/scottames/dots/commit/f2b1ba01c976045920bf47b335d4e9dffd5f914a))
+* **zellij:** zjstatus fun + misc tweaks ([b4b5c54](https://github.com/scottames/dots/commit/b4b5c545f401e5c5d339c831387ca6f7f572d70c))
+
+
+### Bug Fixes
+
+* **misc:** atuin+ghostty + zj configs ([cbd3e36](https://github.com/scottames/dots/commit/cbd3e36aeed3ab76a016bc0fe0fbebcc77c2a7da))
+
 ## [0.23.0](https://github.com/scottames/dots/compare/v0.22.0...v0.23.0) (2025-06-24)
 
 
