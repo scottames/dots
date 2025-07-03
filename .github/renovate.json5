@@ -4,8 +4,7 @@
     'github>scottames/renovate:default.json5',
   ],
   ignorePaths: [
-    "dagger/*/go.mod",
-    "**/dagger/go.mod",
+    ".dagger/go.mod",
   ],
   customManagers: [
     {
