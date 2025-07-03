@@ -30,8 +30,8 @@ fi
 _aqua_latest_version=v2.53.3
 
 # renovate: datasource=github-releases depName=aquaproj/aqua-installer
-_aqua_installer_version=v4.0.0
-_aqua_installer_sha256sum="f7fa69dacb234ce9648f3008cef9120a1e59d96c37971e747668c0fada7bec68"
+_aqua_installer_version=v4.0.2
+_aqua_installer_sha256sum="98b883756cdd0a6807a8c7623404bfc3bc169275ad9064dc23a6e24ad398f43d"
 
 if command -v aqua; then
   _aqua_current="$(aqua -v | head -n1 | cut -d" " -f3 | sed "s/^/v/")"
