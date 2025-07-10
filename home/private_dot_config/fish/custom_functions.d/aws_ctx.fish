@@ -18,9 +18,8 @@ function aws_ctx \
             return 0
         end
     else
-        set _profile (aws configure list-profiles | gum choose)
+        set _profile (aws configure list-profiles | gum filter)
     end
-
 
     set -gx AWS_PROFILE $_profile
     printf_info "Activated: $AWS_PROFILE\n"

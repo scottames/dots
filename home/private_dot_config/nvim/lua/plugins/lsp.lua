@@ -202,6 +202,7 @@ return {
         "taplo",
         "textlint",
         "tflint",
+        "tfsec",
         "yamlfmt",
         "yamllint",
       })
