@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.382.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.385.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.6.6 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.6.7 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # trunk.io
   #   https://github.com/trunk-io/launcher
@@ -26,10 +26,10 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.74.2
+  - name: cli/cli@v2.75.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
-  - name: golangci/golangci-lint@v2.2.1
+  - name: golangci/golangci-lint@v2.2.2
   # diff tool for YAML files, and sometimes JSON
   #  https://github.com/homeport/dyff
   - name: homeport/dyff@v1.10.1
@@ -41,7 +41,7 @@ packages:
   - name: tofuutils/tenv@v4.7.6
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.62.7
+  - name: twpayne/chezmoi@v2.63.0
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
   - name: zellij-org/zellij@v0.42.2
@@ -74,7 +74,7 @@ packages:
   - name: kubernetes/kubectl@v1.33.2
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v3.18.3
+  - name: helm/helm@v3.18.4
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.7.0
@@ -92,13 +92,13 @@ packages:
   - name: stedolan/jq@jq-1.6
   # command-line fuzzy finder
   #   https://github.com/junegunn/fzf
-  - name: junegunn/fzf@v0.63.0
+  - name: junegunn/fzf@v0.64.0
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
-  - name: jesseduffield/lazygit@v0.52.0
+  - name: jesseduffield/lazygit@v0.53.0
   # kubernetes tui
   #   https://github.com/derailed/k9s
-  - name: derailed/k9s@v0.50.6
+  - name: derailed/k9s@v0.50.7
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
   - name: awslabs/amazon-ecr-credential-helper@v0.10.1
@@ -130,7 +130,7 @@ packages:
   - name: suzuki-shunsuke/yaml2json@v0.2.1
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
-  - name: mikefarah/yq@v4.45.4
+  - name: mikefarah/yq@v4.46.1
   # run github actions locally
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.79
@@ -159,7 +159,7 @@ packages:
   - name: eza-community/eza@v0.22.0
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
-  - name: int128/ghcp@v1.14.0
+  - name: int128/ghcp@v1.15.0
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
   - name: dagger/dagger@v0.18.12
@@ -186,4 +186,4 @@ packages:
   # magical shell history
   #   https://github.com/atuinsh/atuin
   - name: atuinsh/atuin@v18.6.1
-  - name: spacelift-io/spacectl@v1.14.3
+  - name: spacelift-io/spacectl@v1.14.4
