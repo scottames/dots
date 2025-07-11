@@ -28,9 +28,9 @@ map("n", "J", "mzJ`z")
 -- centered navigation
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
--- addionally: (currently makes ctrl+d/u jump back weirdly)
--- map("n", "<C-d>", "<C-d>zz")
--- map("n", "<C-u>", "<C-u>zz")
+-- currently makes ctrl+d/u jump back weirdly
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
 -- easier write
 -- map("n", "<C-s>", ":w<CR>", {desc = "Write"}) -- save already mapped via LazyVim
@@ -47,6 +47,10 @@ map("n", "<leader>=", vim.lsp.buf.format, { desc = "Format Buffer" })
 
 -- Reopen closed buffer
 map("n", "<leader>br", "<cmd>e #<CR>", { noremap = true, silent = true, desc = "Reopen Last" })
+
+-- buffers
+map("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+map("n", "<S-Right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- replace the current word
 map("n", "<leader>c/", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace Word (s//)" })
