@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.385.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.387.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -26,7 +26,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.75.0
+  - name: cli/cli@v2.76.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.2.2
@@ -67,7 +67,7 @@ packages:
   #   https://github.com/sharkdp/fd
   - name: sharkdp/fd@v10.2.0
   #   https://github.com/neovim/neovim
-  - name: neovim/neovim@v0.11.2
+  - name: neovim/neovim@v0.11.3
   #   https://github.com/direnv/direnv
   - name: direnv/direnv@v2.37.0
   #   https://github.com/kubernetes/kubectl
@@ -98,7 +98,7 @@ packages:
   - name: jesseduffield/lazygit@v0.53.0
   # kubernetes tui
   #   https://github.com/derailed/k9s
-  - name: derailed/k9s@v0.50.7
+  - name: derailed/k9s@v0.50.9
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
   - name: awslabs/amazon-ecr-credential-helper@v0.10.1
@@ -115,13 +115,13 @@ packages:
   - name: GoogleContainerTools/skaffold@v2.16.1
   # private certificate authority & ACME server
   #   https://github.com/smallstep/certificates
-  - name: smallstep/certificates@v0.28.3
+  - name: smallstep/certificates@v0.28.4
   # zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc
   #   https://github.com/smallstep/cli
-  - name: smallstep/cli@v0.28.6
+  - name: smallstep/cli@v0.28.7
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
-  - name: terraform-linters/tflint@v0.58.0
+  - name: terraform-linters/tflint@v0.58.1
   # convert json to yaml
   #   https://github.com/itchyny/json2yaml
   - name: itchyny/json2yaml@v0.1.4
@@ -135,13 +135,13 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.79
   #   https://github.com/casey/just
-  - name: casey/just@1.41.0
+  - name: casey/just@1.42.2
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.12
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@37.0.0
+  - name: antonmedv/fx@37.0.1
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -156,7 +156,7 @@ packages:
   - name: rhysd/hgrep@v0.3.8
   # a modern, maintained replacement for ls
   #   https://github.com/eza-community/eza
-  - name: eza-community/eza@v0.22.0
+  - name: eza-community/eza@v0.22.1
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
   - name: int128/ghcp@v1.15.0
@@ -185,5 +185,5 @@ packages:
   - name: bloznelis/typioca@3.1.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.6.1
+  - name: atuinsh/atuin@v18.7.1
   - name: spacelift-io/spacectl@v1.14.4
