@@ -1,7 +1,8 @@
 # vi: ft=fish autoformat=false
 
 setenv SRC_DIR                     "$HOME/src"
-setenv MY_SRC_DIR                  "$SRC_DIR/github.com/scottames"
+setenv GITHUB_USER                 "scottames" # https://github.com/scottames
+setenv MY_SRC_DIR                  "$SRC_DIR/github.com/$GITHUB_USER"
 [ -d "$MY_SRC_DIR/dots" ] \
   && setenv DOTS                   "$MY_SRC_DIR/dots"
 [ -d "$MY_SRC_DIR/dots/main" ] \
@@ -42,18 +43,13 @@ $HAS_NVIM \
   && setenv EDITOR                 "nvim"
 setenv FISH_CONFIG                 "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS            "--bind ctrl-j:down,ctrl-k:up"
-$HAS_OP \
-  && setenv GITHUB_USER            "op://Private/github.com/username"
+setenv GITHUB_USERNAME             "$GITHUB_USER"
 $HAS_OP \
   && setenv GITHUB_TOKEN           "op://private/github.com/token"
-$HAS_OP \
-  && setenv GITHUB_USERNAME        "$GITHUB_USER"
-$HAS_OP \
-  && setenv GITHUB_OAUTH_TOKEN     "$GITHUB_TOKEN"
 setenv GOPATH                      "$HOME/go"
 [ -f "$HOME/.gobrew/current/go" ] \
   && setenv GOROOT                 "$HOME/.gobrew/current/go"
-setenv GOPRIVATE                   "github.com/scottames/*"
+setenv GOPRIVATE                   "github.com/$GITHUB_USER/*"
 setenv HOME_BIN                    "$HOME/bin"
 setenv HOME_LOCAL_BIN              "$HOME/.local/bin"
 setenv IMMICH_TOKEN                "op://private/Immich/token"
@@ -71,6 +67,8 @@ setenv MAGEFILE_TARGET_COLOR       "BrightRed" # https://magefile.org/environmen
 setenv OP_ACCOUNT                  "my.1password.com"
 setenv PYENV_ROOT                  "$HOME/.pyenv"
 setenv SHRUG                       "¯\\_(ツ)_/¯"
+setenv SPACECTL_SKIP_STACK_PROMPT  true
+setenv SPACECTL_PROFILE            "$GITHUB_USER"
 setenv TENV_AUTO_INSTALL           true
 setenv TERM                        "xterm-256color"
 setenv TMOUT                       0
