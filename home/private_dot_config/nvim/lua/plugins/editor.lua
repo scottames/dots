@@ -14,6 +14,11 @@ return {
     config = true,
     ft = { "markdown", "txt" },
   },
+  { -- https://github.com/hedyhli/markdown-toc.nvim
+    "hedyhli/markdown-toc.nvim",
+    config = true,
+    ft = { "markdown" },
+  },
 
   -- peek line
   { -- https://github.com/nacro90/numb.nvim
