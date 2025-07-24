@@ -1,0 +1,20 @@
+[General]
+StartWithLastProfile=1
+Version=2
+
+[Install{{ .home.zen.release_id }}]
+Default={{ .home.zen.release_path }}
+Locked=1
+
+[Profile0]
+Name=Default (release)
+IsRelative=1
+Path={{ .home.zen.release_path }}
+
+[Profile1]
+Name=Default (nightly)
+IsRelative=1
+Path={{ .home.zen.nightly_path }}
+Default=1
+
+# vi: ft=dosini

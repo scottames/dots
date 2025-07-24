@@ -23,6 +23,11 @@
 {{- $osVersion        := ""    -}}
 {{- $ublueImageInfo   := ""    -}}
 {{- $wallpaper        := ""    -}}
+{{- $zenReleaseId     := ""    -}}
+{{- $zenNightlyId     := ""    -}}
+
+{{- $zenReleasePath   := "default-release" -}}
+{{- $zenNightlyPath   := "default-nightly" -}}
 
 {{- if $useGitWorktrees -}}
 {{-   $dotsStr = joinPath $dotsStr "main" -}}
@@ -37,9 +42,13 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
   {{- $osVariant = "darwin" -}}
   {{- $osVersion = trim (output "sh" "-c" "sw_vers -productVersion") -}}
   {{- $hostname = trim (output "sh" "-c" "hostname | cut -d. -f1") -}}
+  {{- $zenReleaseId = mozillaInstallHash "/Applications/Zen.app/Contents/MacOS" -}}
+  {{- $zenNightlyId = mozillaInstallHash "/Applications/Zen Nightly.app/Contents/MacOS" -}}
 {{- end -}}
 
 {{- if eq .chezmoi.os "linux" -}}
+{{-   $zenReleaseId = mozillaInstallHash "/usr/lib/opt/zen" -}}
+{{-   $zenNightlyId = mozillaInstallHash "/usr/lib/opt/zen-nightly" -}}
 {{-
   $gpu = lower ( trim (
     output "sh" "-c" "lspci | grep VGA | cut -d ':' -f3 | awk '{print $1}'"
@@ -138,6 +147,12 @@ progress = true
       installed = {{ $aquaInstalled }}
       bin_dir = "{{ $aquaRoot }}/bin"
       root = "{{ $aquaRoot }}"
+
+    [data.home.zen]
+      release_id = "{{ $zenReleaseId }}"
+      release_path = "{{ $zenReleasePath }}"
+      nightly_id = "{{ $zenNightlyId }}"
+      nightly_path = "{{ $zenNightlyPath }}"
 
   [data.host]
     name = "{{ $hostname }}"
