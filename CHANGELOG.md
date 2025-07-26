@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.25.0](https://github.com/scottames/dots/compare/v0.24.0...v0.25.0) (2025-07-26)
+
+
+### Features
+
+* **env:** spacectl helpers + small refactor ([b905fff](https://github.com/scottames/dots/commit/b905fff46496c5998955d4003b122d51d16af27d))
+* **nvim:** lazy updates + add markdown-toc ([2a492d4](https://github.com/scottames/dots/commit/2a492d484e1861a22805404bf9d67dec39649a8f))
+* small tweaks for general improvement ([62d2868](https://github.com/scottames/dots/commit/62d2868a7fc1f1942936a839b0f4ce175f313692))
+
 ## [0.24.0](https://github.com/scottames/dots/compare/v0.23.0...v0.24.0) (2025-07-03)
 
 
