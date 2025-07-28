@@ -186,4 +186,6 @@ packages:
   # magical shell history
   #   https://github.com/atuinsh/atuin
   - name: atuinsh/atuin@v18.7.1
+  # Spacelift client and CLI
+  #   https://github.com/spacelift-io/spacectl
   - name: spacelift-io/spacectl@v1.14.4
