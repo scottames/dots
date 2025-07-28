@@ -189,3 +189,6 @@ packages:
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
   - name: spacelift-io/spacectl@v1.14.4
+  #  more intuitive version of du in rust
+  #   https://github.com/bootandy/dust/
+  - name: bootandy/dust@v1.2.2
