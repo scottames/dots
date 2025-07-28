@@ -51,4 +51,45 @@ return {
       "=",
     },
   },
+
+  { -- https://www.lazyvim.org/extras/coding/nvim-cmp
+    --   adds emoji (below) to completion
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.sources = cmp.config.sources({
+        { name = "lazydev" },
+        { name = "nvim_lsp" },
+        { name = "path" },
+      }, {
+        { name = "buffer" },
+        { name = "emoji" },
+      })
+    end,
+  },
+
+  { -- https://github.com/Allaman/emoji.nvim
+    "allaman/emoji.nvim",
+    dependencies = {
+      -- util for handling paths
+      "nvim-lua/plenary.nvim",
+      -- optional for nvim-cmp integration
+      "hrsh7th/nvim-cmp",
+      -- optional for telescope integration
+      -- "nvim-telescope/telescope.nvim",
+      -- optional for fzf-lua integration via vim.ui.select
+      "ibhagwan/fzf-lua",
+    },
+    opts = {
+      -- default is false, also needed for blink.cmp integration!
+      enable_cmp_integration = true,
+    },
+    config = function(_, opts)
+      local emoji = require("emoji")
+      emoji.setup(opts)
+      -- optional for telescope integration
+      -- local ts = require("telescope").load_extension("emoji")
+      vim.keymap.set("n", "<leader>se", emoji.insert, { desc = "[S]earch [E]moji" })
+    end,
+  },
 }
