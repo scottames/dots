@@ -26,6 +26,7 @@ vim.o.showbreak = [[↪ ]] -- Options include -> '…', '↳ ', '→','↪ '
 opt.wrap = true
 opt.wrapmargin = 2
 opt.softtabstop = 2
+opt.tabstop = 2
 opt.textwidth = 80
 opt.shiftwidth = 2
 opt.expandtab = true
