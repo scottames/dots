@@ -78,6 +78,9 @@ lint:
       paths:
         - .dagger
         - .dagger/**
+    - linters: [prettier]
+      paths:
+        - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
 runtimes:
   enabled:
     - rust@1.82.0
