@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.25.0](https://github.com/scottames/dots/compare/v0.24.0...v0.25.0) (2025-07-29)
+
+
+### Features
+
+* **aqua:** dust ([1ca1087](https://github.com/scottames/dots/commit/1ca1087ece110faa2ab60dc6384ac4f171e8d442))
+* **env:** spacectl helpers + small refactor ([b905fff](https://github.com/scottames/dots/commit/b905fff46496c5998955d4003b122d51d16af27d))
+* **nvim:** emoji picker + lazy updates ([f830505](https://github.com/scottames/dots/commit/f830505e2aac23dbe5d2af001d78950b9ef7b4e7))
+* **nvim:** lazy updates + add markdown-toc ([2a492d4](https://github.com/scottames/dots/commit/2a492d484e1861a22805404bf9d67dec39649a8f))
+* small tweaks for general improvement ([62d2868](https://github.com/scottames/dots/commit/62d2868a7fc1f1942936a839b0f4ce175f313692))
+* zen-browser sync, primarily keybinds ([4bc760d](https://github.com/scottames/dots/commit/4bc760d8813860de9383b4f07c7a5be283a8c9f5))
+
+
+### Bug Fixes
+
+* **aqua:** k9s checksums ([aecdbf4](https://github.com/scottames/dots/commit/aecdbf4d7c18407c152a88779043c0f196acd9ac))
+
 ## [0.24.0](https://github.com/scottames/dots/compare/v0.23.0...v0.24.0) (2025-07-03)
 
 
