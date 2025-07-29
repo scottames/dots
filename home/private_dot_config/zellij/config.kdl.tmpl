@@ -151,10 +151,6 @@ keybinds clear-defaults=true {
         bind "Ctrl x" { SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Alt left" { MoveFocusOrTab "left"; }
-        bind "Alt down" { MoveFocus "down"; }
-        bind "Alt up" { MoveFocus "up"; }
-        bind "Alt right" { MoveFocusOrTab "right"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
@@ -175,11 +171,23 @@ keybinds clear-defaults=true {
         bind "Ctrl q" { CloseFocus; }
         bind "Ctrl Alt q" { Quit; }
         // quick tab navigation
-        bind "Ctrl H" { GoToPreviousTab; }
-        bind "Ctrl L" { GoToNextTab; }
+        bind "Ctrl Alt h" { GoToPreviousTab; }
+        bind "Ctrl Alt l" { GoToNextTab; }
+        bind "Ctrl Alt Left" { GoToPreviousTab; }
+        bind "Ctrl Alt Right" { GoToNextTab; }
 
         // https://github.com/hiasr/vim-zellij-navigator
         bind "Ctrl h" {
+            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus_or_tab";
+                payload "left";
+
+                // Plugin Configuration
+                move_mod "ctrl"; // Optional, should be added on every command if you want to use it
+                resize_mod "alt"; // Optional, should be added on every command if you want to use it
+            };
+        }
+        bind "Ctrl left" {
             MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab";
                 payload "left";
@@ -209,6 +217,15 @@ keybinds clear-defaults=true {
                 resize_mod "alt";
             };
         }
+        bind "Ctrl down" {
+            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "down";
+
+                move_mod "ctrl";
+                resize_mod "alt";
+            };
+        }
 
         bind "Alt j" {
             MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
@@ -229,6 +246,15 @@ keybinds clear-defaults=true {
                 resize_mod "alt";
             };
         }
+        bind "Ctrl up" {
+            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "up";
+
+                move_mod "ctrl";
+                resize_mod "alt";
+            };
+        }
 
         bind "Alt k" {
             MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
@@ -241,6 +267,15 @@ keybinds clear-defaults=true {
         }
 
         bind "Ctrl l" {
+            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus_or_tab";
+                payload "right";
+
+                move_mod "ctrl";
+                resize_mod "alt";
+            };
+        }
+        bind "Ctrl right" {
             MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab";
                 payload "right";
@@ -270,7 +305,7 @@ keybinds clear-defaults=true {
 
         // https://github.com/karimould/zellij-forgot
         bind "Ctrl '" {
-            LaunchOrFocusPlugin "file:/var/home/scta/.config/zellij/plugins/zellij-forgot.wasm" {
+            LaunchOrFocusPlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij-forgot.wasm" {
                 "LOAD_ZELLIJ_BINDINGS" "false"
                 floating true
                 "lock"          "ctrl + g"

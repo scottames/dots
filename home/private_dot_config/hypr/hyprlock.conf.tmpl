@@ -5,9 +5,13 @@ $accentAlpha = $mauveAlpha
 $font = {{ .desktop.fonts.monospace }}
 
 general {
-    disable_loading_bar = true
-    enable_fingerprint = {{ eq .host.chassis "laptop" }}
     hide_cursor = true
+}
+
+auth {
+  fingerprint {
+      enabled = {{ eq .host.chassis "laptop" }}
+    }
 }
 
 background {

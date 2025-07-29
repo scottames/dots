@@ -22,15 +22,24 @@ map("n", "-", "<C-x>")
 map("n", "g+", "g<C-a>", { desc = "increment" })
 map("n", "g-", "g<C-x>", { desc = "decrement" })
 
+-- Move Lines
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L25-L31
+map("n", "<A-Down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "<A-Up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map("i", "<A-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+map("i", "<A-Up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+map("v", "<A-Down>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "<A-Up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+
 -- fold line
 map("n", "J", "mzJ`z")
 
 -- centered navigation
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
--- addionally: (currently makes ctrl+d/u jump back weirdly)
--- map("n", "<C-d>", "<C-d>zz")
--- map("n", "<C-u>", "<C-u>zz")
+-- currently makes ctrl+d/u jump back weirdly
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
 -- easier write
 -- map("n", "<C-s>", ":w<CR>", {desc = "Write"}) -- save already mapped via LazyVim
@@ -47,6 +56,10 @@ map("n", "<leader>=", vim.lsp.buf.format, { desc = "Format Buffer" })
 
 -- Reopen closed buffer
 map("n", "<leader>br", "<cmd>e #<CR>", { noremap = true, silent = true, desc = "Reopen Last" })
+
+-- buffers
+map("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+map("n", "<S-Right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- replace the current word
 map("n", "<leader>c/", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace Word (s//)" })
