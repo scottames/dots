@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.0](https://github.com/scottames/dots/compare/v0.25.0...v0.26.0) (2025-07-31)
+
+
+### Features
+
+* **aqua:** sst/opencode ([6921b58](https://github.com/scottames/dots/commit/6921b58eee1d83b80b295df952f06f951c6e05e2))
+
 ## [0.25.0](https://github.com/scottames/dots/compare/v0.24.0...v0.25.0) (2025-07-29)
 
 
