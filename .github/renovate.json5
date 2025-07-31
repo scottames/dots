@@ -4,7 +4,7 @@
     'github>scottames/renovate:default.json5',
   ],
   ignorePaths: [
-    ".dagger/go.mod",
+    '.dagger/go.mod',
   ],
   customManagers: [
     {
@@ -13,8 +13,9 @@
         '/home/private_dot_config/k9s/private_config.yaml.tmpl/',
       ],
       matchStrings: [
-        'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>\\w+).*\\n\\s+image: .*?:(?<currentValue>[v\\d].*?)\\s',
+        '# renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>\\w+).*\\n\\s+image: [^:]+:(?<currentValue>[v\\d][^@\\s]*)(?:@(?<currentDigest>sha256:[a-f0-9]+))?',
       ],
+      autoReplaceStringTemplate: '# renovate: datasource={{{datasource}}} depName={{{depName}}}\n    image: {{{depName}}}:{{#if newValue}}{{{newValue}}}{{else}}{{{currentValue}}}{{/if}}{{#if newDigest}}@{{{newDigest}}}{{/if}}',
     },
   ],
 }
