@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.396.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.397.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -179,4 +179,4 @@ packages:
   - name: bootandy/dust@v1.2.2
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.3.86
+  - name: sst/opencode@v0.3.101
