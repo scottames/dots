@@ -1,20 +1,21 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: [
-    'github>scottames/renovate:default.json5',
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>scottames/renovate:default.json5"
   ],
-  ignorePaths: [
-    ".dagger/go.mod",
+  "ignorePaths": [
+    ".dagger/go.mod"
   ],
-  customManagers: [
+  "customManagers": [
     {
-      customType: 'regex',
-      managerFilePatterns: [
-        '/home/private_dot_config/k9s/private_config.yaml.tmpl/',
+      "customType": "regex",
+      "fileMatch": [
+        "home/private_dot_config/k9s/private_config.yaml.tmpl"
       ],
-      matchStrings: [
-        'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>\\w+).*\\n\\s+image: .*?:(?<currentValue>[v\\d].*?)\\s',
+      "matchStrings": [
+        "renovate:(\sdatasource=(?<datasource>.*?))?\sdepName=(?<depName>.*?)s*\n\s+image:\s(?<depName>.*?):(?<currentValue>.*)"
       ],
-    },
-  ],
+      "replaceString": "{{- /* renovate: datasource={{{datasource}}} depName={{{depName}}} */}}\n    image: {{{depName}}}:{{#if newValue}}{{{newValue}}}{{else}}{{{currentValue}}}{{/if}}{{#if newDigest}}@{{{newDigest}}}{{/if}}"
+    }
+  ]
 }
