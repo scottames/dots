@@ -177,3 +177,6 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.2
+  # AI coding agent, built for the terminal.
+  #  https://github.com/sst/opencode
+  - name: sst/opencode@v0.3.86
