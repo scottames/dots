@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.27.0](https://github.com/scottames/dots/compare/v0.26.0...v0.27.0) (2025-07-31)
+
+
+### Features
+
+* **aqua:** charmbracelet/crush ([165c160](https://github.com/scottames/dots/commit/165c16008f98dd56a8218d143471204684073c2c))
+
 ## [0.26.0](https://github.com/scottames/dots/compare/v0.25.0...v0.26.0) (2025-07-31)
 
 
