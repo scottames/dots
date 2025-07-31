@@ -54,9 +54,6 @@ packages:
   # minimal, blazing-fast, and infinitely customizable prompt for any shell!
   #   https://github.com/starship/starship
   - name: starship/starship@v1.23.0
-  # disk Usage
-  #   https://github.com/muesli/duf
-  - name: muesli/duf@v0.8.1
   # better grep
   #   https://github.com/BurntSushi/ripgrep
   - name: BurntSushi/ripgrep@14.1.1
@@ -105,9 +102,6 @@ packages:
   # cat clone with wings
   #   https://github.com/sharkdp/bat
   - name: sharkdp/bat@v0.25.0
-  # Validate Kubernetes configuration files
-  #   https://github.com/instrumenta/kubeval
-  - name: instrumenta/kubeval@v0.16.1
   #   https://github.com/kubernetes/minikube
   - name: kubernetes/minikube@v1.36.0
   # easy and repeatable kubernetes development
@@ -122,12 +116,6 @@ packages:
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
   - name: terraform-linters/tflint@v0.58.1
-  # convert json to yaml
-  #   https://github.com/itchyny/json2yaml
-  - name: itchyny/json2yaml@v0.1.4
-  # convert yaml to json
-  #   https://github.com/suzuki-shunsuke/yaml2json
-  - name: suzuki-shunsuke/yaml2json@v0.2.1
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
   - name: mikefarah/yq@v4.47.1
@@ -145,9 +133,6 @@ packages:
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
-  # jless is a command-line JSON viewer
-  #   https://github.com/PaulJuliusMartinez/jless
-  - name: PaulJuliusMartinez/jless@v0.9.0
   # Interactive grep (for streaming)
   #   https://github.com/konradsz/igrep
   - name: konradsz/igrep@v1.3.0
