@@ -180,3 +180,6 @@ packages:
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v0.3.101
+  # The glamourous AI coding agent for your favourite terminal 💘
+  #  https://github.com/charmbracelet/crush
+  - name: charmbracelet/crush@v0.1.10
