@@ -176,10 +176,10 @@ packages:
   - name: spacelift-io/spacectl@v1.14.4
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
-  - name: bootandy/dust@v1.2.2
+  - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.3.101
+  - name: sst/opencode@v0.3.109
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.1.10
+  - name: charmbracelet/crush@v0.1.11
