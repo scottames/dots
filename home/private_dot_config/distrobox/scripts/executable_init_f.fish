@@ -8,6 +8,11 @@ function install_vscode
     sudo dnf install -y code
 end
 
+function fix_npm_permissions
+    sudo chown -R $USER:$USER "$HOME/.npm"
+    sudo chown -R $USER:$USER "$HOME/.npm-global/"
+end
+
 function install_claude_code
     npm install -g @anthropic-ai/claude-code
 end
@@ -20,6 +25,7 @@ function install_openai_codex
     npm install -g @openai/codex
 end
 
+fix_npm_permissions
 install_vscode
 install_claude_code
 install_gemini_cli
