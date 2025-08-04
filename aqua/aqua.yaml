@@ -93,6 +93,7 @@ packages:
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
   - name: jesseduffield/lazygit@v0.54.0
+    registry: dots
   # kubernetes tui
   #   https://github.com/derailed/k9s
   - name: derailed/k9s@v0.50.9
