@@ -18,6 +18,10 @@ packages:
   - name: withgraphite/gt
     version: v1.6.7 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
+  # vet installer scripts
+  #   https://github.com/vet-run/vet
+  - name: vet-run/vet@v1.0.2
+    registry: dots
   # trunk.io
   #   https://github.com/trunk-io/launcher
   - name: trunk-io/launcher@1.3.1

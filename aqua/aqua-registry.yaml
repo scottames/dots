@@ -185,3 +185,17 @@ packages:
         overrides:
           - goos: windows
             format: zip
+  - type: github_release
+    repo_owner: vet-run
+    repo_name: vet
+    asset: vet
+    format: raw
+    description: |
+      vet is a command-line tool that acts as a safety net for the risky
+      `curl | bash` pattern. It lets you inspect, diff against previous
+      versions, and lint remote scripts before asking for your explicit approval
+      to execute. Promoting a safer, more transparent way to handle remote code
+      execution.
+    supported_envs:
+      - linux
+      - darwin
