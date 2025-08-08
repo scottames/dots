@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.397.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.398.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.6.7 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.6.8 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -45,10 +45,10 @@ packages:
   - name: tofuutils/tenv@v4.7.6
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.63.1
+  - name: twpayne/chezmoi@v2.64.0
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
-  - name: zellij-org/zellij@v0.42.2
+  - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
   - name: weaveworks/eksctl@v0.212.0
@@ -96,7 +96,7 @@ packages:
   - name: junegunn/fzf@v0.65.1
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
-  - name: jesseduffield/lazygit@v0.54.0
+  - name: jesseduffield/lazygit@v0.54.1
     registry: dots
   # kubernetes tui
   #   https://github.com/derailed/k9s
@@ -175,7 +175,7 @@ packages:
   - name: bloznelis/typioca@3.1.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.7.1
+  - name: atuinsh/atuin@v18.8.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
   - name: spacelift-io/spacectl@v1.14.4
@@ -184,7 +184,7 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.3.126
+  - name: sst/opencode@v0.4.1
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.2.1
+  - name: charmbracelet/crush@v0.3.0
