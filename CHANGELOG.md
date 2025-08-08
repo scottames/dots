@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.28.0](https://github.com/scottames/dots/compare/v0.27.0...v0.28.0) (2025-08-08)
+
+
+### Features
+
+* **aqua:** vet-run/vet ([2aaaa21](https://github.com/scottames/dots/commit/2aaaa21f6fec146e8db53c04ea8cfdf2759ccc64))
+* **fish/abbr:** gt checkout ([f19935e](https://github.com/scottames/dots/commit/f19935e80496bafdf7d2d4a1651fe508a074d61a))
+* **zellij:** add new stacked pane shortcut ([72b43f8](https://github.com/scottames/dots/commit/72b43f8f53fe14358385781bb3c138b43b4cec9a))
+
+
+### Bug Fixes
+
+* **aqua:** revert temp lazygit patch ([47515d0](https://github.com/scottames/dots/commit/47515d04e3fa8005bb4cd81505f655ee1c882331))
+* **distrobox/f:** cleanup npm permissions on init ([b74b999](https://github.com/scottames/dots/commit/b74b999be2649f1bace14e6d886e88205014ecd2))
+
 ## [0.27.0](https://github.com/scottames/dots/compare/v0.26.0...v0.27.0) (2025-08-01)
 
 
