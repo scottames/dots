@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.398.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.400.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -36,7 +36,7 @@ packages:
   - name: golangci/golangci-lint@v2.3.1
   # diff tool for YAML files, and sometimes JSON
   #  https://github.com/homeport/dyff
-  - name: homeport/dyff@v1.10.1
+  - name: homeport/dyff@v1.10.2
   # find and install kubectl plugins
   #   https://github.com/kubernetes-sigs/krew
   - name: kubernetes-sigs/krew@v0.4.5
@@ -96,7 +96,7 @@ packages:
   - name: junegunn/fzf@v0.65.1
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
-  - name: jesseduffield/lazygit@v0.54.1
+  - name: jesseduffield/lazygit@v0.54.2
   # kubernetes tui
   #   https://github.com/derailed/k9s
   - name: derailed/k9s@v0.50.9
@@ -177,13 +177,13 @@ packages:
   - name: atuinsh/atuin@v18.8.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.14.4
+  - name: spacelift-io/spacectl@v1.15.0
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.4.1
+  - name: sst/opencode@v0.4.29
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.3.0
+  - name: charmbracelet/crush@v0.5.0
