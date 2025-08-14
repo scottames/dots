@@ -5,7 +5,7 @@ go 1.24.4
 require (
 	github.com/magefile/mage v1.15.0
 	github.com/scottames/cmder v0.3.0
-	golang.org/x/exp v0.0.0-20250718183923-645b1fa84792
+	golang.org/x/exp v0.0.0-20250813145105-42675adae3e6
 	gopkg.in/yaml.v3 v3.0.1
 )
 
