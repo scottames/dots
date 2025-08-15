@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.29.0](https://github.com/scottames/dots/compare/v0.28.0...v0.29.0) (2025-08-14)
+
+
+### Features
+
+* minor, fish/abbr/gtpr + zellij/no kill pane ([ebebf43](https://github.com/scottames/dots/commit/ebebf433132b4ef12f7e8ce2d52e831d7a0517c6))
+* **nvim:** add opencode + lazy updates ([3fe109d](https://github.com/scottames/dots/commit/3fe109d35eee50637b9a46c78f47ed6c4cb244e4))
+
 ## [0.28.0](https://github.com/scottames/dots/compare/v0.27.0...v0.28.0) (2025-08-08)
 
 
