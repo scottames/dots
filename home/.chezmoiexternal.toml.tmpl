@@ -90,12 +90,6 @@ refreshPeriod = "168h"
     type = "file"
     url = "https://gravatar.com/avatar/{{ .me.gravatar.id }}?s=2048"
 
-[".local/bin/cht.sh"]
-    type = "file"
-    url = "https://cht.sh/:cht.sh"
-    executable = true
-    refreshPeriod = "168h"
-
 # renovate: datasource=github-releases depName=karimould/zellij-forgot
 {{ $zellijForgotVersion := "0.4.2" -}}
 
