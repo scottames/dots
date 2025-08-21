@@ -28,3 +28,20 @@ packages:
     supported_envs:
       - linux
       - darwin
+  - type: github_release
+    repo_owner: erikjuhani
+    repo_name: basalt
+    asset: basalt-{{trimPrefix "basalt/v" .Version}}-{{.Arch}}-{{.OS}}.tar.gz
+    description: |
+      TUI Application to manage Obsidian notes directly from the terminal
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+    supported_envs:
+      - linux
+      - darwin
+    files:
+      - name: basalt
+        src: target/{{.Arch}}-{{.OS}}/release/basalt

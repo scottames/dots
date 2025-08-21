@@ -193,3 +193,7 @@ packages:
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.1
+  # Obsidian TUI
+  #  https://github.com/erikjuhani/basalt
+  - name: erikjuhani/basalt@basalt/v0.10.0
+    registry: dots
