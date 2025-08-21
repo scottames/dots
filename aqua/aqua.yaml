@@ -30,7 +30,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.76.2
+  - name: cli/cli@v2.77.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.4.0
@@ -75,7 +75,7 @@ packages:
   - name: kubernetes/kubectl@v1.33.4
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v3.18.5
+  - name: helm/helm@v3.18.6
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.7.1
@@ -133,7 +133,7 @@ packages:
   - name: kevincobain2000/gobrew@v1.10.13
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@39.0.1
+  - name: antonmedv/fx@39.0.2
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -183,7 +183,7 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.5.7
+  - name: sst/opencode@v0.5.13
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.6.3
+  - name: charmbracelet/crush@v0.7.1
