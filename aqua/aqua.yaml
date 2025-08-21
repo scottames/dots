@@ -187,3 +187,9 @@ packages:
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.7.1
+  # Terminal image, video, directory, and Markdown viewer
+  #  https://github.com/Skardyy/mcat
+  - name: Skardyy/mcat@v0.4.2
+  # Sandboxed dev environments for coding agents
+  #  https://container-use.com/
+  - name: dagger/container-use@v0.4.1
