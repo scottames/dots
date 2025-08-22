@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.30.0](https://github.com/scottames/dots/compare/v0.29.0...v0.30.0) (2025-08-22)
+
+
+### Features
+
+* **aqua:** mcat + container-use ([26c782f](https://github.com/scottames/dots/commit/26c782f7c8a95442c26d7a1eb344d2ad50e8a83f))
+* **aqua:** playing with basalt ([3dd8191](https://github.com/scottames/dots/commit/3dd81911a4e48f2920dd7251b0ccffce6a816336))
+
 ## [0.29.0](https://github.com/scottames/dots/compare/v0.28.0...v0.29.0) (2025-08-14)
 
 
