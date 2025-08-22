@@ -30,7 +30,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.77.0
+  - name: cli/cli@v2.78.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.4.0
@@ -192,7 +192,7 @@ packages:
   - name: Skardyy/mcat@v0.4.2
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
-  - name: dagger/container-use@v0.4.1
+  - name: dagger/container-use@v0.4.2
   # Obsidian TUI
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
