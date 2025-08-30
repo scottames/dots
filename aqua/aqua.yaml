@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.403.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.406.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -42,16 +42,16 @@ packages:
   - name: kubernetes-sigs/krew@v0.4.5
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.7.6
+  - name: tofuutils/tenv@v4.7.21
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.64.0
+  - name: twpayne/chezmoi@v2.65.0
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.212.0
+  - name: weaveworks/eksctl@v0.214.0
   # make/rake-like dev tool using Go
   #   https://github.com/magefile/mage
   - name: magefile/mage@v1.15.0
@@ -66,7 +66,7 @@ packages:
   - name: ajeetdsouza/zoxide@v0.9.8
   # better find
   #   https://github.com/sharkdp/fd
-  - name: sharkdp/fd@v10.2.0
+  - name: sharkdp/fd@v10.3.0
   #   https://github.com/neovim/neovim
   - name: neovim/neovim@v0.11.3
   #   https://github.com/direnv/direnv
@@ -133,7 +133,7 @@ packages:
   - name: kevincobain2000/gobrew@v1.10.13
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@39.0.2
+  - name: antonmedv/fx@39.0.3
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -168,7 +168,7 @@ packages:
   - name: leg100/pug@v0.6.2
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
-  - name: dlvhdr/gh-dash@v4.16.1
+  - name: dlvhdr/gh-dash@v4.16.2
   # cozy typing speed tester in terminal
   #   https://github.com/bloznelis/typioca
   - name: bloznelis/typioca@3.1.0
@@ -183,13 +183,13 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.5.13
+  - name: sst/opencode@v0.5.29
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.7.1
+  - name: charmbracelet/crush@v0.7.4
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
-  - name: Skardyy/mcat@v0.4.2
+  - name: Skardyy/mcat@v0.4.4
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
