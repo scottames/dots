@@ -297,6 +297,8 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    Mod+O { toggle-overview; }
+
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "alacritty"; }
     Mod+G { spawn "ghostty"; }
@@ -497,6 +499,11 @@ binds {
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Toggle the opacity window rule of the focused window.
+    // This only has an effect if the window's opacity window rule is already
+    // set to semitransparent.
+    Mod+0 { toggle-window-rule-opacity; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
