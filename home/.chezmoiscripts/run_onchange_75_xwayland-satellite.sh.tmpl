@@ -50,14 +50,10 @@ print_info "C_INCLUDE_PATH: '${C_INCLUDE_PATH}'"
 if [[ -d "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite" ]]; then
     cd "{{ .chezmoi.homeDir }}/.local/share/xwayland-satellite"
     cargo build --release
-    if [[ -f "{{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite" ]]; then
-      cp target/release/xwayland-satellite "{{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite.new"
-      print_warn "xwayland-satellite already built, please manually update:"
-      echo "  cp {{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite.new {{ .chezmoi.homeDir }}/.local/bin/xwayland-satellite"
-      echo
-    else
-      cp target/release/xwayland-satellite "{{ .chezmoi.homeDir }}/.local/bin/"
-    fi
+
+    print_warn "killing xwayland-satellite to install newly built version"
+    killall xwayland-satellite || true
+    cp target/release/xwayland-satellite "{{ .chezmoi.homeDir }}/.local/bin/"
 else
     print_warn "xwayland-satellite clone not found, skipping build"
 fi
