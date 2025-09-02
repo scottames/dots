@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.406.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.407.2 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.6.8 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.0 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -68,7 +68,7 @@ packages:
   #   https://github.com/sharkdp/fd
   - name: sharkdp/fd@v10.3.0
   #   https://github.com/neovim/neovim
-  - name: neovim/neovim@v0.11.3
+  - name: neovim/neovim@v0.11.4
   #   https://github.com/direnv/direnv
   - name: direnv/direnv@v2.37.1
   #   https://github.com/kubernetes/kubectl
@@ -93,7 +93,7 @@ packages:
   - name: stedolan/jq@jq-1.6
   # command-line fuzzy finder
   #   https://github.com/junegunn/fzf
-  - name: junegunn/fzf@v0.65.1
+  - name: junegunn/fzf@v0.65.2
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
   - name: jesseduffield/lazygit@v0.54.2
@@ -119,13 +119,13 @@ packages:
   - name: smallstep/cli@v0.28.7
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
-  - name: terraform-linters/tflint@v0.58.1
+  - name: terraform-linters/tflint@v0.59.1
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
   - name: mikefarah/yq@v4.47.1
   # run github actions locally
   #   https://github.com/nektos/act
-  - name: nektos/act@v0.2.80
+  - name: nektos/act@v0.2.81
   #   https://github.com/casey/just
   - name: casey/just@1.42.4
   # go version manager
@@ -133,7 +133,7 @@ packages:
   - name: kevincobain2000/gobrew@v1.10.13
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@39.0.3
+  - name: antonmedv/fx@39.0.4
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -145,7 +145,7 @@ packages:
   - name: rhysd/hgrep@v0.3.8
   # a modern, maintained replacement for ls
   #   https://github.com/eza-community/eza
-  - name: eza-community/eza@v0.23.0
+  - name: eza-community/eza@v0.23.1
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
   - name: int128/ghcp@v1.15.0
@@ -183,7 +183,7 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.5.29
+  - name: sst/opencode@v0.6.3
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.7.4
