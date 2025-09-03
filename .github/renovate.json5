@@ -18,4 +18,10 @@
       autoReplaceStringTemplate: '# renovate: datasource={{{datasource}}} depName={{{depName}}}\n    image: {{{depName}}}:{{#if newValue}}{{{newValue}}}{{else}}{{{currentValue}}}{{/if}}{{#if newDigest}}@{{{newDigest}}}{{/if}}',
     },
   ],
+  packageRules: [
+    {
+      matchPackageNames: ["Skardyy/mcat"],
+      allowedVersions: "!0.4.4" // invalid checksum
+    }
+  ]
 }
