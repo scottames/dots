@@ -197,3 +197,6 @@ packages:
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
     registry: dots
+  # OpenAI's Lightweight coding agent that runs in your terminal
+  #  https://github.com/openai/codex
+  - name: openai/codex@rust-v0.29.0
