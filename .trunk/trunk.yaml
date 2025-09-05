@@ -9,20 +9,10 @@ plugins:
       uri: https://github.com/trunk-io/plugins
 actions:
   enabled:
-    - go-mod-tidy
     - trunk-announce
     - trunk-check-pre-push
     - trunk-fmt-pre-commit
     - trunk-upgrade-available
-    - go-test
-  definitions:
-    - id: go-test
-      display_name: Go Test
-      description: Runs go tests
-      run: go test ./...
-      triggers:
-        - git_hooks: [pre-push, pre-commit]
-        - files: ["*.go"]
 lint:
   enabled:
     - golangci-lint2@2.4.0
@@ -84,6 +74,5 @@ lint:
 runtimes:
   enabled:
     - rust@1.82.0
-    - go@1.21.0
     - node@22.16.0
     - python@3.10.8
