@@ -1,0 +1,16 @@
+[tools."aqua:Skardyy/mcat"]
+version = "v0.4.4"
+backend = "aqua:Skardyy/mcat"
+
+[tools."aqua:Skardyy/mcat".platforms.linux-x64]
+checksum = "sha256:1717be3f120f93a4f2441778d3733e014b65b5c95f20191e26df96397ea053ce"
+size = 6072480
+url = "https://github.com/Skardyy/mcat/releases/download/v0.4.4/mcat-x86_64-unknown-linux-gnu.tar.xz"
+
+[tools.glow]
+version = "v2.1.1"
+backend = "aqua:charmbracelet/glow"
+
+[tools.go]
+version = "1.24.7"
+backend = "core:go"
