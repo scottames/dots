@@ -1,0 +1,8 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghtkn/refs/heads/main/json-schema/ghtkn.json
+# ghtkn - https://github.com/suzuki-shunsuke/ghtkn
+persist: true
+apps:
+  - name: scottames/ghtkn
+    client_id: Iv23liQXrtOYmxQ2nhVa
+    default: true

@@ -200,3 +200,6 @@ packages:
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
   - name: openai/codex@rust-v0.29.0
+  # A CLI to create GitHub App User Access Token for secure local development
+  #  https://github.com/suzuki-shunsuke/ghtkn
+  - name: suzuki-shunsuke/ghtkn@v0.1.3

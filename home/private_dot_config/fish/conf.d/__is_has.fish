@@ -47,6 +47,7 @@ set has_bins \
     git \
     gh \
     gcloud \
+    ghtkn \
     go \
     gobrew \
     gt \
