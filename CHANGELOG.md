@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.30.0](https://github.com/scottames/dots/compare/v0.29.0...v0.30.0) (2025-09-07)
+
+
+### Features
+
+* **aqua:** mcat + container-use ([26c782f](https://github.com/scottames/dots/commit/26c782f7c8a95442c26d7a1eb344d2ad50e8a83f))
+* **aqua:** openai/codex ([0c11503](https://github.com/scottames/dots/commit/0c1150346cd7daf00d64dc336803d92b85aa677f))
+* **aqua:** playing with basalt ([3dd8191](https://github.com/scottames/dots/commit/3dd81911a4e48f2920dd7251b0ccffce6a816336))
+* **niri:** toggle keybinds: transparency & overview ([0b38f0d](https://github.com/scottames/dots/commit/0b38f0d7a1cf555ebbce6f40c902a0e6b9b52034))
+* **nvim:** update/replace some plugins ([f16dec4](https://github.com/scottames/dots/commit/f16dec4e8f2c77e19a137d6bf38e99f4aaae7c84))
+
+
+### Bug Fixes
+
+* **aqua:** skip mcat 0.4.4, invalid checksum ([72c27f5](https://github.com/scottames/dots/commit/72c27f5a6736843bb2a76fb85bebc039f4a91a3e))
+* **fish/aqua:** incorrect op default ([1992f1e](https://github.com/scottames/dots/commit/1992f1ee88c19c96651188baae7149488b188401))
+* **niri:** arrow keybinds + cleanup for 25.08 release ([08982e3](https://github.com/scottames/dots/commit/08982e33479496bd5886a49c558175aa1246434f))
+
 ## [0.29.0](https://github.com/scottames/dots/compare/v0.28.0...v0.29.0) (2025-08-14)
 
 
