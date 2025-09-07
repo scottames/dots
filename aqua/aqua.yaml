@@ -81,10 +81,10 @@ packages:
   - name: kubernetes-sigs/kustomize@kustomize/v5.7.1
   # multi pod and container log tailing for kubernetes
   #   https://github.com/stern/stern
-  - name: stern/stern@v1.32.0
+  - name: stern/stern@v1.33.0
   # tool for glamorous shell scripts
   #   https://github.com/charmbracelet/gum
-  - name: charmbracelet/gum@v0.16.2
+  - name: charmbracelet/gum@v0.17.0
   # syntax-highlighting pager for git, diff, grep, and blame output
   #   https://github.com/dandavison/delta
   - name: dandavison/delta@0.18.2
@@ -96,7 +96,7 @@ packages:
   - name: junegunn/fzf@v0.65.2
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
-  - name: jesseduffield/lazygit@v0.54.2
+  - name: jesseduffield/lazygit@v0.55.0
   # kubernetes tui
   #   https://github.com/derailed/k9s
   - name: derailed/k9s@v0.50.9
@@ -133,7 +133,7 @@ packages:
   - name: kevincobain2000/gobrew@v1.10.13
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@39.0.4
+  - name: antonmedv/fx@39.1.0
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -145,7 +145,7 @@ packages:
   - name: rhysd/hgrep@v0.3.8
   # a modern, maintained replacement for ls
   #   https://github.com/eza-community/eza
-  - name: eza-community/eza@v0.23.1
+  - name: eza-community/eza@v0.23.2
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
   - name: int128/ghcp@v1.15.0
@@ -186,7 +186,7 @@ packages:
   - name: sst/opencode@v0.6.4
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.7.4
+  - name: charmbracelet/crush@v0.7.6
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
