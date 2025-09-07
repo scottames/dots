@@ -44,8 +44,6 @@ $HAS_NVIM \
 setenv FISH_CONFIG                 "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS            "--bind ctrl-j:down,ctrl-k:up"
 setenv GITHUB_USERNAME             "$GITHUB_USER"
-$HAS_OP \
-  && setenv GITHUB_TOKEN           "op://private/github.com/token"
 setenv GOPATH                      "$HOME/go"
 [ -f "$HOME/.gobrew/current/go" ] \
   && setenv GOROOT                 "$HOME/.gobrew/current/go"
