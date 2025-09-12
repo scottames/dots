@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.31.0](https://github.com/scottames/dots/compare/v0.30.0...v0.31.0) (2025-09-12)
+
+
+### Features
+
+* **hypridle:** longer timeout on desktop ([8b60a6a](https://github.com/scottames/dots/commit/8b60a6a90caa72d9cfef392bb80b223effcd26ba))
+* **nvim:** lazy updates ([584432b](https://github.com/scottames/dots/commit/584432b12fb90aadc1814c3a4341ec1b2dafca57))
+* **zen-browser:** track search config ([42065c0](https://github.com/scottames/dots/commit/42065c08be6868affb6dac882b426d9221f94ee3))
+* **zen-browser:** update keybs ([a5bb3f9](https://github.com/scottames/dots/commit/a5bb3f99db9726d5333db1395d988deaf2cb8cc2))
+
 ## [0.30.0](https://github.com/scottames/dots/compare/v0.29.0...v0.30.0) (2025-09-07)
 
 
