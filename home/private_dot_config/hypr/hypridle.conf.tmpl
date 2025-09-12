@@ -4,6 +4,17 @@ general {
     ignore_empty_input = false
 }
 
+{{- if eq .host.chassis "desktop" }}
+listener {
+    timeout = 600
+    on-timeout = loginctl lock-session
+}
+
+listener {
+    timeout = 600
+    on-timeout = niri msg action power-off-monitors
+}
+{{- else if eq .host.chassis "laptop" }}
 listener {
     timeout = 300
     on-timeout = loginctl lock-session
@@ -13,7 +24,6 @@ listener {
     timeout = 180
     on-timeout = niri msg action power-off-monitors
 }
-{{- if eq .host.chassis "laptop" }}
 
 listener {
     timeout = 5400 # 1.5hr
