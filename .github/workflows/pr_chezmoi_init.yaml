@@ -15,7 +15,7 @@ jobs:
       checks: write
     steps:
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - name: dagger call init
         # yamllint disable-line rule:line-length
         uses: dagger/dagger-for-github@710906f3073901ccd9c8fd38e18848c00d9892be # v8.1.0
