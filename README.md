@@ -8,8 +8,9 @@
 [![trunk.io](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml/badge.svg)](https://github.com/scottames/dots/actions/workflows/pr_trunkio.yaml)
 
 - see also:
-    - [containers](https://github.com/scottames/containers) 
-        - my personal collection of container builds which uses Fedora Atomic to build my entire Linux experience outside the home directory
+  - [containers](https://github.com/scottames/containers)
+    - my personal collection of container builds which uses Fedora Atomic to
+      build my entire Linux experience outside the home directory
 
 ## 🚀 init
 
@@ -17,15 +18,17 @@ Requirements: `curl`, `git`, and `go`
 
 > 🙈 Don't do this at home.
 
-```shell
-curl -fsLS https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh | bash
-
+```bash
+curl -fsLS \
+  https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh \
 ```
 
 Optionally, pass additional params to `chezmoi init`
 
-```shell
-curl -fsSL -O "https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh" && chmod +x init.sh && ./init.sh --branch <my_branch>
+```bash
+curl -fsSL \
+  -O "https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh" \
+  && chmod +x init.sh && ./init.sh --branch <my_branch>
 ```
 
 ### MacOS (Darwin)
@@ -48,27 +51,27 @@ nix run .#install
 ```
 
 - Note: `.#install` is unique to this flake (see bottom of
-  [flake.nix](./flake.nix)) that calls `darwin-rebuild switch --flake .#` under the hood
-
+  [flake.nix](./flake.nix)) that calls `darwin-rebuild switch --flake .#` under
+  the hood
 
 ## 🔧 Tools of Note
 
-|               project                               |                                             description                                              |
-|:----------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
-| [alacritty](https://alacritty.org/)                 | modern terminal emulator that comes with sensible defaults, but allows for extensive configuration   |
-| [aqua](https://aquaproj.github.io/)                 | declarative cli version manager                                                                      |
-| [chezmoi](https://www.chezmoi.io/)                  | manage your dotfiles across multiple diverse machines, securely                                      |
-| [fish](https://fishshell.com/)                      | smart and user-friendly command line shell                                                           |
-| [lazygit](https://github.com/jesseduffield/lazygit) | simple terminal UI for git commands                                                                  |
-| [mage](https://magefile.org/)                       | make/rake-like build tool using golang                                                               |
-| [lix](https://lix.systems/) (nix)                   | A modern, implementation of the Nix package manager, focused on correctness, usability, and growth.  |
-| [nix-darwin](https://github.com/nix-darwin/nix-darwin) | nix modules for darwin  |
-| [neovim](https://neovim.io/)                        | hyperextensible Vim-based text editor                                                                |
-| [paperwm](https://github.com/paperwm/PaperWM)       | experimental Gnome Shell extension providing scrollable tiling of windows and per monitor workspaces |
-| [starship](https://starship.rs/)                    | minimal, blazing-fast, and infinitely customizable prompt for any shell!                             |
-| [trunk.io](https://trunk.io/)                       | check, merge, and monitor your code                                                                  |
-| [wezterm](https://wezfurlong.org/wezterm/)          | a powerful cross-platform terminal emulator and multiplexer                                          |
-| [zellij](https://zellij.dev/)                       | terminal workspace with batteries included                                                           |
+|  project   |                                         description                                                                         |
+|:----------------------------------------------------|:-----------------------------------------------------------------------------------|
+| [aqua](https://aquaproj.github.io/)        | declarative cli version manager                                                                                            |
+| [chezmoi](https://www.chezmoi.io/)     | manage your dotfiles across multiple diverse machines, securely                                                            |
+| [fish](https://fishshell.com/)        | smart and user-friendly command line shell                                                                                 |
+| [lazygit](https://github.com/jesseduffield/lazygit)     | simple terminal UI for git commands                                                                                        |
+| [ghostty](https://ghostty.org/)     | Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.   |
+| [just](https://just.systems/)        | 🤖 Just a command runner                                                                                                   |
+| [lix](https://lix.systems/)         | A modern, implementation of the Nix package manager, focused on correctness, usability, and growth. (MacOS only)           |
+| [nix-darwin](https://github.com/nix-darwin/nix-darwin)  | nix modules for darwin                                                                                                     |
+| [neovim](https://neovim.io/)      | hyperextensible Vim-based text editor                                                                                      |
+| [Niri](https://github.com/YaLTeR/niri)        | A scrollable-tiling Wayland compositor.                                                                                   |
+| [starship](https://starship.rs/)    | minimal, blazing-fast, and infinitely customizable prompt for any shell!                                                   |
+| [trunk.io](https://trunk.io/)    | check, merge, and monitor your code                                                                                        |
+| [zellij](https://zellij.dev/)      | terminal workspace with batteries included                                                                                 |
+| [zen browser](https://zen-browser.app/) | Welcome to a calmer internet                                                                                               |
 
 ## 🧪 Testing
 
@@ -86,16 +89,17 @@ Use at your own risk!
 
 ## ♥ Credits
 
-"Nothing is original." Especially these dotfiles. Everything included here is heavily inspired by many giants that have come before me.
+"Nothing is original." Especially these dotfiles. Everything included here is
+heavily inspired by many giants that have come before me.
 
 Some (far from all) noteworthy sources:
 
-* https://github.com/sheldonhull/dotfiles-starter
-* https://github.com/webpro/awesome-dotfiles
-* https://github.com/folke/dot
-* https://github.com/twpayne/dotfiles
-* https://github.com/szorfein/dots
-* https://github.com/ThePrimeagen
+- [sheldonhull/dotfiles-starter](https://github.com/sheldonhull/dotfiles-starter)
+- [webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
+- [folke/dot](https://github.com/folke/dot)
+- [twpayne/dotfiles](https://github.com/twpayne/dotfiles)
+- [szorfein/dots](https://github.com/szorfein/dots)
+- [ThePrimeagen](https://github.com/ThePrimeagen)
 
 ## ⚖️ License
 
