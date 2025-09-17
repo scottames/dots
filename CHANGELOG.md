@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.31.0](https://github.com/scottames/dots/compare/v0.30.0...v0.31.0) (2025-09-17)
+
+
+### Features
+
+* **hypridle:** longer timeout on desktop ([8b60a6a](https://github.com/scottames/dots/commit/8b60a6a90caa72d9cfef392bb80b223effcd26ba))
+* **nvim:** lazy updates ([584432b](https://github.com/scottames/dots/commit/584432b12fb90aadc1814c3a4341ec1b2dafca57))
+* **nvim:** upgrade LazyVim to v15.0.1 ([c239ae5](https://github.com/scottames/dots/commit/c239ae57c088c727f1059f9515683cce2a80b2f8))
+* **zen-browser:** track search config ([42065c0](https://github.com/scottames/dots/commit/42065c08be6868affb6dac882b426d9221f94ee3))
+* **zen-browser:** update keybs ([a5bb3f9](https://github.com/scottames/dots/commit/a5bb3f99db9726d5333db1395d988deaf2cb8cc2))
+
+
+### Bug Fixes
+
+* **fish:** github_token_load() only if interactive ([63fbdee](https://github.com/scottames/dots/commit/63fbdee3e0004f73ce789094ac01608852957370))
+* **ghostty:** rename iTerm theme ([1707112](https://github.com/scottames/dots/commit/1707112fddc69778a8b2b45d3993782916f24b70))
+
 ## [0.30.0](https://github.com/scottames/dots/compare/v0.29.0...v0.30.0) (2025-09-07)
 
 
