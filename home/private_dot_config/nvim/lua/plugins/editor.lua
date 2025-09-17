@@ -29,7 +29,7 @@ return {
 
   -- splitjoin
   { -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-splitjoin.md
-    "echasnovski/mini.splitjoin",
+    "nvim-mini/mini.splitjoin",
     version = false, -- wait till new 0.7.0 release to put it back on semver
     config = true,
     event = "VeryLazy",

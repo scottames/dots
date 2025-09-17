@@ -77,10 +77,11 @@ return {
       { -- https://github.com/hiphish/rainbow-delimiters.nvim
         "hiphish/rainbow-delimiters.nvim",
       },
-      { -- https://github.com/IndianBoy42/tree-sitter-just
-        "IndianBoy42/tree-sitter-just",
-        config = true,
-      },
+      -- not compatible with latest treesitter (required by Lazy)
+      -- { -- https://github.com/IndianBoy42/tree-sitter-just
+      --   "IndianBoy42/tree-sitter-just",
+      --   config = true,
+      -- },
     },
     opts = function(_, opts)
       opts.rainbow = {
@@ -128,9 +129,9 @@ return {
   },
 
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     dependencies = {
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason-lspconfig.nvim",
     },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {

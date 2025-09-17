@@ -203,3 +203,6 @@ packages:
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.1.3
+  # An incremental parsing system for programming tools
+  #  https://github.com/tree-sitter/tree-sitter
+  - name: tree-sitter/tree-sitter@v0.25.9
