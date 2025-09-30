@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.417.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.418.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.0 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.1 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -99,7 +99,7 @@ packages:
   - name: jesseduffield/lazygit@v0.55.1
   # kubernetes tui
   #   https://github.com/derailed/k9s
-  - name: derailed/k9s@v0.50.12
+  - name: derailed/k9s@v0.50.13
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
   - name: awslabs/amazon-ecr-credential-helper@v0.10.1
@@ -127,10 +127,10 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.81
   #   https://github.com/casey/just
-  - name: casey/just@1.42.4
+  - name: casey/just@1.43.0
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
-  - name: kevincobain2000/gobrew@v1.10.13
+  - name: kevincobain2000/gobrew@v1.10.14
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
   - name: antonmedv/fx@39.1.0
@@ -177,16 +177,16 @@ packages:
   - name: atuinsh/atuin@v18.8.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.15.2
+  - name: spacelift-io/spacectl@v1.16.0
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.11.3
+  - name: sst/opencode@v0.13.5
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.10.0
+  - name: charmbracelet/crush@v0.10.3
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.41.0
+  - name: openai/codex@rust-v0.42.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.2
