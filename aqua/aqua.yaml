@@ -151,7 +151,7 @@ packages:
   - name: int128/ghcp@v1.15.0
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
-  - name: dagger/dagger@v0.18.19
+  - name: dagger/dagger@v0.19.0
   #   https://github.com/helix-editor/helix
   - name: helix-editor/helix@24.03
   # The kubectx for operators
