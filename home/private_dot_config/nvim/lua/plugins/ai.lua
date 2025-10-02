@@ -1,8 +1,41 @@
 return {
   {
+    "folke/sidekick.nvim",
+    opts = {
+      mux = {
+        backend = "zellij",
+        enabled = true,
+      },
+    },
+  -- stylua: ignore
+  keys = {
+    {
+      "<leader>as",
+      function() require("sidekick.cli").select({ filter = { installed = true } }) end,
+      desc = "Select CLI",
+    },
+    -- direct toggles
+    {
+      "<leader>ac",
+      function() require("sidekick.cli").toggle({ name = "claude", focus = true }) end,
+      desc = "Sidekick Toggle Claude",
+    },
+    {
+      "<leader>ao",
+      function() require("sidekick.cli").toggle({ name = "opencode", focus = true }) end,
+      desc = "Sidekick Toggle Opencode",
+    },
+    {
+      "<leader>ag",
+      function() require("sidekick.cli").toggle({ name = "gemini", focus = true }) end,
+      desc = "Sidekick Toggle Gemini",
+    },
+  },
+  },
+  {
     "coder/claudecode.nvim",
     config = true,
-    enabled = true,
+    enabled = false,
     keys = {
       { "<leader>a", nil, desc = "ai" },
       { "<leader>ac", nil, desc = "claudecode" },
@@ -21,6 +54,7 @@ return {
   },
   {
     "NickvanDyke/opencode.nvim",
+    enabled = false,
     dependencies = { "folke/snacks.nvim" },
     -- stylua: ignore
     keys = {
