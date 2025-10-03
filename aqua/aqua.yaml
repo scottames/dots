@@ -51,7 +51,7 @@ packages:
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.214.0
+  - name: weaveworks/eksctl@v0.215.0
   # make/rake-like dev tool using Go
   #   https://github.com/magefile/mage
   - name: magefile/mage@v1.15.0
@@ -183,7 +183,7 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.13.7
+  - name: sst/opencode@v0.14.0
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.10.4
