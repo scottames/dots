@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.32.0](https://github.com/scottames/dots/compare/v0.31.0...v0.32.0) (2025-10-03)
+
+
+### Features
+
+* **nvim:** move ai to sidekick ([b23422e](https://github.com/scottames/dots/commit/b23422e78c959225f0bfe15ac4332b46ae76293b))
+* **nvim:** obsidian.nvim ([072c025](https://github.com/scottames/dots/commit/072c025dde8f9e0a5c16e951d48d4eded44c11f9))
+* **vimium:** track exported vimium config ([23e829d](https://github.com/scottames/dots/commit/23e829dbabfdd487f2fd588ed6b02efbbf30c254))
+* **zen-browser:** update keybs based on latest release ([3acd881](https://github.com/scottames/dots/commit/3acd881eb3d7d1142a2438b915ab9ce6a6ed8918))
+
+
+### Bug Fixes
+
+* **zellij:** default layout + update fish abbrs ([a001246](https://github.com/scottames/dots/commit/a001246c07c53efaeadcc76d814e7da315b0d817))
+
 ## [0.31.0](https://github.com/scottames/dots/compare/v0.30.0...v0.31.0) (2025-09-17)
 
 
