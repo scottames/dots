@@ -20,9 +20,9 @@ lint:
     - oxipng@9.1.5
     - bandit@1.8.6
     - black@25.9.0
-    - checkov@3.2.473
+    - checkov@3.2.477
     - isort@6.1.0
-    - ruff@0.13.2
+    - ruff@0.14.0
     - trivy@0.67.0
     - gokart@0.5.1
     - osv-scanner@2.2.3
@@ -36,7 +36,7 @@ lint:
     - hadolint@2.14.0
     - markdownlint@0.45.0
     - prettier@3.6.2
-    - renovate@41.132.5
+    - renovate@41.143.1
     - shellcheck@0.11.0
     - shfmt@3.6.0
     - stylua@2.3.0
