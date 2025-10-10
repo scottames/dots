@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.423.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.426.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -45,7 +45,7 @@ packages:
   - name: tofuutils/tenv@v4.7.21
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.65.2
+  - name: twpayne/chezmoi@v2.66.0
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
   - name: zellij-org/zellij@v0.43.1
@@ -99,7 +99,7 @@ packages:
   - name: jesseduffield/lazygit@v0.55.1
   # kubernetes tui
   #   https://github.com/derailed/k9s
-  - name: derailed/k9s@v0.50.14
+  - name: derailed/k9s@v0.50.15
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
   - name: awslabs/amazon-ecr-credential-helper@v0.10.1
@@ -183,7 +183,7 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.14.5
+  - name: sst/opencode@v0.14.7
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.10.4
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.45.0
+  - name: openai/codex@rust-v0.46.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.2
