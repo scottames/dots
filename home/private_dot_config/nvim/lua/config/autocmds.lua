@@ -70,3 +70,21 @@ autocmd("BufReadPost", {
     end
   end,
 })
+
+-- Disable UI diagnostics for given projects/dirs
+local home = vim.env.HOME -- or: local home = os.getenv("HOME")
+local excluded_dirs = {
+  home .. "/.obsidian",
+}
+autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    local bufpath = vim.api.nvim_buf_get_name(0)
+    for _, dir in ipairs(excluded_dirs) do
+      if bufpath:find(dir, 1, true) then
+        vim.diagnostic.enable(false, { bufnr = 0 })
+        return
+      end
+    end
+  end,
+})
