@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.33.0](https://github.com/scottames/dots/compare/v0.32.0...v0.33.0) (2025-10-12)
+
+
+### Features
+
+* **aqua:** +moor ([b08ae73](https://github.com/scottames/dots/commit/b08ae7383d5b064510a829384ae6a809beef7a2d))
+* **fish/abbr:** tweak/add gt checkout + create ([39025db](https://github.com/scottames/dots/commit/39025db3c6bda15cc7cc33a72882c86da9e2e340))
+* **nvim:** more playing with obsidian ([8340c35](https://github.com/scottames/dots/commit/8340c3560525783c7ed8b9aa000b7cfd274e6a2c))
+* **nvim:** playing with obsidian ([99530cc](https://github.com/scottames/dots/commit/99530cca5c17a8f98d0efc6ee49817a74de970bd))
+
 ## [0.32.0](https://github.com/scottames/dots/compare/v0.31.0...v0.32.0) (2025-10-03)
 
 
