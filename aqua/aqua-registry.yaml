@@ -45,3 +45,8 @@ packages:
     files:
       - name: basalt
         src: target/{{.Arch}}-{{.OS}}/release/basalt
+  - type: go_install
+    repo_owner: vitor-mariano
+    repo_name: regex-tui
+    description: |
+      A simple TUI to visualize regular expressions right in your terminal.

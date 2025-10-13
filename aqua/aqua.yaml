@@ -214,3 +214,14 @@ packages:
   # without any configuration.
   #  https://github.com/walles/moor
   - name: walles/moor@v2.5.0
+  # A simple TUI to visualize regular expressions right in your terminal.
+  #  https://github.com/vitor-mariano/regex-tui
+  - name: vitor-mariano/regex-tui@v0.1.0
+    registry: dots
+  # A new type of shell
+  #  https://www.nushell.sh/
+  - name: nushell/nushell@0.107.0
+  # An actively maintained, feature-rich and performance oriented,
+  # neofetch like system information tool
+  #  https://github.com/fastfetch-cli/fastfetch
+  - name: fastfetch-cli/fastfetch@2.53.0
