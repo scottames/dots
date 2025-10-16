@@ -5,7 +5,7 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.7.2
+      ref: v1.7.3
       uri: https://github.com/trunk-io/plugins
 actions:
   enabled:
@@ -20,23 +20,23 @@ lint:
     - oxipng@9.1.5
     - bandit@1.8.6
     - black@25.9.0
-    - checkov@3.2.477
-    - isort@6.1.0
+    - checkov@3.2.484
+    - isort@7.0.0
     - ruff@0.14.0
-    - trivy@0.67.0
+    - trivy@0.67.2
     - gokart@0.5.1
     - osv-scanner@2.2.3
     - svgo@4.0.0
     - terrascan@1.19.1
-    - trufflehog@3.90.8
-    - actionlint@1.7.7
+    - trufflehog@3.90.11
+    - actionlint@1.7.8
     - git-diff-check@SYSTEM
     - gitleaks@8.28.0
     - gofmt@1.20.4
     - hadolint@2.14.0
     - markdownlint@0.45.0
     - prettier@3.6.2
-    - renovate@41.143.1
+    - renovate@41.149.2
     - shellcheck@0.11.0
     - shfmt@3.6.0
     - stylua@2.3.0
