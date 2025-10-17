@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.34.0](https://github.com/scottames/dots/compare/v0.33.0...v0.34.0) (2025-10-17)
+
+
+### Features
+
+* **aqua:** regex-tui + fastfetch ([3ec7b4f](https://github.com/scottames/dots/commit/3ec7b4f02e137e9ab3a0cae7f07d2ef2ed2cc40f))
+
 ## [0.33.0](https://github.com/scottames/dots/compare/v0.32.0...v0.33.0) (2025-10-12)
 
 
