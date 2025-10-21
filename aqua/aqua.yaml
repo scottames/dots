@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.427.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.428.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -45,7 +45,7 @@ packages:
   - name: tofuutils/tenv@v4.7.21
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.66.0
+  - name: twpayne/chezmoi@v2.66.1
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
   - name: zellij-org/zellij@v0.43.1
@@ -99,13 +99,13 @@ packages:
   - name: jesseduffield/lazygit@v0.55.1
   # kubernetes tui
   #   https://github.com/derailed/k9s
-  - name: derailed/k9s@v0.50.15
+  - name: derailed/k9s@v0.50.16
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
   - name: awslabs/amazon-ecr-credential-helper@v0.10.1
   # cat clone with wings
   #   https://github.com/sharkdp/bat
-  - name: sharkdp/bat@v0.25.0
+  - name: sharkdp/bat@v0.26.0
   #   https://github.com/kubernetes/minikube
   - name: kubernetes/minikube@v1.37.0
   # easy and repeatable kubernetes development
@@ -174,19 +174,19 @@ packages:
   - name: bloznelis/typioca@3.1.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.8.0
+  - name: atuinsh/atuin@v18.9.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.16.1
+  - name: spacelift-io/spacectl@v1.17.0
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.15.7
+  - name: sst/opencode@v0.15.12
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.11.2
+  - name: charmbracelet/crush@v0.12.0
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.46.0
+  - name: openai/codex@rust-v0.47.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.2
@@ -213,7 +213,7 @@ packages:
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.5.2
+  - name: walles/moor@v2.6.1
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.1.0
@@ -224,4 +224,4 @@ packages:
   # An actively maintained, feature-rich and performance oriented,
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
-  - name: fastfetch-cli/fastfetch@2.53.0
+  - name: fastfetch-cli/fastfetch@2.54.0
