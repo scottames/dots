@@ -1,133 +1,149 @@
 return {
+  -- https://ampcode.com/
+  { -- https://github.com/sourcegraph/amp.nvim
+    "sourcegraph/amp.nvim",
+    branch = "main",
+    opts = { auto_start = false, log_level = "info" },
+    keys = {
+      {
+        "<leader>asa",
+        function()
+          require("amp").start()
+        end,
+        desc = "Amp Start",
+      },
+    },
+  },
   {
+    "folke/which-key.nvim",
+    opts = {
+      spec = {
+        { "<leader>as", group = "Start AI Plugin" },
+        { "<leader>at", group = "Sidekick Toggle" },
+        { "<leader>ata", icon = { icon = " ", color = "red" } },
+        { "<leader>atc", icon = { icon = " ", color = "orange" } },
+        { "<leader>atg", icon = { icon = " ", color = "blue" } },
+        { "<leader>ato", icon = { icon = " ", color = "grey" } },
+        { "<leader>atq", icon = { icon = " ", color = "purple" } },
+        { "<leader>atr", icon = { icon = " ", color = "cyan" } },
+        { "<leader>atx", icon = { icon = " ", color = "grey" } },
+      },
+    },
+  },
+  { -- https://github.com/folke/sidekick.nvim
     "folke/sidekick.nvim",
     opts = {
       mux = {
         backend = "zellij",
         enabled = true,
       },
-    },
-  -- stylua: ignore
-  keys = {
-    {
-      "<leader>as",
-      function() require("sidekick.cli").select({ filter = { installed = true } }) end,
-      desc = "Select CLI",
-    },
-    -- direct toggles
-    {
-      "<leader>ac",
-      function() require("sidekick.cli").toggle({ name = "claude", focus = true }) end,
-      desc = "Sidekick Toggle Claude",
-    },
-    {
-      "<leader>ao",
-      function() require("sidekick.cli").toggle({ name = "opencode", focus = true }) end,
-      desc = "Sidekick Toggle Opencode",
-    },
-    {
-      "<leader>ag",
-      function() require("sidekick.cli").toggle({ name = "gemini", focus = true }) end,
-      desc = "Sidekick Toggle Gemini",
-    },
-  },
-  },
-  {
-    "coder/claudecode.nvim",
-    config = true,
-    enabled = false,
-    keys = {
-      { "<leader>a", nil, desc = "ai" },
-      { "<leader>ac", nil, desc = "claudecode" },
-      { "<leader>acc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
-      { "<leader>acf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
-      { "<leader>acr", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
-      { "<leader>acC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
-      { "<leader>acs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
-      {
-        "<leader>acs",
-        "<cmd>ClaudeCodeTreeAdd<cr>",
-        desc = "Add file",
-        ft = { "NvimTree", "neo-tree", "oil" },
-      },
-    },
-  },
-  {
-    "NickvanDyke/opencode.nvim",
-    enabled = false,
-    dependencies = { "folke/snacks.nvim" },
-    -- stylua: ignore
-    keys = {
-      { "<leader>ao", nil, desc = "opencode" },
-      { '<leader>aot', function() require('opencode').toggle() end, desc = 'Toggle embedded opencode', },
-      { '<leader>aoa', function() require('opencode').ask() end, desc = 'Ask opencode', mode = 'n', },
-      { '<leader>aoa', function() require('opencode').ask('@selection: ') end, desc = 'Ask opencode about selection', mode = 'v', },
-      { '<leader>aop', function() require('opencode').select_prompt() end, desc = 'Select prompt', mode = { 'n', 'v', }, },
-      { '<leader>aon', function() require('opencode').command('session_new') end, desc = 'New session', },
-      { '<leader>aoy', function() require('opencode').command('messages_copy') end, desc = 'Copy last message', },
-      { '<S-C-u>',    function() require('opencode').command('messages_half_page_up') end, desc = 'Scroll messages up', },
-      { '<S-C-d>',    function() require('opencode').command('messages_half_page_down') end, desc = 'Scroll messages down', },
-    },
-  },
-  {
-    "yetone/avante.nvim",
-    event = "VeryLazy",
-    version = "*",
-    enabled = false,
-    opts = {
-      -- TODO: add '<leader>ac' AvanteClear keymap
-      behaviour = {
-        auto_suggestions = false,
-        enable_claude_text_editor_tool_mode = os.getenv("ANTHROPIC_API_KEY") ~= nil,
-      },
-      -- -- add any opts here
-      -- -- for example
-      -- provider = "openai",
-      -- openai = {
-      --   endpoint = "https://api.openai.com/v1",
-      --   model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
-      --   timeout = 30000, -- timeout in milliseconds
-      --   temperature = 0, -- adjust if needed
-      --   max_tokens = 4096,
-      --   -- reasoning_effort = "high" -- only supported for reasoning models (o1, etc.)
-      -- },
-    },
-    build = "make",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      --- The below dependencies are optional,
-      "nvim-mini/mini.pick", -- for file_selector provider mini.pick
-      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-      "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-      "ibhagwan/fzf-lua", -- for file_selector provider fzf
-      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      -- "zbirenbaum/copilot.lua", -- for providers='copilot'
-      {
-        -- support for image pasting
-        "HakonHarnes/img-clip.nvim",
-        event = "VeryLazy",
-        opts = {
-          -- recommended settings
-          default = {
-            embed_image_as_base64 = false,
-            prompt_for_file_name = false,
-            drag_and_drop = {
-              insert_mode = true,
-            },
-            -- required for Windows users
-            use_absolute_path = true,
-          },
+      cli = {
+        tools = {
+          amp = { cmd = { "amp", "--ide" } },
         },
       },
+    },
+    keys = {
+      -- stylua: ignore
       {
-        "MeanderingProgrammer/render-markdown.nvim",
-        opts = {
-          file_types = { "markdown", "Avante" },
-        },
-        ft = { "markdown", "Avante" },
+        "<leader>aa",
+        function() require("sidekick.cli").toggle() end,
+        desc = "Sidekick: Toggle CLI",
+      },
+      {
+        "<leader>ac",
+        function()
+          require("sidekick.cli").select({ filter = { installed = true } })
+        end,
+        desc = "Sidekick: Select CLI",
+      },
+      {
+        "<leader>ad",
+        function()
+          require("sidekick.cli").close()
+        end,
+        desc = "Detach a CLI Session",
+      },
+      {
+        "<leader>ae",
+        function()
+          require("sidekick.cli").send({ msg = "{this}" })
+        end,
+        mode = { "x", "n" },
+        desc = "Sidekick: Send This",
+      },
+      {
+        "<leader>af",
+        function()
+          require("sidekick.cli").send({ msg = "{file}" })
+        end,
+        desc = "Sidekick: Send File",
+      },
+      {
+        "<leader>av",
+        function()
+          require("sidekick.cli").send({ msg = "{selection}" })
+        end,
+        mode = { "x" },
+        desc = "Sidekick: Send Visual Selection",
+      },
+      {
+        "<leader>ap",
+        function()
+          require("sidekick.cli").prompt()
+        end,
+        mode = { "n", "x" },
+        desc = "Sidekick: Select Prompt",
+      },
+      -- direct toggles
+      {
+        "<leader>atc",
+        function()
+          require("sidekick.cli").toggle({ name = "claude", focus = true })
+        end,
+        desc = "Claude",
+      },
+      {
+        "<leader>atg",
+        function()
+          require("sidekick.cli").toggle({ name = "gemini", focus = true })
+        end,
+        desc = "Gemini",
+      },
+      {
+        "<leader>ata",
+        function()
+          require("sidekick.cli").toggle({ name = "amp", focus = true })
+        end,
+        desc = "Amp",
+      },
+      {
+        "<leader>ato",
+        function()
+          require("sidekick.cli").toggle({ name = "opencode", focus = true })
+        end,
+        desc = "Opencode",
+      },
+      {
+        "<leader>atq",
+        function()
+          require("sidekick.cli").toggle({ name = "amazon_q", focus = true })
+        end,
+        desc = "Amazon Q",
+      },
+      {
+        "<leader>atr",
+        function()
+          require("sidekick.cli").toggle({ name = "crush", focus = true })
+        end,
+        desc = "Crush",
+      },
+      {
+        "<leader>atx",
+        function()
+          require("sidekick.cli").toggle({ name = "codex", focus = true })
+        end,
+        desc = "Codex",
       },
     },
   },
