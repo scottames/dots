@@ -3,6 +3,7 @@
   "permissions": {
     "allow": ["Read(~/.ai/rules/*.md)"]
   },
+  "alwaysThinkingEnabled": true,
   "preferences": {
     "theme": "dark",
     "autoSave": true
@@ -10,5 +11,7 @@
   "feedbackSurveyState": {
     "lastShownTime": 1754077213482
   },
-  "alwaysThinkingEnabled": true
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  }
 }
