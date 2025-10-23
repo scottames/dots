@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.428.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.429.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.3 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.4 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -30,7 +30,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.82.0
+  - name: cli/cli@v2.82.1
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.5.0
@@ -60,7 +60,7 @@ packages:
   - name: starship/starship@v1.23.0
   # better grep
   #   https://github.com/BurntSushi/ripgrep
-  - name: BurntSushi/ripgrep@15.0.0
+  - name: BurntSushi/ripgrep@15.1.0
   # smarter cd
   #   https://github.com/ajeetdsouza/zoxide
   - name: ajeetdsouza/zoxide@v0.9.8
@@ -148,7 +148,7 @@ packages:
   - name: eza-community/eza@v0.23.4
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
-  - name: int128/ghcp@v1.15.0
+  - name: int128/ghcp@v1.15.1
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
   - name: dagger/dagger@v0.19.2
@@ -174,7 +174,7 @@ packages:
   - name: bloznelis/typioca@3.1.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.9.0
+  - name: atuinsh/atuin@v18.10.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
   - name: spacelift-io/spacectl@v1.17.0
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v0.15.12
+  - name: sst/opencode@v0.15.14
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.12.0
+  - name: charmbracelet/crush@v0.12.2
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
