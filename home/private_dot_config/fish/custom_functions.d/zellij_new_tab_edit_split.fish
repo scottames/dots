@@ -56,11 +56,11 @@ function zellij_new_tab_edit_split \
   layout {
       tab {
           pane split_direction=\"$_SPLIT_DIRECTION\" {
-              pane command=\"nvim\"$_ARGS start_suspended=$_START_SUSPENDED
               pane stacked=true {
                 pane
                 pane
               }
+              pane command=\"nvim\"$_ARGS start_suspended=$_START_SUSPENDED
           }
           pane size=1 borderless=true {
               plugin location=\"zjstatus\"
