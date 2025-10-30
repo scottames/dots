@@ -1,11 +1,11 @@
 #!/usr/bin/env fish
 
-function install_vscode
-    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-    echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo >/dev/null
+function print_info
+    printf "\nℹ  INFO: %s\n\n" $argv
+end
 
-    dnf check-update
-    sudo dnf install -y code
+function print_warn
+    printf "\n⚠ WARN: %s\n\n" $argv
 end
 
 function fix_npm_permissions
@@ -13,20 +13,35 @@ function fix_npm_permissions
     sudo chown -R $USER:$USER "$HOME/.npm-global/"
 end
 
-function install_claude_code
-    npm install -g @anthropic-ai/claude-code
-end
+function install_npms
 
-function install_gemini_cli
-    npm install -g @google/gemini-cli
-end
+    if command -v npm
+        set -l npm_registry_ping "https://registry.npmjs.org/-/ping?write=true"
+        if ! curl --fail --silent --show-error --connect-timeout 5 $npm_registry_ping >/dev/null
+            print_warn "npm ping failed. Skipping installing npm packages."
+            return 0
+        end
+    else
+        print_warn "no npm found. Skipping installing npm packages."
+        return 0
+    end
 
-function install_openai_codex
-    npm install -g @openai/codex
+    function npm_install
+        npm install -g $argv
+
+    end
+
+    set npm_packages_to_install \
+        @anthropic-ai/claude-code \
+        @google/gemini-cli \
+        @openai/codex
+
+    for pkg in $npm_packages_to_install
+        print_info "npm install $pkg"
+        npm_install $pkg
+    end
+
 end
 
 fix_npm_permissions
-install_vscode
-install_claude_code
-install_gemini_cli
-install_openai_codex
+install_npms
