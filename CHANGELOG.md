@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.34.0](https://github.com/scottames/dots/compare/v0.33.0...v0.34.0) (2025-10-31)
+
+
+### Features
+
+* **aqua:** regex-tui + fastfetch ([3ec7b4f](https://github.com/scottames/dots/commit/3ec7b4f02e137e9ab3a0cae7f07d2ef2ed2cc40f))
+* **nvim/ai:** custom Sidekick keys ([95bfdcd](https://github.com/scottames/dots/commit/95bfdcd26bc0ea8e516e4669d541a34fc6765ac6))
+
+
+### Bug Fixes
+
+* **distrobox/f:** skip package install if no internet ([049ebc7](https://github.com/scottames/dots/commit/049ebc7ac42c798621bcddeb26e1abe80e9f9688))
+* **nvim/ai:** add missing sidekick keys ([80f7e61](https://github.com/scottames/dots/commit/80f7e6137ca7e5cce808015e746c2e58f3498456))
+
 ## [0.33.0](https://github.com/scottames/dots/compare/v0.32.0...v0.33.0) (2025-10-12)
 
 
