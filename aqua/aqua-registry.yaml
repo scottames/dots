@@ -50,3 +50,16 @@ packages:
     repo_name: regex-tui
     description: |
       A simple TUI to visualize regular expressions right in your terminal.
+  - type: github_release
+    repo_owner: lasantosr
+    repo_name: intelli-shell
+    asset: intelli-shell-{{.Arch}}-{{.OS}}.tar.gz
+    description: Like IntelliSense, but for shells
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+    supported_envs:
+      - linux
+      - darwin
