@@ -229,9 +229,6 @@ packages:
   #  https://github.com/lasantosr/intelli-shell
   - name: lasantosr/intelli-shell@v3.3.0
     registry: dots
-  #  dev tools, env vars, task runner
-  #  https://github.com/jdx/mise
-  - name: jdx/mise@v2025.11.2
   #  A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.6.0
