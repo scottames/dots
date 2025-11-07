@@ -302,11 +302,21 @@ binds {
     Mod+A { spawn "alacritty"; }
     Mod+T { spawn "ghostty"; }
     Mod+G { spawn "ghostty"; }
-    Mod+D { spawn "fuzzel"; }
-    Mod+Space { spawn "fuzzel"; }
-    // Mod+Space { spawn "rofi" "-show" "combi"; }
-    // Mod+Shift+Space { spawn "rofi" "-show" "drun"; }
-    // Mod+Ctrl+Space { spawn "rofi" "-show" "window"; }
+    Mod+Shift+D { spawn "fuzzel"; }
+
+    // https://docs.vicinae.com
+    Mod+Space { spawn "vicinae" "vicinae://toggle"; }
+    // https://docs.vicinae.com/deeplinks
+    Mod+Shift+Space {
+      spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history";
+    }
+    Mod+E {
+      spawn "vicinae" "vicinae://extensions/vicinae/vicinae/search-emojis";
+    }
+    Mod+Tab {
+      spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";
+    }
+
     Super+Alt+L { spawn "hyprlock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
