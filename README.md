@@ -64,7 +64,8 @@ nix run .#install
 | [lazygit](https://github.com/jesseduffield/lazygit)     | simple terminal UI for git commands                                                                                        |
 | [ghostty](https://ghostty.org/)     | Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.   |
 | [just](https://just.systems/)        | 🤖 Just a command runner                                                                                                   |
-| [lix](https://lix.systems/)         | A modern, implementation of the Nix package manager, focused on correctness, usability, and growth. (MacOS only)           |
+| [intelli-shell](https://github.com/lasantosr/intelli-shell)        |  like IntelliSense, but for shells                                                                                                     |
+| [lix](https://lix.systems/)         | a modern, implementation of the Nix package manager, focused on correctness, usability, and growth. (MacOS only)           |
 | [nix-darwin](https://github.com/nix-darwin/nix-darwin)  | nix modules for darwin                                                                                                     |
 | [neovim](https://neovim.io/)      | hyperextensible Vim-based text editor                                                                                      |
 | [Niri](https://github.com/YaLTeR/niri)        | A scrollable-tiling Wayland compositor.                                                                                   |

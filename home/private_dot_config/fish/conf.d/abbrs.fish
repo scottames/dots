@@ -116,6 +116,7 @@ abbr -a guc gum_commit
 abbr -a gv "git log --pretty=format:'%s' | cut -d \" \" -f 1 | sort | uniq -c | sort -nr"
 abbr -a gwtls "git worktree list"
 abbr -a gwtrm "git worktree remove"
+abbr -a is intelli-shell
 abbr -a k kubectl
 abbr -a kctl kubectl
 abbr -a ketall "kubectl get-all"

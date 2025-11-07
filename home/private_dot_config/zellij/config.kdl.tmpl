@@ -41,7 +41,7 @@ keybinds clear-defaults=true {
         bind "j" "down" { MovePane "down"; }
         bind "k" "up" { MovePane "up"; }
         bind "l" "right" { MovePane "right"; }
-        bind "Ctrl b" { SwitchToMode "Normal"; }
+        bind "Ctrl m" { SwitchToMode "Normal"; }
         bind "n" "tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
     }
@@ -91,7 +91,7 @@ keybinds clear-defaults=true {
         bind "Ctrl n" { SwitchToMode "normal"; }
     }
     scroll {
-        bind "Ctrl b" "PageUp" "left" "h" { PageScrollUp; }
+        bind "PageUp" "left" "h" { PageScrollUp; }
         bind "Ctrl f" "PageDown" "right" "l" { PageScrollDown; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Normal"; }
@@ -106,7 +106,7 @@ keybinds clear-defaults=true {
         bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "Ctrl f" "PageDown" "right" "l" { PageScrollDown; }
-        bind "Ctrl b" "PageUp" "left" "h" { PageScrollUp; }
+        bind "PageUp" "left" "h" { PageScrollUp; }
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "d" { HalfPageScrollDown; }
         bind "j" "Down" { ScrollDown; }
@@ -364,7 +364,7 @@ keybinds clear-defaults=true {
     }
 
     shared_except "locked" "move" {
-        bind "Ctrl b" { SwitchToMode "move"; }
+        bind "Ctrl m" { SwitchToMode "move"; }
     }
     shared_except "locked" "session" {
         bind "Ctrl x" { SwitchToMode "Session"; }
@@ -397,7 +397,6 @@ keybinds clear-defaults=true {
         bind "down" { ScrollDown; }
         bind "up" { ScrollUp; }
         bind "right" { PageScrollDown; }
-        bind "Ctrl b" { PageScrollUp; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "normal"; }
         bind "d" { HalfPageScrollDown; }
         bind "Ctrl f" { PageScrollDown; }
