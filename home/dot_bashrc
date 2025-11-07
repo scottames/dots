@@ -47,6 +47,11 @@ elif [[ ${_UNAME} == 'Darwin' ]]; then
   platform="darwin"
 fi
 
+export IS_INTERACTIVE=false
+if [[ $- == *i* ]]; then
+  export IS_INTERACTIVE=true
+fi
+
 [[ -x "$(command -v apt-get)" ]] && export HAS_APT=true
 [[ -x "$(command -v bat)" ]] && export HAS_BAT=true
 [[ -x "$(command -v brew)" ]] && export HAS_BREW=true

@@ -15,6 +15,11 @@ if [[ "${UNAME}" = "Darwin" ]]; then
   export IS_MAC=true
 fi
 
+export IS_INTERACTIVE=false
+if [[ $- == *i* ]]; then
+  export IS_INTERACTIVE=true
+fi
+
 _bins=(
   apt
   bat
