@@ -46,7 +46,7 @@ if [[ ! $(command -v aqua) ]]; then
   function setenv() { export "$1=$2"; }
 
   DOTS="${DOTS:={{ .home.dots }}}"
-  eval "$(grep -i AQUA <"${HOME}"/.setenv)"
+  eval "$(grep -iP 'AQUA(?!.*GHTKN)' "${HOME}/.setenv")"
 
   pushd "$(mktemp -d)"
   _aqua_installer="aqua-installer"
