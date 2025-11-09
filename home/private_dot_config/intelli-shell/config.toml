@@ -1,2 +1,20 @@
 [ai]
 enabled = true
+
+[theme]
+## Catppuccin Mocha Theme for IntelliShell
+## A soothing pastel theme with warm, muted colors
+## Based on https://github.com/catppuccin/catppuccin
+
+primary = "#cdd6f4"        # Base text color (latte)
+secondary = "#6c7086"      # Subdued text (overlay0)
+accent = "bold #cba6f7"    # Accent color for keywords/aliases (mauve)
+comment = "italic #585b70" # Comments/descriptions (surface2)
+error = "bold #f38ba8"     # Error messages (red)
+highlight = "#313244"      # Highlight background (surface0)
+highlight_symbol = "» "    # Highlight symbol
+# Highlighted item colors
+highlight_primary = "#f5e0dc"        # rosewater
+highlight_secondary = "dim #cdd6f4"  # latte
+highlight_accent = "bold #f9e2af"    # yellow
+highlight_comment = "italic #a6adc8" # subtext0
