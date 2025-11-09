@@ -300,7 +300,6 @@ binds {
     Mod+O { toggle-overview; }
 
     Mod+A { spawn "alacritty"; }
-    Mod+T { spawn "ghostty"; }
     Mod+G { spawn "ghostty"; }
     Mod+Shift+D { spawn "fuzzel"; }
 
@@ -316,6 +315,10 @@ binds {
     Mod+Tab {
       spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";
     }
+    Mod+W {
+      spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";
+    }
+
 
     Super+Alt+L { spawn "hyprlock"; }
 
@@ -477,7 +480,7 @@ binds {
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
 
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+T { toggle-column-tabbed-display; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
