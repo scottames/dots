@@ -23,6 +23,7 @@
 {{- $osVersion        := ""    -}}
 {{- $ublueImageInfo   := ""    -}}
 {{- $wallpaper        := ""    -}}
+{{- $wallpaperDir     := ""    -}}
 {{- $zenReleaseId     := ""    -}}
 {{- $zenNightlyId     := ""    -}}
 
@@ -127,6 +128,11 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-   $wallpaper = promptStringOnce . "desktop.wallpaper" "path to desktop wallpaper" $wallpaperDefault -}}
 {{- end -}}
 
+{{- if not (lstat (joinPath .chezmoi.homeDir ".wallpaperDir")) -}}
+{{-   $wallpaperDirDefault := (joinPath $srcGitHubDir "walls/main/ultrawide") -}}
+{{-   $wallpaperDir = promptStringOnce . "desktop.wallpaper_dir" "path to desktop wallpaper folder" $wallpaperDirDefault -}}
+{{- end -}}
+
 sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true
 {{- if lookPath "delta" }}
@@ -166,6 +172,7 @@ progress = true
   [data.desktop]
     session = "{{ $desktopSession }}"
     wallpaper = "{{ $wallpaper }}"
+    wallpaper_dir = "{{ $wallpaperDir }}"
 
     [data.desktop.fonts]
       monospace = "{{ $fontMonospace }}"

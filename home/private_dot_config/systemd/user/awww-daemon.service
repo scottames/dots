@@ -1,0 +1,13 @@
+[Unit]
+Description=awww wallpaper daemon for Niri
+# Bind it to the graphical session (same pattern as swaybg in the wiki)
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/awww-daemon --namespace niri
+Restart=on-failure
+RestartSec=2
+# You can export transition defaults via env vars if you like:
+# Environment=SWWW_TRANSITION=any SWWW_TRANSITION_FPS=60 SWWW_TRANSITION_STEP=90

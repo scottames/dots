@@ -1,0 +1,15 @@
+[Unit]
+Description=awww wallpaper init
+After=awww-daemon.service
+Requires=awww-daemon.service
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/systemd/user/awww-wallpaper.env
+ExecStart=%h/.local/bin/awww-random-wallpaper
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=niri.service

@@ -1,9 +1,0 @@
-[Unit]
-Description=Wallpaper tool for Wayland compositors
-PartOf=graphical-session.target
-After=graphical-session.target
-Requisite=graphical-session.target
-
-[Service]
-ExecStart=/usr/bin/swaybg -m fill -i "{{ .desktop.wallpaper }}"
-Restart=on-failure
