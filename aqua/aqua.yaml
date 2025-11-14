@@ -75,7 +75,7 @@ packages:
   - name: kubernetes/kubectl@v1.34.2
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v3.19.0
+  - name: helm/helm@v4.0.0
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.7.1
