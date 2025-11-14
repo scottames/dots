@@ -23,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # renovate: datasource=github-releases depName=dagger/dagger
-          version: v0.19.5
+          version: v0.19.6
           cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
           module: .
           call: init
