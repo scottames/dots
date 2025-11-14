@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.433.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.435.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.7 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.8 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -30,10 +30,10 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.83.0
+  - name: cli/cli@v2.83.1
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
-  - name: golangci/golangci-lint@v2.6.1
+  - name: golangci/golangci-lint@v2.6.2
   # diff tool for YAML files, and sometimes JSON
   #  https://github.com/homeport/dyff
   - name: homeport/dyff@v1.10.2
@@ -51,7 +51,7 @@ packages:
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.216.0
+  - name: weaveworks/eksctl@v0.217.0
   # make/rake-like dev tool using Go
   #   https://github.com/magefile/mage
   - name: magefile/mage@v1.15.0
@@ -78,7 +78,7 @@ packages:
   - name: helm/helm@v4.0.0
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
-  - name: kubernetes-sigs/kustomize@kustomize/v5.7.1
+  - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
   # multi pod and container log tailing for kubernetes
   #   https://github.com/stern/stern
   - name: stern/stern@v1.33.1
@@ -102,7 +102,7 @@ packages:
   - name: derailed/k9s@v0.50.16
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
-  - name: awslabs/amazon-ecr-credential-helper@v0.10.1
+  - name: awslabs/amazon-ecr-credential-helper@v0.11.0
   # cat clone with wings
   #   https://github.com/sharkdp/bat
   - name: sharkdp/bat@v0.26.0
@@ -110,7 +110,7 @@ packages:
   - name: kubernetes/minikube@v1.37.0
   # easy and repeatable kubernetes development
   #   https://github.com/GoogleContainerTools/skaffold
-  - name: GoogleContainerTools/skaffold@v2.16.1
+  - name: GoogleContainerTools/skaffold@v2.17.0
   # private certificate authority & ACME server
   #   https://github.com/smallstep/certificates
   - name: smallstep/certificates@v0.28.4
@@ -127,13 +127,13 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.82
   #   https://github.com/casey/just
-  - name: casey/just@1.43.0
+  - name: casey/just@1.43.1
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.15
   # terminal json viewer & processor
   #   https://github.com/antonmedv/fx
-  - name: antonmedv/fx@39.1.0
+  - name: antonmedv/fx@39.2.0
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.39
+  - name: sst/opencode@v1.0.65
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.15.2
+  - name: charmbracelet/crush@v0.18.1
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.55.0
+  - name: openai/codex@rust-v0.58.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.2
@@ -213,10 +213,10 @@ packages:
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.8.1
+  - name: walles/moor@v2.9.0
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
-  - name: vitor-mariano/regex-tui@v0.1.0
+  - name: vitor-mariano/regex-tui@v0.3.0
     registry: dots
   # A new type of shell
   #  https://www.nushell.sh/
@@ -224,6 +224,6 @@ packages:
   # An actively maintained, feature-rich and performance oriented,
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
-  - name: fastfetch-cli/fastfetch@2.54.0
+  - name: fastfetch-cli/fastfetch@2.55.0
   - name: lasantosr/intelli-shell@v3.3.0
     registry: dots
