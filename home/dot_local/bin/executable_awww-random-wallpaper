@@ -52,19 +52,29 @@ awww_is_showing() {
   local img wanted
   img="$1"
   # Normalize both sides
-  wanted="$(readlink -f -- "${img}" 2>/dev/null || realpath -- "${img}" 2>/dev/null || echo "${img}")"
+  wanted="$(
+    readlink -f -- "${img}" 2>/dev/null ||
+      realpath -- "${img}" 2>/dev/null ||
+      echo "${img}"
+  )"
 
   # 'awww query' prints lines like:
   # niri: DP-2: 5120x1440, scale: 1, currently displaying: image: /path/to.jpg
-  awww query --namespace "${AWWW_NAMESPACE}" 2>/dev/null |
-    awk -F'image: ' 'NF>1 {print $2}' |
-    while IFS= read -r path; do
-      local shown
-      shown="$(readlink -f -- "${path}" 2>/dev/null || realpath -- "${path}" 2>/dev/null || echo "${path}")"
-      [[ ${shown} == "${wanted}" ]] && exit 0
-    done
+  while IFS= read -r path; do
+    local shown
+    shown="$(
+      readlink -f -- "${path}" 2>/dev/null ||
+        realpath -- "${path}" 2>/dev/null ||
+        echo "${path}"
+    )"
+    [[ ${shown} == "${wanted}" ]] && return 0 || echo "not wanted"
+  done < <(
+    awww query --namespace "${AWWW_NAMESPACE}" 2>/dev/null |
+      awk -F'image: ' 'NF>1 {print $2}'
+  )
 
-  return 1 # If the while loop above didn't exit 0, awk ended → not showing
+  # If the while loop above didn't exit 0, no matching image found
+  return 1
 }
 
 awww_set_img() {
@@ -72,7 +82,6 @@ awww_set_img() {
   img="$1"
 
   while :; do
-    # Attempt to set the image (don’t assume success means “visible”)
     awww img \
       --namespace "${AWWW_NAMESPACE}" \
       --resize="${AWWW_RESIZE_TYPE}" \
@@ -80,6 +89,7 @@ awww_set_img() {
       --transition-step="${AWWW_TRANSITION_STEP}" \
       --transition-type="${AWWW_TRANSITION_TYPE}" \
       -- "${img}" || true
+    printf 'set image: %s\n' "${img}" >&2
 
     # Poll 'awww query' until it reports our image or we time out
     local waited=0
@@ -93,11 +103,11 @@ awww_set_img() {
 
     # Didn’t become visible in time → retry the whole cycle
     tries=$((tries + 1))
-    printf 'awww: image not active after %.2fs (try %d/%d): %s\n' \
+    printf 'image not active after %.2fs (try %d/%d): %s\n' \
       "${AWWW_VERIFY_TIMEOUT_SEC}" "${tries}" "${AWWW_MAX_TRIES_PER_IMG}" "${img}" >&2
 
     if ((tries >= AWWW_MAX_TRIES_PER_IMG)); then
-      printf 'awww: giving up on "%s", moving on.\n' "${img}" >&2
+      printf 'giving up on "%s", moving on.\n' "${img}" >&2
       return 1
     fi
 
