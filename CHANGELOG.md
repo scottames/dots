@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.34.1](https://github.com/scottames/dots/compare/v0.34.0...v0.34.1) (2025-11-14)
+
+
+### Bug Fixes
+
+* **awww:** correctly handle checking active wall ([5594de9](https://github.com/scottames/dots/commit/5594de99fcdf06a35e7b2479bba9f253e53125db))
+
 ## [0.34.0](https://github.com/scottames/dots/compare/v0.33.0...v0.34.0) (2025-11-14)
 
 
