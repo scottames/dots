@@ -209,6 +209,16 @@ keybinds clear-defaults=true {
             };
         }
 
+        bind "Alt left" {
+            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "left";
+
+                move_mod "ctrl";
+                resize_mod "alt";
+            };
+        }
+
         bind "Ctrl j" {
             MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
                 name "move_focus";
@@ -287,6 +297,16 @@ keybinds clear-defaults=true {
         }
 
         bind "Alt l" {
+            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "right";
+
+                move_mod "ctrl";
+                resize_mod "alt";
+            };
+        }
+
+        bind "Alt right" {
             MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
                 name "resize";
                 payload "right";
