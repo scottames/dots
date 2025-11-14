@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.34.0](https://github.com/scottames/dots/compare/v0.33.0...v0.34.0) (2025-11-14)
+
+
+### Features
+
+* **aqua:** regex-tui + fastfetch ([3ec7b4f](https://github.com/scottames/dots/commit/3ec7b4f02e137e9ab3a0cae7f07d2ef2ed2cc40f))
+* awww services/config ([251a003](https://github.com/scottames/dots/commit/251a0039eba917bf211d04904bfcf05534306e43))
+* intelli-shell ([a1d89b3](https://github.com/scottames/dots/commit/a1d89b33fb8c47f03d444a51bd0e8026ef8e5188))
+* intelli-shell config ([68f533e](https://github.com/scottames/dots/commit/68f533e7a68a167796edef2f0c87cce3f8f575e2))
+* **niri:** intelli-shell ([490f4a5](https://github.com/scottames/dots/commit/490f4a528b0447f660ad65f51bb3688a4b1ec9b5))
+* **nvim/ai:** custom Sidekick keys ([95bfdcd](https://github.com/scottames/dots/commit/95bfdcd26bc0ea8e516e4669d541a34fc6765ac6))
+* vicinae ([6301236](https://github.com/scottames/dots/commit/6301236c899ae0b38a0a8b5a94c43f4f5b0d10cc))
+
+
+### Bug Fixes
+
+* **awww:** handle daemon timing + cleanup ([4f57ae3](https://github.com/scottames/dots/commit/4f57ae3c16ac4103491c35019514728f7d4252d0))
+* **awww:** shellcheck ([ec2600f](https://github.com/scottames/dots/commit/ec2600f927e0a8c73a4e4e1013077263dbe0b16e))
+* **distrobox/f:** skip package install if no internet ([049ebc7](https://github.com/scottames/dots/commit/049ebc7ac42c798621bcddeb26e1abe80e9f9688))
+* **nvim/ai:** add missing sidekick keys ([80f7e61](https://github.com/scottames/dots/commit/80f7e6137ca7e5cce808015e746c2e58f3498456))
+* **zellij:** match support for alt+arrows for resize ([e034765](https://github.com/scottames/dots/commit/e034765ce0d100cbaf30c6072fe882b050b3a57b))
+
 ## [0.33.0](https://github.com/scottames/dots/compare/v0.32.0...v0.33.0) (2025-10-12)
 
 
