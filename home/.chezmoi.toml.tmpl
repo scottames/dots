@@ -129,7 +129,7 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{- end -}}
 
 {{- if not (lstat (joinPath .chezmoi.homeDir ".wallpaperDir")) -}}
-{{-   $wallpaperDirDefault := (joinPath $srcGitHubDir "walls/main/ultrawide") -}}
+{{-   $wallpaperDirDefault := (joinPath $srcGitHubDir "walls/main/32x9") -}}
 {{-   $wallpaperDir = promptStringOnce . "desktop.wallpaper_dir" "path to desktop wallpaper folder" $wallpaperDirDefault -}}
 {{- end -}}
 
