@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.435.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.436.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.8 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.9 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -57,7 +57,7 @@ packages:
   - name: magefile/mage@v1.15.0
   # minimal, blazing-fast, and infinitely customizable prompt for any shell!
   #   https://github.com/starship/starship
-  - name: starship/starship@v1.24.0
+  - name: starship/starship@v1.24.1
   # better grep
   #   https://github.com/BurntSushi/ripgrep
   - name: BurntSushi/ripgrep@15.1.0
@@ -93,7 +93,7 @@ packages:
   - name: stedolan/jq@jq-1.6
   # command-line fuzzy finder
   #   https://github.com/junegunn/fzf
-  - name: junegunn/fzf@v0.66.1
+  - name: junegunn/fzf@v0.67.0
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
   - name: jesseduffield/lazygit@v0.56.0
@@ -119,10 +119,10 @@ packages:
   - name: smallstep/cli@v0.28.7
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
-  - name: terraform-linters/tflint@v0.59.1
+  - name: terraform-linters/tflint@v0.60.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
-  - name: mikefarah/yq@v4.48.1
+  - name: mikefarah/yq@v4.48.2
   # run github actions locally
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.82
@@ -168,7 +168,7 @@ packages:
   - name: leg100/pug@v0.6.2
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
-  - name: dlvhdr/gh-dash@v4.19.0
+  - name: dlvhdr/gh-dash@v4.19.1
   # cozy typing speed tester in terminal
   #   https://github.com/bloznelis/typioca
   - name: bloznelis/typioca@3.1.0
@@ -183,7 +183,7 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.65
+  - name: sst/opencode@v1.0.67
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.18.1
@@ -209,11 +209,11 @@ packages:
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.4.2
+  - name: suzuki-shunsuke/pinact@v3.4.3
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.9.0
+  - name: walles/moor@v2.9.1
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.3.0
@@ -224,5 +224,5 @@ packages:
   # An actively maintained, feature-rich and performance oriented,
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
-  - name: fastfetch-cli/fastfetch@2.55.0
+  - name: fastfetch-cli/fastfetch@2.55.1
   - name: lasantosr/intelli-shell@v3.3.0
