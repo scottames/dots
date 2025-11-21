@@ -11,3 +11,6 @@ Restart=on-failure
 RestartSec=2
 # You can export transition defaults via env vars if you like:
 # Environment=SWWW_TRANSITION=any SWWW_TRANSITION_FPS=60 SWWW_TRANSITION_STEP=90
+
+[Install]
+WantedBy=niri.service
