@@ -1,4 +1,7 @@
 #!/bin/env fish
 
-type -q dagger
-and dagger completion fish | source
+if status --is-interactive
+    and type -q dagger
+
+    dagger completion fish | source
+end

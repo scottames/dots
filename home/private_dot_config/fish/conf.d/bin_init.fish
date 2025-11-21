@@ -12,22 +12,6 @@ if status --is-interactive
     end
 
     # ╭──────────────────────────────────────────────────────────╮
-    # │ pyenv                                                    │
-    # ╰──────────────────────────────────────────────────────────╯
-    if test -d $PYENV_ROOT
-        and type -q pyenv
-
-        pyenv init - | source
-        if test -d $PYENV_ROOT/plugins/pyenv-virtualenv
-            pyenv virtualenv-init - | source
-        end
-    else
-        if status --is-interactive
-            printf_warn "pyenv not found\n"
-        end
-    end
-
-    # ╭──────────────────────────────────────────────────────────╮
     # │ zoxide                                                   │
     # │   https://github.com/ajeetdsouza/zoxide                  │
     # ╰──────────────────────────────────────────────────────────╯

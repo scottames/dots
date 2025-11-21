@@ -45,8 +45,6 @@ set -a _bin_dirs \
     $AQUA_ROOT_DIR/bin \
     $BOB_BIN \
     $HOME/.npm-global/bin \
-    $HOME/.pyenv/shims \
-    $PYENV_ROOT/bin \
     $KREW_ROOT/bin \
     $HOME/.cargo/bin \
     $HOME/.gobrew/current/bin \
