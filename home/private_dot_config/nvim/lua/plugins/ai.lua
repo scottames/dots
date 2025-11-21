@@ -20,6 +20,7 @@ return {
       spec = {
         { "<leader>as", group = "Start AI Plugin" },
         { "<leader>at", group = "Sidekick Toggle" },
+        { "<leader>an", group = "Sidekick NES", icon = "󱎓" },
         { "<leader>ata", icon = { icon = " ", color = "red" } },
         { "<leader>atc", icon = { icon = " ", color = "orange" } },
         { "<leader>atg", icon = { icon = " ", color = "blue" } },
@@ -34,8 +35,8 @@ return {
     "folke/sidekick.nvim",
     opts = {
       mux = {
-        backend = "zellij",
-        enabled = true,
+        backend = "zellij", -- or "tmux"
+        enabled = false,
       },
       cli = {
         tools = {
@@ -99,6 +100,55 @@ return {
           require("sidekick.cli").send({ msg = "{file}" })
         end,
         desc = "Sidekick: Send File",
+      },
+      {
+        "<leader>ana",
+        function()
+          require("sidekick.nes").apply()
+        end,
+        desc = "Sidekick: NES apply",
+      },
+      {
+        "<leader>anc",
+        function()
+          require("sidekick.nes").clear()
+        end,
+        desc = "Sidekick: NES clear",
+      },
+      {
+        "<leader>and",
+        function()
+          require("sidekick.nes").disable()
+        end,
+        desc = "Sidekick: NES Disable",
+      },
+      {
+        "<leader>ane",
+        function()
+          require("sidekick.nes").enable(true)
+        end,
+        desc = "Sidekick: NES enable",
+      },
+      {
+        "<leader>anj",
+        function()
+          require("sidekick.nes").jump()
+        end,
+        desc = "Sidekick: NES jump",
+      },
+      {
+        "<leader>ant",
+        function()
+          require("sidekick.nes").toggle()
+        end,
+        desc = "Sidekick: NES toggle",
+      },
+      {
+        "<leader>anu",
+        function()
+          require("sidekick.nes").update()
+        end,
+        desc = "Sidekick: NES update",
       },
       {
         "<leader>av",

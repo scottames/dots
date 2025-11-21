@@ -16,6 +16,10 @@ return {
       -- reference:
       --   https://github.com/folke/dot/blob/1007fc65738ad1f7a3e9c91432430017a6878378/nvim/lua/plugins/lsp.lua#L193
       --   https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatter-options
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      },
       formatters_by_ft = {
         awk = { "awk" },
         bash = { "shfmt" },
@@ -25,10 +29,10 @@ return {
         dockerfile = { "dprint" },
         fish = { "fish_indent" },
         hcl = { "terragrunt_hclfmt" },
-        json = { { "prettierd_json", "prettier_json" } },
+        json = { "prettierd", "prettier", stop_after_first = true },
         justfile = { "just" },
-        markdown = { "markdownlint", "markdown-toc" },
-        ["markdown.mdx"] = { { "prettierd", "prettier" } },
+        markdown = { "prettierd", "markdownlint", "markdown-toc" },
+        ["markdown.mdx"] = { "prettierd", "prettier", stop_after_first = true },
         lua = { "stylua" },
         packer = { "packer_fmt" },
         python = { "auto_optional", "ruff_fix", "ruff_format", "isort" },
@@ -48,9 +52,7 @@ return {
           command = "goimports-reviser",
           -- prepend_args = { "-rmunused", "-set-alias" },
         },
-        markdownlint = {
-          prepend_args = { "--disable md013" },
-        },
+        markdownlint = {},
         dprint = {
           condition = function(ctx)
             return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
