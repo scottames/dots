@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.436.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.438.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -42,7 +42,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.4.5
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.7.21
+  - name: tofuutils/tenv@v4.8.3
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
   - name: twpayne/chezmoi@v2.67.0
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.67
+  - name: sst/opencode@v1.0.83
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.18.1
+  - name: charmbracelet/crush@v0.18.4
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.58.0
+  - name: openai/codex@rust-v0.61.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.2
@@ -209,7 +209,7 @@ packages:
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.4.3
+  - name: suzuki-shunsuke/pinact@v3.4.4
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
