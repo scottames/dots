@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.439.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.441.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -45,13 +45,13 @@ packages:
   - name: tofuutils/tenv@v4.8.3
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.67.0
+  - name: twpayne/chezmoi@v2.67.1
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.217.0
+  - name: weaveworks/eksctl@v0.219.0
   # make/rake-like dev tool using Go
   #   https://github.com/magefile/mage
   - name: magefile/mage@v1.15.0
@@ -75,7 +75,7 @@ packages:
   - name: kubernetes/kubectl@v1.34.2
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v4.0.0
+  - name: helm/helm@v4.0.1
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
@@ -122,7 +122,7 @@ packages:
   - name: terraform-linters/tflint@v0.60.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
-  - name: mikefarah/yq@v4.49.1
+  - name: mikefarah/yq@v4.49.2
   # run github actions locally
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.82
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.106
+  - name: sst/opencode@v1.0.119
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.18.5
+  - name: charmbracelet/crush@v0.19.2
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -209,7 +209,7 @@ packages:
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.4.4
+  - name: suzuki-shunsuke/pinact@v3.4.5
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
@@ -225,4 +225,4 @@ packages:
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
   - name: fastfetch-cli/fastfetch@2.55.1
-  - name: lasantosr/intelli-shell@v3.3.0
+  - name: lasantosr/intelli-shell@v3.3.1
