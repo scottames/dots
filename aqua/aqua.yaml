@@ -51,7 +51,7 @@ packages:
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.219.0
+  - name: weaveworks/eksctl@v0.220.0
   # make/rake-like dev tool using Go
   #   https://github.com/magefile/mage
   - name: magefile/mage@v1.15.0
@@ -125,7 +125,7 @@ packages:
   - name: mikefarah/yq@v4.49.2
   # run github actions locally
   #   https://github.com/nektos/act
-  - name: nektos/act@v0.2.82
+  - name: nektos/act@v0.2.83
   #   https://github.com/casey/just
   - name: casey/just@1.43.1
   # go version manager
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.119
+  - name: sst/opencode@v1.0.125
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.19.2
+  - name: charmbracelet/crush@v0.19.4
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -213,14 +213,14 @@ packages:
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.9.2
+  - name: walles/moor@v2.9.3
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.3.0
     registry: dots
   # A new type of shell
   #  https://www.nushell.sh/
-  - name: nushell/nushell@0.108.0
+  - name: nushell/nushell@0.109.0
   # An actively maintained, feature-rich and performance oriented,
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
