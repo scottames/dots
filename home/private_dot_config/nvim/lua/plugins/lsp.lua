@@ -16,10 +16,6 @@ return {
       -- reference:
       --   https://github.com/folke/dot/blob/1007fc65738ad1f7a3e9c91432430017a6878378/nvim/lua/plugins/lsp.lua#L193
       --   https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatter-options
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_fallback = true,
-      },
       formatters_by_ft = {
         awk = { "awk" },
         bash = { "shfmt" },
