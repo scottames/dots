@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.35.0](https://github.com/scottames/dots/compare/v0.34.1...v0.35.0) (2025-12-06)
+
+
+### Features
+
+* add gemini cli settings ([3d88681](https://github.com/scottames/dots/commit/3d88681c2b7ad4fbc061f9595ae2544dc292f04d))
+* **chezmoiexternal:** add kiro-cli ([7ec1089](https://github.com/scottames/dots/commit/7ec108992cb5e20dc51eaba53e414c4410cfd636))
+* fish/nvim/git tweaks to support ssh ([4c6f9f0](https://github.com/scottames/dots/commit/4c6f9f0135cae9ffbf4533e5f9c5638ee5e8d221))
+* **nvim:** add Sidekick NES keys ([9f2149a](https://github.com/scottames/dots/commit/9f2149a75703079cff6cebc6a58a777673d4e789))
+* **nvim:** lazy updates ([a11357d](https://github.com/scottames/dots/commit/a11357dd5900b700ac5d2e942b145e517f1e4e21))
+* **podman:** alias compose as well ([701e789](https://github.com/scottames/dots/commit/701e789314ad17980726c294d5666940b13fda7b))
+
+
+### Bug Fixes
+
+* awww install with Niri ([690e47b](https://github.com/scottames/dots/commit/690e47bde772ac54d54ba3f79af6243ae7950b4e))
+* promptCacheKey issue with certain providers ([14de401](https://github.com/scottames/dots/commit/14de401bf6ab0daa4c373aa413683bc9a6099638))
+
 ## [0.34.1](https://github.com/scottames/dots/compare/v0.34.0...v0.34.1) (2025-11-14)
 
 
