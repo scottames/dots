@@ -1,9 +1,9 @@
 [user]
 	name = Scott Ames
 	email = scott@ames.sh
-	signingKey = 6207D796C3BDA7278077465F14E140E80951AB78 #gitleaks:allow # TODO: template & pull from 1pass
+	signingkey = {{ .me.git.signing_key }}{{/* gitleaks:allow */}}
 [commit]
-  gpgsign = true
+	gpgsign = true
 [url "git@github.com:scottames"]
   insteadOf = https://github.com/scottames
 [include]
@@ -26,6 +26,7 @@
 	gpgSign = true
 [gpg]
 	program = gpg
+	format = {{ if contains "ssh" .me.git.signing_key }}ssh{{ else }}openpgp{{ end }}
 [init]
 	defaultBranch = main
 [interactive]

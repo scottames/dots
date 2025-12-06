@@ -37,6 +37,7 @@ setenv DISABLE_TELEMETRY           1
 setenv DBX_ASSEMBLE_DEFAULT        "$HOME/.config/distrobox/assemble.ini"
 setenv DBX_DEFAULT                 "a"
 setenv DBX_CONTAINER_NAME          "$DBX_DEFAULT"
+setenv DEBUG                       false
 setenv EDITOR                      "vi"
 $HAS_VIM \
   && setenv EDITOR                 "vim"

@@ -9,6 +9,12 @@ end
 
 alias watch='watch --color'
 
+function printf_debug
+    if $DEBUG
+        printf_cyan_bold "$BULLET $argv"
+    end
+end
+
 function printf_info
     printf_white_bold "$INFO $argv"
 end
