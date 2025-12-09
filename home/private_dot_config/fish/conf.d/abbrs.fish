@@ -193,6 +193,8 @@ abbr -a zef zellij_edit --floating # see functions
 abbr -a ze. "zellij_new_tab_edit_split $DOTS --name=." # see functions
 abbr -a zect "zellij_new_tab_edit_split $MY_SRC_DIR/containers/main --name='containers'"
 abbr -a zecp "zellij_new_tab_edit_split $MY_SRC_DIR/copr/main --name='copr'"
+abbr -a zeh "zellij_new_tab_edit_split $MY_SRC_DIR/hark/main --name='hark'"
+abbr -a zeh. "zellij_new_tab_edit_split $XDG_CONFIG_HOME/hark --name='.hark'"
 abbr -a zeo "zellij_new_tab_edit_split $HOME/.obsidian/this --name='obsidian'"
 abbr -a zet zellij_new_tab_edit_split
 abbr -a zego "zellij_new_tab_edit_split --layout=go"

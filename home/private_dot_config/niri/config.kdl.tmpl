@@ -319,6 +319,13 @@ binds {
       spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";
     }
 
+    Mod+X { // Speech to Text (paste at cursor)
+      spawn "hark" "record";
+    }
+
+    Mod+Shift+X { // Speech to Text (copy to clipboard)
+      spawn "hark" "record" "--clipboard";
+    }
 
     Super+Alt+L { spawn "hyprlock"; }
 

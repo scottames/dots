@@ -133,7 +133,7 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-   $wallpaperDir = promptStringOnce . "desktop.wallpaper_dir" "path to desktop wallpaper folder" $wallpaperDirDefault -}}
 {{- end -}}
 
-{{- $gitSigningKey := promptStringOnce . "me.git.signing_key" "Key to use for git signing?" "6207D796C3BDA7278077465F14E140E80951AB78" }}
+{{- $gitSigningKey := promptStringOnce . "me.git.signing_key" "Key to use for git signing" "6207D796C3BDA7278077465F14E140E80951AB78" }}
 
 sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true
