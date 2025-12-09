@@ -1,17 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "permissions": {
-    "allow": ["Read(~/.ai/rules/*.md)"]
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
   },
-  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "allow": ["Read(~/.config/agents/*/*.md)", "Read(~/.config/agents/*.md)"]
+  },
+  "alwaysThinkingEnabled": false,
   "preferences": {
     "theme": "dark",
     "autoSave": true
   },
   "feedbackSurveyState": {
     "lastShownTime": 1754077213482
-  },
-  "env": {
-    "DISABLE_AUTOUPDATER": "1"
   }
 }

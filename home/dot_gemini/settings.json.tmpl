@@ -1,0 +1,48 @@
+{
+  "context": {
+    "fileName": [
+      "AGENTS.md",
+      "GEMINI.md"
+    ],
+    "loadMemoryFromIncludeDirectories": true,
+    "includeDirectories": [
+      "/var/home/{{ .me.user }}/.config/agents",
+      "/home/{{ .me.user }}/.config/agents"
+    ]
+  },
+  "telemetry": {
+    "enabled": false
+  },
+  "general": {
+    "disableAutoUpdate": true,
+    "disableUpdateNag": true,
+    "preferredEditor": "neovim"
+  },
+  "ide": {
+    "enabled": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "disableYoloMode": true
+  },
+  "sessionRetention": {
+    "enabled": true,
+    "maxAge": "30d"
+  },
+  "shell": {
+    "pager": "bat",
+    "showColor": true
+  },
+  "ui": {
+    "showMemoryUsage": true,
+    "showModelInfoInChat": true,
+    "showStatusInTitle": true,
+    "theme": "GitHub",
+    "useFullWidth": true
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  }
+}
