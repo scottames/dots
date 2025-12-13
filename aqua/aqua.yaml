@@ -72,7 +72,7 @@ packages:
   #   https://github.com/direnv/direnv
   - name: direnv/direnv@v2.37.1
   #   https://github.com/kubernetes/kubectl
-  - name: kubernetes/kubectl@v1.34.2
+  - name: kubernetes/kubectl@v1.34.3
   # kubernetes package manager
   #   https://github.com/helm/helm
   - name: helm/helm@v4.0.1
