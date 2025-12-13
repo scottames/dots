@@ -4,9 +4,12 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "permissions": {
-    "allow": ["Read(~/.config/agents/*/*.md)", "Read(~/.config/agents/*.md)"]
+    "allow": [
+      "Read(~/.config/agents/*/*.md)",
+      "Read(~/.config/agents/*.md)"
+    ]
   },
-  "alwaysThinkingEnabled": false,
+  "alwaysThinkingEnabled": true,
   "preferences": {
     "theme": "dark",
     "autoSave": true

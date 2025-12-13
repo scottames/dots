@@ -71,6 +71,7 @@ lint:
     - linters: [prettier]
       paths:
         - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
+        - home/dot_claude/settings.json
 runtimes:
   enabled:
     - go@1.21.0
