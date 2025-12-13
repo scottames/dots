@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.36.0](https://github.com/scottames/dots/compare/v0.35.0...v0.36.0) (2025-12-13)
+
+
+### Features
+
+* initial hark bits ([6d3d791](https://github.com/scottames/dots/commit/6d3d791481daa3fa1b4b80a4f6e8779f88d3a229))
+
 ## [0.35.0](https://github.com/scottames/dots/compare/v0.34.1...v0.35.0) (2025-12-06)
 
 
