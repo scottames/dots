@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.444.2 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.446.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -30,7 +30,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.83.1
+  - name: cli/cli@v2.83.2
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.7.2
@@ -45,7 +45,7 @@ packages:
   - name: tofuutils/tenv@v4.9.0
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
-  - name: twpayne/chezmoi@v2.68.0
+  - name: twpayne/chezmoi@v2.68.1
   # terminal workspace with batteries included
   #   https://github.com/zellij-org/zellij
   - name: zellij-org/zellij@v0.43.1
@@ -75,7 +75,7 @@ packages:
   - name: kubernetes/kubectl@v1.34.3
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v4.0.1
+  - name: helm/helm@v4.0.4
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
@@ -122,12 +122,12 @@ packages:
   - name: terraform-linters/tflint@v0.60.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
-  - name: mikefarah/yq@v4.49.2
+  - name: mikefarah/yq@v4.50.1
   # run github actions locally
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.83
   #   https://github.com/casey/just
-  - name: casey/just@1.44.1
+  - name: casey/just@1.45.0
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.15
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.137
+  - name: sst/opencode@v1.0.153
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.22.1
+  - name: charmbracelet/crush@v0.24.0
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,17 +199,17 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.66.0
+  - name: openai/codex@rust-v0.72.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
   # An incremental parsing system for programming tools
   #  https://github.com/tree-sitter/tree-sitter
-  - name: tree-sitter/tree-sitter@v0.25.10
+  - name: tree-sitter/tree-sitter@v0.26.3
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.4.6
+  - name: suzuki-shunsuke/pinact@v3.5.0
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
