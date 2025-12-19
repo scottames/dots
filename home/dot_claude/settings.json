@@ -6,7 +6,11 @@
   "permissions": {
     "allow": [
       "Read(~/.config/agents/*/*.md)",
-      "Read(~/.config/agents/*.md)"
+      "Read(~/.config/agents/*.md)",
+      "Bash(git mv:*)",
+      "Bash(ls:*)",
+      "Bash(cargo info:*)",
+      "WebSearch"
     ]
   },
   "alwaysThinkingEnabled": true,
