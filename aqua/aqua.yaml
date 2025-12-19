@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.10 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.14 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -51,7 +51,7 @@ packages:
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.220.0
+  - name: weaveworks/eksctl@v0.221.0
   # make/rake-like dev tool using Go
   #   https://github.com/magefile/mage
   - name: magefile/mage@v1.15.0
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.153
+  - name: sst/opencode@v1.0.169
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.24.0
+  - name: charmbracelet/crush@v0.28.0
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.72.0
+  - name: openai/codex@rust-v0.75.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -209,11 +209,11 @@ packages:
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.5.0
+  - name: suzuki-shunsuke/pinact@v3.6.0
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.9.5
+  - name: walles/moor@v2.9.6
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.4.0
@@ -224,5 +224,5 @@ packages:
   # An actively maintained, feature-rich and performance oriented,
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
-  - name: fastfetch-cli/fastfetch@2.56.0
+  - name: fastfetch-cli/fastfetch@2.56.1
   - name: lasantosr/intelli-shell@v3.3.1
