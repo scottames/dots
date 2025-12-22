@@ -441,18 +441,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/gohugoio/hugo/v0.154.1/hugo_0.154.1_darwin-universal.pkg",
-      "checksum": "5C89B79A0846FECAD19254F359E0846E49C3DC41FF79E6EF14CBBE345224BB2B",
+      "id": "github_release/github.com/gohugoio/hugo/v0.153.5/hugo_0.153.5_darwin-universal.pkg",
+      "checksum": "CF6AFC9BAFEFF65DAB368EF3B5F168119D79B80572A5EC2A42653EE9110A2428",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/gohugoio/hugo/v0.154.1/hugo_0.154.1_linux-amd64.tar.gz",
-      "checksum": "8C9DE3EB8EE8BFB32D9C79C82ED71B98B8702539748CD919B866BC1E6A281C9F",
+      "id": "github_release/github.com/gohugoio/hugo/v0.153.5/hugo_0.153.5_linux-amd64.tar.gz",
+      "checksum": "16439F42EC6EB3699BBB8BFDDE29E18211C7287A096246136B0D50CCCC0A7195",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/gohugoio/hugo/v0.154.1/hugo_0.154.1_linux-arm64.tar.gz",
-      "checksum": "9D1913C80CF7664811ED2769BC2262D77F8CE34A10DFBCEFDE7F8D7F5F9293AD",
+      "id": "github_release/github.com/gohugoio/hugo/v0.153.5/hugo_0.153.5_linux-arm64.tar.gz",
+      "checksum": "95462A0013D65B6B149CD093EB0AA56889E08FC04E11736DEA59CFAF756D29EE",
       "algorithm": "sha256"
     },
     {
@@ -533,6 +533,41 @@
     {
       "id": "github_release/github.com/int128/ghcp/v1.15.1/ghcp_linux_arm64.zip",
       "checksum": "801DB65A3EA5148C7A89F5201F8992963F2592FC17ED5FD88E4D996BAD9542B2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/mise/v2025.12.12/mise-v2025.12.12-linux-arm64-musl.tar.gz",
+      "checksum": "8875845EAF270E174D63C41C1FE629D893B7CC78BC9BE494B2F81F8F1B98217B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/mise/v2025.12.12/mise-v2025.12.12-linux-x64-musl.tar.gz",
+      "checksum": "F4BAC31B7317690F421184B10FB7920AE43D71316889B0DF8A7A10FBB3E0B844",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/mise/v2025.12.12/mise-v2025.12.12-macos-arm64.tar.gz",
+      "checksum": "2A44DAD05D75A2D2539AA6B5B57F9A6DC68937A359EFBD312DD6A12997D6DF84",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/mise/v2025.12.12/mise-v2025.12.12-macos-x64.tar.gz",
+      "checksum": "96EB9E0C05EDA0DD2520BD56425C0202C889C947BADFE8E9EFF54A5EEC71EE61",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/usage/v2.9.0/usage-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "C4D47DAD7271BEDD45E643FDF07BFD5B8B409E053D29EA25646010CE2D185D64",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/usage/v2.9.0/usage-universal-apple-darwin.tar.gz",
+      "checksum": "F91655ABAC0EFDC56D608D2A846671F31DCC00A5304D64F99A095B0449BB7076",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/jdx/usage/v2.9.0/usage-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "186AC8AAEEBD5CAE856AC048C4DA8AA20F4E81DEBE065A03DB5082439647B8F9",
       "algorithm": "sha256"
     },
     {
