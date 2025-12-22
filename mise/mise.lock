@@ -1,0 +1,51 @@
+[[tools."aqua:int128/ghcp"]]
+version = "1.15.1"
+backend = "aqua:int128/ghcp"
+"platforms.linux-arm64" = { checksum = "sha256:801db65a3ea5148c7a89f5201f8992963f2592fc17ed5fd88e4d996bad9542b2", url = "https://github.com/int128/ghcp/releases/download/v1.15.1/ghcp_linux_arm64.zip"}
+"platforms.linux-x64" = { checksum = "sha256:c5ba74d0b2652a4375c4ae653b7c065024a619adcff40dedbfdd10d40e287d3d", url = "https://github.com/int128/ghcp/releases/download/v1.15.1/ghcp_linux_amd64.zip"}
+"platforms.macos-arm64" = { checksum = "sha256:5a923e288ce67b454cd1c7d5118ebf4028e9f1905df3b1105ae8d05a1fe23a6e", url = "https://github.com/int128/ghcp/releases/download/v1.15.1/ghcp_darwin_arm64.zip"}
+"platforms.macos-x64" = { checksum = "sha256:9fb8839ee08bc0d98973970f3fef88322e49e8486ac3bd80dce57dcea97035e2", url = "https://github.com/int128/ghcp/releases/download/v1.15.1/ghcp_darwin_amd64.zip"}
+"platforms.windows-x64" = { checksum = "sha256:a7673944cefaa9955a3fefa5ddf5b03c4ccec2f7e5f0d14d2707804af88ba22b", url = "https://github.com/int128/ghcp/releases/download/v1.15.1/ghcp_windows_amd64.zip"}
+
+[[tools."aqua:mfontanini/presenterm"]]
+version = "0.15.0"
+backend = "aqua:mfontanini/presenterm"
+"platforms.linux-arm64" = { checksum = "sha256:e2b4a6ef9b24cc7f5d1824a4124d291981df4aa507a0eb8950e779a173c6d932", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.0/presenterm-0.15.0-aarch64-unknown-linux-musl.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:54b6e2bb387a1b72c5c086e75d4029bb756710b8fb54f95903e1c5a293f8d66c", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.0/presenterm-0.15.0-x86_64-unknown-linux-musl.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:c5e47cb8cbfdfb7415fabf2984d92a2bac77a30b51da36ef3cc2da64847e2ff5", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.0/presenterm-0.15.0-aarch64-apple-darwin.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:cb6e9ec3f52c3918101030d48ea8096c308233517cc2113343c60c69af05a2f7", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.0/presenterm-0.15.0-x86_64-apple-darwin.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:59be0b9116b1b01c901b5c4e15229d31feab6737989221e65febb32ef18dd8c7", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.0/presenterm-0.15.0-x86_64-pc-windows-msvc.zip"}
+
+[[tools.go]]
+version = "1.24.7"
+backend = "core:go"
+"platforms.linux-arm64" = { checksum = "sha256:fd2bccce882e29369f56c86487663bb78ba7ea9e02188a5b0269303a0c3d33ab", url = "https://dl.google.com/go/go1.24.7.linux-arm64.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:da18191ddb7db8a9339816f3e2b54bdded8047cdc2a5d67059478f8d1595c43f", url = "https://dl.google.com/go/go1.24.7.linux-amd64.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:d06bad763f8820d3e29ee11f2c0c71438903c007e772a159c5760a300298302e", url = "https://dl.google.com/go/go1.24.7.darwin-arm64.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:138b6be2138e83d2c90c23d3a2cc94fcb11864d8db0706bb1d1e0dde744dc46a", url = "https://dl.google.com/go/go1.24.7.darwin-amd64.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:453873081af26fc7fb09710b1187dbc940b8179a4dd59b30e67b4ffa6fb57237", url = "https://dl.google.com/go/go1.24.7.windows-amd64.zip"}
+
+[[tools.node]]
+version = "24.12.0"
+backend = "core:node"
+"platforms.linux-arm64" = { checksum = "sha256:9b2a2eeb98a8eb37361224e2a1d060300ad2dd143af58dfdb16de785df0f1228", url = "https://nodejs.org/dist/v24.12.0/node-v24.12.0-linux-arm64.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:6159227e0af7d7c3c6bb2fa900452b04a6cb8841a702a79acc613209d70b04d0", url = "https://nodejs.org/dist/v24.12.0/node-v24.12.0-linux-x64.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:319f221adc5e44ff0ed57e8a441b2284f02b8dc6fc87b8eb92a6a93643fd8080", url = "https://nodejs.org/dist/v24.12.0/node-v24.12.0-darwin-arm64.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:b82ea4c62fd08e250cab59d625e75d77cc5b0a3d60c6698ebee4545c88a169c5", url = "https://nodejs.org/dist/v24.12.0/node-v24.12.0-darwin-x64.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:9c125f61ae947b52e779095830f9cac267846a043ef7192183c84016aaad2812", url = "https://nodejs.org/dist/v24.12.0/node-v24.12.0-win-x64.zip"}
+
+[[tools."npm:@sudocode-ai/cli"]]
+version = "0.1.12"
+backend = "npm:@sudocode-ai/cli"
+
+[[tools."npm:anthropic-ai/claude-code"]]
+version = "2.0.75"
+backend = "npm:anthropic-ai/claude-code"
+
+[[tools."npm:google/gemini-cli"]]
+version = "0.22.1"
+backend = "npm:google/gemini-cli"
+
+[[tools.rust]]
+version = "1.92.0"
+backend = "core:rust"
