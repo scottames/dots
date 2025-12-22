@@ -168,7 +168,7 @@ packages:
   - name: leg100/pug@v0.6.5
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
-  - name: dlvhdr/gh-dash@v4.20.0
+  - name: dlvhdr/gh-dash@v4.20.1
   # cozy typing speed tester in terminal
   #   https://github.com/bloznelis/typioca
   - name: bloznelis/typioca@3.1.0
@@ -183,10 +183,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.169
+  - name: sst/opencode@v1.0.186
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.28.0
+  - name: charmbracelet/crush@v0.29.0
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -199,7 +199,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.75.0
+  - name: openai/codex@rust-v0.77.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -216,7 +216,7 @@ packages:
   - name: walles/moor@v2.9.6
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
-  - name: vitor-mariano/regex-tui@v0.4.0
+  - name: vitor-mariano/regex-tui@v0.5.0
     registry: dots
   # A new type of shell
   #  https://www.nushell.sh/
