@@ -225,9 +225,16 @@ refreshPeriod = "24h"
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
-    type = "git-repo"
-    refreshPeriod = "168h"
+# renovate: datasource=github-releases depName=obra/superpowers
+{{ $obraSuperpowersVersion := "v4.0.1" -}}
 
+[".config/opencode/superpowers"]
+    type = "git-repo"
+    url = "https://github.com/obra/superpowers.git"
+    refreshPeriod = "168h"
+    args = ["--branch", "{{ $obraSuperpowersVersion }}"]
+
+{{ if not (eq "root" .me.user) -}} # skip if running in CI
 {{- if and (lookPath "is-github-authed.sh") (eq (output "is-github-authed.sh") "true") -}}
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
