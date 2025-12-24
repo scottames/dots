@@ -339,23 +339,6 @@ function loc() {
   echo "${fg[blue]}Total${reset_color} lines of code: ${fg[green]}$total${reset_color}"
 }
 # -------------------------------------------------------------------
-# magef
-#  fzf mage execution
-# -------------------------------------------------------------------
-magef() {
-  if [[ ! -f "mage.go" ]] && [[ ! -f "magefile.go" ]]; then
-    print_err "no magefile in pwd"
-    return 1
-  fi
-
-  if [ $# -eq 0 ]; then
-    # sed strips color characters (if enabled)
-    mage | tail -n +2 | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | fzf | while read -r cmd _; do if [ "$cmd" ]; then mage "$cmd"; fi; done
-  else
-    mage "${1:-.}"
-  fi
-}
-# -------------------------------------------------------------------
 #  kubectl_cheatsheet
 # -------------------------------------------------------------------
 function kubectl_cheatsheet() {

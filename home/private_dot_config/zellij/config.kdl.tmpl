@@ -316,14 +316,6 @@ keybinds clear-defaults=true {
             };
         }
 
-        // https://github.com/rvcas/room
-        bind "Ctrl y" {
-          LaunchOrFocusPlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/room.wasm" {
-              floating true
-              ignore_case true
-          }
-        }
-
         // https://github.com/karimould/zellij-forgot
         bind "Ctrl '" {
             LaunchOrFocusPlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij-forgot.wasm" {
@@ -353,7 +345,6 @@ keybinds clear-defaults=true {
                 "pane: rename"          "ctrl + p + c"
                 "pane: switch focus"    "ctrl + p + p"
                 "plugin: forgot"        "ctrl + '"
-                "plugin: room"          "ctrl + y"
                 "resize: decrease"      "ctrl + n + -"
                 "resize: directions"    "ctrl + n + h/j/k/l"
                 "resize: increase"      "ctrl + n + + or ="

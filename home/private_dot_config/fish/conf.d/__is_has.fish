@@ -54,7 +54,6 @@ set has_bins \
     gum \
     hub \
     kubectl \
-    mage \
     nvim \
     op \
     podman \

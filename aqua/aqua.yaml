@@ -52,9 +52,6 @@ packages:
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
   - name: weaveworks/eksctl@v0.221.0
-  # make/rake-like dev tool using Go
-  #   https://github.com/magefile/mage
-  - name: magefile/mage@v1.15.0
   # minimal, blazing-fast, and infinitely customizable prompt for any shell!
   #   https://github.com/starship/starship
   - name: starship/starship@v1.24.1
@@ -111,12 +108,6 @@ packages:
   # easy and repeatable kubernetes development
   #   https://github.com/GoogleContainerTools/skaffold
   - name: GoogleContainerTools/skaffold@v2.17.0
-  # private certificate authority & ACME server
-  #   https://github.com/smallstep/certificates
-  - name: smallstep/certificates@v0.29.0
-  # zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc
-  #   https://github.com/smallstep/cli
-  - name: smallstep/cli@v0.29.0
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
   - name: terraform-linters/tflint@v0.60.0
@@ -137,12 +128,6 @@ packages:
   # A tool for exploring each layer in a docker image
   #   https://github.com/wagoodman/dive
   - name: wagoodman/dive@v0.13.1
-  # Interactive grep (for streaming)
-  #   https://github.com/konradsz/igrep
-  - name: konradsz/igrep@v1.3.0
-  # Grep with human-friendly search results
-  #   https://github.com/rhysd/hgrep
-  - name: rhysd/hgrep@v0.3.9
   # a modern, maintained replacement for ls
   #   https://github.com/eza-community/eza
   - name: eza-community/eza@v0.23.4
@@ -169,9 +154,6 @@ packages:
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
   - name: dlvhdr/gh-dash@v4.20.1
-  # cozy typing speed tester in terminal
-  #   https://github.com/bloznelis/typioca
-  - name: bloznelis/typioca@3.1.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
   - name: atuinsh/atuin@v18.10.0
@@ -225,4 +207,6 @@ packages:
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
   - name: fastfetch-cli/fastfetch@2.56.1
+  # Like IntelliSense, but for shells
+  #  https://github.com/lasantosr/intelli-shell
   - name: lasantosr/intelli-shell@v3.3.1

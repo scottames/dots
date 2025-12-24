@@ -62,8 +62,6 @@ setenv LANG                        "en_US.UTF-8"
 setenv LC_ALL                      "en_US.UTF-8"
 setenv LC_CTYPE                    "en_US.UTF-8"
 setenv LSCOLORS                    "Gxfxcxdxbxegedabagacad"
-setenv MAGEFILE_ENABLE_COLOR       1
-setenv MAGEFILE_TARGET_COLOR       "BrightRed" # https://magefile.org/environment/
 setenv OP_ACCOUNT                  "my.1password.com"
 setenv PYENV_ROOT                  "$HOME/.pyenv"
 setenv SHRUG                       "¯\\_(ツ)_/¯"

@@ -254,11 +254,6 @@ alias tfc='rm -rf .terraform'
 alias tfver='terraform version'
 alias tfv='terraform validate'
 alias vf='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
-# mage
-if [[ $(command -v mage) ]]; then
-  [[ $(command -v mg) ]] || alias mg=mage
-  [[ $(command -v mgt) ]] || alias mgt='mage go:test'
-fi
 # rg
 [[ $(command -v rg) ]] && alias todos="rg 'TODO|FIXME'"
 # tldr

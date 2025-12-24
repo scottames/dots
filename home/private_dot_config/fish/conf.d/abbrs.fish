@@ -131,10 +131,6 @@ abbr -a ll "ls -hl$_ls_arg" # list long w/ headers
 abbr -a lt "load_env ~/.tkns"
 abbr -a makepass "openssl rand -base64 12"
 abbr -a md mkdir_cd
-abbr -a mgt "mage go:test"
-abbr -a mages mage-select
-abbr -a mg mage
-abbr -a mgs mage-select
 abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'
 abbr -a nmap_check_for_firewall "sudo nmap -sA -p1-65535 -v -T4"
 abbr -a nmap_check_for_vulns "nmap --script=vuln"

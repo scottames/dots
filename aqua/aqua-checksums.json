@@ -96,21 +96,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/bloznelis/typioca/3.1.0/typioca-linux-amd64",
-      "checksum": "E4C3CBD08E8C2AB12FB02FDC664B6EA555D508EB4C66358EDA42921331A3A0CA",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/bloznelis/typioca/3.1.0/typioca-mac-amd64",
-      "checksum": "C460758ECA7871F15C413E7913DBFFCC12241E529760293CE6A62E6E18F17831",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/bloznelis/typioca/3.1.0/typioca-mac-arm64",
-      "checksum": "04D19C605E1126B6BB8B3432616A2610F203DB00B1D7A7A294236E2F425EDB24",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/bootandy/dust/v1.2.3/dust-v1.2.3-x86_64-apple-darwin.tar.gz",
       "checksum": "6F49A9A56EFA3C215924073A8CA7E2DA3FDFB6DDB9DFB818336B2DA753E95750",
       "algorithm": "sha256"
@@ -601,21 +586,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/konradsz/igrep/v1.3.0/igrep-v1.3.0-aarch64-apple-darwin.tar.gz",
-      "checksum": "AE8866C58FF8273C5D71B2A4A2280F78A2467078C50FB2351EBA9BDA3C612BD1",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/konradsz/igrep/v1.3.0/igrep-v1.3.0-x86_64-apple-darwin.tar.gz",
-      "checksum": "33908E25D904D7652F2BC749A16BEAAE86B9529F83AEAE8CA6834DDDFC2B0A9D",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/konradsz/igrep/v1.3.0/igrep-v1.3.0-x86_64-unknown-linux-gnu.tar.gz",
-      "checksum": "C58160083D52A03869BF61F35748B3EED2E8B476A0831CA6E8BCF8A30BD691AF",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/kubernetes-sigs/krew/v0.4.5/krew-darwin_amd64.tar.gz",
       "checksum": "7FF3DDE825734E74F4975C8E922B4419639E5FBFF738786AB085CF06A0D1CCC0",
       "algorithm": "sha256"
@@ -713,21 +683,6 @@
     {
       "id": "github_release/github.com/leg100/pug/v0.6.5/pug_0.6.5_linux_arm64.zip",
       "checksum": "B9B935E0BB8C196B6319ACABA82CCE5555BA6BFAC412824ACC9707DB15770439",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_Linux-64bit.tar.gz",
-      "checksum": "AF8FB0C72944EC6E31C5DD54E642083400157883602F4A89A692C4BA96EE1E66",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_Linux-ARM64.tar.gz",
-      "checksum": "914E3866931B0B13B8D4C569C6D29BE93BB6BA976B0F7797E3DAF1D6D9F55EB3",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_macOS-64bit.tar.gz",
-      "checksum": "DB2CD92FE42B6E2795D1B82D3A21A5F163F9965E3CB3845E7DE34F5F4C5B3C38",
       "algorithm": "sha256"
     },
     {
@@ -831,26 +786,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/hgrep/v0.3.9/hgrep-v0.3.9-aarch64-apple-darwin.zip",
-      "checksum": "6AD3CCEBA4268EE2AA8C69BA4FEA02FFF9B2C268EAA12BA8358D7632E045D133",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/rhysd/hgrep/v0.3.9/hgrep-v0.3.9-aarch64-unknown-linux-gnu.zip",
-      "checksum": "E532A9B06674FFCCD4B7D2BD7F33C7F1460FF52A4127FEA0FCD29252143015C1",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/rhysd/hgrep/v0.3.9/hgrep-v0.3.9-x86_64-apple-darwin.zip",
-      "checksum": "231030A389AF67C3F36F273A73F5161D215BE531E96AA613A67D252D5A590BB3",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/rhysd/hgrep/v0.3.9/hgrep-v0.3.9-x86_64-unknown-linux-musl.zip",
-      "checksum": "5B8C2A1A77BCE2CB4FD42C0C9A6779A52F824086A8113833406E425FC6573BE5",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/sharkdp/bat/v0.26.1/bat-v0.26.1-aarch64-apple-darwin.tar.gz",
       "checksum": "E30BEFF26779C9BF60BB541E1D79046250CB74378F2757F8EB250AFDDB19E114",
       "algorithm": "sha256"
@@ -888,46 +823,6 @@
     {
       "id": "github_release/github.com/sharkdp/fd/v10.3.0/fd-v10.3.0-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "2B6BFAAE8C48F12050813C2FFE1884C61EA26E750D803DF9C9114550A314CD14",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/certificates/v0.29.0/step-ca_darwin_amd64.tar.gz",
-      "checksum": "0A4860548FDF07FC358295628F1B61FF4FACCF69D983D13E2240942D06BFBC37",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/certificates/v0.29.0/step-ca_darwin_arm64.tar.gz",
-      "checksum": "BC188AD0647663EFBB5ECEC752618B5ED39C40AA60ACF00495C0CED92D495F31",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/certificates/v0.29.0/step-ca_linux_amd64.tar.gz",
-      "checksum": "868AD206A45A7367028AD91D649B5FB5DCBCCAA0882C57C4B7FFD1B81C269F6A",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/certificates/v0.29.0/step-ca_linux_arm64.tar.gz",
-      "checksum": "0FBBE2F30B4E3E4FFC2B14130955B084831410AAE47352DD03F7C56C7EFFEB11",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/cli/v0.29.0/step_darwin_amd64.tar.gz",
-      "checksum": "9C4229FF121058FC5311B24640387369A30F2271AB64F7C3D789C60FCC6D6E39",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/cli/v0.29.0/step_darwin_arm64.tar.gz",
-      "checksum": "C289F37AF08896EA56FE5F1D18B2B04FC3C7232538A7DC8D9B3398C5574F5E60",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/cli/v0.29.0/step_linux_amd64.tar.gz",
-      "checksum": "EB28C44A6A6741AB141994D79DFED6C14778EC520B7FBA67C1A5B23E91EF17D7",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/smallstep/cli/v0.29.0/step_linux_arm64.tar.gz",
-      "checksum": "C599401BFF53ED3A6DB0587345879E759E49D6C97CEC44D84F77913F0EEF1A0F",
       "algorithm": "sha256"
     },
     {

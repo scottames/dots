@@ -112,15 +112,6 @@ refreshPeriod = "24h"
     executable = false
     refreshPeriod = "168h"
 
-# renovate: datasource=github-releases depName=rvcas/room
-{{ $zellijRoomVersion := "v1.2.0" -}}
-
-[".config/zellij/plugins/room.wasm"]
-    type = "file"
-    url = "https://github.com/rvcas/room/releases/download/{{ $zellijRoomVersion }}/room.wasm"
-    executable = false
-    refreshPeriod = "168h"
-
 # renovate: datasource=github-releases depName=dj95/zjstatus
 {{ $zjstatusVersion := "v0.22.0" -}}
 
@@ -234,14 +225,10 @@ refreshPeriod = "24h"
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
-{{ if not (eq "root" .me.user) -}} # skip if running in CI
-["src/github.com/magefile/mage"]
     type = "git-repo"
-    url = "https://github.com/magefile/mage"
     refreshPeriod = "168h"
 
 {{- if and (lookPath "is-github-authed.sh") (eq (output "is-github-authed.sh") "true") -}}
-
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
 #  │ | personal                                               │
