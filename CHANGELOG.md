@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.36.0](https://github.com/scottames/dots/compare/v0.35.0...v0.36.0) (2025-12-26)
+
+
+### Features
+
+* initial hark bits ([6d3d791](https://github.com/scottames/dots/commit/6d3d791481daa3fa1b4b80a4f6e8779f88d3a229))
+* **opencode:** add superpowers ([5df81a5](https://github.com/scottames/dots/commit/5df81a5f8b549eae8ffbc2325b021bd8ddfb9a10))
+
 ## [0.35.0](https://github.com/scottames/dots/compare/v0.34.1...v0.35.0) (2025-12-06)
 
 
