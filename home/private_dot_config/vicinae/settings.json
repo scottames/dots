@@ -1,0 +1,26 @@
+{
+  "font": {
+    "normal": {
+      "family": "Roboto Medium",
+      "size": 12
+    }
+  },
+  "theme": {
+    "dark": {
+      "name": "catppuccin-mocha"
+    }
+  },
+  "launcher_window": {
+    "client_side_decorations": {
+      "enabled": true
+    }
+  },
+  "favorites": [
+    "applications:org.gnome.Nautilus",
+    "applications:1password",
+    "applications:com.mitchellh.ghostty",
+    "applications:io.zsa.keymap",
+    "applications:zen-browser",
+    "clipboard:history"
+  ]
+}
