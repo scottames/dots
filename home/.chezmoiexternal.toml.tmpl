@@ -234,6 +234,16 @@ refreshPeriod = "24h"
     refreshPeriod = "168h"
     args = ["--branch", "{{ $obraSuperpowersVersion }}"]
 
+[".config/agents/plugins/anthropics/skills"]
+    type = "git-repo"
+    url = "https://github.com/anthropics/skills.git"
+    refreshPeriod = "72h"
+
+[".config/agents/plugins/obra/superpowers"]
+    type = "git-repo"
+    url = "https://github.com/obra/superpowers.git"
+    refreshPeriod = "72h"
+
 {{ if not (eq "root" .me.user) -}} # skip if running in CI
 {{- if and (lookPath "is-github-authed.sh") (eq (output "is-github-authed.sh") "true") -}}
 #  ╭──────────────────────────────────────────────────────────╮
