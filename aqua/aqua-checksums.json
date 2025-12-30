@@ -436,6 +436,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/gohugoio/hugo/v0.153.2/hugo_0.153.2_darwin-universal.pkg",
+      "checksum": "A07C2F0457E71D17A65EE39AB6D6814EF3E441D4AF9CA8860F75424B86501A15",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/gohugoio/hugo/v0.153.2/hugo_0.153.2_linux-amd64.tar.gz",
       "checksum": "5382E83653AD1A4EED9E5CB7F09A6FEF15085301FCB5D009ADEE8BA6E0C8338A",
       "algorithm": "sha256"
@@ -873,6 +878,26 @@
     {
       "id": "github_release/github.com/sst/opencode/v1.0.201/opencode-linux-x64.tar.gz",
       "checksum": "9CF4E96FDCD1B51E96BB1FA912894D87C6D931858BBB2665C7175A7D492B3354",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sst/opencode/v1.0.209/opencode-darwin-arm64.zip",
+      "checksum": "16D236AF8442AA54A2D4213ED11E9CEC0852800D67D11BCC6C2AD8EF52CB2293",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sst/opencode/v1.0.209/opencode-darwin-x64.zip",
+      "checksum": "98FDA830537739EE5AC2D0688A766CCFCB9AE9053915822BE2E8CC8FAF3C770A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sst/opencode/v1.0.209/opencode-linux-arm64.tar.gz",
+      "checksum": "448FE405F2217AC26094C57BEE0393CEA6C12726E2705A9A63926B8B3FD01FEF",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sst/opencode/v1.0.209/opencode-linux-x64.tar.gz",
+      "checksum": "9C0FA3D39E1C60FD5FA2E82B3A2F98408D65BB6D13A0303CA79B9821B8368148",
       "algorithm": "sha256"
     },
     {
