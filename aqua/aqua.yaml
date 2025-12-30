@@ -210,3 +210,6 @@ packages:
   # Like IntelliSense, but for shells
   #  https://github.com/lasantosr/intelli-shell
   - name: lasantosr/intelli-shell@v3.3.1
+  # The world’s fastest framework for building websites.
+  #  https://github.com/gohugoio/hugo
+  - name: gohugoio/hugo@v0.153.2
