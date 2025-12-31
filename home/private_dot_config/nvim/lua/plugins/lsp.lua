@@ -27,7 +27,7 @@ return {
         hcl = { "terragrunt_hclfmt" },
         json = { "prettierd", "prettier", stop_after_first = true },
         justfile = { "just" },
-        markdown = { "prettierd", "markdownlint", "markdown-toc" },
+        markdown = { "protect_gh_alerts", "prettierd", "markdownlint", "markdown-toc" },
         ["markdown.mdx"] = { "prettierd", "prettier", stop_after_first = true },
         lua = { "stylua" },
         packer = { "packer_fmt" },
@@ -41,6 +41,19 @@ return {
         zsh = { "beautysh" },
       },
       formatters = {
+        -- Protect GitHub-style alert blocks from Prettier reformatting
+        -- https://github.com/prettier/prettier/issues/15479
+        protect_gh_alerts = {
+          meta = {
+            url = "https://github.com/prettier/prettier/issues/15479",
+            description = "Wrap GitHub-style alert blocks in prettier-ignore comments",
+          },
+          command = "lua",
+          stdin = true,
+          args = function()
+            return { vim.fn.stdpath("config") .. "/lua/util/protect_gh_alerts.lua" }
+          end,
+        },
         beautysh = {
           prepend_args = { "--indent-size", "2" },
         },
