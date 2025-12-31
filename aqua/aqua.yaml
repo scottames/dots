@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.448.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.450.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -54,7 +54,7 @@ packages:
   - name: weaveworks/eksctl@v0.221.0
   # minimal, blazing-fast, and infinitely customizable prompt for any shell!
   #   https://github.com/starship/starship
-  - name: starship/starship@v1.24.1
+  - name: starship/starship@v1.24.2
   # better grep
   #   https://github.com/BurntSushi/ripgrep
   - name: BurntSushi/ripgrep@15.1.0
@@ -147,7 +147,7 @@ packages:
   - name: gabeduke/kubectl-iexec@v1.19.14
   # Blazing fast terminal file manager
   #   https://github.com/sxyazi/yazi
-  - name: sxyazi/yazi@v25.5.31
+  - name: sxyazi/yazi@v25.12.29
   # Drive terraform at terminal velocity
   #   https://github.com/leg100/pug
   - name: leg100/pug@v0.6.5
@@ -165,10 +165,10 @@ packages:
   - name: bootandy/dust@v1.2.3
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.0.209
+  - name: sst/opencode@v1.0.218
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.29.1
+  - name: charmbracelet/crush@v0.30.0
   # Terminal image, video, directory, and Markdown viewer
   #  https://github.com/Skardyy/mcat
   - name: Skardyy/mcat@v0.4.2
@@ -191,7 +191,7 @@ packages:
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.6.0
+  - name: suzuki-shunsuke/pinact@v3.8.0
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
@@ -212,4 +212,4 @@ packages:
   - name: lasantosr/intelli-shell@v3.3.1
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.153.2
+  - name: gohugoio/hugo@v0.153.5
