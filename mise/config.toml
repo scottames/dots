@@ -1,0 +1,29 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[settings]
+experimental = true
+lockfile = true
+# locked = true
+## cannot enforce until all used backends support lock
+## https://mise.jdx.dev/dev-tools/mise-lock.html#backend-support
+
+# Optional “paranoid” hardening + signature verification
+paranoid = true   # extra-secure behavior (hooks/tasks etc.) :contentReference[oaicite:8]{index=8}
+gpg_verify = true # verify signatures for supported tools :contentReference[oaicite:9]{index=9}
+
+[settings.aqua]
+baked_registry = true
+cosign = true
+minisign = true
+slsa = true
+
+[tools]
+
+go = "1.24.11"
+node = "24.12.0"
+rust = "1.92.0"
+
+"aqua:mfontanini/presenterm" = "0.15.0"
+"aqua:int128/ghcp" = "1.15.1"
+"npm:@anthropic-ai/claude-code" = "2.0.75"
+"npm:@google/gemini-cli" = "0.22.1"
