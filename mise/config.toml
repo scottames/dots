@@ -24,7 +24,6 @@ node = "24"
 rust = "1.92"
 
 "aqua:mfontanini/presenterm" = "0.15.0"
-"npm:@sudocode-ai/cli" = "0.1.12"
+"aqua:int128/ghcp" = "1.15.1"
 "npm:anthropic-ai/claude-code" = "latest"
 "npm:google/gemini-cli" = "latest"
-"aqua:int128/ghcp" = "1.15.1"

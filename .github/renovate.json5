@@ -20,6 +20,12 @@
   ],
   packageRules: [
     {
+      matchManagers: ['mise'],
+      groupName: '⬆️ mise-packages',
+      commitMessageTopic: '⬆️ mise-packages',
+      automerge: true,
+    },
+    {
       matchPackageNames: ["Skardyy/mcat"],
       allowedVersions: "!0.4.4" // invalid checksum
     }
