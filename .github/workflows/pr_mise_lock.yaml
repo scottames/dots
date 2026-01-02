@@ -5,6 +5,7 @@ on:
     paths:
       - mise/config.toml
       - mise/mise.lock
+permissions: read-all
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
