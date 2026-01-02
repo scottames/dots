@@ -20,7 +20,7 @@ jobs:
       pull-requests: write
     steps:
       - name: checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           # should be used for PRs only
           # https://github.com/marketplace/actions/add-commit#working-with-prs
@@ -38,7 +38,7 @@ jobs:
           permission-contents: write # create releases
           permission-pull-requests: write # create release pull requests
       - name: install mise
-        uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
         with:
           install: true
           install_args: aqua:int128/ghcp
