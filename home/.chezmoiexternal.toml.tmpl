@@ -206,15 +206,6 @@ refreshPeriod = "24h"
 #  │ git-repo                                                 │
 #  │ | pub                                                    │
 #  ╰──────────────────────────────────────────────────────────╯
-# renovate: datasource=github-releases depName=Supreeeme/xwayland-satellite
-{{ $xwaylandSatelliteVersion := "v0.8" -}}
-
-[".local/share/xwayland-satellite"]
-    type = "git-repo"
-    url = "https://github.com/Supreeeme/xwayland-satellite.git"
-    refreshPeriod = "168h"
-    args = ["--branch", "{{ $xwaylandSatelliteVersion }}"]
-
 [".config/alacritty/alacritty-themes"]
     type = "git-repo"
     url = "https://github.com/rajasegar/alacritty-themes.git"
