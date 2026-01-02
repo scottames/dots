@@ -40,6 +40,8 @@ jobs:
       - name: install mise
         uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
         with:
+          install: true
+          install_args: aqua:int128/ghcp
           cache: true
           experimental: true
           github_token: ${{ steps.generate-token.outputs.token }}
