@@ -39,7 +39,7 @@ version = "2.0.76"
 backend = "npm:@anthropic-ai/claude-code"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.22.4"
+version = "0.22.5"
 backend = "npm:@google/gemini-cli"
 
 [[tools.rust]]
