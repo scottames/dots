@@ -6,10 +6,21 @@
     "command_list": "ctrl+.",
     "leader": "ctrl+o"
   },
+  "instructions": [
+{{- $instructionsDir := joinPath .chezmoi.homeDir ".config/agents/instructions" -}}
+{{- if stat $instructionsDir }}
+{{- $instructionsFiles := output "find" "-L" $instructionsDir
+      "-name" "*.md" "-type" "f" -}}
+{{- $instructionsFiles = $instructionsFiles | trim | splitList "\n" | sortAlpha }}
+{{- range $i, $f := $instructionsFiles }}
+    "{{ $f }}"{{ if lt (add $i 1) (len $instructionsFiles) }},{{ end }}
+{{- end }}
+  {{ else }}{{ end -}}
+],
   "model": "anthropic/claude-opus-4-5",
   "small_model": "anthropic/claude-haiku-4-5",
   "permission": {
-    "edit": "allow",
+    "edit": "ask",
     "bash": {
       "*": "ask",
       "cat*": "allow",

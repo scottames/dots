@@ -2,4 +2,4 @@
 
 These instructions should be carried across all sessions.
 
-@~/.config/agents/AGENTS.md
+@~/.config/agents/instructions/AGENTS.md
