@@ -9,6 +9,8 @@ abbr -a ax aws_ctx # see functions
 abbr -a axc "aws_ctx clear"
 abbr -a agi "aqua g -i"
 abbr -a aia "aqua i -a"
+abbr -a aupcp "aqua upc -prune"
+abbr -a aupc "aqua upc"
 abbr -a aquagi "aqua g -i"
 abbr -a aquaia "aqua i -a"
 abbr -a ch chezmoi
@@ -131,7 +133,10 @@ abbr -a ll "ls -hl$_ls_arg" # list long w/ headers
 abbr -a lt "load_env ~/.tkns"
 abbr -a makepass "openssl rand -base64 12"
 abbr -a md mkdir_cd
+abbr -a mi "mise install"
 abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'
+abbr -a mu "mise use --pin"
+abbr -a mug "mise use --global --pin"
 abbr -a nmap_check_for_firewall "sudo nmap -sA -p1-65535 -v -T4"
 abbr -a nmap_check_for_vulns "nmap --script=vuln"
 abbr -a nmap_detect_versions "sudo nmap -sV -p1-65535 -O --osscan-guess -T4 -Pn"
@@ -172,6 +177,7 @@ abbr -a tls "tmux ls"
 abbr -a tm "tmux attach || tmux"
 abbr -a tmux "tmux -u"
 abbr -a tn "tmux new -s"
+abbr -a try try-rs
 abbr -a ttakeover "tmux detach -a"
 abbr -a v vim
 abbr -a vd "vagrant destroy"

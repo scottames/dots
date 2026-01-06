@@ -5,7 +5,7 @@ function github_token_load \
 
     if status --is-interactive
         $GUM_BIN confirm "Load GITHUB_TOKEN with ghtkn?" \
-            --default=false --timeout=10s \
+            --default=true --timeout=10s \
             && set -gx GITHUB_TOKEN (ghtkn get)
     else
         printf_info "in non-interactive shell, skipping ghtkn prompt"
