@@ -50,3 +50,29 @@ packages:
     repo_name: regex-tui
     description: |
       A simple TUI to visualize regular expressions right in your terminal.
+  - type: github_release
+    repo_owner: max-sixty
+    repo_name: worktrunk
+    asset: worktrunk-{{.Arch}}-{{.OS}}.tar.xz
+    description: "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows \n"
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+    supported_envs:
+      - linux
+      - darwin
+    files:
+      - name: wt
+        src: worktrunk-{{.Arch}}-{{.OS}}/wt
+  - type: github_release
+    repo_owner: tassiovirginio
+    repo_name: try-rs
+    asset: try-rs-{{.Version}}-{{.OS}}-{{.Arch}}.tar.gz
+    description: |
+      A blazing fast, Rust-based workspace manager for your temporary experiments.
+    replacements:
+      amd64: x86_64
+    supported_envs:
+      - linux/amd64

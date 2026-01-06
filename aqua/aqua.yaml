@@ -216,3 +216,14 @@ packages:
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.11.0
+  # A memory upgrade for your coding agent
+  #  https://github.com/steveyegge/beads
+  - name: steveyegge/beads@v0.43.0
+  # Git worktree management, designed for parallel AI agent workflows
+  #  https://github.com/max-sixty/worktrunk
+  - name: max-sixty/worktrunk@v0.9.3
+    registry: dots
+  # workspace manager for your temporary experiments
+  #  https://github.com/tassiovirginio/try-rs
+  - name: tassiovirginio/try-rs@v0.1.35
+    registry: dots
