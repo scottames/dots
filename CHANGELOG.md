@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.36.0](https://github.com/scottames/dots/compare/v0.35.0...v0.36.0) (2026-01-06)
+
+
+### Features
+
+* add vicinae settings ([e5e97e4](https://github.com/scottames/dots/commit/e5e97e43c8c18ac7740626af7bba91500e77bf1b))
+* **agents:** add some plugins ([332d537](https://github.com/scottames/dots/commit/332d537f11495c8e7aca954bf0033bb3b60c803c))
+* **agents:** agents.md directives + tweaks to opencode ([a8b5dfe](https://github.com/scottames/dots/commit/a8b5dfee90ef3a9c73c2c62afd5bffcb09f4dd8f))
+* **agents:** shell direction ([30f3a4a](https://github.com/scottames/dots/commit/30f3a4a88ab9b0c1666855b74cc607d483a51714))
+* **aqua/mise:** some new toys ([53cf1bc](https://github.com/scottames/dots/commit/53cf1bcbbc5d025e4b8994c747fefb5cb478ddce))
+* **aqua:** add hugo ([e19dfbf](https://github.com/scottames/dots/commit/e19dfbfd430b5848eec53e649702bafc03c2fe1b))
+* **chezmoi/mise:** add install script to match aqua ([abf3444](https://github.com/scottames/dots/commit/abf34444b1a83cefc7e9a4cd6cc66c0f275ebe38))
+* **fish:** abbrs/ghtkn load by default ([4701d2e](https://github.com/scottames/dots/commit/4701d2ebc46cfb5e24966dd8bb1c567604a844f3))
+* initial hark bits ([6d3d791](https://github.com/scottames/dots/commit/6d3d791481daa3fa1b4b80a4f6e8779f88d3a229))
+* mise en place ([dffbfbc](https://github.com/scottames/dots/commit/dffbfbc1bd9c7e86b4c50fce7582af1730362cec))
+* **nvim:** handle prittier ignoring alerts/callouts ([1bb656b](https://github.com/scottames/dots/commit/1bb656b1d6186bf7588960e45bcba9454db2e073))
+* **opencode:** add superpowers ([5df81a5](https://github.com/scottames/dots/commit/5df81a5f8b549eae8ffbc2325b021bd8ddfb9a10))
+
+
+### Bug Fixes
+
+* **chezmoi:** use tagged version for superpowers ([61bc639](https://github.com/scottames/dots/commit/61bc639678208f97634ec00e5b311f019fe62186))
+* linted claude statusline ([42c720d](https://github.com/scottames/dots/commit/42c720df6e2ec3ef37d8a3ae0742e59be46fab97))
+* **Niri:** remove invalid x keybind ([96b8bbe](https://github.com/scottames/dots/commit/96b8bbed68dff8d184000f58d802b04ee69620d2))
+
 ## [0.35.0](https://github.com/scottames/dots/compare/v0.34.1...v0.35.0) (2025-12-06)
 
 
