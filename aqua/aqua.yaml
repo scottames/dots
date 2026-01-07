@@ -147,7 +147,7 @@ packages:
   - name: gabeduke/kubectl-iexec@v1.19.14
   # Blazing fast terminal file manager
   #   https://github.com/sxyazi/yazi
-  - name: sxyazi/yazi@v25.12.29
+  - name: sxyazi/yazi@v26.1.4
   # Drive terraform at terminal velocity
   #   https://github.com/leg100/pug
   - name: leg100/pug@v0.6.5
@@ -212,7 +212,7 @@ packages:
   - name: gohugoio/hugo@v0.154.2
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2025.12.13
+  - name: jdx/mise@v2026.1.0
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.11.0
