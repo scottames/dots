@@ -41,6 +41,26 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/anomalyco/opencode/v1.1.6/opencode-darwin-arm64.zip",
+      "checksum": "B7469FE5D47718F2A9B4DB8021F761FDC41BA3C5CF559350FA463E3B63E09769",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/anomalyco/opencode/v1.1.6/opencode-darwin-x64.zip",
+      "checksum": "3564BA58B4F920EC5B9780A92B2EBDD7E7477D2EB1FB9A333C801019B2078D81",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/anomalyco/opencode/v1.1.6/opencode-linux-arm64.tar.gz",
+      "checksum": "16C8AA9D34F7CCCCF28B7B0779ECAFC32B02B8250131A8B1AB09EBADDE5F3459",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/anomalyco/opencode/v1.1.6/opencode-linux-x64.tar.gz",
+      "checksum": "7B3437F7C2A61FF6ABA688854C2E16F24826437CA3A2065B4B348770FAC6C996",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/antonmedv/fx/39.2.0/fx_darwin_amd64",
       "checksum": "2AD7D0A6E1EA67AB10A22CC06825FDC776511E8F412926D1C752B630EAC12E02",
       "algorithm": "sha256"
@@ -426,23 +446,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/github/copilot-cli/v0.0.375/copilot-darwin-arm64.tar.gz",
-      "checksum": "2B50EAA84CF04C49D71972256E720B2092A5B61B5A49AC5A1FED0FC25C7FC4CD",
+      "id": "github_release/github.com/github/copilot-cli/v0.0.376/copilot-darwin-arm64.tar.gz",
+      "checksum": "D66063F706777ABD520D1FA97EB0D878AD219F2E6BEF56A2CBA1378A82A30334",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/github/copilot-cli/v0.0.375/copilot-darwin-x64.tar.gz",
-      "checksum": "E882932D12E0FF4F124335C2DF95DA60253945C96B30F962ECA76C5A0A4BC368",
+      "id": "github_release/github.com/github/copilot-cli/v0.0.376/copilot-darwin-x64.tar.gz",
+      "checksum": "8CD9C27B14A0F4921B6493C592E2C4A29A3EC8D41BC010504D3742F80B0BC953",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/github/copilot-cli/v0.0.375/copilot-linux-arm64.tar.gz",
-      "checksum": "D576F90B64E3AD9B62CB0C27F0A877A911012CBBE1F50656CF5E3EDDBF5848A5",
+      "id": "github_release/github.com/github/copilot-cli/v0.0.376/copilot-linux-arm64.tar.gz",
+      "checksum": "922E94DFB86A1B9572E00FC3D48BF6CDF3F11B0484818678F49CC22BEE3CBCDC",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/github/copilot-cli/v0.0.375/copilot-linux-x64.tar.gz",
-      "checksum": "78198E85B727EE6A3F68D0B348FB3144EBEFD5B7FB965F50329F09E1CD9C5623",
+      "id": "github_release/github.com/github/copilot-cli/v0.0.376/copilot-linux-x64.tar.gz",
+      "checksum": "DA44C112982AD2B26450735015A80DD95058C92C59DF93263F09488252C01CB5",
       "algorithm": "sha256"
     },
     {
@@ -461,23 +481,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.7.2/golangci-lint-2.7.2-darwin-amd64.tar.gz",
-      "checksum": "6966554840A02229A14C52641BC38C2C7A14D396F4C59BA0C7C8BB0675CA25C9",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.8.0/golangci-lint-2.8.0-darwin-amd64.tar.gz",
+      "checksum": "164C72806D0E31AB19DA4F08FFF748A3FDC57E241851279B666C945ED9B91830",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.7.2/golangci-lint-2.7.2-darwin-arm64.tar.gz",
-      "checksum": "6CE86A00E22B3709F7B994838659C322FDC9EAE09E263DB50439AD4F6EC5785C",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.8.0/golangci-lint-2.8.0-darwin-arm64.tar.gz",
+      "checksum": "6F8979A83117E0607D4B85FF486382EF0404440BBF54F0E6F003CEAB6CCF641E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.7.2/golangci-lint-2.7.2-linux-amd64.tar.gz",
-      "checksum": "CE46A1F1D890E7B667259F70BB236297F5CF8791A9B6B98B41B283D93B5B6E88",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.8.0/golangci-lint-2.8.0-linux-amd64.tar.gz",
+      "checksum": "7048BC6B25C9515ED092C83F9FA8709CA97937EAD52D9FF317A143299EE97A50",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.7.2/golangci-lint-2.7.2-linux-arm64.tar.gz",
-      "checksum": "7028E810837722683DAB679FB121336CFA303FECFF39DFE248E3E36BC18D941B",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.8.0/golangci-lint-2.8.0-linux-arm64.tar.gz",
+      "checksum": "2A58388DB8AF5AB9330791CEA0EBDD4100723CD05AD7185D92FEBAAEE272EC9A",
       "algorithm": "sha256"
     },
     {
@@ -541,23 +561,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.1.0/mise-v2026.1.0-linux-arm64-musl.tar.gz",
-      "checksum": "8026247F6C130EC49AAA6F635F1B33C78D47C62AC61B566431B3FF692596D667",
+      "id": "github_release/github.com/jdx/mise/v2026.1.1/mise-v2026.1.1-linux-arm64-musl.tar.gz",
+      "checksum": "B6A5257C928D14EDC42A01EBF741EC36A792AF59C1CE83B7A801FF1E779AF8C4",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.1.0/mise-v2026.1.0-linux-x64-musl.tar.gz",
-      "checksum": "35CD0C1287B34675C7A245E1068E221F76677D2D8E8EA796DE55963EF3D8AA87",
+      "id": "github_release/github.com/jdx/mise/v2026.1.1/mise-v2026.1.1-linux-x64-musl.tar.gz",
+      "checksum": "4F4DCE6120601ED1E37FA7B19E67523BBF316C2B1691E7447251CF82FFD9AC4D",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.1.0/mise-v2026.1.0-macos-arm64.tar.gz",
-      "checksum": "EDBA995A0A09BDC7C3BCEF27086631063D5004B4B5D1C70FC83C439D2E5E6B01",
+      "id": "github_release/github.com/jdx/mise/v2026.1.1/mise-v2026.1.1-macos-arm64.tar.gz",
+      "checksum": "855D326D9DC7F0C8B9AAFF503C1B3A65EC5CD78EFEA89B66B758B3F0E0C1CC6B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.1.0/mise-v2026.1.0-macos-x64.tar.gz",
-      "checksum": "1F1EB22D5932F0C703D270C98DD62C9999D8A1C7277F28709BFBE216547770E8",
+      "id": "github_release/github.com/jdx/mise/v2026.1.1/mise-v2026.1.1-macos-x64.tar.gz",
+      "checksum": "B402B0617AC870501B30CA6A5B414AB2345C15150417336C83BD88B5033B36DA",
       "algorithm": "sha256"
     },
     {
@@ -746,23 +766,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/max-sixty/worktrunk/v0.9.5/worktrunk-aarch64-apple-darwin.tar.xz",
-      "checksum": "BB01A952804F74F93D0F4088B5BCAB32B264CCA70184910E8A8782D5EB9672D0",
+      "id": "github_release/github.com/max-sixty/worktrunk/v0.10.0/worktrunk-aarch64-apple-darwin.tar.xz",
+      "checksum": "B020CCE85917BF31D42284A3A10762EFF2E8C0F9F61DEF5F2AD188A2F89057E5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/max-sixty/worktrunk/v0.9.5/worktrunk-aarch64-unknown-linux-musl.tar.xz",
-      "checksum": "12F9EA17C5189191E654382FF5D1921425CFEA5578C6DE1A63A95BE8F7379042",
+      "id": "github_release/github.com/max-sixty/worktrunk/v0.10.0/worktrunk-aarch64-unknown-linux-musl.tar.xz",
+      "checksum": "27401CDF79FD8A8E76BE6AD6EED35758BF508F2B1A7ACE8220307134797D6F3B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/max-sixty/worktrunk/v0.9.5/worktrunk-x86_64-apple-darwin.tar.xz",
-      "checksum": "2442849C70658CEA184DF8592F4E79A47050980929281D0DF256F9B472FE7BEA",
+      "id": "github_release/github.com/max-sixty/worktrunk/v0.10.0/worktrunk-x86_64-apple-darwin.tar.xz",
+      "checksum": "EEFEA874EB7BA2CA097BDA3ABD38B32A56AC08C132B8F1717AEE2A4839260839",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/max-sixty/worktrunk/v0.9.5/worktrunk-x86_64-unknown-linux-musl.tar.xz",
-      "checksum": "AC785DCDCED54A9B0D4DD0446B40DA4D89056502012C38185772779545EAF2AD",
+      "id": "github_release/github.com/max-sixty/worktrunk/v0.10.0/worktrunk-x86_64-unknown-linux-musl.tar.xz",
+      "checksum": "CAAFDF8FF1EB66FFA5099C21D513A8AAABEF3112FCA75C4751B52B9BA65BD530",
       "algorithm": "sha256"
     },
     {
@@ -923,26 +943,6 @@
     {
       "id": "github_release/github.com/spacelift-io/spacectl/v1.17.2/spacectl_1.17.2_linux_arm64.zip",
       "checksum": "020655DFDA26666575503CBA975C62FD75ECCBC69646D9ED6C50F60F76196A62",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/sst/opencode/v1.1.6/opencode-darwin-arm64.zip",
-      "checksum": "B7469FE5D47718F2A9B4DB8021F761FDC41BA3C5CF559350FA463E3B63E09769",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/sst/opencode/v1.1.6/opencode-darwin-x64.zip",
-      "checksum": "3564BA58B4F920EC5B9780A92B2EBDD7E7477D2EB1FB9A333C801019B2078D81",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/sst/opencode/v1.1.6/opencode-linux-arm64.tar.gz",
-      "checksum": "16C8AA9D34F7CCCCF28B7B0779ECAFC32B02B8250131A8B1AB09EBADDE5F3459",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/sst/opencode/v1.1.6/opencode-linux-x64.tar.gz",
-      "checksum": "7B3437F7C2A61FF6ABA688854C2E16F24826437CA3A2065B4B348770FAC6C996",
       "algorithm": "sha256"
     },
     {
@@ -1271,18 +1271,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.14/gt-linux",
-      "checksum": "F5F3BE0C68BC3784854EC9D66EFE6740B7E8490203C78847C72D9A95805FC1AC",
+      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.15/gt-linux",
+      "checksum": "CEDC03A631F843E2A775EDFB120E522154B1941A2C678A5FB75CE5E20B4DBB78",
       "algorithm": "sha256"
     },
     {
-      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.14/gt-macos-arm64",
-      "checksum": "8EAF5A066BC4D2369917EE2DB96797D00E524C6840E5A9FB873F10857BB6FA2F",
+      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.15/gt-macos-arm64",
+      "checksum": "399BE49255B645758A66AD3AB1883456E8A5279C29CF93FB97362A85A12D92E5",
       "algorithm": "sha256"
     },
     {
-      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.14/gt-macos-x64",
-      "checksum": "B16E6B4F084777AFE32DAFB37E266DCB10A6E6BB33141C2520AC600681EDF3F6",
+      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.15/gt-macos-x64",
+      "checksum": "335C9949D779A718FDB03CE1D83492B2CCA3B70A0D5A8FA519D4A8C9FA54CF14",
       "algorithm": "sha256"
     },
     {
@@ -1311,8 +1311,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.451.1/registry.yaml",
-      "checksum": "915D61B78C467C1C2ABBD626BA1F2A63B3AA736580E9D8AACB16D3D1AC046CCEA8B2C0733903FFF79529239E0D2454629669B1121437208A0765B9993A168FB8",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.452.0/registry.yaml",
+      "checksum": "F080AE6062D53C7B51E41A87732F81A0E37F91134FC36EF9EE36769A1A13F7461D304BC413A9D47E6A47E6499F542FD176F75A2CD4A9B275D5F13C4B435AAC98",
       "algorithm": "sha512"
     }
   ]
