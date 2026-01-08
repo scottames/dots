@@ -17,6 +17,27 @@
       ],
       autoReplaceStringTemplate: '# renovate: datasource={{{datasource}}} depName={{{depName}}}\n    image: {{{depName}}}:{{#if newValue}}{{{newValue}}}{{else}}{{{currentValue}}}{{/if}}{{#if newDigest}}@{{{newDigest}}}{{/if}}',
     },
+    {
+      customType: 'regex',
+      managerFilePatterns: [
+        '/home/dot_claude/plugins/private_known_marketplaces\\.json\\.tmpl/',
+      ],
+      matchStrings: [
+        '"repo":\\s*"(?<depName>[^"]+)"[^}]*"ref":\\s*"(?<currentValue>[^"]+)"',
+      ],
+      datasourceTemplate: 'github-tags',
+    },
+    {
+      customType: 'regex',
+      managerFilePatterns: [
+        '/home/dot_claude/plugins/private_installed_plugins\\.json\\.tmpl/',
+      ],
+      matchStrings: [
+        'renovate: depName=(?<depName>[^\\s*]+)[^"]*"installPath":[^,]+/(?<currentValue>v[^"]+)"',
+        'renovate: depName=(?<depName>[^\\s*]+)[^"]*"version":\\s*"(?<currentValue>[^"]+)"',
+      ],
+      datasourceTemplate: 'github-tags',
+    },
   ],
   packageRules: [
     {
@@ -26,8 +47,10 @@
       automerge: true,
     },
     {
-      matchPackageNames: ["Skardyy/mcat"],
-      allowedVersions: "!0.4.4" // invalid checksum
-    }
+      matchDepNames: ['obra/superpowers'],
+      groupName: '⬆️ claude-plugins',
+      commitMessageTopic: '⬆️ claude-plugins',
+      automerge: false,
+    },
   ]
 }
