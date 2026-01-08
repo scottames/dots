@@ -5,7 +5,11 @@ function git_status --description "Git project status" --wraps "git status"
 
     if [ $_is_inside_git_repo ]
         printf_green_bold "\n🌳 worktrees\n\n"
-        git worktree list | grep -v '.bare' | string replace $HOME '~' | string replace /var ""
+        if type -q wt
+            wt list
+        else
+            git worktree list | grep -v '.bare' | string replace $HOME '~' | string replace /var ""
+        end
 
         set -l _org "$( dirname (
       git config --get remote.origin.url \
