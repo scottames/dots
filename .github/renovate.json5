@@ -45,6 +45,14 @@
       groupName: '⬆️ mise-packages',
       commitMessageTopic: '⬆️ mise-packages',
       automerge: true,
+      schedule: ["* 5-7 * * *"],
+    },
+    {
+      matchManagers: ['aqua'],
+      groupName: '⬆️ aqua-packages',
+      commitMessageTopic: '⬆️ aqua-packages',
+      automerge: true,
+      schedule: ["* 5-7 * * *"],
     },
     {
       matchDepNames: ['obra/superpowers'],
