@@ -196,6 +196,13 @@ return {
         desc = "Opencode",
       },
       {
+        "<leader>atp",
+        function()
+          require("sidekick.cli").toggle({ name = "copilot", focus = true })
+        end,
+        desc = "Copilot",
+      },
+      {
         "<leader>atq",
         function()
           require("sidekick.cli").toggle({ name = "amazon_q", focus = true })
