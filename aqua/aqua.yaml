@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin
     - linux
 registries:
-  - ref: v4.452.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.453.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -162,11 +162,11 @@ packages:
   - name: spacelift-io/spacectl@v1.17.2
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
-  - name: bootandy/dust@v1.2.3
-  - name: github/copilot-cli@v0.0.376
+  - name: bootandy/dust@v1.2.4
+  - name: github/copilot-cli@v0.0.377
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.6
+  - name: sst/opencode@v1.1.8
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.31.0
