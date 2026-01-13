@@ -27,7 +27,7 @@ return {
         hcl = { "terragrunt_hclfmt" },
         json = { "prettierd", "prettier", stop_after_first = true },
         justfile = { "just" },
-        markdown = { "protect_gh_alerts", "prettierd", "markdownlint", "markdown-toc" },
+        markdown = { "protect_gh_alerts", "prettierd", "markdown-toc" },
         ["markdown.mdx"] = { "prettierd", "prettier", stop_after_first = true },
         lua = { "stylua" },
         packer = { "packer_fmt" },
