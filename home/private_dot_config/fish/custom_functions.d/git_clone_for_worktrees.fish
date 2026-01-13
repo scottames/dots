@@ -55,6 +55,10 @@ function git_clone_for_worktrees \
         end
         cd $_git_main_branch
         git branch --set-upstream-to=origin/$_git_main_branch $_git_main_branch
+
+        if test -f mise.toml
+            mise trust
+        end
     else
         printf_warn "Directory for branch '$_git_main_branch' exists, skipping initial worktree creation\n"
     end
