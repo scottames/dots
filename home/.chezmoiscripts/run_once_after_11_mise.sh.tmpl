@@ -12,16 +12,31 @@ echo '
 ╚═╝     ╚═╝╚═╝╚══════╝╚══════╝
 '
 
+# Colors
+red='\033[0;31m'
+# green='\033[0;32m'
+blue='\033[0;34m'
 magenta='\033[0;35m'
 cyan='\033[0;36m'
+# yellow='\033[0;33m'
 clear='\033[0m'
+print_info() { printf "\n${blue}🧰 ${magenta}%s${clear}\n" "${@}"; }
+print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; }
+print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
+# print_warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}"; }
 
-printf "\n${cyan}🧰 ${magenta}%s${clear}\n\n" "ensure all mise packages installed"
+print_info "ensure all mise packages installed"
+
+if ! command -v mise; then
+  print_err "mise not found.
+    install and try again: https://mise.jdx.dev/installing-mise.html"
+  exit 1
+fi
 
 # .config/mise/config.toml hash: {{ include "../mise/config.toml" | sha256sum }}
 # .config/mise/mise.lock hash: {{ include "../mise/mise.lock" | sha256sum }}
 mise install
 
-printf "\n${cyan}🧰 ${magenta}%s${clear}\n\n" "mise done"
+print_success "mise done"
 
 # vi: ft=bash

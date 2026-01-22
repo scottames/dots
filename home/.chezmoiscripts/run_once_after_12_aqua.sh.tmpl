@@ -19,11 +19,8 @@ clear='\033[0m'
 if [[ -f "${HOME}/.cargo/env" ]]; then
   . "${HOME}/.cargo/env"
 fi
-if [[ ":$PATH:" != *":${HOME}/.gobrew/current/bin:"* ]] || [[ ":$PATH:" != *":${HOME}/.gobrew/bin:"* ]]; then
-  export PATH="${HOME}/.gobrew/current/bin:${HOME}/.gobrew/bin:${PATH}"
-fi
-if [[ ! "${GOROOT+x}" ]]; then
-  export GOROOT="${HOME}/.gobrew/current/go"
+if command -v mise &>/dev/null; then
+  eval "$(mise env bash)"
 fi
 
 # renovate: datasource=github-releases depName=aquaproj/aqua

@@ -28,8 +28,6 @@ alternatively, arch: (may cause oddities with python install, etc. on fedora sys
   fi
 fi
 
-# TODO: setup mise w/ go
-
 if [ ! -x "$(command -v curl)" ]; then
   err "curl required, but not found."
 fi
