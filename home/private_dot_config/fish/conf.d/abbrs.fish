@@ -8,6 +8,7 @@ end
 abbr -a ax aws_ctx # see functions
 abbr -a axc "aws_ctx clear"
 abbr -a agi "aqua g -i"
+abbr -a ag "aqua g -i && aqua upc && aqua i -a"
 abbr -a aia "aqua i -a"
 abbr -a aupcp "aqua upc -prune"
 abbr -a aupc "aqua upc"
@@ -136,6 +137,7 @@ abbr -a md mkdir_cd
 abbr -a mi "mise install"
 abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'
 abbr -a mu "mise use --pin"
+abbr -a mt "mise trust"
 abbr -a mug "mise use --global --pin"
 abbr -a nmap_check_for_firewall "sudo nmap -sA -p1-65535 -v -T4"
 abbr -a nmap_check_for_vulns "nmap --script=vuln"
