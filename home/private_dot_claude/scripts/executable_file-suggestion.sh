@@ -10,7 +10,7 @@ QUERY=$(jq -r '.query // ""')
 PROJECT_DIR="${CLAUDE_PROJECT_DIR:-.}"
 
 # cd into project dir so rg outputs relative paths
-cd "$PROJECT_DIR" || exit 1
+cd "${PROJECT_DIR}" || exit 1
 
 {
   # Main search - respects .gitignore, includes hidden files, follows symlinks
@@ -18,4 +18,4 @@ cd "$PROJECT_DIR" || exit 1
 
   # Additional paths - include even if gitignored (uncomment and customize)
   # [ -e .notes ] && rg --files --follow --hidden --no-ignore-vcs .notes 2>/dev/null
-} | sort -u | fzf --filter "$QUERY" | head -15
+} | sort -u | fzf --filter "${QUERY}" | head -15
