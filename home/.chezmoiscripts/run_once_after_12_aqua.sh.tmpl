@@ -19,8 +19,8 @@ clear='\033[0m'
 if [[ -f "${HOME}/.cargo/env" ]]; then
   . "${HOME}/.cargo/env"
 fi
-if command -v mise &>/dev/null; then
-  eval "$(mise env bash)"
+if ! command -v go &>/dev/null && command -v mise &>/dev/null; then
+  eval "$(mise env --shell bash)"
 fi
 
 # renovate: datasource=github-releases depName=aquaproj/aqua
