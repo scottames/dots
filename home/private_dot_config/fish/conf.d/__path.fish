@@ -47,8 +47,6 @@ set -a _bin_dirs \
     $HOME/.npm-global/bin \
     $KREW_ROOT/bin \
     $HOME/.cargo/bin \
-    $HOME/.gobrew/current/bin \
-    $HOME/.gobrew/bin \
     $GOPATH/bin \
     $HOME/.local/bin \
     $HOME/bin \

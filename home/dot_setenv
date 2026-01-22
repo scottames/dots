@@ -47,8 +47,6 @@ setenv FISH_CONFIG                 "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS            "--bind ctrl-j:down,ctrl-k:up"
 setenv GITHUB_USERNAME             "$GITHUB_USER"
 setenv GOPATH                      "$HOME/go"
-[ -f "$HOME/.gobrew/current/go" ] \
-  && setenv GOROOT                 "$HOME/.gobrew/current/go"
 setenv GOPRIVATE                   "github.com/$GITHUB_USER/*"
 setenv HOME_BIN                    "$HOME/bin"
 setenv HOME_LOCAL_BIN              "$HOME/.local/bin"

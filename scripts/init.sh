@@ -15,25 +15,6 @@ err() {
   exit 1
 }
 
-install_gobrew() {
-  info "no go found, attempting to install via gobrew"
-  curl -sL https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
-
-  export PATH="${HOME}/.gobrew/current/bin:${HOME}/.gobrew/bin:${PATH}"
-  export GOROOT="${HOME}/.gobrew/current/go"
-
-  "${HOME}"/.gobrew/bin/gobrew install latest
-
-  if [ ! -x "$(command -v go)" ]; then
-    err "go not found after attempting to install with gobrew."
-  else
-    info "go installed via gobrew!
-
-  NOTE: if gobrew intended to be used via aqua, run: rm -rf ~/.gobrew/bin
-"
-  fi
-}
-
 if [ -x "$(command -v distrobox)" ]; then
   if [ -x "$(command -v docker)" ] || [ -x "$(command -v podman)" ]; then
     err "distrobox found. init from distrobox instead.
@@ -47,14 +28,13 @@ alternatively, arch: (may cause oddities with python install, etc. on fedora sys
   fi
 fi
 
+# TODO: setup mise w/ go
+
 if [ ! -x "$(command -v curl)" ]; then
   err "curl required, but not found."
 fi
 if [ ! -x "$(command -v git)" ]; then
   err "git required, but not found."
-fi
-if [ ! -x "$(command -v go)" ]; then
-  install_gobrew
 fi
 
 if ! command -v chezmoi; then
