@@ -14,7 +14,7 @@ cd "$PROJECT_DIR" || exit 1
 
 {
   # Main search - respects .gitignore, includes hidden files, follows symlinks
-  rg --files --follow --hidden . 2>/dev/null
+  rg --files --follow --hidden --no-ignore . 2>/dev/null
 
   # Additional paths - include even if gitignored (uncomment and customize)
   # [ -e .notes ] && rg --files --follow --hidden --no-ignore-vcs .notes 2>/dev/null

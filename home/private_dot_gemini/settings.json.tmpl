@@ -18,6 +18,33 @@
     "disableUpdateNag": true,
     "preferredEditor": "neovim"
   },
+  "hooks": {
+{{- if stat ( joinPath .chezmoi.homeDir ".gemini/hooks/thts-prompt-check.sh" ) }}
+    "BeforeAgent": [
+      {
+        "hooks": [
+          {
+            "command": "{{ joinPath .chezmoi.homeDir ".gemini/hooks/thts-prompt-check.sh" }}",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+{{- end }}
+{{- if stat ( joinPath .chezmoi.homeDir ".gemini/hooks/thts-session-start.sh" ) }}
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "{{ joinPath .chezmoi.homeDir ".gemini/hooks/thts-session-start.sh" }}",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+{{- end }}
+    "enabled": true
+  },
   "ide": {
     "enabled": true
   },
@@ -34,6 +61,9 @@
   "shell": {
     "pager": "bat",
     "showColor": true
+  },
+  "tools": {
+    "enableHooks": true
   },
   "ui": {
     "showMemoryUsage": true,

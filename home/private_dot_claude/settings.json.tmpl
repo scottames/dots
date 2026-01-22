@@ -1,8 +1,45 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "superpowers@superpowers-dev": true
+  },
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754077213482
+  },
+  "fileSuggestion": {
+    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/file-suggestion.sh",
+    "type": "command"
+  },
+  "hooks": {
+{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" ) }}
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" }}",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+{{- end }}
+{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" ) }}
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" }}",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+{{- end }}
   "permissions": {
     "allow": [
       "Bash(/bin/ls:*)",
@@ -14,13 +51,23 @@
       "Bash(cargo run:*)",
       "Bash(cargo test:*)",
       "Bash(git mv:*)",
+      "Bash(git show:*)",
       "Bash(go build:*)",
+      "Bash(go mod tidy:*)",
+      "Bash(go list:*)",
+      "Bash(go run:*)",
       "Bash(go test:*)",
+      "Bash(grep:*)",
+      "Bash(command grep:*)",
+      "Bash(command ls:*)",
       "Bash(ls:*)",
+      "Bash(thts sync:*)",
       "Bash(trunk check:*)",
       "Bash(trunk fmt:*)",
+      "Bash(wc:*)",
       "Read(~/.config/agents/*.md)",
       "Read(~/.config/agents/*/*.md)",
+      "Read(thoughts/*)",
       "WebFetch(domain:crates.io)",
       "WebFetch(domain:docs.renovatebot.com)",
       "WebFetch(domain:docs.rs)",
@@ -28,23 +75,12 @@
       "WebSearch"
     ]
   },
-  "fileSuggestion": {
-    "type": "command",
-    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/file-suggestion.sh"
+  "preferences": {
+    "autoSave": true,
+    "theme": "dark"
   },
   "statusLine": {
-    "type": "command",
-    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh"
-  },
-  "alwaysThinkingEnabled": true,
-  "preferences": {
-    "theme": "dark",
-    "autoSave": true
-  },
-  "feedbackSurveyState": {
-    "lastShownTime": 1754077213482
-  },
-  "enabledPlugins": {
-    "superpowers@superpowers-dev": true
+    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh",
+    "type": "command"
   }
 }

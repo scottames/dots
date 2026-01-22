@@ -4,6 +4,9 @@
 .idea
 .scratch*
 
+**/.claude/settings.local.json
+.crush/**
+
 .envrc
 .env
 .env.scotty
@@ -11,7 +14,6 @@
 .foo*
 .luarc.json
 
-**/.claude/settings.local.json
-.crush/**
-
 mise.local.toml
+
+thoughts/**
