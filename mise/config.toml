@@ -21,7 +21,7 @@ slsa = true
 
 go = "1.25.6"
 node = "24.13.0"
-rust = "1.92.0"
+rust = "1.93.0"
 
 "aqua:mfontanini/presenterm" = "0.15.1"
 "aqua:int128/ghcp" = "1.15.1"
