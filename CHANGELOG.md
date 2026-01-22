@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.37.0](https://github.com/scottames/dots/compare/v0.36.0...v0.37.0) (2026-01-22)
+
+
+### Features
+
+* add github copilot ([c61212c](https://github.com/scottames/dots/commit/c61212cf55b5af234147a91fe759fe0d7a7af058))
+* **alex:** just execute ([2bc4d8e](https://github.com/scottames/dots/commit/2bc4d8e125a235ba1ee4fcfc13059add568ce742))
+* **fish:** git_clone_for_worktrees, mise trust by default ([90ba245](https://github.com/scottames/dots/commit/90ba245562c76dfaea8e5cd386b41aa6b60bc1db))
+* **fish:** minor abbrs ([f7909ab](https://github.com/scottames/dots/commit/f7909abfe5d4b9f5f56270eadb99657a6a5ec863))
+* **hyprlock:** lock 1p when locking ([49cb142](https://github.com/scottames/dots/commit/49cb1426b215b2bcbbd75f5ba90234b55815df29))
+* thts integration (agents) ([7e3ad28](https://github.com/scottames/dots/commit/7e3ad287b0fa88e76b44ac828ea4ed4974ef1dfd))
+* **worktrunk:** fish shell integration ([a03c845](https://github.com/scottames/dots/commit/a03c8451b0b4407b9a0f3817af4de03e705d6f6a))
+
+
+### Bug Fixes
+
+* **init:** go installed with mise before aqua ([1ecf70e](https://github.com/scottames/dots/commit/1ecf70e4bd13d442a860343ae8b8ba131049dcb5))
+* linting ([d4c70ad](https://github.com/scottames/dots/commit/d4c70add34306fb8acd1f1c05495733919646d27))
+* **nvim:** rm redundant markdownlint formatter ([4e056d6](https://github.com/scottames/dots/commit/4e056d6822563355ddfdcc24201123b0f6619e74))
+
 ## [0.36.0](https://github.com/scottames/dots/compare/v0.35.0...v0.36.0) (2026-01-06)
 
 
