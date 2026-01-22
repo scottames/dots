@@ -1,8 +1,4 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: [
-    'github>scottames/renovate:default.json5',
-  ],
   ignorePaths: [
     '.dagger/go.mod',
   ],
@@ -56,9 +52,13 @@
     },
     {
       matchDepNames: ['obra/superpowers'],
-      groupName: '⬆️ claude-plugins',
-      commitMessageTopic: '⬆️ claude-plugins',
+      groupName: '⬆️ agent plugins',
+      commitMessageTopic: '⬆️ agent plugins',
       automerge: false,
     },
-  ]
+  ],
+  extends: [ // make sure above rules take priority
+    'github>scottames/renovate:default.json5',
+  ],
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
 }
