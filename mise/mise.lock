@@ -39,11 +39,11 @@ version = "2.1.12"
 backend = "npm:@anthropic-ai/claude-code"
 
 [[tools."npm:@fission-ai/openspec"]]
-version = "0.21.0"
+version = "0.22.0"
 backend = "npm:@fission-ai/openspec"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.24.4"
+version = "0.24.5"
 backend = "npm:@google/gemini-cli"
 
 [[tools.rust]]
