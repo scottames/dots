@@ -202,6 +202,13 @@ refreshPeriod = "24h"
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
+# TODO: move to openpackage managed? via .agents?
+#   - will it version?
+[".config/agents/plugins/anthropics/skills"]
+    type = "git-repo"
+    url = "https://github.com/anthropics/skills.git"
+    refreshPeriod = "72h"
+
 # renovate: datasource=github-releases depName=obra/superpowers
 {{ $obraSuperpowersVersion := "v4.0.1" -}}
 
@@ -211,11 +218,9 @@ refreshPeriod = "24h"
     refreshPeriod = "168h"
     args = ["--branch", "{{ $obraSuperpowersVersion }}"]
 
-[".config/agents/plugins/anthropics/skills"]
-    type = "git-repo"
-    url = "https://github.com/anthropics/skills.git"
-    refreshPeriod = "72h"
-
+# TODO: move to openpackage managed? via .agents?
+#     (for claude code at least opencode needs custom install)
+#   - will it version?
 [".config/agents/plugins/obra/superpowers"]
     type = "git-repo"
     url = "https://github.com/obra/superpowers.git"
