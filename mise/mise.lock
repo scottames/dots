@@ -46,6 +46,10 @@ backend = "npm:@fission-ai/openspec"
 version = "0.24.5"
 backend = "npm:@google/gemini-cli"
 
+[[tools."npm:opkg"]]
+version = "0.7.7"
+backend = "npm:opkg"
+
 [[tools.rust]]
 version = "1.93.0"
 backend = "core:rust"
