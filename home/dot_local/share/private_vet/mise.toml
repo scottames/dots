@@ -1,0 +1,21 @@
+[tools]
+"aqua:ossf/scorecard" = "5.4.0"
+"aqua:google/osv-scanner" = "2.3.2"
+"aqua:aquasecurity/trivy" = "0.68.2"
+"aqua:gitleaks/gitleaks" = "8.30.0"
+"aqua:securego/gosec" = "2.22.11"
+"aqua:cli/cli" = "2.86.0"
+"aqua:jqlang/jq" = "1.8.1"
+
+"go:golang.org/x/vuln/cmd/govulncheck" = "1.1.4"
+
+"cargo:cargo-audit" = "0.22.0"
+"cargo:cargo-deny" = "0.19.0"
+"cargo:cargo-geiger" = "0.13.0"
+
+"pipx:semgrep" = "1.149.0"
+"pipx:bandit" = "1.9.3"
+"pipx:pip-audit" = "2.10.0"
+"pipx:guarddog" = "2.8.4"
+
+"npm:socket" = "1.1.59"
