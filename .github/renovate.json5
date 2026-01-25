@@ -1,4 +1,8 @@
 {
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [ // make sure above rules take priority
+    'github>scottames/renovate:default.json5',
+  ],
   ignorePaths: [
     '.dagger/go.mod',
   ],
@@ -57,8 +61,4 @@
       automerge: false,
     },
   ],
-  extends: [ // make sure above rules take priority
-    'github>scottames/renovate:default.json5',
-  ],
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
 }
