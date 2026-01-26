@@ -205,21 +205,14 @@ refreshPeriod = "24h"
 # renovate: datasource=github-releases depName=obra/superpowers
 {{ $obraSuperpowersVersion := "v4.1.1" -}}
 
+# https://github.com/obra/superpowers/blob/main/docs/README.opencode.md
+# requires symlinks to be functional:
+#   home/private_dot_config/opencode/plugins/symlink_superpowers.js.tmpl
+#   home/private_dot_config/opencode/skills/symlink_superpowers.tmpl
 [".config/opencode/superpowers"]
     type = "git-repo"
     url = "https://github.com/obra/superpowers.git"
     refreshPeriod = "168h"
-    args = ["--branch", "{{ $obraSuperpowersVersion }}"]
-
-[".config/agents/plugins/anthropics/skills"]
-    type = "git-repo"
-    url = "https://github.com/anthropics/skills.git"
-    refreshPeriod = "72h"
-
-[".config/agents/plugins/obra/superpowers"]
-    type = "git-repo"
-    url = "https://github.com/obra/superpowers.git"
-    refreshPeriod = "72h"
     args = ["--branch", "{{ $obraSuperpowersVersion }}"]
 
 {{ if not (eq "root" .me.user) -}} # skip if running in CI

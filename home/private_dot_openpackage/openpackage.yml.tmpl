@@ -1,0 +1,15 @@
+name: scta
+packages:
+{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/global") }}
+- name: global
+  path: {{ .home.src_github_dir }}/.agents/main/packages/global
+{{- end }}
+- name: "@anthropics/claude-plugins-official/code-simplifier"
+  git: https://github.com/anthropics/claude-plugins-official.git
+  ref: e30768372b4150ca1bc0839d93283e8edc30d60d
+  subdirectory: plugins/code-simplifier
+- name: "@anthropics/claude-plugins-official/frontend-design"
+  git: https://github.com/anthropics/claude-plugins-official.git
+  ref: e30768372b4150ca1bc0839d93283e8edc30d60d
+  subdirectory: plugins/frontend-design
+dev-packages: []

@@ -1,0 +1,42 @@
+{
+    "opencode": {
+      "name": "OpenCode",
+      "export": [
+        {
+          "from": "commands/**/*.md",
+          "to": ".opencode/commands/**/*.md"
+        },
+        {
+          "from": "agents/**/*.md",
+          "to": ".opencode/agents/**/*.md"
+        },
+        {
+          "from": "skills/**/*",
+          "to": ".opencode/skills/**/*"
+        },
+        {
+          "from": ["mcp.jsonc", "mcp.json"],
+          "to": ".opencode/opencode.json",
+          "merge": "deep"
+        }
+      ],
+      "import": [
+        {
+          "from": ".opencode/commands/**/*.md",
+          "to": "commands/**/*.md"
+        },
+        {
+          "from": ".opencode/agents/**/*.md",
+          "to": "agents/**/*.md"
+        },
+        {
+          "from": ".opencode/skills/**/*",
+          "to": "skills/**/*"
+        },
+        {
+          "from": [".opencode/opencode.json", ".opencode/opencode.jsonc"],
+          "to": "mcp.jsonc"
+        }
+      ]
+    }
+  }
