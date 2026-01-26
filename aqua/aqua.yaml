@@ -228,3 +228,6 @@ packages:
   #  https://github.com/tassiovirginio/try-rs
   - name: tassiovirginio/try-rs@v0.1.52
     registry: dots
+  #  https://code.claude.com/docs
+  #  https://github.com/anthropics/claude-code/
+  - name: anthropics/claude-code@v2.1.19
