@@ -1,45 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "alwaysThinkingEnabled": true,
-  "enabledPlugins": {
-    "superpowers@superpowers-dev": true
+  "fileSuggestion": {
+    "type": "command",
+    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/file-suggestion.sh"
   },
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
-  "feedbackSurveyState": {
-    "lastShownTime": 1754077213482
-  },
-  "fileSuggestion": {
-    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/file-suggestion.sh",
-    "type": "command"
-  },
-  "hooks": {
-{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" ) }}
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" }}",
-            "type": "command"
-          }
-        ]
-      }
-    ],
-{{- end }}
-{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" ) }}
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" }}",
-            "type": "command"
-          }
-        ]
-      }
-    ]
-  },
-{{- end }}
   "permissions": {
     "allow": [
       "Bash(/bin/ls:*)",
@@ -76,12 +43,46 @@
       "WebSearch"
     ]
   },
+  "hooks": {
+{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" ) }}
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" }}"
+          }
+        ]
+      }
+    ],
+{{- end }}
+{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" ) }}
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" }}"
+          }
+        ]
+      }
+    ]
+  },
+{{- end }}
+  "statusLine": {
+    "type": "command",
+    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh"
+  },
+  "enabledPlugins": {
+    "superpowers@superpowers-dev": true,
+    "superpowers@superpowers-marketplace": true
+  },
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754077213482
+  },
   "preferences": {
     "autoSave": true,
     "theme": "dark"
-  },
-  "statusLine": {
-    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh",
-    "type": "command"
   }
 }
