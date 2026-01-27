@@ -33,6 +33,16 @@ if ! command -v mise; then
   exit 1
 fi
 
+if [[ -f "/run/.dockerenv" ]] || [[ -f "/run/.containerenv" ]]; then # is container
+  if [[ -n "${DISTROBOX_ENTER_PATH}" ]]; then
+    print_info "  ensure permissions on npm dirs"
+    _ID="$(id -u)"
+    _GID="$(id -g)"
+    sudo chown -R "${_ID}:${_GID}" "${HOME}/.npm-global" &&
+      sudo chown -R "${_ID}:${_GID}" "${HOME}/.npm"
+  fi
+fi
+
 # .config/mise/config.toml hash: {{ include "../mise/config.toml" | sha256sum }}
 # .config/mise/mise.lock hash: {{ include "../mise/mise.lock" | sha256sum }}
 mise install
