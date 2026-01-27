@@ -163,13 +163,13 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.394
+  - name: github/copilot-cli@v0.0.395
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.1.36
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.35.0
+  - name: charmbracelet/crush@v0.36.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -179,7 +179,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.91.0
+  - name: openai/codex@rust-v0.92.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -193,7 +193,7 @@ packages:
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.10.2
+  - name: walles/moor@v2.10.3
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.6.0
@@ -213,7 +213,7 @@ packages:
   - name: gohugoio/hugo@v0.154.5
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.1.7
+  - name: jdx/mise@v2026.1.8
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.15.0
@@ -222,7 +222,7 @@ packages:
   - name: steveyegge/beads@v0.49.1
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.19.0
+  - name: max-sixty/worktrunk@v0.20.1
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -230,4 +230,4 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.19
+  - name: anthropics/claude-code@v2.1.20
