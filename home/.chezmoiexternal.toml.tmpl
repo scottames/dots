@@ -68,23 +68,10 @@
 
 {{ end -}} # linux
 
-{{- $qArch := "x86_64" }}
 {{- $kiroArch := "x86_64" -}}
 {{- if eq .chezmoi.arch "aarch64" }}
-{{-   $qArch = "aarch64" }}
 {{-   $kiroArch = "aarch64" -}}
 {{- end }}
-
-{{- $qBins := list "q" "qchat" "qterm" -}}
-{{- range $qBin := $qBins }}
-[".local/bin/{{ $qBin }}"]
-type = "archive-file"
-url = "https://desktop-release.q.us-east-1.amazonaws.com/latest/q-{{ $qArch }}-{{ $.chezmoi.os }}.zip"
-extract = true
-path = "bin/{{ $qBin }}"
-stripComponents = 1
-refreshPeriod = "24h"
-{{ end -}}
 
 {{- $kiroBins := list "cli" "cli-chat" -}}
 {{- range $kiroBin := $kiroBins }}
