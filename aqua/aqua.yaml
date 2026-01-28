@@ -163,10 +163,10 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.395
+  - name: github/copilot-cli@v0.0.396
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.36
+  - name: sst/opencode@v1.1.39
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.36.0
@@ -222,7 +222,7 @@ packages:
   - name: steveyegge/beads@v0.49.1
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.20.1
+  - name: max-sixty/worktrunk@v0.20.2
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -230,4 +230,4 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.20
+  - name: anthropics/claude-code@v2.1.22
