@@ -43,32 +43,20 @@
       "WebSearch"
     ]
   },
+{{- $thtsStart := joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" -}}
+{{- $thtsPrompt := joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" -}}
   "hooks": {
-{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" ) }}
     "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" }}"
-          }
-        ]
-      }
-    ],
+{{- if stat $thtsStart }}
+      {"hooks": [{"type": "command", "command": "{{ $thtsStart }}"}]}
 {{- end }}
-{{- if stat ( joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" ) }}
+    ],
     "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "{{ joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" }}"
-          }
-        ]
-      }
+{{- if stat $thtsPrompt }}
+      {"hooks": [{"type": "command", "command": "{{ $thtsPrompt }}"}]}
+{{- end }}
     ]
   },
-{{- end }}
   "statusLine": {
     "type": "command",
     "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh"
