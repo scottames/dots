@@ -16,7 +16,7 @@ registries:
 packages:
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.16 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.17 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -104,7 +104,7 @@ packages:
   #   https://github.com/sharkdp/bat
   - name: sharkdp/bat@v0.26.1
   #   https://github.com/kubernetes/minikube
-  - name: kubernetes/minikube@v1.37.0
+  - name: kubernetes/minikube@v1.38.0
   # easy and repeatable kubernetes development
   #   https://github.com/GoogleContainerTools/skaffold
   - name: GoogleContainerTools/skaffold@v2.17.1
@@ -163,10 +163,10 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.396
+  - name: github/copilot-cli@v0.0.398
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.39
+  - name: sst/opencode@v1.1.42
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.36.0
@@ -210,24 +210,24 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.154.5
+  - name: gohugoio/hugo@v0.155.0
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.1.8
+  - name: jdx/mise@v2026.1.9
   # A specification for CLIs
   #  https://github.com/jdx/usage
-  - name: jdx/usage@v2.15.0
+  - name: jdx/usage@v2.16.0
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
   - name: steveyegge/beads@v0.49.1
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.20.2
+  - name: max-sixty/worktrunk@v0.20.3
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v0.1.52
+  - name: tassiovirginio/try-rs@v0.1.53
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.22
+  - name: anthropics/claude-code@v2.1.23
