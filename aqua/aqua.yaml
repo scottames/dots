@@ -163,10 +163,10 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.398
+  - name: github/copilot-cli@v0.0.399
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.42
+  - name: sst/opencode@v1.1.44
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.36.0
@@ -210,7 +210,7 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.155.0
+  - name: gohugoio/hugo@v0.155.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
   - name: jdx/mise@v2026.1.9
@@ -222,12 +222,12 @@ packages:
   - name: steveyegge/beads@v0.49.1
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.20.3
+  - name: max-sixty/worktrunk@v0.21.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v0.1.53
+  - name: tassiovirginio/try-rs@v0.1.54
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.23
+  - name: anthropics/claude-code@v2.1.25
