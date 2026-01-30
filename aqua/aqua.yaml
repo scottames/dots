@@ -166,7 +166,7 @@ packages:
   - name: github/copilot-cli@v0.0.399
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.44
+  - name: sst/opencode@v1.1.45
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.36.0
@@ -226,7 +226,7 @@ packages:
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v0.1.54
+  - name: tassiovirginio/try-rs@v0.1.55
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
