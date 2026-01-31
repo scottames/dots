@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.38.0](https://github.com/scottames/dots/compare/v0.37.0...v0.38.0) (2026-01-31)
+
+
+### Features
+
+* helper scripts for scanning tools & deps ([1e33ad0](https://github.com/scottames/dots/commit/1e33ad0fb590ad3fee3261136c8effed159a837d))
+* **mise:** add openpackage ([f5bdd62](https://github.com/scottames/dots/commit/f5bdd62f6f880e8fcbea28df1460e14fb49369ae))
+
+
+### Bug Fixes
+
+* **chezmoiexternal:** rm amazon q ([73aff91](https://github.com/scottames/dots/commit/73aff913766d11e817375a465779da3f1cfad45c))
+* **init/mise:** chown npm in distrobox for safety ([862b9a4](https://github.com/scottames/dots/commit/862b9a49fa83dcd80a78c1eb3532146369817a18))
+* **init:** bug in local run + simpler check ([0bd6546](https://github.com/scottames/dots/commit/0bd6546be758bffcc0d30f2c3cf710d434fd4995))
+
 ## [0.37.0](https://github.com/scottames/dots/compare/v0.36.0...v0.37.0) (2026-01-22)
 
 
