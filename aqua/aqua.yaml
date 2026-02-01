@@ -113,7 +113,7 @@ packages:
   - name: terraform-linters/tflint@v0.60.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
-  - name: mikefarah/yq@v4.52.1
+  - name: mikefarah/yq@v4.52.2
   # run github actions locally
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.84
@@ -166,7 +166,7 @@ packages:
   - name: github/copilot-cli@v0.0.400
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.47
+  - name: sst/opencode@v1.1.48
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.37.0
@@ -213,13 +213,13 @@ packages:
   - name: gohugoio/hugo@v0.155.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.1.12
+  - name: jdx/mise@v2026.2.0
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.16.1
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
-  - name: steveyegge/beads@v0.49.2
+  - name: steveyegge/beads@v0.49.3
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
   - name: max-sixty/worktrunk@v0.21.0
@@ -230,4 +230,4 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.27
+  - name: anthropics/claude-code@v2.1.29
