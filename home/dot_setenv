@@ -46,6 +46,8 @@ $HAS_NVIM \
 setenv FISH_CONFIG                 "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS            "--bind ctrl-j:down,ctrl-k:up"
 setenv GITHUB_USERNAME             "$GITHUB_USER"
+[ -f "$HOME/.gh.token" ] \
+  && setenv GITHUB_TOKEN           "$(cat ~/.gh.token)"
 setenv GOPATH                      "$HOME/go"
 setenv GOPRIVATE                   "github.com/$GITHUB_USER/*"
 setenv HOME_BIN                    "$HOME/bin"
