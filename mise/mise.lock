@@ -42,9 +42,17 @@ backend = "npm:@fission-ai/openspec"
 version = "0.26.0"
 backend = "npm:@google/gemini-cli"
 
+[[tools."npm:ccusage"]]
+version = "18.0.5"
+backend = "npm:ccusage"
+
 [[tools."npm:opkg"]]
 version = "0.7.10"
 backend = "npm:opkg"
+
+[[tools."pipx:aws-finops-dashboard"]]
+version = "2.3.0"
+backend = "pipx:aws-finops-dashboard"
 
 [[tools.rust]]
 version = "1.93.0"
