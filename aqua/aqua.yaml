@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.464.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.465.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -159,7 +159,7 @@ packages:
   - name: atuinsh/atuin@v18.11.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.18.0
+  - name: spacelift-io/spacectl@v1.18.1
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
@@ -169,7 +169,7 @@ packages:
   - name: sst/opencode@v1.1.48
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.37.0
+  - name: charmbracelet/crush@v0.38.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -185,7 +185,7 @@ packages:
   - name: suzuki-shunsuke/ghtkn@v0.2.4
   # An incremental parsing system for programming tools
   #  https://github.com/tree-sitter/tree-sitter
-  - name: tree-sitter/tree-sitter@v0.26.3
+  - name: tree-sitter/tree-sitter@v0.26.5
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
@@ -210,10 +210,10 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.155.1
+  - name: gohugoio/hugo@v0.155.2
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.0
+  - name: jdx/mise@v2026.2.1
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.16.1
@@ -222,7 +222,7 @@ packages:
   - name: steveyegge/beads@v0.49.3
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.21.0
+  - name: max-sixty/worktrunk@v0.22.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
