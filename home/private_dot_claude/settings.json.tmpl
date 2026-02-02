@@ -1,11 +1,47 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "fileSuggestion": {
-    "type": "command",
-    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/file-suggestion.sh"
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "superpowers@superpowers-dev": true,
+    "superpowers@superpowers-marketplace": true
   },
   "env": {
     "DISABLE_AUTOUPDATER": "1"
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754077213482
+  },
+  "fileSuggestion": {
+    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/file-suggestion.sh",
+    "type": "command"
+  },
+{{- $thtsStart := joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" -}}
+{{- $thtsPrompt := joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" }}
+  "hooks": {
+    "SessionStart": [
+{{- if stat $thtsStart }}
+      {
+        "hooks": [
+          {
+            "command": "/var/home/scta/.claude/hooks/thts-session-start.sh",
+            "type": "command"
+          }
+        ]
+      }
+{{- end }}
+    ],
+    "UserPromptSubmit": [
+{{- if stat $thtsPrompt }}
+      {
+        "hooks": [
+          {
+            "command": "/var/home/scta/.claude/hooks/thts-prompt-check.sh",
+            "type": "command"
+          }
+        ]
+      }
+{{- end }}
+    ]
   },
   "permissions": {
     "allow": [
@@ -43,34 +79,12 @@
       "WebSearch"
     ]
   },
-{{- $thtsStart := joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" -}}
-{{- $thtsPrompt := joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" -}}
-  "hooks": {
-    "SessionStart": [
-{{- if stat $thtsStart }}
-      {"hooks": [{"type": "command", "command": "{{ $thtsStart }}"}]}
-{{- end }}
-    ],
-    "UserPromptSubmit": [
-{{- if stat $thtsPrompt }}
-      {"hooks": [{"type": "command", "command": "{{ $thtsPrompt }}"}]}
-{{- end }}
-    ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh"
-  },
-  "enabledPlugins": {
-    "superpowers@superpowers-dev": true,
-    "superpowers@superpowers-marketplace": true
-  },
-  "alwaysThinkingEnabled": true,
-  "feedbackSurveyState": {
-    "lastShownTime": 1754077213482
-  },
   "preferences": {
     "autoSave": true,
     "theme": "dark"
+  },
+  "statusLine": {
+    "command": "{{ .chezmoi.homeDir }}/.claude/scripts/statusline.sh",
+    "type": "command"
   }
 }
