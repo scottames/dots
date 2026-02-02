@@ -17,8 +17,18 @@
 {{- end }}
   {{ else }}{{ end -}}
 ],
-  "model": "anthropic/claude-opus-4-5",
-  "small_model": "anthropic/claude-haiku-4-5",
+  "mcp": {
+    "tavily": {
+      "type": "remote",
+      "url": "https://mcp.tavily.com/mcp",
+      "enabled": true,
+      "oauth": false,
+      "headers": {
+        "Authorization": "Bearer {env:TAVILY_API_KEY}"
+      }
+    }
+  },
+  "small_model": "github-copilot/claude-haiku-4-5",
   "permission": {
     "edit": "ask",
     "bash": {
