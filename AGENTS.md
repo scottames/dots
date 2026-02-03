@@ -18,6 +18,57 @@ that chezmoi uses to manage dotfiles in the user's home directory.
 - `.dagger/` - Dagger module for container-based testing
 - `.trunk/` - Trunk.io linter configurations
 
+## Runtime Environment
+
+Primary development happens inside a [distrobox](https://distrobox.it/)
+container on Fedora Silverblue. This affects tool availability:
+
+- **1Password (`op`)**: Only works via `distrobox-host-exec op` (get/load
+  commands only), requires re-auth each time
+- **Yubikey**: Accessible but touch-gated operations add friction
+- **Host tools**: Some tools must be called via `distrobox-host-exec`
+
+## Fish Shell Environment
+
+Primary shell is fish. Environment setup uses a shell-agnostic approach.
+
+### Loading Order
+
+Fish `conf.d/` files load alphabetically. The `__` prefix ensures ordering:
+
+```plaintext
+__is_has.fish          # 1. Sets $IS_*, $HAS_* detection vars
+__setenv.fish          # 2. Sources ~/.setenv (main env file)
+__custom_functions.fish # 3. Adds custom_functions.d/ to fish_function_path
+__path.fish            # 4. Builds $PATH using vars from setenv
+*.fish                 # 5. Remaining configs (alphabetical)
+```
+
+### Key Files
+
+| Source File                                        | Target                               | Purpose                        |
+| -------------------------------------------------- | ------------------------------------ | ------------------------------ |
+| `home/dot_setenv`                                  | `~/.setenv`                          | Main env vars (shell-agnostic) |
+| `home/private_dot_config/fish/conf.d/`             | `~/.config/fish/conf.d/`             | Fish config snippets           |
+| `home/private_dot_config/fish/custom_functions.d/` | `~/.config/fish/custom_functions.d/` | Fish functions                 |
+
+### Shell-Agnostic Environment (`dot_setenv`)
+
+`dot_setenv` works across bash/zsh/fish using fish's built-in `setenv` function
+(csh compatibility). It sets environment variables like `EDITOR`, `GOPATH`,
+`AQUA_*`, etc.
+
+**Detection variables** (set by `__is_has.fish` before `dot_setenv` loads):
+
+- `$IS_LINUX`, `$IS_MAC` - OS detection
+- `$IS_DARK`, `$IS_LIGHT` - Theme mode
+- `$HAS_*` - Binary availability (e.g., `$HAS_NVIM`, `$HAS_BAT`, `$HAS_GHTKN`)
+
+### Custom Functions
+
+`custom_functions.d/` contains fish functions, including wrappers that extend
+CLI tools (e.g., `gh.fish` wraps `gh` with token handling).
+
 ## Build/Lint/Test Commands
 
 ### Linting (Primary)
