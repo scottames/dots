@@ -45,7 +45,7 @@
       groupName: '⬆️ mise-packages',
       commitMessageTopic: '⬆️ mise-packages',
       automerge: true,
-      schedule: ["* 5-7 * * *"],
+      schedule: ["* 3-5 * * *"],
     },
     {
       matchFileNames: ['aqua/**'],
