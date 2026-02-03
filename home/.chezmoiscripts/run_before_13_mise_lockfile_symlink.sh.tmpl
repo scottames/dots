@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Ensure mise lockfile symlink before chezmoi applies file changes.
+# See _ensure_mise_lockfile_symlink.sh for details.
+
+set -eufo pipefail
+
+"{{ .chezmoi.sourceDir }}/.chezmoiscripts/.helpers/ensure_mise_lockfile_symlink.sh" "{{ .home.dots }}"
+
+# vi: ft=bash

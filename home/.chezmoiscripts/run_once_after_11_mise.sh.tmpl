@@ -47,6 +47,9 @@ fi
 # .config/mise/mise.lock hash: {{ include "../mise/mise.lock" | sha256sum }}
 mise install
 
+# Restore lockfile symlink (mise atomic writes break it)
+"{{ .chezmoi.sourceDir }}/.chezmoiscripts/.helpers/ensure_mise_lockfile_symlink.sh" "{{ .home.dots }}"
+
 print_success "mise done"
 
 # vi: ft=bash
