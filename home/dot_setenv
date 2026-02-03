@@ -12,7 +12,6 @@ setenv DOTFILES                    "$DOTS"
 setenv VAR_HOME                    "/var$HOME"
 
 setenv AQUA_CONFIG_DIR             "$HOME/.config/aquaproj-aqua"
-setenv AQUA_GHTKN_ENABLED          "true"
 setenv AQUA_GLOBAL_CONFIG          "$AQUA_CONFIG_DIR/aqua.yaml"
 setenv AQUA_LOG_COLOR              "always"
 [ -f "$AQUA_CONFIG_DIR/aqua-policy.yaml" ] \
