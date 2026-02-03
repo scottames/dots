@@ -1,16 +1,19 @@
 #!/bin/env fish
 
 function gh \
-    --description "GitHub CLI. Runs behind op, if installed for GitHub API auth." \
+    --description "GitHub CLI with automatic token resolution" \
     --wraps gh
 
-    set -l _GH_AUTH_STATUS (GITHUB_TOKEN="" command gh auth status 2&>/dev/null)
-    if string match -q -r "✓ Logged in" $_GH_AUTH_STATUS
+    # If gh is already authenticated via `gh auth login`, use that
+    # (avoids GITHUB_TOKEN conflicts, allows broader scopes)
+    set -l _auth_status (GITHUB_TOKEN="" command gh auth status 2>&1)
+    if string match -q -r "✓ Logged in" "$_auth_status"
         GITHUB_TOKEN="" command gh $argv
-    else if [ $HAS_GHTKN ]
-        github_token_load
-        command gh $argv
-    else
-        command gh $argv
+        return $status
     end
+
+    # Otherwise, resolve token fresh per-command (ghtkn → PAT fallback)
+    # Using -lx for local export: visible to child process, no stale global
+    set -lx GITHUB_TOKEN (github_token_get)
+    command gh $argv
 end
