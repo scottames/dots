@@ -1,0 +1,4 @@
+{{- $ntbkPath := joinPath .home.src_github_dir "ntbk/main" -}}
+{{- if stat $ntbkPath -}}
+{{ $ntbkPath }}
+{{- end -}}
