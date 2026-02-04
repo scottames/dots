@@ -34,11 +34,14 @@ return {
   { -- https://github.com/folke/sidekick.nvim
     "folke/sidekick.nvim",
     opts = {
-      mux = {
-        backend = "zellij", -- or "tmux"
-        enabled = false,
+      nes = {
+        enabled = false, -- disabled at start <leader>ant to toggle on
       },
       cli = {
+        mux = {
+          backend = "zellij", -- or "tmux"
+          enabled = false,
+        },
         tools = {
           amp = { cmd = { "amp", "--ide" } },
         },
