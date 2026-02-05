@@ -18,6 +18,7 @@
 {{- $isUblue          := false -}}
 {{- $loginSession     := 0     -}}
 {{- $loginSessionType := ""    -}}
+{{- $ntbkPath         := ""    -}}
 {{- $osName           := ""    -}}
 {{- $osVariant        := ""    -}}
 {{- $osVersion        := ""    -}}
@@ -127,6 +128,11 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-   $wallpaperDefault := "/usr/share/backgrounds/gnome/adwaita-d.jpg" -}}
 {{-   $wallpaper = promptStringOnce . "desktop.wallpaper" "path to desktop wallpaper" $wallpaperDefault -}}
 {{- end -}}
+{{- if lstat (joinPath $srcGitHubDir "ntbk/main") -}}
+{{-   $ntbkPath = (joinPath $srcGitHubDir "ntbk/main") -}}
+{{- else -}}
+{{-   $ntbkPath = (joinPath .chezmoi.homeDir ".ntbk") -}}
+{{- end -}}
 
 {{- if not (lstat (joinPath .chezmoi.homeDir ".wallpaperDir")) -}}
 {{-   $wallpaperDirDefault := (joinPath $srcGitHubDir "walls/main/32x9") -}}
@@ -150,6 +156,7 @@ progress = true
   [data.home]
     chezmoi_home = "{{ $chezmoiSourceDir }}"
     dots = "{{ $dots }}"
+    ntbk_dir = "{{ $ntbkPath }}"
     src_dir = "{{ $srcDir }}"
     src_github_dir = "{{ $srcGitHubDir }}"
 
