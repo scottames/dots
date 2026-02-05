@@ -28,11 +28,6 @@ alias exit=" exit"
 alias history=" history"
 
 
-if [[ $HAS_OP -eq true ]]; then
-  [[ $(command -v aqua) ]] && alias aqua='op run -- aqua'
-  [[ $HAS_GH -eq true ]]      && alias gh="op plugin run -- gh"
-fi
-
 if [[ $(command -v aws-vault) ]]; then
   alias avl="aws-vault login"
   alias ave="aws-vault exec"
@@ -128,7 +123,7 @@ alias gcm='git commit'
 alias gda='git diff HEAD'
 alias gdb='git diff master..`git rev-parse --abbrev-ref HEAD`'
 alias gf='git reflog'
-alias ghpr="GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}'"
+alias ghpr='fzpr'
 alias ginit='git init'
 alias gitref='git rev-parse --short HEAD && git rev-parse HEAD'
 alias gl='git log'

@@ -1,0 +1,268 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2310 # Functions in conditions are intentional
+#
+# github-token-get - Shell-agnostic GitHub token resolution
+#
+# Usage:
+#   github-token-get         # Output token (or exit 1 if none)
+#   github-token-get --json  # Output status info + token as JSON
+#
+# Resolution chain:
+#   1. $GITHUB_TOKEN already set → use it
+#   2. CI environment → no token
+#   3. ghtkn has valid cached token → use it
+#   4. PAT fallback (keyring → file)
+#
+# Environment variables:
+#   GHTKN_APP    - Override ghtkn app name (default: $GITHUB_USER/ghtkn)
+#   GHTKN_CONFIG - Override ghtkn config path (default: ~/.config/ghtkn/ghtkn.yaml)
+#
+
+set -euo pipefail
+
+# --- Config ---
+readonly GHTKN_KEYRING_SERVICE="github.com/suzuki-shunsuke/ghtkn"
+readonly GHTKN_CONFIG_DEFAULT="${HOME}/.config/ghtkn/ghtkn.yaml"
+readonly GITHUB_TOKEN_PAT_FILE="${HOME}/.gh.token"
+readonly GHTKN_EXPIRY_BUFFER=300
+
+# --- Helpers ---
+
+ghtkn_config_file() {
+  echo "${GHTKN_CONFIG:-${GHTKN_CONFIG_DEFAULT}}"
+}
+
+ghtkn_app_name() {
+  echo "${GHTKN_APP:-${GITHUB_USER-}/ghtkn}"
+}
+
+ghtkn_client_id() {
+  local app cfg client_id
+
+  app=$(ghtkn_app_name)
+  cfg=$(ghtkn_config_file)
+
+  command -v yq &>/dev/null || return 1
+  [[ -f ${cfg} ]] || return 1
+
+  # Look up by app name first, fall back to first app
+  client_id=$(yq ".apps[] | select(.name == \"${app}\") | .client_id" "${cfg}" 2>/dev/null)
+  if [[ -z ${client_id} || ${client_id} == "null" ]]; then
+    client_id=$(yq '.apps[0].client_id' "${cfg}" 2>/dev/null)
+  fi
+
+  [[ -z ${client_id} || ${client_id} == "null" ]] && return 1
+  echo "${client_id}"
+}
+
+# Returns: valid|expires_iso|expires_friendly
+ghtkn_token_info() {
+  local client_id secret exp exp_epoch now_epoch threshold exp_friendly
+
+  command -v secret-tool &>/dev/null || {
+    echo "false||"
+    return
+  }
+  command -v jq &>/dev/null || {
+    echo "false||"
+    return
+  }
+
+  client_id=$(ghtkn_client_id) || {
+    echo "false||"
+    return
+  }
+
+  secret=$(secret-tool lookup \
+    service "${GHTKN_KEYRING_SERVICE}" \
+    username "${client_id}" 2>/dev/null) || {
+    echo "false||"
+    return
+  }
+
+  [[ -z ${secret} ]] && {
+    echo "false||"
+    return
+  }
+
+  exp=$(echo "${secret}" | jq -r '.expiration_date' 2>/dev/null)
+  [[ -z ${exp} || ${exp} == "null" ]] && {
+    echo "false||"
+    return
+  }
+
+  exp_epoch=$(date -d "${exp}" +%s 2>/dev/null) || {
+    echo "false||"
+    return
+  }
+  now_epoch=$(date +%s)
+  threshold=$((now_epoch + GHTKN_EXPIRY_BUFFER))
+  exp_friendly=$(date -d "${exp}" "+%Y-%m-%d %l:%M %p %Z" 2>/dev/null | xargs)
+
+  if [[ ${exp_epoch} -gt ${threshold} ]]; then
+    echo "true|${exp}|${exp_friendly}"
+  else
+    echo "false|${exp}|${exp_friendly}"
+  fi
+}
+
+ghtkn_has_valid_token() {
+  local info
+  info=$(ghtkn_token_info)
+  [[ ${info} == true* ]]
+}
+
+github_token_from_ghtkn() {
+  local client_id secret
+
+  client_id=$(ghtkn_client_id) || return 1
+
+  secret=$(secret-tool lookup \
+    service "${GHTKN_KEYRING_SERVICE}" \
+    username "${client_id}" 2>/dev/null) || return 1
+
+  echo "${secret}" | jq -r '.access_token' 2>/dev/null
+}
+
+pat_keyring_available() {
+  command -v secret-tool &>/dev/null || return 1
+  local secret
+  secret=$(secret-tool lookup \
+    service "dots/github-pat" \
+    username "${GITHUB_USER-}" 2>/dev/null)
+  [[ -n ${secret} ]]
+}
+
+github_token_from_pat() {
+  local secret
+
+  # Try keyring first
+  if command -v secret-tool &>/dev/null; then
+    secret=$(secret-tool lookup \
+      service "dots/github-pat" \
+      username "${GITHUB_USER-}" 2>/dev/null)
+    if [[ -n ${secret} ]]; then
+      echo "${secret}"
+      return 0
+    fi
+  fi
+
+  # Fall back to file
+  if [[ -f ${GITHUB_TOKEN_PAT_FILE} ]]; then
+    cat "${GITHUB_TOKEN_PAT_FILE}"
+    return 0
+  fi
+
+  return 1
+}
+
+# --- JSON Output ---
+
+json_output() {
+  local cfg app config_exists ghtkn_info valid expires expires_friendly
+  local pat_keyring pat_file source ci_mode token token_json
+
+  cfg=$(ghtkn_config_file)
+  app=$(ghtkn_app_name)
+  config_exists=$([[ -f ${cfg} ]] && echo "true" || echo "false")
+
+  # ghtkn info
+  ghtkn_info=$(ghtkn_token_info)
+  valid=$(echo "${ghtkn_info}" | cut -d'|' -f1)
+  expires=$(echo "${ghtkn_info}" | cut -d'|' -f2)
+  expires_friendly=$(echo "${ghtkn_info}" | cut -d'|' -f3)
+  [[ ${valid} != "true" ]] && valid="false"
+  [[ -z ${expires} ]] && expires="null" || expires="\"${expires}\""
+  [[ -z ${expires_friendly} ]] && expires_friendly="null" || expires_friendly="\"${expires_friendly}\""
+
+  # PAT info
+  pat_keyring=$(pat_keyring_available && echo "true" || echo "false")
+  pat_file=$([[ -f ${GITHUB_TOKEN_PAT_FILE} ]] && echo "true" || echo "false")
+
+  # CI mode
+  ci_mode=$([[ ${CI-} == "true" ]] && echo "true" || echo "false")
+
+  # Resolve token and determine source
+  token=""
+  if [[ -n ${GITHUB_TOKEN-} ]]; then
+    source="env"
+    token="${GITHUB_TOKEN}"
+  elif [[ ${ci_mode} == "true" ]]; then
+    source="none"
+  elif [[ ${valid} == "true" ]]; then
+    source="ghtkn"
+    token=$(github_token_from_ghtkn)
+  elif [[ ${pat_keyring} == "true" ]]; then
+    source="pat_keyring"
+    token=$(secret-tool lookup service "dots/github-pat" username "${GITHUB_USER-}" 2>/dev/null)
+  elif [[ ${pat_file} == "true" ]]; then
+    source="pat_file"
+    token=$(cat "${GITHUB_TOKEN_PAT_FILE}")
+  else
+    source="none"
+  fi
+
+  # Format token for JSON (null or quoted string)
+  if [[ -n ${token} ]]; then
+    token_json="\"${token}\""
+  else
+    token_json="null"
+  fi
+
+  cat <<EOF
+{
+  "token": ${token_json},
+  "source": "${source}",
+  "ci_mode": ${ci_mode},
+  "ghtkn": {
+    "app": "${app}",
+    "config": "${cfg}",
+    "config_exists": ${config_exists},
+    "valid": ${valid},
+    "expires": ${expires},
+    "expires_friendly": ${expires_friendly}
+  },
+  "pat": {
+    "keyring_available": ${pat_keyring},
+    "file_exists": ${pat_file},
+    "file_path": "${GITHUB_TOKEN_PAT_FILE}"
+  }
+}
+EOF
+}
+
+# --- Main ---
+
+main() {
+  # Handle --json flag
+  if [[ ${1-} == "--json" ]]; then
+    json_output
+    return 0
+  fi
+
+  # 1. Already set - use it
+  if [[ -n ${GITHUB_TOKEN-} ]]; then
+    echo "${GITHUB_TOKEN}"
+    return 0
+  fi
+
+  # 2. CI environment - no token
+  if [[ ${CI-} == "true" ]]; then
+    return 1
+  fi
+
+  # 3. ghtkn has valid cached token - use it
+  if ghtkn_has_valid_token; then
+    github_token_from_ghtkn
+    return 0
+  fi
+
+  # 4. Fallback to PAT
+  if github_token_from_pat; then
+    return 0
+  fi
+
+  return 1
+}
+
+main "$@"

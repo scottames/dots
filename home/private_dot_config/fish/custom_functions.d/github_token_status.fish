@@ -3,11 +3,29 @@
 function github_token_status \
     --description "Show current GitHub token resolution status"
 
-    # Force autoload of github_token_get.fish to ensure helpers are available
-    true; and functions -q github_token_get; and builtin source (functions --details github_token_get)
+    # Get all status info in one call
+    set -l json (github-token-get --json 2>/dev/null)
+    if test -z "$json"
+        printf_err "  Failed to get token status\n"
+        return 1
+    end
 
-    echo # give it some space
+    # Parse JSON fields
+    set -l token (echo $json | jq -r '.token // empty')
+    set -l source (echo $json | jq -r '.source')
+    set -l ci_mode (echo $json | jq -r '.ci_mode')
+    set -l ghtkn_app (echo $json | jq -r '.ghtkn.app')
+    set -l ghtkn_config (echo $json | jq -r '.ghtkn.config')
+    set -l ghtkn_config_exists (echo $json | jq -r '.ghtkn.config_exists')
+    set -l ghtkn_valid (echo $json | jq -r '.ghtkn.valid')
+    set -l ghtkn_expires_friendly (echo $json | jq -r '.ghtkn.expires_friendly // empty')
+    set -l pat_keyring (echo $json | jq -r '.pat.keyring_available')
+    set -l pat_file_exists (echo $json | jq -r '.pat.file_exists')
+    set -l pat_file_path (echo $json | jq -r '.pat.file_path')
 
+    echo # spacing
+
+    # GITHUB_TOKEN env var
     printf_white "  GITHUB_TOKEN: "
     if set -q GITHUB_TOKEN[1]; and test -n "$GITHUB_TOKEN"
         printf_yellow "set ($(string sub -l 10 $GITHUB_TOKEN)...)\n"
@@ -16,17 +34,17 @@ function github_token_status \
     end
 
     # CI mode
-    printf_white "  CI mode: "
-    if set -q CI[1]; and test "$CI" = true
-        printf_yellow "     yes (token disabled)\n"
+    printf_white "  CI mode:      "
+    if test "$ci_mode" = true
+        printf_yellow "yes (token disabled)\n"
     else
-        printf_blue "     no\n"
+        printf_blue "no\n"
     end
 
-    # ghtkn env overrides
+    # ghtkn env overrides (only show if set)
     if set -q GHTKN_APP[1]; and test -n "$GHTKN_APP"
-        printf_white "  GHTKN_APP: "
-        printf_blue "   $GHTKN_APP\n"
+        printf_white "  GHTKN_APP:    "
+        printf_blue "$GHTKN_APP\n"
     end
     if set -q GHTKN_CONFIG[1]; and test -n "$GHTKN_CONFIG"
         printf_white "  GHTKN_CONFIG: "
@@ -34,51 +52,47 @@ function github_token_status \
     end
 
     # ghtkn status
-    set -l cfg (_ghtkn_config_file)
-    if not command -q secret-tool
-        printf_warn "  secret-tool not installed (keyring unavailable)\n"
-    else if not command -q jq
-        printf_warn "  jq not installed (can't parse token)\n"
-    else if not command -q yq
-        printf_warn "  yq not installed (can't read config)\n"
-    else if not test -f "$cfg"
-        printf_warn "  config not found ($cfg)\n"
-    else if _ghtkn_has_valid_token
-        set -l app (_ghtkn_app_name)
-        set -l client_id (_ghtkn_client_id)
-        set -l secret (secret-tool lookup \
-            service "$_GHTKN_KEYRING_SERVICE" \
-            username "$client_id" 2>/dev/null)
-        set -l exp (echo $secret | jq -r '.expiration_date' 2>/dev/null)
-        set -l exp_friendly (date -d "$exp" "+%Y-%m-%d %l:%M %p %Z" 2>/dev/null | string trim)
-        printf_white "  ghtkn: \n"
-        printf_green "    valid:   $app\n"
-        printf_green "    expires: $exp_friendly\n"
+    if test "$ghtkn_config_exists" = false
+        printf_warn "  ghtkn: config not found ($ghtkn_config)\n"
+    else if test "$ghtkn_valid" = true
+        printf_white "  ghtkn:\n"
+        printf_green "    valid:   $ghtkn_app\n"
+        printf_green "    expires: $ghtkn_expires_friendly\n"
     else
-        set -l app (_ghtkn_app_name)
-        printf "  ghtkn: "
-        printf_yellow "  expired or missing [$app] - run 'ghtkn get' to refresh\n"
+        printf_white "  ghtkn: "
+        printf_yellow "expired or missing [$ghtkn_app] - run 'ghtkn get' to refresh\n"
     end
 
-    printf_white "  PAT fallback: \n"
+    # PAT fallback
+    printf_white "  PAT fallback:\n"
     printf_white "    keyring: "
-    if command -q secret-tool
-        set -l pat_secret (secrettool_get "dots/github-pat" "$GITHUB_USER" 2>/dev/null)
-        if test -n "$pat_secret"
-            printf_green "available\n"
-        else
-            printf_blue "not found\n"
-        end
+    if test "$pat_keyring" = true
+        printf_green "available\n"
     else
-        printf_yellow "secret-tool not installed\n"
+        printf_blue "not found\n"
     end
     printf_white "    file:    "
-    if test -f "$_GITHUB_TOKEN_PAT_FILE"
+    if test "$pat_file_exists" = true
         printf_green "available "
     else
         printf_blue "not found "
     end
     printf_white "("
-    printf_blue "$_GITHUB_TOKEN_PAT_FILE"
+    printf_blue "$pat_file_path"
     printf_white ")\n"
+
+    # Active source summary
+    printf_white "  Source:    "
+    switch $source
+        case env
+            printf_yellow "env (GITHUB_TOKEN already set)\n"
+        case ghtkn
+            printf_green "ghtkn\n"
+        case pat_keyring
+            printf_blue "PAT keyring\n"
+        case pat_file
+            printf_blue "PAT file\n"
+        case none
+            printf_yellow "none\n"
+    end
 end

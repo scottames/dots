@@ -69,7 +69,7 @@ abbr -a gda "git diff HEAD"
 abbr -a gdb "git diff master..`git rev-parse --abbrev-ref HEAD`"
 abbr -a gf "git reflog"
 abbr -a ghist "git hist"
-abbr -a ghpr "gh pr"
+abbr -a ghpr fzfpr
 abbr -a ghprw "gh pr view --web"
 abbr -a ginit "git init"
 abbr -a gitref "git rev-parse --short HEAD && git rev-parse HEAD"
