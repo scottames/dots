@@ -20,15 +20,15 @@ lint:
     - oxipng@10.1.0
     - bandit@1.9.3
     - black@26.1.0
-    - checkov@3.2.499
+    - checkov@3.2.500
     - isort@7.0.0
-    - ruff@0.14.14
-    - trivy@0.68.2
+    - ruff@0.15.0
+    - trivy@0.69.1
     - gokart@0.5.1
     - osv-scanner@2.3.2
     - svgo@4.0.0
     - terrascan@1.19.9
-    - trufflehog@3.92.5
+    - trufflehog@3.93.0
     - actionlint@1.7.10
     - git-diff-check@SYSTEM
     - gitleaks@8.30.0
@@ -36,7 +36,7 @@ lint:
     - hadolint@2.14.0
     - markdownlint@0.47.0
     - prettier@3.8.1
-    - renovate@43.0.1
+    - renovate@43.3.6
     - shellcheck@0.11.0
     - shfmt@3.6.0
     - stylua@2.3.1
