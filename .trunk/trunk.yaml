@@ -48,27 +48,37 @@ lint:
         - tmpl
   definitions:
     - name: go-template-formatter
-      files: [go-templates]
+      files:
+        - go-templates
       commands:
         - output: rewrite
           formatter: true
           run: prettier --write ${target} # "*.tmpl"
           #command:
-          success_codes: [0]
+          success_codes:
+            - 0
   ignore:
-    - linters: [shellcheck, shfmt]
+    - linters:
+        - shellcheck
+        - shfmt
       paths:
         # Generated files
         - "*.tmpl"
-    - linters: [markdownlint]
+    - linters:
+        - markdownlint
       paths:
         - CHANGELOG.md
         - home/dot_claude/**
-    - linters: [gofumpt, golangci-lint2, osv-scanner]
+        - "**/symlink_*.md"
+    - linters:
+        - gofumpt
+        - golangci-lint2
+        - osv-scanner
       paths:
         - .dagger
         - .dagger/**
-    - linters: [prettier]
+    - linters:
+        - prettier
       paths:
         - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
         - home/dot_claude/settings.json
