@@ -136,7 +136,7 @@ packages:
   - name: int128/ghcp@v1.15.1
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
-  - name: dagger/dagger@v0.19.10
+  - name: dagger/dagger@v0.19.11
   #   https://github.com/helix-editor/helix
   - name: helix-editor/helix@24.03
   # The kubectx for operators
@@ -163,10 +163,10 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.403
+  - name: github/copilot-cli@v0.0.405
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.51
+  - name: sst/opencode@v1.1.53
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.39.3
@@ -179,7 +179,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.97.0
+  - name: openai/codex@rust-v0.98.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -213,16 +213,16 @@ packages:
   - name: gohugoio/hugo@v0.155.2
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.4
+  - name: jdx/mise@v2026.2.5
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.16.1
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
-  - name: steveyegge/beads@v0.49.3
+  - name: steveyegge/beads@v0.49.4
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.22.0
+  - name: max-sixty/worktrunk@v0.23.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -230,5 +230,5 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.31
-  - name: astral-sh/uv@0.9.30
+  - name: anthropics/claude-code@v2.1.34
+  - name: astral-sh/uv@0.10.0
