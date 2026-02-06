@@ -58,6 +58,13 @@
       schedule: ["* 5-7 * * *"],
     },
     {
+      matchDatasources: ['docker'],
+      matchUpdateTypes: ['digest', 'pin'],
+      groupName: '⬆️ container digests',
+      commitMessageTopic: '⬆️ container digests',
+      automerge: true,
+    },
+    {
       matchDepNames: ['obra/superpowers'],
       groupName: '⬆️ agent plugins',
       commitMessageTopic: '⬆️ agent plugins',
