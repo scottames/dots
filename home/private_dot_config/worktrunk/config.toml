@@ -1,0 +1,4 @@
+# https://worktrunk.dev/config/
+
+# assumes bare clone for worktrees
+worktree-path = "{{ repo_path }}/../{{ branch | sanitize }}"
