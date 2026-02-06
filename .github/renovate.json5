@@ -41,7 +41,10 @@
   ],
   packageRules: [
     {
-      matchFileNames: ['mise/**'],
+      matchFileNames: [
+        'mise/**',
+        '**/mise.toml',
+      ],
       groupName: '⬆️ mise-packages',
       commitMessageTopic: '⬆️ mise-packages',
       automerge: true,
