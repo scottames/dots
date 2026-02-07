@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.466.1 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.467.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -51,7 +51,7 @@ packages:
   - name: zellij-org/zellij@v0.43.1
   # official CLI for Amazon EKS
   #   https://github.com/weaveworks/eksctl
-  - name: weaveworks/eksctl@v0.221.0
+  - name: weaveworks/eksctl@v0.222.0
   # minimal, blazing-fast, and infinitely customizable prompt for any shell!
   #   https://github.com/starship/starship
   - name: starship/starship@v1.24.2
@@ -93,7 +93,7 @@ packages:
   - name: junegunn/fzf@v0.67.0
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
-  - name: jesseduffield/lazygit@v0.58.1
+  - name: jesseduffield/lazygit@v0.59.0
   # kubernetes tui
   #   https://github.com/derailed/k9s
   - name: derailed/k9s@v0.50.18
@@ -110,7 +110,7 @@ packages:
   - name: GoogleContainerTools/skaffold@v2.17.1
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
-  - name: terraform-linters/tflint@v0.60.0
+  - name: terraform-linters/tflint@v0.61.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
   - name: mikefarah/yq@v4.52.2
@@ -213,7 +213,7 @@ packages:
   - name: gohugoio/hugo@v0.155.2
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.5
+  - name: jdx/mise@v2026.2.6
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.16.1
@@ -222,7 +222,7 @@ packages:
   - name: steveyegge/beads@v0.49.4
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.23.0
+  - name: max-sixty/worktrunk@v0.23.1
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
