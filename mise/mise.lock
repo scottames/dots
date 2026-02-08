@@ -47,7 +47,7 @@ version = "18.0.5"
 backend = "npm:ccusage"
 
 [[tools."npm:opkg"]]
-version = "0.8.2"
+version = "0.8.3"
 backend = "npm:opkg"
 
 [[tools."pipx:aws-finops-dashboard"]]
