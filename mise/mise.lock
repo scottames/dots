@@ -39,7 +39,7 @@ version = "1.1.1"
 backend = "npm:@fission-ai/openspec"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.27.0"
+version = "0.27.2"
 backend = "npm:@google/gemini-cli"
 
 [[tools."npm:ccusage"]]
