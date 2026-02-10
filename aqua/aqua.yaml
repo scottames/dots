@@ -72,10 +72,10 @@ packages:
   - name: kubernetes/kubectl@v1.35.0
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v4.1.0
+  - name: helm/helm@v4.1.1
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
-  - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
+  - name: kubernetes-sigs/kustomize@kustomize/v5.8.1
   # multi pod and container log tailing for kubernetes
   #   https://github.com/stern/stern
   - name: stern/stern@v1.33.1
@@ -156,10 +156,10 @@ packages:
   - name: dlvhdr/gh-dash@v4.22.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.11.0
+  - name: atuinsh/atuin@v18.12.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.18.2
+  - name: spacelift-io/spacectl@v1.18.3
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
@@ -169,7 +169,7 @@ packages:
   - name: sst/opencode@v1.1.53
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.39.3
+  - name: charmbracelet/crush@v0.41.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -213,7 +213,7 @@ packages:
   - name: gohugoio/hugo@v0.155.3
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.8
+  - name: jdx/mise@v2026.2.9
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.16.1
@@ -230,5 +230,5 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.37
-  - name: astral-sh/uv@0.10.0
+  - name: anthropics/claude-code@v2.1.38
+  - name: astral-sh/uv@0.10.1
