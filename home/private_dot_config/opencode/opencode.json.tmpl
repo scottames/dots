@@ -33,18 +33,49 @@
     "edit": "ask",
     "bash": {
       "*": "ask",
-      "cat*": "allow",
-      "git status": "allow",
-      "git mv*": "allow",
-      "ls*": "allow",
       "/bin/ls*": "allow",
+      "/usr/bin/ls*": "allow",
+      "cargo build*": "allow",
+      "cargo check*": "allow",
+      "cargo doc*": "allow",
+      "cargo info*": "allow",
+      "cargo run*": "allow",
+      "cargo test*": "allow",
+      "cat*": "allow",
+      "command grep *": "allow",
+      "command ls*": "allow",
+      "git mv*": "allow",
+      "git mv*": "allow",
+      "git show*": "allow",
+      "git status": "allow",
+      "git status*": "allow",
+      "go build*": "allow",
+      "go list*": "allow",
+      "go mod tidy*": "allow",
+      "go run*": "allow",
+      "go test*": "allow",
+      "grep *": "allow",
+      "gt ls*": "allow",
+      "ls*": "allow",
       "pwd": "allow",
-      "cargo info*": "allow"
+      "thts sync*": "allow",
+      "tree *": "allow",
+      "trunk check*": "allow",
+      "trunk fmt*": "allow",
+      "wc *": "allow"
     },
+    "doom_loop": "ask",
+    "external_directory": "ask",
     "skill": "ask",
     "webfetch": "ask",
-    "doom_loop": "ask",
-    "external_directory": "ask"
+    "websearch": "allow"
+  },
+  "agent": {
+    "plan": {
+      "permission": {
+        "edit": "deny"
+      }
+    }
   },
   "server": {
     "hostname": "127.0.0.1",
