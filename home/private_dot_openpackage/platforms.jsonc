@@ -1,0 +1,82 @@
+{
+  "opencode": {
+    "name": "OpenCode",
+    "export": [
+      {
+        "from": "commands/**/*.md",
+        "to": {
+          "$switch": {
+            "field": "$$targetRoot",
+            "cases": [
+              { "pattern": "~/", "value": ".config/opencode/commands/**/*.md" }
+            ],
+            "default": ".opencode/commands/**/*.md"
+          }
+        }
+      },
+      {
+        "from": {
+          "pattern": "agents/**/*.md",
+          "schema": "./schemas/formats/universal-agent.schema.json"
+        },
+        "to": {
+          "$switch": {
+            "field": "$$targetRoot",
+            "cases": [
+              {
+                "pattern": "~/",
+                "value": {
+                  "pattern": ".config/opencode/agents/**/*.md",
+                  "schema": "./schemas/formats/opencode-agent.schema.json"
+                }
+              }
+            ],
+            "default": {
+              "pattern": ".opencode/agents/**/*.md",
+              "schema": "./schemas/formats/opencode-agent.schema.json"
+            }
+          }
+        },
+        "map": [
+          {
+            "$pipeline": {
+              "field": "tools",
+              "operations": [
+                { "$arrayToObject": { "value": true } }
+              ]
+            }
+          },
+          { "$unset": "color" }
+        ]
+      },
+      {
+        "from": "skills/**/*",
+        "to": {
+          "$switch": {
+            "field": "$$targetRoot",
+            "cases": [
+              { "pattern": "~/", "value": ".config/opencode/skills/**/*" }
+            ],
+            "default": ".opencode/skills/**/*"
+          }
+        }
+      },
+      {
+        "from": ["mcp.jsonc", "mcp.json"],
+        "to": {
+          "$switch": {
+            "field": "$$targetRoot",
+            "cases": [
+              { "pattern": "~/", "value": ".config/opencode/opencode.json" }
+            ],
+            "default": ".opencode/opencode.json"
+          }
+        },
+        "map": [
+          { "$rename": { "mcpServers": "mcp" } }
+        ],
+        "merge": "deep"
+      }
+    ]
+  }
+}
