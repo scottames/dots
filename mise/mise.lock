@@ -16,6 +16,11 @@ backend = "aqua:mfontanini/presenterm"
 "platforms.macos-x64" = { checksum = "sha256:3aa0b9d28f6eed08ccaf58860ecb1bd5352f9b797afee95e4c9057a4772c21bc", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-x86_64-apple-darwin.tar.gz"}
 "platforms.windows-x64" = { checksum = "sha256:f3fce09d056b628a21ee15aadbfb395c0575b8744186708d3bddcccc82e1d831", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-x86_64-pc-windows-msvc.zip"}
 
+[[tools.bun]]
+version = "1.3.6"
+backend = "core:bun"
+"platforms.linux-x64" = { checksum = "blake3:dddfffe2a80a43b4a71b1a72dcf48f2b1be308e43e2047b18839412f11adcb9e"}
+
 [[tools.go]]
 version = "1.26.0"
 backend = "core:go"
