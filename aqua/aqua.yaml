@@ -42,7 +42,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.4.5
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.9.1
+  - name: tofuutils/tenv@v4.9.3
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
   - name: twpayne/chezmoi@v2.69.4
@@ -156,20 +156,20 @@ packages:
   - name: dlvhdr/gh-dash@v4.22.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.12.0
+  - name: atuinsh/atuin@v18.12.1
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
   - name: spacelift-io/spacectl@v1.18.3
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.406
+  - name: github/copilot-cli@v0.0.408
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.1.57
+  - name: sst/opencode@v1.1.61
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.41.0
+  - name: charmbracelet/crush@v0.42.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -179,7 +179,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.98.0
+  - name: openai/codex@rust-v0.99.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -213,10 +213,10 @@ packages:
   - name: gohugoio/hugo@v0.155.3
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.9
+  - name: jdx/mise@v2026.2.10
   # A specification for CLIs
   #  https://github.com/jdx/usage
-  - name: jdx/usage@v2.16.1
+  - name: jdx/usage@v2.16.2
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
   - name: steveyegge/beads@v0.49.6
