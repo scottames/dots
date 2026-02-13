@@ -1,6 +1,18 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
 packages:
+  - type: github_release
+    repo_owner: jdx
+    repo_name: mise
+    asset: mise-{{.Version}}-{{.OS}}-{{.Arch}}
+    format: raw
+    description: dev tools, env vars, task runner
+    replacements:
+      amd64: x64
+      darwin: macos
+    supported_envs:
+      - linux
+      - darwin
   # gt https://graphite.dev
   - type: http
     repo_owner: withgraphite
