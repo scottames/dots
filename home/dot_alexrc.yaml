@@ -1,7 +1,9 @@
 ---
 allow:
+  - execute
+  - execution
   - hook
   - hooks
-  - simple
-  - execute
   - just
+  - pros
+  - simple
