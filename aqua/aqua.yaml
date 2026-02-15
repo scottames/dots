@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.470.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.471.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -166,7 +166,7 @@ packages:
   - name: github/copilot-cli@v0.0.410
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.2.1
+  - name: sst/opencode@v1.2.4
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.43.0
@@ -213,16 +213,16 @@ packages:
   - name: gohugoio/hugo@v0.155.3
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.11
+  - name: jdx/mise@v2026.2.13
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.16.2
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
-  - name: steveyegge/beads@v0.49.6
+  - name: steveyegge/beads@v0.50.3
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.23.3
+  - name: max-sixty/worktrunk@v0.24.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
