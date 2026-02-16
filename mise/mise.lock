@@ -8,13 +8,13 @@ backend = "aqua:int128/ghcp"
 "platforms.windows-x64" = { checksum = "sha256:a7673944cefaa9955a3fefa5ddf5b03c4ccec2f7e5f0d14d2707804af88ba22b", url = "https://github.com/int128/ghcp/releases/download/v1.15.1/ghcp_windows_amd64.zip"}
 
 [[tools."aqua:mfontanini/presenterm"]]
-version = "0.15.1"
+version = "0.16.0"
 backend = "aqua:mfontanini/presenterm"
-"platforms.linux-arm64" = { checksum = "sha256:e0779787fbca80e9ab9d149f2f39d1596dde1285bea4b48fa9afb5d7c5011400", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-aarch64-unknown-linux-musl.tar.gz"}
-"platforms.linux-x64" = { checksum = "sha256:80592edbf16e8180394d4d100274ce45443d78fc450a72b2bd72cba2317d99be", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-x86_64-unknown-linux-musl.tar.gz"}
-"platforms.macos-arm64" = { checksum = "sha256:f070c1dfb22e3ff33fc5ec6cf47c067f01bca08e718543872fd995233bc108c0", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-aarch64-apple-darwin.tar.gz"}
-"platforms.macos-x64" = { checksum = "sha256:3aa0b9d28f6eed08ccaf58860ecb1bd5352f9b797afee95e4c9057a4772c21bc", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-x86_64-apple-darwin.tar.gz"}
-"platforms.windows-x64" = { checksum = "sha256:f3fce09d056b628a21ee15aadbfb395c0575b8744186708d3bddcccc82e1d831", url = "https://github.com/mfontanini/presenterm/releases/download/v0.15.1/presenterm-0.15.1-x86_64-pc-windows-msvc.zip"}
+"platforms.linux-arm64" = { checksum = "sha256:fe18dee49fe304a719da4f5ea48df7917df41c202c621de67e7d76bc64fe116b", url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.0/presenterm-0.16.0-aarch64-unknown-linux-musl.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:82fc7277775c03bc658ae546fb5534d487fede817af3951ce65f4f1d3c19ef5d", url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.0/presenterm-0.16.0-x86_64-unknown-linux-musl.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:c0d383dc9283f24f31a47ab2c2c690959a01624bc0f2fb9c684f7aca175f4759", url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.0/presenterm-0.16.0-aarch64-apple-darwin.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:672ebcba5e52280836d45ac8b3a57c0132adfc40d9eefcab23458203ee35af99", url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.0/presenterm-0.16.0-x86_64-apple-darwin.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:6cbe5b97750673d625c6bc0f27752cb28ea3fd7a63f8bfae9eb67ab1fb8a6bf9", url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.0/presenterm-0.16.0-x86_64-pc-windows-msvc.zip"}
 
 [[tools.bun]]
 version = "1.3.9"
@@ -62,7 +62,7 @@ version = "18.0.5"
 backend = "npm:ccusage"
 
 [[tools."npm:opkg"]]
-version = "0.8.4"
+version = "0.8.5"
 backend = "npm:opkg"
 
 [[tools."pipx:aws-finops-dashboard"]]
