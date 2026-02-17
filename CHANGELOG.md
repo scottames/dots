@@ -1,5 +1,39 @@
 # Changelog
 
+## [0.38.0](https://github.com/scottames/dots/compare/v0.37.0...v0.38.0) (2026-02-17)
+
+
+### Features
+
+* add ntbk project ([9dcd265](https://github.com/scottames/dots/commit/9dcd26524b87f2a72b6b62a165046f99b827394a))
+* **aqua/mise:** add a few more handy tools ([96f390c](https://github.com/scottames/dots/commit/96f390c2c120c6248397563ebe5a3871c3938ab9))
+* **fish:** better github token handling ([2b8b560](https://github.com/scottames/dots/commit/2b8b560e129c8c59d6b548bdbbf5ae1111929f16))
+* **fish:** oc/opencode abbr ([e34734a](https://github.com/scottames/dots/commit/e34734ae5980213c56f5ce8733f9b30f1a41e2d5))
+* **gh:** bring the custom token flow to non-interactive bash (agent use) ([770e0b6](https://github.com/scottames/dots/commit/770e0b62f7948b722c5ec930b5a25d0da6f66aea))
+* helper scripts for scanning tools & deps ([1e33ad0](https://github.com/scottames/dots/commit/1e33ad0fb590ad3fee3261136c8effed159a837d))
+* misc tweaks to agents/lg/alex config ([059f95d](https://github.com/scottames/dots/commit/059f95d29ae66a5926171854a3cb3b16e148d409))
+* **mise:** add openpackage ([f5bdd62](https://github.com/scottames/dots/commit/f5bdd62f6f880e8fcbea28df1460e14fb49369ae))
+* **nvim:** AGENTS.md ([cc4d8c6](https://github.com/scottames/dots/commit/cc4d8c65c4f97154487ca33609ec7a513bdf8bcc))
+* **nvim:** docker-compose ft + better yaml format ([7118371](https://github.com/scottames/dots/commit/711837198b9a6f2ccb56ff435008e79adfe8547d))
+* **opencode:** add some default actions ([4d49a40](https://github.com/scottames/dots/commit/4d49a40e76dbe8e49f7a1ec846673d35d1a6e6af))
+* **opencode:** some more tweaks + fixes import of opkg ([1c0c3b9](https://github.com/scottames/dots/commit/1c0c3b94eace0786130d85a09800659431c44984))
+* **opencode:** use tavily search + github/haiku for small ([4a54a43](https://github.com/scottames/dots/commit/4a54a4304b2679bb0a969b5229947eeeace5fc34))
+* **thts:** add config + use ntbk ([0029c6c](https://github.com/scottames/dots/commit/0029c6c56f5d9356fcebb14fb645671dc16ad7fb))
+* **worktrunk:** add initial config ([66e9e38](https://github.com/scottames/dots/commit/66e9e3897d2dd28fc87bba6c4ca65c79300444c1))
+
+
+### Bug Fixes
+
+* **chezmoiexternal:** rm amazon q ([73aff91](https://github.com/scottames/dots/commit/73aff913766d11e817375a465779da3f1cfad45c))
+* **fish:** completions not loaded (fish loads lazy) ([1f17751](https://github.com/scottames/dots/commit/1f17751cd03975c026e07588a4fda91101632950))
+* github token handling, support other shells ([7396bd6](https://github.com/scottames/dots/commit/7396bd6c9ef205de42697899c137897212666bfa))
+* **hyprlock:** only lock 1p if running ([cc0fb60](https://github.com/scottames/dots/commit/cc0fb60a13f8180d171e07adb2d57645a1d3085e))
+* **init/mise:** chown npm in distrobox for safety ([862b9a4](https://github.com/scottames/dots/commit/862b9a49fa83dcd80a78c1eb3532146369817a18))
+* **init:** bug in local run + simpler check ([0bd6546](https://github.com/scottames/dots/commit/0bd6546be758bffcc0d30f2c3cf710d434fd4995))
+* **mise:** force gnu over musl install ([d4f259f](https://github.com/scottames/dots/commit/d4f259f2009804909f4e1b39e54e20eecf57ef98))
+* **mise:** restore mise lock symlink ([dc95d53](https://github.com/scottames/dots/commit/dc95d53a6d8fa1419f3c0676e9ab5ab6f86b7250))
+* **nvim/sidekick:** disable nes on start + fix mux ([27d7f90](https://github.com/scottames/dots/commit/27d7f90c794507c48441dffde70e851ae0949d68))
+
 ## [0.37.0](https://github.com/scottames/dots/compare/v0.36.0...v0.37.0) (2026-01-22)
 
 
