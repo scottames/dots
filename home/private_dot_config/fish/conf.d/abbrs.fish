@@ -155,6 +155,7 @@ abbr -a nmap_traceroute "sudo nmap -sP -PE -PS22,25,80 -PA21,23,80,3389 -PU -PO 
 abbr -a nmap_web_safe_osscan "sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy "
 abbr -a nosleep "systemd-inhibit --what=handle-lid-switch sleep 2592000" # disable systemd sleep
 abbr -a o open
+abbr -a oc opencode
 abbr -a oo "open ."
 abbr -a p podman
 abbr -a pc podman-compose

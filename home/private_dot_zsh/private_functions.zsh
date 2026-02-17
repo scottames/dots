@@ -612,16 +612,14 @@ function zellij_attach() {
 alias zja=zellij_attach
 
 # -------------------------------------------------------------------
-# GitHub token wrappers (resolve token per-command)
+# GitHub token wrapper for aqua (gh is handled by ~/.local/bin/gh)
 # -------------------------------------------------------------------
 if (( $+commands[github-token-get] )); then
-  function gh() {
-    GITHUB_TOKEN=$(github-token-get) command gh "$@"
-  }
   function aqua() {
     GITHUB_TOKEN=$(github-token-get) command aqua "$@"
   }
 fi
+
 
 # /begin mac specific functions
 

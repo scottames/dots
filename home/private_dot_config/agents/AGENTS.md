@@ -75,6 +75,33 @@ Yubikey is used for:
 - GPG (git commit signing), no touch required
 - SSH (git push/pull), touch is required - coordinate with me to do so
 
+#### Worktrees / Bare checkout layout
+
+Most of my repositories use a bare-checkout + worktree layout. When creating a
+worktree:
+
+- Detect repo layout with
+  `git rev-parse --path-format=absolute --git-common-dir` and
+  `git rev-parse --show-toplevel`
+- If the common dir basename is `.bare`, treat this as bare-checkout + worktree
+  mode
+- In bare-checkout + worktree mode, create new worktrees as siblings of `.bare`
+  at `<common_dir_parent>/<branch_name>` (equivalent to `../<branch_name>` when
+  working from `main`)
+- Use `main` as the start point unless I explicitly request a different base:
+  `git worktree add -b <branch_name> <common_dir_parent>/<branch_name> main`
+- If repo is in bare-checkout + worktree mode, this layout should be used unless
+  I explicitly say otherwise
+- If repo is not in bare-checkout + worktree mode, treat it as a regular clone
+  and do not assume this layout
+
+Safety:
+
+- Sanitize branch names for path safety (letters, numbers, `/`, `-`, `_`, `.`)
+- Never reuse an existing target directory; choose a different branch/path
+- Prefer read-only detection commands first; only run mutating git commands when
+  needed for the requested task
+
 ## Coding
 
 ### Coding Preferences

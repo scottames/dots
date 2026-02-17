@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+find_real_gh() {
+  local script_dir path_entry path_parts real_gh
+
+  script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+  IFS=':' read -r -a path_parts <<<"${PATH}"
+
+  for path_entry in "${path_parts[@]}"; do
+    [[ -z ${path_entry} ]] && path_entry='.'
+
+    if [[ $(cd "${path_entry}" 2>/dev/null && pwd -P || true) == "${script_dir}" ]]; then
+      continue
+    fi
+
+    if [[ -x "${path_entry}/gh" ]]; then
+      real_gh="${path_entry}/gh"
+      break
+    fi
+  done
+
+  if [[ -z ${real_gh-} ]]; then
+    printf 'gh wrapper: unable to locate underlying gh binary in PATH\n' >&2
+    return 127
+  fi
+
+  printf '%s\n' "${real_gh}"
+}
+
+main() {
+  local real_gh
+
+  real_gh=$(find_real_gh)
+
+  if [[ ${GH_WRAPPER_BYPASS-} == '1' ]]; then
+    exec "${real_gh}" "$@"
+  fi
+
+  if [[ -n ${GITHUB_TOKEN-} ]]; then
+    exec "${real_gh}" "$@"
+  fi
+
+  if GITHUB_TOKEN='' "${real_gh}" auth status >/dev/null 2>&1; then
+    exec env GITHUB_TOKEN='' "${real_gh}" "$@"
+  fi
+
+  if command -v github-token-get >/dev/null 2>&1; then
+    local token
+    if token=$(github-token-get); then
+      exec env GITHUB_TOKEN="${token}" "${real_gh}" "$@"
+    fi
+  fi
+
+  exec "${real_gh}" "$@"
+}
+
+main "$@"

@@ -119,8 +119,7 @@ if ${HAS_TERRAFORM}; then
   complete -o nospace -C "$(command -v terraform)" terraform
 fi
 
-# GitHub token wrappers (resolve token per-command)
+# GitHub token wrapper for aqua (gh is handled by ~/.local/bin/gh)
 if command -v github-token-get &>/dev/null; then
-  gh() { GITHUB_TOKEN=$(github-token-get) command gh "$@"; }
   aqua() { GITHUB_TOKEN=$(github-token-get) command aqua "$@"; }
 fi

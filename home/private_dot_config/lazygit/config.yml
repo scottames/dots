@@ -2,6 +2,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
 git:
+  overrideGpg: true
   pagers:
     - colorArg: always
       pager: delta --dark --paging=never
