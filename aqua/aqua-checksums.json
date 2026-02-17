@@ -11,6 +11,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/LuaLS/lua-language-server/3.17.1/lua-language-server-3.17.1-linux-arm64.tar.gz",
+      "checksum": "680285A36D8CF7B17CA4BE7A2F9C93643EBD8DAEC0B7425A6B7A02D003F3DA81",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/LuaLS/lua-language-server/3.17.1/lua-language-server-3.17.1-linux-x64.tar.gz",
+      "checksum": "248B0858A0AFC8233F2535E89B648398B2202CB96CF51CE187E3263923DD0223",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.9/zoxide-0.9.9-aarch64-unknown-linux-musl.tar.gz",
       "checksum": "96E6EA2E47A71DB42CB7AD5A36E9209C8CB3708F8AE00F6945573D0D93315CB0",
       "algorithm": "sha256"
@@ -31,6 +41,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/anordal/shellharden/v4.3.1/shellharden-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "0CE6F08A001CE154C6FD2727B63B77EB920BEB64873340ECDBAD4D00E50432DA7DB6E9492CCDDDB1760A2070C54861953A09F92302F2ED4043D9BACABB26B1A5",
+      "algorithm": "sha512"
+    },
+    {
+      "id": "github_release/github.com/anordal/shellharden/v4.3.1/shellharden-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "E80205AE76E134773B9BBB5DB079577626089859ED5C4067E39D05C4DC93CCCA73541408417D01D2AE630032F74B7387ABEF5B71A68A29D60927206134A83DA8",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/antonmedv/fx/39.2.0/fx_linux_amd64",
       "checksum": "17EA6549C7CF0B8BE5EC109D04DA7FBF1D5DE9F7B99D957A6215081933528AFE",
       "algorithm": "sha256"
@@ -38,6 +58,36 @@
     {
       "id": "github_release/github.com/antonmedv/fx/39.2.0/fx_linux_arm64",
       "checksum": "85EA8435B0A80B6D31FFA9F61AC9B67D9BB8F0FFFFABDFE5E7E587B07A0A0684",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/aquasecurity/tfsec/v1.28.14/tfsec_1.28.14_linux_amd64.tar.gz",
+      "checksum": "329AE7F67F2F1813EBE08DE498719EA7003C75D3CA24BB0B038369062508008E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/aquasecurity/tfsec/v1.28.14/tfsec_1.28.14_linux_arm64.tar.gz",
+      "checksum": "13DCBD3602027BE49CE6CAB7E1C24B0A8E833F0143FE327B0A13B87686541CE0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/artempyanykh/marksman/2026-02-08/marksman-linux-arm64",
+      "checksum": "DB8E124527F7F8048E3E6C91821B9C52EF173D92C01E47D221BF1337AFD962FB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/artempyanykh/marksman/2026-02-08/marksman-linux-x64",
+      "checksum": "BE5098E8213219269C47FC0D916A66FA31CE0602EC967475C722260AABF26087",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/ruff/0.15.1/ruff-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "05A41B8B7C068633B27E8F9149C70154AC2090E61D48E5EA9983DE769593D29C",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/ruff/0.15.1/ruff-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "C8D04B4F6CE053809D98D1EF99F897C52E6204708BB157551EDE7FBAB505FEA2",
       "algorithm": "sha256"
     },
     {
@@ -68,6 +118,16 @@
     {
       "id": "github_release/github.com/bootandy/dust/v1.2.4/dust-v1.2.4-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "4E313F9F854017E58A2ADA4C0D1774677B8CF53D63AB55A991D5871D5F504452",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/bufbuild/buf/v1.65.0/buf-Linux-aarch64.tar.gz",
+      "checksum": "53B4854A5CE61E02915E134370AD9C85F85CC3C906CBC464DDDBA5C450DEE1FF",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/bufbuild/buf/v1.65.0/buf-Linux-x86_64.tar.gz",
+      "checksum": "15DFD76F882F6648AA3B9FCD23EAA149826CC9000A35BC89CED50DDCA689E890",
       "algorithm": "sha256"
     },
     {
@@ -111,6 +171,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/checkmake/checkmake/v0.3.2/checkmake-v0.3.2.linux.amd64",
+      "checksum": "E2EFFB876913F3EE2CAEF0BA35F6202C5E8A3CD55A077D8D2B9CE2034257B6AF",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/checkmake/checkmake/v0.3.2/checkmake-v0.3.2.linux.arm64",
+      "checksum": "409167C4ABB99407BD232C3BBD351B8A39DF57997FEAFDE5A08BDDFFB0F2DCB4",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/cli/cli/v2.86.0/gh_2.86.0_linux_amd64.tar.gz",
       "checksum": "F3B08BD6A28420CC2229B0A1A687FA25F2B838D3F04B297414C1041CA68103C7",
       "algorithm": "sha256"
@@ -118,6 +188,16 @@
     {
       "id": "github_release/github.com/cli/cli/v2.86.0/gh_2.86.0_linux_arm64.tar.gz",
       "checksum": "83CF7A7962EA9DFCC2C123666695792916A87AF32CBA5F1F6E585DB08FA57547",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/crate-ci/typos/v1.43.5/typos-v1.43.5-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "15F2D2592312BABEA0EABB783E6879085F7AB3BD643AACF4D8290DD7C14C07D0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/crate-ci/typos/v1.43.5/typos-v1.43.5-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "7BB0734A80C68A2EF1D4D0E64C46D498A50FBDB0D5EFDDAC44E9804A687FEF03",
       "algorithm": "sha256"
     },
     {
@@ -188,6 +268,26 @@
     {
       "id": "github_release/github.com/dlvhdr/gh-dash/v4.22.0/gh-dash_v4.22.0_linux-arm64",
       "checksum": "066D81F166550C662F0230F7F663749FA9059739CEAA7C38F4C2370CA10BB36A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dprint/dprint/0.51.1/dprint-aarch64-unknown-linux-musl.zip",
+      "checksum": "8CD2A46FF5D6940DB5E708C9A5BE8ABC9F68E6324D6FD51C8977ADDD2188648A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dprint/dprint/0.51.1/dprint-x86_64-unknown-linux-musl.zip",
+      "checksum": "0BC7904DE86CC70384A4D295902C69FC5239ED45AB19A7361216263D1A8CB572",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/editorconfig-checker/editorconfig-checker/v3.6.1/ec-linux-amd64.tar.gz",
+      "checksum": "CD32084FCE5F3D49BA49697F362AC3A114989715C98819303247DD54C1F368B0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/editorconfig-checker/editorconfig-checker/v3.6.1/ec-linux-arm64.tar.gz",
+      "checksum": "A471181B0741982AFA4F3DBC1E433B6CAA0C5E6DAAD580572841884FD9957220",
       "algorithm": "sha256"
     },
     {
@@ -271,6 +371,26 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/google/yamlfmt/v0.21.0/yamlfmt_0.21.0_Linux_arm64.tar.gz",
+      "checksum": "5B2689C963B177271330C5CE8CA7396751107E5A826BE46F03D2CB9B6F0C7784",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/google/yamlfmt/v0.21.0/yamlfmt_0.21.0_Linux_x86_64.tar.gz",
+      "checksum": "1F300D9257B232BB3B541D7FB1B0E6B3C121BCBAB381C86CD38CB8722BE8A566",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/gotestyourself/gotestsum/v1.13.0/gotestsum_1.13.0_linux_amd64.tar.gz",
+      "checksum": "11CCDDEAF708EF228889F9FE2F68291A75B27013DDFC3B18156E094F5F40E8EE",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/gotestyourself/gotestsum/v1.13.0/gotestsum_1.13.0_linux_arm64.tar.gz",
+      "checksum": "7644A4C5CD1BB978D56245AEAB25A586AC5AC62ADEBED20A399548867C13499D",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/helix-editor/helix/24.03/helix-24.03-aarch64-linux.tar.xz",
       "checksum": "DEAAE9FE0C1F0EA6C0B18E4A06E01A3FF894E65551909C4FEB4738D9FDF8D492",
       "algorithm": "sha256"
@@ -288,6 +408,16 @@
     {
       "id": "github_release/github.com/homeport/dyff/v1.10.4/dyff_1.10.4_linux_arm64.tar.gz",
       "checksum": "A992428D0673125CA050D23780A6B9BCA61615D3F4AC5DE28C5D13B624079E55",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/incu6us/goimports-reviser/v3.12.5/goimports-reviser_3.12.5_linux_amd64.tar.gz",
+      "checksum": "102B18299C834EA06AF4DF0FBD32451EC64589E423837FE89022C35EE65030CE",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/incu6us/goimports-reviser/v3.12.5/goimports-reviser_3.12.5_linux_arm64.tar.gz",
+      "checksum": "50FF7BBEC50D3C8C6A681D89B5E8584FDAC5C09143311893F8CA7628B34EB415",
       "algorithm": "sha256"
     },
     {
@@ -353,6 +483,16 @@
     {
       "id": "github_release/github.com/kevincobain2000/gobrew/v1.10.15/gobrew-linux-arm64",
       "checksum": "6507E2BAAEEAB96C39E7C7CAAEBCD399818E8EC83F66CC03548C08505E19BB5A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/koalaman/shellcheck/v0.11.0/shellcheck-v0.11.0.linux.aarch64.tar.xz",
+      "checksum": "12B331C1D2DB6B9EB13CFCA64306B1B157A86EB69DB83023E261EAA7E7C14588",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/koalaman/shellcheck/v0.11.0/shellcheck-v0.11.0.linux.x86_64.tar.xz",
+      "checksum": "8C3BE12B05D5C177A04C29E3C78CE89AC86F1595681CAB149B65B97C4E227198",
       "algorithm": "sha256"
     },
     {
@@ -426,6 +566,36 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/mvdan/gofumpt/v0.9.2/gofumpt_v0.9.2_linux_amd64",
+      "checksum": "72CF61B12FEF91EAB6DF6DB4A4284F30616B5EAD330112E28A1FA1CB15E57339",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/mvdan/gofumpt/v0.9.2/gofumpt_v0.9.2_linux_arm64",
+      "checksum": "5ACAA5A554050F55FC81EF02A8B0D14AB6B3C058A84513885286DC52D3451645",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/mvdan/sh/v3.12.0/shfmt_v3.12.0_linux_amd64",
+      "checksum": "D9FBB2A9C33D13F47E7618CF362A914D029D02A6DF124064FFF04FD688A745EA",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/mvdan/sh/v3.12.0/shfmt_v3.12.0_linux_arm64",
+      "checksum": "5F3FE3FA6A9F766E6A182BA79A94BEF8AFEDAFC57DB0B1AD32B0F67FAE971BA4",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/nametake/golangci-lint-langserver/v0.0.11/golangci-lint-langserver_Linux_arm64.tar.gz",
+      "checksum": "7D3695A366E653569A375D209516B3FA8CA184B92FC5ACBFEDFAEE9AD3C97C21",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/nametake/golangci-lint-langserver/v0.0.11/golangci-lint-langserver_Linux_x86_64.tar.gz",
+      "checksum": "B4EFA95267C29CA4D08E0A977E90E7C6A8A606BAFE1DCEDFD5E48E952536B331",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/nektos/act/v0.2.84/act_Linux_arm64.tar.gz",
       "checksum": "116C7F27C4862FB01730C956C9BC9F51F9D44D8F3850FE6166B7DA9F68677A5C",
       "algorithm": "sha256"
@@ -466,6 +636,46 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/psf/black/26.1.0/black_linux",
+      "checksum": "AF8EE6C1CF236F4BE8BC97EAAB4E4A8CD57D4BEFB9E846B3602A8B635A0F6A6B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/psf/black/26.1.0/black_linux-arm",
+      "checksum": "32B801287109ADE8E30984B6F99252F743AB79F3B74FB34DDC462C1DA9A2B502",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.11/actionlint_1.7.11_linux_amd64.tar.gz",
+      "checksum": "900919A84F2229BAC68CA9CD4103EA297ABC35E9689EBB842C6E34A3D1B01B0A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.11/actionlint_1.7.11_linux_arm64.tar.gz",
+      "checksum": "21BC0DFB57A913FE175298C2A9E906EE630F747CB66D0A934D0D4B69F4EE1235",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rust-lang/rust-analyzer/2026-02-16/rust-analyzer-aarch64-unknown-linux-gnu.gz",
+      "checksum": "212F042BE74DEB10BD46C46FEFFFCEBA66477877341E145308FC7E829CAF1D35",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rust-lang/rust-analyzer/2026-02-16/rust-analyzer-x86_64-unknown-linux-gnu.gz",
+      "checksum": "4D2BC212EB06B4BD1155BAEBD688A9A68E194833AC606E33D909A9225E395FFC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/segmentio/golines/v0.13.0/golines_0.13.0_linux_amd64.tar.gz",
+      "checksum": "8B29855348124097036B8D3F90DC27E9D5ED6F6B6D1C5BB4FDC6557CE01F02E9",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/segmentio/golines/v0.13.0/golines_0.13.0_linux_arm64.tar.gz",
+      "checksum": "97C92DD8C94BCFFDA79422D4260D41D067B164DEBEFBD1FAE0F8551BA04BEC94",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/sharkdp/bat/v0.26.1/bat-v0.26.1-aarch64-unknown-linux-musl.tar.gz",
       "checksum": "6369242C584065F195FB20CB36FBD7CB63AE690605BBE89868A7596B596C2C23",
       "algorithm": "sha256"
@@ -483,6 +693,16 @@
     {
       "id": "github_release/github.com/sharkdp/fd/v10.3.0/fd-v10.3.0-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "2B6BFAAE8C48F12050813C2FFE1884C61EA26E750D803DF9C9114550A314CD14",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/snyk/cli/v1.1302.1/snyk-linux",
+      "checksum": "23A12B02BBE5724406B9DB0AC9DA632AA78FDA6D6146173F14B87A99CECF401F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/snyk/cli/v1.1302.1/snyk-linux-arm64",
+      "checksum": "CE89CB11F47D8593D280FA80A619E2A2D5256705BD2F6E6541BEFDBD8971EB39",
       "algorithm": "sha256"
     },
     {
@@ -553,6 +773,16 @@
     {
       "id": "github_release/github.com/sxyazi/yazi/v26.1.22/yazi-x86_64-unknown-linux-musl.zip",
       "checksum": "B977351968206C0B78D2EF5BF21351685CC191B58A4C7E1C98C37DB5D0A381F8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tamasfe/taplo/0.10.0/taplo-linux-aarch64.gz",
+      "checksum": "033681D01EEC8376C3FD38FA3703C79316F5E14BB013D859943B60A07BCCDCC3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tamasfe/taplo/0.10.0/taplo-linux-x86_64.gz",
+      "checksum": "8FE196B894CCF9072F98D4E1013A180306E17D244830B03986EE5E8EABEB6156",
       "algorithm": "sha256"
     },
     {

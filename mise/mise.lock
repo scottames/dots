@@ -73,25 +73,125 @@ backend = "core:node"
 "platforms.windows-x64" = { checksum = "sha256:fba577c4bb87df04d54dd87bbdaa5a2272f1f99a2acbf9152e1a91b8b5f0b279", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-win-x64.zip"}
 "platforms.windows-x64-baseline" = { checksum = "sha256:fba577c4bb87df04d54dd87bbdaa5a2272f1f99a2acbf9152e1a91b8b5f0b279", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-win-x64.zip"}
 
+[[tools."npm:@commitlint/cli"]]
+version = "20.4.1"
+backend = "npm:@commitlint/cli"
+
 [[tools."npm:@fission-ai/openspec"]]
 version = "1.1.1"
 backend = "npm:@fission-ai/openspec"
+
+[[tools."npm:@fsouza/prettierd"]]
+version = "0.27.0"
+backend = "npm:@fsouza/prettierd"
 
 [[tools."npm:@google/gemini-cli"]]
 version = "0.28.2"
 backend = "npm:@google/gemini-cli"
 
+[[tools."npm:alex"]]
+version = "11.0.1"
+backend = "npm:alex"
+
+[[tools."npm:bash-language-server"]]
+version = "5.6.0"
+backend = "npm:bash-language-server"
+
 [[tools."npm:ccusage"]]
 version = "18.0.5"
 backend = "npm:ccusage"
+
+[[tools."npm:cspell"]]
+version = "9.6.4"
+backend = "npm:cspell"
+
+[[tools."npm:dockerfile-language-server-nodejs"]]
+version = "0.15.0"
+backend = "npm:dockerfile-language-server-nodejs"
+
+[[tools."npm:jsonlint"]]
+version = "1.6.3"
+backend = "npm:jsonlint"
+
+[[tools."npm:markdown-toc"]]
+version = "1.2.0"
+backend = "npm:markdown-toc"
+
+[[tools."npm:markdownlint-cli"]]
+version = "0.47.0"
+backend = "npm:markdownlint-cli"
 
 [[tools."npm:opkg"]]
 version = "0.8.5"
 backend = "npm:opkg"
 
+[[tools."npm:prettier"]]
+version = "3.8.1"
+backend = "npm:prettier"
+
+[[tools."npm:pyright"]]
+version = "1.1.408"
+backend = "npm:pyright"
+
+[[tools."npm:sql-formatter"]]
+version = "15.7.2"
+backend = "npm:sql-formatter"
+
+[[tools."npm:sql-language-server"]]
+version = "1.7.1"
+backend = "npm:sql-language-server"
+
+[[tools."npm:stylelint"]]
+version = "17.3.0"
+backend = "npm:stylelint"
+
+[[tools."npm:textlint"]]
+version = "15.5.1"
+backend = "npm:textlint"
+
+[[tools."pipx:ansible-lint"]]
+version = "26.1.1"
+backend = "pipx:ansible-lint"
+
 [[tools."pipx:aws-finops-dashboard"]]
 version = "2.3.0"
 backend = "pipx:aws-finops-dashboard"
+
+[[tools."pipx:beautysh"]]
+version = "6.4.2"
+backend = "pipx:beautysh"
+
+[[tools."pipx:gitlint-core"]]
+version = "0.19.1"
+backend = "pipx:gitlint-core"
+
+[[tools."pipx:isort"]]
+version = "7.0.0"
+backend = "pipx:isort"
+
+[[tools."pipx:mypy"]]
+version = "1.19.1"
+backend = "pipx:mypy"
+
+[[tools."pipx:pyproject-flake8"]]
+version = "7.0.0"
+backend = "pipx:pyproject-flake8"
+
+[[tools."pipx:ruff-lsp"]]
+version = "0.0.62"
+backend = "pipx:ruff-lsp"
+
+[[tools."pipx:semgrep"]]
+version = "1.151.0"
+backend = "pipx:semgrep"
+
+[[tools."pipx:sqlfluff"]]
+version = "4.0.4"
+backend = "pipx:sqlfluff"
+
+[[tools."pipx:yamllint"]]
+version = "1.38.0"
+backend = "pipx:yamllint"
 
 [[tools.rust]]
 version = "1.93.1"
