@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.471.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.472.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -159,14 +159,14 @@ packages:
   - name: atuinsh/atuin@v18.12.1
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.18.3
+  - name: spacelift-io/spacectl@v1.18.4
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   - name: github/copilot-cli@v0.0.410
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.2.5
+  - name: sst/opencode@v1.2.6
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.43.0
@@ -213,16 +213,16 @@ packages:
   - name: gohugoio/hugo@v0.155.3
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.13
+  - name: jdx/mise@v2026.2.15
   # A specification for CLIs
   #  https://github.com/jdx/usage
-  - name: jdx/usage@v2.16.2
+  - name: jdx/usage@v2.17.0
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
-  - name: steveyegge/beads@v0.50.3
+  - name: steveyegge/beads@v0.52.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.24.0
+  - name: max-sixty/worktrunk@v0.24.1
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -230,5 +230,5 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.42
+  - name: anthropics/claude-code@v2.1.44
   - name: astral-sh/uv@0.10.3
