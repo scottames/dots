@@ -19,7 +19,7 @@ packages:
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
   - name: astral-sh/ruff@0.15.1
-  - name: astral-sh/uv@0.10.3
+  - name: astral-sh/uv@0.10.4
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.43.5
   - name: dprint/dprint@0.51.1
@@ -41,7 +41,7 @@ packages:
   - name: tmc/json-to-struct@v0.1.0
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.18 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.7.19 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -58,7 +58,7 @@ packages:
   - name: cli/cli@v2.86.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
-  - name: golangci/golangci-lint@v2.9.0
+  - name: golangci/golangci-lint@v2.10.1
   # diff tool for YAML files, and sometimes JSON
   #  https://github.com/homeport/dyff
   - name: homeport/dyff@v1.10.4
@@ -188,7 +188,7 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.410
+  - name: github/copilot-cli@v0.0.411
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.2.6
@@ -204,7 +204,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.101.0
+  - name: openai/codex@rust-v0.104.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -238,16 +238,16 @@ packages:
   - name: gohugoio/hugo@v0.155.3
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.15
+  - name: jdx/mise@v2026.2.16
   # A specification for CLIs
   #  https://github.com/jdx/usage
-  - name: jdx/usage@v2.17.0
+  - name: jdx/usage@v2.18.0
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
   - name: steveyegge/beads@v0.52.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.24.1
+  - name: max-sixty/worktrunk@v0.25.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -255,4 +255,4 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.44
+  - name: anthropics/claude-code@v2.1.45
