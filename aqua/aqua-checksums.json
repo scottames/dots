@@ -41,16 +41,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/anordal/shellharden/v4.3.1/shellharden-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "0CE6F08A001CE154C6FD2727B63B77EB920BEB64873340ECDBAD4D00E50432DA7DB6E9492CCDDDB1760A2070C54861953A09F92302F2ED4043D9BACABB26B1A5",
-      "algorithm": "sha512"
-    },
-    {
-      "id": "github_release/github.com/anordal/shellharden/v4.3.1/shellharden-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "E80205AE76E134773B9BBB5DB079577626089859ED5C4067E39D05C4DC93CCCA73541408417D01D2AE630032F74B7387ABEF5B71A68A29D60927206134A83DA8",
-      "algorithm": "sha512"
-    },
-    {
       "id": "github_release/github.com/antonmedv/fx/39.2.0/fx_linux_amd64",
       "checksum": "17EA6549C7CF0B8BE5EC109D04DA7FBF1D5DE9F7B99D957A6215081933528AFE",
       "algorithm": "sha256"
@@ -91,13 +81,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.10.3/uv-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "A98F8DECF21204D40ACB512B0E08A803ED718C640A97F3C095864967463D5B15",
+      "id": "github_release/github.com/astral-sh/uv/0.10.4/uv-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "82FC461031DAFB130AF761E7DBEC1BCC51B826C2E664F5BF8BC4E4F8330320CD",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.10.3/uv-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "126496B606129EDA426DAC502AF0D910D895F3DB81DA28EFC49B18EDF5557741",
+      "id": "github_release/github.com/astral-sh/uv/0.10.4/uv-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "18ADF097CEA30A165BA086C1E72659FEC3C5ACA056A560E7C39E0164AC871196",
       "algorithm": "sha256"
     },
     {
@@ -118,16 +108,6 @@
     {
       "id": "github_release/github.com/bootandy/dust/v1.2.4/dust-v1.2.4-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "4E313F9F854017E58A2ADA4C0D1774677B8CF53D63AB55A991D5871D5F504452",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/bufbuild/buf/v1.65.0/buf-Linux-aarch64.tar.gz",
-      "checksum": "53B4854A5CE61E02915E134370AD9C85F85CC3C906CBC464DDDBA5C450DEE1FF",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/bufbuild/buf/v1.65.0/buf-Linux-x86_64.tar.gz",
-      "checksum": "15DFD76F882F6648AA3B9FCD23EAA149826CC9000A35BC89CED50DDCA689E890",
       "algorithm": "sha256"
     },
     {
@@ -341,13 +321,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/github/copilot-cli/v0.0.410/copilot-linux-arm64.tar.gz",
-      "checksum": "77D346C275B4E7D14B683A2560CD3545C8A895B5DA730737E7895B26BD8939DA",
+      "id": "github_release/github.com/github/copilot-cli/v0.0.411/copilot-linux-arm64.tar.gz",
+      "checksum": "6836610C16A75744DC3E3E58AAD2AA826FBF22CDB29EF745B6AEE73EA574400E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/github/copilot-cli/v0.0.410/copilot-linux-x64.tar.gz",
-      "checksum": "2523BA92C87D8D2CDD81F9F0F9954794BC169BC42A94969FBB87FC7E9F461B09",
+      "id": "github_release/github.com/github/copilot-cli/v0.0.411/copilot-linux-x64.tar.gz",
+      "checksum": "FEF8289D5BA6A0A57DFC6F22B8BCF8008BABC860228A502A305AC4D0BDDCA0EE",
       "algorithm": "sha256"
     },
     {
@@ -361,13 +341,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.9.0/golangci-lint-2.9.0-linux-amd64.tar.gz",
-      "checksum": "493AAACA2EBA6C8BCEF847D92716BBD91BBAC4B22CDBB0AB5B6A581B32946091",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.10.1/golangci-lint-2.10.1-linux-amd64.tar.gz",
+      "checksum": "DFA775874CF0561B404A02A8F4481FC69B28091DA95AA697259820D429B09C99",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.9.0/golangci-lint-2.9.0-linux-arm64.tar.gz",
-      "checksum": "94E80CDB51C73C20A313BD3AFA1FB23137728813C19FD730248A1E8678FCC46D",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.10.1/golangci-lint-2.10.1-linux-arm64.tar.gz",
+      "checksum": "6652B42AE02915EB2F9CB2A2E0CAC99514C8EDED8388D88AE3E06E1A52C00DE8",
       "algorithm": "sha256"
     },
     {
@@ -431,23 +411,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.2.15/mise-v2026.2.15-linux-arm64-musl.tar.gz",
-      "checksum": "69E3A95DFA77861EA7A7A0369CE8BF02AC8A0B8A31CA0A25ABD83336CAC34B42",
+      "id": "github_release/github.com/jdx/mise/v2026.2.16/mise-v2026.2.16-linux-arm64-musl.tar.gz",
+      "checksum": "A2CA4EE262E98DB1A429FCE4DD231633CFA47A2935FF1A8F9BEF95659525802C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.2.15/mise-v2026.2.15-linux-x64-musl.tar.gz",
-      "checksum": "8031FB864CB1355E55EA9920A66DA508116AFFA2F2DE0734D711C1ECAC115F63",
+      "id": "github_release/github.com/jdx/mise/v2026.2.16/mise-v2026.2.16-linux-x64-musl.tar.gz",
+      "checksum": "044BE553E75831F5BA8B7B12F66D2E24E9678039658B2E64F29861F8F9A64778",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/usage/v2.17.0/usage-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "B1B92C5A9FCA0D6DF95D8C84C391A72177DC4CAF703BAFCB6BB2F3EB25D71753",
+      "id": "github_release/github.com/jdx/usage/v2.18.0/usage-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "3BFD30A1AB9C02268CCBAE77E02B9E68AEBFF78DA2D2D7644C77F6499C90EBCF",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/usage/v2.17.0/usage-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "3DF10EB333B335B3A26775838208D3EFCA47700FC7F323023280019D3CCFF772",
+      "id": "github_release/github.com/jdx/usage/v2.18.0/usage-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "84D12440F0982A01A607E99D73518334D9124F4B8ECE58CA0351DD4C1306841D",
       "algorithm": "sha256"
     },
     {
@@ -546,13 +526,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/max-sixty/worktrunk/v0.24.1/worktrunk-aarch64-unknown-linux-musl.tar.xz",
-      "checksum": "5855F0A7B29AEF946E157CDDE169A23090B82BBE6360DB38AC308C752FEDB7FC",
+      "id": "github_release/github.com/max-sixty/worktrunk/v0.25.0/worktrunk-aarch64-unknown-linux-musl.tar.xz",
+      "checksum": "60E8ECC18113D5350E3AB4E4539D4229A3014EC662533969802823A7238D6710",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/max-sixty/worktrunk/v0.24.1/worktrunk-x86_64-unknown-linux-musl.tar.xz",
-      "checksum": "EBE45CD363EC17BB44389FF37B4ABF49145C90E4E7BA6EEB8AA5A8E37EC1430C",
+      "id": "github_release/github.com/max-sixty/worktrunk/v0.25.0/worktrunk-x86_64-unknown-linux-musl.tar.xz",
+      "checksum": "1F53D85AC86C744342768C4D452F6C6CF13612130A2DFBD269FA07AEDC70C855",
       "algorithm": "sha256"
     },
     {
@@ -626,13 +606,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/openai/codex/rust-v0.101.0/codex-aarch64-unknown-linux-musl.zst",
-      "checksum": "A60F22F4554EC3E92991F4B6D9B157DF95F559D368B60AD0A68B850297EDA97D",
+      "id": "github_release/github.com/openai/codex/rust-v0.104.0/codex-aarch64-unknown-linux-musl.zst",
+      "checksum": "38DD53C5D4984CF0F969CA032AE2ABC3FBA6A1695A8D62756382F90C020DECBC",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/openai/codex/rust-v0.101.0/codex-x86_64-unknown-linux-musl.zst",
-      "checksum": "A2E8496477BED2449C727CECC5A759E9E6BC319497E31E61051B5C5ECFA5B6BB",
+      "id": "github_release/github.com/openai/codex/rust-v0.104.0/codex-x86_64-unknown-linux-musl.zst",
+      "checksum": "37C6530D7BEB6C4A0AAA8655E76782F39C0D6C35653B8BB8E25F22C45BEAE44C",
       "algorithm": "sha256"
     },
     {
@@ -891,18 +871,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.18/gt-linux",
-      "checksum": "D031460B124449500913B608BBE8F5956DCAAE0493C7CC1898B848C9D1A1CCAA",
+      "id": "http/github.com/withgraphite/homebrew-tap/releases/download/v1.7.19/gt-linux",
+      "checksum": "2B3F26BE4C3EC76FDADF3B575F4F6055562FC24487498936B82F78F3E9B23525",
       "algorithm": "sha256"
     },
     {
-      "id": "http/storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.44/linux-arm64/claude",
-      "checksum": "335F440CFA4C3B020E79896A00BFB68376C6EFB11051C7E6736732ACDC74D6EE",
+      "id": "http/storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.45/linux-arm64/claude",
+      "checksum": "E678F0E8112E470A92723AD6883ECB1940D1411548F678F21EA4E9CC41057E7F",
       "algorithm": "sha256"
     },
     {
-      "id": "http/storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.44/linux-x64/claude",
-      "checksum": "090ED3F06BE51388BC511F90214484891432C160349C9C3FC6A131001C763381",
+      "id": "http/storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.45/linux-x64/claude",
+      "checksum": "E7E847383C4666994707741E8E56ABF84DD2430153620D3BA5FF5A849375E4DE",
       "algorithm": "sha256"
     },
     {
