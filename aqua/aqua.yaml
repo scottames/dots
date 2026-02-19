@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.472.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.472.1 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -55,7 +55,7 @@ packages:
   - name: charmbracelet/glow@v2.1.1
   # GitHub's official command line tool
   #   https://github.com/cli/cli
-  - name: cli/cli@v2.86.0
+  - name: cli/cli@v2.87.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
   - name: golangci/golangci-lint@v2.10.1
@@ -194,7 +194,7 @@ packages:
   - name: sst/opencode@v1.2.6
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.43.0
+  - name: charmbracelet/crush@v0.43.2
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -235,10 +235,10 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.155.3
+  - name: gohugoio/hugo@v0.156.0
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.16
+  - name: jdx/mise@v2026.2.17
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v2.18.0
@@ -247,12 +247,12 @@ packages:
   - name: steveyegge/beads@v0.52.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.25.0
+  - name: max-sixty/worktrunk@v0.26.1
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v1.1.1
+  - name: tassiovirginio/try-rs@v1.3.0
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.45
+  - name: anthropics/claude-code@v2.1.47
