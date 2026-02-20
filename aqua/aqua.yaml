@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.472.1 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.473.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -18,7 +18,7 @@ packages:
   - name: LuaLS/lua-language-server@3.17.1
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
-  - name: astral-sh/ruff@0.15.1
+  - name: astral-sh/ruff@0.15.2
   - name: astral-sh/uv@0.10.4
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.43.5
@@ -115,7 +115,7 @@ packages:
   - name: stedolan/jq@jq-1.6
   # command-line fuzzy finder
   #   https://github.com/junegunn/fzf
-  - name: junegunn/fzf@v0.67.0
+  - name: junegunn/fzf@v0.68.0
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
   - name: jesseduffield/lazygit@v0.59.0
@@ -129,7 +129,7 @@ packages:
   #   https://github.com/sharkdp/bat
   - name: sharkdp/bat@v0.26.1
   #   https://github.com/kubernetes/minikube
-  - name: kubernetes/minikube@v1.38.0
+  - name: kubernetes/minikube@v1.38.1
   # easy and repeatable kubernetes development
   #   https://github.com/GoogleContainerTools/skaffold
   - name: GoogleContainerTools/skaffold@v2.17.2
@@ -188,10 +188,10 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.411
+  - name: github/copilot-cli@v0.0.412
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.2.6
+  - name: sst/opencode@v1.2.10
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
   - name: charmbracelet/crush@v0.43.2
@@ -255,4 +255,4 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.47
+  - name: anthropics/claude-code@v2.1.49
