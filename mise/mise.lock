@@ -138,7 +138,7 @@ version = "0.19.1"
 backend = "pipx:gitlint-core"
 
 [[tools."pipx:isort"]]
-version = "7.0.0"
+version = "8.0.0"
 backend = "pipx:isort"
 
 [[tools."pipx:mypy"]]
