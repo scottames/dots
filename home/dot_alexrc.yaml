@@ -1,5 +1,8 @@
 ---
 allow:
+  - corrupt
+  - corruption
+  - crash
   - execute
   - execution
   - hook
@@ -7,3 +10,4 @@ allow:
   - just
   - pros
   - simple
+  - straightforward
