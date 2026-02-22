@@ -256,3 +256,6 @@ packages:
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
   - name: anthropics/claude-code@v2.1.52
+  # A CLI tool for code structural search, lint and rewriting
+  #  https://github.com/ast-grep/ast-grep
+  - name: ast-grep/ast-grep@0.41.0
