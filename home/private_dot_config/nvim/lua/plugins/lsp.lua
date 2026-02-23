@@ -179,7 +179,7 @@ return {
         json = { "jsonlint" },
         lua = { "selene", "luacheck" },
         make = { "checkmake" },
-        markdown = { "alex", "markdownlint" },
+        markdown = { "markdownlint" },
         protobuf = { "buf_lint" },
         python = { "bandit", "blocklint", "ruff", "mypy" },
         sql = { "sqlfluff" },
