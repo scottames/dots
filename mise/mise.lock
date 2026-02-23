@@ -78,7 +78,7 @@ version = "18.0.5"
 backend = "npm:ccusage"
 
 [[tools."npm:cspell"]]
-version = "9.6.4"
+version = "9.7.0"
 backend = "npm:cspell"
 
 [[tools."npm:dockerfile-language-server-nodejs"]]
@@ -98,7 +98,7 @@ version = "0.47.0"
 backend = "npm:markdownlint-cli"
 
 [[tools."npm:opkg"]]
-version = "0.8.5"
+version = "0.9.2"
 backend = "npm:opkg"
 
 [[tools."npm:prettier"]]
@@ -122,7 +122,7 @@ version = "17.3.0"
 backend = "npm:stylelint"
 
 [[tools."npm:textlint"]]
-version = "15.5.1"
+version = "15.5.2"
 backend = "npm:textlint"
 
 [[tools."pipx:ansible-lint"]]
