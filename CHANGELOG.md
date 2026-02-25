@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.39.0](https://github.com/scottames/dots/compare/v0.38.0...v0.39.0) (2026-02-25)
+
+
+### Features
+
+* **aqua:** add ast-grep ([d46efe1](https://github.com/scottames/dots/commit/d46efe1c9a37ace3076da2e7df03625a9f77b207))
+* **fish:** add nice gt/wt helper ([6d70f83](https://github.com/scottames/dots/commit/6d70f83499af0ae836512292414093b010066ab8))
+* **opencode:** minor niceties ([16354fc](https://github.com/scottames/dots/commit/16354fc31be3ab5b73979de484df749a2e5a353d))
+
+
+### Bug Fixes
+
+* **gitignore/thts:** ignore all agents ([6c85c2d](https://github.com/scottames/dots/commit/6c85c2d48c28d1d1e713406cf3360468e2a716fe))
+
 ## [0.38.0](https://github.com/scottames/dots/compare/v0.37.0...v0.38.0) (2026-02-17)
 
 
