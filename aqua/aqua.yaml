@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.475.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.476.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -19,10 +19,10 @@ packages:
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
   - name: astral-sh/ruff@0.15.2
-  - name: astral-sh/uv@0.10.5
+  - name: astral-sh/uv@0.10.6
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.43.5
-  - name: dprint/dprint@0.51.1
+  - name: dprint/dprint@0.52.0
   - name: editorconfig-checker/editorconfig-checker@v3.6.1
   - name: golang/tools/goimports@v0.42.0
   - name: google/yamlfmt@v0.21.0
@@ -184,17 +184,17 @@ packages:
   - name: atuinsh/atuin@v18.12.1
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.18.4
+  - name: spacelift-io/spacectl@v1.18.5
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v0.0.415
+  - name: github/copilot-cli@v0.0.417
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.2.10
+  - name: sst/opencode@v1.2.13
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.44.0
+  - name: charmbracelet/crush@v0.45.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -218,7 +218,7 @@ packages:
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.10.5
+  - name: walles/moor@v2.11.0
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.7.0
@@ -238,10 +238,10 @@ packages:
   - name: gohugoio/hugo@v0.156.0
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.2.19
+  - name: jdx/mise@v2026.2.20
   # A specification for CLIs
   #  https://github.com/jdx/usage
-  - name: jdx/usage@v2.18.0
+  - name: jdx/usage@v2.18.1
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
   - name: steveyegge/beads@v0.56.1
@@ -251,11 +251,11 @@ packages:
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v1.5.0
+  - name: tassiovirginio/try-rs@v1.5.3
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.52
+  - name: anthropics/claude-code@v2.1.56
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.41.0
