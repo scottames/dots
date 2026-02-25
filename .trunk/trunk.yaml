@@ -70,6 +70,7 @@ lint:
         - CHANGELOG.md
         - home/dot_claude/**
         - "**/symlink_*.md"
+        - "**/AGENTS.md"
     - linters:
         - gofumpt
         - golangci-lint2

@@ -37,7 +37,7 @@ if ! command -v opkg &>/dev/null; then
 fi
 
 # .openpackage/openpackage.yml hash: {{ include "../home/private_dot_openpackage/openpackage.yml.tmpl" | sha256sum }}
-opkg install -g
+opkg install -g --platforms claude opencode
 
 print_success "openpackage done"
 
