@@ -1,0 +1,23 @@
+{{- $zellijAttentionPlugin := joinPath .chezmoi.homeDir ".config/zellij/plugins/zellij-attention.wasm" -}}
+layout {
+    tab name="~"; children {
+        pane size=1 borderless=true {
+            plugin location="zjstatus"
+        }
+    }
+    default_tab_template {
+{{- if stat $zellijAttentionPlugin }}
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zellij-attention.wasm" {
+                enabled "true"
+                waiting_icon ""
+                completed_icon ""
+            }
+        }
+{{- end }}
+        children
+        pane size=1 borderless=true {
+          plugin location="zjstatus"
+        }
+    }
+}

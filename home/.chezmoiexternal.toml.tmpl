@@ -99,6 +99,15 @@ refreshPeriod = "24h"
     executable = false
     refreshPeriod = "168h"
 
+# renovate: datasource=github-releases depName=KiryuuLight/zellij-attention
+{{ $zellijAttentionVersion := "v0.1.0" -}}
+
+[".config/zellij/plugins/zellij-attention.wasm"]
+    type = "file"
+    url = "https://github.com/KiryuuLight/zellij-attention/releases/download/{{ $zellijAttentionVersion }}/zellij-attention.wasm"
+    executable = false
+    refreshPeriod = "168h"
+
 # renovate: datasource=github-releases depName=dj95/zjstatus
 {{ $zjstatusVersion := "v0.22.0" -}}
 

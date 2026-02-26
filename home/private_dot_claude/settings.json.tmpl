@@ -38,6 +38,27 @@
         ]
       }
 {{- end }}
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify waiting",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify completed",
+            "type": "command"
+          }
+        ]
+      }
     ]
   },
   "permissions": {
