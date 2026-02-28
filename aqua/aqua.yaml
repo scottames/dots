@@ -259,3 +259,7 @@ packages:
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.41.0
+  # Terminal automation for AI agents
+  #  https://github.com/msmps/pilotty
+  - name: msmps/pilotty@v0.0.7
+    registry: dots

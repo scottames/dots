@@ -17,7 +17,8 @@ packages:
   - type: http
     repo_owner: withgraphite
     repo_name: gt
-    url: https://github.com/withgraphite/homebrew-tap/releases/download/{{.Version}}/gt-{{.OS}}{{if eq .OS "macos"}}-{{.Arch}}{{else}}{{end}}
+    url: >-
+      https://github.com/withgraphite/homebrew-tap/releases/download/{{.Version}}/gt-{{.OS}}{{if eq .OS "macos"}}-{{.Arch}}{{else}}{{end}}
     asset: gt
     replacements:
       amd64: x64
@@ -66,7 +67,9 @@ packages:
     repo_owner: max-sixty
     repo_name: worktrunk
     asset: worktrunk-{{.Arch}}-{{.OS}}.tar.xz
-    description: "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows \n"
+    description: |
+      Worktrunk is a CLI for Git worktree management, designed for parallel
+      AI agent workflows
     replacements:
       amd64: x86_64
       arm64: aarch64
@@ -83,8 +86,21 @@ packages:
     repo_name: try-rs
     asset: try-rs-{{.Version}}-{{.OS}}-{{.Arch}}.tar.gz
     description: |
-      A blazing fast, Rust-based workspace manager for your temporary experiments.
+      A blazing fast, Rust-based workspace manager for your temporary
+      experiments.
     replacements:
       amd64: x86_64
     supported_envs:
       - linux/amd64
+  - type: github_release
+    repo_owner: msmps
+    repo_name: pilotty
+    # yamllint disable-line rule:line-length
+    asset: pilotty-{{if eq .Arch "arm64"}}aarch64{{else}}x86_64{{end}}-{{if eq .OS "darwin"}}apple-darwin{{else}}unknown-linux-gnu{{end}}.tar.gz
+    format: tar.gz
+    files:
+      - name: pilotty
+    supported_envs:
+      - darwin
+      - linux
+    description: Terminal automation for AI agents
