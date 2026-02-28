@@ -41,10 +41,21 @@
     ],
     "Notification": [
       {
-        "matcher": "",
+        "matcher": "permission_prompt|idle_prompt",
         "hooks": [
           {
             "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify waiting",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify completed",
             "type": "command"
           }
         ]
@@ -79,6 +90,7 @@
       "Bash(go run:*)",
       "Bash(go test:*)",
       "Bash(grep:*)",
+      "Bash(command find:*)",
       "Bash(command grep:*)",
       "Bash(command ls:*)",
       "Bash(ls:*)",
