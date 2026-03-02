@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.40.0](https://github.com/scottames/dots/compare/v0.39.0...v0.40.0) (2026-03-02)
+
+
+### Features
+
+* **aqua:** add pilotty ([c01bbb6](https://github.com/scottames/dots/commit/c01bbb6a117a3932cca1d2d48484735d78600ed1))
+* **zellij/fish:** add worktree helper ([6f9a964](https://github.com/scottames/dots/commit/6f9a964e24c8919ebf90cc8598fe183ea8ed77af))
+* **zellij:** add attention plugin ([b6fa8f9](https://github.com/scottames/dots/commit/b6fa8f9dbe981bdd13bd77cc811aa9ec084f4e69))
+
+
+### Bug Fixes
+
+* **aqua/mise:** use dots registry to make sure to get gnu mise ([bbb0ad6](https://github.com/scottames/dots/commit/bbb0ad6b8581661ff0ef8d1d196c0a674666c6e5))
+
 ## [0.39.0](https://github.com/scottames/dots/compare/v0.38.0...v0.39.0) (2026-02-25)
 
 
