@@ -391,13 +391,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/homeport/dyff/v1.10.5/dyff_1.10.5_linux_amd64.tar.gz",
-      "checksum": "FB4D91CB9B0CB5A0DF4370315EF12F406FF57C61466D4823175DD755F9418AE6",
+      "id": "github_release/github.com/homeport/dyff/v1.11.2/dyff_1.11.2_linux_amd64.tar.gz",
+      "checksum": "84E952F8AC40C8824DE83D81261F9F6C5B984B5FF367EB08B688E0C1450A4F85",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/homeport/dyff/v1.10.5/dyff_1.10.5_linux_arm64.tar.gz",
-      "checksum": "F8E885C01D1D160C5B396787A4280072DA83D3E2156734D8FD82B02DDFA2714E",
+      "id": "github_release/github.com/homeport/dyff/v1.11.2/dyff_1.11.2_linux_arm64.tar.gz",
+      "checksum": "132CECBF4982628E8D47E30F5D25F987BB3F0A73A19FD1F1F23108559F1FB2F6",
       "algorithm": "sha256"
     },
     {
@@ -421,33 +421,23 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.2.23/mise-v2026.2.23-linux-arm64",
-      "checksum": "82DE2280004A50714112ED21C20EF430B3D004A044A7BCE5ABD4E0860605CCD9",
+      "id": "github_release/github.com/jdx/mise/v2026.3.0/mise-v2026.3.0-linux-arm64",
+      "checksum": "6A0B75D51F96A3DD6886A87139FCA91074920BF27412DD1FE509C3D7E3CDE497",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.2.23/mise-v2026.2.23-linux-arm64-musl.tar.gz",
-      "checksum": "75551959CBA7030168D890D9DA1A2C68FD50D9E253B52F3A853F7245DF8873E6",
+      "id": "github_release/github.com/jdx/mise/v2026.3.0/mise-v2026.3.0-linux-x64",
+      "checksum": "129B7875DD72A457C93EE5BB571D33EFE9304B8F13F1734D205041C3F011FE65",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.2.23/mise-v2026.2.23-linux-x64",
-      "checksum": "0204C9BDC7B47F6608EEA629815E08427BD205F5B0E8C357C46BFDEF8EAE6100",
+      "id": "github_release/github.com/jdx/usage/v2.18.2/usage-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "7476160B4AD9CC04885B3FFBE3500D0763ACD0B20E49CC75142786F175E8C5F0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jdx/mise/v2026.2.23/mise-v2026.2.23-linux-x64-musl.tar.gz",
-      "checksum": "4DD826AD4CB69EC98939669BCDBC4C28DB7677E974703D4372F40E96AA1D5E6F",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/jdx/usage/v2.18.1/usage-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "F2D4F64223EB828628876C3BE487BE1C1D10BAFBE7C929B3FCBD512F582764CE",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/jdx/usage/v2.18.1/usage-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "A9EE73E19ED9FF5DFDB965BB8CD9563733EDD391D583C626EF95F394CD7FDC52",
+      "id": "github_release/github.com/jdx/usage/v2.18.2/usage-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "0AEE30563EFBCA157EC6CD8AE2C6F33C5CAEE6B51E0DDBF66B3B0C3FB9E4C17B",
       "algorithm": "sha256"
     },
     {
@@ -466,13 +456,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/v0.68.0/fzf-0.68.0-linux_amd64.tar.gz",
-      "checksum": "545004A69EB65BB9ADF32000971105AC21AEA54BBECB618C55414D21B823FE95",
+      "id": "github_release/github.com/junegunn/fzf/v0.70.0/fzf-0.70.0-linux_amd64.tar.gz",
+      "checksum": "8FD0E0B93BDF64BA90081FFB6658D77EA5A024C122B36852B1DE30F9D2733754",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/v0.68.0/fzf-0.68.0-linux_arm64.tar.gz",
-      "checksum": "DAD9CC3B617305D504DBBF8812C4C9970A6DC7EFDCE9B5EACBD130D1F1DBC05D",
+      "id": "github_release/github.com/junegunn/fzf/v0.70.0/fzf-0.70.0-linux_arm64.tar.gz",
+      "checksum": "90A07A13B61F56DD59CCFD0F0BF05070E9CEC067713D313FA2607AAB2DC0E422",
       "algorithm": "sha256"
     },
     {
@@ -626,13 +616,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/nushell/nushell/0.110.0/nu-0.110.0-aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "8C6D9655ECCE9CEA7F53D190D12E351DF687614324201F4CF717310ABF87D946",
+      "id": "github_release/github.com/nushell/nushell/0.111.0/nu-0.111.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "FF72150FEFCAC7C990FA0F2E04550D51B609274CBD0A2831335E6975BD2079C8",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/nushell/nushell/0.110.0/nu-0.110.0-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "82B0F24646AD1DC5F1A2F2112B8A25178FB62E085C26B1A00EB2E0BE091CE055",
+      "id": "github_release/github.com/nushell/nushell/0.111.0/nu-0.111.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "AAF0CCE45BE9F3B30B3E297B9B5026F91B48DF088B3C110AC5DB79A7A7D957E5",
       "algorithm": "sha256"
     },
     {
@@ -746,13 +736,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/steveyegge/beads/v0.56.1/beads_0.56.1_linux_amd64.tar.gz",
-      "checksum": "4F9F6CC44465A11613FF529009901EAAF841C6B1F91C15E002B0ECDA2015A15C",
+      "id": "github_release/github.com/steveyegge/beads/v0.57.0/beads_0.57.0_linux_amd64.tar.gz",
+      "checksum": "F8629D5627BED7D25F06F92334ADDC171D679F9AED9D08C5D42A9684205DC04B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/steveyegge/beads/v0.56.1/beads_0.56.1_linux_arm64.tar.gz",
-      "checksum": "A698560F432819D91D453860A6D8BC37B7D38F901B44B0D30D53CF6B394B9BD0",
+      "id": "github_release/github.com/steveyegge/beads/v0.57.0/beads_0.57.0_linux_arm64.tar.gz",
+      "checksum": "84CC6B5B69DBF3900A0E0787E2F740846DF4398129FC215250C83D6467B1AFA8",
       "algorithm": "sha256"
     },
     {
