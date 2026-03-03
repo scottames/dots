@@ -1,9 +1,9 @@
 [tools]
 "aqua:ossf/scorecard" = "5.4.0"
 "aqua:google/osv-scanner" = "2.3.3"
-"aqua:aquasecurity/trivy" = "0.69.1"
+"aqua:aquasecurity/trivy" = "0.69.3"
 "aqua:gitleaks/gitleaks" = "8.30.0"
-"aqua:securego/gosec" = "2.24.0"
+"aqua:securego/gosec" = "2.24.7"
 "aqua:cli/cli" = "2.87.3"
 "aqua:jqlang/jq" = "1.8.1"
 
@@ -18,4 +18,4 @@
 "pipx:pip-audit" = "2.10.0"
 "pipx:guarddog" = "2.9.0"
 
-"npm:socket" = "1.1.63"
+"npm:socket" = "1.1.65"
