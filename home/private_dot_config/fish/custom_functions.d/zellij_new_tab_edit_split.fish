@@ -52,6 +52,15 @@ function zellij_new_tab_edit_split \
 """
         end
 
+        set -l _STATUS_PANE ""
+        if test -f "$HOME/.config/zellij/plugins/zellij-status.wasm"
+            set _STATUS_PANE """
+          pane size=1 borderless=true {
+              plugin location=\"zellij-status\"
+          }
+"""
+        end
+
         set _LAYOUT_CONTENT """
   layout {
       tab {
@@ -62,9 +71,7 @@ function zellij_new_tab_edit_split \
               }
               pane command=\"nvim\"$_ARGS start_suspended=$_START_SUSPENDED
           }
-          pane size=1 borderless=true {
-              plugin location=\"zjstatus\"
-          }
+          $_STATUS_PANE
       }
   }
   """

@@ -1,3 +1,4 @@
+{{- $zellijStatusPlugin := joinPath .chezmoi.homeDir ".config/zellij/plugins/zellij-status.wasm" -}}
 {{ if eq .chezmoi.os "darwin" -}}
 copy_command "pbcopy"
 {{- else if eq .desktop.login.type "wayland" -}}
@@ -21,9 +22,11 @@ ui {
     }
 }
 
+{{- if stat $zellijStatusPlugin }}
 load_plugins {
-    zjstatus
+    zellij-status
 }
+{{- end }}
 
 keybinds clear-defaults=true {
     entersearch {
@@ -434,7 +437,12 @@ keybinds clear-defaults=true {
         bind "[" { BreakPaneLeft; SwitchToMode "normal"; }
         bind "]" { BreakPaneRight; SwitchToMode "normal"; }
         bind "b" { BreakPane; SwitchToMode "normal"; }
-        bind "n" { NewTab; SwitchToMode "normal"; }
+        bind "n" {
+            NewTab {
+                layout "default"
+            }
+            SwitchToMode "normal"
+        }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "," { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "normal"; }
@@ -454,7 +462,9 @@ plugins {
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
 
-    zjstatus location="file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zjstatus.wasm" {
+{{- if stat $zellijStatusPlugin }}
+    zellij-status location="file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij-status.wasm" {
+        layout_mode "horizontal"
 
         // Color scheme
         // -- Catppuccin Mocha --
@@ -485,15 +495,17 @@ plugins {
         color_mantle "#181825"
         color_crust "#11111b"
 
+        datetime_format   "%Y-%m-%d %H:%M"
+        datetime_timezone "America/Los_Angeles"
+
         // Format
-        format_left   "#[bg=$base,fg=$overlay2]{mode}#[bg=$mantle]{tabs}"
-        format_center "{notifications}"
-        format_right  "#[bg=$mantle,fg=$base]#[bg=$base,fg=$subtext0] {session} #[bg=$base,fg=$overlay2]#[bg=$overlay2,fg=$mantle] {datetime} "
+        format_1_left   "#[bg=$base,fg=$overlay2]{mode}#[bg=$mantle]{tabs}"
+        format_2_right  "{notifications}#[bg=$mantle,fg=$base]#[bg=$base,fg=$subtext0] {session} #[bg=$base,fg=$overlay2]#[bg=$overlay2,fg=$mantle] {datetime} "
         format_space  "#[bg=$mantle,fg=$overlay0]"
         // hide status bar sections if overlap due to insufficient width
         format_hide_on_overlength "true"
         // left, right, center precedence
-        format_precedence "lrc"
+        format_precedence "132"
 
         mode_normal        "#[bg=$base,fg=$base]#[bg=$blue,fg=$base,bold] NORMAL #[bg=$base,fg=$blue]"
         mode_locked        "#[bg=$base,fg=$base]#[bg=$red,fg=$base,bold] LOCKED #[bg=$base,fg=$red]"
@@ -509,35 +521,27 @@ plugins {
         mode_session       "#[bg=$base,fg=$base]#[bg=$mauve,fg=$base,bold] SESSION #[bg=$base,fg=$mauve]"
         mode_prompt        "#[bg=$base,fg=$base]#[bg=$red,fg=$peach,bold] PROMPT #[bg=$base,fg=$red]"
 
-        tab_normal              "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {floating_indicator}#[bg=$mantle,fg=$base]"
-        tab_normal_fullscreen   "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}#[bg=$mantle,fg=$base]"
-        tab_normal_sync         "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {sync_indicator}#[bg=$mantle,fg=$base]"
-        tab_active              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {floating_indicator}#[bg=$mantle,fg=$green]"
-        tab_active_fullscreen   "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}#[bg=$mantle,fg=$green]"
-        tab_active_sync         "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {sync_indicator}#[bg=$mantle,fg=$green]"
+        notification_enabled            "true"
+        notification_format             "#[bg=$peach,fg=$mantle]#[bg=$peach,fg=$mantle] {count} #[bg=$mantle,fg=$peach]"
+        notification_format_completed   "#[fg=$peach,bold]{icon}"
+        notification_format_in_progress "{icon}"
+        notification_format_tab         "{icon}"
+        notification_format_waiting     "#[fg=$peach,bold]{icon}"
+        notification_icon_completed     ""
+        notification_icon_in_progress   "󰔛"
+        notification_icon_waiting       ""
+        notification_show_if_empty      "false"
+
+        tab_normal              "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {notification}#[bg=$mantle,fg=$base]"
+        tab_normal_fullscreen   "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} 󰊓 {notification}#[bg=$mantle,fg=$base]"
+        tab_normal_sync         "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name}  {notification}#[bg=$mantle,fg=$base]"
+        tab_active              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {notification}#[bg=$mantle,fg=$green]"
+        tab_active_fullscreen   "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} 󰊓 {notification}#[bg=$mantle,fg=$green]"
+        tab_active_sync         "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name}  {notification}#[bg=$mantle,fg=$green]"
+        tab_rename              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base,bold] RENAME #[bg=$mantle,fg=$green]"
         tab_separator           "#[bg=$mantle,fg=$overlay0]"
-
-        tab_sync_indicator       ""
-        tab_fullscreen_indicator "󰊓"
-        tab_floating_indicator   "󰹙"
-
-        notification_format_unread "#[bg=$peach,fg=$mantle]#[bg=$peach,fg=$mantle] {message} #[bg=$mantle,fg=$peach]"
-        notification_format_no_notifications ""
-        notification_show_interval "10"
-
-        // Format commands
-        datetime          "{format}"
-        datetime_format   "%Y-%m-%d %H:%M"
-        datetime_timezone "America/Los_Angeles"
-
-        // Border
-        hide_frame_for_single_pane "false"
-        border_enabled  "false"
-        // example:
-        // border_char     "-"
-        // border_format   "#[fg=#6C7086]{char}"
-        // border_position "top"
     }
+{{- end }}
 }
 
 // vi: ft=kdl
