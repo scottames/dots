@@ -150,7 +150,7 @@ version = "0.0.62"
 backend = "pipx:ruff-lsp"
 
 [[tools."pipx:semgrep"]]
-version = "1.153.1"
+version = "1.154.0"
 backend = "pipx:semgrep"
 
 [[tools."pipx:sqlfluff"]]
