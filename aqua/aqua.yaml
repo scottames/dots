@@ -41,7 +41,7 @@ packages:
   - name: tmc/json-to-struct@v0.1.0
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.7.20 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.8.0 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -178,7 +178,7 @@ packages:
   - name: leg100/pug@v0.6.5
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
-  - name: dlvhdr/gh-dash@v4.22.0
+  - name: dlvhdr/gh-dash@v4.23.0
   # magical shell history
   #   https://github.com/atuinsh/atuin
   - name: atuinsh/atuin@v18.12.1
@@ -194,7 +194,7 @@ packages:
   - name: sst/opencode@v1.2.17
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.47.0
+  - name: charmbracelet/crush@v0.47.1
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -204,7 +204,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.107.0
+  - name: openai/codex@rust-v0.110.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -238,7 +238,7 @@ packages:
   - name: gohugoio/hugo@v0.157.0
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.3.2
+  - name: jdx/mise@v2026.3.3
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -252,11 +252,11 @@ packages:
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v1.6.1
+  - name: tassiovirginio/try-rs@v1.6.2
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.68
+  - name: anthropics/claude-code@v2.1.69
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.41.0
