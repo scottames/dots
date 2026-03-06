@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.41.0](https://github.com/scottames/dots/compare/v0.40.0...v0.41.0) (2026-03-06)
+
+
+### Features
+
+* **opencode:** add context7 mcp ([4aef3fc](https://github.com/scottames/dots/commit/4aef3fcbbeec49017cf68f633b0cf8d06a4984a2))
+
 ## [0.40.0](https://github.com/scottames/dots/compare/v0.39.0...v0.40.0) (2026-03-02)
 
 
