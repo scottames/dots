@@ -44,7 +44,7 @@
         "matcher": "permission_prompt|idle_prompt",
         "hooks": [
           {
-            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify waiting",
+            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-status-notify waiting",
             "type": "command"
           }
         ]
@@ -55,7 +55,7 @@
         "matcher": "*",
         "hooks": [
           {
-            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify completed",
+            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-status-notify completed",
             "type": "command"
           }
         ]
@@ -65,7 +65,7 @@
       {
         "hooks": [
           {
-            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-attention-notify completed",
+            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-status-notify completed",
             "type": "command"
           }
         ]

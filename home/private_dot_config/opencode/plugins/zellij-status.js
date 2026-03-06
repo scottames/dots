@@ -1,5 +1,5 @@
-export const zellijAttentionPlugin = async ({ $ }) => {
-  const notifier = `${process.env.HOME}/.local/bin/zellij-attention-notify`;
+export const zellijStatusPlugin = async ({ $ }) => {
+  const notifier = `${process.env.HOME}/.local/bin/zellij-status-notify`;
 
   const notify = async (state) => {
     try {

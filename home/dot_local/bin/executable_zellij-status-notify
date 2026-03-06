@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Bridge script for zellij-attention notifications.
-# https://github.com/KiryuuLight/zellij-attention
+# Bridge script for zellij-status notifications.
+# https://github.com/scottames/zellij-status
 #
 # Why:
 # - Provides one stable command for agent integrations to signal tab attention
@@ -9,11 +9,11 @@
 #
 # What uses it:
 # - Claude Code hooks in ~/.claude/settings.json (Notification, Stop)
-# - OpenCode plugin ~/.config/opencode/plugins/zellij-attention.js
+# - OpenCode plugin ~/.config/opencode/plugins/zellij-status.js
 #
 # Behavior:
 # - Accepts one state: waiting|completed
-# - Sends: zellij-attention::<state>::$ZELLIJ_PANE_ID via `zellij pipe --name`
+# - Sends: zellij-status::<state>::$ZELLIJ_PANE_ID via `zellij pipe --name`
 # - Exits successfully when not in Zellij or when zellij is unavailable
 
 set -euo pipefail
@@ -37,4 +37,4 @@ if ! command -v zellij >/dev/null 2>&1; then
   exit 0
 fi
 
-zellij pipe --name "zellij-attention::${state}::${ZELLIJ_PANE_ID}" >/dev/null 2>&1 || true
+zellij pipe --name "zellij-status::${state}::${ZELLIJ_PANE_ID}" >/dev/null 2>&1 || true

@@ -5,11 +5,6 @@ dependencies:
   path: {{ .home.src_github_dir }}/.agents/main/packages/compound-engineering
 {{- end }}
 
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/superpowers") }}
-- name: superpowers
-  path: {{ .home.src_github_dir }}/.agents/main/packages/superpowers
-
-{{- end }}
 {{- if stat (joinPath .home.src_github_dir ".agents/main/packages/global") }}
 - name: global
   path: {{ .home.src_github_dir }}/.agents/main/packages/global
