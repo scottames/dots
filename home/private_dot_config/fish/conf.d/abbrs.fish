@@ -68,6 +68,8 @@ abbr -a gds "git diff --staged"
 abbr -a gda "git diff HEAD"
 abbr -a gdb "git diff master..`git rev-parse --abbrev-ref HEAD`"
 abbr -a gf "git reflog"
+abbr -a ghd "gh dash"
+abbr -a ghmd "gh gfm-preview"
 abbr -a ghist "git hist"
 abbr -a ghpr fzfpr
 abbr -a ghprw "gh pr view --web"
@@ -134,6 +136,7 @@ abbr -a ll "ls -hl$_ls_arg" # list long w/ headers
 abbr -a lt "load_env ~/.tkns"
 abbr -a makepass "openssl rand -base64 12"
 abbr -a md mkdir_cd
+abbr -a mdp "gh gfm-preview"
 abbr -a mi "mise install"
 abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'
 abbr -a mu "mise use --pin"

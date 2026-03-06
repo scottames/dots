@@ -104,3 +104,12 @@ packages:
       - darwin
       - linux
     description: Terminal automation for AI agents
+  - type: github_release
+    repo_owner: thiagokokada
+    repo_name: gh-gfm-preview
+    asset: "{{.OS}}-{{.Arch}}"
+    format: raw
+    supported_envs:
+      - darwin
+      - linux
+    description: GitHub CLI extension to preview GitHub Flavored Markdown

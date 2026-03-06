@@ -264,3 +264,7 @@ packages:
   #  https://github.com/msmps/pilotty
   - name: msmps/pilotty@v0.0.7
     registry: dots
+  # gh extension to preview GitHub Flavored Markdown
+  #  https://github.com/thiagokokada/gh-gfm-preview
+  - name: thiagokokada/gh-gfm-preview@v1.0.0
+    registry: dots
