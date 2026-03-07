@@ -160,20 +160,18 @@ keybinds clear-defaults=true {
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
-        bind "Alt {" "Alt Left"  { MoveTab "left"; }
-        bind "Alt }" "Alt Right" { MoveTab "right"; }
 
-        bind "Alt f" { ToggleFloatingPanes; }
-        bind "Alt n" { NewPane; }
-        bind "Ctrl g" { SwitchToMode "locked"; }
+        bind "Alt f"        { ToggleFloatingPanes; }
+        bind "Alt n"        { NewPane; }
+        bind "Ctrl g"       { SwitchToMode "locked"; }
         bind "Ctrl Shift l" { Clear; }
         bind "Ctrl Shift q" { CloseFocus; }
-        bind "Ctrl Alt q" { Quit; }
-        // quick tab navigation
-        bind "Ctrl Alt h" { GoToPreviousTab; }
-        bind "Ctrl Alt l" { GoToNextTab; }
-        bind "Ctrl Alt Left" { GoToPreviousTab; }
-        bind "Ctrl Alt Right" { GoToNextTab; }
+        bind "Ctrl Alt q"   { Quit; }
+
+        bind "Ctrl Alt h" "Ctrl Alt Left"  { GoToPreviousTab; }
+        bind "Ctrl Alt l" "Ctrl Alt Right" { GoToNextTab; }
+        bind "Ctrl Alt Shift Left"         { MoveTab "left"; }
+        bind "Ctrl Alt Shift Right"        { MoveTab "right"; }
 
         // https://github.com/hiasr/vim-zellij-navigator
         bind "Ctrl h" {
@@ -538,7 +536,7 @@ plugins {
         tab_active              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {notification}#[bg=$mantle,fg=$green]"
         tab_active_fullscreen   "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} 󰊓 {notification}#[bg=$mantle,fg=$green]"
         tab_active_sync         "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name}  {notification}#[bg=$mantle,fg=$green]"
-        tab_rename              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base,bold] RENAME #[bg=$mantle,fg=$green]"
+        tab_rename              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base,bold] {index}  {name} #[bg=$mantle,fg=$green]"
         tab_separator           "#[bg=$mantle,fg=$overlay0]"
     }
 {{- end }}
