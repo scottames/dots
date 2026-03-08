@@ -525,19 +525,24 @@ plugins {
         notification_format_in_progress "{icon}"
         notification_format_tab         "{icon}"
         notification_format_waiting     "#[fg=$peach,bold]{icon}"
-        notification_icon_completed     ""
-        notification_icon_in_progress   "󰔛"
-        notification_icon_waiting       ""
+        notification_indicator_completed     ""
+        notification_indicator_in_progress   "󰔛"
+        notification_indicator_waiting       ""
         notification_show_if_empty      "false"
 
-        tab_normal              "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {notification}#[bg=$mantle,fg=$base]"
-        tab_normal_fullscreen   "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} 󰊓 {notification}#[bg=$mantle,fg=$base]"
-        tab_normal_sync         "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name}  {notification}#[bg=$mantle,fg=$base]"
-        tab_active              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {notification}#[bg=$mantle,fg=$green]"
-        tab_active_fullscreen   "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} 󰊓 {notification}#[bg=$mantle,fg=$green]"
-        tab_active_sync         "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name}  {notification}#[bg=$mantle,fg=$green]"
+
+        tab_normal              "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
+        tab_normal_fullscreen   "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
+        tab_normal_sync         "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
+        tab_active              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$green]"
+        tab_active_fullscreen   "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$green]"
+        tab_active_sync         "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$green]"
         tab_rename              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base,bold] {index}  {name} #[bg=$mantle,fg=$green]"
         tab_separator           "#[bg=$mantle,fg=$overlay0]"
+
+        tab_indicator_fullscreen "󰊓"
+        tab_indicator_sync       ""
+        tab_indicator_floating   "󰹙"
     }
 {{- end }}
 }
