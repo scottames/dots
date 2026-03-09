@@ -21,7 +21,7 @@ Requirements: `curl`, `git`, and `go`
 
 ```bash
 curl -fsLS \
-  https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh \
+  https://raw.githubusercontent.com/scottames/dots/main/scripts/init.sh | bash
 ```
 
 Optionally, pass additional params to `chezmoi init`
