@@ -207,6 +207,8 @@ abbr -a zeh "zellij_new_tab_edit_split $MY_SRC_DIR/hark/main --name='hark'"
 abbr -a zeh. "zellij_new_tab_edit_split $XDG_CONFIG_HOME/hark --name='.hark'"
 abbr -a zeo "zellij_new_tab_edit_split $HOME/.obsidian/this --name='obsidian'"
 abbr -a zet zellij_new_tab_edit_split
+abbr -a ztev "zellij_new_tab_edit_split --status-vertical"
+abbr -a ztevr "zellij_new_tab_edit_split --status-vertical-right"
 abbr -a zego "zellij_new_tab_edit_split --layout=go"
 abbr -a zj zellij # see functions
 abbr -a zjac "zellij action"
@@ -218,6 +220,8 @@ abbr -a zjr "zellij run --"
 abbr -a zr zellij_run # see functions
 abbr -a zrt zellij_rename_tab # see functions
 abbr -a zte zellij_new_tab_edit_split # see functions
+abbr -a zv zellij_vertical # see functions
+abbr -a zvr zellij_vertical_right # see functions
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ cd helpers                                               │
