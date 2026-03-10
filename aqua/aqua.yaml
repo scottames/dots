@@ -271,3 +271,10 @@ packages:
   # CLI home video recorder 📼
   #  https://github.com/charmbracelet/vhs
   - name: charmbracelet/vhs@v0.10.0
+  # A git diff pager based on delta but with a file tree, à la GitHub
+  #  https://github.com/dlvhdr/diffnav
+  - name: dlvhdr/diffnav@v0.10.0
+  # A Blazingly Fast Terminal UI for GitHub Actions
+  #  https://github.com/dlvhdr/gh-enhance
+  - name: dlvhdr/gh-enhance@v0.5.1
+    registry: dots

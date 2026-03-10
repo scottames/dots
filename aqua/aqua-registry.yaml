@@ -113,3 +113,12 @@ packages:
       - darwin
       - linux
     description: GitHub CLI extension to preview GitHub Flavored Markdown
+  - type: github_release
+    repo_owner: dlvhdr
+    repo_name: gh-enhance
+    asset: gh-enhance_{{.Version}}_{{.OS}}-{{.Arch}}
+    format: raw
+    supported_envs:
+      - darwin
+      - linux
+    description: GitHub CLI extension that improves the pull request experience

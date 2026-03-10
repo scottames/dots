@@ -261,6 +261,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/dlvhdr/diffnav/v0.10.0/diffnav_Linux_arm64.tar.gz",
+      "checksum": "ADBDFDB1B9A7606D6B8D59A990D7F880A7F362C1882BEA8BCFC348BF23409BBB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/diffnav/v0.10.0/diffnav_Linux_x86_64.tar.gz",
+      "checksum": "D0F08652D0CCC0D2EBF54C222333DDB0D57EB96CE4F7FE574AB60D53DF90286A",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/dlvhdr/gh-dash/v4.23.2/gh-dash_v4.23.2_linux-amd64",
       "checksum": "FED6B0AE90CE2C32AC029C2CE891CD2AD1A1CDD9A12D21FB14ED25D18DAE658B",
       "algorithm": "sha256"
@@ -268,6 +278,16 @@
     {
       "id": "github_release/github.com/dlvhdr/gh-dash/v4.23.2/gh-dash_v4.23.2_linux-arm64",
       "checksum": "19037CE8EF2997F29CCBA96C8309B47554A4F13BED2492C3997AEEF2FDBAA136",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-enhance/v0.5.1/gh-enhance_v0.5.1_linux-amd64",
+      "checksum": "9143C9A481CB63261CC26822FAD06497092C4D7FCB9A87784906D32D7174C666",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/dlvhdr/gh-enhance/v0.5.1/gh-enhance_v0.5.1_linux-arm64",
+      "checksum": "194508297F257DF1056DC5A04BFB7C25B182FC14C92CB5CEABC9A3C3802BECAE",
       "algorithm": "sha256"
     },
     {
@@ -937,8 +957,8 @@
     },
     {
       "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.479.0/registry.yaml",
-      "checksum": "A9B4D879617E609994A14BCB65D111C48403B7A11626F97C1C6BA358005F43A9BED6F814A6F077F9BE2F720304C2D6FD576C0AA3453F5EA57D7F37BBAB9E4D81",
-      "algorithm": "sha512"
+      "checksum": "E838B35BF4CD634AFE5040B3475F6D45C9B4C918122292D3E34EF545A4320987",
+      "algorithm": "sha256"
     }
   ]
 }
