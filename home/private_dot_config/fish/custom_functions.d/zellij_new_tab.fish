@@ -29,5 +29,5 @@ function zellij_new_tab \
         set _NAME "--name $_flag_name"
     end
 
-    zellij_new_tab_edit_split $_SPLIT $LAYOUT $NAME $DIR
+    zellij_new_tab_edit_split $_SPLIT $_LAYOUT $_NAME $_DIR
 end

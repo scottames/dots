@@ -1,0 +1,87 @@
+{{- $zellijStatusPlugin := joinPath .chezmoi.homeDir ".config/zellij/plugins/zellij-status.wasm" -}}
+{{- if stat $zellijStatusPlugin }}
+pane size=26 borderless=true {
+    plugin location="file:{{ $zellijStatusPlugin }}" {
+        layout_mode "vertical"
+
+        color_rosewater "#f5e0dc"
+        color_flamingo "#f2cdcd"
+        color_pink "#f5c2e7"
+        color_mauve "#cba6f7"
+        color_red "#f38ba8"
+        color_maroon "#eba0ac"
+        color_peach "#fab387"
+        color_yellow "#f9e2af"
+        color_green "#a6e3a1"
+        color_teal "#94e2d5"
+        color_sky "#89dceb"
+        color_sapphire "#74c7ec"
+        color_blue "#89b4fa"
+        color_lavender "#b4befe"
+        color_text "#cdd6f4"
+        color_subtext1 "#bac2de"
+        color_subtext0 "#a6adc8"
+        color_overlay2 "#9399b2"
+        color_overlay1 "#7f849c"
+        color_overlay0 "#6c7086"
+        color_surface2 "#585b70"
+        color_surface1 "#45475a"
+        color_surface0 "#313244"
+        color_base "#1e1e2e"
+        color_mantle "#181825"
+        color_crust "#11111b"
+
+        format_1_top_left  "#[bg=$surface1,fg=$text,bold,fill] {notifications}"
+        format_1_top_right "#[bg=$surface1] {datetime} "
+        format_2_top_left  "#[fg=$overlay1] {session}"
+        format_1_middle_right "{tabs}"
+        format_1_bottom_left  "{mode_cap}"
+        format_1_bottom_right "{mode}"
+
+        cap_bg     "$base"
+        cap_symbol ""
+
+        tab_active               "#[bg=$mantle,fg=$green]#[bg=$green,fg=$base,bold] {index} #[bg=$green,fg=$base] {fullscreen_indicator}{sync_indicator}{floating_indicator} {notification}#[bg=$green,fg=$base,fill] #[bg=$green,fg=$base,bold]{name} #[fg=$mantle,bg=$green]"
+        tab_active_fullscreen    "#[bg=$mantle,fg=$green]#[bg=$green,fg=$base,bold] {index} #[bg=$green,fg=$base] {fullscreen_indicator}{sync_indicator}{floating_indicator} {notification}#[bg=$green,fg=$base,fill] #[bg=$green,fg=$base,bold]{name} #[fg=$mantle,bg=$green]"
+        tab_active_sync          "#[bg=$mantle,fg=$green]#[bg=$green,fg=$base,bold] {index} #[bg=$green,fg=$base] {fullscreen_indicator}{sync_indicator}{floating_indicator} {notification}#[bg=$green,fg=$base,fill] #[bg=$green,fg=$base,bold]{name} #[fg=$mantle,bg=$green]"
+        tab_indicator_floating   "󰶙"
+        tab_indicator_fullscreen "󰊓"
+        tab_indicator_sync       "󰻆"
+        tab_max_name_length      20
+        tab_normal               "#[bg=$mantle,fg=$base]#[bg=$base,fg=$overlay0,bold] {index} #[bg=$base,fg=$overlay0] {fullscreen_indicator}{sync_indicator}{floating_indicator} {notification}#[bg=$base,fg=$overlay0,fill] #[bg=$base,fg=$overlay0,bold]{name} #[fg=$mantle,bg=$base]"
+        tab_normal_fullscreen    "#[bg=$mantle,fg=$base]#[bg=$base,fg=$overlay0,bold] {index} #[bg=$base,fg=$overlay0] {fullscreen_indicator}{sync_indicator}{floating_indicator} {notification}#[bg=$base,fg=$overlay0,fill] #[bg=$base,fg=$overlay0,bold]{name} #[fg=$mantle,bg=$base]"
+        tab_normal_sync          "#[bg=$mantle,fg=$base]#[bg=$base,fg=$overlay0,bold] {index} #[bg=$base,fg=$overlay0] {fullscreen_indicator}{sync_indicator}{floating_indicator} {notification}#[bg=$base,fg=$overlay0,fill] #[bg=$base,fg=$overlay0,bold]{name} #[fg=$mantle,bg=$base]"
+        tab_padding_top          0
+        tab_separator            "#[bg=$mantle,fg=$overlay0]"
+        tab_start_index          1
+        tab_overflow_above       "#[fg=$overlay0,bg=$mantle]  ^ +{count}"
+        tab_overflow_below       "#[fg=$overlay0,bg=$mantle]  v +{count}"
+        tab_border               "#[fg=$surface1]│"
+
+        notification_enabled               "true"
+        notification_format                "#[bg=$surface1,fg=$peach,bold] {count} "
+        notification_indicator_completed   ""
+        notification_indicator_in_progress "󰔛"
+        notification_indicator_waiting     ""
+        notification_show_if_empty         "false"
+
+        mode_enter_search "#[bg=$yellow,fg=$base,bold,fill] ENT-SEARCH "
+        mode_locked       "#[bg=$red,fg=$base,bold,fill] LOCKED "
+        mode_move         "#[bg=$teal,fg=$base,bold,fill] MOVE "
+        mode_normal       "#[bg=$blue,fg=$base,bold,fill] NORMAL "
+        mode_pane         "#[bg=$peach,fg=$base,bold,fill] PANE "
+        mode_prompt       "#[bg=$red,fg=$peach,bold,fill] PROMPT "
+        mode_rename_pane  "#[bg=$peach,fg=$base,bold,fill] RENAMEPANE "
+        mode_rename_tab   "#[bg=$green,fg=$base,bold,fill] RENAMETAB "
+        mode_resize       "#[bg=$teal,fg=$base,bold,fill] RESIZE "
+        mode_scroll       "#[bg=$peach,fg=$base,bold,fill] SCROLL "
+        mode_search       "#[bg=$yellow,fg=$base,bold,fill] SEARCH "
+        mode_session      "#[bg=$mauve,fg=$base,bold,fill] SESSION "
+        mode_tab          "#[bg=$green,fg=$base,bold,fill] TAB "
+        mode_tmux         "#[bg=$flamingo,fg=$base,bold,fill] TMUX "
+
+        datetime_format   "%H:%M"
+        datetime_timezone "America/Los_Angeles"
+    }
+}
+{{- end }}

@@ -1,0 +1,19 @@
+layout {
+    default_tab_template {
+        pane split_direction="vertical" {
+            {{ template "zellij/status/vertical-left.kdl" . }}
+            children
+        }
+    }
+
+    new_tab_template {
+        pane split_direction="vertical" {
+            {{ template "zellij/status/vertical-left.kdl" . }}
+            pane
+        }
+    }
+
+    tab name="new" {
+        pane
+    }
+}
