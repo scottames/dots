@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.42.0](https://github.com/scottames/dots/compare/v0.41.0...v0.42.0) (2026-03-11)
+
+
+### Features
+
+* **aqua:** add diffnav & gh-enhance ([30056f6](https://github.com/scottames/dots/commit/30056f6d6e5e73371251706e7fab097484e18196))
+* **aqua:** add vhs ([88082f6](https://github.com/scottames/dots/commit/88082f6b212acb321d7d3a7b5733ffca61082d5d))
+* **aqua:** add wifitui ([92270f2](https://github.com/scottames/dots/commit/92270f28933cbc27308e12ad8529e404e9b5695d))
+* **chezmoi:** external, properly use zellij-status ([794716b](https://github.com/scottames/dots/commit/794716bd2a5533fa184bd09915bf0cc41c5d2852))
+* **gh:** add a couple extensions via aqua ([a45efbc](https://github.com/scottames/dots/commit/a45efbc8bb67abb1a507591a0d996dec59f9aac0))
+
+
+### Bug Fixes
+
+* **vicinae:** niri.wants symlink ([40e0c2b](https://github.com/scottames/dots/commit/40e0c2bd171d547e0ac66bcb3f5c63cba0d34dbf))
+
 ## [0.41.0](https://github.com/scottames/dots/compare/v0.40.0...v0.41.0) (2026-03-06)
 
 
