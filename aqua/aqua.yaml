@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.482.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.485.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -18,11 +18,11 @@ packages:
   - name: LuaLS/lua-language-server@3.17.1
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
-  - name: astral-sh/ruff@0.15.5
-  - name: astral-sh/uv@0.10.9
+  - name: astral-sh/ruff@0.15.6
+  - name: astral-sh/uv@0.10.10
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.44.0
-  - name: dprint/dprint@0.52.0
+  - name: dprint/dprint@0.53.0
   - name: editorconfig-checker/editorconfig-checker@v3.6.1
   - name: golang/tools/goimports@v0.42.0
   - name: google/yamlfmt@v0.21.0
@@ -132,7 +132,7 @@ packages:
   - name: kubernetes/minikube@v1.38.1
   # easy and repeatable kubernetes development
   #   https://github.com/GoogleContainerTools/skaffold
-  - name: GoogleContainerTools/skaffold@v2.17.3
+  - name: GoogleContainerTools/skaffold@v2.18.0
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
   - name: terraform-linters/tflint@v0.61.0
@@ -143,7 +143,7 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.84
   #   https://github.com/casey/just
-  - name: casey/just@1.46.0
+  - name: casey/just@1.47.0
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.16
@@ -181,20 +181,20 @@ packages:
   - name: dlvhdr/gh-dash@v4.23.2
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.12.1
+  - name: atuinsh/atuin@v18.13.2
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.18.5
+  - name: spacelift-io/spacectl@v1.19.0
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v1.0.4
+  - name: github/copilot-cli@v1.0.5
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.2.24
+  - name: sst/opencode@v1.2.27
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.47.2
+  - name: charmbracelet/crush@v0.49.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -210,7 +210,7 @@ packages:
   - name: suzuki-shunsuke/ghtkn@v0.2.4
   # An incremental parsing system for programming tools
   #  https://github.com/tree-sitter/tree-sitter
-  - name: tree-sitter/tree-sitter@v0.26.6
+  - name: tree-sitter/tree-sitter@v0.26.7
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
@@ -238,28 +238,28 @@ packages:
   - name: gohugoio/hugo@v0.157.0
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.3.8
+  - name: jdx/mise@v2026.3.9
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v3.0.0
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
-  - name: steveyegge/beads@v0.60.0
+  - name: steveyegge/beads@v0.61.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.29.1
+  - name: max-sixty/worktrunk@v0.29.4
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v1.6.2
+  - name: tassiovirginio/try-rs@v1.6.3
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.74
+  - name: anthropics/claude-code@v2.1.76
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
-  - name: ast-grep/ast-grep@0.41.1
+  - name: ast-grep/ast-grep@0.42.0
   # Terminal automation for AI agents
   #  https://github.com/msmps/pilotty
   - name: msmps/pilotty@v0.0.7
