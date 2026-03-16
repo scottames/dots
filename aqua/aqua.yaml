@@ -280,3 +280,6 @@ packages:
     registry: dots
   - name: shazow/wifitui@v0.11.0
     registry: dots
+  # Automatically sync shell completions for tools managed by mise
+  #  https://github.com/alltuner/mise-completions-sync
+  - name: alltuner/mise-completions-sync@v0.4.4
