@@ -12,15 +12,15 @@
   ],
   "modules-right": [
     "tray",
+    "power-profiles-daemon",
     "cpu",
     "memory",
     "temperature",
-    "power-profiles-daemon",
-    "disk",
     "backlight",
-    "network",
-    "custom/tailscale",
     "battery",
+    "disk",
+    "custom/tailscale",
+    "network",
     "pulseaudio",
     "custom/lock",
     "custom/power"
@@ -52,8 +52,9 @@
   },
   "disk": {
     "interval": 30,
-    "format": "{path} {percentage_used}%",
-    "path": "/"
+    "format": "~/ {specific_free:0.0f}gb",
+    "path": "/var/home",
+    "unit": "GB"
   },
   "cpu": {
     "format": "{usage}% ",

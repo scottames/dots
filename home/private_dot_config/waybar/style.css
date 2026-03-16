@@ -99,8 +99,7 @@ tooltip {
 #battery {
   color: @green;
   border-left: 0px;
-  border-radius: 0 10px 10px 0;
-  margin-right: 10px;
+  border-right: 0px;
 }
 
 #clock {
@@ -128,7 +127,6 @@ tooltip {
   color: @maroon;
   border-left: 0px;
   border-right: 0px;
-  border-radius: 10px 0 0 10px;
 }
 
 #memory {
@@ -147,6 +145,7 @@ tooltip {
   color: @blue;
   border-left: 0px;
   border-right: 0px;
+  border-radius: 10px 0 0 10px;
 }
 
 #disk {
@@ -158,17 +157,29 @@ tooltip {
 #network {
   color: @text;
   border-left: 0px;
-  border-right: 0px;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
 #custom-tailscale {
-  color: @text;
+  color: @red;
   border-left: 0px;
   border-right: 0px;
-  color: @red;
 }
 #custom-tailscale.enabled {
   color: @green;
+  border-left: 0px;
+  border-right: 0px;
+}
+#custom-tailscale.disabled {
+  color: @text;
+  border-left: 0px;
+  border-right: 0px;
+}
+#custom-tailscale.no-exit-node {
+  color: @yellow;
+  border-left: 0px;
+  border-right: 0px;
 }
 
 #custom-power {
