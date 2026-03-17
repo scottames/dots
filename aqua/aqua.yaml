@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     # - darwin
     - linux
 registries:
-  - ref: v4.485.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.486.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -19,7 +19,7 @@ packages:
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
   - name: astral-sh/ruff@0.15.6
-  - name: astral-sh/uv@0.10.10
+  - name: astral-sh/uv@0.10.11
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.44.0
   - name: dprint/dprint@0.53.0
@@ -143,7 +143,7 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.84
   #   https://github.com/casey/just
-  - name: casey/just@1.47.0
+  - name: casey/just@1.47.1
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.16
@@ -181,20 +181,20 @@ packages:
   - name: dlvhdr/gh-dash@v4.23.2
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.13.2
+  - name: atuinsh/atuin@v18.13.3
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.19.0
+  - name: spacelift-io/spacectl@v1.20.0
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v1.0.5
+  - name: github/copilot-cli@v1.0.6
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.2.27
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.49.0
+  - name: charmbracelet/crush@v0.50.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -204,7 +204,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.114.0
+  - name: openai/codex@rust-v0.115.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -235,7 +235,7 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.157.0
+  - name: gohugoio/hugo@v0.158.0
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
   - name: jdx/mise@v2026.3.9
@@ -256,7 +256,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.76
+  - name: anthropics/claude-code@v2.1.77
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.0
