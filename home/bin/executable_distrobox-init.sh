@@ -3,11 +3,10 @@
 # Override distrobox's default as to handle the situations where
 # the variables may not be set correctly
 if [[ -e "/etc/fish/config.fish" ]]; then
-	cat <<EOF >/etc/fish/conf.d/distrobox_config.fish
+  cat <<EOF >/etc/fish/conf.d/distrobox_config.fish
 test -z "${USER}" && set -gx USER (id -un 2> /dev/null)
 test -z "${UID}"  && set -gx UID (id -ur 2> /dev/null)
 test -z "${EUID}" && set -gx EUID (id -u  2> /dev/null)
-set -gx SHELL (getent passwd "${USER}" | cut -f 7 -d :)
 
 # Ensure we have these variables from the host, so that graphical apps
 # also work in case we use a login session

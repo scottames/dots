@@ -3,6 +3,7 @@ Description=Arch for distrobox fun
 
 [Service]
 Type=oneshot
+{{ if stat "/usr/bin/fish" }}Environment="SHELL=/usr/bin/fish"{{ end }}
 ExecStart={{ .chezmoi.homeDir }}/bin/distrobox-assemble.sh a
 ExecStart=/usr/bin/distrobox enter a
 RemainAfterExit=true

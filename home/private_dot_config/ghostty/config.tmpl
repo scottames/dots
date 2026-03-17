@@ -1,5 +1,8 @@
 background-opacity = 0.95
+{{ if lookPath "fish" -}}
 command = {{ lookPath "fish" }} -l
+env = SHELL={{ lookPath "fish" }}
+{{- end }}
 font-family = FiraCode Nerd Font Mono
 font-size = 14
 gtk-titlebar = false
