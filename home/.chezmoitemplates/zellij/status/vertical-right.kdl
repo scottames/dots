@@ -68,6 +68,10 @@ pane size=26 borderless=true {
         notification_indicator_in_progress "󰔛"
         notification_indicator_waiting     ""
         notification_show_if_empty         "false"
+        notification_tab_style_waiting     "#[bg=$maroon,fg=$base,bold]"
+        // omit to match tab format
+        // notification_tab_style_in_progress "#[bg=$yellow,fg=$base,bold]"
+        notification_tab_style_completed   "#[bg=$mauve,fg=$base]"
 
         mode_enter_search "#[bg=$yellow,fg=$base,bold,fill] ENT-SEARCH "
         mode_locked       "#[bg=$red,fg=$base,bold,fill] LOCKED "

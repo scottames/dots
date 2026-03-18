@@ -58,15 +58,19 @@ pane size=26 borderless=true {
         tab_border               "#[fg=$surface1]│"
 
         notification_enabled               "true"
-        notification_format                "#[bg=$surface1,fg=$peach,bold] {count} "
-        notification_format_completed      "#[fg=$peach,bold]{icon}"
+        notification_format                "#[bg=$surface1,fg=$red,bold] {count} "
+        notification_format_completed      "#[fg=$red,bold]{icon}"
         notification_format_in_progress    "{icon}"
         notification_format_tab            "{icon}"
-        notification_format_waiting        "#[fg=$peach,bold]{icon}"
+        notification_format_waiting        "#[fg=$red,bold]{icon}"
         notification_indicator_completed   ""
         notification_indicator_in_progress "󰔛"
         notification_indicator_waiting     ""
         notification_show_if_empty         "false"
+        notification_tab_style_waiting     "#[bg=$maroon,fg=$base,bold]"
+        // omit to match tab format
+        // notification_tab_style_in_progress "#[bg=$yellow,fg=$base,bold]"
+        notification_tab_style_completed   "#[bg=$mauve,fg=$base]"
 
         mode_enter_search "#[bg=$yellow,fg=$base,bold,fill] ENT-SEARCH "
         mode_locked       "#[bg=$red,fg=$base,bold,fill] LOCKED "

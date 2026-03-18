@@ -530,6 +530,10 @@ plugins {
         notification_indicator_in_progress "󰔛"
         notification_indicator_waiting     ""
         notification_show_if_empty         "false"
+        notification_tab_style_waiting     "#[bg=$maroon,fg=$base,bold]"
+        // omit to match tab format
+        // notification_tab_style_in_progress "#[bg=$yellow,fg=$base,bold]"
+        notification_tab_style_completed   "#[bg=$mauve,fg=$base]"
 
 
         tab_normal              "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
