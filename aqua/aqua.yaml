@@ -61,7 +61,7 @@ packages:
   - name: golangci/golangci-lint@v2.11.3
   # diff tool for YAML files, and sometimes JSON
   #  https://github.com/homeport/dyff
-  - name: homeport/dyff@v1.11.2
+  - name: homeport/dyff@v1.11.3
   # find and install kubectl plugins
   #   https://github.com/kubernetes-sigs/krew
   - name: kubernetes-sigs/krew@v0.5.0
@@ -184,17 +184,17 @@ packages:
   - name: atuinsh/atuin@v18.13.3
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.20.0
+  - name: spacelift-io/spacectl@v1.20.1
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
-  - name: github/copilot-cli@v1.0.6
+  - name: github/copilot-cli@v1.0.7
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.2.27
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.50.0
+  - name: charmbracelet/crush@v0.50.1
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -256,7 +256,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.77
+  - name: anthropics/claude-code@v2.1.78
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.0
