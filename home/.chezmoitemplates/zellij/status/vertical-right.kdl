@@ -60,6 +60,10 @@ pane size=26 borderless=true {
 
         notification_enabled               "true"
         notification_format                "#[bg=$surface1,fg=$peach,bold] {count} "
+        notification_format_completed      "#[fg=$peach,bold]{icon}"
+        notification_format_in_progress    "{icon}"
+        notification_format_tab            "{icon}"
+        notification_format_waiting        "#[fg=$peach,bold]{icon}"
         notification_indicator_completed   ""
         notification_indicator_in_progress "󰔛"
         notification_indicator_waiting     ""
