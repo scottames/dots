@@ -24,6 +24,7 @@
 
   homebrew = {
     enable = true;
+    greedyCasks = true;
     global.autoUpdate = true;
     onActivation = {
       cleanup = "zap";
