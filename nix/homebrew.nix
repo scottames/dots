@@ -1,10 +1,9 @@
-{
-  homebrew-bundle,
-  homebrew-core,
-  homebrew-cask,
-  nix-homebrew,
-  username,
-  ...
+{ homebrew-bundle
+, homebrew-core
+, homebrew-cask
+, nix-homebrew
+, username
+, ...
 }:
 {
   imports = [
@@ -25,6 +24,7 @@
 
   homebrew = {
     enable = true;
+    greedyCasks = true;
     global.autoUpdate = true;
     onActivation = {
       cleanup = "zap";
@@ -49,18 +49,30 @@
 
     casks = [
       "1password"
+      "akiflow"
+      "chatgpt"
+      "claude"
+      "cmux"
       "cursor"
-      "docker"
+      "discord"
+      "docker-desktop"
       "firefox"
       "ghostty"
       "google-chrome"
+      "iterm2"
+      "notion"
       "obsidian"
       "plexamp"
+      "raycast"
+      "slack"
+      "tailscale"
+      "twingate"
       "visual-studio-code"
       "vlc"
-      "zen-browser"
+      "zen"
+      "zoom"
     ];
-    
+
     masApps = {
       "Home Assistant Companion" = 1099568401;
     };

@@ -5,6 +5,7 @@
     curl
     fish
     git
+    ghostty-bin
     gnupg
     nodejs
     nushell
