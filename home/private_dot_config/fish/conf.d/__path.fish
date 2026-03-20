@@ -50,7 +50,8 @@ set -a _bin_dirs \
     $GOPATH/bin \
     $HOME/.local/bin \
     $HOME/bin \
-    $HOME/src/bin
+    $HOME/src/bin \
+    /opt/homebrew/bin
 
 for dir in $_bin_dirs
     if test -d $dir

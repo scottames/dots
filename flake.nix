@@ -35,8 +35,16 @@
           nixpkgs.hostPlatform = "aarch64-darwin";
         };
 
-      hostname = let h = builtins.getEnv "HOSTNAME"; in if h == "" then "zmbp" else h;
-      username = let u = builtins.getEnv "USERNAME"; in if u == "" then "scta" else u;
+      hostname =
+        let
+          h = builtins.getEnv "HOSTNAME";
+        in
+        if h == "" then "zmbp" else h;
+      username =
+        let
+          u = builtins.getEnv "USERNAME";
+        in
+        if u == "" then "scta" else u;
     in
     {
       darwinConfigurations."${hostname}" = nix-darwin.lib.darwinSystem {
@@ -90,7 +98,9 @@
             export HOSTNAME
             export USERNAME
 
-            ${nix-darwin.packages.${system}.darwin-rebuild}/bin/darwin-rebuild switch --flake .#"$HOSTNAME"
+            sudo --preserve-env=HOSTNAME,USERNAME \
+              ${nix-darwin.packages.${system}.darwin-rebuild}/bin/darwin-rebuild \
+              switch --flake .#"$HOSTNAME"
           ''
         );
       };

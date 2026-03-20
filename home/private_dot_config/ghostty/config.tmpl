@@ -6,7 +6,7 @@ env = SHELL={{ lookPath "fish" }}
 font-family = FiraCode Nerd Font Mono
 font-size = 14
 gtk-titlebar = false
-theme = Catppuccin Mocha
+theme = {{ if (eq .chezmoi.os "darwin") }}catppuccin-mocha{{ else }}Catppuccin Mocha{{ end }}
 window-decoration = {{ not (eq .chezmoi.os "linux") }}
 keybind = shift+enter=text:\n
 

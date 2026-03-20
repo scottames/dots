@@ -50,7 +50,7 @@
     casks = [
       "1password"
       "cursor"
-      "docker"
+      "docker-desktop"
       "firefox"
       "ghostty"
       "google-chrome"
@@ -58,7 +58,8 @@
       "plexamp"
       "visual-studio-code"
       "vlc"
-      "zen-browser"
+      "zen"
+      "zoom"
     ];
     
     masApps = {

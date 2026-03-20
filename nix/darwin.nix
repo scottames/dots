@@ -3,10 +3,12 @@
   hostname,
   pkgs,
   lib,
+  username,
   ...
 }:
 {
   nix.enable = true;
+  system.primaryUser = username;
 
   networking = {
     computerName = hostname;
