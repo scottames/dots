@@ -1,10 +1,9 @@
-{
-  config,
-  hostname,
-  pkgs,
-  lib,
-  username,
-  ...
+{ config
+, hostname
+, pkgs
+, lib
+, username
+, ...
 }:
 {
   nix.enable = true;

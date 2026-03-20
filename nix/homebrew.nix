@@ -1,10 +1,9 @@
-{
-  homebrew-bundle,
-  homebrew-core,
-  homebrew-cask,
-  nix-homebrew,
-  username,
-  ...
+{ homebrew-bundle
+, homebrew-core
+, homebrew-cask
+, nix-homebrew
+, username
+, ...
 }:
 {
   imports = [
@@ -61,7 +60,7 @@
       "zen"
       "zoom"
     ];
-    
+
     masApps = {
       "Home Assistant Companion" = 1099568401;
     };

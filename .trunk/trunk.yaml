@@ -54,7 +54,6 @@ lint:
         - output: rewrite
           formatter: true
           run: prettier --write ${target} # "*.tmpl"
-          #command:
           success_codes:
             - 0
   ignore:
@@ -86,6 +85,6 @@ lint:
 runtimes:
   enabled:
     - go@1.21.0
-    - rust@1.82.0
+    - rust@1.85.0
     - node@22.16.0
     - python@3.10.8
