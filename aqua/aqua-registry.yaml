@@ -11,8 +11,8 @@ packages:
       amd64: x64
       darwin: macos
     supported_envs:
+      - darwin/amd64
       - linux
-      - darwin
   # gt https://graphite.dev
   - type: http
     repo_owner: withgraphite
@@ -24,7 +24,7 @@ packages:
       amd64: x64
       darwin: macos
     supported_envs:
-      - darwin
+      - darwin/amd64
       - linux
     description: graphite.dev
   - type: github_release
@@ -39,8 +39,8 @@ packages:
       to execute. Promoting a safer, more transparent way to handle remote code
       execution.
     supported_envs:
+      - darwin/amd64
       - linux
-      - darwin
   - type: github_release
     repo_owner: erikjuhani
     repo_name: basalt
@@ -53,8 +53,8 @@ packages:
       darwin: apple-darwin
       linux: unknown-linux-gnu
     supported_envs:
+      - darwin/amd64
       - linux
-      - darwin
     files:
       - name: basalt
         src: target/{{.Arch}}-{{.OS}}/release/basalt
@@ -76,8 +76,8 @@ packages:
       darwin: apple-darwin
       linux: unknown-linux-musl
     supported_envs:
+      - darwin/amd64
       - linux
-      - darwin
     files:
       - name: wt
         src: worktrunk-{{.Arch}}-{{.OS}}/wt
@@ -101,7 +101,7 @@ packages:
     files:
       - name: pilotty
     supported_envs:
-      - darwin
+      - darwin/amd64
       - linux
     description: Terminal automation for AI agents
   - type: github_release
@@ -110,7 +110,7 @@ packages:
     asset: "{{.OS}}-{{.Arch}}"
     format: raw
     supported_envs:
-      - darwin
+      - darwin/amd64
       - linux
     description: GitHub CLI extension to preview GitHub Flavored Markdown
   - type: github_release
@@ -122,8 +122,8 @@ packages:
     replacements:
       amd64: x86_64
     supported_envs:
+      - darwin/amd64
       - linux
-      - darwin
     files:
       - name: wifitui
   - type: github_release
@@ -132,6 +132,6 @@ packages:
     asset: gh-enhance_{{.Version}}_{{.OS}}-{{.Arch}}
     format: raw
     supported_envs:
-      - darwin
+      - darwin/amd64
       - linux
     description: GitHub CLI extension that improves the pull request experience
