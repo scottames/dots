@@ -5,7 +5,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
   enabled: true
   require_checksum: true
   supported_envs:
-    - darwin
+    - darwin/arm64
     - linux
 registries:
   - ref: v4.486.0 # renovate: depName=aquaproj/aqua-registry
