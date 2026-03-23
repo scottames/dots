@@ -16,15 +16,7 @@ url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_linux_arm64
 checksum = "sha256:a1e13fb5fec92913e67984d88db6d4c39473cca3a6b9927621e410ee431f3532"
 url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_linux_amd64.zip"
 
-[tools."aqua:int128/ghcp"."platforms.linux-x64-baseline"]
-checksum = "sha256:a1e13fb5fec92913e67984d88db6d4c39473cca3a6b9927621e410ee431f3532"
-url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_linux_amd64.zip"
-
 [tools."aqua:int128/ghcp"."platforms.linux-x64-musl"]
-checksum = "sha256:a1e13fb5fec92913e67984d88db6d4c39473cca3a6b9927621e410ee431f3532"
-url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_linux_amd64.zip"
-
-[tools."aqua:int128/ghcp"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:a1e13fb5fec92913e67984d88db6d4c39473cca3a6b9927621e410ee431f3532"
 url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_linux_amd64.zip"
 
@@ -36,15 +28,7 @@ url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_darwin_arm6
 checksum = "sha256:37aac4b1d7e451abaa6d49b87608d9010ef3b1cd56e310a0a6895ce433292dbb"
 url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_darwin_amd64.zip"
 
-[tools."aqua:int128/ghcp"."platforms.macos-x64-baseline"]
-checksum = "sha256:37aac4b1d7e451abaa6d49b87608d9010ef3b1cd56e310a0a6895ce433292dbb"
-url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_darwin_amd64.zip"
-
 [tools."aqua:int128/ghcp"."platforms.windows-x64"]
-checksum = "sha256:2e513207f22897e03b54a119aceccfe623dbcc25c0dccbdcbb15a3247616cbb7"
-url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_windows_amd64.zip"
-
-[tools."aqua:int128/ghcp"."platforms.windows-x64-baseline"]
 checksum = "sha256:2e513207f22897e03b54a119aceccfe623dbcc25c0dccbdcbb15a3247616cbb7"
 url = "https://github.com/int128/ghcp/releases/download/v1.15.2/ghcp_windows_amd64.zip"
 
@@ -64,15 +48,7 @@ url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presen
 checksum = "sha256:87512d7c88c3d961c7687aca3519f83c2b7611a550cf769c67c6f7948e8b8f54"
 url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-unknown-linux-musl.tar.gz"
 
-[tools."aqua:mfontanini/presenterm"."platforms.linux-x64-baseline"]
-checksum = "sha256:87512d7c88c3d961c7687aca3519f83c2b7611a550cf769c67c6f7948e8b8f54"
-url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-unknown-linux-musl.tar.gz"
-
 [tools."aqua:mfontanini/presenterm"."platforms.linux-x64-musl"]
-checksum = "sha256:87512d7c88c3d961c7687aca3519f83c2b7611a550cf769c67c6f7948e8b8f54"
-url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-unknown-linux-musl.tar.gz"
-
-[tools."aqua:mfontanini/presenterm"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:87512d7c88c3d961c7687aca3519f83c2b7611a550cf769c67c6f7948e8b8f54"
 url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-unknown-linux-musl.tar.gz"
 
@@ -84,15 +60,7 @@ url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presen
 checksum = "sha256:7f923d83349654c560e64dc6d0a4b6ab31d885e8f07e1732d0f60fc9f606e895"
 url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-apple-darwin.tar.gz"
 
-[tools."aqua:mfontanini/presenterm"."platforms.macos-x64-baseline"]
-checksum = "sha256:7f923d83349654c560e64dc6d0a4b6ab31d885e8f07e1732d0f60fc9f606e895"
-url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-apple-darwin.tar.gz"
-
 [tools."aqua:mfontanini/presenterm"."platforms.windows-x64"]
-checksum = "sha256:301bc9111db499cb79fb305048b1aad56d3fe91b2c713396fed60ec0c1d2c90c"
-url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-pc-windows-msvc.zip"
-
-[tools."aqua:mfontanini/presenterm"."platforms.windows-x64-baseline"]
 checksum = "sha256:301bc9111db499cb79fb305048b1aad56d3fe91b2c713396fed60ec0c1d2c90c"
 url = "https://github.com/mfontanini/presenterm/releases/download/v0.16.1/presenterm-0.16.1-x86_64-pc-windows-msvc.zip"
 
@@ -160,15 +128,7 @@ url = "https://dl.google.com/go/go1.26.1.linux-arm64.tar.gz"
 checksum = "sha256:031f088e5d955bab8657ede27ad4e3bc5b7c1ba281f05f245bcc304f327c987a"
 url = "https://dl.google.com/go/go1.26.1.linux-amd64.tar.gz"
 
-[tools.go."platforms.linux-x64-baseline"]
-checksum = "sha256:031f088e5d955bab8657ede27ad4e3bc5b7c1ba281f05f245bcc304f327c987a"
-url = "https://dl.google.com/go/go1.26.1.linux-amd64.tar.gz"
-
 [tools.go."platforms.linux-x64-musl"]
-checksum = "sha256:031f088e5d955bab8657ede27ad4e3bc5b7c1ba281f05f245bcc304f327c987a"
-url = "https://dl.google.com/go/go1.26.1.linux-amd64.tar.gz"
-
-[tools.go."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:031f088e5d955bab8657ede27ad4e3bc5b7c1ba281f05f245bcc304f327c987a"
 url = "https://dl.google.com/go/go1.26.1.linux-amd64.tar.gz"
 
@@ -180,15 +140,7 @@ url = "https://dl.google.com/go/go1.26.1.darwin-arm64.tar.gz"
 checksum = "sha256:65773dab2f8cc4cd23d93ba6d0a805de150ca0b78378879292be0b903b8cdd08"
 url = "https://dl.google.com/go/go1.26.1.darwin-amd64.tar.gz"
 
-[tools.go."platforms.macos-x64-baseline"]
-checksum = "sha256:65773dab2f8cc4cd23d93ba6d0a805de150ca0b78378879292be0b903b8cdd08"
-url = "https://dl.google.com/go/go1.26.1.darwin-amd64.tar.gz"
-
 [tools.go."platforms.windows-x64"]
-checksum = "sha256:9b68112c913f45b7aebbf13c036721264bbba7e03a642f8f7490c561eebd1ecc"
-url = "https://dl.google.com/go/go1.26.1.windows-amd64.zip"
-
-[tools.go."platforms.windows-x64-baseline"]
 checksum = "sha256:9b68112c913f45b7aebbf13c036721264bbba7e03a642f8f7490c561eebd1ecc"
 url = "https://dl.google.com/go/go1.26.1.windows-amd64.zip"
 
@@ -208,15 +160,7 @@ url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-arm64.tar.gz"
 checksum = "sha256:dbf5b8665dec15e59e6359a517fefb47b23fdb9152d8def975b9bca3dfc6d355"
 url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.gz"
 
-[tools.node."platforms.linux-x64-baseline"]
-checksum = "sha256:dbf5b8665dec15e59e6359a517fefb47b23fdb9152d8def975b9bca3dfc6d355"
-url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.gz"
-
 [tools.node."platforms.linux-x64-musl"]
-checksum = "sha256:dbf5b8665dec15e59e6359a517fefb47b23fdb9152d8def975b9bca3dfc6d355"
-url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.gz"
-
-[tools.node."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:dbf5b8665dec15e59e6359a517fefb47b23fdb9152d8def975b9bca3dfc6d355"
 url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.gz"
 
@@ -228,15 +172,7 @@ url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-arm64.tar.gz"
 checksum = "sha256:f2879eb810e25993a0578e5d878930266fd2eafcffe9f2839b3d8db354d4879e"
 url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-x64.tar.gz"
 
-[tools.node."platforms.macos-x64-baseline"]
-checksum = "sha256:f2879eb810e25993a0578e5d878930266fd2eafcffe9f2839b3d8db354d4879e"
-url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-x64.tar.gz"
-
 [tools.node."platforms.windows-x64"]
-checksum = "sha256:313fa40c0d7b18575821de8cb17483031fe07d95de5994f6f435f3b345f85c66"
-url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip"
-
-[tools.node."platforms.windows-x64-baseline"]
 checksum = "sha256:313fa40c0d7b18575821de8cb17483031fe07d95de5994f6f435f3b345f85c66"
 url = "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip"
 
@@ -253,7 +189,7 @@ version = "0.27.0"
 backend = "npm:@fsouza/prettierd"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.33.2"
+version = "0.34.0"
 backend = "npm:@google/gemini-cli"
 
 [[tools."npm:bash-language-server"]]
@@ -285,7 +221,7 @@ version = "0.48.0"
 backend = "npm:markdownlint-cli"
 
 [[tools."npm:opkg"]]
-version = "0.9.5"
+version = "0.10.0"
 backend = "npm:opkg"
 
 [[tools."npm:prettier"]]
@@ -305,7 +241,7 @@ version = "1.7.1"
 backend = "npm:sql-language-server"
 
 [[tools."npm:stylelint"]]
-version = "17.4.0"
+version = "17.5.0"
 backend = "npm:stylelint"
 
 [[tools."npm:textlint"]]
