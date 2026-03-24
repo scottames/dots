@@ -13,7 +13,7 @@ function zellij_edit
     end
 
     if set -q _flag_tab
-        zellij_new_tab_edit_split $argv
+        zellij_new_tab $argv
     else
         command zellij edit $argv
     end

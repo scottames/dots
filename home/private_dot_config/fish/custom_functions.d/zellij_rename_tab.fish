@@ -9,13 +9,9 @@ function zellij_rename_tab
     if set -q _flag_name
         set _TAB_NAME $_flag_name[1]
     else if set -q argv[1]
-        set _TAB_NAME $argv[1]
-    else if [ $PWD = $HOME ]
-        set _TAB_NAME "~"
-    else if [ $PWD = $DOTS ]
-        set _TAB_NAME "."
+        set _TAB_NAME (zellij_tab_name $argv[1])
     else
-        set _TAB_NAME (ugum input --placeholder="New tab name?")
+        set _TAB_NAME (zellij_tab_name $PWD)
     end
 
     zellij action rename-tab $_TAB_NAME

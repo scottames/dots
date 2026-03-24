@@ -199,15 +199,15 @@ abbr -a za zellij_attach # see functions
 abbr -a zja zellij_attach # see functions
 abbr -a ze zellij_edit # see functions
 abbr -a zef zellij_edit --floating # see functions
-abbr -a ze. "zellij_new_tab_edit_split $DOTS --name=." # see functions
-abbr -a zect "zellij_new_tab_edit_split $MY_SRC_DIR/containers/main --name='containers'"
-abbr -a zeag "zellij_new_tab_edit_split $MY_SRC_DIR/.agents/main --name='.agents'"
-abbr -a zecp "zellij_new_tab_edit_split $MY_SRC_DIR/copr/main --name='copr'"
-abbr -a zeh "zellij_new_tab_edit_split $MY_SRC_DIR/hark/main --name='hark'"
-abbr -a zeh. "zellij_new_tab_edit_split $XDG_CONFIG_HOME/hark --name='.hark'"
-abbr -a zeo "zellij_new_tab_edit_split $HOME/.obsidian/this --name='obsidian'"
-abbr -a zet zellij_new_tab_edit_split
-abbr -a zego "zellij_new_tab_edit_split --layout=go"
+abbr -a ze. "zellij_new_tab $DOTS --name='.'" # see functions
+abbr -a zect "zellij_new_tab $MY_SRC_DIR/containers/main"
+abbr -a zeag "zellij_new_tab $MY_SRC_DIR/.agents/main"
+abbr -a zecp "zellij_new_tab $MY_SRC_DIR/copr/main"
+abbr -a zeh "zellij_new_tab $MY_SRC_DIR/hark/main"
+abbr -a zeh. "zellij_new_tab $XDG_CONFIG_HOME/hark"
+abbr -a zeo "zellij_new_tab $HOME/.obsidian/this --name='obsidian'"
+abbr -a zet zellij_new_tab
+abbr -a zego "zellij_new_tab --layout=go"
 abbr -a zj zellij # see functions
 abbr -a zjac "zellij action"
 abbr -a zjpd "zellij action new-pane --direction down"
@@ -217,7 +217,7 @@ abbr -a zjpu "zellij action new-pane --direction up"
 abbr -a zjr "zellij run --"
 abbr -a zr zellij_run # see functions
 abbr -a zrt zellij_rename_tab # see functions
-abbr -a zte zellij_new_tab_edit_split # see functions
+abbr -a zte zellij_new_tab # see functions
 
 # ╭──────────────────────────────────────────────────────────╮
 # │ cd helpers                                               │

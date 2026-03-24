@@ -1,33 +1,38 @@
 #!/usr/bin/env fish
 
 function zellij_new_tab \
-    --description "Wraps zellij new-tab with some opinions."
+    --description "Create a new Zellij tab with a named layout and derived name."
 
-    set -l _argparse_options 'c/cwd=?' 's/split=?' 'n/name=?' 'l/layout=?'
-    argparse -n ze $_argparse_options -- $argv
+    argparse -n zellij_new_tab 'n/name=' 'l/layout=' -- $argv
+    or return 1
 
-    set -l _DIR ""
-    set -l _CWD ""
-    set -l _SPLIT ""
-    set -l _LAYOUT ""
-    set -l _NAME ""
-
-    if set -q _flag_cwd
-        set _CWD "--cwd $_flag_cwd"
-        set _DIR $_flag_cwd
+    set -l target .
+    if set -q argv[1]
+        set target $argv[1]
     end
 
-    if set -q _flag_split
-        set _SPLIT "--$_flag_split"
+    if not test -e "$target"
+        printf 'zellij_new_tab: path not found: %s\n' "$target" >&2
+        return 1
     end
 
+    set -l cwd "$target"
+    if test -f "$cwd"
+        set cwd (path dirname "$cwd")
+    end
+    set cwd (path resolve "$cwd")
+
+    set -l layout split-edit
     if set -q _flag_layout
-        set _LAYOUT "--layout $_flag_layout"
+        set layout $_flag_layout
     end
 
+    set -l tab_name
     if set -q _flag_name
-        set _NAME "--name $_flag_name"
+        set tab_name $_flag_name
+    else
+        set tab_name (zellij_tab_name "$target")
     end
 
-    zellij_new_tab_edit_split $_SPLIT $LAYOUT $NAME $DIR
+    command zellij action new-tab --layout "$layout" --cwd "$cwd" --name "$tab_name"
 end
