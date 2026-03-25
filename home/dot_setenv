@@ -24,7 +24,6 @@ setenv AQUA_LOG_COLOR              "always"
   && setenv AQUA_POLICY_CONFIG     "$AQUA_POLICY_CONFIG:/var$AQUA_CONFIG_DIR/aqua-policy.yaml"
 setenv AQUA_PROGRESS_BAR           "true"
 setenv AQUA_ROOT_DIR               "$HOME/.local/share/aquaproj-aqua/bin"
-setenv ARCHFLAGS                   "-arch x86_64"
 setenv AWS_PAGER                   ""
 $IS_LIGHT \
   && setenv BAT_THEME              "Catppuccin Latte"
