@@ -58,6 +58,11 @@
       schedule: ["* 5-7 * * *"],
     },
     {
+      // pin 1.43.x until the 0.44 CPU issue resolved
+      matchDepNames: ['zellij-org/zellij'],
+      allowedVersions: '/^v0\\.43\\./',
+    },
+    {
       matchDatasources: ['docker'],
       matchUpdateTypes: ['digest', 'pin'],
       groupName: '⬆️ container digests',
