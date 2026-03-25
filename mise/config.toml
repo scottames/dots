@@ -17,6 +17,9 @@ cosign = true
 minisign = true
 slsa = true
 
+[settings.github]
+credential_command = "github-token-get"
+
 [settings.npm]
 package_manager = "bun"
 
