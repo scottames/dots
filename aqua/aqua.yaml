@@ -138,10 +138,10 @@ packages:
   - name: terraform-linters/tflint@v0.61.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
-  - name: mikefarah/yq@v4.52.4
+  - name: mikefarah/yq@v4.52.5
   # run github actions locally
   #   https://github.com/nektos/act
-  - name: nektos/act@v0.2.85
+  - name: nektos/act@v0.2.86
   #   https://github.com/casey/just
   - name: casey/just@1.48.0
   # go version manager
@@ -194,7 +194,7 @@ packages:
   - name: sst/opencode@v1.3.2
   # The glamourous AI coding agent for your favourite terminal 💘
   #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.51.3
+  - name: charmbracelet/crush@v0.52.0
   # Sandboxed dev environments for coding agents
   #  https://container-use.com/
   - name: dagger/container-use@v0.4.2
@@ -235,10 +235,10 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.159.0
+  - name: gohugoio/hugo@v0.159.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.3.15
+  - name: jdx/mise@v2026.3.16
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -248,7 +248,7 @@ packages:
   - name: steveyegge/beads@v0.62.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.31.0
+  - name: max-sixty/worktrunk@v0.32.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -256,7 +256,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.83
+  - name: anthropics/claude-code@v2.1.84
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.0
