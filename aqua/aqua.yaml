@@ -167,15 +167,9 @@ packages:
   # The kubectx for operators
   #   https://github.com/danielfoehrKn/kubeswitch
   - name: danielfoehrKn/kubeswitch@0.9.3
-  # kubectl plugin to interactively exec into a pod
-  #   https://github.com/gabeduke/kubectl-iexec
-  - name: gabeduke/kubectl-iexec@v1.19.14
   # Blazing fast terminal file manager
   #   https://github.com/sxyazi/yazi
   - name: sxyazi/yazi@v26.1.22
-  # Drive terraform at terminal velocity
-  #   https://github.com/leg100/pug
-  - name: leg100/pug@v0.6.5
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
   - name: dlvhdr/gh-dash@v4.23.2
@@ -188,16 +182,11 @@ packages:
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
+  # GitHub Copilot
   - name: github/copilot-cli@v1.0.12
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.3.3
-  # The glamourous AI coding agent for your favourite terminal 💘
-  #  https://github.com/charmbracelet/crush
-  - name: charmbracelet/crush@v0.52.0
-  # Sandboxed dev environments for coding agents
-  #  https://container-use.com/
-  - name: dagger/container-use@v0.4.2
   # Obsidian TUI
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
@@ -277,8 +266,6 @@ packages:
   # A Blazingly Fast Terminal UI for GitHub Actions
   #  https://github.com/dlvhdr/gh-enhance
   - name: dlvhdr/gh-enhance@v0.5.1
-    registry: dots
-  - name: shazow/wifitui@v0.11.0
     registry: dots
   # Automatically sync shell completions for tools managed by mise
   #  https://github.com/alltuner/mise-completions-sync

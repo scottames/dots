@@ -226,21 +226,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/charmbracelet/crush/v0.52.0/crush_0.52.0_Darwin_arm64.tar.gz",
-      "checksum": "6FF6C47646BD89CBB5B59DBAA719720A07321434B826884F8F4CFD4AC7B2AE0A",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/charmbracelet/crush/v0.52.0/crush_0.52.0_Linux_arm64.tar.gz",
-      "checksum": "9E4083F426CE9F4F7804747E76901265E1838CF304AF6CF02A98249950D55B9B",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/charmbracelet/crush/v0.52.0/crush_0.52.0_Linux_x86_64.tar.gz",
-      "checksum": "C2A58D7183408F5092D8F23E8B8812AD364B6F85AC3ADCE950E9FF744024708D",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/charmbracelet/glow/v2.1.1/glow_2.1.1_Darwin_arm64.tar.gz",
       "checksum": "234A20A7D0CEBC775CDC77ECD62D28DA9479364A122B52D8BAC9ADF1312B860D",
       "algorithm": "sha256"
@@ -328,21 +313,6 @@
     {
       "id": "github_release/github.com/crate-ci/typos/v1.44.0/typos-v1.44.0-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "1B788B7D764E2F20FE089487428A3944ED218D1FB6FCD8EAC4230B5893A38779",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dagger/container-use/v0.4.2/container-use_v0.4.2_darwin_arm64.tar.gz",
-      "checksum": "9AE2CA3EAD64E9D9780E5A017704D4D053D1B9AF7DADFB19B84EEC5E968DEFFB",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dagger/container-use/v0.4.2/container-use_v0.4.2_linux_amd64.tar.gz",
-      "checksum": "3FA52B5833AE4AED2BE4B86F7CF42671FDF4BCA8C211FE5FFF08CC19553D409B",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/dagger/container-use/v0.4.2/container-use_v0.4.2_linux_arm64.tar.gz",
-      "checksum": "96DB6BC01111C573DF83065BD02802A36A09864F45373169FFA227A9B3CDCA14",
       "algorithm": "sha256"
     },
     {
@@ -538,21 +508,6 @@
     {
       "id": "github_release/github.com/fastfetch-cli/fastfetch/2.60.0/fastfetch-macos-aarch64.tar.gz",
       "checksum": "D44A0E6B59102C5CC2C374FD6D83C05F1A54964FA30ABDE94188D06582B43EA7",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/gabeduke/kubectl-iexec/v1.19.14/kubectl-iexec_v1.19.14_Darwin_arm64.tar.gz",
-      "checksum": "DBFAB05F550AD63CAE58BA71452723513A88281FBF5D58541AE466ACB020F747",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/gabeduke/kubectl-iexec/v1.19.14/kubectl-iexec_v1.19.14_Linux_arm64.tar.gz",
-      "checksum": "AFB9D567810A03348B8BED82EEBBC4BD5F3C31DB98D0142AD01826F2F6447BF3",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/gabeduke/kubectl-iexec/v1.19.14/kubectl-iexec_v1.19.14_Linux_x86_64.tar.gz",
-      "checksum": "F0F381A9214F67B5E298920BB0376DDB9E52B90D604030A6E2FAE2D075A8AF39",
       "algorithm": "sha256"
     },
     {
@@ -846,21 +801,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/leg100/pug/v0.6.5/pug_0.6.5_darwin_arm64.zip",
-      "checksum": "45A172BBD94A1F6AFE09698BECA1BB725BD8D10FAD6658B89BDB9FD634473F1D",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/leg100/pug/v0.6.5/pug_0.6.5_linux_amd64.zip",
-      "checksum": "60F17A1E0DF5AECC138C820E6B8C00BB82E7C509723D254B892C34313CA0219C",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/leg100/pug/v0.6.5/pug_0.6.5_linux_arm64.zip",
-      "checksum": "B9B935E0BB8C196B6319ACABA82CCE5555BA6BFAC412824ACC9707DB15770439",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/max-sixty/worktrunk/v0.33.0/worktrunk-aarch64-unknown-linux-musl.tar.xz",
       "checksum": "F013CEDB6C2B7A941749CD22C486DC24A8397EFC9116673E4F215106E0AD9F10",
       "algorithm": "sha256"
@@ -1088,16 +1028,6 @@
     {
       "id": "github_release/github.com/sharkdp/fd/v10.4.2/fd-v10.4.2-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "E3257D48E29A6BE965187DBD24CE9AF564E0FE67B3E73C9BDCD180F4EC11BDDE",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/shazow/wifitui/v0.11.0/wifitui-0.11.0-linux-arm64.tar.gz",
-      "checksum": "5DA56B49AC9BFC421FFCB1EAF64E70D3A46F69E29A1F4997B69386788C19E811",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/shazow/wifitui/v0.11.0/wifitui-0.11.0-linux-x86_64.tar.gz",
-      "checksum": "F075CE0F35768CC3F98E834EF5B2ED328337B0C85981E07DD7081EF2E26FD543",
       "algorithm": "sha256"
     },
     {

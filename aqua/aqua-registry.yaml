@@ -114,19 +114,6 @@ packages:
       - linux
     description: GitHub CLI extension to preview GitHub Flavored Markdown
   - type: github_release
-    repo_owner: shazow
-    repo_name: wifitui
-    asset: wifitui-{{trimPrefix "v" .Version}}-{{.OS}}-{{.Arch}}.tar.gz
-    description: |
-      Fast, featureful, and friendly replacement for nmtui.
-    replacements:
-      amd64: x86_64
-    supported_envs:
-      - darwin/amd64
-      - linux
-    files:
-      - name: wifitui
-  - type: github_release
     repo_owner: dlvhdr
     repo_name: gh-enhance
     asset: gh-enhance_{{.Version}}_{{.OS}}-{{.Arch}}
