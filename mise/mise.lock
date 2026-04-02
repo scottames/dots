@@ -189,7 +189,7 @@ version = "0.27.0"
 backend = "npm:@fsouza/prettierd"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.35.2"
+version = "0.35.3"
 backend = "npm:@google/gemini-cli"
 
 [[tools."npm:bash-language-server"]]
@@ -233,7 +233,7 @@ version = "1.1.408"
 backend = "npm:pyright"
 
 [[tools."npm:sql-formatter"]]
-version = "15.7.2"
+version = "15.7.3"
 backend = "npm:sql-formatter"
 
 [[tools."npm:sql-language-server"]]
