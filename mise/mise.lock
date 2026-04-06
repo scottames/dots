@@ -189,7 +189,7 @@ version = "0.27.0"
 backend = "npm:@fsouza/prettierd"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.35.3"
+version = "0.36.0"
 backend = "npm:@google/gemini-cli"
 
 [[tools."npm:bash-language-server"]]
@@ -221,7 +221,7 @@ version = "0.48.0"
 backend = "npm:markdownlint-cli"
 
 [[tools."npm:opkg"]]
-version = "0.10.0"
+version = "0.11.0"
 backend = "npm:opkg"
 
 [[tools."npm:prettier"]]
@@ -249,7 +249,7 @@ version = "15.5.2"
 backend = "npm:textlint"
 
 [[tools."pipx:ansible-lint"]]
-version = "26.3.0"
+version = "26.4.0"
 backend = "pipx:ansible-lint"
 
 [[tools."pipx:beautysh"]]
@@ -265,7 +265,7 @@ version = "8.0.1"
 backend = "pipx:isort"
 
 [[tools."pipx:mypy"]]
-version = "1.19.1"
+version = "1.20.0"
 backend = "pipx:mypy"
 
 [[tools."pipx:pyproject-flake8"]]
@@ -277,7 +277,7 @@ version = "0.0.62"
 backend = "pipx:ruff-lsp"
 
 [[tools."pipx:semgrep"]]
-version = "1.156.0"
+version = "1.157.0"
 backend = "pipx:semgrep"
 
 [[tools."pipx:sqlfluff"]]
