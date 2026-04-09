@@ -8,7 +8,7 @@ export const zellijStatusPlugin = async ({ $ }) => {
   };
 
   const handleEventType = async (type) => {
-    if (type === "permission.asked") {
+    if (type === "permission.asked" || type === "tui.prompt.append") {
       await notify("waiting");
     }
 
@@ -36,6 +36,9 @@ export const zellijStatusPlugin = async ({ $ }) => {
     },
     "permission.replied": async () => {
       await notify("completed");
+    },
+    "tui.prompt.append": async () => {
+      await notify("waiting");
     },
     "session.idle": async () => {
       await notify("completed");

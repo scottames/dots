@@ -76,6 +76,12 @@
           { "$rename": { "mcpServers": "mcp" } }
         ],
         "merge": "deep"
+      },
+      {
+        "from": "root/**/*",
+        "to": "**/*",
+        "fallback": true,
+        "comment": "Catch-all: install root-stored files to workspace root"
       }
     ]
   }
