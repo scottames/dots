@@ -84,6 +84,11 @@ $HAS_GUM \
 $HAS_UGUM \
   && setenv GUM_BIN                "ugum"
 
+# bubbletint | https://lrstanley.github.io/bubbletint/
+setenv BUBBLETINT_THEME "catppuccin_mocha"
+# https://www.gh-dash.dev/companions/enhance/theme/
+setenv ENHANCE_THEME "$BUBBLETINT_THEME"
+
 # handy unicode
 setenv TICK "✔"
 setenv CROSS "✖"
