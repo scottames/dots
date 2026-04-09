@@ -22,12 +22,14 @@ _bins=(
   dyff
   hub
   gh
+  gt
   gum
   nvim
   op
   ugum
   vim
   virtualenv
+  wt
   yum
   zplug
 )
