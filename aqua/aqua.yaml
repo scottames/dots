@@ -270,7 +270,3 @@ packages:
   # Automatically sync shell completions for tools managed by mise
   #  https://github.com/alltuner/mise-completions-sync
   - name: alltuner/mise-completions-sync@v0.5.0
-  # an open source, extensible AI agent that goes beyond code
-  # suggestions - install, execute, edit, and test with any LLM
-  #  https://block.github.io/goose
-  - name: block/goose@v1.29.0
