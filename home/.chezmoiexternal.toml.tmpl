@@ -145,6 +145,14 @@ refreshPeriod = "24h"
     include = ["*/themes/**"]
 
 
+[".config/atuin/themes"]
+    type = "archive"
+    url = "https://github.com/catppuccin/atuin/archive/main.tar.gz"
+    exact = true
+    refreshPeriod = "168h"
+    stripComponents = 3
+    include = ["*/themes/*/*.toml"]
+
 [".config/yazi/flavors"]
     type = "archive"
     url = "https://github.com/yazi-rs/flavors/archive/main.tar.gz"
