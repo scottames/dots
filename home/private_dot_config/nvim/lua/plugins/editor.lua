@@ -3,7 +3,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = function()
+        require("catppuccin").load() -- force catppuccin to load
+      end,
     },
   },
 
