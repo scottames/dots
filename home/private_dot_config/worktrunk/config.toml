@@ -5,6 +5,6 @@ worktree-path = "{{ repo_path }}/../{{ branch | sanitize }}"
 skip-shell-integration-prompt = true
 
 [post-start]
-copy = "command -v thts && thts init --no-agents --force"
+thts = "command -v thts && thts init --no-agents --force"
 
 [projects]
