@@ -30,7 +30,7 @@ packages:
   - name: incu6us/goimports-reviser@v3.12.6
   - name: koalaman/shellcheck@v0.11.0
   - name: mvdan/gofumpt@v0.9.2
-  - name: mvdan/sh@v3.13.0
+  - name: mvdan/sh@v3.13.1
   - name: nametake/golangci-lint-langserver@v0.0.12
   - name: psf/black@26.3.1
   - name: rhysd/actionlint@v1.7.12
@@ -118,7 +118,7 @@ packages:
   - name: junegunn/fzf@v0.71.0
   # simple terminal ui for git commands
   #   https://github.com/jesseduffield/lazygit
-  - name: jesseduffield/lazygit@v0.60.0
+  - name: jesseduffield/lazygit@v0.61.0
   # kubernetes tui
   #   https://github.com/derailed/k9s
   - name: derailed/k9s@v0.50.18
@@ -183,7 +183,7 @@ packages:
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.18
+  - name: github/copilot-cli@v1.0.20
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.3.17
@@ -237,7 +237,7 @@ packages:
   - name: steveyegge/beads@v1.0.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.34.1
+  - name: max-sixty/worktrunk@v0.34.2
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
