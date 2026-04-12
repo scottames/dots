@@ -1,11 +1,12 @@
-{{- $name           := "Scott Ames" -}}
-{{- $dotsStr        := "dots" -}}
-{{- $email          := "scott@ames.sh" -}}
-{{- $hourDark         := 24    -}}
-{{- $hourLight        := 24    -}}
-{{- $githubUser     := "scottames" -}}
-{{- $fontMonospace  := "FiraCode Nerd Font Mono" -}}
-{{- $useGitWorktrees  := true  -}}
+{{- $name            := "Scott Ames" -}}
+{{- $dotsStr         := "dots" -}}
+{{- $email           := "scott@ames.sh" -}}
+{{- $hourDark        := 24    -}}
+{{- $hourLight       := 24    -}}
+{{- $githubUser      := "scottames" -}}
+{{- $fontMonospace   := "FiraCode Nerd Font Mono" -}}
+{{- $useGitWorktrees := true  -}}
+{{- $gitHubCom       := "github.com" -}}
 
 {{- /* TODO: source entire file into env and reference natively here? */ -}}
 
@@ -139,6 +140,8 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{-   $wallpaperDir = promptStringOnce . "desktop.wallpaper_dir" "path to desktop wallpaper folder" $wallpaperDirDefault -}}
 {{- end -}}
 
+{{- $workOrg := promptStringOnce . "work.org" "GitHub org for work profile" "" -}}
+
 {{- $gitSigningKey := promptStringOnce . "me.git.signing_key" "Key to use for git signing" "6207D796C3BDA7278077465F14E140E80951AB78" }}
 
 sourceDir = "{{ $chezmoiSourceDir }}"
@@ -208,3 +211,11 @@ progress = true
       signing_key = "{{ $gitSigningKey }}"
     [data.me.github]
       username = "{{  $githubUser }}"
+
+{{- if ne $workOrg "" }}
+  [data.work]
+    org = "{{ $workOrg }}"
+    src_dir = "{{ joinPath $srcDir $gitHubCom $workOrg }}"
+    dots = "{{ joinPath $srcDir $gitHubCom $workOrg $githubUser "main" }}"
+    notebook = "{{ joinPath $srcDir $gitHubCom $workOrg "notebook" }}"
+{{- end }}

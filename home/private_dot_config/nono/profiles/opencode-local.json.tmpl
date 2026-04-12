@@ -1,0 +1,80 @@
+{{- $home := .chezmoi.homeDir -}}
+{{- $ntbkDir := .home.ntbk_dir -}}
+{{- $workRepo := "" -}}
+{{- $workNotebook := "" -}}
+{{- if hasKey . "work" -}}
+{{-   $workRepo = index . "work" "dots" -}}
+{{-   $workNotebook = index . "work" "notebook" -}}
+{{- end -}}
+{{- $allowPaths := list $ntbkDir -}}
+{{- if ne $workNotebook "" -}}
+{{-   $allowPaths = append $allowPaths $workNotebook -}}
+{{- end -}}
+{{- $allowPaths = append $allowPaths (joinPath $home ".local/state/nvim") -}}
+{{- $readPaths := list
+      "/etc/fish"
+      (joinPath $home ".config/nvim")
+      (joinPath $home ".local/share/aquaproj-aqua")
+      (joinPath $home ".config/fish")
+      (joinPath $home ".local/share/nvim")
+      (joinPath $home ".gobrew")
+      (joinPath $home ".local/share/mise")
+-}}
+{{- if ne $workRepo "" -}}
+{{-   $readPaths = append $readPaths $workRepo -}}
+{{- end -}}
+{{- $writePaths := list
+      "/run/user/1000"
+      (joinPath $home ".config/fish")
+      (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
+      (joinPath $home ".local/share/aquaproj-aqua/bin/metadata")
+-}}
+{{- $readFiles := list
+      (joinPath $home ".gitconfig-work")
+      (joinPath $home ".setenv")
+      (joinPath $home ".cargo/env.fish")
+-}}
+{{- if ne $workRepo "" -}}
+{{-   $readFiles = append $readFiles (joinPath $workRepo ".gitconfig") -}}
+{{- end -}}
+{{- $overrideDeny := list
+      (joinPath $home ".config/fish/config.fish")
+      (joinPath $home ".config/fish/fish_variables")
+-}}
+{
+  "extends": "opencode",
+  "meta": {
+    "name": "opencode-local",
+    "version": "0.1.0",
+    "description": "OpenCode with local mise runtime access and external git include access"
+  },
+  "filesystem": {
+    "allow": [
+{{- range $i, $p := $allowPaths }}
+      "{{ $p }}"{{ if lt (add $i 1) (len $allowPaths) }},{{ end }}
+{{- end }}
+    ],
+    "read": [
+{{- range $i, $p := $readPaths }}
+      "{{ $p }}"{{ if lt (add $i 1) (len $readPaths) }},{{ end }}
+{{- end }}
+    ],
+    "write": [
+{{- range $i, $p := $writePaths }}
+      "{{ $p }}"{{ if lt (add $i 1) (len $writePaths) }},{{ end }}
+{{- end }}
+    ],
+    "read_file": [
+{{- range $i, $p := $readFiles }}
+      "{{ $p }}"{{ if lt (add $i 1) (len $readFiles) }},{{ end }}
+{{- end }}
+    ]
+  },
+  "policy": {
+    "override_deny": [
+{{- range $i, $p := $overrideDeny }}
+      "{{ $p }}"{{ if lt (add $i 1) (len $overrideDeny) }},{{ end }}
+{{- end }}
+    ]
+  }
+}
