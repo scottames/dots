@@ -68,6 +68,7 @@ return {
     -- alt: https://github.com/numToStr/Navigator.nvim/compare/master...dynamotn:Navigator.nvim:master
     -- requires: https://github.com/hiasr/vim-zellij-navigator
     "swaits/zellij-nav.nvim",
+    enabled = false,
     lazy = true,
     event = "VeryLazy",
     keys = {
