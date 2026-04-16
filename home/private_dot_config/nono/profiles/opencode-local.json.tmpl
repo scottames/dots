@@ -6,13 +6,27 @@
 {{-   $workRepo = index . "work" "dots" -}}
 {{-   $workNotebook = index . "work" "notebook" -}}
 {{- end -}}
-{{- $allowPaths := list $ntbkDir -}}
+{{- $allowPaths := list 
+       $ntbkDir
+      (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
+      (joinPath $home ".npm-global/lib/node_modules")
+      (joinPath $home "node_modules")
+-}}
 {{- if ne $workNotebook "" -}}
 {{-   $allowPaths = append $allowPaths $workNotebook -}}
 {{- end -}}
+{{- /* Neovim needs read+write state access because ShaDa merges existing state before writing. */ -}}
 {{- $allowPaths = append $allowPaths (joinPath $home ".local/state/nvim") -}}
+{{- /* npx/npm-backed local MCPs need a writable ~/.npm cache and logs directory. */ -}}
+{{- $allowPaths = append $allowPaths (joinPath $home ".npm") -}}
 {{- $readPaths := list
       "/etc/fish"
+      "/etc/pki/ca-trust"
+      "/usr/libexec/git-core"
+      "/usr/bin/node-22"
+      "/etc/pki/tls/openssl.cnf"
+      (joinPath $home ".config/chezmoi")
+      (joinPath $home ".cargo/registry/src")
       (joinPath $home ".config/nvim")
       (joinPath $home ".local/share/aquaproj-aqua")
       (joinPath $home ".config/fish")
@@ -20,27 +34,38 @@
       (joinPath $home ".gobrew")
       (joinPath $home ".local/share/mise")
 -}}
+{{- /* Git/curl over HTTPS needs the system CA bundle under /etc/pki/ca-trust. */ -}}
+{{- /* npx github:... fetches via Git's HTTPS remote helper from this directory. */ -}}
+{{- /* Prompt editing through nvim reads config and plugin/runtime data. */ -}}
 {{- if ne $workRepo "" -}}
 {{-   $readPaths = append $readPaths $workRepo -}}
 {{- end -}}
 {{- $writePaths := list
       "/run/user/1000"
+      "/var/home/scta/.npm/_cacache/tmp/"
       (joinPath $home ".config/fish")
       (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
       (joinPath $home ".local/share/aquaproj-aqua/bin/metadata")
 -}}
+{{- /* fzf-lua serverstart() uses XDG_RUNTIME_DIR for its local socket. */ -}}
+{{- /* Fish persists universal vars by creating fish_variables.* temp files in this dir. */ -}}
+{{- /* Aqua wants to refresh its metadata and registry cache during tool startup. */ -}}
 {{- $readFiles := list
       (joinPath $home ".gitconfig-work")
       (joinPath $home ".setenv")
       (joinPath $home ".cargo/env.fish")
 -}}
+{{- /* Git includes this file from ~/.config/git/config in the sandbox. */ -}}
+{{- /* Fish startup sources these shell-agnostic env files. */ -}}
 {{- if ne $workRepo "" -}}
+{{- /* The work git include lives in the work repo and is conditionally sourced. */ -}}
 {{-   $readFiles = append $readFiles (joinPath $workRepo ".gitconfig") -}}
 {{- end -}}
 {{- $overrideDeny := list
       (joinPath $home ".config/fish/config.fish")
       (joinPath $home ".config/fish/fish_variables")
 -}}
+{{- /* Nono treats shell config as sensitive, so Fish config needs explicit deny overrides. */ -}}
 {
   "extends": "opencode",
   "meta": {
