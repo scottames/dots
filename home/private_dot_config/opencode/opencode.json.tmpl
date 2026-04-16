@@ -70,12 +70,15 @@
       "go test*": "allow",
       "grep *": "allow",
       "gt ls*": "allow",
+      "helm get*": "allow",
+      "helm history*": "allow",
       "ls *": "allow",
       "kubectl desc*": "allow",
       "kubectl get*": "allow",
       "kubectl list*": "allow",
       "mise run *": "allow",
       "npm ci*": "allow",
+      "npm run build*": "allow",
       "npm test*": "allow",
       "pytest *": "allow",
       "rg *": "allow",
@@ -92,6 +95,7 @@
     "edit": "ask",
     "external_directory": {
       "*": "ask",
+      "~/.cargo/registry/src**": "allow",
       "~/.config/opencode/skills/**": "allow"
     },
     "skill": {
@@ -101,13 +105,18 @@
       "ce:plan": "allow",
       "ce:review": "allow",
       "ce:work": "allow",
+      "dispatching-parallel-agents": "allow",
+      "document-review": "allow",
+      "executing-plans": "allow",
+      "git-commit": "allow",
+      "requesting-code-review": "allow",
       "subagent-driven-development": "allow",
       "systematic-debugging": "allow",
       "test-driven-development": "allow",
       "thts*": "allow",
       "using-superpowers": "allow",
-      "writing-plans": "allow",
       "verification-before-completion": "allow",
+      "writing-plans": "allow"
     },
     "webfetch": "ask",
     "websearch": "allow"
