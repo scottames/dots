@@ -139,6 +139,7 @@ abbr -a md mkdir_cd
 abbr -a mdp "gh gfm-preview"
 abbr -a mi "mise install"
 abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'
+abbr -a mll "MISE_LOCKED=0 mise lock"
 abbr -a mu "mise use --pin"
 abbr -a mt "mise trust"
 abbr -a mug "mise use --global --pin"

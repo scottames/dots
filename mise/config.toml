@@ -3,9 +3,10 @@
 [settings]
 experimental = true
 lockfile = true
-# locked = true
-## cannot enforce until all used backends support lock
+locked_verify_provenance = true
+## cannot enforce until all used backends support lock (npm/pipx)
 ## https://mise.jdx.dev/dev-tools/mise-lock.html#backend-support
+locked = true
 
 # Optional “paranoid” hardening + signature verification
 paranoid = true   # extra-secure behavior (hooks/tasks etc.) :contentReference[oaicite:8]{index=8}
@@ -39,6 +40,7 @@ rust = "1.94.1"
 "npm:@fission-ai/openspec" = "1.3.0"
 "npm:opkg" = "0.11.1"
 "npm:ccusage" = "18.0.10"
+"github:always-further/nono" = "0.32.0"
 
 # linters, etc
 "npm:@commitlint/cli" = "20.5.0"
@@ -65,3 +67,7 @@ rust = "1.94.1"
 "pipx:semgrep" = "1.159.0"
 "pipx:sqlfluff" = "4.1.0"
 "pipx:yamllint" = "1.38.0"
+"aqua:rhysd/actionlint" = "1.7.12"
+"aqua:sst/opencode" = "1.3.15"
+"go:golang.org/x/tools/gopls" = "0.21.1"
+"aqua:vercel-labs/agent-browser" = "0.25.4"
