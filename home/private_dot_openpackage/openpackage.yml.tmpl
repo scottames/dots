@@ -2,16 +2,16 @@ name: scta
 dependencies:
 {{- if stat (joinPath .home.src_github_dir ".agents/main/packages/compound-engineering") }}
 - name: compound-engineering
-  path: {{ .home.src_github_dir }}/.agents/main/packages/compound-engineering
+  base: {{ .home.src_github_dir }}/.agents/main/packages/compound-engineering
 {{- end }}
 
 {{- if stat (joinPath .home.src_github_dir ".agents/main/packages/global") }}
 - name: global
-  path: {{ .home.src_github_dir }}/.agents/main/packages/global
+  base: {{ .home.src_github_dir }}/.agents/main/packages/global
 {{- end }}
 {{- if stat (joinPath .home.src_github_dir ".agents/main/packages/superpowers") }}
 - name: superpowers
-  path: {{ .home.src_github_dir }}/.agents/main/packages/superpowers
+  base: {{ .home.src_github_dir }}/.agents/main/packages/superpowers
 {{- end }}
 
 dev-dependencies: []

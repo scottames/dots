@@ -173,144 +173,148 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt Shift Left"         { MoveTab "left"; }
         bind "Ctrl Alt Shift Right"        { MoveTab "right"; }
 
-        // https://github.com/hiasr/vim-zellij-navigator
-        bind "Ctrl h" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus_or_tab";
-                payload "left";
-
-                // Plugin Configuration
-                move_mod "ctrl"; // Optional, should be added on every command if you want to use it
-                resize_mod "alt"; // Optional, should be added on every command if you want to use it
-            };
-        }
-        bind "Ctrl left" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus_or_tab";
-                payload "left";
-
-                // Plugin Configuration
-                move_mod "ctrl"; // Optional, should be added on every command if you want to use it
-                resize_mod "alt"; // Optional, should be added on every command if you want to use it
-            };
-        }
-
-        bind "Alt h" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "resize";
-                payload "left";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Alt left" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "resize";
-                payload "left";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Ctrl j" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus";
-                payload "down";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-        bind "Ctrl down" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus";
-                payload "down";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Alt j" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "resize";
-                payload "down";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Ctrl k" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus";
-                payload "up";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-        bind "Ctrl up" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus";
-                payload "up";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Alt k" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "resize";
-                payload "up";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Ctrl l" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus_or_tab";
-                payload "right";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-        bind "Ctrl right" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "move_focus_or_tab";
-                payload "right";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Alt l" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "resize";
-                payload "right";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
-
-        bind "Alt right" {
-            MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
-                name "resize";
-                payload "right";
-
-                move_mod "ctrl";
-                resize_mod "alt";
-            };
-        }
+        bind "Ctrl h" "Ctrl Left"  { MoveFocus "Left"; }
+        bind "Ctrl l" "Ctrl Right" { MoveFocus "Right"; }
+        bind "Ctrl j" "Ctrl Down"  { MoveFocus "Down"; }
+        bind "Ctrl k" "Ctrl Up"    { MoveFocus "Up"; }
+        // // https://github.com/hiasr/vim-zellij-navigator
+        // bind "Ctrl h" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus_or_tab";
+        //         payload "left";
+        //
+        //         // Plugin Configuration
+        //         move_mod "ctrl"; // Optional, should be added on every command if you want to use it
+        //         resize_mod "alt"; // Optional, should be added on every command if you want to use it
+        //     };
+        // }
+        // bind "Ctrl left" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus_or_tab";
+        //         payload "left";
+        //
+        //         // Plugin Configuration
+        //         move_mod "ctrl"; // Optional, should be added on every command if you want to use it
+        //         resize_mod "alt"; // Optional, should be added on every command if you want to use it
+        //     };
+        // }
+        //
+        // bind "Alt h" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "resize";
+        //         payload "left";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Alt left" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "resize";
+        //         payload "left";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Ctrl j" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus";
+        //         payload "down";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        // bind "Ctrl down" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus";
+        //         payload "down";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Alt j" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "resize";
+        //         payload "down";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Ctrl k" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus";
+        //         payload "up";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        // bind "Ctrl up" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus";
+        //         payload "up";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Alt k" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "resize";
+        //         payload "up";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Ctrl l" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus_or_tab";
+        //         payload "right";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        // bind "Ctrl right" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "move_focus_or_tab";
+        //         payload "right";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Alt l" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "resize";
+        //         payload "right";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
+        //
+        // bind "Alt right" {
+        //     MessagePlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+        //         name "resize";
+        //         payload "right";
+        //
+        //         move_mod "ctrl";
+        //         resize_mod "alt";
+        //     };
+        // }
 
         // https://github.com/karimould/zellij-forgot
         bind "Ctrl '" {

@@ -141,6 +141,10 @@ Safety:
 
 ## Tool-Specific
 
+### GitHub Actions Workflows
+
+- Use `actionlint` to verify a workflow
+
 ### docker
 
 - On Fedora Linux assume docker is podman
