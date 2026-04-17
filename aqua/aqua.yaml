@@ -41,7 +41,7 @@ packages:
   - name: tmc/json-to-struct@v0.1.0
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.8.3 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.8.4 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -67,7 +67,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.5.0
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.9.3
+  - name: tofuutils/tenv@v4.10.1
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
   - name: twpayne/chezmoi@v2.70.1
@@ -158,7 +158,7 @@ packages:
   - name: eza-community/eza@v0.23.4
   # fork a repository, commit files and create a pull request using github api
   #   https://github.com/int128/ghcp
-  - name: int128/ghcp@v1.15.2
+  - name: int128/ghcp@v1.15.3
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
   - name: dagger/dagger@v0.20.5
@@ -183,7 +183,7 @@ packages:
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.22
+  - name: github/copilot-cli@v1.0.24
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.4.3
@@ -193,7 +193,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.118.0
+  - name: openai/codex@rust-v0.120.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -214,7 +214,7 @@ packages:
     registry: dots
   # A new type of shell
   #  https://www.nushell.sh/
-  - name: nushell/nushell@0.111.0
+  - name: nushell/nushell@0.112.1
   # An actively maintained, feature-rich and performance oriented,
   # neofetch like system information tool
   #  https://github.com/fastfetch-cli/fastfetch
@@ -227,7 +227,7 @@ packages:
   - name: gohugoio/hugo@v0.160.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.4.8
+  - name: jdx/mise@v2026.4.11
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -237,7 +237,7 @@ packages:
   - name: steveyegge/beads@v1.0.0
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.35.3
+  - name: max-sixty/worktrunk@v0.36.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -245,7 +245,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.100
+  - name: anthropics/claude-code@v2.1.104
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.1
