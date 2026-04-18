@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.43.0](https://github.com/scottames/dots/compare/v0.42.0...v0.43.0) (2026-04-18)
+
+
+### Features
+
+* **agents:** opencode perms + actionlint direction ([af5536f](https://github.com/scottames/dots/commit/af5536f79141b9f9fbd6c314041d6d275a8e0654))
+* **aqua:** add goose ([68f64a0](https://github.com/scottames/dots/commit/68f64a0c90489095514903c8a173d7d77fe9ff4e))
+* **atuin:** catppuccin theme! ([66f24ee](https://github.com/scottames/dots/commit/66f24ee4fa4e2b1de2b3c5503ff361f24482108a))
+* **gh-dash:** add default config ([7a73150](https://github.com/scottames/dots/commit/7a731504e14be39a28d6050cfadc6ed145c76e2f))
+* **mise:** add mise-completions-sync (via aqua) ([a02efc7](https://github.com/scottames/dots/commit/a02efc762e40372500ceb03c31445efb65e74c68))
+* **mise:** plumb new github.command setting to custom helper ([6bd2222](https://github.com/scottames/dots/commit/6bd22229fc87591f4ef09d585c1d1712836ecc87))
+* **mise:** stricter lock enforcement ([445d3de](https://github.com/scottames/dots/commit/445d3de091c2d082b574851337f3df36121a3255))
+* nono ([4c0eb97](https://github.com/scottames/dots/commit/4c0eb9796cbffb3ee30bcaa0c627f2bec7c19ae1))
+* nono + opencode (needs work) ([60c5a96](https://github.com/scottames/dots/commit/60c5a969395db1ecdaebdb8342179b4317130a6a))
+* **opencode:** prompt notify + settings tweaks ([f33dcdf](https://github.com/scottames/dots/commit/f33dcdf7af38dd9e2b356dc3739dcf443bd9bf1d))
+* **waybar:** cleanup + add proper disabled option ([e5fc363](https://github.com/scottames/dots/commit/e5fc363a5f1b6ef92cb6a7bee3b3fe80e7b6401e))
+* **worktrunk:** abbrs - post-start thts init ([4a0c697](https://github.com/scottames/dots/commit/4a0c697e21cd3624c6de39953e1cb969fe8f76d9))
+
+
+### Bug Fixes
+
+* disable hyprpaper ([4cc6409](https://github.com/scottames/dots/commit/4cc64099f735edfc6fb704b370a83be5915e0fd8))
+* minor darwin-related ([#814](https://github.com/scottames/dots/issues/814)) ([b04c3cb](https://github.com/scottames/dots/commit/b04c3cb9b80e2ab513543eee5e272029fb3d0dce))
+* SHELL being set correctly in fish/distrobox ([2d6abb0](https://github.com/scottames/dots/commit/2d6abb0f6f9b1b0f4eb4945504f02cc1a3c54298))
+
 ## [0.42.0](https://github.com/scottames/dots/compare/v0.41.0...v0.42.0) (2026-03-11)
 
 
