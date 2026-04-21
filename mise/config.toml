@@ -63,8 +63,10 @@ rust = "1.94.1"
 "pipx:yamllint" = "1.38.0"
 
 # tools
+"aqua:google/go-containerregistry" = "0.21.5"
 "aqua:int128/ghcp" = "1.15.3"
 "aqua:mfontanini/presenterm" = "0.16.1"
+"aqua:sethvargo/ratchet" = "0.11.4"
 "aqua:sst/opencode" = "1.4.7"
 "aqua:vercel-labs/agent-browser" = "0.25.4"
 "github:always-further/nono" = "0.35.0"
