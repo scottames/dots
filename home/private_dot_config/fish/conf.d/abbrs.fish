@@ -105,7 +105,7 @@ abbr -a gsw "git switch"
 abbr -a gta "git tag -a -m"
 # graphite.dev
 abbr -a gtc "gt c"
-abbr -a gtch "gt checkout"
+abbr -a gtco "gt checkout"
 abbr -a gtd "gt down"
 abbr -a gtl "gt log"
 abbr -a gtls "gt ls"
