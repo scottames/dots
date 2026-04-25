@@ -319,43 +319,43 @@ checksum = "sha256:c68c7903c1190101590cc1b2129835f47211b3b37ae87759f2b97d6534aa3
 url = "https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/bun-windows-x64-baseline.zip"
 
 [[tools."github:always-further/nono"]]
-version = "0.37.1"
+version = "0.38.0"
 backend = "github:always-further/nono"
 
 [tools."github:always-further/nono"."platforms.linux-arm64"]
-checksum = "sha256:5164e8ff7859b14298b2d5513d0b3d4b5d8bb7d8c1ba05c55a0e0ecf499e3173"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-v0.37.1-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284724"
+checksum = "sha256:c22c9604ccdd1889c7e6f2504f0a514ce5f722ba0848c5ccf5b91688fc2534c9"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692764"
 
 [tools."github:always-further/nono"."platforms.linux-arm64-musl"]
-checksum = "sha256:5164e8ff7859b14298b2d5513d0b3d4b5d8bb7d8c1ba05c55a0e0ecf499e3173"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-v0.37.1-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284724"
+checksum = "sha256:c22c9604ccdd1889c7e6f2504f0a514ce5f722ba0848c5ccf5b91688fc2534c9"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692764"
 
 [tools."github:always-further/nono"."platforms.linux-x64"]
-checksum = "sha256:75f196db26260534bf7b72eb83391f6e2559be555a327b41498392956f31c21c"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-v0.37.1-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284723"
+checksum = "sha256:e08b213636107d709a3ebce3feacbff97766cc60d4f7398fdc5458c870d18d23"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692763"
 
 [tools."github:always-further/nono"."platforms.linux-x64-musl"]
-checksum = "sha256:75f196db26260534bf7b72eb83391f6e2559be555a327b41498392956f31c21c"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-v0.37.1-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284723"
+checksum = "sha256:e08b213636107d709a3ebce3feacbff97766cc60d4f7398fdc5458c870d18d23"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692763"
 
 [tools."github:always-further/nono"."platforms.macos-arm64"]
-checksum = "sha256:a4a1881717b4b1a66053b1d39a9618f09fddb457ad70bf82e64a67acd000e6ba"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-v0.37.1-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284720"
+checksum = "sha256:55172b426e13821002747dd417fe4f66b263bb90dfea780f9808754e15f0926f"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692766"
 
 [tools."github:always-further/nono"."platforms.macos-x64"]
-checksum = "sha256:862bfe149bb3e402e682df417c74334644e646a57afe7de2a62436b4ae8ac86d"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-v0.37.1-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284721"
+checksum = "sha256:294932ce1b5a6524ea9d1628394fdaed9a04ae34b5ed376d2d089c75b727cc7b"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692765"
 
 [tools."github:always-further/nono"."platforms.windows-x64"]
-checksum = "sha256:70bbcd46a31103563bdfd9f88ec71d52c59c7cf6dc14723b48b21b92fddeb942"
-url = "https://github.com/always-further/nono/releases/download/v0.37.1/nono-cli_0.37.1_amd64.deb"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/398284725"
+checksum = "sha256:3de956d48f84306419dffdc278994398fdc61df1375fa01d7b9711cb34874494"
+url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-cli_0.38.0_amd64.deb"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692762"
 
 [[tools.go]]
 version = "1.26.2"
@@ -430,7 +430,7 @@ version = "20.5.0"
 backend = "npm:@commitlint/cli"
 
 [[tools."npm:@fission-ai/openspec"]]
-version = "1.3.0"
+version = "1.3.1"
 backend = "npm:@fission-ai/openspec"
 
 [[tools."npm:@fsouza/prettierd"]]
@@ -526,7 +526,7 @@ version = "0.0.62"
 backend = "pipx:ruff-lsp"
 
 [[tools."pipx:semgrep"]]
-version = "1.159.0"
+version = "1.160.0"
 backend = "pipx:semgrep"
 
 [[tools."pipx:sqlfluff"]]
