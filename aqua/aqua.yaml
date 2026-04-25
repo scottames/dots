@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin/arm64
     - linux
 registries:
-  - ref: v4.495.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.496.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -41,7 +41,7 @@ packages:
   - name: tmc/json-to-struct@v0.1.0
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.8.4 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.8.5 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -67,7 +67,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.5.0
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.10.1
+  - name: tofuutils/tenv@v4.11.1
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
   - name: twpayne/chezmoi@v2.70.2
@@ -135,7 +135,7 @@ packages:
   - name: GoogleContainerTools/skaffold@v2.18.3
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
-  - name: terraform-linters/tflint@v0.61.0
+  - name: terraform-linters/tflint@v0.62.0
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
   - name: mikefarah/yq@v4.53.2
@@ -143,7 +143,7 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.87
   #   https://github.com/casey/just
-  - name: casey/just@1.49.0
+  - name: casey/just@1.50.0
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.16
@@ -178,12 +178,12 @@ packages:
   - name: atuinsh/atuin@v18.15.2
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.20.1
+  - name: spacelift-io/spacectl@v1.21.0
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.32
+  - name: github/copilot-cli@v1.0.34
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.14.22
@@ -193,7 +193,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.121.0
+  - name: openai/codex@rust-v0.122.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -227,7 +227,7 @@ packages:
   - name: gohugoio/hugo@v0.160.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.4.17
+  - name: jdx/mise@v2026.4.18
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -237,15 +237,15 @@ packages:
   - name: steveyegge/beads@v1.0.2
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.39.0
+  - name: max-sixty/worktrunk@v0.42.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
-  - name: tassiovirginio/try-rs@v1.7.5
+  - name: tassiovirginio/try-rs@v1.7.7
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.114
+  - name: anthropics/claude-code@v2.1.116
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.1
@@ -255,7 +255,7 @@ packages:
     registry: dots
   # gh extension to preview GitHub Flavored Markdown
   #  https://github.com/thiagokokada/gh-gfm-preview
-  - name: thiagokokada/gh-gfm-preview@v1.1.2
+  - name: thiagokokada/gh-gfm-preview@v1.1.3
     registry: dots
   # CLI home video recorder 📼
   #  https://github.com/charmbracelet/vhs
