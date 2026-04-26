@@ -207,36 +207,36 @@ url = "https://github.com/sethvargo/ratchet/releases/download/v0.11.4/ratchet_0.
 provenance = "github-attestations"
 
 [[tools."aqua:sst/opencode"]]
-version = "1.14.19"
+version = "1.14.20"
 backend = "aqua:sst/opencode"
 
 [tools."aqua:sst/opencode"."platforms.linux-arm64"]
-checksum = "sha256:f3d957a9c8000fab2f00e5d80f4ff60877df728e5625f0fdd96126d9ebec9952"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-linux-arm64.tar.gz"
+checksum = "sha256:3ca509044e06b8e7dacf08de735addee400788f80729c333fbf4581d0f77b4d3"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-linux-arm64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-arm64-musl"]
-checksum = "sha256:f3d957a9c8000fab2f00e5d80f4ff60877df728e5625f0fdd96126d9ebec9952"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-linux-arm64.tar.gz"
+checksum = "sha256:3ca509044e06b8e7dacf08de735addee400788f80729c333fbf4581d0f77b4d3"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-linux-arm64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-x64"]
-checksum = "sha256:8cb11723ce0ec82e2b6ff9a2356b12c2f4c4a95a087ba0a3004b19f167951440"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-linux-x64.tar.gz"
+checksum = "sha256:1707133022382ea8c8cc5bc47ab1db52fa206bd9baf8d3ad4d862b489dbb448f"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-linux-x64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-x64-musl"]
-checksum = "sha256:8cb11723ce0ec82e2b6ff9a2356b12c2f4c4a95a087ba0a3004b19f167951440"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-linux-x64.tar.gz"
+checksum = "sha256:1707133022382ea8c8cc5bc47ab1db52fa206bd9baf8d3ad4d862b489dbb448f"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-linux-x64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.macos-arm64"]
-checksum = "sha256:554a2019225514f669e1b014482a2e27c7e729c3337020301510f32be7162290"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-darwin-arm64.zip"
+checksum = "sha256:e6124c5c73576c678d24b09657b73281d96d67fc1c4ddd4714062811c51c81d5"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-darwin-arm64.zip"
 
 [tools."aqua:sst/opencode"."platforms.macos-x64"]
-checksum = "sha256:f78a1e19410ed3387518a9d875c56c3635383513dbdf34192dcbb9f2f13b15a0"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-darwin-x64.zip"
+checksum = "sha256:2d07563b69b6599507620d3aed1be8d49aacb8c11e66646617bb5f3f735d69a1"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-darwin-x64.zip"
 
 [tools."aqua:sst/opencode"."platforms.windows-x64"]
-checksum = "sha256:498a572dedf86c2688bfaebbe4b8828214dab4a02a8f93c6ad6a0f02b3969a02"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-windows-x64.zip"
+checksum = "sha256:15f13c9ec92181c10053cbc7d44630d11c0b626ef2c240d90ea871320d58d1ed"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.20/opencode-windows-x64.zip"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
 version = "0.26.0"
@@ -319,43 +319,43 @@ checksum = "sha256:c68c7903c1190101590cc1b2129835f47211b3b37ae87759f2b97d6534aa3
 url = "https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/bun-windows-x64-baseline.zip"
 
 [[tools."github:always-further/nono"]]
-version = "0.38.0"
+version = "0.39.0"
 backend = "github:always-further/nono"
 
 [tools."github:always-further/nono"."platforms.linux-arm64"]
-checksum = "sha256:c22c9604ccdd1889c7e6f2504f0a514ce5f722ba0848c5ccf5b91688fc2534c9"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692764"
+checksum = "sha256:6dcb85329ca95f7e6ce8ac1c49dc253d2c8211efb66d2d495b423a103934045f"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-v0.39.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863455"
 
 [tools."github:always-further/nono"."platforms.linux-arm64-musl"]
-checksum = "sha256:c22c9604ccdd1889c7e6f2504f0a514ce5f722ba0848c5ccf5b91688fc2534c9"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692764"
+checksum = "sha256:6dcb85329ca95f7e6ce8ac1c49dc253d2c8211efb66d2d495b423a103934045f"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-v0.39.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863455"
 
 [tools."github:always-further/nono"."platforms.linux-x64"]
-checksum = "sha256:e08b213636107d709a3ebce3feacbff97766cc60d4f7398fdc5458c870d18d23"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692763"
+checksum = "sha256:341be4e7af194122dc32440ac04691d1396a3618ab9ba3d4a8ccdaf6ee55fe60"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-v0.39.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863451"
 
 [tools."github:always-further/nono"."platforms.linux-x64-musl"]
-checksum = "sha256:e08b213636107d709a3ebce3feacbff97766cc60d4f7398fdc5458c870d18d23"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692763"
+checksum = "sha256:341be4e7af194122dc32440ac04691d1396a3618ab9ba3d4a8ccdaf6ee55fe60"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-v0.39.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863451"
 
 [tools."github:always-further/nono"."platforms.macos-arm64"]
-checksum = "sha256:55172b426e13821002747dd417fe4f66b263bb90dfea780f9808754e15f0926f"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692766"
+checksum = "sha256:6445967b5b39cd38a2eac43601ca957bd65a0ea2f205c49534e11fcbc3a935d4"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-v0.39.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863452"
 
 [tools."github:always-further/nono"."platforms.macos-x64"]
-checksum = "sha256:294932ce1b5a6524ea9d1628394fdaed9a04ae34b5ed376d2d089c75b727cc7b"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-v0.38.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692765"
+checksum = "sha256:fc43a8850270085661a7f22e2f76a3ab05dd864739e473d513aeb07f088a9568"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-v0.39.0-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863450"
 
 [tools."github:always-further/nono"."platforms.windows-x64"]
-checksum = "sha256:3de956d48f84306419dffdc278994398fdc61df1375fa01d7b9711cb34874494"
-url = "https://github.com/always-further/nono/releases/download/v0.38.0/nono-cli_0.38.0_amd64.deb"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/400692762"
+checksum = "sha256:ce4a4d1c9486c6bfb63b2a03f1ac2079492e7db5b31bbd2cebc579d0554a26c9"
+url = "https://github.com/always-further/nono/releases/download/v0.39.0/nono-cli_0.39.0_amd64.deb"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/401863453"
 
 [[tools.go]]
 version = "1.26.2"
@@ -514,7 +514,7 @@ version = "8.0.1"
 backend = "pipx:isort"
 
 [[tools."pipx:mypy"]]
-version = "1.20.1"
+version = "1.20.2"
 backend = "pipx:mypy"
 
 [[tools."pipx:pyproject-flake8"]]
