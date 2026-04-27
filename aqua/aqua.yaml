@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin/arm64
     - linux
 registries:
-  - ref: v4.496.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.497.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -90,11 +90,11 @@ packages:
   #   https://github.com/sharkdp/fd
   - name: sharkdp/fd@v10.4.2
   #   https://github.com/neovim/neovim
-  - name: neovim/neovim@v0.12.1
+  - name: neovim/neovim@v0.12.2
   #   https://github.com/direnv/direnv
   - name: direnv/direnv@v2.37.1
   #   https://github.com/kubernetes/kubectl
-  - name: kubernetes/kubectl@v1.35.4
+  - name: kubernetes/kubectl@v1.36.0
   # kubernetes package manager
   #   https://github.com/helm/helm
   - name: helm/helm@v4.1.4
@@ -193,7 +193,7 @@ packages:
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.122.0
+  - name: openai/codex@rust-v0.123.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -227,7 +227,7 @@ packages:
   - name: gohugoio/hugo@v0.160.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.4.18
+  - name: jdx/mise@v2026.4.19
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -237,7 +237,7 @@ packages:
   - name: steveyegge/beads@v1.0.2
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.43.0
+  - name: max-sixty/worktrunk@v0.44.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -245,7 +245,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.117
+  - name: anthropics/claude-code@v2.1.118
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.1
