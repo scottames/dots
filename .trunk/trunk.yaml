@@ -5,7 +5,7 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.7.6
+      ref: v1.8.0
       uri: https://github.com/trunk-io/plugins
 actions:
   enabled:
@@ -20,9 +20,9 @@ lint:
     - oxipng@10.1.1
     - bandit@1.9.4
     - black@26.3.1
-    - checkov@3.2.524
+    - checkov@3.2.526
     - isort@8.0.1
-    - ruff@0.15.11
+    - ruff@0.15.12
     - trivy@0.70.0
     - gokart@0.5.1
     - osv-scanner@2.3.5
@@ -36,7 +36,7 @@ lint:
     - hadolint@2.14.0
     - markdownlint@0.48.0
     - prettier@3.8.3
-    - renovate@43.139.8
+    - renovate@43.150.0
     - shellcheck@0.11.0
     - shfmt@3.6.0
     - stylua@2.4.1
@@ -87,4 +87,4 @@ runtimes:
     - go@1.21.0
     - rust@1.85.0
     - node@22.16.0
-    - python@3.10.8
+    - python@3.14.4
