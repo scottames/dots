@@ -42,4 +42,49 @@ describe("zellijStatusPlugin", () => {
       "waiting",
     ]);
   });
+
+  test("notifies waiting when question asked hook fires", async () => {
+    process.env.HOME = "/tmp/test-home";
+    const calls = [];
+    const plugin = await zellijStatusPlugin({ $: createShell(calls) });
+
+    await plugin["question.asked"]();
+
+    expect(calls).toHaveLength(1);
+    expect(calls[0].values).toEqual([
+      "/tmp/test-home/.local/bin/zellij-status-notify",
+      "waiting",
+    ]);
+  });
+
+  test("notifies waiting when generic event receives question asked", async () => {
+    process.env.HOME = "/tmp/test-home";
+    const calls = [];
+    const plugin = await zellijStatusPlugin({ $: createShell(calls) });
+
+    await plugin.event({ event: { type: "question.asked" } });
+
+    expect(calls).toHaveLength(1);
+    expect(calls[0].values).toEqual([
+      "/tmp/test-home/.local/bin/zellij-status-notify",
+      "waiting",
+    ]);
+  });
+
+  test.each(["question.replied", "question.rejected"])(
+    "notifies completed when %s hook fires",
+    async (eventType) => {
+      process.env.HOME = "/tmp/test-home";
+      const calls = [];
+      const plugin = await zellijStatusPlugin({ $: createShell(calls) });
+
+      await plugin[eventType]();
+
+      expect(calls).toHaveLength(1);
+      expect(calls[0].values).toEqual([
+        "/tmp/test-home/.local/bin/zellij-status-notify",
+        "completed",
+      ]);
+    },
+  );
 });

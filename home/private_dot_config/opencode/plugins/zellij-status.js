@@ -8,11 +8,20 @@ export const zellijStatusPlugin = async ({ $ }) => {
   };
 
   const handleEventType = async (type) => {
-    if (type === "permission.asked" || type === "tui.prompt.append") {
+    if (
+      type === "permission.asked" ||
+      type === "question.asked" ||
+      type === "tui.prompt.append"
+    ) {
       await notify("waiting");
     }
 
-    if (type === "session.idle" || type === "permission.replied") {
+    if (
+      type === "session.idle" ||
+      type === "permission.replied" ||
+      type === "question.replied" ||
+      type === "question.rejected"
+    ) {
       await notify("completed");
     }
   };
@@ -35,6 +44,15 @@ export const zellijStatusPlugin = async ({ $ }) => {
       await notify("waiting");
     },
     "permission.replied": async () => {
+      await notify("completed");
+    },
+    "question.asked": async () => {
+      await notify("waiting");
+    },
+    "question.replied": async () => {
+      await notify("completed");
+    },
+    "question.rejected": async () => {
       await notify("completed");
     },
     "tui.prompt.append": async () => {
