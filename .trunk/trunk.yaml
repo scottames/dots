@@ -81,6 +81,7 @@ lint:
         - prettier
       paths:
         - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
+        - home/private_dot_config/vicinae/settings.json
         - home/dot_claude/settings.json
 runtimes:
   enabled:
