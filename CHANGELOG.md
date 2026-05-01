@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.44.0](https://github.com/scottames/dots/compare/v0.43.0...v0.44.0) (2026-05-01)
+
+
+### Features
+
+* **mise:** add crane + ratchet ([6b0451b](https://github.com/scottames/dots/commit/6b0451b112f9217f17c71fe5fb585cc587dda64b))
+* **mise:** add tuicr ([0fc687c](https://github.com/scottames/dots/commit/0fc687c6e81bbeec9be7a11c79edb15df64c492e))
+* television (tv) ([00ea6e6](https://github.com/scottames/dots/commit/00ea6e663c104f699dc3da0bb0c4ead348e0f701))
+
+
+### Bug Fixes
+
+* **awww:** remove conflicting swaybg ([9437059](https://github.com/scottames/dots/commit/94370596d1227e8bec72e76ed2905875c7c7353e))
+* **opencode:** incorrect small_model ([17ae7ce](https://github.com/scottames/dots/commit/17ae7ceac677b837f360b63eea15edbf704c69dd))
+* **opencode:** properly handle prompts/question notifications to zellij-status ([cf04e3a](https://github.com/scottames/dots/commit/cf04e3ae88a65ae228c9aae3d505c8a656dd9cfe))
+
 ## [0.43.0](https://github.com/scottames/dots/compare/v0.42.0...v0.43.0) (2026-04-18)
 
 
