@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin/arm64
     - linux
 registries:
-  - ref: v4.499.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.501.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -67,7 +67,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.5.0
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.11.1
+  - name: tofuutils/tenv@v4.12.0
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
   - name: twpayne/chezmoi@v2.70.2
@@ -175,18 +175,18 @@ packages:
   - name: dlvhdr/gh-dash@v4.23.2
   # magical shell history
   #   https://github.com/atuinsh/atuin
-  - name: atuinsh/atuin@v18.15.2
+  - name: atuinsh/atuin@v18.16.0
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.21.1
+  - name: spacelift-io/spacectl@v1.21.2
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.37
+  - name: github/copilot-cli@v1.0.39
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.14.28
+  - name: sst/opencode@v1.14.29
   # Obsidian TUI
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
@@ -203,7 +203,7 @@ packages:
   # pinact is a CLI to edit GitHub Workflow and Composite action files
   # and pin versions of Actions and Reusable Workflows.
   #  https://github.com/suzuki-shunsuke/pinact
-  - name: suzuki-shunsuke/pinact@v3.9.0
+  - name: suzuki-shunsuke/pinact@v3.9.2
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
@@ -224,7 +224,7 @@ packages:
   - name: lasantosr/intelli-shell@v3.4.0
   # The world’s fastest framework for building websites.
   #  https://github.com/gohugoio/hugo
-  - name: gohugoio/hugo@v0.160.1
+  - name: gohugoio/hugo@v0.161.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
   - name: jdx/mise@v2026.4.25
@@ -237,7 +237,7 @@ packages:
   - name: steveyegge/beads@v1.0.3
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.45.1
+  - name: max-sixty/worktrunk@v0.45.2
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -245,7 +245,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.121
+  - name: anthropics/claude-code@v2.1.123
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.1
