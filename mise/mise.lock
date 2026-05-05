@@ -203,36 +203,36 @@ url = "https://github.com/sethvargo/ratchet/releases/download/v0.11.4/ratchet_0.
 provenance = "github-attestations"
 
 [[tools."aqua:sst/opencode"]]
-version = "1.14.29"
+version = "1.14.31"
 backend = "aqua:sst/opencode"
 
 [tools."aqua:sst/opencode"."platforms.linux-arm64"]
-checksum = "sha256:faedc954ab549235a32f1bf10cb92206dbac58327a85530554e5e02feb28060e"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-arm64.tar.gz"
+checksum = "sha256:d8867e77b901dd04e707f459f44b3e28f23a6f0c2d740f1bb8af6f4b64ac19f7"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-arm64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-arm64-musl"]
-checksum = "sha256:cf89c85ade8c9bdfcd46ab15bd4782d3b8c59d57666020afa1f54963f9a10a9b"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-arm64-musl.tar.gz"
+checksum = "sha256:f00853f2f10c9e7d971df2db25da34e947f2a327500040d05fdf5f096e3955f5"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-arm64-musl.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-x64"]
-checksum = "sha256:d985e99d7e22446b78fc78a35cfa0ef8b0feff05be5288c4a0e1c6837b7a29f8"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-x64.tar.gz"
+checksum = "sha256:5d3853e29c81d7a134915690625009f5736ca84070529e69796cf62e12232c9e"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-x64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-x64-musl"]
-checksum = "sha256:05215042fa53aa7c46f9550bea9a6e4e3e1369c55dcc9b51d023f7f088c41a66"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-x64-musl.tar.gz"
+checksum = "sha256:861cfd21e682dea7047dc1f175a2534d00fcd0c559d47602ec9960be89d6e866"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-x64-musl.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.macos-arm64"]
-checksum = "sha256:39c483fe12cffe07bfc050d59df534ca1b5d29d9232da237586f1b6a2ef1c7e1"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-darwin-arm64.zip"
+checksum = "sha256:f3a2386a3ccdb1e8733af766600a0e2c35a001adaaa0d31429ff81c0dcd32180"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-darwin-arm64.zip"
 
 [tools."aqua:sst/opencode"."platforms.macos-x64"]
-checksum = "sha256:60d1c577998e5171183d55bf91e3bc699d5d91ab9998985d82240c87e2f30fec"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-darwin-x64.zip"
+checksum = "sha256:6921c770be5e037fc24e9f745fda235016f7b2e51ed79fb4b004c6e19b5ac942"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-darwin-x64.zip"
 
 [tools."aqua:sst/opencode"."platforms.windows-x64"]
-checksum = "sha256:87eb937a420708d2e424af2f8afaf3e4005ce0b95eb9d2e85be26c015d94591a"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-windows-x64.zip"
+checksum = "sha256:03e26c88adcbd35729a5a6f5df39acc45f6e704da53c64946be65263cb4900fb"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-windows-x64.zip"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
 version = "0.26.0"
@@ -354,43 +354,43 @@ url = "https://github.com/agavra/tuicr/releases/download/v0.10.0/tuicr-0.10.0-x8
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/393380118"
 
 [[tools."github:always-further/nono"]]
-version = "0.43.1"
+version = "0.46.0"
 backend = "github:always-further/nono"
 
 [tools."github:always-further/nono"."platforms.linux-arm64"]
-checksum = "sha256:ae0bdbae6710b3864351567bb236c8e4fa639de279d01c3fc86bc863775315b0"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-v0.43.1-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122809"
+checksum = "sha256:1e904f27c0f1e70596f1ee09d292d5b444caca7f674d00da1d0710fface83fd1"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-v0.46.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767610"
 
 [tools."github:always-further/nono"."platforms.linux-arm64-musl"]
-checksum = "sha256:ae0bdbae6710b3864351567bb236c8e4fa639de279d01c3fc86bc863775315b0"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-v0.43.1-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122809"
+checksum = "sha256:1e904f27c0f1e70596f1ee09d292d5b444caca7f674d00da1d0710fface83fd1"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-v0.46.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767610"
 
 [tools."github:always-further/nono"."platforms.linux-x64"]
-checksum = "sha256:5c4f7027e680bffa7e16fe0de75eb6259ffc8adb6e4356c71edfd74b59255d38"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-v0.43.1-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122815"
+checksum = "sha256:3f37fa55a4a1a0802f174ac674f4ecee036a50524eb5101896acaa25c8786da7"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-v0.46.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767615"
 
 [tools."github:always-further/nono"."platforms.linux-x64-musl"]
-checksum = "sha256:5c4f7027e680bffa7e16fe0de75eb6259ffc8adb6e4356c71edfd74b59255d38"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-v0.43.1-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122815"
+checksum = "sha256:3f37fa55a4a1a0802f174ac674f4ecee036a50524eb5101896acaa25c8786da7"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-v0.46.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767615"
 
 [tools."github:always-further/nono"."platforms.macos-arm64"]
-checksum = "sha256:9858fa8785abf0318ddf3e23a8ab7616b0723e9cdb946891bdd5f4e73439baa1"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-v0.43.1-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122806"
+checksum = "sha256:064b1ef16e60f40ea888dada7e641af419515afa6b8624494baba60f99954151"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-v0.46.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767613"
 
 [tools."github:always-further/nono"."platforms.macos-x64"]
-checksum = "sha256:eb2eac2342295bf67005e85615a311b37f200bfb5c092a9c9ca60eb1625bcc88"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-v0.43.1-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122816"
+checksum = "sha256:5f6ab8a4e20a3dbab2dcfd4561b6924c79a29d40dd0ba28965928281cc5a6e82"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-v0.46.0-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767612"
 
 [tools."github:always-further/nono"."platforms.windows-x64"]
-checksum = "sha256:880e63cf4b5525181f7100b958f8af06cb7c3a99bb3de74d80db0450410772c9"
-url = "https://github.com/always-further/nono/releases/download/v0.43.1/nono-cli_0.43.1_amd64.deb"
-url_api = "https://api.github.com/repos/always-further/nono/releases/assets/408122807"
+checksum = "sha256:c70c8bc369a0187be3ce6192de01b5c42a631976355191468dd9a871c00f76f8"
+url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-cli_0.46.0_amd64.deb"
+url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767609"
 
 [[tools.go]]
 version = "1.26.2"
@@ -473,7 +473,7 @@ version = "0.27.0"
 backend = "npm:@fsouza/prettierd"
 
 [[tools."npm:@google/gemini-cli"]]
-version = "0.40.0"
+version = "0.40.1"
 backend = "npm:@google/gemini-cli"
 
 [[tools."npm:bash-language-server"]]
