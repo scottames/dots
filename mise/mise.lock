@@ -392,6 +392,64 @@ checksum = "sha256:c70c8bc369a0187be3ce6192de01b5c42a631976355191468dd9a871c00f7
 url = "https://github.com/always-further/nono/releases/download/v0.46.0/nono-cli_0.46.0_amd64.deb"
 url_api = "https://api.github.com/repos/always-further/nono/releases/assets/409767609"
 
+[[tools."github:janosmiko/lfk"]]
+version = "0.10.2"
+backend = "github:janosmiko/lfk"
+
+[tools."github:janosmiko/lfk"."platforms.linux-arm64"]
+checksum = "sha256:5ab7cb7b6c1d69e2be7756eb9570d9436a6cd9f3dee94f1698af75388eb7e57e"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760200"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-arm64-musl"]
+checksum = "sha256:5ab7cb7b6c1d69e2be7756eb9570d9436a6cd9f3dee94f1698af75388eb7e57e"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760200"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64"]
+checksum = "sha256:05159887004ec5c8a3f31df374fd735105c1647dfd3fb574d6d958c82fe7d43b"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760197"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-baseline"]
+checksum = "sha256:05159887004ec5c8a3f31df374fd735105c1647dfd3fb574d6d958c82fe7d43b"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760197"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
+checksum = "sha256:05159887004ec5c8a3f31df374fd735105c1647dfd3fb574d6d958c82fe7d43b"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760197"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:05159887004ec5c8a3f31df374fd735105c1647dfd3fb574d6d958c82fe7d43b"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760197"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.macos-arm64"]
+checksum = "sha256:0c58b1afd028dca2b4fb465a15abb9be02a97247bc8d9bd1305a089a992e16e1"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760199"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.macos-x64"]
+checksum = "sha256:0d5599940865df17a940a01ce2eeab0d9f823933e95e1188110568fd454a3e3f"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760198"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.macos-x64-baseline"]
+checksum = "sha256:0d5599940865df17a940a01ce2eeab0d9f823933e95e1188110568fd454a3e3f"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760198"
+provenance = "github-attestations"
+
 [[tools.go]]
 version = "1.26.2"
 backend = "core:go"
