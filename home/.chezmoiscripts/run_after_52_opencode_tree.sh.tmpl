@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+opencode_tree_ref="ee2b80f172227bf0a2858cbc28beb8d97cd0754b"
+source_dir="{{ .chezmoi.homeDir }}/.local/share/opencode-tree-src"
+build_root="{{ .chezmoi.homeDir }}/.local/share/opencode-tree-build"
+build_dir="${build_root}/${opencode_tree_ref}"
+artifact="${build_dir}/dist/tui.js"
+current_link="${build_root}/current"
+
+magenta='\033[0;35m'
+red='\033[0;31m'
+yellow='\033[0;33m'
+clear='\033[0m'
+print_info() { printf "\n${magenta}%s${clear}\n" "${@}"; }
+print_warn() { printf "\n${yellow}%s${clear}\n" "${@}"; }
+print_err() { printf "\n${red}%s${clear}\n" "${@}"; }
+
+if [[ -f "${artifact}" ]]; then
+  /bin/mkdir -p "${build_root}"
+  /bin/ln -sfn "${build_dir}" "${current_link}"
+  exit 0
+fi
+
+print_info "building opencode-tree plugin (${opencode_tree_ref})"
+
+if ! command -v bun >/dev/null 2>&1; then
+  print_err "bun not found and ${artifact} does not exist"
+  exit 1
+fi
+
+if [[ ! -f "${source_dir}/package.json" ]]; then
+  print_err "${source_dir} is missing and ${artifact} does not exist"
+  exit 1
+fi
+
+/bin/rm -rf "${build_dir}"
+/bin/mkdir -p "${build_dir}"
+/bin/cp -a "${source_dir}/." "${build_dir}/"
+
+(
+  cd "${build_dir}"
+  bun install --frozen-lockfile --ignore-scripts
+  bun run build
+)
+
+if [[ ! -f "${artifact}" ]]; then
+  print_err "opencode-tree build did not create ${artifact}"
+  exit 1
+fi
+
+/bin/ln -sfn "${build_dir}" "${current_link}"
+
+print_warn "opencode-tree summary mode can send conversation content to the configured model"
+
+# vi: ft=bash

@@ -110,6 +110,17 @@ refreshPeriod = "24h"
     executable = false
     refreshPeriod = "168h"
 
+# opencode-tree is pinned to a reviewed fork commit instead of installing the
+# upstream npm package by name. Bump this ref only after reviewing the fork diff.
+{{ $opencodeTreeRef := "ee2b80f172227bf0a2858cbc28beb8d97cd0754b" -}}
+
+[".local/share/opencode-tree-src"]
+    type = "archive"
+    url = "https://github.com/scottames/opencode-tree/archive/{{ $opencodeTreeRef }}.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
 # renovate: datasource=github-releases depName=b0o/zjstatus-hints
 {{ $zjstatusHintsVersion := "v0.1.4" -}}
 

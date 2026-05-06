@@ -1,5 +1,16 @@
 {
   "$schema": "https://opencode.ai/tui.json",
+{{- $opencodeTreeTui := joinPath .chezmoi.homeDir ".local/share/opencode-tree-build/current/dist/tui.js" }}
+{{- if stat $opencodeTreeTui }}
+  "plugin": [
+    [
+      "{{ $opencodeTreeTui }}",
+      {
+        "storageScope": "global"
+      }
+    ]
+  ],
+{{- end }}
   "keybinds": {
     "app_exit": "ctrl+c,<leader>q",
     "command_list": "ctrl+.",
