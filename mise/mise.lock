@@ -203,36 +203,36 @@ url = "https://github.com/sethvargo/ratchet/releases/download/v0.11.4/ratchet_0.
 provenance = "github-attestations"
 
 [[tools."aqua:sst/opencode"]]
-version = "1.14.31"
+version = "1.14.33"
 backend = "aqua:sst/opencode"
 
 [tools."aqua:sst/opencode"."platforms.linux-arm64"]
-checksum = "sha256:d8867e77b901dd04e707f459f44b3e28f23a6f0c2d740f1bb8af6f4b64ac19f7"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-arm64.tar.gz"
+checksum = "sha256:3cfa593defe2b8fbfb55f05f1671a64666aeca2cec1be81a9db7d3bb1694b4ed"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-linux-arm64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-arm64-musl"]
-checksum = "sha256:f00853f2f10c9e7d971df2db25da34e947f2a327500040d05fdf5f096e3955f5"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-arm64-musl.tar.gz"
+checksum = "sha256:121202811d5554c217775af8943b250df54b656bccf9019cd29c293de3ea9698"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-linux-arm64-musl.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-x64"]
-checksum = "sha256:5d3853e29c81d7a134915690625009f5736ca84070529e69796cf62e12232c9e"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-x64.tar.gz"
+checksum = "sha256:ab3de3d40a67573419ec74916210cf90dcf8c180dc9d8052db71ac9f55c28810"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-linux-x64.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.linux-x64-musl"]
-checksum = "sha256:861cfd21e682dea7047dc1f175a2534d00fcd0c559d47602ec9960be89d6e866"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-linux-x64-musl.tar.gz"
+checksum = "sha256:d231d87a8edb71eb760db8d9ead5b76fd774a97a7d58c8f9d75d4a0225153771"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-linux-x64-musl.tar.gz"
 
 [tools."aqua:sst/opencode"."platforms.macos-arm64"]
-checksum = "sha256:f3a2386a3ccdb1e8733af766600a0e2c35a001adaaa0d31429ff81c0dcd32180"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-darwin-arm64.zip"
+checksum = "sha256:ae9142115ca1998941ce41ee379e502c13a7b4861c80fd5c1a70477a5f85dba3"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-darwin-arm64.zip"
 
 [tools."aqua:sst/opencode"."platforms.macos-x64"]
-checksum = "sha256:6921c770be5e037fc24e9f745fda235016f7b2e51ed79fb4b004c6e19b5ac942"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-darwin-x64.zip"
+checksum = "sha256:56c252b0bd20a430e8b3d39e31763af717540d07a14963fb36421f3abdfe7f86"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-darwin-x64.zip"
 
 [tools."aqua:sst/opencode"."platforms.windows-x64"]
-checksum = "sha256:03e26c88adcbd35729a5a6f5df39acc45f6e704da53c64946be65263cb4900fb"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.14.31/opencode-windows-x64.zip"
+checksum = "sha256:d2173c38bb7be4a51da4495cc726e5733e4af9a19a45f1c376c409530b8981b0"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.33/opencode-windows-x64.zip"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
 version = "0.26.0"
