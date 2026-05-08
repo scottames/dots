@@ -7,9 +7,12 @@
     git
     ghostty-bin
     gnupg
+    gnugrep
+    mise
     nodejs
     nushell
     nixfmt-rfc-style
+    pipx
     vim
     wget
     yubikey-manager

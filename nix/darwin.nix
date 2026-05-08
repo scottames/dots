@@ -98,7 +98,7 @@
       show-recents = false;
       tilesize = 26;
       persistent-apps = [
-        "/Applications/Cursor.app"
+        "/Applications/1Password.app"
         "/Applications/Ghostty.app"
         "/Applications/Zen.app"
       ];

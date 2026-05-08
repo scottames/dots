@@ -26,6 +26,7 @@ if $IS_MAC
         /opt/X11/bin \
         /usr/local/MacGPG2/bin \
         /usr/local/sbin \
+        /run/current-system/sw/bin \
         /usr/local/packer
 
 else if $IS_LINUX

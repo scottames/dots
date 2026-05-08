@@ -31,9 +31,6 @@
       autoUpdate = true;
       upgrade = true;
     };
-    caskArgs = {
-      no_quarantine = true; # Disable Gatekeeper quarantine
-    };
 
     taps = [
       "homebrew/cask"
@@ -49,11 +46,11 @@
 
     casks = [
       "1password"
+      "1password-cli"
       "akiflow"
       "chatgpt"
       "claude"
       "cmux"
-      "cursor"
       "discord"
       "docker-desktop"
       "firefox"
@@ -62,19 +59,14 @@
       "iterm2"
       "notion"
       "obsidian"
-      "plexamp"
       "raycast"
       "slack"
-      "tailscale"
+      "tailscale-app"
       "twingate"
       "visual-studio-code"
       "vlc"
       "zen"
       "zoom"
     ];
-
-    masApps = {
-      "Home Assistant Companion" = 1099568401;
-    };
   };
 }
