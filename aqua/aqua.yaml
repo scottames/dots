@@ -125,6 +125,7 @@ packages:
   # automatically gets credentials for amazon ecr on docker push/docker pull
   #   https://github.com/awslabs/amazon-ecr-credential-helper
   - name: awslabs/amazon-ecr-credential-helper@v0.12.0
+    registry: dots
   # cat clone with wings
   #   https://github.com/sharkdp/bat
   - name: sharkdp/bat@v0.26.1

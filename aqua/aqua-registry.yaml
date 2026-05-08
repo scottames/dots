@@ -122,3 +122,21 @@ packages:
       - darwin/amd64
       - linux
     description: GitHub CLI extension that improves the pull request experience
+  # Disable this package on macOS until the standard registry/checksum flow is fixed.
+  - type: http
+    repo_owner: awslabs
+    repo_name: amazon-ecr-credential-helper
+    description: Automatically gets credentials for Amazon ECR on docker push/docker pull
+    format: raw
+    url: https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/{{trimV .Version}}/{{.OS}}-{{.Arch}}/docker-credential-ecr-login
+    supported_envs:
+      - linux
+    files:
+      - name: docker-credential-ecr-login
+    checksum:
+      type: http
+      file_format: regexp
+      algorithm: sha256
+      pattern:
+        checksum: ^(\b[A-Fa-f0-9]{64}\b)
+      url: https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/{{trimV .Version}}/{{.OS}}-{{.Arch}}/docker-credential-ecr-login.sha256

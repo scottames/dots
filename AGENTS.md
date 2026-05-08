@@ -14,6 +14,7 @@ that chezmoi uses to manage dotfiles in the user's home directory.
 - `home/.chezmoiscripts/` - Scripts run by chezmoi during apply
 - `home/private_dot_config/` - Config files (maps to `~/.config/`)
 - `aqua/` - CLI tool version management via aqua
+  - checksum file is auto-generated - do not edit manually
 - `nix/` - Nix/Darwin configuration (macOS only)
 - `.dagger/` - Dagger module for container-based testing
 - `.trunk/` - Trunk.io linter configurations
