@@ -432,6 +432,55 @@ url = "https://github.com/janosmiko/lfk/releases/download/v0.10.2/lfk_0.10.2_dar
 url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/412760198"
 provenance = "github-attestations"
 
+[[tools."github:kitlangton/ghui"]]
+version = "0.7.1"
+backend = "github:kitlangton/ghui"
+
+[tools."github:kitlangton/ghui"."platforms.linux-arm64"]
+checksum = "sha256:5b824b721c233afc85b96065f78d58dad0ab2a253e0cfb7d0cceba6af182a17c"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667348"
+
+[tools."github:kitlangton/ghui"."platforms.linux-arm64-musl"]
+checksum = "sha256:5b824b721c233afc85b96065f78d58dad0ab2a253e0cfb7d0cceba6af182a17c"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667348"
+
+[tools."github:kitlangton/ghui"."platforms.linux-x64"]
+checksum = "sha256:4c4a87646ae02f323a416904841223a3bca8020fe8f7e6faaefa5742186fa58a"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667231"
+
+[tools."github:kitlangton/ghui"."platforms.linux-x64-baseline"]
+checksum = "sha256:4c4a87646ae02f323a416904841223a3bca8020fe8f7e6faaefa5742186fa58a"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667231"
+
+[tools."github:kitlangton/ghui"."platforms.linux-x64-musl"]
+checksum = "sha256:4c4a87646ae02f323a416904841223a3bca8020fe8f7e6faaefa5742186fa58a"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667231"
+
+[tools."github:kitlangton/ghui"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:4c4a87646ae02f323a416904841223a3bca8020fe8f7e6faaefa5742186fa58a"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667231"
+
+[tools."github:kitlangton/ghui"."platforms.macos-arm64"]
+checksum = "sha256:28ffc6687165301d9ae315742557f5d3764c7e72ac2bbbfc892f87ab1e39a5b7"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667160"
+
+[tools."github:kitlangton/ghui"."platforms.macos-x64"]
+checksum = "sha256:59ab98ef9fc477dd17fe713a3297292c234c0c1e952230f16074dbcf17687a1b"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667472"
+
+[tools."github:kitlangton/ghui"."platforms.macos-x64-baseline"]
+checksum = "sha256:59ab98ef9fc477dd17fe713a3297292c234c0c1e952230f16074dbcf17687a1b"
+url = "https://github.com/kitlangton/ghui/releases/download/v0.7.1/ghui-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/414667472"
+
 [[tools.go]]
 version = "1.26.2"
 backend = "core:go"
