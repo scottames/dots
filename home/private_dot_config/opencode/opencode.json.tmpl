@@ -1,3 +1,10 @@
+{{- $workNotebook := "" -}}
+{{- if hasKey . "work" -}}
+{{-   $work := index . "work" -}}
+{{-   if hasKey $work "notebook" -}}
+{{-     $workNotebook = index $work "notebook" -}}
+{{-   end -}}
+{{- end -}}
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": false,
@@ -101,7 +108,9 @@
       "*": "ask",
       "/tmp/opencode/**": "allow",
       "{{ .home.ntbk_dir }}/**": "allow",
-      "{{ .work.notebook }}/**": "allow",
+{{- if ne $workNotebook "" }}
+      "{{ $workNotebook }}/**": "allow",
+{{- end }}
       "~/.cargo/registry/src**": "allow",
       "~/.claude/skills/**": "allow",
       "~/.config/opencode/skills/**": "allow"

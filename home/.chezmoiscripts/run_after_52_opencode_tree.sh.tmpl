@@ -25,6 +25,10 @@ fi
 
 print_info "building opencode-tree plugin (${opencode_tree_ref})"
 
+if ! command -v bun >/dev/null 2>&1 && command -v mise >/dev/null 2>&1; then
+  eval "$(mise env --shell bash)"
+fi
+
 if ! command -v bun >/dev/null 2>&1; then
   print_err "bun not found and ${artifact} does not exist"
   exit 1
