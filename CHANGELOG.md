@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.45.0](https://github.com/scottames/dots/compare/v0.44.0...v0.45.0) (2026-05-11)
+
+
+### Updates & Misc Chores
+
+* **aqua/mise:** move 'alltuner/mise-completions-sync' to mise ([b155789](https://github.com/scottames/dots/commit/b155789290a692222f2fbd97db0a6e1f62166319))
+* **deps:** lock file maintenance ([#872](https://github.com/scottames/dots/issues/872)) ([b4cd81d](https://github.com/scottames/dots/commit/b4cd81d5b1cde7963bcc7c59efa5ddb1f119a4fe))
+* **deps:** update ⬆️ aqua-packages ([#869](https://github.com/scottames/dots/issues/869)) ([28ee891](https://github.com/scottames/dots/commit/28ee8916a9fc72eb411d2f04709a7a6361a06e4f))
+* **deps:** update ⬆️ aqua-packages ([#871](https://github.com/scottames/dots/issues/871)) ([7665c93](https://github.com/scottames/dots/commit/7665c931bda48a158d3ae6633d831b2c4a40c435))
+* **deps:** update ⬆️ aqua-packages ([#873](https://github.com/scottames/dots/issues/873)) ([12beaed](https://github.com/scottames/dots/commit/12beaed1b1370e02c6b1f620704922dfa1a2f35f))
+* **deps:** update ⬆️ aqua-packages ([#875](https://github.com/scottames/dots/issues/875)) ([f23f469](https://github.com/scottames/dots/commit/f23f469e8779cbaa27d0032e94649c8b14c35aac))
+* **deps:** update ⬆️ aqua-packages ([#878](https://github.com/scottames/dots/issues/878)) ([397d75a](https://github.com/scottames/dots/commit/397d75a69e110e19ace749c52b85d5f8321c9848))
+* **deps:** update ⬆️ mise-packages ([#870](https://github.com/scottames/dots/issues/870)) ([e14bc98](https://github.com/scottames/dots/commit/e14bc98d7d4713bdd8c34536dbc80ee4e889550a))
+* **deps:** update ⬆️ mise-packages ([#874](https://github.com/scottames/dots/issues/874)) ([a026c77](https://github.com/scottames/dots/commit/a026c77e21f7fab3949b0d5c1951e08703f608cd))
+* **deps:** update ⬆️ mise-packages ([#882](https://github.com/scottames/dots/issues/882)) ([0885dee](https://github.com/scottames/dots/commit/0885dee6cc7d709973fdcb6e159e9cf8571fa24b))
+* **deps:** update ⬆️ mise-packages (major) ([#883](https://github.com/scottames/dots/issues/883)) ([2ec6fa4](https://github.com/scottames/dots/commit/2ec6fa4fc8a3fe94239d1092be9b308d769de644))
+* **deps:** update ⬆️ mise-packages to v1.14.33 ([#879](https://github.com/scottames/dots/issues/879)) ([4d78982](https://github.com/scottames/dots/commit/4d789827a08f3996608b6b07a65c726a81ed57fd))
+* **deps:** update ⬆️ mise-packages to v17.10.0 ([#877](https://github.com/scottames/dots/issues/877)) ([4af370e](https://github.com/scottames/dots/commit/4af370e765c6aaaf0caab4f3641a8e07dd1aa1b7))
+* **opencode:** add permissions ([ece47f0](https://github.com/scottames/dots/commit/ece47f036e11dc4fcae4e1d2ecff4e4183822ab8))
+* **release-please:** move to manifest/config driven ([dbbb3e4](https://github.com/scottames/dots/commit/dbbb3e44d00a6771909a18f3b8ada4d289e2b342))
+* upgrade trunk ([#880](https://github.com/scottames/dots/issues/880)) ([ce2107a](https://github.com/scottames/dots/commit/ce2107a4583439014f95a0ff4327242fe6a9467b))
+* **zen:** update keybinds based on version upgrade ([984c215](https://github.com/scottames/dots/commit/984c21571a0f6242053e10ca628137f897ba734d))
+
+
+### Features
+
+* **mise:** add ghui ([17fc02a](https://github.com/scottames/dots/commit/17fc02aaa81a49e0424736ab04709ed8eed4411d))
+* **mise:** add lfk ([c5cb06d](https://github.com/scottames/dots/commit/c5cb06d2a3fc6be6f0d32c7721638a2f9bfe7cb0))
+* **opencode:** add /tree plugin ([f2de1cb](https://github.com/scottames/dots/commit/f2de1cbe06b3a9698a0454fdb5d6ff1684d266c4))
+* **worktrunk:** add step copy-ignored to post-start ([580cb23](https://github.com/scottames/dots/commit/580cb23fd3540b4ead5a8df056be155451fd7ad9))
+
+
+### Bug Fixes
+
+* **aqua:** disable ecr-cred-helper for mac ([f837a7c](https://github.com/scottames/dots/commit/f837a7c15db49e997ef0eef471935c166a780009))
+* **mac:** nix / fix updates ([cf7fa3e](https://github.com/scottames/dots/commit/cf7fa3e70ca1bc807b4750b72b036c10f6f0aa85))
+* **opencode:** tmpl/init fixes ([149aa59](https://github.com/scottames/dots/commit/149aa59d2f268acc834cee978b25e17b680faeb2))
+
 ## [0.44.0](https://github.com/scottames/dots/compare/v0.43.0...v0.44.0) (2026-05-01)
 
 
