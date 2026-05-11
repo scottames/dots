@@ -12,8 +12,21 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: Generate GitHub token
+        # yamllint disable-line rule:line-length
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        # https://github.com/actions/create-github-app-token
+        id: generate-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          permission-contents: write # create releases
+          permission-pull-requests: write # create release pull requests
+          permission-issues: write
       # yamllint disable-line rule:line-length
       - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5
+        # https://github.com/googleapis/release-please
         with:
-          release-type: go
-          package-name: dots
+          config-file: .release-please-config.json
+          manifest-file: .release-please-manifest.json
+          token: ${{ steps.generate-token.outputs.token }}
