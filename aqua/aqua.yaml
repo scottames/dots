@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin/arm64
     - linux
 registries:
-  - ref: v4.504.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.508.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -19,7 +19,7 @@ packages:
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
   - name: astral-sh/ruff@0.15.12
-  - name: astral-sh/uv@0.11.8
+  - name: astral-sh/uv@0.11.11
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.46.0
   - name: dprint/dprint@0.54.0
@@ -29,19 +29,19 @@ packages:
   - name: gotestyourself/gotestsum@v1.13.0
   - name: incu6us/goimports-reviser@v3.12.6
   - name: koalaman/shellcheck@v0.11.0
-  - name: mvdan/gofumpt@v0.9.2
+  - name: mvdan/gofumpt@v0.10.0
   - name: mvdan/sh@v3.13.1
   - name: nametake/golangci-lint-langserver@v0.0.12
   - name: psf/black@26.3.1
   - name: rhysd/actionlint@v1.7.12
   - name: rust-lang/rust-analyzer@2026-02-16
   - name: segmentio/golines@v0.13.0
-  - name: snyk/cli@v1.1304.1
+  - name: snyk/cli@v1.1304.2
   - name: tamasfe/taplo@0.10.0
   - name: tmc/json-to-struct@v0.1.0
   # graphite.dev
   - name: withgraphite/gt
-    version: v1.8.5 # renovate: depName=withgraphite/homebrew-tap
+    version: v1.8.6 # renovate: depName=withgraphite/homebrew-tap
     registry: dots
   # vet installer scripts
   #   https://github.com/vet-run/vet
@@ -58,7 +58,7 @@ packages:
   - name: cli/cli@v2.92.0
   # fast linters runner for Go
   #   https://github.com/golangci/golangci-lint
-  - name: golangci/golangci-lint@v2.12.1
+  - name: golangci/golangci-lint@v2.12.2
   # diff tool for YAML files, and sometimes JSON
   #  https://github.com/homeport/dyff
   - name: homeport/dyff@v1.12.0
@@ -67,7 +67,7 @@ packages:
   - name: kubernetes-sigs/krew@v0.5.0
   # OpenTofu / Terraform / Terragrunt and Atmos version manager
   #   https://github.com/tofuutils/tenv
-  - name: tofuutils/tenv@v4.12.0
+  - name: tofuutils/tenv@v4.12.1
   # manage your dotfiles across multiple diverse machines, securely
   #   https://github.com/twpayne/chezmoi
   - name: twpayne/chezmoi@v2.70.2
@@ -162,7 +162,7 @@ packages:
   - name: int128/ghcp@v1.15.3
   # runtime for composable workflows
   #   https://github.com/dagger/dagger
-  - name: dagger/dagger@v0.20.6
+  - name: dagger/dagger@v0.20.8
   #   https://github.com/helix-editor/helix
   - name: helix-editor/helix@24.03
   # The kubectx for operators
@@ -170,7 +170,7 @@ packages:
   - name: danielfoehrKn/kubeswitch@0.9.3
   # Blazing fast terminal file manager
   #   https://github.com/sxyazi/yazi
-  - name: sxyazi/yazi@v26.1.22
+  - name: sxyazi/yazi@v26.5.6
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
   - name: dlvhdr/gh-dash@v4.23.2
@@ -184,17 +184,17 @@ packages:
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.40
+  - name: github/copilot-cli@v1.0.43
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.14.31
+  - name: sst/opencode@v1.14.41
   # Obsidian TUI
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
     registry: dots
   # OpenAI's Lightweight coding agent that runs in your terminal
   #  https://github.com/openai/codex
-  - name: openai/codex@rust-v0.128.0
+  - name: openai/codex@rust-v0.129.0
   # A CLI to create GitHub App User Access Token for secure local development
   #  https://github.com/suzuki-shunsuke/ghtkn
   - name: suzuki-shunsuke/ghtkn@v0.2.4
@@ -228,17 +228,17 @@ packages:
   - name: gohugoio/hugo@v0.161.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.4.28
+  - name: jdx/mise@v2026.5.2
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
-  - name: jdx/usage@v3.2.1
+  - name: jdx/usage@v3.3.0
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
   - name: steveyegge/beads@v1.0.3
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.46.1
+  - name: max-sixty/worktrunk@v0.48.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
@@ -246,7 +246,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.126
+  - name: anthropics/claude-code@v2.1.132
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.1
