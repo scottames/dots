@@ -316,64 +316,6 @@ keybinds clear-defaults=true {
         //     };
         // }
 
-        // https://github.com/karimould/zellij-forgot
-        bind "Ctrl '" {
-            LaunchOrFocusPlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij-forgot.wasm" {
-                "LOAD_ZELLIJ_BINDINGS" "false"
-                floating true
-                "lock"          "ctrl + g"
-                "move"           "ctrl + h/j/k/l"
-                "unlock"        "ctrl + g"
-                "clear"         "ctrl + o"
-                "quit zellij"   "ctrl + alt + q"
-                "swap layout"          "alt + [ or ]"
-
-                "float: toggle"         "alt + f"
-                "move: directions"      "ctrl + b + h/j/k/l"
-                "move: mode"            "ctrl + b"
-                "pane: close"           "ctrl + q"
-                "pane: embed"           "ctrl + p + e"
-                "pane: floating"        "ctrl + p + w"
-                "pane: focus move"      "ctrl + p + h/j/k/l"
-                "pane: frames toggle"   "ctrl + p + z"
-                "pane: fullscreen"      "ctrl + p + f"
-                "pane: new (quick)"     "alt + n"
-                "pane: new down"        "ctrl + p + d"
-                "pane: new right"       "ctrl + p + r"
-                "pane: new"             "ctrl + p + n"
-                "pane: pin toggle"      "ctrl + p + i"
-                "pane: rename"          "ctrl + p + c"
-                "pane: switch focus"    "ctrl + p + p"
-                "plugin: forgot"        "ctrl + '"
-                "resize: decrease"      "ctrl + n + -"
-                "resize: directions"    "ctrl + n + h/j/k/l"
-                "resize: increase"      "ctrl + n + + or ="
-                "resize: mode"          "ctrl + n"
-                "resize: quick"         "alt + - or + or ="
-                "resize: with nav"      "alt + h/j/k/l"
-                "scroll: edit"          "ctrl + s + e"
-                "scroll: mode"          "ctrl + s"
-                "session: about"        "ctrl + x + a"
-                "session: config"       "ctrl + x + c"
-                "session: detach"       "ctrl + x + d"
-                "session: manager"      "ctrl + x + w"
-                "session: mode"         "ctrl + x"
-                "session: plugins"      "ctrl + x + p"
-                "tab: break left"       "ctrl + t + ["
-                "tab: break pane"       "ctrl + t + b"
-                "tab: break right"      "ctrl + t + ]"
-                "tab: close"            "ctrl + t + x"
-                "tab: go to 1-9"        "ctrl + t + 1-9"
-                "tab: move left/right"  "alt + i/o"
-                "tab: new"              "ctrl + t + n"
-                "tab: rename"           " ctrl + t + ,"
-                "tab: switch"           "ctrl + t + h/l"
-                "tab: sync"             "ctrl + t + s"
-                "tab: toggle"           "ctrl + t + tab"
-            }
-        }
-    }
-
     shared_except "locked" "move" {
         bind "Ctrl m" { SwitchToMode "move"; }
     }

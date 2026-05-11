@@ -90,15 +90,6 @@ refreshPeriod = "24h"
     type = "file"
     url = "https://gravatar.com/avatar/{{ .me.gravatar.id }}?s=2048"
 
-# renovate: datasource=github-releases depName=karimould/zellij-forgot
-{{ $zellijForgotVersion := "0.4.2" -}}
-
-[".config/zellij/plugins/zellij-forgot.wasm"]
-    type = "file"
-    url = "https://github.com/karimould/zellij-forgot/releases/download/{{ $zellijForgotVersion }}/zellij_forgot.wasm"
-    executable = false
-    refreshPeriod = "168h"
-
 # renovate: datasource=github-releases depName=scottames/zellij-status
 {{ $zellijStatusVersion := "v0.4.0" -}}
 
