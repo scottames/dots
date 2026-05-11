@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.45.0](https://github.com/scottames/dots/compare/v0.44.0...v0.45.0) (2026-05-11)
+
+
+### Features
+
+* **mise:** add ghui ([17fc02a](https://github.com/scottames/dots/commit/17fc02aaa81a49e0424736ab04709ed8eed4411d))
+* **mise:** add lfk ([c5cb06d](https://github.com/scottames/dots/commit/c5cb06d2a3fc6be6f0d32c7721638a2f9bfe7cb0))
+* **opencode:** add /tree plugin ([f2de1cb](https://github.com/scottames/dots/commit/f2de1cbe06b3a9698a0454fdb5d6ff1684d266c4))
+* **worktrunk:** add step copy-ignored to post-start ([580cb23](https://github.com/scottames/dots/commit/580cb23fd3540b4ead5a8df056be155451fd7ad9))
+
+
+### Bug Fixes
+
+* **aqua:** disable ecr-cred-helper for mac ([f837a7c](https://github.com/scottames/dots/commit/f837a7c15db49e997ef0eef471935c166a780009))
+* **mac:** nix / fix updates ([cf7fa3e](https://github.com/scottames/dots/commit/cf7fa3e70ca1bc807b4750b72b036c10f6f0aa85))
+* **opencode:** tmpl/init fixes ([149aa59](https://github.com/scottames/dots/commit/149aa59d2f268acc834cee978b25e17b680faeb2))
+
 ## [0.44.0](https://github.com/scottames/dots/compare/v0.43.0...v0.44.0) (2026-05-01)
 
 
