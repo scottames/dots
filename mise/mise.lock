@@ -361,49 +361,43 @@ url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/412207810"
 github_attestations = "unavailable"
 
 [[tools."github:alltuner/mise-completions-sync"]]
-version = "0.4.4"
+version = "0.5.6"
 backend = "github:alltuner/mise-completions-sync"
 
 [tools."github:alltuner/mise-completions-sync"."platforms.linux-arm64"]
-checksum = "sha256:6d6321818596af102d5646c8407e40ed25f6f37624d40bfe83295d8671a2e78f"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354259990"
+checksum = "sha256:8366ad74f500f4117a5a6421cac1705304eb3b6a89abf3dfde08202a0a0c8aa1"
+url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.5.6/mise-completions-sync-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/412008235"
 github_attestations = "unavailable"
 
 [tools."github:alltuner/mise-completions-sync"."platforms.linux-arm64-musl"]
-checksum = "sha256:6d6321818596af102d5646c8407e40ed25f6f37624d40bfe83295d8671a2e78f"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354259990"
+checksum = "sha256:8366ad74f500f4117a5a6421cac1705304eb3b6a89abf3dfde08202a0a0c8aa1"
+url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.5.6/mise-completions-sync-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/412008235"
 github_attestations = "unavailable"
 
 [tools."github:alltuner/mise-completions-sync"."platforms.linux-x64"]
-checksum = "sha256:c3eab578ac0435b4486fb5000562e74e7193fc331d308991f6ddadea2b42ffbb"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354259797"
+checksum = "sha256:7aa0c3caf01b9275a0ac86462437669f0f92cad78052d5d81c0e0954030838c8"
+url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.5.6/mise-completions-sync-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/412008006"
 github_attestations = "unavailable"
 
 [tools."github:alltuner/mise-completions-sync"."platforms.linux-x64-musl"]
-checksum = "sha256:1469f75ce4f550108142eb0d3ab398799ed1cf7a8bd4f8f7c240e4868660c3e5"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354259985"
+checksum = "sha256:7aa0c3caf01b9275a0ac86462437669f0f92cad78052d5d81c0e0954030838c8"
+url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.5.6/mise-completions-sync-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/412008006"
 github_attestations = "unavailable"
 
 [tools."github:alltuner/mise-completions-sync"."platforms.macos-arm64"]
-checksum = "sha256:1b71eaf0f6ef343a0c7ea8f04f0996c88f8da609307dc8a4e3404657f2bba590"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354259922"
+checksum = "sha256:30908a972d829afd5ca87ebeccce2502890c92a2c7917562793311f3ad7f8d8b"
+url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.5.6/mise-completions-sync-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/412008196"
 github_attestations = "unavailable"
 
 [tools."github:alltuner/mise-completions-sync"."platforms.macos-x64"]
-checksum = "sha256:a791a2e1c7b7e9b020312dc6c1b35748548c65cc878753ca51123797d5777f3d"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354259945"
-github_attestations = "unavailable"
-
-[tools."github:alltuner/mise-completions-sync"."platforms.windows-x64"]
-checksum = "sha256:1b97e91a65dd31c3df329c72b4a8d67fabe9b7e96753b22617d41bfba2dd549d"
-url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.4.4/mise-completions-sync-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/354260231"
+checksum = "sha256:b378e28e840e08d51fff3ae734ecafa1782b99b4657911daa5d2868d1b20eb2e"
+url = "https://github.com/alltuner/mise-completions-sync/releases/download/v0.5.6/mise-completions-sync-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/alltuner/mise-completions-sync/releases/assets/412008095"
 github_attestations = "unavailable"
 
 [[tools."github:always-further/nono"]]
