@@ -45,6 +45,7 @@
       "/bin/ls*": "allow",
       "/usr/bin/ls*": "allow",
       "bash {{ .chezmoi.homeDir }}/.opencode/skills/**": "allow",
+      "bash {{ .chezmoi.homeDir }}/.config/opencode/skills/**": "allow",
       "cargo build*": "allow",
       "cargo check*": "allow",
       "cargo doc*": "allow",
@@ -111,8 +112,10 @@
 {{- if ne $workNotebook "" }}
       "{{ $workNotebook }}/**": "allow",
 {{- end }}
+      "~/.agents/skills/": "allow",
       "~/.cargo/registry/src**": "allow",
       "~/.claude/skills/**": "allow",
+      "~/.codex/skills/": "allow",
       "~/.config/opencode/skills/**": "allow"
     },
     "skill": {
