@@ -144,7 +144,7 @@ packages:
   #   https://github.com/nektos/act
   - name: nektos/act@v0.2.88
   #   https://github.com/casey/just
-  - name: casey/just@1.50.0
+  - name: casey/just@1.51.0
   # go version manager
   #   https://github.com/kevincobain2000/gobrew
   - name: kevincobain2000/gobrew@v1.10.16
@@ -181,7 +181,7 @@ packages:
   - name: github/copilot-cli@v1.0.44
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.14.41
+  - name: sst/opencode@v1.14.46
   # Obsidian TUI
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
@@ -222,17 +222,17 @@ packages:
   - name: gohugoio/hugo@v0.161.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.5.4
+  - name: jdx/mise@v2026.5.5
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
   - name: jdx/usage@v3.3.0
   # A memory upgrade for your coding agent
   #  https://github.com/steveyegge/beads
-  - name: steveyegge/beads@v1.0.3
+  - name: steveyegge/beads@v1.0.4
   # Git worktree management, designed for parallel AI agent workflows
   #  https://github.com/max-sixty/worktrunk
-  - name: max-sixty/worktrunk@v0.48.0
+  - name: max-sixty/worktrunk@v0.49.0
     registry: dots
   # workspace manager for your temporary experiments
   #  https://github.com/tassiovirginio/try-rs
