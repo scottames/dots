@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin/arm64
     - linux
 registries:
-  - ref: v4.510.0 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.511.1 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -94,7 +94,7 @@ packages:
   #   https://github.com/direnv/direnv
   - name: direnv/direnv@v2.37.1
   #   https://github.com/kubernetes/kubectl
-  - name: kubernetes/kubectl@v1.36.0
+  - name: kubernetes/kubectl@v1.36.1
   # kubernetes package manager
   #   https://github.com/helm/helm
   - name: helm/helm@v4.1.4
@@ -178,7 +178,7 @@ packages:
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.44
+  - name: github/copilot-cli@v1.0.45
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
   - name: sst/opencode@v1.14.48
@@ -222,7 +222,7 @@ packages:
   - name: gohugoio/hugo@v0.161.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.5.5
+  - name: jdx/mise@v2026.5.6
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -240,7 +240,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.138
+  - name: anthropics/claude-code@v2.1.139
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.2
