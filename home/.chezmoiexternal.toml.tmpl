@@ -208,6 +208,13 @@ refreshPeriod = "24h"
 #  │ | personal                                               │
 #  ╰──────────────────────────────────────────────────────────╯
 
+["src/github.com/scottames/.agents/.bare"]
+    type = "git-repo"
+    url = "git@github.com:scottames/.agents.git"
+    refreshPeriod = "0"
+    ["src/github.com/scottames/.agents/.bare".clone]
+        args = ["--bare"]
+
 ["src/github.com/scottames/.trunk/.bare"]
     type = "git-repo"
     url = "git@github.com:scottames/.trunk.git"
