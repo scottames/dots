@@ -8,7 +8,7 @@ checksum: # https://aquaproj.github.io/docs/reference/checksum/
     - darwin/arm64
     - linux
 registries:
-  - ref: v4.511.1 # renovate: depName=aquaproj/aqua-registry
+  - ref: v4.512.0 # renovate: depName=aquaproj/aqua-registry
     type: standard
   - name: dots
     path: aqua-registry.yaml
@@ -18,7 +18,7 @@ packages:
   - name: LuaLS/lua-language-server@3.18.2
   - name: aquasecurity/tfsec@v1.28.14
   - name: artempyanykh/marksman@2026-02-08
-  - name: astral-sh/ruff@0.15.12
+  - name: astral-sh/ruff@0.15.13
   - name: astral-sh/uv@0.11.14
   - name: checkmake/checkmake@v0.3.2
   - name: crate-ci/typos@v1.46.1
@@ -97,7 +97,7 @@ packages:
   - name: kubernetes/kubectl@v1.36.1
   # kubernetes package manager
   #   https://github.com/helm/helm
-  - name: helm/helm@v4.1.4
+  - name: helm/helm@v4.2.0
   # customization of kubernetes yaml configurations
   #   https://github.com/kubernetes-sigs/kustomize
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.1
@@ -136,7 +136,7 @@ packages:
   - name: GoogleContainerTools/skaffold@v2.19.0
   # a pluggable terraform linter
   #   https://github.com/terraform-linters/tflint
-  - name: terraform-linters/tflint@v0.62.0
+  - name: terraform-linters/tflint@v0.62.1
   # a lightweight and portable command-line YAML, JSON and XML processor.
   #   https://github.com/mikefarah/yq
   - name: mikefarah/yq@v4.53.2
@@ -167,21 +167,21 @@ packages:
   - name: sxyazi/yazi@v26.5.6
   # tui dashboard for GitHub
   #   https://github.com/dlvhdr/gh-dash
-  - name: dlvhdr/gh-dash@v4.24.0
+  - name: dlvhdr/gh-dash@v4.24.1
   # magical shell history
   #   https://github.com/atuinsh/atuin
   - name: atuinsh/atuin@v18.16.1
   # Spacelift client and CLI
   #   https://github.com/spacelift-io/spacectl
-  - name: spacelift-io/spacectl@v1.21.2
+  - name: spacelift-io/spacectl@v1.21.5
   #  more intuitive version of du in rust
   #   https://github.com/bootandy/dust/
   - name: bootandy/dust@v1.2.4
   # GitHub Copilot
-  - name: github/copilot-cli@v1.0.46
+  - name: github/copilot-cli@v1.0.48
   # AI coding agent, built for the terminal.
   #  https://github.com/sst/opencode
-  - name: sst/opencode@v1.14.48
+  - name: sst/opencode@v1.15.0
   # Obsidian TUI
   #  https://github.com/erikjuhani/basalt
   - name: erikjuhani/basalt@basalt/v0.10.0
@@ -202,7 +202,7 @@ packages:
   # Moor is a pager. It's designed to just do the right thing
   # without any configuration.
   #  https://github.com/walles/moor
-  - name: walles/moor@v2.13.1
+  - name: walles/moor@v2.13.2
   # A simple TUI to visualize regular expressions right in your terminal.
   #  https://github.com/vitor-mariano/regex-tui
   - name: vitor-mariano/regex-tui@v0.7.0
@@ -222,7 +222,7 @@ packages:
   - name: gohugoio/hugo@v0.161.1
   # dev tools, env vars, task runner
   #  https://github.com/jdx/mise
-  - name: jdx/mise@v2026.5.6
+  - name: jdx/mise@v2026.5.9
     registry: dots
   # A specification for CLIs
   #  https://github.com/jdx/usage
@@ -240,7 +240,7 @@ packages:
     registry: dots
   #  https://code.claude.com/docs
   #  https://github.com/anthropics/claude-code/
-  - name: anthropics/claude-code@v2.1.140
+  - name: anthropics/claude-code@v2.1.142
   # A CLI tool for code structural search, lint and rewriting
   #  https://github.com/ast-grep/ast-grep
   - name: ast-grep/ast-grep@0.42.2
