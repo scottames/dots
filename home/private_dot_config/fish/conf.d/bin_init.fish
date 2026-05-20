@@ -5,7 +5,7 @@ if status --is-interactive
     # ╭──────────────────────────────────────────────────────────╮
     # │ direnv                                                   │
     # ╰──────────────────────────────────────────────────────────╯
-    if $HAS_DIRENV
+    if type -q direnv
         direnv hook fish | source
     else
         printf_warn "direnv not found\n"
@@ -15,7 +15,7 @@ if status --is-interactive
     # │ zoxide                                                   │
     # │   https://github.com/ajeetdsouza/zoxide                  │
     # ╰──────────────────────────────────────────────────────────╯
-    if $HAS_ZOXIDE
+    if type -q zoxide
         zoxide init fish | source
     else
         if status --is-interactive

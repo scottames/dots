@@ -13,14 +13,38 @@ echo '
 
 magenta='\033[0;35m'
 cyan='\033[0;36m'
+red='\033[0;31m'
 clear='\033[0m'
 
 # deps, in case we're running in init
 if [[ -f "${HOME}/.cargo/env" ]]; then
+  # shellcheck source=/dev/null
   . "${HOME}/.cargo/env"
 fi
 if ! command -v go &>/dev/null && command -v mise &>/dev/null; then
   eval "$(mise env --shell bash)"
+fi
+
+# ensure AQUA vars are set, even when aqua itself is provided by mise
+DOTS="${DOTS:={{ .home.dots }}}"
+export AQUA_CONFIG_DIR="${AQUA_CONFIG_DIR:-${HOME}/.config/aquaproj-aqua}"
+export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-${AQUA_CONFIG_DIR}/aqua.yaml}"
+export AQUA_LOG_COLOR="${AQUA_LOG_COLOR:-always}"
+export AQUA_PROGRESS_BAR="${AQUA_PROGRESS_BAR:-true}"
+export AQUA_ROOT_DIR="${AQUA_ROOT_DIR:-${HOME}/.local/share/aquaproj-aqua/bin}"
+AQUA_POLICY_CONFIG="${AQUA_POLICY_CONFIG:-}"
+
+if [[ -f "${AQUA_CONFIG_DIR}/aqua-policy.yaml" ]]; then
+  AQUA_POLICY_CONFIG="${AQUA_CONFIG_DIR}/aqua-policy.yaml"
+fi
+if [[ -f "${DOTS}/aqua/aqua-policy.yaml" ]]; then
+  AQUA_POLICY_CONFIG="${AQUA_POLICY_CONFIG:+${AQUA_POLICY_CONFIG}:}${DOTS}/aqua/aqua-policy.yaml"
+fi
+if [[ -f "/var${AQUA_CONFIG_DIR}/aqua-policy.yaml" ]]; then
+  AQUA_POLICY_CONFIG="${AQUA_POLICY_CONFIG:+${AQUA_POLICY_CONFIG}:}/var${AQUA_CONFIG_DIR}/aqua-policy.yaml"
+fi
+if [[ -n "${AQUA_POLICY_CONFIG}" ]]; then
+  export AQUA_POLICY_CONFIG
 fi
 
 # renovate: datasource=github-releases depName=aquaproj/aqua
@@ -30,7 +54,7 @@ _aqua_latest_version=v2.59.0
 _aqua_installer_version=v4.0.4
 _aqua_installer_sha256sum="acd21cbb06609dd9a701b0032ba4c21fa37b0e3b5cc4c9d721cc02f25ea33a28"
 
-if command -v aqua; then
+if command -v aqua &>/dev/null; then
   _aqua_current="$(aqua -v | head -n1 | cut -d" " -f3 | sed "s/^/v/")"
 else
   _aqua_current="none"
@@ -38,13 +62,7 @@ fi
 
 printf "\n${cyan}💧 aqua${clear}\n---\n${magenta} - latest: %s\n - current: %s${clear}\n\n" "${_aqua_latest_version}" "${_aqua_current}"
 
-if [[ ! $(command -v aqua) ]]; then
-  # ensure AQUA vars are set
-  function setenv() { export "$1=$2"; }
-
-  DOTS="${DOTS:={{ .home.dots }}}"
-  eval "$(grep -iP 'AQUA(?!.*GHTKN)' "${HOME}/.setenv")"
-
+if ! command -v aqua &>/dev/null; then
   pushd "$(mktemp -d)"
   _aqua_installer="aqua-installer"
 
@@ -57,11 +75,15 @@ if [[ ! $(command -v aqua) ]]; then
   "./${_aqua_installer}"
 
   # ensure aqua is in path
-  eval "$(grep -i AQUA <"${HOME}"/.bashrc)"
+  export PATH="${AQUA_ROOT_DIR}:${AQUA_ROOT_DIR}/bin:${PATH}"
+  if ! command -v aqua &>/dev/null; then
+    printf "\n${red}💥 %s${clear}\n\n" "aqua installer completed, but aqua is not on PATH"
+    exit 1
+  fi
 
   popd
 elif [[ "${_aqua_latest_version}" != "${_aqua_current}" ]]; then
-  if [[ $(command -v op) ]]; then
+  if command -v op &>/dev/null; then
     op run -- aqua update-aqua || GITHUB_TOKEN="" aqua update-aqua
   else
     GITHUB_TOKEN="" aqua update-aqua
@@ -74,6 +96,86 @@ printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" "ensure all aqua packages instal
 
 # .config/aqua/aqua.yaml hash: {{ include "../aqua/aqua.yaml" | sha256sum }}
 aqua install --all
+
+printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" "clean stale aqua bins and packages"
+
+_aqua_root="$(aqua root-dir)"
+_aqua_bin_dir="${_aqua_root}/bin"
+_aqua_pkgs_dir="${_aqua_root}/pkgs"
+_aqua_cleanup_dir="$(mktemp -d)"
+_aqua_backup_bin_dir="${_aqua_cleanup_dir}/bin"
+_aqua_backup_pkgs_dir="${_aqua_cleanup_dir}/pkgs"
+
+mkdir -p "${_aqua_backup_bin_dir}" "${_aqua_backup_pkgs_dir}"
+
+restore_aqua_cleanup() {
+  mkdir -p "${_aqua_bin_dir}" "${_aqua_pkgs_dir}"
+
+  set +f
+  shopt -s nullglob
+  for _aqua_backup in "${_aqua_backup_bin_dir}"/*; do
+    _aqua_restore_target="${_aqua_bin_dir}/${_aqua_backup##*/}"
+    rm -rf "${_aqua_restore_target}"
+    mv "${_aqua_backup}" "${_aqua_restore_target}"
+  done
+  for _aqua_backup in "${_aqua_backup_pkgs_dir}"/*; do
+    _aqua_restore_target="${_aqua_pkgs_dir}/${_aqua_backup##*/}"
+    rm -rf "${_aqua_restore_target}"
+    mv "${_aqua_backup}" "${_aqua_restore_target}"
+  done
+  shopt -u nullglob
+  set -f
+}
+
+cleanup_aqua_on_error() {
+  if restore_aqua_cleanup; then
+    rm -rf "${_aqua_cleanup_dir:?}"
+  else
+    printf "\n${red}💥 %s${clear}\n\n" "aqua cleanup restore failed; backup retained at ${_aqua_cleanup_dir}"
+  fi
+}
+
+trap cleanup_aqua_on_error ERR
+
+if [[ -d "${_aqua_bin_dir}" ]]; then
+  set +f
+  shopt -s nullglob
+  for _aqua_bin in "${_aqua_bin_dir}"/*; do
+    _aqua_bin_name="${_aqua_bin##*/}"
+    if [[ "${_aqua_bin_name}" == "aqua" ]]; then
+      continue
+    fi
+
+    mv "${_aqua_bin}" "${_aqua_backup_bin_dir}/"
+    printf "${magenta} - staged stale aqua bin: %s${clear}\n" "${_aqua_bin_name}"
+  done
+  shopt -u nullglob
+  set -f
+fi
+
+if [[ -d "${_aqua_pkgs_dir}" ]]; then
+  set +f
+  shopt -s nullglob
+  for _aqua_pkg in "${_aqua_pkgs_dir}"/*; do
+    mv "${_aqua_pkg}" "${_aqua_backup_pkgs_dir}/"
+  done
+  shopt -u nullglob
+  set -f
+fi
+
+if ! aqua install --all; then
+  trap - ERR
+  printf "\n${red}💥 %s${clear}\n\n" "aqua install failed; restoring staged aqua cleanup"
+  if restore_aqua_cleanup; then
+    rm -rf "${_aqua_cleanup_dir:?}"
+  else
+    printf "\n${red}💥 %s${clear}\n\n" "aqua cleanup restore failed; backup retained at ${_aqua_cleanup_dir}"
+  fi
+  exit 1
+fi
+
+trap - ERR
+rm -rf "${_aqua_cleanup_dir:?}"
 
 printf "\n${cyan}💧 ${magenta}%s${clear}\n\n" "aqua done"
 

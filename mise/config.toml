@@ -24,18 +24,236 @@ credential_command = "github-token-get"
 [settings.npm]
 package_manager = "bun"
 
-[hooks]
-postinstall = "mise-completions-sync" # installed via aqua
-
 [tools]
 
 bun = "1.3.14"
 go = "1.26.3"
 node = "24.15.0"
 rust = "1.95.0"
+usage = "3.3.0"
 
-# linters & related
-"aqua:rhysd/actionlint" = "1.7.12"
+## tools
+
+# automatically gets credentials for amazon ecr on docker push/docker pull
+#  https://github.com/awslabs/amazon-ecr-credential-helper
+amazon-ecr-credential-helper = "0.12.0"
+# Browser automation CLI for AI agents
+#  https://github.com/vercel-labs/agent-browser
+"aqua:vercel-labs/agent-browser" = "0.27.0"
+# A CLI tool for code structural search, lint and rewriting
+#  https://github.com/ast-grep/ast-grep
+"aqua:ast-grep/ast-grep" = "0.42.3"
+# magical shell history
+#   https://github.com/atuinsh/atuin
+"aqua:atuinsh/atuin" = "18.16.1"
+# Declarative CLI Version manager
+#  https://github.com/aquaproj/aqua
+"github:aquaproj/aqua" = "2.59.0"
+# Obsidian TUI
+#  https://github.com/erikjuhani/basalt
+"github:erikjuhani/basalt" = "basalt/v0.12.5"
+# cat clone with wings
+#   https://github.com/sharkdp/bat
+"aqua:sharkdp/bat" = "0.26.1"
+# manage your dotfiles across multiple diverse machines, securely
+#   https://github.com/twpayne/chezmoi
+"aqua:twpayne/chezmoi" = "2.70.4"
+#  https://code.claude.com/docs
+#  https://github.com/anthropics/claude-code/
+"aqua:anthropics/claude-code" = "2.1.145"
+# GitHub's official command line tool
+#   https://github.com/cli/cli
+"aqua:cli/cli" = "2.92.0"
+# OpenAI's Lightweight coding agent that runs in your terminal
+#  https://github.com/openai/codex
+"aqua:openai/codex" = "rust-v0.29.0"
+# crane - a tool for managing container images
+#  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
+"aqua:google/go-containerregistry" = "0.21.5"
+# runtime for composable workflows
+#   https://github.com/dagger/dagger
+"aqua:dagger/dagger" = "0.20.8"
+# syntax-highlighting pager for git, diff, grep, and blame output
+#   https://github.com/dandavison/delta
+"aqua:dandavison/delta" = "0.19.2"
+# A git diff pager based on delta but with a file tree, à la GitHub
+#  https://github.com/dlvhdr/diffnav
+"aqua:dlvhdr/diffnav" = "0.11.0"
+#   https://github.com/direnv/direnv
+"aqua:direnv/direnv" = "2.37.1"
+#  more intuitive version of du in rust
+#   https://github.com/bootandy/dust/
+"aqua:bootandy/dust" = "1.2.3"
+# diff tool for YAML files, and sometimes JSON
+#  https://github.com/homeport/dyff
+"aqua:homeport/dyff" = "1.12.0"
+# a modern, maintained replacement for ls
+#   https://github.com/eza-community/eza
+"aqua:eza-community/eza" = "0.23.4"
+# A maintained, feature-rich and performance oriented, neofetch like
+# system information tool.
+#  https://github.com/fastfetch-cli/fastfetch
+"aqua:fastfetch-cli/fastfetch" = "2.63.1"
+# better find
+#   https://github.com/sharkdp/fd
+"aqua:sharkdp/fd" = "10.4.2"
+# terminal json viewer & processor
+#   https://github.com/antonmedv/fx
+"aqua:antonmedv/fx" = "39.2.0"
+# command-line fuzzy finder
+#   https://github.com/junegunn/fzf
+"aqua:junegunn/fzf" = "0.72.0"
+# fork a repository, commit files and create a pull request using github api
+#   https://github.com/int128/ghcp
+"aqua:int128/ghcp" = "1.15.3"
+# tui dashboard for GitHub
+#   https://github.com/dlvhdr/gh-dash
+"github:dlvhdr/gh-dash" = "4.24.1"
+# A Blazingly Fast Terminal UI for GitHub Actions
+#  https://github.com/dlvhdr/gh-enhance
+"github:dlvhdr/gh-enhance" = "0.6.1"
+# gh extension to preview GitHub Flavored Markdown
+#  https://github.com/thiagokokada/gh-gfm-preview
+"github:thiagokokada/gh-gfm-preview" = "1.1.3"
+# A CLI to create GitHub App User Access Token for secure local development
+#  https://github.com/suzuki-shunsuke/ghtkn
+"aqua:suzuki-shunsuke/ghtkn" = "0.2.4"
+# github tui
+#  https://github.com/kitlangton/ghui
+"github:kitlangton/ghui" = "0.7.1"
+# render markdown on the CLI, with pizzazz!
+#   https://github.com/charmbracelet/glow
+"aqua:charmbracelet/glow" = "2.1.2"
+# graphite.dev
+"npm:@withgraphite/graphite-cli" = "1.8.6"
+# tool for glamorous shell scripts
+#   https://github.com/charmbracelet/gum
+"aqua:charmbracelet/gum" = "0.17.0"
+# kubernetes package manager
+#   https://github.com/helm/helm
+"aqua:helm/helm" = "4.1.4"
+# Review-first terminal diff viewer for agentic coders
+#  https://github.com/modem-dev/hunk
+"github:modem-dev/hunk" = "0.13.1"
+# command-line json processor
+#   https://github.com/stedolan/jq
+"aqua:stedolan/jq" = "1.8.1"
+#   https://github.com/casey/just
+"aqua:casey/just" = "1.51.0"
+# kubernetes tui
+#   https://github.com/derailed/k9s
+"aqua:derailed/k9s" = "0.50.18"
+#   https://github.com/kubernetes/kubectl
+"aqua:kubernetes/kubectl" = "1.35.3"
+# simple terminal ui for git commands
+#   https://github.com/jesseduffield/lazygit
+"aqua:jesseduffield/lazygit" = "0.61.1"
+# lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
+# navigating and managing Kubernetes clusters
+#  https://github.com/janosmiko/lfk
+"github:janosmiko/lfk" = "0.11.8"
+# Moor is a pager. It's designed to just do the right thing
+# without any configuration.
+#  https://github.com/walles/moor
+"aqua:walles/moor" = "2.13.2"
+#   https://github.com/neovim/neovim
+"aqua:neovim/neovim" = "0.12.2"
+# Capability-based sandboxes with fine-grained policies. Brokering access
+# directly within the agent's operating context
+#  https://github.com/always-further/nono
+"github:always-further/nono" = "0.54.0"
+# A new type of shell
+#  https://www.nushell.sh/
+"aqua:nushell/nushell" = "0.112.2"
+# The open source coding agent
+#  https://github.com/anomalyco/opencode
+"aqua:sst/opencode" = "1.15.0"
+# open, universal, coding agent skills, agents, rules,
+# and commands organizer and package manager
+#  https://github.com/enulus/OpenPackage
+"npm:opkg" = "0.11.3"
+# pinact is a CLI to edit GitHub Workflow and Composite action files
+# and pin versions of Actions and Reusable Workflows.
+#  https://github.com/suzuki-shunsuke/pinact
+"aqua:suzuki-shunsuke/pinact" = "3.10.1"
+# a tool for securing CI/CD workflows with version pinning
+#  https://github.com/sethvargo/ratchet
+"aqua:sethvargo/ratchet" = "0.11.4"
+# A simple TUI to visualize regular expressions right in your terminal.
+#  https://github.com/vitor-mariano/regex-tui
+"github:vitor-mariano/regex-tui" = "0.7.0"
+# better grep
+#   https://github.com/BurntSushi/ripgrep
+"aqua:BurntSushi/ripgrep" = "15.1.0"
+# Spacelift client and CLI
+#   https://github.com/spacelift-io/spacectl
+"aqua:spacelift-io/spacectl" = "1.21.5"
+# minimal, blazing-fast, and infinitely customizable prompt for any shell!
+#   https://github.com/starship/starship
+"aqua:starship/starship" = "1.25.1"
+# multi pod and container log tailing for kubernetes
+#   https://github.com/stern/stern
+"aqua:stern/stern" = "1.34.0"
+# a modern Linux distribution built for Kubernetes
+#  https://github.com/siderolabs/talos
+"aqua:siderolabs/talos" = "1.13.2"
+# OpenTofu / Terraform / Terragrunt and Atmos version manager
+#   https://github.com/tofuutils/tenv
+"aqua:tofuutils/tenv" = "4.12.2"
+# trunk.io
+#   https://github.com/trunk-io/launcher
+"npm:@trunkio/launcher" = "1.3.4"
+# very fast, portable and hackable fuzzy finder
+#  https://github.com/alexpasmantier/television
+"aqua:alexpasmantier/television" = "0.15.7"
+# workspace manager for your temporary experiments
+#  https://github.com/tassiovirginio/try-rs
+"github:tassiovirginio/try-rs" = "1.7.8"
+# code review TUI with vim keybindings
+#  https://github.com/agavra/tuicr
+"github:agavra/tuicr" = "0.13.0"
+# Git worktree management, designed for parallel AI agent workflows
+#  https://github.com/max-sixty/worktrunk
+"github:max-sixty/worktrunk" = "0.52.0"
+# Blazing fast terminal file manager
+#   https://github.com/sxyazi/yazi
+"aqua:sxyazi/yazi" = "26.5.6"
+# a lightweight and portable command-line YAML, JSON and XML processor.
+#   https://github.com/mikefarah/yq
+"aqua:mikefarah/yq" = "4.53.2"
+# smarter cd
+#   https://github.com/ajeetdsouza/zoxide
+"aqua:ajeetdsouza/zoxide" = "0.9.9"
+# terminal workspace with batteries included
+#   https://github.com/zellij-org/zellij
+"aqua:zellij-org/zellij" = "0.43.1"
+
+# linters & de related
+"aqua:LuaLS/lua-language-server" = "3.18.2"
+"aqua:aquasecurity/tfsec" = "1.28.14"
+"aqua:artempyanykh/marksman" = "2026-02-08"
+"aqua:astral-sh/ruff" = "0.15.13"
+"aqua:astral-sh/uv" = "0.11.14"
+"aqua:checkmake/checkmake" = "0.3.2"
+"aqua:crate-ci/typos" = "1.46.1"
+"aqua:dprint/dprint" = "0.54.0"
+"aqua:editorconfig-checker/editorconfig-checker" = "3.6.1"
+"aqua:golangci/golangci-lint" = "2.12.2"
+"aqua:google/yamlfmt" = "0.21.0"
+"aqua:gotestyourself/gotestsum" = "1.13.0"
+"aqua:incu6us/goimports-reviser" = "3.12.6"
+"aqua:koalaman/shellcheck" = "0.11.0"
+"aqua:mvdan/gofumpt" = "0.10.0"
+"aqua:mvdan/sh" = "3.13.1"
+"aqua:nametake/golangci-lint-langserver" = "0.0.12"
+"aqua:psf/black" = "26.3.1"
+"aqua:rhysd/actionlint" = "v1.7.12"
+"aqua:rust-lang/rust-analyzer" = "2026-02-16"
+"aqua:segmentio/golines" = "0.13.0"
+"aqua:snyk/cli" = "1.1304.3"
+"aqua:tamasfe/taplo" = "0.10.0"
+"aqua:terraform-linters/tflint" = "0.62.1"
+"aqua:tree-sitter/tree-sitter" = "0.26.9"
 "go:golang.org/x/tools/gopls" = "0.22.0"
 "npm:@commitlint/cli" = "21.0.1"
 "npm:@fsouza/prettierd" = "0.27.0"
@@ -61,22 +279,3 @@ rust = "1.95.0"
 "pipx:semgrep" = "1.163.0"
 "pipx:sqlfluff" = "4.2.1"
 "pipx:yamllint" = "1.38.0"
-
-# tools
-"aqua:google/go-containerregistry" = "0.21.5"
-"aqua:int128/ghcp" = "1.15.3"
-"aqua:mfontanini/presenterm" = "0.16.1"
-"aqua:sethvargo/ratchet" = "0.11.4"
-"aqua:sst/opencode" = "1.15.0"
-"aqua:vercel-labs/agent-browser" = "0.27.0"
-"github:always-further/nono" = "0.54.0"
-"github:agavra/tuicr" = "0.13.0"
-"github:janosmiko/lfk" = "0.11.8"
-"github:kitlangton/ghui" = "0.7.1"
-"github:alltuner/mise-completions-sync" = "0.5.7"
-"npm:@fission-ai/openspec" = "1.3.1"
-"npm:@google/gemini-cli" = "0.42.0"
-"npm:ccusage" = "18.0.11"
-"npm:opkg" = "0.11.3"
-"aqua:alexpasmantier/television" = "0.15.7"
-"aqua:siderolabs/talos" = "1.13.2"
