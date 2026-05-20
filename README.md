@@ -15,7 +15,7 @@
 
 ## 🚀 init
 
-Requirements: `curl`, `git`, and `go`
+Requirements: `curl`, `git`, and `mise`
 
 > 🙈 Don't do this at home.
 

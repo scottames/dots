@@ -25,11 +25,12 @@ fi
 
 print_info "building opencode-tree plugin (${opencode_tree_ref})"
 
-if ! command -v bun >/dev/null 2>&1 && command -v mise >/dev/null 2>&1; then
-  eval "$(mise env --shell bash)"
+if ! command -v mise >/dev/null 2>&1; then
+  print_err "mise not found and ${artifact} does not exist"
+  exit 1
 fi
 
-if ! command -v bun >/dev/null 2>&1; then
+if ! mise exec -- bun --version >/dev/null 2>&1; then
   print_err "bun not found and ${artifact} does not exist"
   exit 1
 fi
@@ -45,8 +46,8 @@ fi
 
 (
   cd "${build_dir}"
-  bun install --frozen-lockfile --ignore-scripts
-  bun run build
+  mise exec -- bun install --frozen-lockfile --ignore-scripts
+  mise exec -- bun run build
 )
 
 if [[ ! -f "${artifact}" ]]; then

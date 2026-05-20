@@ -30,14 +30,20 @@ print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
 
 print_info "installing openpackage packages globally" && echo
 
-if ! command -v opkg &>/dev/null; then
+if ! command -v mise &>/dev/null; then
+  print_err "mise not found.
+    install and try again."
+  exit 0 # exit 0 to not block chezmoi apply
+fi
+
+if ! mise exec -- sh -c 'command -v opkg' &>/dev/null; then
   print_err "opkg not found.
     install and try again."
   exit 0 # exit 0 to not block chezmoi apply
 fi
 
 # .openpackage/openpackage.yml hash: {{ include "../home/private_dot_openpackage/openpackage.yml.tmpl" | sha256sum }}
-opkg install -g --platforms claude opencode
+mise exec -- opkg install -g --platforms claude opencode
 
 print_success "openpackage done"
 

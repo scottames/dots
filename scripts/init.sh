@@ -28,11 +28,16 @@ alternatively, arch: (may cause oddities with python install, etc. on fedora sys
   fi
 fi
 
-if [ ! -x "$(command -v curl)" ]; then
+if ! command -v curl >/dev/null 2>&1; then
   err "curl required, but not found."
 fi
-if [ ! -x "$(command -v git)" ]; then
+if ! command -v git >/dev/null 2>&1; then
   err "git required, but not found."
+fi
+if ! command -v mise >/dev/null 2>&1; then
+  err "mise required, but not found.
+
+    install mise and try again: https://mise.jdx.dev"
 fi
 
 if ! command -v chezmoi; then
