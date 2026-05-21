@@ -141,13 +141,26 @@ Safety:
 
 ## Tool-Specific
 
+### grep / ripgrep
+
+- When running any grep/rg from $HOME or above `~/.local` ALWAYS exclude
+  `./.local/share/containers/**`, otherwise you'll end up with a nasty amount of
+  "permission denied" errors filling up the context
+
 ### GitHub Actions Workflows
 
 - Use `actionlint` to verify a workflow
 
 ### docker
 
-- On Fedora Linux assume docker is podman
+- On Fedora Linux
+  - assume docker is podman
+  - most likely we are running inside a `distrobox` container (ask the user if
+    host access is needed, should be rare) - see `$CONTAINER_ID` env
+    - use `distrobox-host-exec` to execute commands outside the container
+    - all user/project-space should work in the container
+  - need a package for the session? (debugging, etc.) install it in the
+    container! no problem. (`sudo dnf install ...`)
 
 ### Terraform / OpenTofu
 
