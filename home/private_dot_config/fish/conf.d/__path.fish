@@ -41,10 +41,15 @@ else if $IS_LINUX
 
 end
 
+set -l _mise_shims "$MISE_SHIMS_DIR"
+if test -z "$_mise_shims"
+    set _mise_shims "$HOME/.local/share/mise/shims"
+end
+
 set -a _bin_dirs \
     $AQUA_ROOT_DIR \
     $AQUA_ROOT_DIR/bin \
-    $HOME/.local/share/mise/shims \
+    $_mise_shims \
     $HOME/.local/bin \
     $HOME/bin \
     $HOME/src/bin \

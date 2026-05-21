@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# vi: ft=bash
+
+# BASH_ENV is sourced by every non-interactive bash that inherits it. Keep this
+# file silent and limited to PATH setup.
+
+if [[ -z ${MISE_SHIMS_DIR-} ]]; then
+  MISE_SHIMS_DIR="${HOME}/.local/share/mise/shims"
+fi
+
+if [[ -d ${MISE_SHIMS_DIR} ]]; then
+  _path_without_mise_shims=":${PATH-}:"
+  _path_without_mise_shims=${_path_without_mise_shims//:${MISE_SHIMS_DIR}:/:}
+  _path_without_mise_shims=${_path_without_mise_shims#:}
+  _path_without_mise_shims=${_path_without_mise_shims%:}
+
+  if [[ -n ${_path_without_mise_shims} ]]; then
+    export PATH="${MISE_SHIMS_DIR}:${_path_without_mise_shims}"
+  else
+    export PATH="${MISE_SHIMS_DIR}"
+  fi
+
+  unset _path_without_mise_shims
+fi

@@ -78,6 +78,10 @@ export PATH="${AQUA_ROOT_DIR}/bin:${PATH}" # aqua bins
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
+if [[ -f "${HOME}/.bash_env" ]]; then
+  source "${HOME}/.bash_env"
+fi
+
 case "${platform}" in
 darwin)
 
