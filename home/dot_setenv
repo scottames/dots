@@ -33,7 +33,7 @@ setenv BOB_BIN                     "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                    1
 setenv DISABLE_TELEMETRY           1
 setenv DBX_ASSEMBLE_DEFAULT        "$HOME/.config/distrobox/assemble.ini"
-setenv DBX_DEFAULT                 "a"
+setenv DBX_DEFAULT                 "f"
 setenv DBX_CONTAINER_NAME          "$DBX_DEFAULT"
 setenv DEBUG                       false
 setenv EDITOR                      "vi"
@@ -67,7 +67,8 @@ setenv TENV_AUTO_INSTALL           true
 setenv TERM                        "xterm-256color"
 setenv TMOUT                       0
 setenv VAGRANT_DEFAULT_PROVIDER    "virtualbox"
-setenv XAUTHLOCALHOSTNAME          "$(command -v hostnamectl >/dev/null 2>&1 && hostnamectl hostname || hostname)"
+[ -n "$XAUTHLOCALHOSTNAME" ] \
+  || setenv XAUTHLOCALHOSTNAME    "$(hostname)"
 
 setenv ZPLUG_HOME                  "$HOME/.zplug"
 setenv ZPLUG_LOADFILE              "$HOME/.zsh/zplugs.zsh"

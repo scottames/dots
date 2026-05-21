@@ -1,5 +1,7 @@
 #!/bin/env fish
 
+status --is-interactive; or return
+
 if [ $IS_LINUX ]
     and ! [ $HAS_EZA ]
     set _ls_arg ' --color'

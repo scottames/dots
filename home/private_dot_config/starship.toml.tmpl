@@ -96,10 +96,10 @@ format = '[$symbol$context( \($namespace\))]($style) '
 
 [custom.containerenv]
 description = "The activated distrobox container"
-command = """
-grep -oP 'name="\\K[^"]+' /var/run/.containerenv
-"""
-when = "is_container"
+command = "grep -oP 'name=\"\\K[^\"]+' /var/run/.containerenv"
+when = "test -f /var/run/.containerenv"
+shell = ["bash", "--noprofile", "--norc", "-c"]
+use_stdin = false
 style = "italic bright-black"
 format = "[  $output]($style) "
 disabled = false

@@ -55,7 +55,7 @@ set -a _bin_dirs \
     /opt/homebrew/bin
 
 for dir in $_bin_dirs
-    if test -d $dir
-        fish_add_path -m $dir
+    if test -n "$dir"; and test -d "$dir"
+        fish_add_path --path -m "$dir"
     end
 end
