@@ -68,21 +68,6 @@
 
 {{ end -}} # linux
 
-{{- $kiroArch := "x86_64" -}}
-{{- if eq .chezmoi.arch "aarch64" }}
-{{-   $kiroArch = "aarch64" -}}
-{{- end }}
-
-{{- $kiroBins := list "cli" "cli-chat" -}}
-{{- range $kiroBin := $kiroBins }}
-[".local/bin/kiro-{{ $kiroBin }}"]
-type = "archive-file"
-url = "https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-{{ $kiroArch }}-linux.zip"
-path = "kirocli/bin/kiro-{{ $kiroBin }}"
-executable = true
-refreshPeriod = "24h"
-{{ end -}}
-
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ file                                                     │
 #  ╰──────────────────────────────────────────────────────────╯
@@ -118,15 +103,6 @@ refreshPeriod = "24h"
 [".config/zellij/plugins/zjstatus-hints.wasm"]
     type = "file"
     url = "https://github.com/b0o/zjstatus-hints/releases/download/{{ $zjstatusHintsVersion }}/zjstatus-hints.wasm"
-    executable = false
-    refreshPeriod = "168h"
-
-# renovate: datasource=github-releases depName=hiasr/vim-zellij-navigator
-{{ $vimZellijNavigatorVersion := "0.3.0" -}}
-
-[".config/zellij/plugins/vim-zellij-navigator.wasm"]
-    type = "file"
-    url = "https://github.com/hiasr/vim-zellij-navigator/releases/download/{{ $vimZellijNavigatorVersion }}/vim-zellij-navigator.wasm"
     executable = false
     refreshPeriod = "168h"
 
@@ -248,13 +224,6 @@ refreshPeriod = "24h"
     url = "git@github.com:scottames/cv.git"
     refreshPeriod = "0"
     ["src/github.com/scottames/cv/.bare".clone]
-        args = ["--bare"]
-
-["src/github.com/scottames/hark/.bare"]
-    type = "git-repo"
-    url = "git@github.com:scottames/hark.git"
-    refreshPeriod = "0"
-    ["src/github.com/scottames/hark/.bare".clone]
         args = ["--bare"]
 
 ["src/github.com/scottames/infra/.bare"]
