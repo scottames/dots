@@ -83,7 +83,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:direnv/direnv" = "2.37.1"
 #  more intuitive version of du in rust
 #   https://github.com/bootandy/dust/
-"aqua:bootandy/dust" = "1.2.3"
+"aqua:bootandy/dust" = "1.2.4"
 # diff tool for YAML files, and sometimes JSON
 #  https://github.com/homeport/dyff
 "aqua:homeport/dyff" = "1.12.0"
@@ -131,7 +131,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:charmbracelet/gum" = "0.17.0"
 # kubernetes package manager
 #   https://github.com/helm/helm
-"aqua:helm/helm" = "4.1.4"
+"aqua:helm/helm" = "4.2.0"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
 "github:modem-dev/hunk" = "0.13.1"
@@ -167,7 +167,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.112.2"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.15.0"
+"aqua:sst/opencode" = "1.15.3"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -211,7 +211,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:tassiovirginio/try-rs" = "1.7.8"
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
-"github:agavra/tuicr" = "0.13.0"
+"github:agavra/tuicr" = "0.14.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
 "github:max-sixty/worktrunk" = "0.52.0"
@@ -226,7 +226,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:ajeetdsouza/zoxide" = "0.9.9"
 # terminal workspace with batteries included
 #   https://github.com/zellij-org/zellij
-"aqua:zellij-org/zellij" = "0.43.1"
+"aqua:zellij-org/zellij" = "0.44.3"
 
 # linters & de related
 "aqua:LuaLS/lua-language-server" = "3.18.2"
@@ -235,7 +235,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:astral-sh/ruff" = "0.15.13"
 "aqua:astral-sh/uv" = "0.11.14"
 "aqua:checkmake/checkmake" = "0.3.2"
-"aqua:crate-ci/typos" = "1.46.1"
+"aqua:crate-ci/typos" = "1.46.2"
 "aqua:dprint/dprint" = "0.54.0"
 "aqua:editorconfig-checker/editorconfig-checker" = "3.6.1"
 "aqua:golangci/golangci-lint" = "2.12.2"
@@ -246,7 +246,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:mvdan/gofumpt" = "0.10.0"
 "aqua:mvdan/sh" = "3.13.1"
 "aqua:nametake/golangci-lint-langserver" = "0.0.12"
-"aqua:psf/black" = "26.3.1"
+"aqua:psf/black" = "26.5.0"
 "aqua:rhysd/actionlint" = "v1.7.12"
 "aqua:rust-lang/rust-analyzer" = "2026-02-16"
 "aqua:segmentio/golines" = "0.13.0"
@@ -265,10 +265,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:markdownlint-cli" = "0.48.0"
 "npm:prettier" = "3.8.3"
 "npm:pyright" = "1.1.409"
-"npm:sql-formatter" = "15.7.4"
+"npm:sql-formatter" = "15.8.0"
 "npm:sql-language-server" = "1.7.1"
 "npm:stylelint" = "17.11.1"
-"npm:textlint" = "15.7.0"
+"npm:textlint" = "15.7.1"
 "pipx:ansible-lint" = "26.4.0"
 "pipx:beautysh" = "6.4.3"
 "pipx:gitlint-core" = "0.19.1"
