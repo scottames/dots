@@ -3,6 +3,12 @@ set UNAME (uname)
 set -g IS_LINUX false
 set -g IS_MAC false
 
+set -l _mise_shims "$HOME/.local/share/mise/shims"
+if test -d "$_mise_shims"
+    and not contains -- "$_mise_shims" $PATH
+    set -gx PATH "$_mise_shims" $PATH
+end
+
 set -l _cat (which cat) # avoid race condition with cat.fish being used before HAS_BAT set
 
 if [ $UNAME = Linux ]

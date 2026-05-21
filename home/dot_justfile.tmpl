@@ -29,22 +29,18 @@ fingerprint-auth-enable:
 fingerprint-auth-disable:
     sudo authselect enable-feature with-fingerprint
 
-{{ $gumBin := "gum" -}}
-{{ if lookPath "ugum" -}}
-{{ $gumBin = "ugum" -}}
-{{ end -}}
 # enable u2f auth
 u2f-auth-enable:
     #!/usr/bin/env bash
-    {{ $gumBin }} confirm "Setup primary user u2f_key?" && \
+    gum confirm "Setup primary user u2f_key?" && \
       pamu2fcfg --pin-verification > ~/.config/Yubico/u2f_keys || \
-      echo '{{`{{{{ Color "99" "=>" }}`}} skipping adding primary key to user u2f_keys' | {{ $gumBin }} format -t template
-    {{ $gumBin }} confirm "Setup secondary user u2f_key?" && \
+      echo '{{`{{{{ Color "99" "=>" }}`}} skipping adding primary key to user u2f_keys' | gum format -t template
+    gum confirm "Setup secondary user u2f_key?" && \
       pamu2fcfg --nouser --pin-verification >> ~/.config/Yubico/u2f_keys || \
-      echo '{{`{{{{ Color "99" "=>" }}`}} skipping adding primary key to user u2f_keys' | {{ $gumBin }} format -t template
-    echo '{{`{{{{ Color "99" "=>" }}`}} enabling authselect feature with-pam-u2f' | {{ $gumBin }} format -t template
+      echo '{{`{{{{ Color "99" "=>" }}`}} skipping adding primary key to user u2f_keys' | gum format -t template
+    echo '{{`{{{{ Color "99" "=>" }}`}} enabling authselect feature with-pam-u2f' | gum format -t template
     if authselect current | grep with-pam-u2f > /dev/null; then
-      echo '{{`{{{{ Color "99" "=>" }}`}} authselect feature already enabled!' | {{ $gumBin }} format -t template
+      echo '{{`{{{{ Color "99" "=>" }}`}} authselect feature already enabled!' | gum format -t template
     else
       sudo authselect enable-feature with-pam-u2f
     fi

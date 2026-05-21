@@ -79,12 +79,6 @@ $HAS_BAT \
 $HAS_BAT \
   && setenv MANPAGER               "nvim +Man!"
 
-setenv GUM_BIN                     ""
-$HAS_GUM \
-  && setenv GUM_BIN                "gum"
-$HAS_UGUM \
-  && setenv GUM_BIN                "ugum"
-
 # bubbletint | https://lrstanley.github.io/bubbletint/
 setenv BUBBLETINT_THEME "catppuccin_mocha"
 # https://www.gh-dash.dev/companions/enhance/theme/

@@ -44,14 +44,13 @@ end
 set -a _bin_dirs \
     $AQUA_ROOT_DIR \
     $AQUA_ROOT_DIR/bin \
-    $BOB_BIN \
-    $HOME/.npm-global/bin \
-    $KREW_ROOT/bin \
-    $HOME/.cargo/bin \
-    $GOPATH/bin \
+    $HOME/.local/share/mise/shims \
     $HOME/.local/bin \
     $HOME/bin \
     $HOME/src/bin \
+    $HOME/.npm-global/bin \
+    $HOME/.cargo/bin \
+    $GOPATH/bin \
     /opt/homebrew/bin
 
 for dir in $_bin_dirs

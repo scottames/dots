@@ -11,7 +11,7 @@ function zellij_attach --description "Attach to existing Zellij session(s) - if 
     if [ $session_count -ge 2 ]
         zellij attach (
              printf %s\n $sessions \
-             | ugum filter --header="choose a session to attach to..." --placeholder="" \
+             | gum filter --header="choose a session to attach to..." --placeholder="" \
              | string split ' ' -f1
         )
     else

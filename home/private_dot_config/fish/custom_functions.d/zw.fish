@@ -38,7 +38,7 @@
 #   - zellij (must be inside a zellij session)
 #   - worktrunk (wt)
 #   - jq
-#   - ugum or gum (for picker mode)
+#   - gum (for picker mode)
 #   - graphite (gt) + gt-wt-create (only with -g flag)
 
 function zw --description "Open a git worktree in a new Zellij tab"
@@ -105,12 +105,8 @@ function zw --description "Open a git worktree in a new Zellij tab"
             return 1
         end
 
-        set -l gum_bin ugum
-        if not type -q $gum_bin
-            set gum_bin gum
-        end
-        if not type -q $gum_bin
-            printf_err "ugum or gum is required for picker mode\n"
+        if not type -q gum
+            printf_err "gum is required for picker mode\n"
             return 1
         end
 
@@ -120,7 +116,7 @@ function zw --description "Open a git worktree in a new Zellij tab"
             return 1
         end
 
-        set branch (printf '%s\n' $branches | $gum_bin filter --header="pick a worktree...")
+        set branch (printf '%s\n' $branches | gum filter --header="pick a worktree...")
         if test -z "$branch"
             return 0
         end

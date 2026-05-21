@@ -26,7 +26,6 @@ set -l host_exec_commands \
     rpm-ostree \
     systemctl \
     transactional-update \
-    ugum \
     ujust \
     ydotool \
     xclip \
