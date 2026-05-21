@@ -319,19 +319,19 @@ binds {
       spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows";
     }
 
-    Mod+X { // Speech to Text (paste at cursor)
-      spawn "hark" "record";
+    Mod+X repeat=false hotkey-overlay-title="Voxtype Dictation" {
+        spawn "voxtype" "record" "toggle";
     }
 
-    Mod+Shift+X { // Speech to Text (copy to clipboard)
-      spawn "hark" "record" "--clipboard";
+    Mod+Shift+X repeat=false hotkey-overlay-title="Voxtype Dictation to Clipboard" {
+        spawn "voxtype" "record" "toggle" "--clipboard";
+    }
+
+    Mod+Escape repeat=false hotkey-overlay-title="Cancel Voxtype" {
+        spawn "voxtype" "record" "cancel";
     }
 
     Super+Alt+L { spawn "hyprlock"; }
-
-    // You can also use a shell. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument in the end.
-    // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.

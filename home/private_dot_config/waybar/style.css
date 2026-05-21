@@ -58,6 +58,7 @@ tooltip {
 #custom-lock,
 #custom-power,
 #custom-tailscale,
+#custom-voxtype,
 #disk,
 #battery,
 #cpu,
@@ -121,6 +122,37 @@ tooltip {
   border-left: 0px;
   border-right: 0px;
   border-radius: 10px 0 0 10px;
+}
+
+#custom-voxtype {
+  color: @green;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#custom-voxtype.recording {
+  color: @red;
+  animation: pulse 1s infinite;
+}
+
+#custom-voxtype.transcribing {
+  color: @yellow;
+}
+
+#custom-voxtype.stopped {
+  color: @text;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #cpu {

@@ -226,8 +226,6 @@ abbr -a ze. "zellij_new_tab $DOTS --name='.'" # see functions
 abbr -a zect "zellij_new_tab $MY_SRC_DIR/containers/main"
 abbr -a zeag "zellij_new_tab $MY_SRC_DIR/.agents/main"
 abbr -a zecp "zellij_new_tab $MY_SRC_DIR/copr/main"
-abbr -a zeh "zellij_new_tab $MY_SRC_DIR/hark/main"
-abbr -a zeh. "zellij_new_tab $XDG_CONFIG_HOME/hark"
 abbr -a zeo "zellij_new_tab $HOME/.obsidian/this --name='obsidian'"
 abbr -a zet zellij_new_tab
 abbr -a zego "zellij_new_tab --layout=go"

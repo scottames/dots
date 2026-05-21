@@ -22,6 +22,7 @@
     "custom/tailscale",
     "network",
     "pulseaudio",
+    "custom/voxtype",
     "custom/lock",
     "custom/power"
   ],
@@ -167,6 +168,18 @@
       "portable": "",
       "car": ""
     }
+  },
+  "custom/voxtype": {
+    "exec": "~/.config/waybar/scripts/voxtype.sh",
+    "restart-interval": 3,
+    "format": "{}",
+    "tooltip": true,
+    "return-type": "json",
+    "hide-empty-text": true,
+    "exec-on-event": false,
+    "on-click": "~/.local/bin/voxtype record toggle",
+    "on-click-right": "~/.local/bin/voxtype record toggle --clipboard",
+    "on-click-middle": "~/.local/bin/voxtype record cancel"
   },
   "wlr/taskbar": {
     "format": "{icon}",
