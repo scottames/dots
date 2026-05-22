@@ -151,7 +151,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "0.11.8"
+"github:janosmiko/lfk" = "0.12.0"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -161,13 +161,13 @@ amazon-ecr-credential-helper = "0.12.0"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
-"github:always-further/nono" = "0.54.0"
+"github:always-further/nono" = "0.55.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.112.2"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.15.3"
+"aqua:sst/opencode" = "1.15.4"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
