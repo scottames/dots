@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.4"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.148"
+"aqua:anthropics/claude-code" = "2.1.150"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.92.0"
@@ -167,7 +167,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.112.2"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.15.7"
+"aqua:sst/opencode" = "1.15.10"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -208,13 +208,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:alexpasmantier/television" = "0.15.7"
 # workspace manager for your temporary experiments
 #  https://github.com/tassiovirginio/try-rs
-"github:tassiovirginio/try-rs" = "1.7.8"
+"github:tassiovirginio/try-rs" = "v1.7.9"
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
 "github:agavra/tuicr" = "v0.16.0"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "0.52.0"
+"github:max-sixty/worktrunk" = "v0.53.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
