@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
+if test -f /run/.dockerenv || test -f /run/.containerenv; then # is container
+  if [[ -n "$DISTROBOX_ENTER_PATH" ]]; then                    # is distrobox
+    exec distrobox-host-exec /usr/lib/voxtype/voxtype-onnx-avx2 "$@"
+  fi
+fi
+
 exec /usr/lib/voxtype/voxtype-onnx-avx2 "$@"
+
+# vi: ft=bash
