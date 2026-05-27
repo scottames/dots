@@ -8,17 +8,22 @@ if [[ -z ${MISE_SHIMS_DIR-} ]]; then
   MISE_SHIMS_DIR="${HOME}/.local/share/mise/shims"
 fi
 
-if [[ -d ${MISE_SHIMS_DIR} ]]; then
-  _path_without_mise_shims=":${PATH-}:"
-  _path_without_mise_shims=${_path_without_mise_shims//:${MISE_SHIMS_DIR}:/:}
-  _path_without_mise_shims=${_path_without_mise_shims#:}
-  _path_without_mise_shims=${_path_without_mise_shims%:}
+_home_local_bin="${HOME}/.local/bin"
 
-  if [[ -n ${_path_without_mise_shims} ]]; then
-    export PATH="${MISE_SHIMS_DIR}:${_path_without_mise_shims}"
+if [[ -d ${MISE_SHIMS_DIR} ]]; then
+  _path_without_overrides=":${PATH-}:"
+  _path_without_overrides=${_path_without_overrides//:${_home_local_bin}:/:}
+  _path_without_overrides=${_path_without_overrides//:${MISE_SHIMS_DIR}:/:}
+  _path_without_overrides=${_path_without_overrides#:}
+  _path_without_overrides=${_path_without_overrides%:}
+
+  if [[ -n ${_path_without_overrides} ]]; then
+    export PATH="${_home_local_bin}:${MISE_SHIMS_DIR}:${_path_without_overrides}"
   else
-    export PATH="${MISE_SHIMS_DIR}"
+    export PATH="${_home_local_bin}:${MISE_SHIMS_DIR}"
   fi
 
-  unset _path_without_mise_shims
+  unset _path_without_overrides
 fi
+
+unset _home_local_bin
