@@ -50,6 +50,19 @@ map("n", "<C-a><C-a>", "gg<S-v>G")
 
 -- Yank all
 map("n", "<leader>by", "<cmd>%y+<CR>", { noremap = true, silent = true, desc = "Yank Buffer" })
+map("n", "<leader>bY", function()
+  local path = vim.api.nvim_buf_get_name(0)
+  if path == "" then
+    vim.notify("No file path for current buffer", vim.log.levels.WARN)
+    return
+  end
+
+  local root = LazyVim.root.get({ normalize = true })
+  local relpath = vim.fs.relpath(root, vim.uv.fs_realpath(path) or path) or path
+
+  vim.fn.setreg("+", relpath)
+  vim.notify("Yanked: " .. relpath)
+end, { desc = "Yank Buffer Path" })
 
 -- Format
 map("n", "<leader>=", vim.lsp.buf.format, { desc = "Format Buffer" })
