@@ -10,6 +10,7 @@ export const zellijStatusPlugin = async ({ $ }) => {
   const handleEventType = async (type) => {
     if (
       type === "permission.asked" ||
+      type === "permission.updated" ||
       type === "question.asked" ||
       type === "tui.prompt.append"
     ) {
@@ -17,23 +18,40 @@ export const zellijStatusPlugin = async ({ $ }) => {
     }
 
     if (
-      type === "session.idle" ||
       type === "permission.replied" ||
       type === "question.replied" ||
       type === "question.rejected"
     ) {
+      await notify("clear");
+    }
+
+    if (type === "session.idle") {
       await notify("completed");
     }
   };
 
-  const statusIndicatesIdle = (input) => {
+  const statusType = (input) => {
     const status =
+      input?.properties?.status ??
       input?.status ??
       input?.session?.status ??
+      input?.event?.properties?.status ??
       input?.event?.data?.status ??
       input?.event?.status;
 
-    return status === "idle";
+    if (typeof status === "string") {
+      return status;
+    }
+
+    if (status && typeof status === "object") {
+      return status.type;
+    }
+
+    return undefined;
+  };
+
+  const statusIndicatesIdle = (input) => {
+    return statusType(input) === "idle";
   };
 
   return {
@@ -44,16 +62,16 @@ export const zellijStatusPlugin = async ({ $ }) => {
       await notify("waiting");
     },
     "permission.replied": async () => {
-      await notify("completed");
+      await notify("clear");
     },
     "question.asked": async () => {
       await notify("waiting");
     },
     "question.replied": async () => {
-      await notify("completed");
+      await notify("clear");
     },
     "question.rejected": async () => {
-      await notify("completed");
+      await notify("clear");
     },
     "tui.prompt.append": async () => {
       await notify("waiting");
@@ -66,10 +84,10 @@ export const zellijStatusPlugin = async ({ $ }) => {
         await notify("completed");
       }
     },
-    event: async ({ event }) => {
-      await handleEventType(event.type);
+    event: async ({ event } = {}) => {
+      await handleEventType(event?.type);
 
-      if (event.type === "session.status" && statusIndicatesIdle(event)) {
+      if (event?.type === "session.status" && statusIndicatesIdle(event)) {
         await notify("completed");
       }
     },
