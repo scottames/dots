@@ -9,6 +9,15 @@ local executable = function(bin)
 end
 
 return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        copilot = { enabled = false },
+      },
+    },
+  },
+
   { -- https://github.com/stevearc/conform.nvim
     "stevearc/conform.nvim",
     optional = true,
