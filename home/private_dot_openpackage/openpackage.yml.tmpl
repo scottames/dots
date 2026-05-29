@@ -13,5 +13,9 @@ dependencies:
 - name: superpowers
   base: {{ .home.src_github_dir }}/.agents/main/packages/superpowers
 {{- end }}
+{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/mattpocock") }}
+- name: mattpocock
+  base: {{ .home.src_github_dir }}/.agents/main/packages/mattpocock
+{{- end }}
 
 dev-dependencies: []
