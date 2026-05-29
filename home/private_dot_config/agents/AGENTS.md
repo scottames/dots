@@ -102,6 +102,12 @@ Safety:
 - Prefer read-only detection commands first; only run mutating git commands when
   needed for the requested task
 
+#### Personal Projects
+
+When cross-referencing between repositories owned by me (GitHub user:
+`scottames`), all of my active projects will be checked out at
+`~/src/github.com/scottames/`.
+
 ## Coding
 
 ### Coding Preferences
