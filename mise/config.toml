@@ -42,7 +42,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:vercel-labs/agent-browser" = "0.27.0"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
-"aqua:ast-grep/ast-grep" = "0.42.3"
+"aqua:ast-grep/ast-grep" = "0.43.0"
 # magical shell history
 #   https://github.com/atuinsh/atuin
 "aqua:atuinsh/atuin" = "18.16.1"
@@ -72,7 +72,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:google/go-containerregistry" = "0.21.6"
 # runtime for composable workflows
 #   https://github.com/dagger/dagger
-"aqua:dagger/dagger" = "0.20.8"
+"aqua:dagger/dagger" = "0.21.0"
 # syntax-highlighting pager for git, diff, grep, and blame output
 #   https://github.com/dandavison/delta
 "aqua:dandavison/delta" = "0.19.2"
@@ -102,7 +102,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:antonmedv/fx" = "39.2.0"
 # command-line fuzzy finder
 #   https://github.com/junegunn/fzf
-"aqua:junegunn/fzf" = "0.73.0"
+"aqua:junegunn/fzf" = "0.73.1"
 # fork a repository, commit files and create a pull request using github api
 #   https://github.com/int128/ghcp
 "aqua:int128/ghcp" = "1.15.3"
@@ -114,7 +114,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:dlvhdr/gh-enhance" = "0.6.1"
 # gh extension to preview GitHub Flavored Markdown
 #  https://github.com/thiagokokada/gh-gfm-preview
-"github:thiagokokada/gh-gfm-preview" = "v1.2.0"
+"github:thiagokokada/gh-gfm-preview" = "v1.2.1"
 # A CLI to create GitHub App User Access Token for secure local development
 #  https://github.com/suzuki-shunsuke/ghtkn
 "aqua:suzuki-shunsuke/ghtkn" = "0.2.4"
@@ -134,7 +134,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:helm/helm" = "4.2.0"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.13.2"
+"github:modem-dev/hunk" = "v0.14.0"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -151,7 +151,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.12.4"
+"github:janosmiko/lfk" = "v0.12.6"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -161,7 +161,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
-"github:always-further/nono" = "v0.57.0"
+"github:always-further/nono" = "v0.58.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.113.0"
@@ -196,7 +196,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:stern/stern" = "1.34.0"
 # a modern Linux distribution built for Kubernetes
 #  https://github.com/siderolabs/talos
-"aqua:siderolabs/talos" = "1.13.2"
+"aqua:siderolabs/talos" = "1.13.3"
 # OpenTofu / Terraform / Terragrunt and Atmos version manager
 #   https://github.com/tofuutils/tenv
 "aqua:tofuutils/tenv" = "4.12.2"
@@ -211,7 +211,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:tassiovirginio/try-rs" = "v1.7.9"
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
-"github:agavra/tuicr" = "v0.16.0"
+"github:agavra/tuicr" = "v0.16.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
 "github:max-sixty/worktrunk" = "v0.53.0"
@@ -237,7 +237,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.46.3"
 "aqua:dprint/dprint" = "0.54.0"
-"aqua:editorconfig-checker/editorconfig-checker" = "3.6.1"
+"aqua:editorconfig-checker/editorconfig-checker" = "3.7.0"
 "aqua:golangci/golangci-lint" = "2.12.2"
 "aqua:google/yamlfmt" = "0.21.0"
 "aqua:gotestyourself/gotestsum" = "1.13.0"
@@ -264,7 +264,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:markdown-toc" = "1.2.0"
 "npm:markdownlint-cli" = "0.48.0"
 "npm:prettier" = "3.8.3"
-"npm:pyright" = "1.1.409"
+"npm:pyright" = "1.1.410"
 "npm:sql-formatter" = "15.8.0"
 "npm:sql-language-server" = "1.7.1"
 "npm:stylelint" = "17.12.0"
