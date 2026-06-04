@@ -29,7 +29,7 @@ package_manager = "bun"
 bun = "1.3.14"
 go = "1.26.3"
 node = "24.16.0"
-rust = "1.95.0"
+rust = "1.96.0"
 usage = "3.3.0"
 
 ## tools
@@ -48,7 +48,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:atuinsh/atuin" = "18.16.1"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "2.59.0"
+"github:aquaproj/aqua" = "v2.59.1"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -60,10 +60,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.4"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.150"
+"aqua:anthropics/claude-code" = "2.1.158"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
-"aqua:cli/cli" = "2.92.0"
+"aqua:cli/cli" = "2.93.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
 "aqua:openai/codex" = "rust-v0.29.0"
@@ -72,7 +72,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:google/go-containerregistry" = "0.21.6"
 # runtime for composable workflows
 #   https://github.com/dagger/dagger
-"aqua:dagger/dagger" = "0.21.0"
+"aqua:dagger/dagger" = "0.21.3"
 # syntax-highlighting pager for git, diff, grep, and blame output
 #   https://github.com/dandavison/delta
 "aqua:dandavison/delta" = "0.19.2"
@@ -147,27 +147,27 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:kubernetes/kubectl" = "1.35.3"
 # simple terminal ui for git commands
 #   https://github.com/jesseduffield/lazygit
-"aqua:jesseduffield/lazygit" = "0.61.1"
+"aqua:jesseduffield/lazygit" = "0.62.1"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.12.6"
+"github:janosmiko/lfk" = "v0.13.1"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
-"aqua:walles/moor" = "2.13.2"
+"aqua:walles/moor" = "2.13.3"
 #   https://github.com/neovim/neovim
 "aqua:neovim/neovim" = "0.12.2"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
-"github:always-further/nono" = "v0.58.0"
+"github:always-further/nono" = "v0.59.0"
 # A new type of shell
 #  https://www.nushell.sh/
-"aqua:nushell/nushell" = "0.113.0"
+"aqua:nushell/nushell" = "0.113.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.15.10"
+"aqua:sst/opencode" = "1.15.13"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -208,13 +208,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:alexpasmantier/television" = "0.15.7"
 # workspace manager for your temporary experiments
 #  https://github.com/tassiovirginio/try-rs
-"github:tassiovirginio/try-rs" = "v1.7.9"
+"github:tassiovirginio/try-rs" = "v1.7.10"
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
 "github:agavra/tuicr" = "v0.16.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.53.0"
+"github:max-sixty/worktrunk" = "v0.55.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -232,10 +232,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:LuaLS/lua-language-server" = "3.18.2"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:astral-sh/ruff" = "0.15.14"
-"aqua:astral-sh/uv" = "0.11.16"
+"aqua:astral-sh/ruff" = "0.15.15"
+"aqua:astral-sh/uv" = "0.11.17"
 "aqua:checkmake/checkmake" = "0.3.2"
-"aqua:crate-ci/typos" = "1.46.3"
+"aqua:crate-ci/typos" = "1.47.0"
 "aqua:dprint/dprint" = "0.54.0"
 "aqua:editorconfig-checker/editorconfig-checker" = "3.7.0"
 "aqua:golangci/golangci-lint" = "2.12.2"
@@ -255,10 +255,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:terraform-linters/tflint" = "0.62.1"
 "aqua:tree-sitter/tree-sitter" = "0.26.9"
 "go:golang.org/x/tools/gopls" = "0.22.0"
-"npm:@commitlint/cli" = "21.0.1"
-"npm:@fsouza/prettierd" = "0.27.0"
+"npm:@commitlint/cli" = "21.0.2"
+"npm:@fsouza/prettierd" = "0.28.0"
 "npm:bash-language-server" = "5.6.0"
-"npm:cspell" = "10.0.0"
+"npm:cspell" = "10.0.1"
 "npm:dockerfile-language-server-nodejs" = "0.15.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
@@ -276,6 +276,6 @@ amazon-ecr-credential-helper = "0.12.0"
 "pipx:mypy" = "2.1.0"
 "pipx:pyproject-flake8" = "7.0.0"
 "pipx:ruff-lsp" = "0.0.62"
-"pipx:semgrep" = "1.163.0"
+"pipx:semgrep" = "1.164.0"
 "pipx:sqlfluff" = "4.2.1"
 "pipx:yamllint" = "1.38.0"
