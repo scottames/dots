@@ -51,6 +51,7 @@ return {
   { -- https://github.com/tris203/precognition.nvim
     "tris203/precognition.nvim",
     config = true,
+    enabled = false,
     event = "BufAdd",
     keys = {
       {
