@@ -1,3 +1,8 @@
+local function set_sidekick_nes(enabled)
+  vim.lsp.enable("copilot", enabled)
+  require("sidekick.nes").enable(enabled)
+end
+
 return {
   -- https://ampcode.com/
   { -- https://github.com/sourcegraph/amp.nvim
@@ -47,6 +52,16 @@ return {
         },
       },
     },
+    config = function(_, opts)
+      require("sidekick").setup(opts)
+      Snacks.toggle({
+        name = "Sidekick NES",
+        get = function()
+          return require("sidekick.nes").enabled
+        end,
+        set = set_sidekick_nes,
+      }):map("<leader>uN")
+    end,
     keys = {
       -- stylua: ignore
     {
@@ -121,14 +136,14 @@ return {
       {
         "<leader>and",
         function()
-          require("sidekick.nes").disable()
+          set_sidekick_nes(false)
         end,
         desc = "Sidekick: NES Disable",
       },
       {
         "<leader>ane",
         function()
-          require("sidekick.nes").enable(true)
+          set_sidekick_nes(true)
         end,
         desc = "Sidekick: NES enable",
       },
@@ -142,7 +157,8 @@ return {
       {
         "<leader>ant",
         function()
-          require("sidekick.nes").toggle()
+          local nes = require("sidekick.nes")
+          set_sidekick_nes(not nes.enabled)
         end,
         desc = "Sidekick: NES toggle",
       },
