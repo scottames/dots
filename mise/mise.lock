@@ -3223,54 +3223,6 @@ url = "https://github.com/terraform-linters/tflint/releases/download/v0.62.1/tfl
 checksum = "sha256:bef472fd62dcbdb616bbdf67800f1bcf8db64598529c09610154686555180edd"
 url = "https://github.com/terraform-linters/tflint/releases/download/v0.62.1/tflint_windows_amd64.zip"
 
-[[tools."aqua:tofuutils/tenv"]]
-version = "4.12.2"
-backend = "aqua:tofuutils/tenv"
-
-[tools."aqua:tofuutils/tenv"."platforms.linux-arm64"]
-checksum = "sha256:448f0edba714e794a104737bf1650d73bf87a5b277ba1ba5215e4056f5772e39"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Linux_arm64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.linux-arm64-musl"]
-checksum = "sha256:448f0edba714e794a104737bf1650d73bf87a5b277ba1ba5215e4056f5772e39"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Linux_arm64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.linux-x64"]
-checksum = "sha256:5ac2aa654d23629a477db864bd73b087500da5bb8625aa14704674a3fbcba969"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Linux_x86_64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.linux-x64-baseline"]
-checksum = "sha256:5ac2aa654d23629a477db864bd73b087500da5bb8625aa14704674a3fbcba969"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Linux_x86_64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.linux-x64-musl"]
-checksum = "sha256:5ac2aa654d23629a477db864bd73b087500da5bb8625aa14704674a3fbcba969"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Linux_x86_64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:5ac2aa654d23629a477db864bd73b087500da5bb8625aa14704674a3fbcba969"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Linux_x86_64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.macos-arm64"]
-checksum = "sha256:5bc587bc3b462e3de5880baae8c291440faf6ed8d5b141e05c8ccfbf66e41d49"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Darwin_arm64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.macos-x64"]
-checksum = "sha256:20e4090d875791e52f32597400e60265fe46199fb2d74fa42b5f1c8bd830467c"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Darwin_x86_64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.macos-x64-baseline"]
-checksum = "sha256:20e4090d875791e52f32597400e60265fe46199fb2d74fa42b5f1c8bd830467c"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Darwin_x86_64.tar.gz"
-
-[tools."aqua:tofuutils/tenv"."platforms.windows-x64"]
-checksum = "sha256:fea4b419085270241f08d2d043f245c8ab5cf29c7d03168138bea07ea1486ee5"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Windows_x86_64.zip"
-
-[tools."aqua:tofuutils/tenv"."platforms.windows-x64-baseline"]
-checksum = "sha256:fea4b419085270241f08d2d043f245c8ab5cf29c7d03168138bea07ea1486ee5"
-url = "https://github.com/tofuutils/tenv/releases/download/v4.12.2/tenv_v4.12.2_Windows_x86_64.zip"
-
 [[tools."aqua:tree-sitter/tree-sitter"]]
 version = "0.26.9"
 backend = "aqua:tree-sitter/tree-sitter"
