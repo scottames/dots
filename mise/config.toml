@@ -132,6 +132,9 @@ amazon-ecr-credential-helper = "0.12.0"
 # kubernetes package manager
 #   https://github.com/helm/helm
 "aqua:helm/helm" = "4.2.0"
+# agent multiplexer that lives in your terminal
+#   https://github.com/ogulcancelik/herdr
+"github:ogulcancelik/herdr" = "0.6.8"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
 "github:modem-dev/hunk" = "v0.14.0"
