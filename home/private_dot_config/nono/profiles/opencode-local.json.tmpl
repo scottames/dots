@@ -9,6 +9,7 @@
 {{- end -}}
 {{- $bypassProtection := list
       (joinPath $home ".ssh/known_hosts")
+      (joinPath $home ".gnupg")
 -}}
 {{- $allowPaths := list
        $ntbkDir
@@ -29,6 +30,8 @@
 {{- $allowPaths = append $allowPaths (joinPath $home ".cache/nvim") -}}
 {{- /* npx/npm-backed local MCPs need a writable ~/.npm cache and logs directory. */ -}}
 {{- $allowPaths = append $allowPaths (joinPath $home ".npm") -}}
+{{- /* git commit signing */ -}}
+{{- $allowPaths = append $allowPaths (joinPath $home ".gnupg") -}}
 {{- $readPaths := list
       "/etc/fish"
       "/etc/pki/ca-trust"
@@ -103,7 +106,7 @@
   "extends": "opencode",
   "meta": {
     "name": "opencode-local",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "OpenCode with local mise runtime access and external git include access"
   },
   "filesystem": {
