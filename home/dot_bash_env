@@ -2,7 +2,7 @@
 # vi: ft=bash
 
 # BASH_ENV is sourced by every non-interactive bash that inherits it. Keep this
-# file silent and limited to PATH setup.
+# file silent and limited to PATH/function overrides.
 
 if [[ -z ${MISE_SHIMS_DIR-} ]]; then
   MISE_SHIMS_DIR="${HOME}/.local/share/mise/shims"
@@ -27,3 +27,12 @@ if [[ -d ${MISE_SHIMS_DIR} ]]; then
 fi
 
 unset _home_local_bin
+
+# Force gh through the token-injecting wrapper even after tools reorder PATH.
+function gh() {
+  if [[ -x ${HOME}/.local/bin/gh ]]; then
+    "${HOME}/.local/bin/gh" "$@"
+  else
+    command gh "$@"
+  fi
+}

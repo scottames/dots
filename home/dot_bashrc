@@ -117,7 +117,7 @@ linux)
 
 esac
 
-[[ -f ~/.bash_aliases ]] && . "${HOME}/.bash_aliases"
+[[ -f "${HOME}/.bash_aliases" ]] && . "${HOME}/.bash_aliases"
 
 if ${HAS_TERRAFORM}; then
   complete -o nospace -C "$(command -v terraform)" terraform
