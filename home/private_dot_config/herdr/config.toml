@@ -1,0 +1,84 @@
+onboarding = false
+
+[theme]
+name = "catppuccin"
+
+[keys]
+help = "prefix+?"
+settings = "prefix+s"
+detach = "prefix+q"
+reload_config = "prefix+shift+r"
+
+goto = "prefix+g"
+open_notification_target = "prefix+o"
+resize_mode = "prefix+r"
+toggle_sidebar = "prefix+b"
+zoom = ["prefix+z", "prefix+f"]
+
+close_workspace = "prefix+shift+d"
+new_workspace = "prefix+shift+n"
+next_workspace = "ctrl+alt+down"
+previous_workspace = "ctrl+alt+up"
+rename_workspace = "prefix+shift+w"
+switch_workspace = "prefix+shift+1..9"
+workspace_picker = "prefix+w"
+
+new_worktree = "prefix+shift+g"
+open_worktree = "prefix+shift+o"
+# remove_worktree = ""
+
+previous_agent = "ctrl+alt+shift+up"
+next_agent = "ctrl+alt+shift+down"
+focus_agent = "prefix+alt+1..9"
+
+new_tab = "prefix+c"
+rename_tab = "prefix+shift+t"
+previous_tab = "ctrl+alt+left"
+next_tab = "ctrl+alt+right"
+switch_tab = "prefix+1..9"
+close_tab = "prefix+shift+x"
+
+edit_scrollback = "prefix+e"
+rename_pane = "prefix+shift+p"
+focus_pane_left = ["prefix+h", "ctrl+left"]
+focus_pane_down = ["prefix+j", "ctrl+down"]
+focus_pane_up = ["prefix+k", "ctrl+up"]
+focus_pane_right = ["prefix+l", "ctrl+right"]
+cycle_pane_next = "prefix+tab"
+cycle_pane_previous = "prefix+shift+tab"
+last_pane = "ctrl+`"
+close_pane = "prefix+x"
+split_vertical = ["prefix+backslash"]
+split_horizontal = ["prefix+minus"]
+
+navigate_workspace_up = "up"
+navigate_workspace_down = "down"
+navigate_pane_left = "h"         # left arrow always focuses the pane to the left
+navigate_pane_down = "j"
+navigate_pane_up = "k"
+navigate_pane_right = "l"        # right arrow always focuses the pane to the right
+
+[[keys.command]]
+key = ["prefix+alt+g", "ctrl+alt+g"]
+# type = "shell" runs detached in the background.
+# type = "pane" opens a temporary pane and closes it when the command exits.
+type = "pane"
+command = "lazygit"
+description = "run lazygit"
+
+[ui]
+accent = "magenta"
+agent_panel_scope = "all"
+prompt_new_tab_name = false
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+delivery = "herdr"
+
+# Play sounds when agents change state in background workspaces
+[ui.sound]
+enabled = true
+
+[experimental]
+# Save recent pane screen history across full server restarts.
+pane_history = false

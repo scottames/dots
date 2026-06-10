@@ -123,6 +123,11 @@ abbr -a guc gum_commit
 abbr -a gv "git log --pretty=format:'%s' | cut -d \" \" -f 1 | sort | uniq -c | sort -nr"
 abbr -a gwtls "git worktree list"
 abbr -a gwtrm "git worktree remove"
+abbr -a hw herdr_new_workspace
+abbr -a hwo "herdr worktree open \\
+--cwd \$PWD/../ \\
+--path \$PWD/ \\
+--label "
 abbr -a is intelli-shell
 abbr -a k kubectl
 abbr -a kctl kubectl

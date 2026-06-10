@@ -13,6 +13,10 @@ dependencies:
 - name: graphite
   base: {{ .home.src_github_dir }}/.agents/main/packages/graphite
 {{- end }}
+{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/herdr") }}
+- name: herdr
+  base: {{ .home.src_github_dir }}/.agents/main/packages/herdr
+{{- end }}
 {{- if stat (joinPath .home.src_github_dir ".agents/main/packages/superpowers") }}
 - name: superpowers
   base: {{ .home.src_github_dir }}/.agents/main/packages/superpowers
