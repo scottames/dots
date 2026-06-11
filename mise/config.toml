@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.167"
+"aqua:anthropics/claude-code" = "2.1.168"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.93.0"
@@ -145,7 +145,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:casey/just" = "1.51.0"
 # kubernetes tui
 #   https://github.com/derailed/k9s
-"aqua:derailed/k9s" = "0.50.18"
+"aqua:derailed/k9s" = "0.51.0"
 #   https://github.com/kubernetes/kubectl
 "aqua:kubernetes/kubectl" = "1.35.3"
 # simple terminal ui for git commands
@@ -154,17 +154,17 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.13.7"
+"github:janosmiko/lfk" = "v0.13.8"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
-"aqua:walles/moor" = "2.13.4"
+"aqua:walles/moor" = "2.14.0"
 #   https://github.com/neovim/neovim
 "aqua:neovim/neovim" = "0.12.2"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
-"github:always-further/nono" = "v0.61.2"
+"github:always-further/nono" = "v0.62.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.113.1"
@@ -220,7 +220,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:sxyazi/yazi" = "26.5.6"
 # a lightweight and portable command-line YAML, JSON and XML processor.
 #   https://github.com/mikefarah/yq
-"aqua:mikefarah/yq" = "4.53.2"
+"aqua:mikefarah/yq" = "4.53.3"
 # smarter cd
 #   https://github.com/ajeetdsouza/zoxide
 "aqua:ajeetdsouza/zoxide" = "0.9.9"
