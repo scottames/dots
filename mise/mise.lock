@@ -2768,38 +2768,53 @@ url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/435541246
 provenance = "github-attestations"
 
 [[tools."github:ogulcancelik/herdr"]]
-version = "0.6.8"
+version = "0.6.10"
 backend = "github:ogulcancelik/herdr"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-arm64"]
-checksum = "sha256:4cbe45002f86b0500a2f5279cf20a55f22234f88ce71abc2b4051e20281bd629"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.8/herdr-linux-aarch64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/437666046"
+checksum = "sha256:b3144a41df364f0541bbbdfe840fa61dbd67daf6e313ee317fe495d2ccf4927a"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589140"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-arm64-musl"]
-checksum = "sha256:4cbe45002f86b0500a2f5279cf20a55f22234f88ce71abc2b4051e20281bd629"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.8/herdr-linux-aarch64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/437666046"
+checksum = "sha256:b3144a41df364f0541bbbdfe840fa61dbd67daf6e313ee317fe495d2ccf4927a"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589140"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64"]
-checksum = "sha256:528d22e889814a6ccf22162801d59690d9dbd5dc64f96d7e1d1c7a8634b25535"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.8/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/437666044"
+checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
+
+[tools."github:ogulcancelik/herdr"."platforms.linux-x64-baseline"]
+checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl"]
-checksum = "sha256:528d22e889814a6ccf22162801d59690d9dbd5dc64f96d7e1d1c7a8634b25535"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.8/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/437666044"
+checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
+
+[tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-arm64"]
-checksum = "sha256:1344fd18741aa4d01723c37ad3e22f38fe1626e4090b5435ab1757c66f2a17d5"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.8/herdr-macos-aarch64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/437666047"
+checksum = "sha256:f48bbaafd60b3a33d783eca4dfe7243a3f96e557e55240f6ed53dd0b9b73670b"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-macos-aarch64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589143"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-x64"]
-checksum = "sha256:53537af41ede73618c8015e9c5b74a4d1954330123a2f2386d3a7bad67f2d49f"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.8/herdr-macos-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/437666045"
+checksum = "sha256:c99826b882363951f22405d889ec0c5574887093830d390c99b286c0949a0c73"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589141"
+
+[tools."github:ogulcancelik/herdr"."platforms.macos-x64-baseline"]
+checksum = "sha256:c99826b882363951f22405d889ec0c5574887093830d390c99b286c0949a0c73"
+url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589141"
 
 [[tools."github:tassiovirginio/try-rs"]]
 version = "1.7.10"
