@@ -85,7 +85,9 @@
 {{- $readFiles := list
       (joinPath $home ".gitconfig-work")
       (joinPath $home ".setenv")
+      (joinPath $home ".bash_env")
       (joinPath $home ".cargo/env.fish")
+      (joinPath $home ".config/ghtkn/ghtkn.yaml")
 -}}
 {{- /* SSH (git push) requires user id lookup */ -}}
 {{- $readFiles = append $readFiles "/etc/passwd" -}}
@@ -106,7 +108,7 @@
   "extends": "opencode",
   "meta": {
     "name": "opencode-local",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "OpenCode with local mise runtime access and external git include access"
   },
   "filesystem": {
