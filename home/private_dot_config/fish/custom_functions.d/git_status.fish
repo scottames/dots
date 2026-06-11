@@ -6,9 +6,16 @@ function git_status --description "Git project status" --wraps "git status"
     if [ $_is_inside_git_repo ]
         printf_green_bold "\n🌳 worktrees\n\n"
         if type -q wt
-            wt list
+            wt list 2>/dev/null
+            or command git worktree list \
+                | string match -v -r '\.bare' \
+                | string replace $HOME '~' \
+                | string replace /var ""
         else
-            git worktree list | grep -v '.bare' | string replace $HOME '~' | string replace /var ""
+            command git worktree list \
+                | string match -v -r '\.bare' \
+                | string replace $HOME '~' \
+                | string replace /var ""
         end
 
         set -l _org "$( dirname (
@@ -16,14 +23,17 @@ function git_status --description "Git project status" --wraps "git status"
       | string replace 'git@github.com:' '' \
       | string replace 'https://github.com/' ''
     ))"
-        set -l _proj "$( basename (
-        git config --get remote.origin.url
-      ) | string replace '.git' ''
-    )"
+        set -l _proj (project_label --project-only "$PWD")
+        if test -z "$_proj"
+            set _proj "$( basename (
+          git config --get remote.origin.url
+        ) | string replace '.git' ''
+      )"
+        end
         set -l _git_toplevel (git rev-parse --show-toplevel)
         set -l _base_pwd
 
-        if [ $_proj != "$(basename $_git_toplevel)" ] # worktree sub-dir
+        if test (project_label "$PWD") != "$_proj" # worktree sub-dir
             set _base_pwd "$(basename $_git_toplevel)"
         end
 

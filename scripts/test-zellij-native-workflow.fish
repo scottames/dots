@@ -31,6 +31,7 @@ command git -C "$DOTS" worktree add "$tmpdir/feature-x" feature-x >/dev/null
 
 printf 'demo\n' >"$DOTS/demo.txt"
 
+source "$function_dir/project_label.fish"
 source "$function_dir/zellij_tab_name.fish"
 source "$function_dir/zellij_new_tab.fish"
 source "$function_dir/zellij_rename_tab.fish"

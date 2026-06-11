@@ -45,8 +45,7 @@ function zw --description "Open a git worktree in a new Zellij tab"
     argparse \
         'c/create' \
         'g/graphite' \
-        'a/agent' \
-        'agent=?' \
+        'a/agent=?' \
         'b/base=' \
         'n/name=' \
         'h/help' \
@@ -82,15 +81,6 @@ function zw --description "Open a git worktree in a new Zellij tab"
     if not type -q wt
         printf_err "worktrunk (wt) is required but not found\n"
         return 1
-    end
-
-    # --- Repo detection ---
-
-    set -l repo_root (dirname (git rev-parse --path-format=absolute --git-common-dir))
-    set -l project (basename "$repo_root")
-    set -l default_branch (git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@refs/remotes/origin/@@')
-    if test -z "$default_branch"
-        set default_branch main
     end
 
     # --- Resolve branch ---
@@ -173,20 +163,16 @@ function zw --description "Open a git worktree in a new Zellij tab"
         set tab_name "$_flag_name"
     else
         set -l prefix "$TAB_PREFIX"
-        if test "$branch" = "$default_branch"
-            set tab_name "$prefix$project"
-        else
-            set tab_name "$prefix$project/$branch"
-        end
+        set tab_name "$prefix"(project_label --separator=/ "$worktree_path")
     end
 
     # --- Generate layout and open tab ---
 
     set -l agent_pane "pane"
-    if set -q _flag_agent; or set -q _flag_agent_value
+    if set -q _flag_agent
         set -l agent_cmd opencode
-        if set -q _flag_agent_value; and test -n "$_flag_agent_value"
-            set agent_cmd "$_flag_agent_value"
+        if test -n "$_flag_agent"
+            set agent_cmd "$_flag_agent"
         end
         set agent_pane "pane command=\"$agent_cmd\""
     end
