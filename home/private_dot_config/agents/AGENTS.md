@@ -75,25 +75,36 @@ Yubikey is used for:
 - GPG (git commit signing), no touch required
 - SSH (git push/pull), touch is required - coordinate with me to do so
 
-#### Worktrees / Bare checkout layout
+#### Worktree layouts
 
-Most of my repositories use a bare-checkout + worktree layout. When creating a
-worktree:
+Before creating or removing a worktree, detect the repo layout with read-only
+Git commands:
 
-- Detect repo layout with
-  `git rev-parse --path-format=absolute --git-common-dir` and
-  `git rev-parse --show-toplevel`
-- If the common dir basename is `.bare`, treat this as bare-checkout + worktree
-  mode
-- In bare-checkout + worktree mode, create new worktrees as siblings of `.bare`
-  at `<common_dir_parent>/<branch_name>` (equivalent to `../<branch_name>` when
-  working from `main`)
-- Use `main` as the start point unless I explicitly request a different base:
-  `git worktree add -b <branch_name> <common_dir_parent>/<branch_name> main`
-- If repo is in bare-checkout + worktree mode, this layout should be used unless
-  I explicitly say otherwise
-- If repo is not in bare-checkout + worktree mode, treat it as a regular clone
-  and do not assume this layout
+```bash
+git rev-parse --path-format=absolute --git-common-dir
+git rev-parse --show-toplevel
+git remote get-url origin 2>/dev/null
+git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null
+git worktree list --porcelain
+```
+
+`git_clone_for_worktrees` defaults to the normal layout; `--bare` creates the
+legacy layout.
+
+- **Legacy `.bare` layout**: common dir basename is `.bare`; project root is its
+  parent; worktrees go at `<project_root>/<branch_name>`.
+- **Normal `<repo>/main` layout**: common dir basename is `.git`, toplevel
+  basename is the default branch, and the parent matches the remote repo name or
+  already has sibling worktrees. Project root is the parent; worktrees go at
+  `<repo>/<branch_name>`. `<repo>/main` is durable Git infrastructure; never
+  delete, replace, or repurpose it when cleaning up feature worktrees.
+- **Ordinary clone**: anything else is a standalone clone. Do not assume the
+  parent is a managed worktree root. Only create an external worktree if the task
+  needs one; prefer `<toplevel_parent>/<repo_name>-<branch_name>`.
+
+For managed layouts, start from the default branch unless I request another
+base, e.g. `git worktree add -b <branch_name> <project_root>/<branch_name> main`.
+Worktrunk mirrors this with `{{ repo_path }}/../{{ branch | sanitize }}`.
 
 Safety:
 
