@@ -10,7 +10,7 @@ set -e
 #  │  immediately                                             │
 #  │   2. Execute the 'global' pre-commit config              │
 #  │   3. Execute the pre-commit config local to the          │
-#  │  reposity, if exists                                     │
+#  │  repository, if exists                                   │
 #  ╰──────────────────────────────────────────────────────────╯
 
 #  ╭──────────────────────────────────────────────────────────╮
@@ -46,10 +46,17 @@ fi
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ execute the local pre-commit hook if exists              │
 #  ╰──────────────────────────────────────────────────────────╯
-if [[ -e ./.git/hooks/pre-commit ]]; then
-  printf "\n[i] Running local pre-commit\n\n"
+# Linked worktrees use a .git file, so resolve default hooks through Git's common dir.
+_LOCAL_GIT_COMMON_DIR=""
+if _LOCAL_GIT_COMMON_DIR="$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)"; then
+  _LOCAL_PRE_COMMIT_HOOK="${_LOCAL_GIT_COMMON_DIR}/hooks/pre-commit"
+else
+  _LOCAL_PRE_COMMIT_HOOK=""
+fi
 
-  ./.git/hooks/pre-commit "${@}"
+if [[ -n ${_LOCAL_PRE_COMMIT_HOOK} && -x ${_LOCAL_PRE_COMMIT_HOOK} && ! ${_LOCAL_PRE_COMMIT_HOOK} -ef ${0} ]]; then
+  printf "\n[i] Running local pre-commit\n\n"
+  "${_LOCAL_PRE_COMMIT_HOOK}" "${@}"
 else
 
   printf "\n[i] No local pre-commit, ignoring...\n\n"

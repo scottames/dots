@@ -2,8 +2,15 @@
 
 set -e
 
-if [[ -e ./.git/hooks/commit-msg ]]; then
-  printf "\n[i] Running local commit-msg\n\n"
+# Linked worktrees use a .git file, so resolve default hooks through Git's common dir.
+_LOCAL_GIT_COMMON_DIR=""
+if _LOCAL_GIT_COMMON_DIR="$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)"; then
+  _LOCAL_COMMIT_MSG_HOOK="${_LOCAL_GIT_COMMON_DIR}/hooks/commit-msg"
+else
+  _LOCAL_COMMIT_MSG_HOOK=""
+fi
 
-  ./.git/hooks/commit-msg "${@}"
+if [[ -n ${_LOCAL_COMMIT_MSG_HOOK} && -x ${_LOCAL_COMMIT_MSG_HOOK} && ! ${_LOCAL_COMMIT_MSG_HOOK} -ef ${0} ]]; then
+  printf "\n[i] Running local commit-msg\n\n"
+  "${_LOCAL_COMMIT_MSG_HOOK}" "${@}"
 fi

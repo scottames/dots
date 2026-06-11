@@ -1,6 +1,6 @@
 # https://worktrunk.dev/config/
 
-# assumes bare clone for worktrees
+# Create sibling worktrees for both normal <repo>/main and legacy <repo>/.bare layouts.
 worktree-path = "{{ repo_path }}/../{{ branch | sanitize }}"
 skip-shell-integration-prompt = true
 
