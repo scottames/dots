@@ -10,7 +10,10 @@
 {{- $bypassProtection := list
       (joinPath $home ".ssh/known_hosts")
       (joinPath $home ".gnupg")
+      (joinPath $home ".config/fish/config.fish")
+      (joinPath $home ".config/fish/fish_variables")
 -}}
+{{- /* Nono treats shell config as sensitive, so Fish config needs explicit deny bypasses. */ -}}
 {{- $allowPaths := list
        $ntbkDir
       (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
@@ -98,11 +101,6 @@
 {{- /* The work git include lives in the work repo and is conditionally sourced. */ -}}
 {{-   $readFiles = append $readFiles (joinPath $workRepo ".gitconfig") -}}
 {{- end -}}
-{{- $overrideDeny := list
-      (joinPath $home ".config/fish/config.fish")
-      (joinPath $home ".config/fish/fish_variables")
--}}
-{{- /* Nono treats shell config as sensitive, so Fish config needs explicit deny overrides. */ -}}
 {
   "$schema": "https://raw.githubusercontent.com/always-further/nono/refs/heads/main/crates/nono-cli/data/nono-profile.schema.json",
   "extends": "opencode",
@@ -140,13 +138,6 @@
     "read_file": [
 {{- range $i, $p := $readFiles }}
       "{{ $p }}"{{ if lt (add $i 1) (len $readFiles) }},{{ end }}
-{{- end }}
-    ]
-  },
-  "policy": {
-    "override_deny": [
-{{- range $i, $p := $overrideDeny }}
-      "{{ $p }}"{{ if lt (add $i 1) (len $overrideDeny) }},{{ end }}
 {{- end }}
     ]
   }
