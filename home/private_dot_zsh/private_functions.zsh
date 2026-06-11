@@ -184,40 +184,131 @@ function git-status {
 }
 # -------------------------------------------------------------------
 # git-clone-for-worktrees
-#   https://morgan.cugerone.com/blog/workarounds-to-git-worktree-using-bare-repository-and-cannot-fetch-remote-branches/
+#   Defaults to normal <repo>/main layout. Use --bare for the legacy .bare layout.
 # -------------------------------------------------------------------
 function git_clone_for_worktrees {
   # Examples of call:
-  # git-clone-bare-for-worktrees git@github.com:name/repo.git
-  # => Clones to a /repo directory
+  # git_clone_for_worktrees git@github.com:name/repo.git
+  # => Clones durable main checkout to /repo/main
   #
-  # git-clone-bare-for-worktrees git@github.com:name/repo.git my-repo
-  # => Clones to a /my-repo directory
+  # git_clone_for_worktrees git@github.com:name/repo.git my-repo
+  # => Clones durable main checkout to /my-repo/main
+  #
+  # git_clone_for_worktrees --bare git@github.com:name/repo.git
+  # => Clones legacy .bare layout to /repo
+
+  local mode="normal"
+  if [[ "${1}" == "--bare" ]]; then
+    mode="bare"
+    shift
+  fi
+
+  if [[ $# -lt 1 || $# -gt 2 ]]; then
+    print_err "Usage: git_clone_for_worktrees [--bare] <url> [name]"
+    return 1
+  fi
 
   url="${1}"
   basename="${url##*/}"
   name="${2:-${basename%.*}}"
 
+  if [[ "${mode}" != "bare" ]]; then
+    local main_dir="${name}/main"
+
+    if [[ -d "${name}/.bare" ]]; then
+      print_err "Legacy .bare layout exists at '${name}'. Use --bare for that layout."
+      return 1
+    fi
+
+    if [[ -e "${main_dir}" ]]; then
+      local existing_url
+      existing_url="$(git -C "${main_dir}" config --get remote.origin.url 2>/dev/null)"
+      if [[ "${existing_url}" == "${url}" ]]; then
+        print_warn "Durable main checkout exists at '${main_dir}', skipping clone"
+        if [[ -f "${main_dir}/mise.toml" ]]; then
+          (cd "${main_dir}" && mise trust)
+        fi
+        return 0
+      fi
+
+      print_err "Existing path '${main_dir}' is not a matching git checkout for '${url}'"
+      return 1
+    fi
+
+    mkdir -p "${name}" || return 1
+    if [[ ! -d "${name}" ]]; then
+      print_err "Unable to create directory '${name}'"
+      return 1
+    fi
+
+    print_info "Cloning durable main checkout to ${main_dir}"
+    git clone "${url}" "${main_dir}" || return 1
+
+    if [[ -f "${main_dir}/mise.toml" ]]; then
+      (cd "${main_dir}" && mise trust)
+    fi
+
+    print_info "Durable main checkout lives at ${main_dir}; create sibling worktrees under ${name}"
+    return 0
+  fi
+
+  if [[ -d "${name}/main/.git" && ! -d "${name}/.bare" ]]; then
+    print_err "Normal layout exists at '${name}/main'. Omit --bare for that layout."
+    return 1
+  fi
+
   mkdir -p "${name}"
-  cd "${name}"
+  if [[ ! -d "${name}" ]]; then
+    print_err "Unable to create directory '${name}'"
+    return 1
+  fi
 
-  # Moves all the administrative git files (a.k.a $GIT_DIR) under .bare directory.
-  #
-  # Plan is to create worktrees as siblings of this directory.
-  # Example targeted structure:
-  # .bare
-  # main
-  # new-awesome-feature
-  # hotfix-bug-12
-  # ...
-  git clone --bare "${url}" .bare
-  echo "gitdir: ./.bare" > .git
+  (
+    cd "${name}" || exit 1
 
-  # Explicitly sets the remote origin fetch so we can fetch remote branches
-  git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+    # Moves all the administrative git files (a.k.a $GIT_DIR) under .bare directory.
+    #
+    # Plan is to create worktrees as siblings of this directory.
+    # Example targeted structure:
+    # .bare
+    # main
+    # new-awesome-feature
+    # hotfix-bug-12
+    # ...
+    if [[ ! -d .bare ]]; then
+      git clone --bare "${url}" .bare || exit 1
+    else
+      local existing_url
+      existing_url="$(git --git-dir=.bare config --get remote.origin.url 2>/dev/null)"
+      if [[ "${existing_url}" != "${url}" ]]; then
+        print_err "Existing .bare repository is not a matching clone for '${url}'"
+        exit 1
+      fi
 
-  # Gets all branches from origin
-  git fetch origin
+      print_warn ".bare directory exists, skipping clone"
+    fi
+    echo "gitdir: ./.bare" > .git
+
+    # Explicitly sets the remote origin fetch so we can fetch remote branches
+    git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+
+    # Gets all branches from origin
+    git fetch origin
+
+    local main_branch
+    main_branch="$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')"
+    if [[ ! -d "${main_branch}" ]]; then
+      git worktree add "${main_branch}" "${main_branch}" || exit 1
+      cd "${main_branch}" || exit 1
+      git branch --set-upstream-to="origin/${main_branch}" "${main_branch}"
+
+      if [[ -f mise.toml ]]; then
+        mise trust
+      fi
+    else
+      print_warn "Directory for branch '${main_branch}' exists, skipping initial worktree creation"
+    fi
+  )
 }
 # -------------------------------------------------------------------
 # gcbo

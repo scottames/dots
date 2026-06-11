@@ -6,19 +6,27 @@ function git_clone_for_worktrees_from_ls \
     #   git_clone_for_worktrees_from_ls scottames
     #     => sets up subdirectories repos for org 'scottames'
 
-    _arg_req_gt_one $argv || return 1
+    argparse b/bare -- $argv || return 1
+
+    if test (count $argv) -lt 1 -o (count $argv) -gt 2
+        printf_err "Usage: git_clone_for_worktrees_from_ls [--bare] <org> [remote]\n"
+        return 1
+    end
 
     set -l org $argv[1]
-    set -l remote $argv[2]
-
-    if set -q argv[2]
+    set -l remote "github.com"
+    if test (count $argv) -eq 2
         set remote $argv[2]
-    else
-        set remote "github.com"
+    end
+
+    set -l mode_args
+    if set -q _flag_bare
+        set mode_args --bare
     end
 
     echo "remote: $remote"
-    for dir in (ls -D)
-        git_clone_for_worktrees "git@$remote/$org/$dir.git"
+    for dir in */
+        set dir (string trim --right --chars=/ "$dir")
+        git_clone_for_worktrees $mode_args "git@$remote/$org/$dir.git"
     end
 end
