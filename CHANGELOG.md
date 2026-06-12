@@ -1,5 +1,64 @@
 # Changelog
 
+## [0.47.0](https://github.com/scottames/dots/compare/v0.46.0...v0.47.0) (2026-06-12)
+
+
+### Updates & Misc Chores
+
+* **deps:** update ⬆️ aqua-packages ([#920](https://github.com/scottames/dots/issues/920)) ([cdc3cab](https://github.com/scottames/dots/commit/cdc3cab160ce3b0125a1497e616da22d731875e0))
+* **deps:** update ⬆️ aqua-packages to v4.520.0 ([#924](https://github.com/scottames/dots/issues/924)) ([f56cfc8](https://github.com/scottames/dots/commit/f56cfc82eccf7c890ab36e770c636e1935f91423))
+* **deps:** update ⬆️ aqua-packages to v4.520.1 ([#925](https://github.com/scottames/dots/issues/925)) ([1f7eb02](https://github.com/scottames/dots/commit/1f7eb023d3e5c22cd86fcd03c0021194aa7f5fae))
+* **deps:** update ⬆️ container digests ([#919](https://github.com/scottames/dots/issues/919)) ([d241f14](https://github.com/scottames/dots/commit/d241f1447bba795f9e4b62efa5c28d437c420705))
+* **deps:** update ⬆️ dagger to v0.21.3 ([#921](https://github.com/scottames/dots/issues/921)) ([deb7722](https://github.com/scottames/dots/commit/deb7722531f8beddd4dfcd762a81c97f4817bfdd))
+* **deps:** update ⬆️ dagger to v0.21.4 ([#930](https://github.com/scottames/dots/issues/930)) ([fb8c104](https://github.com/scottames/dots/commit/fb8c1048166942f6ba47d58e97226e887cdd86df))
+* **deps:** update ⬆️ mise-packages ([#917](https://github.com/scottames/dots/issues/917)) ([ef28dfc](https://github.com/scottames/dots/commit/ef28dfc727d3c19c447f0b7632262e10b6340081))
+* **deps:** update ⬆️ mise-packages ([#926](https://github.com/scottames/dots/issues/926)) ([39cea80](https://github.com/scottames/dots/commit/39cea80c8cb937af658b7754dd9c24a9f170aa58))
+* **deps:** update ⬆️ mise-packages ([#928](https://github.com/scottames/dots/issues/928)) ([fd1f171](https://github.com/scottames/dots/commit/fd1f17164b4518971036843d58de62fa5ff69243))
+* **deps:** update ⬆️ mise-packages to v2.1.167 ([#927](https://github.com/scottames/dots/issues/927)) ([a3c34db](https://github.com/scottames/dots/commit/a3c34db1248a4d059d427e465dc5da002b168360))
+* **deps:** update busybox docker tag to v1.38.0 ([#922](https://github.com/scottames/dots/issues/922)) ([17183b0](https://github.com/scottames/dots/commit/17183b0b40cfb2e81f23143340b0a72439149713))
+* **deps:** update dependency gabm/satty to v0.21.1 ([#931](https://github.com/scottames/dots/issues/931)) ([7937647](https://github.com/scottames/dots/commit/793764717bff06df210d01a7bdcc5b48795ec209))
+* **deps:** update github-actions ([#932](https://github.com/scottames/dots/issues/932)) ([4274b39](https://github.com/scottames/dots/commit/4274b396c52f19d28b27611e9cad895a1c8dfd14))
+* **deps:** update github-actions to v1.0.5 ([#923](https://github.com/scottames/dots/issues/923)) ([0fb5abf](https://github.com/scottames/dots/commit/0fb5abf7f709575ad1c99c6beb30e76398ee8a3a))
+* **mise:** bump herdr 0.6.10 ([143e560](https://github.com/scottames/dots/commit/143e5604ab58cc4801c4696c3a1a4f921851ab6f))
+* **mise:** rm tenv for now - use in specific projects ([aa2d09e](https://github.com/scottames/dots/commit/aa2d09e781e20e16f20cd49bc3cc923a90c167f5))
+* **nvim:** disable copilot lsp when not in use ([c7003ea](https://github.com/scottames/dots/commit/c7003ea6924d24fcf0eb2d2dca2ec0a5bfa983d8))
+* **nvim:** disable precognition ([fa5b3c1](https://github.com/scottames/dots/commit/fa5b3c11681716516783cf5090d005136e39e1d2))
+* **nvim:** lazy updates ([d17812a](https://github.com/scottames/dots/commit/d17812a3c2170ff68472a2b8d7892136626f2147))
+* **nvim:** lazyvim updates ([afc2bd5](https://github.com/scottames/dots/commit/afc2bd536ef1ed88526cd5be9b679f79a76f06ff))
+* upgrade trunk ([#918](https://github.com/scottames/dots/issues/918)) ([6707f7f](https://github.com/scottames/dots/commit/6707f7fa5c564f4588192d9d167d27aba182db12))
+* upgrade trunk ([#929](https://github.com/scottames/dots/issues/929)) ([e8bf723](https://github.com/scottames/dots/commit/e8bf723361fecbaba2c29cf2097ae77b59713817))
+
+
+### Documentation
+
+* **agents:** clarify worktree layout guidance ([86b8150](https://github.com/scottames/dots/commit/86b815031b1c59adad2189a8d74c89f36fb7c3fe))
+
+
+### Features
+
+* add herdr ([e51f54e](https://github.com/scottames/dots/commit/e51f54eaabd407ce53ab767814e685e023dcffef))
+* **git:** add layout-aware project labels ([70c2397](https://github.com/scottames/dots/commit/70c23978e909c00e940cef80929d4b7c071467ca))
+* **git:** support normal worktree clone layout ([4d6bbc9](https://github.com/scottames/dots/commit/4d6bbc946ce4aa472abc874cd6c8551ce2e3b3cf))
+* **herdr:** add worktrunk / worktree helpers ([d9d8ff8](https://github.com/scottames/dots/commit/d9d8ff89f8f7742dcec78a75efe0397ea63ff963))
+* **herdr:** config ([d2a0633](https://github.com/scottames/dots/commit/d2a063312ce8845af398f993dadb5306088c8417))
+* **nono:** opencode-local - additional permissions ([c9ac773](https://github.com/scottames/dots/commit/c9ac7733ddeeddf84f47d3a6640cbb7aa35ab00d))
+
+
+### Bug Fixes
+
+* **gh:** attempt in ensuring the use of our wrapper ([c540930](https://github.com/scottames/dots/commit/c540930f63fc920e9e8eadf5549bd872cda0e8eb))
+* **git:** harden local hook chaining ([e13a5aa](https://github.com/scottames/dots/commit/e13a5aa4bb5e0cbb8fb0d44f5cac9649e1d8d4b5))
+* **nono/opencode:** additional permissions ([b878aa5](https://github.com/scottames/dots/commit/b878aa586514e9d05ec9a923b1ef47510165de68))
+* **nono/opencode:** deprecated overridedeny ([5a052c9](https://github.com/scottames/dots/commit/5a052c95ac6e0a14e8d522a54758e591f86d56c7))
+* **nono/opencode:** git commit signing permission ([c83e852](https://github.com/scottames/dots/commit/c83e8523dc102a2bb533f16f94a95802130b6d56))
+* **opencode:** skill perm covers non-config root ([c764871](https://github.com/scottames/dots/commit/c764871b7dd69e0c3996f51d202cd56147eb3d3e))
+* **opencode:** skill perms ([bb9fbe1](https://github.com/scottames/dots/commit/bb9fbe1cbd60e340ddeb19659b721496ffd5664a))
+
+
+### Code Refactoring
+
+* **chezmoi/git:** move clones to non-bare worktree ([666e468](https://github.com/scottames/dots/commit/666e46837cb8351671d165dd187cc153f06f653f))
+
 ## [0.46.0](https://github.com/scottames/dots/compare/v0.45.0...v0.46.0) (2026-05-31)
 
 
