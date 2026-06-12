@@ -2603,49 +2603,49 @@ url = "https://github.com/erikjuhani/basalt/releases/download/basalt/v0.12.5/bas
 url_api = "https://api.github.com/repos/erikjuhani/basalt/releases/assets/422061327"
 
 [[tools."github:janosmiko/lfk"]]
-version = "0.13.8"
+version = "0.14.0"
 backend = "github:janosmiko/lfk"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64"]
-checksum = "sha256:738459159435a4d4c1f07c3e37e16a6399ec81e325e35284be519a6baa06e797"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789451"
+checksum = "sha256:400bb4025ef309d2f47fb38b44b8effcb1e6a4065f9bd24ee6a5b2b5e8846272"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582304"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64-musl"]
-checksum = "sha256:738459159435a4d4c1f07c3e37e16a6399ec81e325e35284be519a6baa06e797"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789451"
+checksum = "sha256:400bb4025ef309d2f47fb38b44b8effcb1e6a4065f9bd24ee6a5b2b5e8846272"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582304"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64"]
-checksum = "sha256:be46e24186ff8ca6304d92c0ca87559d5d6a07d776ebaca4a79965b8d77136c9"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789471"
+checksum = "sha256:8327622adb57a78db165c34f5f5648848828aeefc48cda017768c8bc7d4a5d28"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582288"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
-checksum = "sha256:be46e24186ff8ca6304d92c0ca87559d5d6a07d776ebaca4a79965b8d77136c9"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789471"
+checksum = "sha256:8327622adb57a78db165c34f5f5648848828aeefc48cda017768c8bc7d4a5d28"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582288"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-arm64"]
-checksum = "sha256:60ef334cef737d9047258e39eaa8d821d7806139bdd7b356ca56da0d3f2ed5df"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789450"
+checksum = "sha256:f82b1ae0e502c27f5f6fc0c184035a3fe55195d312d26442dfee791354146a41"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582302"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-x64"]
-checksum = "sha256:e8299e3840151b2cb419447c89f7b7b518c0851d1518c7fa5c33182152b61e8c"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789449"
+checksum = "sha256:f58e8ebceb63e7ae4b6f354572c3709d5aaa39ce074ef6478f298fe9e4a51090"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582287"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.windows-x64"]
-checksum = "sha256:67f05b2de438d9436627e325e7b085a4ccc4e8a5f572e434737535d55d910e49"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.13.8/lfk_0.13.8_windows_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/440789448"
+checksum = "sha256:559bb777952678fb8bf40372d296135bf25a3e521ecf5b3596d0fc378d733caf"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.14.0/lfk_0.14.0_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/441582289"
 provenance = "github-attestations"
 
 [[tools."github:kitlangton/ghui"]]
@@ -2786,17 +2786,7 @@ checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4
 url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
 
-[tools."github:ogulcancelik/herdr"."platforms.linux-x64-baseline"]
-checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
-
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl"]
-checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
-
-[tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:78d298d5a1ef076b4607e8e3c92d98f5de9f0cb30daf31aa910a1a6e9abb4fa1"
 url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589142"
@@ -2807,11 +2797,6 @@ url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-mac
 url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589143"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-x64"]
-checksum = "sha256:c99826b882363951f22405d889ec0c5574887093830d390c99b286c0949a0c73"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-macos-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589141"
-
-[tools."github:ogulcancelik/herdr"."platforms.macos-x64-baseline"]
 checksum = "sha256:c99826b882363951f22405d889ec0c5574887093830d390c99b286c0949a0c73"
 url = "https://github.com/ogulcancelik/herdr/releases/download/v0.6.10/herdr-macos-x86_64"
 url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/444589141"
