@@ -66,6 +66,12 @@ type = "pane"
 command = "lazygit"
 description = "run lazygit"
 
+[[keys.command]]
+key = "prefix+alt+w"
+type = "pane"
+command = "fish -lc 'herdr_wt_switch'"
+description = "switch/create worktree with wt and open in herdr"
+
 [ui]
 accent = "magenta"
 agent_panel_scope = "all"
