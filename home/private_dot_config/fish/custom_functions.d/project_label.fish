@@ -1,10 +1,31 @@
 #!/usr/bin/env fish
 
+function __project_label_apply_substitutions --argument-names label
+    if not set -q PROJECT_LABEL_SUBSTITUTIONS
+        printf '%s\n' "$label"
+        return 0
+    end
+
+    for substitution in (string split ' ' -- $PROJECT_LABEL_SUBSTITUTIONS)
+        set -l parts (string split --max 1 = -- "$substitution")
+        if test (count $parts) -ne 2; or test -z "$parts[1]"
+            continue
+        end
+
+        if string match -q "$parts[1]*" -- "$label"
+            string replace -- "$parts[1]" "$parts[2]" "$label"
+            return 0
+        end
+    end
+
+    printf '%s\n' "$label"
+end
+
 function project_label --description "Print a layout-aware project label for a path"
-    argparse -n project_label 's/separator=' 'p/project-only' -- $argv
+    argparse -n project_label 's/separator=' p/project-only -- $argv
     or return 1
 
-    set -l separator .
+    set -l separator :
     if set -q _flag_separator
         set separator $_flag_separator
     end
@@ -28,12 +49,12 @@ function project_label --description "Print a layout-aware project label for a p
     end
 
     if test "$target" = (path resolve "$HOME")
-        printf '~\n'
+        __project_label_apply_substitutions '~'
         return 0
     end
 
     if not command git -C "$target" rev-parse --is-inside-work-tree >/dev/null 2>&1
-        printf '%s\n' (basename "$target")
+        __project_label_apply_substitutions (basename "$target")
         return 0
     end
 
@@ -85,14 +106,15 @@ function project_label --description "Print a layout-aware project label for a p
 
     set -l project (basename "$project_root")
     if set -q _flag_project_only
-        printf '%s\n' "$project"
+        __project_label_apply_substitutions "$project"
         return 0
     end
 
+    set -l label "$project"
     set -l branch (command git -C "$target" branch --show-current 2>/dev/null)
     if test -n "$branch"; and test "$branch" != "$default_branch"
-        printf '%s%s%s\n' "$project" "$separator" "$branch"
-    else
-        printf '%s\n' "$project"
+        set label "$project$separator$branch"
     end
+
+    __project_label_apply_substitutions "$label"
 end
