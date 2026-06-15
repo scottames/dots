@@ -30,7 +30,7 @@ bun = "1.3.14"
 go = "1.26.4"
 node = "24.16.0"
 rust = "1.96.0"
-usage = "3.4.0"
+usage = "3.5.0"
 
 ## tools
 
@@ -39,7 +39,7 @@ usage = "3.4.0"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.27.1"
+"aqua:vercel-labs/agent-browser" = "0.27.2"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.43.0"
@@ -48,7 +48,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:atuinsh/atuin" = "18.16.1"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.59.1"
+"github:aquaproj/aqua" = "v2.60.0"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -60,10 +60,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.168"
+"aqua:anthropics/claude-code" = "2.1.172"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
-"aqua:cli/cli" = "2.93.0"
+"aqua:cli/cli" = "2.94.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
 "aqua:openai/codex" = "rust-v0.29.0"
@@ -72,7 +72,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:google/go-containerregistry" = "0.21.6"
 # runtime for composable workflows
 #   https://github.com/dagger/dagger
-"aqua:dagger/dagger" = "0.21.4"
+"aqua:dagger/dagger" = "0.21.5"
 # syntax-highlighting pager for git, diff, grep, and blame output
 #   https://github.com/dandavison/delta
 "aqua:dandavison/delta" = "0.19.2"
@@ -117,7 +117,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:thiagokokada/gh-gfm-preview" = "v1.2.1"
 # A CLI to create GitHub App User Access Token for secure local development
 #  https://github.com/suzuki-shunsuke/ghtkn
-"aqua:suzuki-shunsuke/ghtkn" = "0.2.4"
+"aqua:suzuki-shunsuke/ghtkn" = "0.2.5"
 # github tui
 #  https://github.com/kitlangton/ghui
 "github:kitlangton/ghui" = "0.7.1"
@@ -137,12 +137,12 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "0.6.10"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.14.1"
+"github:modem-dev/hunk" = "v0.15.1"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
 #   https://github.com/casey/just
-"aqua:casey/just" = "1.51.0"
+"aqua:casey/just" = "1.52.0"
 # kubernetes tui
 #   https://github.com/derailed/k9s
 "aqua:derailed/k9s" = "0.51.0"
@@ -154,13 +154,13 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.13.8"
+"github:janosmiko/lfk" = "v0.14.3"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
 "aqua:walles/moor" = "2.14.0"
 #   https://github.com/neovim/neovim
-"aqua:neovim/neovim" = "0.12.2"
+"aqua:neovim/neovim" = "0.12.3"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
@@ -170,7 +170,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.113.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.16.2"
+"aqua:sst/opencode" = "1.17.3"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -178,7 +178,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # pinact is a CLI to edit GitHub Workflow and Composite action files
 # and pin versions of Actions and Reusable Workflows.
 #  https://github.com/suzuki-shunsuke/pinact
-"aqua:suzuki-shunsuke/pinact" = "4.0.0"
+"aqua:suzuki-shunsuke/pinact" = "4.1.0"
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
 "aqua:sethvargo/ratchet" = "0.11.4"
@@ -190,7 +190,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:BurntSushi/ripgrep" = "15.1.0"
 # Spacelift client and CLI
 #   https://github.com/spacelift-io/spacectl
-"aqua:spacelift-io/spacectl" = "1.21.6"
+"aqua:spacelift-io/spacectl" = "1.22.0"
 # minimal, blazing-fast, and infinitely customizable prompt for any shell!
 #   https://github.com/starship/starship
 "aqua:starship/starship" = "1.25.1"
@@ -199,13 +199,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:stern/stern" = "1.34.0"
 # a modern Linux distribution built for Kubernetes
 #  https://github.com/siderolabs/talos
-"aqua:siderolabs/talos" = "1.13.3"
+"aqua:siderolabs/talos" = "1.13.4"
 # trunk.io
 #   https://github.com/trunk-io/launcher
 "npm:@trunkio/launcher" = "1.3.4"
 # very fast, portable and hackable fuzzy finder
 #  https://github.com/alexpasmantier/television
-"aqua:alexpasmantier/television" = "0.15.7"
+"aqua:alexpasmantier/television" = "0.15.8"
 # workspace manager for your temporary experiments
 #  https://github.com/tassiovirginio/try-rs
 "github:tassiovirginio/try-rs" = "v1.7.10"
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.17.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.56.0"
+"github:max-sixty/worktrunk" = "v0.57.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -233,7 +233,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
 "aqua:astral-sh/ruff" = "0.15.16"
-"aqua:astral-sh/uv" = "0.11.19"
+"aqua:astral-sh/uv" = "0.11.20"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.47.2"
 "aqua:dprint/dprint" = "0.54.0"
@@ -263,7 +263,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
 "npm:markdownlint-cli" = "0.48.0"
-"npm:prettier" = "3.8.3"
+"npm:prettier" = "3.8.4"
 "npm:pyright" = "1.1.410"
 "npm:sql-formatter" = "15.8.1"
 "npm:sql-language-server" = "1.7.1"
