@@ -41,28 +41,29 @@
       "/usr/libexec/git-core"
       "/etc/pki/tls/openssl.cnf"
       (joinPath $dots "mise")
-      (joinPath $home ".config/chezmoi")
-      (joinPath $home ".config/git/hooks")
-      (joinPath $home ".cargo/registry/src")
-      (joinPath $home ".config/nvim")
-      (joinPath $home ".local/share/aquaproj-aqua")
-      (joinPath $home ".config/fish")
-      (joinPath $home ".local/share/nvim")
-      (joinPath $home ".gobrew")
       (joinPath $home ".cache/mise")
+      (joinPath $home ".cargo/registry/src")
+      (joinPath $home ".config/chezmoi")
+      (joinPath $home ".config/fish")
+      (joinPath $home ".config/gh")
+      (joinPath $home ".config/git/hooks")
       (joinPath $home ".config/mise")
+      (joinPath $home ".config/nvim")
+      (joinPath $home ".config/thts")
+      (joinPath $home ".gobrew")
+      (joinPath $home ".local/share/aquaproj-aqua")
       (joinPath $home ".local/share/mise")
+      (joinPath $home ".local/share/nvim")
+      (joinPath $home ".local/state/gh")
       (joinPath $home ".local/state/mise")
+      (joinPath $home ".npm-global")
+      (joinPath $home ".npmrc")
       (joinPath $home ".spacelift")
+      (joinPath $home ".ssh/known_hosts")
+      (joinPath $home ".terraform.d")
       (joinPath $home "node_modules")
       (joinPath $home "package-lock.json")
       (joinPath $home "package.json")
-      (joinPath $home ".npm-global")
-      (joinPath $home ".npmrc")
-      (joinPath $home ".terraform.d")
-      (joinPath $home ".config/gh")
-      (joinPath $home ".local/state/gh")
-      (joinPath $home ".ssh/known_hosts")
 -}}
 {{- /* Extra node/npx requirements */ -}}
 {{- $readPaths = append $readPaths "/usr/libexec/git-core" -}}
@@ -101,12 +102,14 @@
 {{- /* The work git include lives in the work repo and is conditionally sourced. */ -}}
 {{-   $readFiles = append $readFiles (joinPath $workRepo ".gitconfig") -}}
 {{- end -}}
+{{- /* thts + ntbk deploy key */ -}}
+{{-   $readFiles = append $readFiles (joinPath $home ".ssh/ntbk") -}}
 {
   "$schema": "https://raw.githubusercontent.com/always-further/nono/refs/heads/main/crates/nono-cli/data/nono-profile.schema.json",
   "extends": "opencode",
   "meta": {
     "name": "opencode-local",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "OpenCode with local mise runtime access and external git include access"
   },
   "filesystem": {
