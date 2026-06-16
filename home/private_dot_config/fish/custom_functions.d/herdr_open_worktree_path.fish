@@ -57,7 +57,7 @@ function herdr_open_worktree_path \
     end
     set worktree_path (path resolve "$worktree_path")
 
-    set -l label (zellij_tab_name "$worktree_path")
+    set -l label (project_label "$worktree_path")
 
     set -l worktree_result (command herdr worktree open \
         --cwd "$herdr_source" \

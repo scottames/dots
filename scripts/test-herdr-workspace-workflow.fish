@@ -222,7 +222,7 @@ printf '' >"$log_file"
 herdr_open_worktree_path "$DOTS" "$tmpdir/feature-x"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
-    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots.feature-x --focus --json" \
+    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
     "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
     "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
     "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
@@ -233,7 +233,7 @@ printf '' >"$log_file"
 herdr_open_worktree_path "$LEGACY_DOTS/main" "$LEGACY_DOTS/foo"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
-    "worktree open --cwd $LEGACY_DOTS/.bare --path $LEGACY_DOTS/foo --label legacy-dots.feature-x --focus --json" \
+    "worktree open --cwd $LEGACY_DOTS/.bare --path $LEGACY_DOTS/foo --label legacy-dots:feature-x --focus --json" \
     "pane split w-test-1 --direction right --cwd $LEGACY_DOTS/foo --no-focus" \
     "pane split w-test-2 --direction down --cwd $LEGACY_DOTS/foo --no-focus" \
     "tab create --workspace w-test --cwd $LEGACY_DOTS/foo --no-focus" \
@@ -244,7 +244,7 @@ printf '' >"$log_file"
 herdr_open_worktree_path "$DOTS/demo.txt" "$tmpdir/feature-x/demo.txt"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
-    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots.feature-x --focus --json" \
+    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
     "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
     "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
     "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
@@ -281,7 +281,7 @@ herdr_wt_switch feature-x
 assert_eq (string trim -- (command cat "$wt_log_file")) "switch --no-cd feature-x -x fish -- -lc herdr_open_worktree_path \"\$argv[1]\" \"\$argv[2]\" {{ primary_worktree_path }} {{ worktree_path }}" 'Worktrunk switch uses primary worktree and destination templates'
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
-    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots.feature-x --focus --json" \
+    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
     "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
     "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
     "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
@@ -298,7 +298,7 @@ set -l expected_wt_log (string join \n \
 assert_eq "$wt_log" "$expected_wt_log" 'no branch uses Worktrunk JSON picker flow'
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
-    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots.feature-x --focus --json" \
+    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
     "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
     "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
     "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
