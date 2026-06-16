@@ -41,16 +41,23 @@ else if $IS_LINUX
 
 end
 
+set -l _home_local_bin "$HOME_LOCAL_BIN"
+if test -z "$_home_local_bin"
+    set _home_local_bin "$HOME/.local/bin"
+end
+
 set -l _mise_shims "$MISE_SHIMS_DIR"
 if test -z "$_mise_shims"
     set _mise_shims "$HOME/.local/share/mise/shims"
 end
 
+# fish_add_path prepends each path, so mise must be listed before local bin for
+# ~/.local/bin wrappers to win in the resulting PATH.
 set -a _bin_dirs \
     $AQUA_ROOT_DIR \
     $AQUA_ROOT_DIR/bin \
     $_mise_shims \
-    $HOME/.local/bin \
+    $_home_local_bin \
     $HOME/bin \
     $HOME/src/bin \
     $HOME/.npm-global/bin \

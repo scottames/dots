@@ -58,6 +58,8 @@ function make_legacy_layout
     printf 'demo\n' >"$target/main/demo.txt"
 end
 
+source "$function_dir/label_apply_substitutions.fish"
+or exit 1
 source "$function_dir/project_label.fish"
 or exit 1
 
@@ -94,5 +96,10 @@ assert_eq "$(project_label --separator=/ "$example_normal/feature-x")" ex/featur
 set -gx PROJECT_LABEL_SUBSTITUTIONS 'example.project/=ex/ example=bad'
 assert_eq "$(project_label --separator=/ "$example_normal/feature-x")" ex/feature-x 'project label substitutions use first matching prefix'
 set -e PROJECT_LABEL_SUBSTITUTIONS
+
+set -gx COMMAND_LABEL_SUBSTITUTIONS 'nono-with-local-path=oc opencode=oc'
+assert_eq "$(label_apply_substitutions opencode "$COMMAND_LABEL_SUBSTITUTIONS")" oc 'shared label substitutions support command-specific substitution strings'
+assert_eq "$(label_apply_substitutions example.project '')" example.project 'shared label substitutions no-op without substitutions'
+set -e COMMAND_LABEL_SUBSTITUTIONS
 
 printf 'ok\n'

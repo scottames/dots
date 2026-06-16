@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 # vi: ft=bash
 
-# BASH_ENV is sourced by every non-interactive bash that inherits it. Keep this
-# file silent and limited to PATH/function overrides.
+# BASH_ENV is sourced by every non-interactive bash that inherits it. Nono strips
+# BASH_ENV from sandboxed children, so nono launchers must normalize PATH before
+# `nono wrap`. Keep this file silent and limited to PATH/function overrides.
 
 if [[ -z ${MISE_SHIMS_DIR-} ]]; then
   MISE_SHIMS_DIR="${HOME}/.local/share/mise/shims"
 fi
 
-_home_local_bin="${HOME}/.local/bin"
+_home_local_bin="${HOME_LOCAL_BIN:-${HOME}/.local/bin}"
 
 if [[ -d ${MISE_SHIMS_DIR} ]]; then
   _path_without_overrides=":${PATH-}:"

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+home_local_bin="${HOME_LOCAL_BIN:-${HOME}/.local/bin}"
+mise_shims_dir="${MISE_SHIMS_DIR:-${HOME}/.local/share/mise/shims}"
+
+path_without_overrides=":${PATH-}:"
+path_without_overrides=${path_without_overrides//:${home_local_bin}:/:}
+path_without_overrides=${path_without_overrides//:${mise_shims_dir}:/:}
+path_without_overrides=${path_without_overrides#:}
+path_without_overrides=${path_without_overrides%:}
+
+export MISE_SHIMS_DIR="${mise_shims_dir}"
+
+if [[ -n ${path_without_overrides} ]]; then
+  export PATH="${home_local_bin}:${mise_shims_dir}:${path_without_overrides}"
+else
+  export PATH="${home_local_bin}:${mise_shims_dir}"
+fi
+
+exec nono "$@"

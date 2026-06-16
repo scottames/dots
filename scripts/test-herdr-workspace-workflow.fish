@@ -378,4 +378,13 @@ __herdr_dynamic_title_postexec
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 assert_eq "$command_log" 'pane list' 'ambiguous focused pane resolution avoids metadata and tab updates'
 
+set -gx COMMAND_LABEL_SUBSTITUTIONS 'nono-with-local-path=oc opencode=oc'
+assert_eq (_herdr_command_label nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue) oc 'nono opencode wrapper labels as command substitution'
+assert_eq (_herdr_command_label nono wrap --profile opencode-local --allow-cwd -- opencode --continue) oc 'raw nono opencode wrapper labels as command substitution'
+assert_eq (_herdr_command_label nono-with-local-path wrap --profile claude-code --allow-cwd -- claude) claude 'nono claude wrapper labels as wrapped command'
+set -e COMMAND_LABEL_SUBSTITUTIONS
+
+set -l isolated_label (env COMMAND_LABEL_SUBSTITUTIONS='opencode=oc' fish --no-config -c 'source "$argv[1]"; _herdr_command_label nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode' -- "$function_dir/_herdr_command_label.fish")
+assert_eq "$isolated_label" oc 'command label helper loads substitutions helper when sourced alone'
+
 printf 'ok\n'
