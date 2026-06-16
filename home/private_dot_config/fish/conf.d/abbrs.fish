@@ -126,6 +126,10 @@ abbr -a gwtrm "git worktree remove"
 abbr -a hw herdr_new_workspace
 abbr -a hwt herdr_wt_switch
 abbr -a hwtc "herdr_wt_switch --create"
+abbr -a hw. "herdr_new_workspace $DOTS" # see functions
+abbr -a hwct "herdr_new_workspace $MY_SRC_DIR/containers/main"
+abbr -a hwag "herdr_new_workspace $MY_SRC_DIR/.agents/main"
+abbr -a hwcp "herdr_new_workspace $MY_SRC_DIR/copr/main"
 abbr -a is intelli-shell
 abbr -a k kubectl
 abbr -a kctl kubectl
