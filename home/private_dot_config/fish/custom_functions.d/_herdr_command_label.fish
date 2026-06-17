@@ -28,8 +28,10 @@ function _herdr_command_label \
         switch $word
             case command builtin exec env sudo
                 continue
-            case nono nono-with-local-path nntd
+            case nono nono-with-local-path
                 set skip_nono_wrap true
+                continue
+            case nntd
                 continue
             case '*=*'
                 continue

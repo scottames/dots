@@ -35,7 +35,7 @@ function __herdr_dynamic_title_preexec \
         if not set -q __herdr_dynamic_title_restore_label
             set -g __herdr_dynamic_title_restore_label shell
             if set -q SHELL
-                set -g __herdr_dynamic_title_restore_label (path basename -- "$SHELL")
+                set -g __herdr_dynamic_title_restore_label (_herdr_command_label (string join ' ' --  (path basename -- "$SHELL")))
             end
         end
 
