@@ -39,7 +39,7 @@ usage = "3.5.0"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.27.2"
+"aqua:vercel-labs/agent-browser" = "0.27.3"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.43.0"
@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.175"
+"aqua:anthropics/claude-code" = "2.1.177"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.94.0"
@@ -131,13 +131,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:charmbracelet/gum" = "0.17.0"
 # kubernetes package manager
 #   https://github.com/helm/helm
-"aqua:helm/helm" = "4.2.0"
+"aqua:helm/helm" = "4.2.1"
 # agent multiplexer that lives in your terminal
 #   https://github.com/ogulcancelik/herdr
 "github:ogulcancelik/herdr" = "0.6.10"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.15.1"
+"github:modem-dev/hunk" = "v0.15.3"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -170,7 +170,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.113.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.17.4"
+"aqua:sst/opencode" = "1.17.6"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.17.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.57.0"
+"github:max-sixty/worktrunk" = "v0.58.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
