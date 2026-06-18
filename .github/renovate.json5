@@ -6,6 +6,9 @@
   ignorePaths: [
     '.dagger/go.mod',
   ],
+  gitIgnoredAuthors: [
+    '162828115+scottames-github-bot[bot]@users.noreply.github.com',
+  ],
   customManagers: [
     {
       customType: 'regex',
@@ -40,6 +43,11 @@
     },
   ],
   packageRules: [
+    {
+      matchManagers: ['mise'],
+      matchUpdateTypes: ['lockFileMaintenance'],
+      enabled: false,
+    },
     {
       matchFileNames: [
         'mise/**',
