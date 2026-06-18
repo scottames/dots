@@ -123,6 +123,7 @@ abbr -a guc gum_commit
 abbr -a gv "git log --pretty=format:'%s' | cut -d \" \" -f 1 | sort | uniq -c | sort -nr"
 abbr -a gwtls "git worktree list"
 abbr -a gwtrm "git worktree remove"
+abbr -a hdr herdr
 abbr -a hw herdr_new_workspace
 abbr -a hwt herdr_wt_switch
 abbr -a hwtc "herdr_wt_switch --create"
