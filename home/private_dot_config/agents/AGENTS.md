@@ -99,12 +99,13 @@ legacy layout.
   `<repo>/<branch_name>`. `<repo>/main` is durable Git infrastructure; never
   delete, replace, or repurpose it when cleaning up feature worktrees.
 - **Ordinary clone**: anything else is a standalone clone. Do not assume the
-  parent is a managed worktree root. Only create an external worktree if the task
-  needs one; prefer `<toplevel_parent>/<repo_name>-<branch_name>`.
+  parent is a managed worktree root. Only create an external worktree if the
+  task needs one; prefer `<toplevel_parent>/<repo_name>-<branch_name>`.
 
 For managed layouts, start from the default branch unless I request another
-base, e.g. `git worktree add -b <branch_name> <project_root>/<branch_name> main`.
-Worktrunk mirrors this with `{{ repo_path }}/../{{ branch | sanitize }}`.
+base, e.g.
+`git worktree add -b <branch_name> <project_root>/<branch_name> main`. Worktrunk
+mirrors this with `{{ repo_path }}/../{{ branch | sanitize }}`.
 
 Safety:
 
@@ -124,6 +125,12 @@ When cross-referencing between repositories owned by me (GitHub user:
 ### Coding Preferences
 
 - Always prefer concise and simple solutions
+- Prefer the smallest correct solution: understand the problem first, reuse
+  existing code before writing new code, use standard library/native platform
+  features before dependencies, and avoid unrequested abstractions. This does
+  not override required workflows, tests, security, validation, accessibility,
+  or explicit user requirements.
+- If a task needs sharper YAGNI/minimalism pressure, use the `ponytail` skill.
 - Keep the codebase very clean and organized
 - Avoid duplication of code whenever possible, which means checking for other
   areas of the codebase that might already have similar code and functionality

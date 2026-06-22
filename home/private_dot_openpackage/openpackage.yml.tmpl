@@ -1,33 +1,22 @@
 name: scta
 dependencies:
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/compound-engineering") }}
-- name: compound-engineering
-  base: {{ .home.src_github_dir }}/.agents/main/packages/compound-engineering
+{{- $packageRoot := joinPath .home.src_github_dir ".agents/main/packages" }}
+{{- $packageNames := list
+  "compound-engineering"
+  "global"
+  "graphite"
+  "herdr"
+  "ponytail"
+  "superpowers"
+  "mattpocock"
+  "worktrunk"
+}}
+{{- range $name := $packageNames }}
+{{- $packagePath := joinPath $packageRoot $name }}
+{{- if stat $packagePath }}
+- name: {{ $name }}
+  base: {{ $packagePath }}
 {{- end }}
-
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/global") }}
-- name: global
-  base: {{ .home.src_github_dir }}/.agents/main/packages/global
-{{- end }}
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/graphite") }}
-- name: graphite
-  base: {{ .home.src_github_dir }}/.agents/main/packages/graphite
-{{- end }}
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/herdr") }}
-- name: herdr
-  base: {{ .home.src_github_dir }}/.agents/main/packages/herdr
-{{- end }}
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/superpowers") }}
-- name: superpowers
-  base: {{ .home.src_github_dir }}/.agents/main/packages/superpowers
-{{- end }}
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/mattpocock") }}
-- name: mattpocock
-  base: {{ .home.src_github_dir }}/.agents/main/packages/mattpocock
-{{- end }}
-{{- if stat (joinPath .home.src_github_dir ".agents/main/packages/worktrunk") }}
-- name: worktrunk
-  base: {{ .home.src_github_dir }}/.agents/main/packages/worktrunk
 {{- end }}
 
 dev-dependencies: []
