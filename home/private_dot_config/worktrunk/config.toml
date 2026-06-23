@@ -10,5 +10,6 @@ thts = "command -v thts && thts init --no-agents --force"
 trunk = """
 test -f .trunk/trunk.yaml && trunk check
 """
+graphite_track = 'if [ "${GRAPHITE_ENABLED:-}" = true ]; then gt track; fi'
 
 [projects]
