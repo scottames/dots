@@ -177,13 +177,10 @@ function zw --description "Open a git worktree in a new Zellij tab"
         set agent_pane "pane command=\"$agent_cmd\""
     end
 
-    set -l status_pane ""
-    if test -f "$HOME/.config/zellij/plugins/zellij-status.wasm"
-        set status_pane "
+    set -l status_pane "
         pane size=1 borderless=true {
-            plugin location=\"zellij-status\"
+            plugin location=\"status-bar\"
         }"
-    end
 
     set -l layout_content "
 layout {

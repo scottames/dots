@@ -75,17 +75,6 @@
     type = "file"
     url = "https://gravatar.com/avatar/{{ .me.gravatar.id }}?s=2048"
 
-# renovate: datasource=github-releases depName=scottames/zellij-status
-{{ $zellijStatusVersion := "v0.4.0" -}}
-
-# built and installed locally for now
-
-[".config/zellij/plugins/zellij-status.wasm"]
-    type = "file"
-    url = "https://github.com/scottames/zellij-status/releases/download/{{ $zellijStatusVersion }}/zellij-status.wasm"
-    executable = false
-    refreshPeriod = "168h"
-
 # opencode-tree is pinned to a reviewed fork commit instead of installing the
 # upstream npm package by name. Bump this ref only after reviewing the fork diff.
 {{ $opencodeTreeRef := "ee2b80f172227bf0a2858cbc28beb8d97cd0754b" -}}
@@ -95,15 +84,6 @@
     url = "https://github.com/scottames/opencode-tree/archive/{{ $opencodeTreeRef }}.tar.gz"
     exact = true
     stripComponents = 1
-    refreshPeriod = "168h"
-
-# renovate: datasource=github-releases depName=b0o/zjstatus-hints
-{{ $zjstatusHintsVersion := "v0.1.4" -}}
-
-[".config/zellij/plugins/zjstatus-hints.wasm"]
-    type = "file"
-    url = "https://github.com/b0o/zjstatus-hints/releases/download/{{ $zjstatusHintsVersion }}/zjstatus-hints.wasm"
-    executable = false
     refreshPeriod = "168h"
 
 [".config/k9s/skins"]
@@ -247,11 +227,6 @@
 ["src/github.com/scottames/walls/main"]
     type = "git-repo"
     url = "git@github.com:scottames/walls.git"
-    refreshPeriod = "0"
-
-["src/github.com/scottames/zellij-status/main"]
-    type = "git-repo"
-    url = "git@github.com:scottames/zellij-status.git"
     refreshPeriod = "0"
 
 {{ end -}} # end: is-github-authed

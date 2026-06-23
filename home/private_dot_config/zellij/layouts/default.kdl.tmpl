@@ -1,18 +1,13 @@
-{{- $zellijStatusPlugin := joinPath .chezmoi.homeDir ".config/zellij/plugins/zellij-status.wasm" -}}
 layout {
     default_tab_template {
         children
-{{- if stat $zellijStatusPlugin }}
         pane size=1 borderless=true {
-            plugin location="zellij-status"
+            plugin location="status-bar"
         }
-{{- end }}
     }
     tab name="~"; children {
-{{- if stat $zellijStatusPlugin }}
         pane size=1 borderless=true {
-            plugin location="zellij-status"
+            plugin location="status-bar"
         }
-{{- end }}
     }
 }

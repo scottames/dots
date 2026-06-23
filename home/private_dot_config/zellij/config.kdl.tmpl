@@ -1,4 +1,3 @@
-{{- $zellijStatusPlugin := joinPath .chezmoi.homeDir ".config/zellij/plugins/zellij-status.wasm" -}}
 {{ if eq .chezmoi.os "darwin" -}}
 copy_command "pbcopy"
 {{- else if eq .desktop.login.type "wayland" -}}
@@ -21,12 +20,6 @@ ui {
         rounded_corners true
     }
 }
-
-{{- if stat $zellijStatusPlugin }}
-load_plugins {
-    zellij-status
-}
-{{- end }}
 
 keybinds clear-defaults=true {
     entersearch {
@@ -268,92 +261,6 @@ plugins {
     session-manager location="zellij:session-manager"
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
-
-{{- if stat $zellijStatusPlugin }}
-    zellij-status location="file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij-status.wasm" {
-        layout_mode "horizontal"
-
-        // Color scheme
-        // -- Catppuccin Mocha --
-        color_rosewater "#f5e0dc"
-        color_flamingo "#f2cdcd"
-        color_pink "#f5c2e7"
-        color_mauve "#cba6f7"
-        color_red "#f38ba8"
-        color_maroon "#eba0ac"
-        color_peach "#fab387"
-        color_yellow "#f9e2af"
-        color_green "#a6e3a1"
-        color_teal "#94e2d5"
-        color_sky "#89dceb"
-        color_sapphire "#74c7ec"
-        color_blue "#89b4fa"
-        color_lavender "#b4befe"
-        color_text "#cdd6f4"
-        color_subtext1 "#bac2de"
-        color_subtext0 "#a6adc8"
-        color_overlay2 "#9399b2"
-        color_overlay1 "#7f849c"
-        color_overlay0 "#6c7086"
-        color_surface2 "#585b70"
-        color_surface1 "#45475a"
-        color_surface0 "#313244"
-        color_base "#1e1e2e"
-        color_mantle "#181825"
-        color_crust "#11111b"
-
-        datetime_format   "%Y-%m-%d %H:%M"
-        datetime_timezone "America/Los_Angeles"
-
-        // Format
-        format_1_left   "#[bg=$base,fg=$overlay2]{mode}#[bg=$mantle]{tabs}"
-        format_2_right  "{notifications}#[bg=$mantle,fg=$base]#[bg=$base,fg=$subtext0] {session} #[bg=$base,fg=$overlay2]#[bg=$overlay2,fg=$mantle] {datetime} "
-        format_space  "#[bg=$mantle,fg=$overlay0]"
-        // hide status bar sections if overlap due to insufficient width
-        format_hide_on_overlength "true"
-        // left, right, center precedence
-        format_precedence "132"
-
-        mode_normal        "#[bg=$base,fg=$base]#[bg=$blue,fg=$base,bold] NORMAL #[bg=$base,fg=$blue]"
-        mode_locked        "#[bg=$base,fg=$base]#[bg=$red,fg=$base,bold] LOCKED #[bg=$base,fg=$red]"
-        mode_pane          "#[bg=$base,fg=$base]#[bg=$peach,fg=$base,bold] PANE #[bg=$base,fg=$peach]"
-        mode_rename_pane   "#[bg=$base,fg=$base]#[bg=$peach,fg=$peach,bold] RENAMEPANE #[bg=$base,fg=$peach]"
-        mode_tab           "#[bg=$base,fg=$base]#[bg=$green,fg=$base,bold] TAB #[bg=$base,fg=$green]"
-        mode_rename_tab    "#[bg=$base,fg=$base]#[bg=$green,fg=$base,bold] RENAMETAB #[bg=$base,fg=$green]"
-        mode_scroll        "#[bg=$base,fg=$base]#[bg=$peach,fg=$base,bold] SCROLL #[bg=$base,fg=$peach]"
-        mode_enter_search  "#[bg=$base,fg=$base]#[bg=$yellow,fg=$base,bold] ENT-SEARCH #[bg=$base,fg=$yellow]"
-        mode_search        "#[bg=$base,fg=$base]#[bg=$yellow,fg=$base,bold] SEARCH #[bg=$base,fg=$yellow]"
-        mode_resize        "#[bg=$base,fg=$base]#[bg=$teal,fg=$base,bold] RESIZE #[bg=$base,fg=$teal]"
-        mode_move          "#[bg=$base,fg=$base]#[bg=$teal,fg=$base,bold] MOVE #[bg=$base,fg=$teal]"
-        mode_session       "#[bg=$base,fg=$base]#[bg=$mauve,fg=$base,bold] SESSION #[bg=$base,fg=$mauve]"
-        mode_prompt        "#[bg=$base,fg=$base]#[bg=$red,fg=$peach,bold] PROMPT #[bg=$base,fg=$red]"
-
-        notification_enabled            "true"
-        notification_format             "#[bg=$peach,fg=$mantle]#[bg=$peach,fg=$mantle] {count} #[bg=$mantle,fg=$peach]"
-        notification_format_completed   "#[fg=$peach,bold]{icon}"
-        notification_format_in_progress "{icon}"
-        notification_format_tab         "{icon}"
-        notification_format_waiting     "#[fg=$peach,bold]{icon}"
-        notification_indicator_completed     ""
-        notification_indicator_in_progress   "󰔛"
-        notification_indicator_waiting       ""
-        notification_show_if_empty      "false"
-
-
-        tab_normal              "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
-        tab_normal_fullscreen   "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
-        tab_normal_sync         "#[bg=$base,fg=$mantle]#[bg=$base,fg=$overlay0] {index} #[bg=$base,fg=$overlay0,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$base]"
-        tab_active              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$green]"
-        tab_active_fullscreen   "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$green]"
-        tab_active_sync         "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base] {index} #[bg=$green,fg=$base,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}{notification}#[bg=$mantle,fg=$green]"
-        tab_rename              "#[bg=$green,fg=$mantle]#[bg=$green,fg=$base,bold] {index}  {name} #[bg=$mantle,fg=$green]"
-        tab_separator           "#[bg=$mantle,fg=$overlay0]"
-
-        tab_indicator_fullscreen "󰊓"
-        tab_indicator_sync       ""
-        tab_indicator_floating   "󰹙"
-    }
-{{- end }}
 }
 
 // vi: ft=kdl

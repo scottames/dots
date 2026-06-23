@@ -13,65 +13,24 @@
     "type": "command"
   },
 {{- $thtsStart := joinPath .chezmoi.homeDir ".claude/hooks/thts-session-start.sh" -}}
-{{- $thtsPrompt := joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" }}
+{{- $thtsPrompt := joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" -}}
+{{- $herdrAgentState := joinPath .chezmoi.homeDir ".claude/hooks/herdr-agent-state.sh" -}}
+{{- $sessionStart := list -}}
+{{- if stat $thtsStart -}}
+{{- $sessionStart = append $sessionStart (dict "hooks" (list (dict "command" $thtsStart "type" "command"))) -}}
+{{- end -}}
+{{- if stat $herdrAgentState -}}
+{{- $sessionStart = append $sessionStart (dict "hooks" (list (dict "command" (printf "bash '%s' session" $herdrAgentState) "timeout" 10 "type" "command")) "matcher" "*") -}}
+{{- end -}}
+{{- $userPromptSubmit := list -}}
+{{- if stat $thtsPrompt -}}
+{{- $userPromptSubmit = append $userPromptSubmit (dict "hooks" (list (dict "command" $thtsPrompt "type" "command"))) -}}
+{{- end }}
   "hooks": {
-    "SessionStart": [
-{{- if stat $thtsStart }}
-      {
-        "hooks": [
-          {
-            "command": "/var/home/scta/.claude/hooks/thts-session-start.sh",
-            "type": "command"
-          }
-        ]
-      }
-{{- end }}
-    ],
-    "UserPromptSubmit": [
-{{- if stat $thtsPrompt }}
-      {
-        "hooks": [
-          {
-            "command": "/var/home/scta/.claude/hooks/thts-prompt-check.sh",
-            "type": "command"
-          }
-        ]
-      }
-{{- end }}
-    ],
-    "Notification": [
-      {
-        "matcher": "permission_prompt|idle_prompt",
-        "hooks": [
-          {
-            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-status-notify waiting",
-            "type": "command"
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-status-notify completed",
-            "type": "command"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "command": "{{ .chezmoi.homeDir }}/.local/bin/zellij-status-notify completed",
-            "type": "command"
-          }
-        ]
-      }
-    ]
+    "SessionStart": {{ $sessionStart | toPrettyJson | trimSuffix "\n" | replace "\n" "\n    " }},
+    "UserPromptSubmit": {{ $userPromptSubmit | toPrettyJson | trimSuffix "\n" | replace "\n" "\n    " }}
   },
+  "model": "opus",
   "permissions": {
     "allow": [
       "Bash(/bin/ls:*)",
@@ -118,3 +77,4 @@
     "type": "command"
   }
 }
+{{- /* remove newline at end of file */ -}}

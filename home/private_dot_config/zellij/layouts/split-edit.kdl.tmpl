@@ -1,4 +1,3 @@
-{{- $zellijStatusPlugin := joinPath .chezmoi.homeDir ".config/zellij/plugins/zellij-status.wasm" -}}
 layout {
     tab {
         pane split_direction="vertical" {
@@ -9,10 +8,8 @@ layout {
             }
             pane command="nvim" start_suspended=true
         }
-{{- if stat $zellijStatusPlugin }}
         pane size=1 borderless=true {
-            plugin location="zellij-status"
+            plugin location="status-bar"
         }
-{{- end }}
     }
 }

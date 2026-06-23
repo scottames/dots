@@ -48,7 +48,15 @@ printf '%s\n' '#!/usr/bin/env bash' \
 chmod +x "$fakebin/jq"
 
 printf '%s\n' '#!/usr/bin/env bash' \
-    'printf "%s\n" "$*" >>"$ZW_TEST_ZELLIJ_LOG"' >"$fakebin/zellij"
+    'printf "%s\n" "$*" >>"$ZW_TEST_ZELLIJ_LOG"' \
+    'while [[ $# -gt 0 ]]; do' \
+    '  if [[ "$1" == "--layout" && $# -gt 1 ]]; then' \
+    '    printf "\n--- layout ---\n" >>"$ZW_TEST_ZELLIJ_LOG"' \
+    '    cat "$2" >>"$ZW_TEST_ZELLIJ_LOG"' \
+    '    break' \
+    '  fi' \
+    '  shift' \
+    'done' >"$fakebin/zellij"
 chmod +x "$fakebin/zellij"
 
 set -gx PATH "$fakebin" $PATH
@@ -87,5 +95,7 @@ set -l command_log (string trim -- (command cat "$log_file"))
 assert_contains "$command_log" "-c $feature_checkout" 'zw opens the selected worktree path'
 assert_contains "$command_log" '--name dots/feature-x' 'zw uses layout-aware slash-separated tab name'
 assert_not_contains "$command_log" '--name main/feature-x' 'zw does not label normal-layout tabs as main'
+assert_contains "$command_log" 'plugin location="status-bar"' 'zw generated layout uses built-in status bar'
+assert_not_contains "$command_log" 'zellij-status' 'zw generated layout does not use retired zellij-status plugin'
 
 printf 'ok\n'
