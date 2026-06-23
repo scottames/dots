@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.181"
+"aqua:anthropics/claude-code" = "2.1.183"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.95.0"
@@ -154,7 +154,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.14.11"
+"github:janosmiko/lfk" = "v0.14.12"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.17.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.59.0"
+"github:max-sixty/worktrunk" = "v0.60.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -232,8 +232,8 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:LuaLS/lua-language-server" = "3.18.2"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:astral-sh/ruff" = "0.15.17"
-"aqua:astral-sh/uv" = "0.11.21"
+"aqua:astral-sh/ruff" = "0.15.18"
+"aqua:astral-sh/uv" = "0.11.22"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.47.2"
 "aqua:dprint/dprint" = "0.54.0"
