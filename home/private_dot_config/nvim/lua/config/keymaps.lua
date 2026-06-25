@@ -48,6 +48,11 @@ map("n", "<C-s><C-a>", ":wa<CR>", { desc = "Write All" })
 -- Select all
 map("n", "<C-a><C-a>", "gg<S-v>G")
 
+-- Find repo-related thts files without the generated searchable/ tree.
+map("n", "<leader>fh", function()
+  require("util.thoughts_picker").open()
+end, { desc = "Find Thoughts" })
+
 -- Yank all
 map("n", "<leader>by", "<cmd>%y+<CR>", { noremap = true, silent = true, desc = "Yank Buffer" })
 map("n", "<leader>bY", function()
