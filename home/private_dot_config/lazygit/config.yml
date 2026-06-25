@@ -7,3 +7,268 @@ git:
     - colorArg: always
       pager: delta --dark --paging=never
   autoFetch: false
+customCommands:
+  - key:
+      - "<alt-g>"
+      - "X"
+    description: Graphite
+    # Mental model:
+    # - Stage/select hunks in lazygit first.
+    # - Use Graphite commands for branch/commit mutation
+    #   so stacks restack correctly.
+    # - Use git/lazygit for inspection + staging;
+    #   use gt for stacked commits, restacks, submits, merges.
+    #
+    # Daily edit loop:
+    # 1. Stage changes in lazygit.
+    # 2. Alt-g n  -> gt modify -c -m ... # new commit on current branch
+    #    Alt-g v  -> gt modify           # amend current branch commit + restack
+    #    Alt-g V  -> gt modify --into    # amend a downstack branch
+    # 3. Alt-g l  -> gt log short        # inspect stack shape
+    # 4. Alt-g u  -> gt submit --stack   # create/update PR stack
+    #
+    # Stack shaping:
+    #    Alt-g c  -> gt create           # new branch on top of current branch
+    #    Alt-g C  -> gt create --insert  # insert new branch
+    #    Alt-g a  -> gt absorb           # absorb staged changes
+    #    Alt-g o  -> gt move             # move branch in stack
+    #    Alt-g O  -> gt reorder          # reorder stack
+    #    Alt-g F  -> gt fold             # fold branch into parent
+    #    Alt-g Z  -> gt split            # split current branch
+    #    Alt-g -  -> gt squash           # squash current branch commits
+    #
+    # Navigation / inspection:
+    #    Alt-g i  -> gt info
+    #    Alt-g l  -> gt log short
+    #    Alt-g L  -> gt log
+    #    Alt-g [  -> gt down    # parent/downstack
+    #    Alt-g ]  -> gt up      # child/upstack
+    #    Alt-g b  -> gt bottom
+    #    Alt-g t  -> gt top
+    #    Alt-g x  -> gt checkout --stack
+    #
+    # Submit / merge:
+    #    Alt-g d  -> gt submit --stack --dry-run  # check what would happen
+    #    Alt-g e  -> gt submit --stack --cli --edit
+    #    Alt-g u  -> gt submit --stack
+    #    Alt-g U  -> gt submit --stack --update-only
+    #    Alt-g m  -> gt merge --dry-run
+    #    Alt-g M  -> gt merge --confirm
+    #    Alt-g w  -> gt submit --stack --merge-when-ready --confirm
+    #
+    # Browser escape hatches:
+    #    Alt-g p  -> gt pr
+    #    Alt-g P  -> gt pr --stack
+    #
+    # Recovery:
+    #    Alt-g r  -> gt restack
+    #    Alt-g s  -> gt sync
+    #    Alt-g z  -> gt undo
+    #    Alt-g q  -> gt abort
+    #    Alt-g Q  -> gt continue
+    #
+    # Avoid during stack work:
+    # - Prefer gt modify -c over git commit.
+    # - Prefer gt modify over git commit --amend.
+    # - Prefer gt restack/sync over manual rebase
+    #   unless intentionally going low-level.
+    commandMenu:
+      - key: a
+        context: global
+        description: gt absorb staged changes
+        command: gt absorb
+        output: terminal
+      - key: b
+        context: global
+        description: gt bottom
+        command: gt bottom
+        output: log
+      - key: c
+        context: global
+        description: gt create
+        command: gt create
+        output: terminal
+        loadingText: Creating Graphite branch
+      - key: C
+        context: global
+        description: gt create --insert
+        command: gt create --insert
+        output: terminal
+        loadingText: Inserting Graphite branch
+      - key: d
+        context: global
+        description: gt submit stack (dry-run)
+        command: gt submit --stack --dry-run
+        output: terminal
+      - key: e
+        context: global
+        description: gt submit --stack --cli --edit
+        command: gt submit --stack --cli --edit
+        output: terminal
+      - key: F
+        context: global
+        description: gt fold
+        command: gt fold
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: i
+        context: global
+        description: gt info
+        command: gt info
+        output: popup
+        outputTitle: Graphite info
+      - key: l
+        context: global
+        description: gt log short
+        command: gt log short
+        output: popup
+        outputTitle: Graphite stack
+      - key: L
+        context: global
+        description: gt log
+        command: gt log
+        output: popup
+        outputTitle: Graphite stack
+      - key: m
+        context: global
+        description: gt merge (dry-run)
+        command: gt merge --dry-run
+        output: terminal
+      - key: M
+        context: global
+        description: gt merge (confirm)
+        command: gt merge --confirm
+        output: terminal
+      - key: n
+        context: global
+        description: gt modify -c -m
+        command: "gt modify -c -m {{.Form.Message | quote}}"
+        prompts:
+          - type: input
+            title: Commit message
+            key: Message
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: N
+        context: global
+        description: gt modify -c
+        command: gt modify -c
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: o
+        context: global
+        description: gt move
+        command: gt move
+        output: terminal
+      - key: O
+        context: global
+        description: gt reorder
+        command: gt reorder
+        output: terminal
+      - key: p
+        context: global
+        description: gt pr (open in browser)
+        command: gt pr
+        output: none
+      - key: P
+        context: global
+        description: gt pr --stack (open stack in browser)
+        command: gt pr --stack
+        output: none
+      - key: q
+        context: global
+        description: gt abort
+        command: gt abort
+        output: terminal
+      - key: Q
+        context: global
+        description: gt continue
+        command: gt continue
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: r
+        context: global
+        description: gt restack
+        command: gt restack
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: s
+        context: global
+        description: gt sync
+        command: gt sync
+        output: terminal
+      - key: t
+        context: global
+        description: gt top
+        command: gt top
+        output: log
+      - key: u
+        context: global
+        description: gt submit --stack
+        command: gt submit --stack
+        output: terminal
+      - key: U
+        context: global
+        description: gt submit --stack --update-only
+        command: gt submit --stack --update-only
+        output: terminal
+      - key: w
+        context: global
+        description: submit stack merge-when-ready
+        command: gt submit --stack --merge-when-ready --confirm
+        output: terminal
+      - key: v
+        context: global
+        description: gt modify (amend)
+        command: gt modify
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: V
+        context: global
+        description: gt modify --into
+        command: gt modify --into
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: x
+        context: global
+        description: gt checkout --stack
+        command: gt checkout --stack
+        output: terminal
+      - key: z
+        context: global
+        description: gt undo
+        command: gt undo
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: Z
+        context: global
+        description: gt split
+        command: gt split
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: "-"
+        context: global
+        description: gt squash
+        command: gt squash
+        output: terminal
+        after:
+          checkForConflicts: true
+      - key: "["
+        context: global
+        description: gt down
+        command: gt down
+        output: log
+      - key: "]"
+        context: global
+        description: gt up
+        command: gt up
+        output: log
