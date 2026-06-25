@@ -9,8 +9,10 @@ function print_warn
 end
 
 function fix_npm_permissions
-    sudo chown -R $USER:$USER "$HOME/.npm"
-    sudo chown -R $USER:$USER "$HOME/.npm-global/"
+    set -l _user "{{ .me.user }}"
+    print_info "chown npm dirs to: $_user"
+    sudo chown -R $_user:$_user "$HOME/.npm"
+    sudo chown -R $_user:$_user "$HOME/.npm-global/"
 end
 
 set -l host_exec_commands \
@@ -28,7 +30,6 @@ set -l host_exec_commands \
     transactional-update \
     ujust \
     ydotool \
-    xclip \
     xdg-open
 
 function create_host_exec_symlinks
