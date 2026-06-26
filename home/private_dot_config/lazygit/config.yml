@@ -197,6 +197,11 @@ customCommands:
         output: terminal
         after:
           checkForConflicts: true
+      - key: R
+        context: global
+        description: tuicr review current change
+        command: tuicr-current auto
+        output: terminal
       - key: s
         context: global
         description: gt sync

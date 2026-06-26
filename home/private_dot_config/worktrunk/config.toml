@@ -4,6 +4,16 @@
 worktree-path = "{{ repo_path }}/../{{ branch | sanitize }}"
 skip-shell-integration-prompt = true
 
+[list.custom-columns.Task]
+template = "{{ vars.task }}"
+width = 32
+priority = 2
+
+[list.custom-columns.Agent]
+template = "{{ vars.agent }}"
+width = 10
+priority = 3
+
 [post-start]
 copy_ignored = "wt step copy-ignored"
 thts = "command -v thts && thts init --no-agents --force"
@@ -13,3 +23,43 @@ test -f .trunk/trunk.yaml && trunk check
 graphite_track = 'if [ "${GRAPHITE_ENABLED:-}" = true ]; then gt track; fi'
 
 [projects]
+
+[aliases]
+pane = '''
+wt \
+  --config-set 'list.columns=["branch","status","ci","age","message"]' \
+  list --full --no-progressive
+'''
+pane-with-task = '''
+wt \
+  --config-set 'list.columns=["branch","status","ci","Task","Agent","age"]' \
+  list --full --no-progressive
+'''
+# no upstream
+pane-fast = '''
+wt \
+  --config-set 'list.columns=["branch","status","working-diff","ahead-behind","upstream","age"]' \
+  list --no-progressive
+'''
+pane-watch = '''
+trap 'printf "\033[?25h"' EXIT INT TERM
+printf '\033[?25l\033[2J'
+
+while :; do
+  printf '\033[H'
+  wt pane || true
+  printf '\033[J'
+  sleep 10
+done
+'''
+pane-watch-with-task = '''
+trap 'printf "\033[?25h"' EXIT INT TERM
+printf '\033[?25l\033[2J'
+
+while :; do
+  printf '\033[H'
+  wt pane || true
+  printf '\033[J'
+  sleep 10
+done
+'''

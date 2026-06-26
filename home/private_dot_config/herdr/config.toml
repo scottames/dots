@@ -59,12 +59,25 @@ navigate_pane_up = "k"
 navigate_pane_right = "l"        # right arrow always focuses the pane to the right
 
 [[keys.command]]
-key = ["prefix+alt+g", "ctrl+alt+g"]
+key = ["ctrl+alt+g"]
 # type = "shell" runs detached in the background.
 # type = "pane" opens a temporary pane and closes it when the command exits.
 type = "pane"
 command = "lazygit"
 description = "run lazygit"
+
+[[keys.command]]
+key = ["prefix+alt+g"]
+type = "shell"
+# command = "fish -lc 'herdr_tab_git'"
+command = "HERDR_ENV=1 fish -lc 'herdr_tab_git'"
+description = "open git tab"
+
+[[keys.command]]
+key = ["prefix+alt+r", "ctrl+alt+r"]
+type = "pane"
+command = "tuicr-current auto"
+description = "review current change with tuicr"
 
 [[keys.command]]
 key = "prefix+alt+w"

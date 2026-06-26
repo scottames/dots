@@ -53,6 +53,7 @@
   rebasem = "!f(){ git rebase -i --autosquash origin/$(git main-branch) --no-verify $@;}; f"
 	save = "!git add -A; git commit ."
   show-fzf = "!f(){ git show $(git log --pretty=oneline | cut -c1-7 | fzf -m --preview 'git diff --color=always {} | delta');}; f"
+  stack-watch = "!f() { interval=${1:-3}; trap 'printf \"\\033[?25h\"' EXIT INT TERM; printf '\\033[?25l\\033[2J'; while :; do printf '\\033[H'; if [ \"${GRAPHITE_ENABLED:-}\" = \"true\" ] && command -v gt >/dev/null 2>&1; then GIT_PAGER=cat PAGER=cat BAT_PAGER=cat gt log short 2>&1 || true; else GIT_PAGER=cat PAGER=cat BAT_PAGER=cat git --no-pager log --oneline --decorate --graph -20 2>&1 || true; fi; printf '\\033[J'; sleep \"$interval\"; done; }; f"
 	up = push -u origin master
   update = "!f() { git pull --rebase origin $(git main-branch) $@;}; f" # see also update
   upm = "!f(){ git pull --rebase --autostash origin $(git main-branch) $@;}; f"
