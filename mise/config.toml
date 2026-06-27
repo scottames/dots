@@ -28,7 +28,7 @@ package_manager = "bun"
 
 bun = "1.3.14"
 go = "1.26.4"
-node = "24.17.0"
+node = "24.18.0"
 rust = "1.96.0"
 usage = "3.5.2"
 
@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.185"
+"aqua:anthropics/claude-code" = "2.1.186"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.95.0"
@@ -142,7 +142,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
 #   https://github.com/casey/just
-"aqua:casey/just" = "1.53.0"
+"aqua:casey/just" = "1.54.0"
 # kubernetes tui
 #   https://github.com/derailed/k9s
 "aqua:derailed/k9s" = "0.51.0"
@@ -154,7 +154,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.14.13"
+"github:janosmiko/lfk" = "v0.14.15"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -199,7 +199,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:stern/stern" = "1.34.0"
 # a modern Linux distribution built for Kubernetes
 #  https://github.com/siderolabs/talos
-"aqua:siderolabs/talos" = "1.13.4"
+"aqua:siderolabs/talos" = "1.13.5"
 # trunk.io
 #   https://github.com/trunk-io/launcher
 "npm:@trunkio/launcher" = "1.3.4"
@@ -250,12 +250,12 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:rhysd/actionlint" = "v1.7.12"
 "aqua:rust-lang/rust-analyzer" = "2026-02-16"
 "aqua:segmentio/golines" = "0.13.0"
-"aqua:snyk/cli" = "1.1305.1"
+"aqua:snyk/cli" = "1.1305.2"
 "aqua:tamasfe/taplo" = "0.10.0"
 "aqua:terraform-linters/tflint" = "0.63.1"
 "aqua:tree-sitter/tree-sitter" = "0.26.9"
 "go:golang.org/x/tools/gopls" = "0.22.0"
-"npm:@commitlint/cli" = "21.0.2"
+"npm:@commitlint/cli" = "21.1.0"
 "npm:@fsouza/prettierd" = "0.28.0"
 "npm:bash-language-server" = "5.6.0"
 "npm:cspell" = "10.0.1"
