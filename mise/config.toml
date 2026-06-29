@@ -39,7 +39,7 @@ usage = "3.5.3"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.29.0"
+"aqua:vercel-labs/agent-browser" = "0.30.1"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.44.0"
@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.187"
+"aqua:anthropics/claude-code" = "2.1.191"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.95.0"
@@ -120,7 +120,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:suzuki-shunsuke/ghtkn" = "0.2.6"
 # github tui
 #  https://github.com/kitlangton/ghui
-"github:kitlangton/ghui" = "0.7.1"
+"github:kitlangton/ghui" = "v0.8.0"
 # render markdown on the CLI, with pizzazz!
 #   https://github.com/charmbracelet/glow
 "aqua:charmbracelet/glow" = "2.1.2"
@@ -154,7 +154,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.14.15"
+"github:janosmiko/lfk" = "v0.14.18"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -170,7 +170,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.113.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.17.9"
+"aqua:sst/opencode" = "1.17.11"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -263,11 +263,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
 "npm:markdownlint-cli" = "0.49.0"
-"npm:prettier" = "3.8.4"
+"npm:prettier" = "3.8.5"
 "npm:pyright" = "1.1.411"
 "npm:sql-formatter" = "15.8.2"
 "npm:sql-language-server" = "1.7.1"
-"npm:stylelint" = "17.13.0"
+"npm:stylelint" = "17.14.0"
 "npm:textlint" = "15.7.1"
 "pipx:ansible-lint" = "26.4.0"
 "pipx:beautysh" = "6.4.3"
@@ -276,6 +276,6 @@ amazon-ecr-credential-helper = "0.12.0"
 "pipx:mypy" = "2.1.0"
 "pipx:pyproject-flake8" = "7.0.0"
 "pipx:ruff-lsp" = "0.0.62"
-"pipx:semgrep" = "1.167.0"
+"pipx:semgrep" = "1.168.0"
 "pipx:sqlfluff" = "4.2.2"
 "pipx:yamllint" = "1.38.0"
