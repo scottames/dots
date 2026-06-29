@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+{{ if eq .chezmoi.os "linux" -}}
+
+# Keep in sync with .chezmoiexternal.toml.tmpl so version bumps rebuild.
+yubikey_touch_detector_version="1.13.0"
+src_dir="${HOME}/.local/share/yubikey-touch-detector-src"
+bin_dir="${HOME}/.local/bin"
+bin_path="${bin_dir}/yubikey-touch-detector"
+
+info() { printf '\033[0;35m%s\033[0m\n' "${1}"; }
+warn() { printf '\033[0;33m%s\033[0m\n' "${1}" >&2; }
+skip() { warn "${1}"; exit 0; }
+
+command -v go >/dev/null 2>&1 || skip "skipping yubikey-touch-detector ${yubikey_touch_detector_version}: go is not installed"
+command -v pkg-config >/dev/null 2>&1 || skip "skipping yubikey-touch-detector ${yubikey_touch_detector_version}: pkg-config is not installed"
+pkg-config --exists gpgme || skip "skipping yubikey-touch-detector ${yubikey_touch_detector_version}: gpgme development files are missing. On Fedora, install gpgme-devel."
+
+[[ -d "${src_dir}" ]] || skip "skipping yubikey-touch-detector ${yubikey_touch_detector_version}: source is missing at ${src_dir}; run chezmoi apply again after externals are fetched"
+
+mkdir -p "${bin_dir}"
+info "building yubikey-touch-detector ${yubikey_touch_detector_version}"
+go build -C "${src_dir}" -mod=vendor -o "${bin_path}" .
+
+if [[ -n "${XDG_RUNTIME_DIR:-}" ]] && command -v systemctl >/dev/null 2>&1; then
+  systemctl --user daemon-reload || warn "failed to reload user systemd units"
+  systemctl --user enable --now yubikey-touch-detector.service || warn "failed to enable/start yubikey-touch-detector.service"
+fi
+
+{{ end -}}

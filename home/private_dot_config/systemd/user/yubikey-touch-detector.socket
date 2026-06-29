@@ -1,0 +1,6 @@
+[Socket]
+ListenStream=%t/yubikey-touch-detector.socket
+RemoveOnStop=true
+
+[Install]
+WantedBy=sockets.target

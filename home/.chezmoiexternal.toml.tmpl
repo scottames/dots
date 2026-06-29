@@ -66,6 +66,16 @@
     stripComponents = 1
     refreshPeriod = "168h"
 
+# renovate: datasource=github-releases depName=max-baz/yubikey-touch-detector
+{{ $yubikeyTouchDetectorVersion := "1.13.0" -}}
+
+[".local/share/yubikey-touch-detector-src"]
+    type = "archive"
+    url = "https://github.com/max-baz/yubikey-touch-detector/releases/download/{{ $yubikeyTouchDetectorVersion }}/yubikey-touch-detector-{{ $yubikeyTouchDetectorVersion }}-vendored.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
 {{ end -}} # linux
 
 #  ╭──────────────────────────────────────────────────────────╮

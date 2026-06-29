@@ -82,6 +82,15 @@ src/github.com/paperwm*
 .local/share/
 {{ end }}
 
+{{ if not (eq .chezmoi.os "linux") }}
+.chezmoiscripts/run_onchange_after_60_yubikey-touch-detector.sh
+.config/systemd/user/default.target.wants/yubikey-touch-detector.service
+.config/systemd/user/sockets.target.wants/yubikey-touch-detector.socket
+.config/systemd/user/yubikey-touch-detector.service
+.config/systemd/user/yubikey-touch-detector.socket
+.config/yubikey-touch-detector/
+{{ end }}
+
 {{ if not (eq (env "CHEZMOI_OP") "true") }}
 .tkns
 {{ end }}
