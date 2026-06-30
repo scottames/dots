@@ -39,7 +39,7 @@ usage = "3.5.3"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.30.1"
+"aqua:vercel-labs/agent-browser" = "0.31.0"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.44.0"
@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.191"
+"aqua:anthropics/claude-code" = "2.1.193"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.95.0"
@@ -117,7 +117,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:thiagokokada/gh-gfm-preview" = "v1.2.1"
 # A CLI to create GitHub App User Access Token for secure local development
 #  https://github.com/suzuki-shunsuke/ghtkn
-"aqua:suzuki-shunsuke/ghtkn" = "0.2.6"
+"aqua:suzuki-shunsuke/ghtkn" = "0.2.7"
 # github tui
 #  https://github.com/kitlangton/ghui
 "github:kitlangton/ghui" = "v0.8.0"
@@ -190,7 +190,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:BurntSushi/ripgrep" = "15.1.0"
 # Spacelift client and CLI
 #   https://github.com/spacelift-io/spacectl
-"aqua:spacelift-io/spacectl" = "1.22.0"
+"aqua:spacelift-io/spacectl" = "1.23.0"
 # minimal, blazing-fast, and infinitely customizable prompt for any shell!
 #   https://github.com/starship/starship
 "aqua:starship/starship" = "1.25.1"
@@ -232,7 +232,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:LuaLS/lua-language-server" = "3.18.2"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:astral-sh/ruff" = "0.15.19"
+"aqua:astral-sh/ruff" = "0.15.20"
 "aqua:astral-sh/uv" = "0.11.24"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.47.2"
@@ -263,7 +263,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
 "npm:markdownlint-cli" = "0.49.0"
-"npm:prettier" = "3.8.5"
+"npm:prettier" = "3.9.0"
 "npm:pyright" = "1.1.411"
 "npm:sql-formatter" = "15.8.2"
 "npm:sql-language-server" = "1.7.1"

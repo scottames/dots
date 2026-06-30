@@ -153,26 +153,26 @@ checksum = "sha256:b6ecb3bf2587d8068a50c855671b2b693acaf172fcddb6542b6f80db1e38b
 url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-x86_64-pc-windows-msvc.tar.gz"
 
 [[tools."aqua:anthropics/claude-code"]]
-version = "2.1.191"
+version = "2.1.193"
 backend = "aqua:anthropics/claude-code"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-arm64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.191/linux-arm64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.193/linux-arm64/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-arm64-musl"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.191/linux-arm64-musl/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.193/linux-arm64-musl/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-x64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.191/linux-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.193/linux-x64/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-x64-musl"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.191/linux-x64-musl/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.193/linux-x64-musl/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.macos-arm64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.191/darwin-arm64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.193/darwin-arm64/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.macos-x64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.191/darwin-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.193/darwin-x64/claude"
 
 [[tools."aqua:antonmedv/fx"]]
 version = "39.2.0"
@@ -295,42 +295,42 @@ checksum = "sha256:90b80c3126f2db07767ba8fecf23b8878b5ef68db08ff445ba4bab827dd4e
 url = "https://github.com/ast-grep/ast-grep/releases/download/0.44.0/app-x86_64-pc-windows-msvc.zip"
 
 [[tools."aqua:astral-sh/ruff"]]
-version = "0.15.19"
+version = "0.15.20"
 backend = "aqua:astral-sh/ruff"
 
 [tools."aqua:astral-sh/ruff"."platforms.linux-arm64"]
-checksum = "sha256:d6945815c5b2b32d01483e1d59ac7d2e744df0a20272680b2290c3e5e4ce5020"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:2e06ebae862dce74eb7b084081621f2d4183e18e60cb074e7906f862869fa1b6"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-aarch64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/ruff"."platforms.linux-arm64-musl"]
-checksum = "sha256:d6945815c5b2b32d01483e1d59ac7d2e744df0a20272680b2290c3e5e4ce5020"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:2e06ebae862dce74eb7b084081621f2d4183e18e60cb074e7906f862869fa1b6"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-aarch64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/ruff"."platforms.linux-x64"]
-checksum = "sha256:682158b99b14ce60b62e7b4585100a11ebd5716355efe4048760690eda21fb99"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:0715560b2402024b529a4ffd6ea7d3814a090eb255a6216259fb192823be3ad8"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-x86_64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/ruff"."platforms.linux-x64-musl"]
-checksum = "sha256:682158b99b14ce60b62e7b4585100a11ebd5716355efe4048760690eda21fb99"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:0715560b2402024b529a4ffd6ea7d3814a090eb255a6216259fb192823be3ad8"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-x86_64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/ruff"."platforms.macos-arm64"]
-checksum = "sha256:c7253342f2ffbe2a0eaadaacd3424c3a24331b0307e57cc54031bc7ccd35d83a"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:cb41c48690c113dc08470e64103ce65ca15249c6ce3495d3ac792b329a83e8c1"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-aarch64-apple-darwin.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/ruff"."platforms.macos-x64"]
-checksum = "sha256:aaf50afd2a76be2674b8dd24b305e42a33a99269c2c43e334f6a940b29ca291c"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:36b91219b3aae00464e2a4fa361766abd47d0402ac88fbe6da5de44285738386"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-x86_64-apple-darwin.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/ruff"."platforms.windows-x64"]
-checksum = "sha256:e996f09c5aa5b00675318f0cdb59628633a202219d9c929736c5dcaaad2a6c4d"
-url = "https://github.com/astral-sh/ruff/releases/download/0.15.19/ruff-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:835fdea5b8d4e13d2cc49439006aa1fbe9b67a89371f03871fc7f70a0cf10516"
+url = "https://github.com/astral-sh/ruff/releases/download/0.15.20/ruff-x86_64-pc-windows-msvc.zip"
 provenance = "github-attestations"
 
 [[tools."aqua:astral-sh/uv"]]
@@ -1814,36 +1814,36 @@ checksum = "sha256:dc107f5cce9e65c57ca512531dda938b6a212bca169b1971ddbc84e97c743
 url = "https://github.com/snyk/cli/releases/download/v1.1305.2/snyk-win.exe"
 
 [[tools."aqua:spacelift-io/spacectl"]]
-version = "1.22.0"
+version = "1.23.0"
 backend = "aqua:spacelift-io/spacectl"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-arm64"]
-checksum = "sha256:8651fa49a5b7d1e279f97ac1e38122c04776f761c1119faf80dd3d1f9cc76855"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_linux_arm64.zip"
+checksum = "sha256:4538bd519421160f47dee072359b9c285c79dff2e3d8b524eb5516eee122b13f"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_linux_arm64.zip"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-arm64-musl"]
-checksum = "sha256:8651fa49a5b7d1e279f97ac1e38122c04776f761c1119faf80dd3d1f9cc76855"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_linux_arm64.zip"
+checksum = "sha256:4538bd519421160f47dee072359b9c285c79dff2e3d8b524eb5516eee122b13f"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_linux_arm64.zip"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-x64"]
-checksum = "sha256:4d4cb036be8841d7051ca93dea3498844613a1b145b36e83a54b7fc4a83872dd"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_linux_amd64.zip"
+checksum = "sha256:985b3f090264e1b73d56ab85d93580de05743080e14542f1881b2cca4adca2c2"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_linux_amd64.zip"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-x64-musl"]
-checksum = "sha256:4d4cb036be8841d7051ca93dea3498844613a1b145b36e83a54b7fc4a83872dd"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_linux_amd64.zip"
+checksum = "sha256:985b3f090264e1b73d56ab85d93580de05743080e14542f1881b2cca4adca2c2"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_linux_amd64.zip"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.macos-arm64"]
-checksum = "sha256:1ed0fcf34f545a60705dfd68b95957ec35591d3e64d14c39f2b2c11e3502da2b"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_darwin_arm64.zip"
+checksum = "sha256:b43f8dc32562160f91a969039df0460ad50eb228cceae535f55d9cea3d638a6d"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_darwin_arm64.zip"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.macos-x64"]
-checksum = "sha256:115eeabbf851599574899750aa8bc93e18f5b00221b305c9099994bc9aa3cfe0"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_darwin_amd64.zip"
+checksum = "sha256:4f5b7b26a502604e8b3285fe05685de5e828443ddc030a4b4bed7877edb22909"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_darwin_amd64.zip"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.windows-x64"]
-checksum = "sha256:168caa4b94a29fe2325aac489a27bc8d021d1a6de03992b3ce87b4b16d1d84c6"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.22.0/spacectl_1.22.0_windows_amd64.zip"
+checksum = "sha256:3ab382d9d14fe675b98b9fa54996925afc8fd5726a159541c328178f748b0bc4"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.23.0/spacectl_1.23.0_windows_amd64.zip"
 
 [[tools."aqua:sst/opencode"]]
 version = "1.17.11"
@@ -1981,42 +1981,42 @@ checksum = "sha256:22ed0c8eb0c15cbd2651c944517f6c06aa6ffa11467be55f7673f7242f1ba
 url = "https://github.com/stern/stern/releases/download/v1.34.0/stern_1.34.0_windows_amd64.tar.gz"
 
 [[tools."aqua:suzuki-shunsuke/ghtkn"]]
-version = "0.2.6"
+version = "0.2.7"
 backend = "aqua:suzuki-shunsuke/ghtkn"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64"]
-checksum = "sha256:5c4202bc7d5a8837bef881ee9f29841828e0e81df1c2e6b44addb27662eb7c9d"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_linux_arm64.tar.gz"
+checksum = "sha256:cfa41d024d450fa5e075d7a63581cb486fb5a8115bd08dcce51713112b599064"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_linux_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64-musl"]
-checksum = "sha256:5c4202bc7d5a8837bef881ee9f29841828e0e81df1c2e6b44addb27662eb7c9d"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_linux_arm64.tar.gz"
+checksum = "sha256:cfa41d024d450fa5e075d7a63581cb486fb5a8115bd08dcce51713112b599064"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_linux_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64"]
-checksum = "sha256:08a4d4d50de5cebeaa7c9594a91123aa90b73e0838886ee27ffdb5e00aa8eeb2"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_linux_amd64.tar.gz"
+checksum = "sha256:aecec0f65e946b11f4ac61a2745845d1b658b989bf2d17da90968e51adf3f646"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_linux_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl"]
-checksum = "sha256:08a4d4d50de5cebeaa7c9594a91123aa90b73e0838886ee27ffdb5e00aa8eeb2"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_linux_amd64.tar.gz"
+checksum = "sha256:aecec0f65e946b11f4ac61a2745845d1b658b989bf2d17da90968e51adf3f646"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_linux_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-arm64"]
-checksum = "sha256:e8a6780b6dbd4aeb296fdd077909c10a8506cee3211bfeb544342d4c404308dd"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_darwin_arm64.tar.gz"
+checksum = "sha256:03dbe1264bf559e7f4d2f5fb035562c0fc4483200906f0d656017d53ee26f0df"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_darwin_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64"]
-checksum = "sha256:24f2f621ed8a85c89e8167f3084c48e4c231f34ed2b26e750c660848f3cd06d0"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_darwin_amd64.tar.gz"
+checksum = "sha256:6378cf136fba4a573bec24bd0e2a255f0da58b66623bd5ab631e80c3b89087e7"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_darwin_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64"]
-checksum = "sha256:82761a99b97336a671fff16da4950b4d76e969d386fbc5237361eb00d504cb3f"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.6/ghtkn_windows_amd64.zip"
+checksum = "sha256:3bec3b91a981222725d9643432631eff0191f7fe7d97c22bfac368688b7ec92d"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.7/ghtkn_windows_amd64.zip"
 provenance = "github-attestations"
 
 [[tools."aqua:suzuki-shunsuke/pinact"]]
@@ -2226,36 +2226,36 @@ checksum = "sha256:ebc29455dc9106e8d2d980708b45bd3120e44c7d5e6a06787ff307faaa068
 url = "https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi_2.70.5_windows_amd64.zip"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
-version = "0.30.1"
+version = "0.31.0"
 backend = "aqua:vercel-labs/agent-browser"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64"]
-checksum = "sha256:83ae7f3025f17e6b4c386e5af9d77e8d0e6ed68818832c056cc6ac292cd7ef6d"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-linux-arm64"
+checksum = "sha256:bb2827dede43536e402cba8bc74249cdaa5af9aee291d185083c7bbdb7d62b14"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-linux-arm64"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:f5c1377ae67b34dbac965efa65c81d7a7c604a11cf7a9014f892745a5098ed60"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-linux-musl-arm64"
+checksum = "sha256:0506cb206c39c75b746d16571a75dc2752cd9968e154dcb8a0e203614552d392"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-linux-musl-arm64"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64"]
-checksum = "sha256:371063744c08ccb84603f85796e8877125f9e3e219cd90511b3f47ced91f2363"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-linux-musl-x64"
+checksum = "sha256:8d355ca93f95d3bae47aad6509433ab2312384fee81eb39a903ad5fade38f4e8"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-linux-musl-x64"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
-checksum = "sha256:371063744c08ccb84603f85796e8877125f9e3e219cd90511b3f47ced91f2363"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-linux-musl-x64"
+checksum = "sha256:8d355ca93f95d3bae47aad6509433ab2312384fee81eb39a903ad5fade38f4e8"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-linux-musl-x64"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-arm64"]
-checksum = "sha256:ff12b6ed844ab9ef85519ceae75ee56df39f8c6f04480180b67ffd1fdb92aea3"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-darwin-arm64"
+checksum = "sha256:21da37d1e3707786ca5ceb04455bdeccaf93fa9077e3983a6f4dcce52817c4d8"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-darwin-arm64"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64"]
-checksum = "sha256:6c4bf53b977f5fbdd74a91a0a8b45c5640a740f531c37fd923863d6637c08ac6"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-darwin-x64"
+checksum = "sha256:a53b1156dd36f1a11e324a1aa45636f481b09aa690ea774d10776446dc758bfa"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-darwin-x64"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64"]
-checksum = "sha256:c233f1a39dff69f785ed304baef5a045129c19fdae7e68811f9e36e71d511003"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.30.1/agent-browser-win32-x64.exe"
+checksum = "sha256:417fb37d8013773d34152eda16d51d3b32c177533abcf15f00f635af51559d22"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.31.0/agent-browser-win32-x64.exe"
 
 [[tools."aqua:walles/moor"]]
 version = "2.15.1"
@@ -3023,7 +3023,7 @@ version = "0.11.3"
 backend = "npm:opkg"
 
 [[tools."npm:prettier"]]
-version = "3.8.5"
+version = "3.9.0"
 backend = "npm:prettier"
 
 [[tools."npm:pyright"]]
