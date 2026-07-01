@@ -223,6 +223,7 @@ abbr -a vr "vagrant reload"
 abbr -a vs "vagrant ssh"
 abbr -a vst "vagrant status"
 abbr -a vu "vagrant up"
+abbr -a wtr "wt remove"
 abbr -a wts "wt switch"
 abbr -a wtsc "wt switch --create"
 abbr -a yz yazi
