@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.48.0](https://github.com/scottames/dots/compare/v0.47.0...v0.48.0) (2026-07-02)
+
+
+### Updates & Misc Chores
+
+* **deps:** lock file maintenance ([#959](https://github.com/scottames/dots/issues/959)) ([d390c1f](https://github.com/scottames/dots/commit/d390c1f7ee0a09ad6baa1109607d69d83cf94622))
+* **deps:** update ⬆️ aqua-packages ([#950](https://github.com/scottames/dots/issues/950)) ([51cfec9](https://github.com/scottames/dots/commit/51cfec9e36f3b2451ca170f8b50025cffabc50ef))
+* **deps:** update ⬆️ aqua-packages to v4.527.0 ([#956](https://github.com/scottames/dots/issues/956)) ([109fd34](https://github.com/scottames/dots/commit/109fd34a0ab499cac7515ff3bc46c6044dddf4e0))
+* **deps:** update ⬆️ aqua-packages to v4.528.0 ([#961](https://github.com/scottames/dots/issues/961)) ([a98277c](https://github.com/scottames/dots/commit/a98277ce5fc953c9fc541ca8cb06eacffde67da8))
+* **deps:** update ⬆️ aqua-packages to v4.529.0 ([#963](https://github.com/scottames/dots/issues/963)) ([da3a2f7](https://github.com/scottames/dots/commit/da3a2f7925d1506f050599a2f14aaec3b4ad5eb3))
+* **deps:** update ⬆️ aqua-packages to v4.529.1 ([#966](https://github.com/scottames/dots/issues/966)) ([b1b7dac](https://github.com/scottames/dots/commit/b1b7dac82108f2030e95007cf929e41f93ac9575))
+* **deps:** update ⬆️ dagger to v0.21.7 ([#951](https://github.com/scottames/dots/issues/951)) ([6caf390](https://github.com/scottames/dots/commit/6caf390685871fcd828f96ab0570500b69a1cd31))
+* **deps:** update ⬆️ github-actions to v4.2.0 ([#952](https://github.com/scottames/dots/issues/952)) ([43db5ee](https://github.com/scottames/dots/commit/43db5eed2eba190d16b0eea1b6d7385b9402254d))
+* **deps:** update ⬆️ github-actions to v7 ([#953](https://github.com/scottames/dots/issues/953)) ([31f69b0](https://github.com/scottames/dots/commit/31f69b0e7ec3ddb6a8e5b6f7f512e6307ebad5b1))
+* **deps:** update ⬆️ mise-packages ([#949](https://github.com/scottames/dots/issues/949)) ([ec84e2d](https://github.com/scottames/dots/commit/ec84e2d91a748e44d3afb4315f5eea8585fae150))
+* **deps:** update ⬆️ mise-packages ([#954](https://github.com/scottames/dots/issues/954)) ([3f3630f](https://github.com/scottames/dots/commit/3f3630f088a326a05b1c8cc6a00f0a38f7376d14))
+* **deps:** update ⬆️ mise-packages ([#955](https://github.com/scottames/dots/issues/955)) ([baf84ed](https://github.com/scottames/dots/commit/baf84ed3be10ca5229cf3c4df32b6dfa434c9eb9))
+* **deps:** update ⬆️ mise-packages ([#957](https://github.com/scottames/dots/issues/957)) ([b00eaff](https://github.com/scottames/dots/commit/b00eaff07331215a91c31a219453b79571183840))
+* **deps:** update ⬆️ mise-packages ([#960](https://github.com/scottames/dots/issues/960)) ([4a022d7](https://github.com/scottames/dots/commit/4a022d7fa01396aae088e6881dff8ba6cb0a4748))
+* **deps:** update ⬆️ mise-packages ([#962](https://github.com/scottames/dots/issues/962)) ([81fd16e](https://github.com/scottames/dots/commit/81fd16e9273feda8bd16888c3342fb3a37a45aad))
+* **deps:** update ⬆️ mise-packages ([#964](https://github.com/scottames/dots/issues/964)) ([1eb2032](https://github.com/scottames/dots/commit/1eb20326989c3d2814db6882a7714c458cad95ec))
+* **deps:** update ⬆️ mise-packages ([#965](https://github.com/scottames/dots/issues/965)) ([3354893](https://github.com/scottames/dots/commit/33548939408c97c009c3885e0c512ac8f62ba721))
+* **deps:** update ⬆️ mise-packages to v3 ([#958](https://github.com/scottames/dots/issues/958)) ([3c71b38](https://github.com/scottames/dots/commit/3c71b38a344d77c1ad2e70f23f521f3c65e6ccbb))
+* **mise/herdr:** bump herdr ([2a4eec3](https://github.com/scottames/dots/commit/2a4eec39de71aa2a1c12891e50b815430fab6860))
+* **niri:** revert akiflow window-rule ([86a76ca](https://github.com/scottames/dots/commit/86a76cac6e8bdbdf9ddd27fd9dbfc79cbe8fb867))
+* upgrade trunk ([#948](https://github.com/scottames/dots/issues/948)) ([2faa80c](https://github.com/scottames/dots/commit/2faa80cb2f51a836b2350d2a2bd98f5b6ac684df))
+
+
+### Features
+
+* improved herdr/lazygit/tuicr/worktrunk keys/flow ([3c3872a](https://github.com/scottames/dots/commit/3c3872a884ac2b20da8ca6719aa07f5b33a961a0))
+* **lazygit:** add custom graphite commands ([9e10af3](https://github.com/scottames/dots/commit/9e10af3d13fc61ca66a5e1cf6c5c9762e43267a3))
+* **nvim:** thts file picker ([684f118](https://github.com/scottames/dots/commit/684f1181fe6b852edaaabfd446515450bc3bca7f))
+* **wt:** track branch with graphite if enabled ([6675dd2](https://github.com/scottames/dots/commit/6675dd26a8ba9495127eee4a50a9a379fd549412))
+* **yubikey:** add yubikey-touch-detector ([e86b3f1](https://github.com/scottames/dots/commit/e86b3f1e3183b754b03d1ad06cb6de5cdfac0270))
+
+
+### Bug Fixes
+
+* **distrobox:** fedora init, use correct user for chown ([223fa13](https://github.com/scottames/dots/commit/223fa133815992033a0a08ce1f2a8912fa21cbbc))
+
+
+### Code Refactoring
+
+* **zellij:** remove zellij-status plugin ([341ba55](https://github.com/scottames/dots/commit/341ba55171892f9355965e0dcd71aa15379b2f6c))
+
 ## [0.47.0](https://github.com/scottames/dots/compare/v0.46.0...v0.47.0) (2026-06-23)
 
 
