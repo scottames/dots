@@ -790,36 +790,36 @@ checksum = "sha256:cd246c70f90e1346ec363f5819b9d9259112ce13c216f2aeebe7795f66288
 url = "https://github.com/dlvhdr/diffnav/releases/download/v0.11.0/diffnav_Windows_x86_64.zip"
 
 [[tools."aqua:dprint/dprint"]]
-version = "0.54.0"
+version = "0.55.1"
 backend = "aqua:dprint/dprint"
 
 [tools."aqua:dprint/dprint"."platforms.linux-arm64"]
-checksum = "sha256:9a66b5931ca30402a3dd2933c432c6b6316eedd08037ab0aeb8d24cd17b2a301"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-aarch64-unknown-linux-musl.zip"
+checksum = "sha256:2d414d659034650bc25b208a87ab427cd01a7ac6c21b3ed2191cf92e1b58f76c"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-aarch64-unknown-linux-musl.zip"
 
 [tools."aqua:dprint/dprint"."platforms.linux-arm64-musl"]
-checksum = "sha256:9a66b5931ca30402a3dd2933c432c6b6316eedd08037ab0aeb8d24cd17b2a301"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-aarch64-unknown-linux-musl.zip"
+checksum = "sha256:2d414d659034650bc25b208a87ab427cd01a7ac6c21b3ed2191cf92e1b58f76c"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-aarch64-unknown-linux-musl.zip"
 
 [tools."aqua:dprint/dprint"."platforms.linux-x64"]
-checksum = "sha256:859ae94e596105201faa59a3fb4bedc8316e226e3e154ae410f9373461e1e41c"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-x86_64-unknown-linux-musl.zip"
+checksum = "sha256:7ce856d5999585e58666701eab5e0291abfb63953884d5dd0268001c89d74b8d"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-x86_64-unknown-linux-musl.zip"
 
 [tools."aqua:dprint/dprint"."platforms.linux-x64-musl"]
-checksum = "sha256:859ae94e596105201faa59a3fb4bedc8316e226e3e154ae410f9373461e1e41c"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-x86_64-unknown-linux-musl.zip"
+checksum = "sha256:7ce856d5999585e58666701eab5e0291abfb63953884d5dd0268001c89d74b8d"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-x86_64-unknown-linux-musl.zip"
 
 [tools."aqua:dprint/dprint"."platforms.macos-arm64"]
-checksum = "sha256:1d6a8fb14d66cba0f049738edd4ab3b1afc1de6d936cd32e483e33284cfd1ade"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-aarch64-apple-darwin.zip"
+checksum = "sha256:94a9ce5ca91dbb609d4f22f2ccf28d8b422627c0944c6ee63d1beecac28f8cd4"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-aarch64-apple-darwin.zip"
 
 [tools."aqua:dprint/dprint"."platforms.macos-x64"]
-checksum = "sha256:fdbffa16cf0890ca30e958ffdabe7748e733867651a438ede1501f0e1a7b5e91"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-x86_64-apple-darwin.zip"
+checksum = "sha256:21f9784b3edf3b0a686932b4387359ebd83fba798ac2f7e2ba1e7b8c9f674e3e"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-x86_64-apple-darwin.zip"
 
 [tools."aqua:dprint/dprint"."platforms.windows-x64"]
-checksum = "sha256:3fd881acaf7fd4fbc5d07c3030ce79b965a4cb7128fe0eb1ebe725188ccd2715"
-url = "https://github.com/dprint/dprint/releases/download/0.54.0/dprint-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:dfdee60f04810c14df310696ce680da7ece599cd27b162f77906adc80d5e9679"
+url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-x86_64-pc-windows-msvc.zip"
 
 [[tools."aqua:editorconfig-checker/editorconfig-checker"]]
 version = "3.7.0"
@@ -874,36 +874,36 @@ checksum = "sha256:4d4f87f6bc8e6ee176789c28bee698234ce0275da013709eb16b0f14819c1
 url = "https://github.com/eza-community/eza/releases/download/v0.23.4/eza.exe_x86_64-pc-windows-gnu.tar.gz"
 
 [[tools."aqua:fastfetch-cli/fastfetch"]]
-version = "2.65.1"
+version = "2.65.2"
 backend = "aqua:fastfetch-cli/fastfetch"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.linux-arm64"]
-checksum = "sha256:a00a3461c1e0bf2d4ba430d7d78ca92d4df9a8f6a08466f6669865599f5b963d"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-linux-aarch64.tar.gz"
+checksum = "sha256:7485815be2817db722096353c3440967b9b39cdd5500eaf29d3724ca3dc9c1b5"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-linux-aarch64.tar.gz"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.linux-arm64-musl"]
-checksum = "sha256:a00a3461c1e0bf2d4ba430d7d78ca92d4df9a8f6a08466f6669865599f5b963d"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-linux-aarch64.tar.gz"
+checksum = "sha256:7485815be2817db722096353c3440967b9b39cdd5500eaf29d3724ca3dc9c1b5"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-linux-aarch64.tar.gz"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.linux-x64"]
-checksum = "sha256:3b6d58e167142067f8231132f428cfe91a94633e33be0a6d867bdcd84e68294d"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-linux-amd64.tar.gz"
+checksum = "sha256:d8a477a016fbcf6cf184b1e2a54f38e702aae0d27078f72f5dac54d6d0010739"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-linux-amd64.tar.gz"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.linux-x64-musl"]
-checksum = "sha256:3b6d58e167142067f8231132f428cfe91a94633e33be0a6d867bdcd84e68294d"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-linux-amd64.tar.gz"
+checksum = "sha256:d8a477a016fbcf6cf184b1e2a54f38e702aae0d27078f72f5dac54d6d0010739"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-linux-amd64.tar.gz"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.macos-arm64"]
-checksum = "sha256:b746531308d626af82192316ac887ec09fbbd1da026cb5ec18732d72b9261af4"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-macos-aarch64.tar.gz"
+checksum = "sha256:be86c281b2fc57410399357153731ae723856fbb80ee66a074648f597b80530c"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-macos-aarch64.tar.gz"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.macos-x64"]
-checksum = "sha256:dd7eeb6c8382d9b9a36f603f848af323aa33e7845881fc4f33984d406de21039"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-macos-amd64.tar.gz"
+checksum = "sha256:2c2026826ab2f663ba6544961c2fdf45725b5be5ed0df57838ade58c7b82328f"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-macos-amd64.tar.gz"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.windows-x64"]
-checksum = "sha256:f6aefc7997c2a87538e62c4648c6ac58f580c0170bd9dd92eb174136a79a5add"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.1/fastfetch-windows-amd64.zip"
+checksum = "sha256:77d43202b5ca499f065e2cf3e7a3cbc9678fe202c915457ce58344bf4898d49e"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-windows-amd64.zip"
 
 [[tools."aqua:golangci/golangci-lint"]]
 version = "2.12.2"
@@ -1981,42 +1981,42 @@ checksum = "sha256:22ed0c8eb0c15cbd2651c944517f6c06aa6ffa11467be55f7673f7242f1ba
 url = "https://github.com/stern/stern/releases/download/v1.34.0/stern_1.34.0_windows_amd64.tar.gz"
 
 [[tools."aqua:suzuki-shunsuke/ghtkn"]]
-version = "0.2.8"
+version = "0.3.1"
 backend = "aqua:suzuki-shunsuke/ghtkn"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64"]
-checksum = "sha256:c116abda324d8a2ca17b3fa5dfa203fd13e3158dcf7babc3d92b3df30f356e82"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_linux_arm64.tar.gz"
+checksum = "sha256:8267b6130cf29015fbe57025fb2578b50ece1993880cc9dd7a7de945ec5e597c"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_linux_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64-musl"]
-checksum = "sha256:c116abda324d8a2ca17b3fa5dfa203fd13e3158dcf7babc3d92b3df30f356e82"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_linux_arm64.tar.gz"
+checksum = "sha256:8267b6130cf29015fbe57025fb2578b50ece1993880cc9dd7a7de945ec5e597c"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_linux_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64"]
-checksum = "sha256:00b236441c4986fff4d838445283432ab39b58967356189de6503fd5bfc6544c"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_linux_amd64.tar.gz"
+checksum = "sha256:d218e51bf12487f2db8336a8f752eeaea1a2d1eb517000c30dfdde1fdcd42da4"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_linux_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl"]
-checksum = "sha256:00b236441c4986fff4d838445283432ab39b58967356189de6503fd5bfc6544c"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_linux_amd64.tar.gz"
+checksum = "sha256:d218e51bf12487f2db8336a8f752eeaea1a2d1eb517000c30dfdde1fdcd42da4"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_linux_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-arm64"]
-checksum = "sha256:b9239250c90abe2b9f3acb1135075f68861976e548d624f0f6d5a22b3a69f233"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_darwin_arm64.tar.gz"
+checksum = "sha256:5d036a0fa2c4065284e62ae35cbc499fb8243fb182fa5002863f9419cd5fb949"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_darwin_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64"]
-checksum = "sha256:311ee508b426b8bfc4488ca849879de0ba737bb4f1b73e9f181dcf6eec11ce74"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_darwin_amd64.tar.gz"
+checksum = "sha256:10a4d3929f3d4cf9185bb8b210320360aea4b004f18ed12f001fafaf8667b85a"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_darwin_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64"]
-checksum = "sha256:d2d5f85234b3ba8afa9f0174cde71160fd43ca5fcbfdc92fe641be6149d89a4a"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.2.8/ghtkn_windows_amd64.zip"
+checksum = "sha256:791a5ba4227375122c1bd43e15aa6e41cbaab31a15c74c5952d60166a2922ab6"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.1/ghtkn_windows_amd64.zip"
 provenance = "github-attestations"
 
 [[tools."aqua:suzuki-shunsuke/pinact"]]
@@ -3023,7 +3023,7 @@ version = "0.11.3"
 backend = "npm:opkg"
 
 [[tools."npm:prettier"]]
-version = "3.9.1"
+version = "3.9.3"
 backend = "npm:prettier"
 
 [[tools."npm:pyright"]]
