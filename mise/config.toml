@@ -120,7 +120,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:suzuki-shunsuke/ghtkn" = "0.3.1"
 # github tui
 #  https://github.com/kitlangton/ghui
-"github:kitlangton/ghui" = "v0.8.0"
+"github:kitlangton/ghui" = "v0.9.0"
 # render markdown on the CLI, with pizzazz!
 #   https://github.com/charmbracelet/glow
 "aqua:charmbracelet/glow" = "2.1.2"
@@ -164,7 +164,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
-"github:always-further/nono" = "v0.65.1"
+"github:always-further/nono" = "v0.66.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.113.1"
@@ -190,10 +190,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:BurntSushi/ripgrep" = "15.1.0"
 # Spacelift client and CLI
 #   https://github.com/spacelift-io/spacectl
-"aqua:spacelift-io/spacectl" = "1.23.0"
+"aqua:spacelift-io/spacectl" = "1.24.0"
 # minimal, blazing-fast, and infinitely customizable prompt for any shell!
 #   https://github.com/starship/starship
-"aqua:starship/starship" = "1.25.1"
+"aqua:starship/starship" = "1.26.0"
 # multi pod and container log tailing for kubernetes
 #   https://github.com/stern/stern
 "aqua:stern/stern" = "1.34.0"
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.18.0"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.62.0"
+"github:max-sixty/worktrunk" = "v0.63.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -237,7 +237,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.47.2"
 "aqua:dprint/dprint" = "0.55.1"
-"aqua:editorconfig-checker/editorconfig-checker" = "3.7.0"
+"aqua:editorconfig-checker/editorconfig-checker" = "3.8.0"
 "aqua:golangci/golangci-lint" = "2.12.2"
 "aqua:google/yamlfmt" = "0.21.0"
 "aqua:gotestyourself/gotestsum" = "1.13.0"
@@ -253,9 +253,9 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:snyk/cli" = "1.1305.2"
 "aqua:tamasfe/taplo" = "0.10.0"
 "aqua:terraform-linters/tflint" = "0.63.1"
-"aqua:tree-sitter/tree-sitter" = "0.26.9"
+"aqua:tree-sitter/tree-sitter" = "0.26.10"
 "go:golang.org/x/tools/gopls" = "0.22.0"
-"npm:@commitlint/cli" = "21.1.0"
+"npm:@commitlint/cli" = "21.2.0"
 "npm:@fsouza/prettierd" = "0.28.0"
 "npm:bash-language-server" = "5.6.0"
 "npm:cspell" = "10.0.1"
@@ -263,7 +263,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
 "npm:markdownlint-cli" = "0.49.0"
-"npm:prettier" = "3.9.3"
+"npm:prettier" = "3.9.4"
 "npm:pyright" = "1.1.411"
 "npm:sql-formatter" = "15.8.2"
 "npm:sql-language-server" = "1.7.1"
