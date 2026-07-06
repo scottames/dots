@@ -11,6 +11,11 @@ local function is_dir(path)
   return stat and stat.type == "directory"
 end
 
+local function mtime(path)
+  local stat = uv.fs_stat(path)
+  return stat and stat.mtime and stat.mtime.sec or 0
+end
+
 local function add_if_dir(roots, root, name)
   if is_dir(join(root, "thoughts", name)) then
     roots[#roots + 1] = join("thoughts", name)
@@ -73,7 +78,12 @@ function M.open()
     dirs = roots,
     hidden = true,
     ignored = true,
+    matcher = { sort_empty = true },
+    sort = { fields = { "score:desc", "mtime:desc", "idx" } },
     title = "Thoughts",
+    transform = function(item)
+      item.mtime = mtime(join(root, item.file or item.text))
+    end,
   })
 end
 
