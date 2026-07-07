@@ -16,13 +16,14 @@
 {{- /* Nono treats shell config as sensitive, so Fish config needs explicit deny bypasses. */ -}}
 {{- $allowPaths := list
        $ntbkDir
-      (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
-      (joinPath $home ".npm-global/lib/node_modules")
-      (joinPath $home ".tenv")
-      (joinPath $home "node_modules")
       (joinPath $home ".config/graphite")
+      (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
       (joinPath $home ".local/share/graphite")
       (joinPath $home ".local/state/thts")
+      (joinPath $home ".npm-global/lib/node_modules")
+      (joinPath $home ".tenv")
+      (joinPath $home "go/pkg/mod")
+      (joinPath $home "node_modules")
 -}}
 {{- if ne $workNotebook "" -}}
 {{-   $allowPaths = append $allowPaths $workNotebook -}}
@@ -39,6 +40,8 @@
       "/etc/fish"
       "/etc/pki/ca-trust"
       "/usr/libexec/git-core"
+      "/usr/libexec/gcc"
+      "/usr/include"
       "/etc/pki/tls/openssl.cnf"
       (joinPath $dots "mise")
       (joinPath $home ".cache/mise")
@@ -61,6 +64,7 @@
       (joinPath $home ".spacelift")
       (joinPath $home ".ssh/known_hosts")
       (joinPath $home ".terraform.d")
+      (joinPath $home "go")
       (joinPath $home "node_modules")
       (joinPath $home "package-lock.json")
       (joinPath $home "package.json")
