@@ -17,8 +17,8 @@ zoom = ["prefix+z", "prefix+f"]
 
 close_workspace = "prefix+shift+d"
 new_workspace = "prefix+shift+n"
-next_workspace = "ctrl+alt+down"
-previous_workspace = "ctrl+alt+up"
+next_workspace = ["ctrl+alt+down", "ctrl+alt+j"]
+previous_workspace = ["ctrl+alt+up", "ctrl+alt+k"]
 rename_workspace = "prefix+shift+w"
 switch_workspace = "prefix+shift+1..9"
 workspace_picker = "prefix+w"
@@ -27,23 +27,23 @@ new_worktree = "prefix+shift+g"
 open_worktree = "prefix+shift+o"
 # remove_worktree = ""
 
-previous_agent = "ctrl+alt+shift+up"
-next_agent = "ctrl+alt+shift+down"
+previous_agent = ["ctrl+alt+shift+up", "ctrl+alt+shift+k"]
+next_agent = ["ctrl+alt+shift+down", "ctrl+alt+shift+j"]
 focus_agent = "prefix+alt+1..9"
 
 new_tab = "prefix+c"
 rename_tab = "prefix+shift+t"
-previous_tab = "ctrl+alt+left"
-next_tab = "ctrl+alt+right"
+previous_tab = ["ctrl+alt+left", "ctrl+alt+h"]
+next_tab = ["ctrl+alt+right", "ctrl+alt+l"]
 switch_tab = "prefix+1..9"
 close_tab = "prefix+shift+x"
 
 edit_scrollback = "prefix+e"
 rename_pane = "prefix+shift+p"
-focus_pane_left = ["prefix+h", "ctrl+left"]
-focus_pane_down = ["prefix+j", "ctrl+down"]
-focus_pane_up = ["prefix+k", "ctrl+up"]
-focus_pane_right = ["prefix+l", "ctrl+right"]
+focus_pane_left = ["prefix+h", "ctrl+h", "ctrl+left"]
+focus_pane_down = ["prefix+j", "ctrl+j", "ctrl+down"]
+focus_pane_up = ["prefix+k", "ctrl+k", "ctrl+up"]
+focus_pane_right = ["prefix+l", "ctrl+l", "ctrl+right"]
 cycle_pane_next = "prefix+tab"
 cycle_pane_previous = "prefix+shift+tab"
 last_pane = "ctrl+`"
