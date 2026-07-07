@@ -60,10 +60,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.70.5"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.197"
+"aqua:anthropics/claude-code" = "2.1.200"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
-"aqua:cli/cli" = "2.95.0"
+"aqua:cli/cli" = "2.96.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
 "aqua:openai/codex" = "rust-v0.29.0"
@@ -154,7 +154,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.14.18"
+"github:janosmiko/lfk" = "v0.14.19"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -170,7 +170,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.113.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.17.12"
+"aqua:sst/opencode" = "1.17.13"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.18.0"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.64.0"
+"github:max-sixty/worktrunk" = "v0.65.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
