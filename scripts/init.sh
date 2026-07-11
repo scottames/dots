@@ -62,6 +62,7 @@ if [ "${GIT_WORKTREES}" = true ]; then
 else
   _CHEZMOI_SOURCE_DIR="${HOME}/src/github.com/${_CHEZMOI_SOURCE}"
 fi
+_CHEZMOI_SOURCE_DIR="${CHEZMOI_SOURCE_DIR:-${_CHEZMOI_SOURCE_DIR}}"
 
 printf "\n${yellow}⚡ ${magenta}init chezmoi from ${clear}%s${magenta} to ${clear}%s\n  ${magenta}with args:${clear} " \
   "${_CHEZMOI_SOURCE}" "${_CHEZMOI_SOURCE_DIR}"

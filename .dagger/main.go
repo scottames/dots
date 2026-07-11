@@ -42,6 +42,7 @@ func (m *Dots) Init(
 
 	return ctr.
 		From(from).
+		WithEnvVariable("CHEZMOI_SOURCE_DIR", dotsMountPath).
 		WithExec([]string{
 			fmt.Sprintf("%s/scripts/init.sh", dotsMountPath),
 			"--no-tty", "--promptDefaults",

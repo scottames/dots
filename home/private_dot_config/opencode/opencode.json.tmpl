@@ -12,17 +12,7 @@
   "experimental": {
     "disable_paste_summary": true
   },
-  "instructions": [
-{{- $instructionsDir := joinPath .chezmoi.homeDir ".config/agents/instructions" -}}
-{{- if stat $instructionsDir }}
-{{- $instructionsFiles := output "find" "-L" $instructionsDir
-      "-name" "*.md" "-type" "f" -}}
-{{- $instructionsFiles = $instructionsFiles | trim | splitList "\n" | sortAlpha }}
-{{- range $i, $f := $instructionsFiles }}
-    "{{ $f }}"{{ if lt (add $i 1) (len $instructionsFiles) }},{{ end }}
-{{- end }}
-  {{ else }}{{ end -}}
-],
+  "instructions": [],
   "mcp": {
     "tavily": {
       "type": "remote",
