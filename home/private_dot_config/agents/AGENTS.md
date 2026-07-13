@@ -20,6 +20,8 @@ instructions supersede them, except explicit safety constraints.
 - Test meaningful behavior where tests exist, including relevant affected and
   failure paths rather than only the immediate happy path.
 - Do not preserve dead code with lint exceptions.
+- When running inside `nono`: dagger (>= v0.21.7) cannot be invoked (it walks
+  from `/`, not allowed in sandbox, rely on PR checks and/or user.
 ## Safety
 - Never expose or commit secrets, credentials, tokens, or other private data.
 - Never discard unrelated work or perform destructive operations without my
