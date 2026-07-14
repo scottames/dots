@@ -9,6 +9,10 @@
   gitIgnoredAuthors: [
     '162828115+scottames-github-bot[bot]@users.noreply.github.com',
   ],
+  prBodyTemplate: '{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{configDescription}}}{{{controls}}}{{{footer}}}',
+  prBodyNotes: [
+    'Release notes are maintained in a PR comment by the `renovate-release-notes-comment` workflow.',
+  ],
   customManagers: [
     {
       customType: 'regex',
