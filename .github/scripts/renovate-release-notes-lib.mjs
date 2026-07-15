@@ -1,7 +1,14 @@
-export const markerPrefix = "renovate-release-notes-comment:v1";
+export { selectReleaseRange } from "./renovate-release-notes-collection-policy.mjs";
+export {
+  buildCommentBodies,
+  markerPrefix,
+  maxCommentContentChars,
+} from "./renovate-release-notes-comments.mjs";
+import {
+  renderPackageSections,
+  renderSkippedSections,
+} from "./renovate-release-notes-rendering.mjs";
 
-const defaultMaxCommentChars = 60000;
-const defaultMaxComments = 50;
 const defaultMaxSectionChars = 59000;
 
 export function parseRenovateUpdates(body) {
@@ -51,7 +58,7 @@ export function parseRenovateUpdates(body) {
   return updates;
 }
 
-export function createReleaseNotesSections(updates, releases, options = {}) {
+export function createReleaseNotesSections(results, options = {}) {
   const maxSectionChars = options.maxSectionChars ?? defaultMaxSectionChars;
   const sections = [
     [
@@ -61,98 +68,38 @@ export function createReleaseNotesSections(updates, releases, options = {}) {
     ].join("\n\n"),
   ];
   const nonGithub = [];
-  const lookupLimited = [];
+  const requestLimited = [];
   const unavailable = [];
 
-  for (const update of updates) {
-    if (update.skipReason === "non-github-source") {
-      nonGithub.push(update);
-      continue;
+  for (const result of results) {
+    if (result.outcome === "non-github") {
+      nonGithub.push(result.update);
+    } else if (result.outcome === "request-limited") {
+      requestLimited.push(result.update);
+    } else if (result.outcome === "unavailable") {
+      unavailable.push(result.update);
+    } else if (result.releases.length) {
+      sections.push(
+        ...renderPackageSections(
+          result.update,
+          result.releases,
+          maxSectionChars,
+        ),
+      );
     }
-    if (update.skipReason === "github-release-lookup-limit") {
-      lookupLimited.push(update);
-      continue;
-    }
-
-    const release = releases.get(releaseKey(update));
-    if (!release) {
-      unavailable.push(update);
-      continue;
-    }
-
-    sections.push(...renderReleaseSections(update, release, maxSectionChars));
   }
 
-  if (nonGithub.length || lookupLimited.length || unavailable.length) {
+  if (nonGithub.length || requestLimited.length || unavailable.length) {
     sections.push(
-      ...renderSkippedSections(nonGithub, lookupLimited, unavailable),
+      ...renderSkippedSections(nonGithub, requestLimited, unavailable),
     );
   }
 
-  if (updates.length === 0) {
+  if (results.length === 0) {
     sections.push("No Renovate update table was found in the PR body.");
   }
 
   return sections;
-}
-
-export function buildCommentBodies(sections, options = {}) {
-  const maxCommentChars = options.maxCommentChars ?? defaultMaxCommentChars;
-  const maxComments = options.maxComments ?? defaultMaxComments;
-  const chunkLimit = maxCommentContentChars(maxCommentChars, maxComments);
-  const chunks = [];
-  let current = "";
-
-  for (const section of sections) {
-    if (section.length > chunkLimit) {
-      throw new Error("section exceeds GitHub comment size limit");
-    }
-    const next = current ? `${current}\n\n${section}` : section;
-    if (current && next.length > chunkLimit) {
-      chunks.push(current);
-      current = section;
-    } else {
-      current = next;
-    }
-  }
-
-  if (current) {
-    chunks.push(current);
-  }
-
-  if (chunks.length > maxComments) {
-    throw new Error(
-      `release notes require ${chunks.length} comments, limit is ${maxComments}`,
-    );
-  }
-
-  const total = chunks.length || 1;
-  return (chunks.length ? chunks : ["No release notes were generated."]).map(
-    (chunk, index) => {
-      const marker = commentMarker(index + 1, total);
-      const body = `${marker}\n${chunk}`;
-      if (body.length > maxCommentChars) {
-        throw new Error("comment exceeds GitHub comment size limit");
-      }
-      return body;
-    },
-  );
-}
-
-export function maxCommentContentChars(
-  maxCommentChars = defaultMaxCommentChars,
-  maxComments = defaultMaxComments,
-) {
-  const markerReserve = commentMarker(maxComments, maxComments).length + 1;
-  return Math.max(1, maxCommentChars - markerReserve);
-}
-
-function commentMarker(part, total) {
-  return `<!-- ${markerPrefix} part=${part} total=${total} -->`;
-}
-
-export function releaseKey(update) {
-  return `${update.githubRepo}@${update.toVersion}`;
 }
 
 function splitMarkdownTableRow(line) {
@@ -213,145 +160,4 @@ function extractVersionChange(changeCell) {
     fromVersion: match?.[1] ?? null,
     toVersion: match?.[2] ?? null,
   };
-}
-
-function renderReleaseSections(update, release, maxSectionChars) {
-  const body = neutralizeMentions(
-    release.body || "No release notes body was provided by GitHub.",
-  );
-  const singleSection = renderReleaseSection(update, release, body, 1, 1);
-  if (singleSection.length <= maxSectionChars) {
-    return [singleSection];
-  }
-
-  const wrapperChars =
-    renderReleaseSection(update, release, "x", 999999, 999999).length - 1;
-  const maxBodyChars = maxSectionChars - wrapperChars;
-  if (maxBodyChars < 1) {
-    throw new Error(
-      "release notes section metadata exceeds comment size limit",
-    );
-  }
-
-  const bodyParts = splitReleaseBody(body, maxBodyChars);
-  return bodyParts.map((part, index) =>
-    renderReleaseSection(update, release, part, index + 1, bodyParts.length),
-  );
-}
-
-function renderReleaseSection(update, release, body, part, total) {
-  const compareUrl = compareSourceUrl(update, release);
-  const releaseTitle = release.name
-    ? `${release.tagName}: ${release.name}`
-    : release.tagName;
-  const summarySuffix = total > 1 ? ` - part ${part} of ${total}` : "";
-
-  return [
-    "<details>",
-    `<summary>${escapeHtml(update.githubRepo)} (${escapeHtml(update.packageName)})${summarySuffix}</summary>`,
-    "",
-    `#### [${escapeMarkdownText(releaseTitle)}](${release.htmlUrl})`,
-    "",
-    compareUrl ? `[Compare Source](${compareUrl})` : "",
-    "",
-    body,
-    "",
-    "</details>",
-  ]
-    .filter((line, index, lines) => line || lines[index - 1])
-    .join("\n");
-}
-
-function splitReleaseBody(body, maxChars) {
-  const parts = [];
-  let remaining = body;
-
-  while (remaining.length > maxChars) {
-    let splitAt = remaining.lastIndexOf("\n", maxChars);
-    if (splitAt < 1) {
-      splitAt = maxChars;
-      const before = remaining.charCodeAt(splitAt - 1);
-      const after = remaining.charCodeAt(splitAt);
-      if (
-        before >= 0xd800 &&
-        before <= 0xdbff &&
-        after >= 0xdc00 &&
-        after <= 0xdfff
-      ) {
-        splitAt -= 1;
-        if (splitAt === 0) {
-          throw new Error(
-            "release note character exceeds section body size limit",
-          );
-        }
-      }
-    } else {
-      splitAt += 1;
-    }
-    parts.push(remaining.slice(0, splitAt));
-    remaining = remaining.slice(splitAt);
-  }
-  parts.push(remaining);
-  return parts;
-}
-
-function renderSkippedSections(nonGithub, lookupLimited, unavailable) {
-  const sections = ["### Skipped Packages"];
-
-  if (nonGithub.length) {
-    sections.push("#### Non-GitHub Sources");
-    for (const update of nonGithub) {
-      sections.push(
-        `- ${escapeMarkdownText(update.packageName)} (${escapeMarkdownText(update.sourceUrl || "no source URL")})`,
-      );
-    }
-  }
-
-  if (lookupLimited.length) {
-    sections.push("#### GitHub Release Lookup Limit Reached");
-    for (const update of lookupLimited) {
-      sections.push(
-        `- ${escapeMarkdownText(update.packageName)}: skipped after the workflow lookup limit was reached`,
-      );
-    }
-  }
-
-  if (unavailable.length) {
-    sections.push("#### GitHub Release Notes Unavailable");
-    for (const update of unavailable) {
-      sections.push(
-        `- ${escapeMarkdownText(update.packageName)}: No GitHub release was found for \`${escapeMarkdownText(update.toVersion ?? "unknown")}\``,
-      );
-    }
-  }
-
-  return sections;
-}
-
-function compareSourceUrl(update, release) {
-  if (!update.fromVersion || !update.toVersion || !update.githubRepo) {
-    return null;
-  }
-
-  const toVersion = release.tagName || update.toVersion;
-  const fromVersion =
-    toVersion.startsWith("v") && !update.fromVersion.startsWith("v")
-      ? `v${update.fromVersion}`
-      : update.fromVersion;
-  return `https://github.com/${update.githubRepo}/compare/${encodeURIComponent(fromVersion)}...${encodeURIComponent(toVersion)}`;
-}
-
-function escapeHtml(input) {
-  return neutralizeMentions(input).replace(
-    /[&<>]/g,
-    (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[char],
-  );
-}
-
-function escapeMarkdownText(input) {
-  return neutralizeMentions(input).replace(/([\\\]\[])/g, "\\$1");
-}
-
-function neutralizeMentions(input) {
-  return String(input ?? "").replace(/@/g, "@&#8203;");
 }

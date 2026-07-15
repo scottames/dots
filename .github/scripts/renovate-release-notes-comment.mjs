@@ -1,114 +1,42 @@
 #!/usr/bin/env node
 
 import {
-  buildCommentBodies,
   createReleaseNotesSections,
-  maxCommentContentChars,
-  markerPrefix,
   parseRenovateUpdates,
-  releaseKey,
 } from "./renovate-release-notes-lib.mjs";
+import {
+  collectGithubReleases,
+  defaultMaxReleaseRequests,
+  positiveSafeInteger,
+} from "./renovate-release-notes-collection.mjs";
+import {
+  buildCommentBodies,
+  defaultMaxCommentChars,
+  defaultMaxComments,
+  maxCommentContentChars,
+  upsertCommentBodies,
+} from "./renovate-release-notes-comments.mjs";
 
 export {
-  buildCommentBodies,
   createReleaseNotesSections,
   parseRenovateUpdates,
 } from "./renovate-release-notes-lib.mjs";
+export {
+  collectGithubReleases,
+  positiveSafeInteger,
+} from "./renovate-release-notes-collection.mjs";
+export {
+  buildCommentBodies,
+  upsertCommentBodies,
+} from "./renovate-release-notes-comments.mjs";
 
-const defaultMaxCommentChars = 60000;
-const defaultMaxComments = 50;
-const defaultMaxReleaseLookups = 80;
-
-export async function upsertCommentBodies(
-  api,
-  issueNumber,
-  bodies,
-  options = {},
-) {
-  const maxMutations = options.maxMutations ?? defaultMaxComments;
-  const existing = await listReleaseNotesComments(api, issueNumber);
-  const existingByPart = new Map(
-    existing.map((comment) => [comment.part, comment]),
-  );
-  const mutations = [];
-
-  for (let index = 0; index < bodies.length; index += 1) {
-    const part = index + 1;
-    const existingComment = existingByPart.get(part);
-    if (existingComment) {
-      if (existingComment.body !== bodies[index]) {
-        mutations.push([
-          "patch",
-          `/issues/comments/${existingComment.id}`,
-          { body: bodies[index] },
-        ]);
-      }
-    } else {
-      mutations.push([
-        "post",
-        `/issues/${issueNumber}/comments`,
-        { body: bodies[index] },
-      ]);
-    }
-  }
-
-  for (const comment of existing) {
-    if (comment.part > bodies.length) {
-      mutations.push(["delete", `/issues/comments/${comment.id}`]);
-    }
-  }
-
-  if (mutations.length > maxMutations) {
-    throw new Error(
-      `comment update requires ${mutations.length} mutations, limit is ${maxMutations}`,
-    );
-  }
-
-  for (const [method, path, body] of mutations) {
-    await api[method](path, body);
-  }
-}
-
-export async function collectGithubReleases(api, updates, options = {}) {
-  const maxReleaseLookups =
-    options.maxReleaseLookups ?? defaultMaxReleaseLookups;
-  const releases = new Map();
-  const seen = new Set();
-  const skippedByLookupLimit = new Set();
-  let lookups = 0;
-
-  for (const update of updates) {
-    if (!update.githubRepo || !update.toVersion) {
-      continue;
-    }
-    const key = releaseKey(update);
-    if (seen.has(key)) {
-      if (skippedByLookupLimit.has(key)) {
-        update.skipReason = "github-release-lookup-limit";
-      }
-      continue;
-    }
-    seen.add(key);
-
-    if (lookups >= maxReleaseLookups) {
-      update.skipReason = "github-release-lookup-limit";
-      skippedByLookupLimit.add(key);
-      continue;
-    }
-    lookups += 1;
-
-    const release = await findGithubRelease(
-      api,
-      update.githubRepo,
-      update.toVersion,
-    );
-    if (release) {
-      releases.set(key, release);
-    }
-  }
-
-  return releases;
-}
+const collectionOutcomes = [
+  "range-found",
+  "target-only-found",
+  "unavailable",
+  "request-limited",
+  "non-github",
+];
 
 export function isRenovatePullRequest(pr) {
   const login = pr?.user?.login ?? "";
@@ -125,10 +53,10 @@ export async function runForPullRequest(api, issueNumber, options = {}) {
   const updates = parseRenovateUpdates(pr.body || "");
   const maxCommentChars = options.maxCommentChars ?? defaultMaxCommentChars;
   const maxComments = options.maxComments ?? defaultMaxComments;
-  const releases = await collectGithubReleases(api, updates, {
-    maxReleaseLookups: options.maxReleaseLookups ?? defaultMaxReleaseLookups,
+  const collection = await collectGithubReleases(api, updates, {
+    maxReleaseRequests: options.maxReleaseRequests,
   });
-  const sections = createReleaseNotesSections(updates, releases, {
+  const sections = createReleaseNotesSections(collection.results, {
     maxSectionChars: maxCommentContentChars(maxCommentChars, maxComments),
   });
   const bodies = buildCommentBodies(sections, {
@@ -138,125 +66,100 @@ export async function runForPullRequest(api, issueNumber, options = {}) {
 
   await upsertCommentBodies(api, issueNumber, bodies, {
     maxMutations: maxComments,
+    managedAuthors: options.managedAuthors,
   });
   return {
     status: "updated",
     comments: bodies.length,
-    stats: createRunStats(updates, releases, sections, bodies),
+    stats: createRunStats(collection, sections, bodies),
   };
 }
 
-function createRunStats(updates, releases, sections, bodies) {
-  const found = updates.filter((update) => releases.has(releaseKey(update)));
-  const nonGithub = updates.filter(
-    (update) => update.skipReason === "non-github-source",
+function createRunStats(collection, sections, bodies) {
+  const outcomeCounts = Object.fromEntries(
+    collectionOutcomes.map((outcome) => [outcome, 0]),
   );
-  const lookupLimited = updates.filter(
-    (update) => update.skipReason === "github-release-lookup-limit",
+  const outcomePackages = Object.fromEntries(
+    collectionOutcomes.map((outcome) => [outcome, []]),
   );
-  const unavailable = updates.filter(
-    (update) =>
-      update.githubRepo &&
-      update.skipReason !== "github-release-lookup-limit" &&
-      !releases.has(releaseKey(update)),
-  );
-  const renderedReleaseSections = sections.filter((section) =>
+  const fallbackReasons = [];
+  let githubBacked = 0;
+  let selectedReleaseEntries = 0;
+  let successfulPackages = 0;
+
+  for (const result of collection.results) {
+    if (result.update.githubRepo) {
+      githubBacked += 1;
+    }
+    if (Object.hasOwn(outcomeCounts, result.outcome)) {
+      outcomeCounts[result.outcome] += 1;
+      outcomePackages[result.outcome].push(result.update.packageName);
+    }
+    selectedReleaseEntries += result.releases.length;
+    if (result.releases.length) {
+      successfulPackages += 1;
+    }
+    if (result.outcome === "target-only-found") {
+      fallbackReasons.push({
+        packageName: result.update.packageName,
+        reason: result.reason,
+      });
+    }
+  }
+
+  const renderedPackageSections = sections.filter((section) =>
     section.startsWith("<details>\n<summary>"),
   ).length;
 
   return {
-    parsedUpdates: updates.length,
-    githubBacked: updates.filter((update) => update.githubRepo).length,
-    releasesFound: found.length,
-    nonGithub: nonGithub.length,
-    unavailable: unavailable.length,
-    lookupLimited: lookupLimited.length,
-    releaseSectionsSplit: renderedReleaseSections - found.length,
+    parsedUpdates: collection.results.length,
+    githubBacked,
+    outcomeCounts,
+    selectedReleaseEntries,
+    continuationSections: renderedPackageSections - successfulPackages,
+    terminalRepositoryScans: collection.terminalRepositoryScans,
+    releaseRequests: collection.releaseRequests,
     commentChars: bodies.map((body) => body.length),
-    foundPackages: found.map((update) => update.packageName),
-    nonGithubPackages: nonGithub.map((update) => update.packageName),
-    unavailablePackages: unavailable.map((update) => update.packageName),
-    lookupLimitedPackages: lookupLimited.map((update) => update.packageName),
+    outcomePackages,
+    fallbackReasons,
   };
 }
 
 export function formatRunSummary(result) {
   const { stats } = result;
   const packageList = (packages) => packages.join(", ") || "none";
+  const outcomeTotal = Object.values(stats.outcomeCounts).reduce(
+    (total, count) => total + count,
+    0,
+  );
+  const fallbackReasons =
+    stats.fallbackReasons
+      .map(({ packageName, reason }) => `${packageName}: ${reason}`)
+      .join(", ") || "none";
 
   return [
     "Renovate release notes summary",
     `Parsed updates: ${stats.parsedUpdates} (${stats.githubBacked} GitHub-backed)`,
-    `Releases found: ${stats.releasesFound}`,
-    `Skipped: ${stats.nonGithub} non-GitHub, ${stats.unavailable} unavailable, ${stats.lookupLimited} lookup-limited`,
-    `Release continuation sections: ${stats.releaseSectionsSplit}`,
+    `Package outcomes: ${collectionOutcomes.map((outcome) => `${outcome}=${stats.outcomeCounts[outcome]}`).join(", ")} (total=${outcomeTotal})`,
+    `Selected release entries: ${stats.selectedReleaseEntries}`,
+    `Continuation sections: ${stats.continuationSections}`,
+    `Terminal repository scans: ${stats.terminalRepositoryScans}`,
+    `Actual release requests: ${stats.releaseRequests}`,
     `Comments: ${result.comments} (${stats.commentChars.join(", ")} chars)`,
-    `Found packages: ${packageList(stats.foundPackages)}`,
-    `Non-GitHub packages: ${packageList(stats.nonGithubPackages)}`,
-    `Unavailable packages: ${packageList(stats.unavailablePackages)}`,
-    `Lookup-limited packages: ${packageList(stats.lookupLimitedPackages)}`,
+    ...collectionOutcomes.map(
+      (outcome) =>
+        `${outcome} packages: ${packageList(stats.outcomePackages[outcome])}`,
+    ),
+    `Successful fallback reasons: ${fallbackReasons}`,
   ].join("\n");
 }
 
-async function listReleaseNotesComments(api, issueNumber) {
-  const comments = await api.getAll(`/issues/${issueNumber}/comments`, {
-    per_page: 100,
-  });
-  const markerRegex = new RegExp(
-    `<!-- ${markerPrefix} part=(\\d+) total=(\\d+) -->`,
-  );
-  return comments
-    .map((comment) => {
-      const match = markerRegex.exec(comment.body || "");
-      if (!match) {
-        return null;
-      }
-      if (comment.user?.login !== "github-actions[bot]") {
-        return null;
-      }
-      return { ...comment, part: Number(match[1]), total: Number(match[2]) };
-    })
-    .filter(Boolean);
-}
-
-async function findGithubRelease(api, githubRepo, version) {
-  for (const tag of releaseTagCandidates(version)) {
-    let release;
-    try {
-      release = await api.get(
-        `/repos/${githubRepo}/releases/tags/${encodeURIComponent(tag)}`,
-      );
-    } catch (error) {
-      if (error?.status === 404) {
-        continue;
-      }
-      throw error;
-    }
-    return {
-      htmlUrl: release.html_url,
-      name: release.name,
-      body: release.body,
-      tagName: release.tag_name,
-    };
-  }
-
-  return null;
-}
-
-function releaseTagCandidates(version) {
-  if (!version) {
-    return [];
-  }
-  const candidates = [version];
-  if (version.startsWith("v")) {
-    candidates.push(version.slice(1));
-  } else {
-    candidates.push(`v${version}`);
-  }
-  return [...new Set(candidates)];
-}
-
-export function createGitHubApi({ token, repository, fetchImpl = fetch }) {
+export function createGitHubApi({
+  token,
+  writeToken = token,
+  repository,
+  fetchImpl = fetch,
+}) {
   const baseUrl = "https://api.github.com";
   const repoPrefix = `/repos/${repository}`;
 
@@ -267,7 +170,7 @@ export function createGitHubApi({ token, repository, fetchImpl = fetch }) {
       method,
       headers: {
         Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${method === "GET" ? token : writeToken}`,
         "Content-Type": "application/json",
         "X-GitHub-Api-Version": "2022-11-28",
       },
@@ -297,6 +200,13 @@ export function createGitHubApi({ token, repository, fetchImpl = fetch }) {
 
   return {
     get: (path) => request("GET", path),
+    async getReleasePage(path) {
+      const response = await requestRaw("GET", path);
+      return {
+        releases: await response.json(),
+        link: response.headers.get("link"),
+      };
+    },
     post: (path, body) => request("POST", path, body),
     patch: (path, body) => request("PATCH", path, body),
     delete: (path) => request("DELETE", path),
@@ -315,17 +225,6 @@ export function createGitHubApi({ token, repository, fetchImpl = fetch }) {
   };
 }
 
-function nextPageUrl(linkHeader) {
-  if (!linkHeader) {
-    return null;
-  }
-  const next = linkHeader
-    .split(",")
-    .map((link) => link.trim())
-    .find((link) => link.endsWith('rel="next"'));
-  return next?.match(/^<([^>]+)>/)?.[1] ?? null;
-}
-
 async function main() {
   const token = process.env.GITHUB_TOKEN;
   const repository = process.env.GITHUB_REPOSITORY;
@@ -337,14 +236,21 @@ async function main() {
     );
   }
 
-  const api = createGitHubApi({ token, repository });
+  const api = createGitHubApi({
+    token,
+    writeToken: process.env.GITHUB_WRITE_TOKEN || token,
+    repository,
+  });
   const result = await runForPullRequest(api, issueNumber, {
-    maxReleaseLookups: numberFromEnv(
-      "MAX_RELEASE_LOOKUPS",
-      defaultMaxReleaseLookups,
+    maxReleaseRequests: numberFromEnv(
+      "MAX_RELEASE_REQUESTS",
+      defaultMaxReleaseRequests,
     ),
     maxCommentChars: numberFromEnv("MAX_COMMENT_CHARS", defaultMaxCommentChars),
     maxComments: numberFromEnv("MAX_COMMENTS", defaultMaxComments),
+    managedAuthors: ["github-actions[bot]", process.env.COMMENT_AUTHOR].filter(
+      Boolean,
+    ),
   });
 
   if (result.status === "skipped") {
@@ -354,9 +260,19 @@ async function main() {
   }
 }
 
-function numberFromEnv(name, fallback) {
-  const parsed = Number(process.env[name]);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+export function numberFromEnv(name, fallback) {
+  return positiveSafeInteger(Number(process.env[name]), fallback);
+}
+
+function nextPageUrl(linkHeader) {
+  if (!linkHeader) {
+    return null;
+  }
+  const next = linkHeader
+    .split(",")
+    .map((link) => link.trim())
+    .find((link) => link.endsWith('rel="next"'));
+  return next?.match(/^<([^>]+)>/)?.[1] ?? null;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
