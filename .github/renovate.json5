@@ -70,6 +70,12 @@
       schedule: ["* 5-7 * * *"],
     },
     {
+      // The mise manager does not read Aqua's rust- version prefix metadata.
+      matchManagers: ['mise'],
+      matchDepNames: ['aqua:openai/codex'],
+      versioning: 'regex:^rust-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$',
+    },
+    {
       // pin 1.43.x until the 0.44 CPU issue resolved
       matchDepNames: ['zellij-org/zellij'],
       allowedVersions: '/^v0\\.43\\./',
