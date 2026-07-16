@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.49.0](https://github.com/scottames/dots/compare/v0.48.0...v0.49.0) (2026-07-16)
+
+
+### Updates & Misc Chores
+
+* **agents:** note dagger+nono limitation ([96c5ff8](https://github.com/scottames/dots/commit/96c5ff88c38cd136bcdc7b64d77152a6230c93ff))
+* **deps:** update ⬆️ aqua-packages to v4.530.0 ([#970](https://github.com/scottames/dots/issues/970)) ([1901dea](https://github.com/scottames/dots/commit/1901dea3088423ac5ee76a677898f207c27c5154))
+* **deps:** update ⬆️ aqua-packages to v4.531.0 ([#974](https://github.com/scottames/dots/issues/974)) ([a59cd90](https://github.com/scottames/dots/commit/a59cd9053c5377b2dd069a231b156f2e51cd2db5))
+* **deps:** update ⬆️ aqua-packages to v4.533.1 ([#977](https://github.com/scottames/dots/issues/977)) ([8df8b26](https://github.com/scottames/dots/commit/8df8b266b0cb432eecf82f11262e201785c494be))
+* **deps:** update ⬆️ mise-packages ([#969](https://github.com/scottames/dots/issues/969)) ([6fdc9d0](https://github.com/scottames/dots/commit/6fdc9d0fdff71fa35abb9c01c5a96d5c6497b5a5))
+* **deps:** update ⬆️ mise-packages ([#971](https://github.com/scottames/dots/issues/971)) ([073b1d8](https://github.com/scottames/dots/commit/073b1d8385def13e9b6dde605df0183a4699e19f))
+* **deps:** update ⬆️ mise-packages ([#972](https://github.com/scottames/dots/issues/972)) ([962a7be](https://github.com/scottames/dots/commit/962a7beb45fbeb6e3c7c0daf3438e77d78288e44))
+* **deps:** update ⬆️ mise-packages ([#976](https://github.com/scottames/dots/issues/976)) ([2c82fd4](https://github.com/scottames/dots/commit/2c82fd40051d32757d40dd8aa51d6d59054cff39))
+* **deps:** update ⬆️ mise-packages ([#978](https://github.com/scottames/dots/issues/978)) ([ce9c00d](https://github.com/scottames/dots/commit/ce9c00dd91899ff3ca96d3a420f9c3fb45472d66))
+* **deps:** update ⬆️ mise-packages to v2.1.201 ([#973](https://github.com/scottames/dots/issues/973)) ([0624520](https://github.com/scottames/dots/commit/06245200350f5b23959e72fccf520b864f471b7a))
+* **mise:** bump herdr 0.7.2 ([d455310](https://github.com/scottames/dots/commit/d45531000ca6a433ab6189949aa9aed778067752))
+* **mise:** bump herdr 0.7.3 ([fb32d95](https://github.com/scottames/dots/commit/fb32d956b93900f13c45e4e5d305aa10e3c56ad6))
+* **nono/opencode:** add permissions for `go test` ([88996a5](https://github.com/scottames/dots/commit/88996a5836bc5a6bca040264e761b8a6db7e58bc))
+* **nvim:** lazy updates ([c2d876d](https://github.com/scottames/dots/commit/c2d876d15a88872f003a29a343a693025da346dd))
+* **nvim:** lazy updates ([78b082a](https://github.com/scottames/dots/commit/78b082a9d42f1630ae19fbcfa84d87a3f2a7ac26))
+* **opencode:** add explicit thts permissions ([6387dae](https://github.com/scottames/dots/commit/6387dae90ab45bc14ee2656c7a0bd4183c1369a1))
+* **opencode:** additional permissions ([8dc3942](https://github.com/scottames/dots/commit/8dc3942b296b18e2419975a6f4d3da3715449a48))
+* **renovate:** fix mise/codex version regex ([a37b0e8](https://github.com/scottames/dots/commit/a37b0e804d79fbeb28ae6a5dc1cb0a8e2bc6beaa))
+* upgrade trunk ([#967](https://github.com/scottames/dots/issues/967)) ([49c3518](https://github.com/scottames/dots/commit/49c35180a35bd25fd5500905da21c4058cf53ba5))
+* upgrade trunk ([#975](https://github.com/scottames/dots/issues/975)) ([c3b6477](https://github.com/scottames/dots/commit/c3b6477eaae4ceae255367e0eafce2eccf465ac7))
+
+
+### Features
+
+* **fish/abbr:** wt remove ([51d91f7](https://github.com/scottames/dots/commit/51d91f78a44a96e894a2cf9f09c17edcd3e5cffe))
+* **nvim/thts:** sort picker by last modified ([ebad483](https://github.com/scottames/dots/commit/ebad483304d2ee3e76e3b6e67e7654367fae4565))
+* **opencode:** enable exa websearch by default ([06d5f9f](https://github.com/scottames/dots/commit/06d5f9fd832f3e2f86d80e016f06b2f93523775f))
+
+
+### Bug Fixes
+
+* **git/alias:** stack-watch rendering ([619c758](https://github.com/scottames/dots/commit/619c7582ce3837197a0509c2f5e9e94257efaf93))
+* **herdr:** match nav up/down to vim keys ([6cb0660](https://github.com/scottames/dots/commit/6cb0660b54b6a7fc76a7e5c7112db14d580d79bf))
+* **herdr:** remap pane nav + conflicting ghostty agent nav ([184e777](https://github.com/scottames/dots/commit/184e777d404847308c73daddc0c50bce382f3d00))
+
+
+### Code Refactoring
+
+* **agents:** trim and scope down AGENTS.md ([32b00aa](https://github.com/scottames/dots/commit/32b00aaf73e8cbbe14ccc52d9571e0124fa4d80f))
+* **yubikey-touch-detector:** run_once_after ([ee3caa1](https://github.com/scottames/dots/commit/ee3caa14942f96dab941f6f7b8e4c45a0203de35))
+
 ## [0.48.0](https://github.com/scottames/dots/compare/v0.47.0...v0.48.0) (2026-07-02)
 
 
