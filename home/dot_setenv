@@ -62,6 +62,7 @@ setenv LC_CTYPE                    "en_US.UTF-8"
 setenv LSCOLORS                    "Gxfxcxdxbxegedabagacad"
 setenv MISE_SHIMS_DIR              "$HOME/.local/share/mise/shims"
 setenv OP_ACCOUNT                  "my.1password.com"
+setenv OPENCODE_ENABLE_EXA         1
 setenv PYENV_ROOT                  "$HOME/.pyenv"
 setenv SHRUG                       "¯\\_(ツ)_/¯"
 setenv SPACECTL_SKIP_STACK_PROMPT  true
