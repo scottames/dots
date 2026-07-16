@@ -27,9 +27,9 @@ package_manager = "bun"
 [tools]
 
 bun = "1.3.14"
-go = "1.26.4"
+go = "1.26.5"
 node = "24.18.0"
-rust = "1.96.1"
+rust = "1.97.0"
 usage = "3.5.4"
 
 ## tools
@@ -45,10 +45,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:ast-grep/ast-grep" = "0.44.1"
 # magical shell history
 #   https://github.com/atuinsh/atuin
-"aqua:atuinsh/atuin" = "18.16.1"
+"aqua:atuinsh/atuin" = "18.17.0"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.60.1"
+"github:aquaproj/aqua" = "v2.61.0"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -57,16 +57,16 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:sharkdp/bat" = "0.26.1"
 # manage your dotfiles across multiple diverse machines, securely
 #   https://github.com/twpayne/chezmoi
-"aqua:twpayne/chezmoi" = "2.70.5"
+"aqua:twpayne/chezmoi" = "2.71.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.202"
+"aqua:anthropics/claude-code" = "2.1.207"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.96.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.29.0"
+"aqua:openai/codex" = "rust-v0.144.1"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.21.7"
@@ -89,11 +89,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:homeport/dyff" = "1.12.0"
 # a modern, maintained replacement for ls
 #   https://github.com/eza-community/eza
-"aqua:eza-community/eza" = "0.23.4"
+"aqua:eza-community/eza" = "0.23.5"
 # A maintained, feature-rich and performance oriented, neofetch like
 # system information tool.
 #  https://github.com/fastfetch-cli/fastfetch
-"aqua:fastfetch-cli/fastfetch" = "2.65.2"
+"aqua:fastfetch-cli/fastfetch" = "2.66.0"
 # better find
 #   https://github.com/sharkdp/fd
 "aqua:sharkdp/fd" = "10.4.2"
@@ -108,7 +108,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:int128/ghcp" = "1.15.3"
 # tui dashboard for GitHub
 #   https://github.com/dlvhdr/gh-dash
-"github:dlvhdr/gh-dash" = "v4.25.0"
+"github:dlvhdr/gh-dash" = "v4.25.2"
 # A Blazingly Fast Terminal UI for GitHub Actions
 #  https://github.com/dlvhdr/gh-enhance
 "github:dlvhdr/gh-enhance" = "0.6.1"
@@ -131,7 +131,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:charmbracelet/gum" = "0.17.0"
 # kubernetes package manager
 #   https://github.com/helm/helm
-"aqua:helm/helm" = "4.2.2"
+"aqua:helm/helm" = "4.2.3"
 # agent multiplexer that lives in your terminal
 #   https://github.com/ogulcancelik/herdr
 "github:ogulcancelik/herdr" = "0.7.3"
@@ -142,7 +142,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
 #   https://github.com/casey/just
-"aqua:casey/just" = "1.55.1"
+"aqua:casey/just" = "1.56.0"
 # kubernetes tui
 #   https://github.com/derailed/k9s
 "aqua:derailed/k9s" = "0.51.0"
@@ -154,7 +154,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.14.19"
+"github:janosmiko/lfk" = "v0.15.6"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -167,10 +167,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:always-further/nono" = "v0.67.1"
 # A new type of shell
 #  https://www.nushell.sh/
-"aqua:nushell/nushell" = "0.114.0"
+"aqua:nushell/nushell" = "0.114.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.17.14"
+"aqua:sst/opencode" = "1.17.18"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -199,7 +199,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:stern/stern" = "1.34.0"
 # a modern Linux distribution built for Kubernetes
 #  https://github.com/siderolabs/talos
-"aqua:siderolabs/talos" = "1.13.5"
+"aqua:siderolabs/talos" = "1.13.6"
 # trunk.io
 #   https://github.com/trunk-io/launcher
 "npm:@trunkio/launcher" = "1.3.4"
@@ -211,10 +211,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:tassiovirginio/try-rs" = "v1.7.11"
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
-"github:agavra/tuicr" = "v0.18.0"
+"github:agavra/tuicr" = "v0.19.0"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.65.0"
+"github:max-sixty/worktrunk" = "v0.67.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -232,8 +232,8 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:LuaLS/lua-language-server" = "3.18.2"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:astral-sh/ruff" = "0.15.20"
-"aqua:astral-sh/uv" = "0.11.27"
+"aqua:astral-sh/ruff" = "0.15.21"
+"aqua:astral-sh/uv" = "0.11.28"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.48.0"
 "aqua:dprint/dprint" = "0.55.1"
@@ -250,11 +250,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:rhysd/actionlint" = "v1.7.12"
 "aqua:rust-lang/rust-analyzer" = "2026-02-16"
 "aqua:segmentio/golines" = "0.13.0"
-"aqua:snyk/cli" = "1.1305.2"
+"aqua:snyk/cli" = "1.1306.0"
 "aqua:tamasfe/taplo" = "0.10.0"
 "aqua:terraform-linters/tflint" = "0.63.1"
 "aqua:tree-sitter/tree-sitter" = "0.26.10"
-"go:golang.org/x/tools/gopls" = "0.22.0"
+"go:golang.org/x/tools/gopls" = "v0.23.0"
 "npm:@commitlint/cli" = "21.2.1"
 "npm:@fsouza/prettierd" = "0.28.0"
 "npm:bash-language-server" = "5.6.0"
@@ -263,7 +263,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
 "npm:markdownlint-cli" = "0.49.0"
-"npm:prettier" = "3.9.4"
+"npm:prettier" = "3.9.5"
 "npm:pyright" = "1.1.411"
 "npm:sql-formatter" = "15.8.2"
 "npm:sql-language-server" = "1.7.1"
@@ -273,9 +273,9 @@ amazon-ecr-credential-helper = "0.12.0"
 "pipx:beautysh" = "6.4.3"
 "pipx:gitlint-core" = "0.19.1"
 "pipx:isort" = "8.0.1"
-"pipx:mypy" = "2.1.0"
+"pipx:mypy" = "2.2.0"
 "pipx:pyproject-flake8" = "7.0.0"
 "pipx:ruff-lsp" = "0.0.62"
-"pipx:semgrep" = "1.168.0"
+"pipx:semgrep" = "1.169.0"
 "pipx:sqlfluff" = "4.2.2"
 "pipx:yamllint" = "1.38.0"
