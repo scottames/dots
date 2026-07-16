@@ -146,6 +146,9 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 
 sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true
+
+[env]
+  BAT_PAGING = "never"
 {{- if lookPath "delta" }}
 
 [diff]
