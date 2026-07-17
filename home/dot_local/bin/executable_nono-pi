@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+# Run Pi inside the pi-local Nono profile while keeping mise-managed tools on
+# PATH. The profile owns stable permissions; this wrapper adds only access that
+# depends on the current invocation.
+#
+# Opinions applied here:
+# - Allow the current directory, Git worktree root, and common Git directory so
+#   Pi works in both normal checkouts and externally managed linked worktrees.
+# - Leave durable worktree lifecycle to tools such as Worktrunk, while keeping
+#   Pi-owned temporary subagent worktrees under ~/.pi/agent/worktrees.
+# - Allow only Herdr's active Unix socket rather than its containing directory.
+# - Launch subagents with pi directly; they inherit this Nono sandbox instead of
+#   creating a nested sandbox.
+
+set -eufo pipefail
+
+# Jiti and pi-subagents need to read files they create, while Nono intentionally
+# grants shared /tmp write-only access.
+export TMPDIR="${HOME}/.pi/agent/tmp"
+mkdir -p "${TMPDIR}"
+chmod 700 "${TMPDIR}"
+
+if ! extension_root="$(cd "${HOME}/.local/share/pi-extensions" && pwd -P)"; then
+  printf 'nono-pi: Pi extension tree is unavailable\n' >&2
+  exit 1
+fi
+
+reject_extension_overlap() {
+  local grant_name="${1}"
+  local grant_path="${2}"
+
+  if [[ ${grant_path} == "${extension_root}" || ${grant_path} == "${extension_root}/"* || ${extension_root} == "${grant_path}/"* ]]; then
+    printf 'nono-pi: refusing writable access to the Pi extension tree through %s: %s\n' "${grant_name}" "${grant_path}" >&2
+    exit 1
+  fi
+}
+
+reject_extension_overlap '--allow-cwd' "$(pwd -P)"
+args=(wrap --profile pi-local --allow-cwd)
+
+if worktree_root=$(git rev-parse --path-format=absolute --show-toplevel 2>/dev/null); then
+  if ! worktree_root="$(cd "${worktree_root}" && pwd -P)"; then
+    printf 'nono-pi: Git worktree root is unavailable\n' >&2
+    exit 1
+  fi
+  reject_extension_overlap 'Git worktree --allow' "${worktree_root}"
+  args+=(--allow "${worktree_root}")
+fi
+
+if common_git_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null); then
+  if ! common_git_dir="$(cd "${common_git_dir}" && pwd -P)"; then
+    printf 'nono-pi: Git common directory is unavailable\n' >&2
+    exit 1
+  fi
+  reject_extension_overlap 'Git common directory --allow' "${common_git_dir}"
+  args+=(--allow "${common_git_dir}")
+fi
+
+if [[ -n ${HERDR_SOCKET_PATH-} ]]; then
+  args+=(--allow-unix-socket "${HERDR_SOCKET_PATH}")
+fi
+
+export PI_SUBAGENTS_WORKTREE_DIR="${HOME}/.pi/agent/worktrees"
+export PI_SUBAGENT_PI_BINARY=pi
+
+exec nono-with-local-path "${args[@]}" -- pi "$@"

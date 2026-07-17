@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+# Installs the reviewed, locked Pi extensions into a staged local build and
+# atomically selects it, so incomplete installs cannot disrupt active sessions.
+set -eufo pipefail
+
+source_dir="{{ joinPath .chezmoi.sourceDir "dot_local/share/private_pi-extensions" }}"
+extensions_dir="{{ joinPath .chezmoi.homeDir ".local/share/pi-extensions" }}"
+cache_dir="{{ joinPath .chezmoi.homeDir ".cache/pi-extensions/npm" }}"
+lock_hash="{{ include "dot_local/share/private_pi-extensions/package-lock.json" | sha256sum }}"
+build_dir="${extensions_dir}/installs/${lock_hash}"
+current_link="${extensions_dir}/current"
+staging_dir=''
+temporary_link=''
+
+cleanup() {
+  [[ -z ${staging_dir} ]] || rm -rf -- "${staging_dir}"
+  [[ -z ${temporary_link} ]] || rm -f -- "${temporary_link}"
+}
+trap cleanup EXIT
+
+[[ -f ${source_dir}/package.json ]] || { printf 'Pi extension manifest is missing\n' >&2; exit 1; }
+[[ -f ${source_dir}/package-lock.json ]] || { printf 'Pi extension lockfile is missing\n' >&2; exit 1; }
+command -v mise >/dev/null 2>&1 || { printf 'mise is unavailable\n' >&2; exit 1; }
+
+mkdir -p "${extensions_dir}/installs" "${cache_dir}"
+
+if [[ ! -d ${build_dir}/node_modules ]]; then
+  [[ ! -e ${build_dir} ]] || { printf 'Pi extension build is incomplete: %s\n' "${build_dir}" >&2; exit 1; }
+  staging_dir="$(mktemp -d "${extensions_dir}/installs/.${lock_hash}.XXXXXX")"
+  cp "${source_dir}/package.json" "${source_dir}/package-lock.json" "${staging_dir}/"
+
+  extension_package_names="$(
+    mise exec -- node - "${staging_dir}/package.json" <<'NODE'
+const fs = require('node:fs');
+
+const manifest = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+for (const name of Object.keys(manifest.dependencies)) console.log(name);
+NODE
+  )"
+  [[ -n ${extension_package_names} ]] || { printf 'Pi extension manifest has no dependencies\n' >&2; exit 1; }
+  mapfile -t extension_packages <<<"${extension_package_names}"
+
+  # Extensions never run lifecycle scripts while this reviewed lock is installed.
+  mise exec -- npm --prefix "${staging_dir}" ci \
+    --registry=https://registry.npmjs.org/ \
+    --legacy-peer-deps \
+    --ignore-scripts \
+    --omit=dev \
+    --no-audit \
+    --no-fund \
+    --cache "${cache_dir}"
+
+  for package in "${extension_packages[@]}"; do
+    [[ -d ${staging_dir}/node_modules/${package} ]] || { printf 'Pi extension is missing after install: %s\n' "${package}" >&2; exit 1; }
+  done
+
+  mv "${staging_dir}" "${build_dir}"
+  staging_dir=''
+fi
+
+# Switch only after a complete build exists; prior builds stay available to running Pi sessions.
+temporary_link="${extensions_dir}/.current.$$"
+ln -s "${build_dir}" "${temporary_link}"
+mise exec -- node -e '
+const fs = require("node:fs");
+fs.renameSync(process.argv[1], process.argv[2]);
+' "${temporary_link}" "${current_link}"
+temporary_link=''
+
+# vi: ft=bash

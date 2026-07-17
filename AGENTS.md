@@ -8,6 +8,10 @@ This is a **dotfiles repository** managed by [chezmoi](https://www.chezmoi.io/).
 The `home/` directory (defined in `.chezmoiroot`) contains templates and files
 that chezmoi uses to manage dotfiles in the user's home directory.
 
+This is personal dotfiles: prefer boring, minimal solutions; do not build
+product-grade abstractions or defenses unless explicitly requested or justified
+by concrete risk.
+
 **Key directories:**
 
 - `home/` - Chezmoi source directory (maps to `~`)

@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# herdr version: {{ index (fromToml (include "../mise/config.toml")).tools "github:ogulcancelik/herdr" }}
+
+# https://patorjk.com/software/taag/#p=display&f=ANSI+Shadow&t=herdr
+echo '
+   ██╗  ██╗███████╗██████╗ ██████╗ ██████╗
+   ██║  ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗
+   ███████║█████╗  ██████╔╝██║  ██║██████╔╝
+   ██╔══██║██╔══╝  ██╔══██╗██║  ██║██╔══██╗
+   ██║  ██║███████╗██║  ██║██████╔╝██║  ██║
+🐏  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝
+'
+
+if ! command -v mise >/dev/null 2>&1; then
+  printf '%s\n' 'warning: mise unavailable; skipping Herdr agent integrations' >&2
+  exit 0
+fi
+
+if ! mise which herdr >/dev/null 2>&1; then
+  printf '%s\n' 'warning: managed herdr unavailable; skipping agent integrations' >&2
+  exit 0
+fi
+
+agents=(pi omp claude codex copilot devin droid kimi opencode kilo hermes qodercli cursor mastracode)
+
+for agent in "${agents[@]}"; do
+  executable="${agent}"
+  if [[ ${agent} == cursor ]]; then
+    executable=cursor-agent
+  fi
+
+  if ! mise which "${executable}" >/dev/null 2>&1; then
+    continue
+  fi
+
+  if [[ ${agent} == pi || ${agent} == omp ]]; then
+    mkdir -p "{{ .chezmoi.homeDir }}/.${agent}/agent/extensions"
+  fi
+
+  mise exec -- herdr integration install "${agent}"
+done
+
+# vi: ft=bash

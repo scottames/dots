@@ -1,0 +1,72 @@
+{{- /* Vendored from always-further/pi@0.0.4 policy source: https://github.com/always-further/nono-packs/blob/pi-v0.0.4/pi/policy.json */ -}}
+{{- $dots := .home.dots -}}
+{{- $home := .chezmoi.homeDir -}}
+{
+  "$schema": "https://raw.githubusercontent.com/always-further/nono/refs/heads/main/crates/nono-cli/data/nono-profile.schema.json",
+  "extends": "default",
+  "meta": {
+    "name": "pi-local",
+    "version": "0.1.0",
+    "description": "Pi with vendored sandbox policy and local mise runtime access"
+  },
+  "groups": {
+    "include": [
+      "node_runtime",
+      "rust_runtime",
+      "python_runtime",
+      "user_caches_macos",
+      "user_caches_linux",
+      "linux_sysfs_read",
+      "nix_runtime",
+      "git_config",
+      "unlink_protection"
+    ]
+  },
+  "security": {
+    "signal_mode": "allow_same_sandbox",
+    "capability_elevation": false
+  },
+  "filesystem": {
+    "allow": [
+      "{{ joinPath $home ".pi" }}"
+    ],
+    "read_file": [
+      "{{ joinPath $home ".config/agents/AGENTS.md" }}"
+    ],
+    "read": [
+      "{{ joinPath $home ".nvm" }}/",
+      "{{ joinPath $home ".agents/skills" }}",
+      "{{ joinPath $dots "mise" }}",
+      "{{ joinPath $home ".cache/mise" }}",
+      "{{ joinPath $home ".config/mise" }}",
+      "{{ joinPath $home ".local/share/pi-extensions" }}",
+      "{{ joinPath $home ".local/share/mise" }}",
+      "{{ joinPath $home ".local/state/mise" }}"
+    ]
+  },
+  "network": {
+    "block": false
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "open_urls": {
+    "allow_origins": [
+      "https://auth.openai.com"
+    ],
+    "allow_localhost": true
+  },
+  "allow_launch_services": true,
+  "rollback": {
+    "exclude_patterns": [
+      "node_modules",
+      ".next",
+      "__pycache__",
+      "target",
+      ".pi"
+    ],
+    "exclude_globs": [
+      "*.tmp.[0-9]*.[0-9]*"
+    ]
+  }
+}

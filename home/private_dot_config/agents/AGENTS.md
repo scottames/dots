@@ -28,8 +28,7 @@ instructions supersede them, except explicit safety constraints.
   explicit approval.
 ## Environment
 - My primary shell is often fish; follow the active harness shell instead.
-- I use Fedora Silverblue with distrobox. Use `distrobox-host-exec` when
-  host access is necessary.
+- I use Fedora Silverblue with distrobox. If you need host access, ask me.
 - Active `scottames` repositories live under `~/src/github.com/scottames/`.
 - Prefer OpenTofu over Terraform unless directed otherwise.
 ## Worktrees And Skills

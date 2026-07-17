@@ -137,6 +137,7 @@ set -gx WT_PRIMARY_WORKTREE_PATH "$DOTS"
 set -gx WT_WORKTREE_PATH "$tmpdir/feature-x"
 set -gx TEST_FUNCTION_DIR "$function_dir"
 set -gx TEST_PATH "$fakebin:"(string join : $PATH)
+set -gx COMMAND_LABEL_SUBSTITUTIONS ''
 set -e HERDR_ENV \
     __herdr_dynamic_title_pane_id \
     __herdr_dynamic_title_tab_id \
@@ -382,6 +383,7 @@ set -gx COMMAND_LABEL_SUBSTITUTIONS 'nono-with-local-path=oc opencode=oc'
 assert_eq (_herdr_command_label nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue) oc 'nono opencode wrapper labels as command substitution'
 assert_eq (_herdr_command_label nono wrap --profile opencode-local --allow-cwd -- opencode --continue) oc 'raw nono opencode wrapper labels as command substitution'
 assert_eq (_herdr_command_label nono-with-local-path wrap --profile claude-code --allow-cwd -- claude) claude 'nono claude wrapper labels as wrapped command'
+assert_eq (_herdr_command_label nono-pi --continue) pi 'nono-pi wrapper labels as pi'
 set -e COMMAND_LABEL_SUBSTITUTIONS
 
 set -l isolated_label (env COMMAND_LABEL_SUBSTITUTIONS='opencode=oc' fish --no-config -c 'source "$argv[1]"; _herdr_command_label nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode' -- "$function_dir/_herdr_command_label.fish")

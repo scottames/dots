@@ -989,6 +989,65 @@ checksum = "sha256:dfdee60f04810c14df310696ce680da7ece599cd27b162f77906adc80d5e9
 url = "https://github.com/dprint/dprint/releases/download/0.55.1/dprint-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/460010450"
 
+[[tools."aqua:earendil-works/pi"]]
+version = "v0.80.10"
+backend = "aqua:earendil-works/pi"
+
+[tools."aqua:earendil-works/pi"."platforms.linux-arm64"]
+checksum = "sha256:dfe4340063dfe27406fa64aac99d904726fac079197c4579b9e8155175d05272"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689738"
+
+[tools."aqua:earendil-works/pi"."platforms.linux-arm64-musl"]
+checksum = "sha256:dfe4340063dfe27406fa64aac99d904726fac079197c4579b9e8155175d05272"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689738"
+
+[tools."aqua:earendil-works/pi"."platforms.linux-x64"]
+checksum = "sha256:ab6604f6c3f3d050783e7abbbdd1f79b775b20f3969833ce9721740685d01e13"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689741"
+
+[tools."aqua:earendil-works/pi"."platforms.linux-x64-baseline"]
+checksum = "sha256:ab6604f6c3f3d050783e7abbbdd1f79b775b20f3969833ce9721740685d01e13"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689741"
+
+[tools."aqua:earendil-works/pi"."platforms.linux-x64-musl"]
+checksum = "sha256:ab6604f6c3f3d050783e7abbbdd1f79b775b20f3969833ce9721740685d01e13"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689741"
+
+[tools."aqua:earendil-works/pi"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:ab6604f6c3f3d050783e7abbbdd1f79b775b20f3969833ce9721740685d01e13"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689741"
+
+[tools."aqua:earendil-works/pi"."platforms.macos-arm64"]
+checksum = "sha256:4406ed227c486f2e3c16cf14f793dc3ad46b5d01bf69135a2424cffa58a9a34b"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689739"
+
+[tools."aqua:earendil-works/pi"."platforms.macos-x64"]
+checksum = "sha256:892b3f385ae6779299c07a25d9280183897fcf755f7226f6b36c70d268f321be"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689740"
+
+[tools."aqua:earendil-works/pi"."platforms.macos-x64-baseline"]
+checksum = "sha256:892b3f385ae6779299c07a25d9280183897fcf755f7226f6b36c70d268f321be"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689740"
+
+[tools."aqua:earendil-works/pi"."platforms.windows-x64"]
+checksum = "sha256:125be42fd277e20e1bb5f366aa88fc32dec924338d610c52b51c5b42b15b66e2"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-windows-x64.zip"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689742"
+
+[tools."aqua:earendil-works/pi"."platforms.windows-x64-baseline"]
+checksum = "sha256:125be42fd277e20e1bb5f366aa88fc32dec924338d610c52b51c5b42b15b66e2"
+url = "https://github.com/earendil-works/pi/releases/download/v0.80.10/pi-windows-x64.zip"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/479689742"
+
 [[tools."aqua:editorconfig-checker/editorconfig-checker"]]
 version = "3.8.0"
 backend = "aqua:editorconfig-checker/editorconfig-checker"
