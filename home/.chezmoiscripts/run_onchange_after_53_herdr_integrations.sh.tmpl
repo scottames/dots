@@ -4,6 +4,10 @@ set -eufo pipefail
 
 # herdr version: {{ index (fromToml (include "../mise/config.toml")).tools "github:ogulcancelik/herdr" }}
 
+yellow='\033[0;33m'
+clear='\033[0m'
+warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}" >&2; }
+
 # https://patorjk.com/software/taag/#p=display&f=ANSI+Shadow&t=herdr
 echo '
    ██╗  ██╗███████╗██████╗ ██████╗ ██████╗
@@ -15,12 +19,12 @@ echo '
 '
 
 if ! command -v mise >/dev/null 2>&1; then
-  printf '%s\n' 'warning: mise unavailable; skipping Herdr agent integrations' >&2
+  warn 'mise unavailable; skipping Herdr agent integrations'
   exit 0
 fi
 
 if ! mise which herdr >/dev/null 2>&1; then
-  printf '%s\n' 'warning: managed herdr unavailable; skipping agent integrations' >&2
+  warn 'managed herdr unavailable; skipping agent integrations'
   exit 0
 fi
 
@@ -40,7 +44,9 @@ for agent in "${agents[@]}"; do
     mkdir -p "{{ .chezmoi.homeDir }}/.${agent}/agent/extensions"
   fi
 
-  mise exec -- herdr integration install "${agent}"
+  if ! mise exec -- herdr integration install "${agent}"; then
+    warn "failed to install Herdr ${agent} integration; continuing"
+  fi
 done
 
 # vi: ft=bash
