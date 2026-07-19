@@ -153,6 +153,14 @@
     stripComponents = 2
     include = ["*/themes/*.tmTheme"]
 
+[".pi/agent/themes"]
+    type = "archive"
+    url = "https://github.com/scarcekoi/pi/archive/main.tar.gz"
+    exact = true
+    refreshPeriod = "168h"
+    stripComponents = 3
+    include = ["*/themes/**/*.json"]
+
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
 #  │ | pub                                                    │
