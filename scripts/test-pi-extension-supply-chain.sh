@@ -12,13 +12,14 @@ installer="${repo_root}/home/.chezmoiscripts/run_before_52_pi_extensions.sh.tmpl
 settings="${repo_root}/home/private_dot_pi/agent/settings.json.tmpl"
 profile="${repo_root}/home/private_dot_config/nono/profiles/pi-local.json.tmpl"
 wrapper="${repo_root}/home/dot_local/bin/executable_nono-pi"
+local_path_wrapper="${repo_root}/home/dot_local/bin/executable_nono-with-local-path"
 
 fail() {
   printf 'ASSERTION FAILED: %s\n' "$1" >&2
   exit 1
 }
 
-for required in "${manifest}" "${lockfile}" "${installer}" "${settings}" "${profile}" "${wrapper}"; do
+for required in "${manifest}" "${lockfile}" "${installer}" "${settings}" "${profile}" "${wrapper}" "${local_path_wrapper}"; do
   [[ -f ${required} ]] || fail "missing ${required#"${repo_root}/"}"
 done
 
@@ -74,14 +75,31 @@ const root = `${process.env.HOME_DIR}/.local/share/pi-extensions`;
 const manifest = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 
 assert.equal(settings.defaultProjectTrust, 'ask');
+assert.ok(!Object.hasOwn(settings, 'npmCommand'));
 assert.deepEqual(
   [...settings.packages].sort(),
   Object.keys(manifest.dependencies)
     .map((name) => `${root}/current/node_modules/${name}`)
     .sort(),
 );
+assert.equal(profile.extends, 'pi');
 assert.ok(profile.filesystem.read.includes(root));
 assert.ok(!profile.filesystem.allow.includes(root));
+assert.ok(profile.filesystem.read.includes('/proc'));
+assert.ok(profile.filesystem.read.includes(`${process.env.HOME_DIR}/.config/mise`));
+assert.ok(profile.filesystem.read_file.includes(`${process.env.HOME_DIR}/.config/agents/AGENTS.md`));
+assert.ok(profile.filesystem.allow.includes(`${process.env.HOME_DIR}/.npm`));
+assert.ok(!Object.hasOwn(profile, 'groups'));
+assert.deepEqual(profile.security, {
+  signal_mode: 'allow_same_sandbox',
+  capability_elevation: false,
+});
+assert.ok(!Object.hasOwn(profile, 'network'));
+assert.ok(!Object.hasOwn(profile, 'workdir'));
+assert.ok(!Object.hasOwn(profile, 'open_urls'));
+assert.ok(!Object.hasOwn(profile, 'allow_launch_services'));
+assert.ok(!Object.hasOwn(profile, 'rollback'));
+assert.ok(!Object.hasOwn(profile, 'undo'));
 NODE
 
 extensions_dir="${fixture_home}/.local/share/pi-extensions"
@@ -120,9 +138,13 @@ cat >"${stub_bin}/nono-with-local-path" <<'STUB'
 printf '%s\n' "${TMPDIR-}" >"${NONO_TMPDIR_MARKER}"
 [[ -z "${NONO_REACHED_MARKER-}" ]] || touch "${NONO_REACHED_MARKER}"
 STUB
-cat >"${stub_bin}/git" <<'STUB'
+real_git="$(command -v git)"
+cat >"${stub_bin}/git" <<STUB
 #!/usr/bin/env bash
-exit 1
+if [[ \${STUB_GIT_FAIL-} == 1 ]]; then
+  exit 1
+fi
+exec "${real_git}" "\$@"
 STUB
 cat >"${stub_bin}/realpath" <<'STUB'
 #!/usr/bin/env bash
@@ -130,10 +152,62 @@ exit 127
 STUB
 chmod +x "${stub_bin}/mise" "${stub_bin}/nono-with-local-path" "${stub_bin}/git" "${stub_bin}/realpath"
 
+local_path_capture="${fixture_dir}/local-path-args"
+cat >"${stub_bin}/nono" <<'STUB'
+#!/usr/bin/env bash
+printf '%s\0' "$@" >"${NONO_ARGS_CAPTURE}"
+STUB
+chmod +x "${stub_bin}/nono"
+
+local_path_repo_parent="${fixture_dir}/git-parent"
+local_path_repo="${local_path_repo_parent}/main"
+mkdir -p "${local_path_repo}/nested" "${fixture_dir}/project"
+git -C "${local_path_repo}" init --quiet
+(
+  cd "${local_path_repo}/nested"
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi --version
+)
+python - "${local_path_capture}" "${local_path_repo_parent}" <<'PY'
+import sys
+from pathlib import Path
+
+args = Path(sys.argv[1]).read_bytes().split(b'\0')[:-1]
+expected_parent = sys.argv[2].encode()
+assert b'--allow-cwd' in args, args
+allow_index = args.index(b'--allow')
+separator_index = args.index(b'--')
+assert allow_index < separator_index, args
+assert args[allow_index + 1] == expected_parent, args
+PY
+
+(
+  cd "${local_path_repo}/nested"
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local -- pi --version
+)
+python - "${local_path_capture}" <<'PY'
+import sys
+from pathlib import Path
+
+args = Path(sys.argv[1]).read_bytes().split(b'\0')[:-1]
+assert b'--allow' not in args, args
+PY
+
+(
+  cd "${local_path_repo}/nested"
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd --allow "${local_path_repo_parent}" -- pi --version
+)
+python - "${local_path_capture}" <<'PY'
+import sys
+from pathlib import Path
+
+args = Path(sys.argv[1]).read_bytes().split(b'\0')[:-1]
+assert args.count(b'--allow') == 1, args
+PY
+
 nono_tmpdir_marker="${fixture_dir}/nono-tmpdir"
 (
   cd "${fixture_dir}/project"
-  BASH_ENV=/dev/null HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" bash "${wrapper}"
+  BASH_ENV=/dev/null HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" STUB_GIT_FAIL=1 bash "${wrapper}"
 )
 expected_tmpdir="${fixture_home}/.pi/agent/tmp"
 [[ $(<"${nono_tmpdir_marker}") == "${expected_tmpdir}" ]] || fail 'wrapper does not use a private Pi temp directory'

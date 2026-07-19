@@ -13,10 +13,74 @@ path_without_overrides=${path_without_overrides%:}
 
 export MISE_SHIMS_DIR="${mise_shims_dir}"
 
+args=("$@")
+
+insert_allow_before_command() {
+  local allowed_path="${1}"
+  local inserted=0
+  local arg
+  local new_args=()
+
+  for arg in "${args[@]}"; do
+    if [[ ${inserted} == 0 && ${arg} == "--" ]]; then
+      new_args+=(--allow "${allowed_path}")
+      inserted=1
+    fi
+    new_args+=("${arg}")
+  done
+
+  if [[ ${inserted} == 0 ]]; then
+    new_args+=(--allow "${allowed_path}")
+  fi
+
+  args=("${new_args[@]}")
+}
+
+allow_git_worktree_parent() {
+  local already_allowed=0
+  local allow_cwd=0
+  local arg
+  local i
+  local worktree_root
+  local worktree_parent
+
+  for arg in "${args[@]}"; do
+    if [[ ${arg} == "--allow-cwd" ]]; then
+      allow_cwd=1
+    fi
+  done
+  if [[ ${allow_cwd} != 1 ]]; then
+    return 0
+  fi
+
+  if ! worktree_root=$(git rev-parse --path-format=absolute --show-toplevel 2>/dev/null); then
+    return 0
+  fi
+  if ! worktree_root=$(cd "${worktree_root}" && pwd -P); then
+    return 0
+  fi
+  if ! worktree_parent=$(cd "$(dirname "${worktree_root}")" && pwd -P); then
+    return 0
+  fi
+
+  for ((i = 0; i < ${#args[@]}; i++)); do
+    if [[ ${args[i]} == "--allow" && ${args[i + 1]-} == "${worktree_parent}" ]]; then
+      already_allowed=1
+    fi
+  done
+  if [[ ${already_allowed} == 1 ]]; then
+    return 0
+  fi
+
+  insert_allow_before_command "${worktree_parent}"
+}
+
+allow_git_worktree_parent
+
 if [[ -n ${path_without_overrides} ]]; then
   export PATH="${home_local_bin}:${mise_shims_dir}:${path_without_overrides}"
 else
   export PATH="${home_local_bin}:${mise_shims_dir}"
 fi
 
-exec nono "$@"
+exec nono "${args[@]}"
