@@ -3347,49 +3347,49 @@ url = "https://github.com/tassiovirginio/try-rs/releases/download/v1.7.11/try-rs
 url_api = "https://api.github.com/repos/tassiovirginio/try-rs/releases/assets/445148368"
 
 [[tools."github:thiagokokada/gh-gfm-preview"]]
-version = "1.2.1"
+version = "1.3.0"
 backend = "github:thiagokokada/gh-gfm-preview"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-arm64"]
-checksum = "sha256:5967bb6653f72f1142f25d2a55e3c5e616b62efb945e841fbc3b3d9b4bc19f04"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/linux-arm64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673454"
+checksum = "sha256:0336dd65804e197c56b80d3233e8b89c0eec1cbe7cceef92c33a8c18c3db4bf6"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-arm64"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287760"
 provenance = "github-attestations"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-arm64-musl"]
-checksum = "sha256:5967bb6653f72f1142f25d2a55e3c5e616b62efb945e841fbc3b3d9b4bc19f04"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/linux-arm64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673454"
+checksum = "sha256:0336dd65804e197c56b80d3233e8b89c0eec1cbe7cceef92c33a8c18c3db4bf6"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-arm64"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287760"
 provenance = "github-attestations"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-x64"]
-checksum = "sha256:d354a7a2ba08a62dc28baf1c55bd52450bd5d45abc0f7e92fa49270693ad33cb"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/linux-amd64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673451"
+checksum = "sha256:d9e08a1c948aecc9c74ad3a4f16a550ac3b360536109f809bbe30964f844569c"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-amd64"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287759"
 provenance = "github-attestations"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-x64-musl"]
-checksum = "sha256:d354a7a2ba08a62dc28baf1c55bd52450bd5d45abc0f7e92fa49270693ad33cb"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/linux-amd64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673451"
+checksum = "sha256:d9e08a1c948aecc9c74ad3a4f16a550ac3b360536109f809bbe30964f844569c"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-amd64"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287759"
 provenance = "github-attestations"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.macos-arm64"]
-checksum = "sha256:7409e3af827c0d00d24a7eaac2622257bec9c6917d75df18f40eb9ae275cc736"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/darwin-arm64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673413"
+checksum = "sha256:f6c0521552b32902128bf8693d9b396af8188a98c44f40d8ffd7fd85febefbcd"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/darwin-arm64"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287726"
 provenance = "github-attestations"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.macos-x64"]
-checksum = "sha256:2edf89e33602291019671f749a38a420d8318fcfc775ce3a123891f5bad70be6"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/darwin-amd64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673412"
+checksum = "sha256:de2f4fa5438c2022844fea7279135eebe3c0c655fe371cce714971533d797b04"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/darwin-amd64"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287727"
 provenance = "github-attestations"
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.windows-x64"]
-checksum = "sha256:d423a5300238bfad7c31810d61c2a0831035a6bb24c3ecd8dd28363c25db15d6"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.2.1/windows-amd64.exe"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/428673469"
+checksum = "sha256:90b69166f46e86226b0b8b0016e9bbaf9882988ba8c9b5ec0ad6cbb34428a719"
+url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/windows-amd64.exe"
+url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287782"
 provenance = "github-attestations"
 
 [[tools."github:vitor-mariano/regex-tui"]]
