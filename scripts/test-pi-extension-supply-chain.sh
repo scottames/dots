@@ -111,13 +111,14 @@ ln -s "${old_build}" "${extensions_dir}/current"
 installer_fixture="${fixture_dir}/installer.sh"
 render "${installer}" >"${installer_fixture}"
 installer_contents="$(<"${installer_fixture}")"
+installer_template_contents="$(<"${installer}")"
 [[ ${installer_contents} == *'mise exec -- npm'* ]] || fail 'installer does not use the Mise-managed npm version'
 [[ ${installer_contents} == *'mise exec -- node'* ]] || fail 'installer does not use the Mise-managed Node version'
 [[ ${installer_contents} == *"mise exec -- node - \"\${staging_dir}/package.json\""* ]] || fail 'installer does not validate the staged manifest'
 [[ ${installer_contents} != *'node@'* ]] || fail 'installer pins a Node version outside Mise configuration'
 [[ ${installer_contents} == *'fs.renameSync('* ]] || fail 'installer does not atomically replace current'
 for package in "${extension_packages[@]}"; do
-  [[ ${installer_contents} != *"${package}"* ]] || fail "installer duplicates manifest package ${package}"
+  [[ ${installer_template_contents} != *"${package}"* ]] || fail "installer duplicates manifest package ${package}"
 done
 
 package_list="${fixture_dir}/packages"
@@ -135,7 +136,7 @@ exit 1
 STUB
 cat >"${stub_bin}/nono-with-local-path" <<'STUB'
 #!/usr/bin/env bash
-printf '%s\n' "${TMPDIR-}" >"${NONO_TMPDIR_MARKER}"
+printf '%s\n%s\n%s\n' "${TMPDIR-}" "${PI_SUBAGENTS_WORKTREE_DIR-}" "${PI_SUBAGENT_PI_BINARY-}" >"${NONO_TMPDIR_MARKER}"
 [[ -z "${NONO_REACHED_MARKER-}" ]] || touch "${NONO_REACHED_MARKER}"
 STUB
 real_git="$(command -v git)"
@@ -210,7 +211,10 @@ nono_tmpdir_marker="${fixture_dir}/nono-tmpdir"
   BASH_ENV=/dev/null HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" STUB_GIT_FAIL=1 bash "${wrapper}"
 )
 expected_tmpdir="${fixture_home}/.pi/agent/tmp"
-[[ $(<"${nono_tmpdir_marker}") == "${expected_tmpdir}" ]] || fail 'wrapper does not use a private Pi temp directory'
+mapfile -t wrapper_environment <"${nono_tmpdir_marker}"
+[[ ${wrapper_environment[0]} == "${expected_tmpdir}" ]] || fail 'wrapper does not use a private Pi temp directory'
+[[ -z ${wrapper_environment[1]} ]] || fail 'wrapper sets PI_SUBAGENTS_WORKTREE_DIR'
+[[ -z ${wrapper_environment[2]} ]] || fail 'wrapper sets PI_SUBAGENT_PI_BINARY'
 node - "${expected_tmpdir}" <<'NODE'
 const assert = require('node:assert/strict');
 const fs = require('node:fs');

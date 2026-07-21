@@ -7,15 +7,11 @@
 # Opinions applied here:
 # - Allow the current directory, Git worktree root, and common Git directory so
 #   Pi works in both normal checkouts and externally managed linked worktrees.
-# - Leave durable worktree lifecycle to tools such as Worktrunk, while keeping
-#   Pi-owned temporary subagent worktrees under ~/.pi/agent/worktrees.
 # - Allow only Herdr's active Unix socket rather than its containing directory.
-# - Launch subagents with pi directly; they inherit this Nono sandbox instead of
-#   creating a nested sandbox.
 
 set -eufo pipefail
 
-# Jiti and pi-subagents need to read files they create, while Nono intentionally
+# Pi extensions need to read their temporary files, while Nono intentionally
 # grants shared /tmp write-only access.
 export TMPDIR="${HOME}/.pi/agent/tmp"
 mkdir -p "${TMPDIR}"
@@ -60,8 +56,5 @@ fi
 if [[ -n ${HERDR_SOCKET_PATH-} ]]; then
   args+=(--allow-unix-socket "${HERDR_SOCKET_PATH}")
 fi
-
-export PI_SUBAGENTS_WORKTREE_DIR="${HOME}/.pi/agent/worktrees"
-export PI_SUBAGENT_PI_BINARY=pi
 
 exec nono-with-local-path "${args[@]}" -- pi "$@"
