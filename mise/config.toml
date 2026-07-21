@@ -29,8 +29,8 @@ package_manager = "bun"
 bun = "1.3.14"
 go = "1.26.5"
 node = "24.18.0"
-rust = "1.97.0"
-usage = "3.5.4"
+rust = "1.97.1"
+usage = "3.5.5"
 
 ## tools
 
@@ -39,16 +39,16 @@ usage = "3.5.4"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.31.1"
+"aqua:vercel-labs/agent-browser" = "0.32.1"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.44.1"
 # magical shell history
 #   https://github.com/atuinsh/atuin
-"aqua:atuinsh/atuin" = "18.17.0"
+"aqua:atuinsh/atuin" = "18.17.1"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.61.0"
+"github:aquaproj/aqua" = "v2.62.0"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -60,13 +60,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.71.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.207"
+"aqua:anthropics/claude-code" = "2.1.212"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.96.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.144.1"
+"aqua:openai/codex" = "rust-v0.144.5"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.21.7"
@@ -137,7 +137,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "0.7.4"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.17.0"
+"github:modem-dev/hunk" = "v0.17.1"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -150,11 +150,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:kubernetes/kubectl" = "1.35.3"
 # simple terminal ui for git commands
 #   https://github.com/jesseduffield/lazygit
-"aqua:jesseduffield/lazygit" = "0.63.0"
+"aqua:jesseduffield/lazygit" = "0.63.1"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.15.6"
+"github:janosmiko/lfk" = "v0.15.9"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -164,13 +164,13 @@ amazon-ecr-credential-helper = "0.12.0"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/always-further/nono
-"github:always-further/nono" = "v0.67.1"
+"github:always-further/nono" = "v0.68.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.114.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.17.18"
+"aqua:sst/opencode" = "1.18.3"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -190,7 +190,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:vitor-mariano/regex-tui" = "0.7.0"
 # better grep
 #   https://github.com/BurntSushi/ripgrep
-"aqua:BurntSushi/ripgrep" = "15.1.0"
+"aqua:BurntSushi/ripgrep" = "15.2.0"
 # Spacelift client and CLI
 #   https://github.com/spacelift-io/spacectl
 "aqua:spacelift-io/spacectl" = "1.24.0"
@@ -214,10 +214,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:tassiovirginio/try-rs" = "v1.7.11"
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
-"github:agavra/tuicr" = "v0.19.0"
+"github:agavra/tuicr" = "v0.19.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.67.0"
+"github:max-sixty/worktrunk" = "v0.68.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -235,11 +235,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:LuaLS/lua-language-server" = "3.18.2"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:astral-sh/ruff" = "0.15.21"
-"aqua:astral-sh/uv" = "0.11.28"
+"aqua:astral-sh/ruff" = "0.15.22"
+"aqua:astral-sh/uv" = "0.11.29"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.48.0"
-"aqua:dprint/dprint" = "0.55.1"
+"aqua:dprint/dprint" = "0.55.2"
 "aqua:editorconfig-checker/editorconfig-checker" = "3.8.0"
 "aqua:golangci/golangci-lint" = "2.12.2"
 "aqua:google/yamlfmt" = "0.21.0"
@@ -253,10 +253,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:rhysd/actionlint" = "v1.7.12"
 "aqua:rust-lang/rust-analyzer" = "2026-02-16"
 "aqua:segmentio/golines" = "0.13.0"
-"aqua:snyk/cli" = "1.1306.0"
+"aqua:snyk/cli" = "1.1306.1"
 "aqua:tamasfe/taplo" = "0.10.0"
 "aqua:terraform-linters/tflint" = "0.63.1"
-"aqua:tree-sitter/tree-sitter" = "0.26.10"
+"aqua:tree-sitter/tree-sitter" = "0.26.11"
 "go:golang.org/x/tools/gopls" = "v0.23.0"
 "npm:@commitlint/cli" = "21.2.1"
 "npm:@fsouza/prettierd" = "0.28.0"
@@ -265,7 +265,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:dockerfile-language-server-nodejs" = "0.15.0"
 "npm:jsonlint" = "1.6.3"
 "npm:markdown-toc" = "1.2.0"
-"npm:markdownlint-cli" = "0.49.0"
+"npm:markdownlint-cli" = "0.49.1"
 "npm:prettier" = "3.9.5"
 "npm:pyright" = "1.1.411"
 "npm:sql-formatter" = "15.8.2"
@@ -276,9 +276,9 @@ amazon-ecr-credential-helper = "0.12.0"
 "pipx:beautysh" = "6.4.3"
 "pipx:gitlint-core" = "0.19.1"
 "pipx:isort" = "8.0.1"
-"pipx:mypy" = "2.2.0"
+"pipx:mypy" = "2.3.0"
 "pipx:pyproject-flake8" = "7.0.0"
 "pipx:ruff-lsp" = "0.0.62"
-"pipx:semgrep" = "1.169.0"
+"pipx:semgrep" = "1.170.0"
 "pipx:sqlfluff" = "4.2.2"
 "pipx:yamllint" = "1.38.0"
