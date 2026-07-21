@@ -3368,19 +3368,7 @@ url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/l
 url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287759"
 provenance = "github-attestations"
 
-[tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-x64-baseline"]
-checksum = "sha256:d9e08a1c948aecc9c74ad3a4f16a550ac3b360536109f809bbe30964f844569c"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-amd64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287759"
-provenance = "github-attestations"
-
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-x64-musl"]
-checksum = "sha256:d9e08a1c948aecc9c74ad3a4f16a550ac3b360536109f809bbe30964f844569c"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-amd64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287759"
-provenance = "github-attestations"
-
-[tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:d9e08a1c948aecc9c74ad3a4f16a550ac3b360536109f809bbe30964f844569c"
 url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/linux-amd64"
 url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287759"
@@ -3398,19 +3386,7 @@ url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/d
 url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287727"
 provenance = "github-attestations"
 
-[tools."github:thiagokokada/gh-gfm-preview"."platforms.macos-x64-baseline"]
-checksum = "sha256:de2f4fa5438c2022844fea7279135eebe3c0c655fe371cce714971533d797b04"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/darwin-amd64"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287727"
-provenance = "github-attestations"
-
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.windows-x64"]
-checksum = "sha256:90b69166f46e86226b0b8b0016e9bbaf9882988ba8c9b5ec0ad6cbb34428a719"
-url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/windows-amd64.exe"
-url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287782"
-provenance = "github-attestations"
-
-[tools."github:thiagokokada/gh-gfm-preview"."platforms.windows-x64-baseline"]
 checksum = "sha256:90b69166f46e86226b0b8b0016e9bbaf9882988ba8c9b5ec0ad6cbb34428a719"
 url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.0/windows-amd64.exe"
 url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/480287782"
