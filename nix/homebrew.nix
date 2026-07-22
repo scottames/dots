@@ -41,17 +41,15 @@
     brews = [
       "docker-compose"
       "docker-credential-helper"
+      "eza"
       "lima"
+      "try-rs"
     ];
 
     casks = [
       "1password"
       "1password-cli"
       "akiflow"
-      "chatgpt"
-      "claude"
-      "cmux"
-      "discord"
       "docker-desktop"
       "firefox"
       "ghostty"
@@ -62,7 +60,6 @@
       "raycast"
       "slack"
       "tailscale-app"
-      "twingate"
       "visual-studio-code"
       "vlc"
       "zen"

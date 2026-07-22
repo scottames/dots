@@ -89,7 +89,8 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:homeport/dyff" = "1.12.0"
 # a modern, maintained replacement for ls
 #   https://github.com/eza-community/eza
-"aqua:eza-community/eza" = "0.23.5"
+# Upstream publishes Linux and Windows binaries only; Homebrew provides macOS.
+"aqua:eza-community/eza" = { version = "0.23.5", os = ["linux", "windows/x64"] }
 # A maintained, feature-rich and performance oriented, neofetch like
 # system information tool.
 #  https://github.com/fastfetch-cli/fastfetch
@@ -211,7 +212,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:alexpasmantier/television" = "0.15.9"
 # workspace manager for your temporary experiments
 #  https://github.com/tassiovirginio/try-rs
-"github:tassiovirginio/try-rs" = "v1.7.11"
+# Upstream publishes Linux x64 and Windows x64 binaries only; Homebrew provides macOS.
+"github:tassiovirginio/try-rs" = { version = "v1.7.11", os = [
+  "linux/x64",
+  "windows/x64",
+] }
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
 "github:agavra/tuicr" = "v0.19.1"
