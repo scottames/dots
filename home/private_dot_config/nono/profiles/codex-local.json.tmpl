@@ -1,0 +1,9 @@
+{{- /* extends "codex" must match the base profile installed by the
+       nolabs-ai/codex Nono pack (nono pull nolabs-ai/codex). */ -}}
+{{- includeTemplate "nono-local-profile" (dict
+      "ctx" .
+      "extends" "codex"
+      "name" "codex-local"
+      "version" "0.1.0"
+      "description" "Codex with local mise runtime access and external git include access"
+) -}}

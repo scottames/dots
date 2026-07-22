@@ -4406,59 +4406,59 @@ checksum = "sha256:3116f4e82aaf6ce71b0496cbf535f4b2c0e457f785fc6bdf9cf45094261a4
 url = "https://github.com/agavra/tuicr/releases/download/v0.19.1/tuicr-0.19.1-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/476000073"
 
-[[tools."github:always-further/nono"]]
+[[tools."github:nolabs-ai/nono"]]
 version = "0.69.0"
-backend = "github:always-further/nono"
+backend = "github:nolabs-ai/nono"
 
-[tools."github:always-further/nono"."platforms.linux-arm64"]
+[tools."github:nolabs-ai/nono"."platforms.linux-arm64"]
 checksum = "sha256:adc073f5cda01411c4667345f4f04dd4002fdab4acc1c344bd86dae1de219160"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-aarch64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823025"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.linux-arm64-musl"]
+[tools."github:nolabs-ai/nono"."platforms.linux-arm64-musl"]
 checksum = "sha256:adc073f5cda01411c4667345f4f04dd4002fdab4acc1c344bd86dae1de219160"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-aarch64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823025"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.linux-x64"]
+[tools."github:nolabs-ai/nono"."platforms.linux-x64"]
 checksum = "sha256:3c79fb0dc2a9171b7d441026965666f5652c42f67bc5710a27d8e9f92822f619"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823028"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.linux-x64-baseline"]
+[tools."github:nolabs-ai/nono"."platforms.linux-x64-baseline"]
 checksum = "sha256:3c79fb0dc2a9171b7d441026965666f5652c42f67bc5710a27d8e9f92822f619"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823028"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.linux-x64-musl"]
+[tools."github:nolabs-ai/nono"."platforms.linux-x64-musl"]
 checksum = "sha256:3c79fb0dc2a9171b7d441026965666f5652c42f67bc5710a27d8e9f92822f619"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823028"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.linux-x64-musl-baseline"]
+[tools."github:nolabs-ai/nono"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:3c79fb0dc2a9171b7d441026965666f5652c42f67bc5710a27d8e9f92822f619"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823028"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.macos-arm64"]
+[tools."github:nolabs-ai/nono"."platforms.macos-arm64"]
 checksum = "sha256:81ff4eff65a976cda102ef81ee96ff9f8668f79880fbeb6bfe0f9035df903f05"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-aarch64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823035"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.macos-x64"]
+[tools."github:nolabs-ai/nono"."platforms.macos-x64"]
 checksum = "sha256:e1f04e96f41daf4bf01494e01b2f9cd84a43b2799fc090adf62b99fbc847ca24"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-x86_64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823024"
 provenance = "github-attestations"
 
-[tools."github:always-further/nono"."platforms.macos-x64-baseline"]
+[tools."github:nolabs-ai/nono"."platforms.macos-x64-baseline"]
 checksum = "sha256:e1f04e96f41daf4bf01494e01b2f9cd84a43b2799fc090adf62b99fbc847ca24"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.69.0/nono-v0.69.0-x86_64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/483823024"

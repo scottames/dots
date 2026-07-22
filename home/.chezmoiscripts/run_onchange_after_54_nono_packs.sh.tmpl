@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# Install the Nono base packs that the *-local profiles extend. Reruns whenever
+# nono itself is bumped (idempotent: nono skips already-installed packs).
+# nono version: {{ index (fromToml (include "../mise/config.toml")).tools "github:nolabs-ai/nono" }}
+
+magenta='\033[0;35m'
+yellow='\033[0;33m'
+clear='\033[0m'
+info() { printf "${magenta}%s${clear}\n" "${@}"; }
+warn() { printf "\n${yellow}⚠  %s${clear}\n\n" "${@}" >&2; }
+
+# https://patorjk.com/software/taag/#p=display&f=ANSI+Shadow&t=nono
+echo '
+███╗   ██╗ ██████╗ ███╗   ██╗ ██████╗
+████╗  ██║██╔═══██╗████╗  ██║██╔═══██╗
+██╔██╗ ██║██║   ██║██╔██╗ ██║██║   ██║
+██║╚██╗██║██║   ██║██║╚██╗██║██║   ██║
+██║ ╚████║╚██████╔╝██║ ╚████║╚██████╔╝
+╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
+'
+
+if ! command -v mise >/dev/null 2>&1; then
+  warn 'mise unavailable; skipping Nono pack install'
+  exit 0
+fi
+
+if ! mise which nono >/dev/null 2>&1; then
+  warn 'managed nono unavailable; skipping Nono pack install'
+  exit 0
+fi
+
+packs=(
+  nolabs-ai/opencode
+  nolabs-ai/pi
+  nolabs-ai/claude
+  nolabs-ai/codex
+)
+
+for pack in "${packs[@]}"; do
+  info "nono pull ${pack}"
+  if ! mise exec -- nono pull --silent "${pack}"; then
+    warn "failed to pull Nono pack ${pack}; continuing"
+  fi
+done
+
+# vi: ft=bash

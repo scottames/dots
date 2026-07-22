@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2310 # Functions in conditions are intentional
+
+# Run a program inside Nono while keeping mise-managed tools on PATH, and add the
+# per-invocation grants every local agent wrapper needs:
+# - Git worktree root, its parent (sibling-worktree layouts), and the common Git
+#   directory, so Git works in normal checkouts and linked worktrees alike.
+# - The active Herdr control socket when running inside Herdr.
+# Grants are only added when the caller opts into CWD access (--allow-cwd).
+#
+# NONO_REJECT_OVERLAP (optional): if set to a directory, refuse to grant any path
+# that overlaps it. nono-pi uses this to keep the Pi extension tree out of the
+# writable worktree/cwd grants.
 
 set -eufo pipefail
 
@@ -15,67 +27,105 @@ export MISE_SHIMS_DIR="${mise_shims_dir}"
 
 args=("$@")
 
-insert_allow_before_command() {
-  local allowed_path="${1}"
+reject_root=""
+if [[ -n ${NONO_REJECT_OVERLAP-} ]]; then
+  if ! reject_root=$(cd "${NONO_REJECT_OVERLAP}" && pwd -P); then
+    printf 'nono-with-local-path: NONO_REJECT_OVERLAP is unavailable: %s\n' "${NONO_REJECT_OVERLAP}" >&2
+    exit 1
+  fi
+fi
+
+reject_if_overlap() {
+  local grant_name="${1}"
+  local grant_path="${2}"
+
+  if [[ -z ${reject_root} ]]; then
+    return 0
+  fi
+  if [[ ${grant_path} == "${reject_root}" || ${grant_path} == "${reject_root}/"* || ${reject_root} == "${grant_path}/"* ]]; then
+    printf 'nono-with-local-path: refusing access overlapping %s through %s: %s\n' "${reject_root}" "${grant_name}" "${grant_path}" >&2
+    exit 1
+  fi
+}
+
+# Insert `<flag> <value>` immediately before the first `--`, else append.
+insert_flag_before_command() {
+  local flag="${1}"
+  local value="${2}"
   local inserted=0
   local arg
   local new_args=()
 
   for arg in "${args[@]}"; do
     if [[ ${inserted} == 0 && ${arg} == "--" ]]; then
-      new_args+=(--allow "${allowed_path}")
+      new_args+=("${flag}" "${value}")
       inserted=1
     fi
     new_args+=("${arg}")
   done
 
   if [[ ${inserted} == 0 ]]; then
-    new_args+=(--allow "${allowed_path}")
+    new_args+=("${flag}" "${value}")
   fi
 
   args=("${new_args[@]}")
 }
 
-allow_git_worktree_parent() {
-  local already_allowed=0
-  local allow_cwd=0
+has_flag() {
+  local needle="${1}"
   local arg
-  local i
-  local worktree_root
-  local worktree_parent
-
   for arg in "${args[@]}"; do
-    if [[ ${arg} == "--allow-cwd" ]]; then
-      allow_cwd=1
+    if [[ ${arg} == "${needle}" ]]; then
+      return 0
     fi
   done
-  if [[ ${allow_cwd} != 1 ]]; then
-    return 0
-  fi
-
-  if ! worktree_root=$(git rev-parse --path-format=absolute --show-toplevel 2>/dev/null); then
-    return 0
-  fi
-  if ! worktree_root=$(cd "${worktree_root}" && pwd -P); then
-    return 0
-  fi
-  if ! worktree_parent=$(cd "$(dirname "${worktree_root}")" && pwd -P); then
-    return 0
-  fi
-
-  for ((i = 0; i < ${#args[@]}; i++)); do
-    if [[ ${args[i]} == "--allow" && ${args[i + 1]-} == "${worktree_parent}" ]]; then
-      already_allowed=1
-    fi
-  done
-  if [[ ${already_allowed} == 1 ]]; then
-    return 0
-  fi
-
-  insert_allow_before_command "${worktree_parent}"
+  return 1
 }
 
-allow_git_worktree_parent
+already_allowed() {
+  local candidate="${1}"
+  local i
+  for ((i = 0; i < ${#args[@]}; i++)); do
+    if [[ ${args[i]} == "--allow" && ${args[i + 1]-} == "${candidate}" ]]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
+allow_dir() {
+  local grant_name="${1}"
+  local dir="${2}"
+
+  reject_if_overlap "${grant_name}" "${dir}"
+  if already_allowed "${dir}"; then
+    return 0
+  fi
+  insert_flag_before_command --allow "${dir}"
+}
+
+# Git-aware grants only make sense when CWD access is requested.
+if has_flag --allow-cwd; then
+  reject_if_overlap '--allow-cwd' "$(pwd -P)"
+
+  if worktree_root=$(git rev-parse --path-format=absolute --show-toplevel 2>/dev/null) &&
+    worktree_root=$(cd "${worktree_root}" && pwd -P); then
+    allow_dir 'Git worktree root' "${worktree_root}"
+    if worktree_parent=$(cd "$(dirname "${worktree_root}")" && pwd -P); then
+      allow_dir 'Git worktree parent' "${worktree_parent}"
+    fi
+  fi
+
+  if common_git_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null) &&
+    common_git_dir=$(cd "${common_git_dir}" && pwd -P); then
+    allow_dir 'Git common directory' "${common_git_dir}"
+  fi
+fi
+
+# Reach the active Herdr control socket when running inside Herdr.
+if [[ -n ${HERDR_SOCKET_PATH-} ]]; then
+  insert_flag_before_command --allow-unix-socket "${HERDR_SOCKET_PATH}"
+fi
 
 if [[ -n ${path_without_overrides} ]]; then
   export PATH="${home_local_bin}:${mise_shims_dir}:${path_without_overrides}"

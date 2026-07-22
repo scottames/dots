@@ -168,9 +168,12 @@ abbr -a nmap_slow "sudo nmap -sS -v -T1"
 abbr -a nmap_traceroute "sudo nmap -sP -PE -PS22,25,80 -PA21,23,80,3389 -PU -PO --traceroute "
 abbr -a nmap_web_safe_osscan "sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy "
 abbr -a nosleep "systemd-inhibit --what=handle-lid-switch sleep 2592000" # disable systemd sleep
-abbr -a nonocl "nono-with-local-path wrap --profile claude-code --allow-cwd -- claude"
+abbr -a nonocl "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude"
+abbr -a nonoclc "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude --continue"
 abbr -a nonoc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode"
 abbr -a nonocc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue"
+abbr -a nonocx "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex"
+abbr -a nonocxc "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex resume --last"
 abbr -a nonopi nono-pi
 abbr -a nonopic "nono-pi --continue"
 abbr -a o open

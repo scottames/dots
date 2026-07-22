@@ -1,7 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "alwaysThinkingEnabled": true,
-  "enabledPlugins": {},
+  "enabledPlugins": {
+{{- if lookPath "nono" }}
+    "nono@nolabs-ai": true
+{{- end }}
+  },
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
@@ -77,4 +81,3 @@
     "type": "command"
   }
 }
-{{- /* remove newline at end of file */ -}}

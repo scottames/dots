@@ -164,8 +164,8 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:neovim/neovim" = "0.12.4"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
-#  https://github.com/always-further/nono
-"github:always-further/nono" = "0.69.0"
+#  https://github.com/nolabs-ai/nono
+"github:nolabs-ai/nono" = "0.69.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.114.1"

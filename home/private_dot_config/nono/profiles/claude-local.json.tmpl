@@ -1,0 +1,9 @@
+{{- /* extends "claude" matches the base profile installed by the
+       nolabs-ai/claude Nono pack (profiles/claude.json). */ -}}
+{{- includeTemplate "nono-local-profile" (dict
+      "ctx" .
+      "extends" "claude"
+      "name" "claude-local"
+      "version" "0.1.0"
+      "description" "Claude Code with local mise runtime access and external git include access"
+) -}}

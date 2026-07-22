@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "plugins": {
+{{- if lookPath "nono" }}
+    "nono@nolabs-ai": [
+      {
+        "scope": "user",
+        "installPath": "{{ .chezmoi.homeDir }}/.claude/plugins/cache/nolabs-ai/nono/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-07-22T02:52:16.530Z",
+        "lastUpdated": "2026-07-22T02:52:16.530Z"
+      }
+    ]
+{{- end }}
+  }
+}
