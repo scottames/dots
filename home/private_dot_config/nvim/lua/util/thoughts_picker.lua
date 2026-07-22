@@ -78,10 +78,12 @@ function M.open()
     dirs = roots,
     hidden = true,
     ignored = true,
+    layout = { preset = "default", layout = { width = 0.95, height = 0.9 } },
     matcher = { sort_empty = true },
     sort = { fields = { "score:desc", "mtime:desc", "idx" } },
     title = "Thoughts",
     transform = function(item)
+      item.cwd = root
       item.mtime = mtime(join(root, item.file or item.text))
     end,
   })
