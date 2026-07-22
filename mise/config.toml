@@ -39,7 +39,7 @@ usage = "3.5.5"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.32.1"
+"aqua:vercel-labs/agent-browser" = "0.32.2"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.44.1"
@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.71.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.212"
+"aqua:anthropics/claude-code" = "2.1.214"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.96.0"
@@ -155,7 +155,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.15.9"
+"github:janosmiko/lfk" = "v0.15.10"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
@@ -185,7 +185,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:suzuki-shunsuke/pinact" = "4.1.0"
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
-"aqua:sethvargo/ratchet" = "0.11.4"
+"aqua:sethvargo/ratchet" = "0.12.0"
 # A simple TUI to visualize regular expressions right in your terminal.
 #  https://github.com/vitor-mariano/regex-tui
 "github:vitor-mariano/regex-tui" = "0.7.0"
@@ -260,7 +260,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:segmentio/golines" = "0.13.0"
 "aqua:snyk/cli" = "1.1306.1"
 "aqua:tamasfe/taplo" = "0.10.0"
-"aqua:terraform-linters/tflint" = "0.63.1"
+"aqua:terraform-linters/tflint" = "0.64.0"
 "aqua:tree-sitter/tree-sitter" = "0.26.11"
 "go:golang.org/x/tools/gopls" = "v0.23.0"
 "npm:@commitlint/cli" = "21.2.1"
