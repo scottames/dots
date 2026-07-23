@@ -60,13 +60,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.71.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.214"
+"aqua:anthropics/claude-code" = "2.1.215"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.96.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.144.5"
+"aqua:openai/codex" = "rust-v0.144.6"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.21.7"
@@ -103,7 +103,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:antonmedv/fx" = "39.2.0"
 # command-line fuzzy finder
 #   https://github.com/junegunn/fzf
-"aqua:junegunn/fzf" = "0.74.0"
+"aqua:junegunn/fzf" = "0.74.1"
 # fork a repository, commit files and create a pull request using github api
 #   https://github.com/int128/ghcp
 "aqua:int128/ghcp" = "1.15.3"
@@ -138,12 +138,12 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "0.7.4"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.17.1"
+"github:modem-dev/hunk" = "v0.17.2"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
 #   https://github.com/casey/just
-"aqua:casey/just" = "1.56.0"
+"aqua:casey/just" = "1.57.0"
 # kubernetes tui
 #   https://github.com/derailed/k9s
 "aqua:derailed/k9s" = "0.51.0"
@@ -275,7 +275,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:pyright" = "1.1.411"
 "npm:sql-formatter" = "15.8.2"
 "npm:sql-language-server" = "1.7.1"
-"npm:stylelint" = "17.14.0"
+"npm:stylelint" = "17.14.1"
 "npm:textlint" = "15.7.1"
 "pipx:ansible-lint" = "26.6.0"
 "pipx:beautysh" = "6.4.3"
