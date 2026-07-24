@@ -2732,43 +2732,63 @@ url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/46967795
 provenance = "cosign"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
-version = "0.32.2"
+version = "0.32.3"
 backend = "aqua:vercel-labs/agent-browser"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64"]
-checksum = "sha256:bcc24fca07f12792e31f16cb4fbb38893ebdd9cbbe944631439b2a561d725fbc"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-linux-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864284"
+checksum = "sha256:87fd2efb67995fc433569f0383260bfee44a785d6d45ca07c77179c45b70de18"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572158"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:da76933b6f36a0c5873f07c9c4eb1294f6d34b5c839af97fa69c7c0929a278f3"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-linux-musl-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864283"
+checksum = "sha256:5f73da13c6521ea8d1f3d7a77eda7758879bcc1ba3fd3043041799673e90d8f0"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572160"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64"]
-checksum = "sha256:2b859eaa49b5a795ee64804f75bcdaf5b3882f5053e9e69b3e75668124b4f428"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864287"
+checksum = "sha256:fb11c463ef1ebc5d626355040218eb25af685774f2ee022b2df70deacbd34bf4"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572159"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-baseline"]
+checksum = "sha256:fb11c463ef1ebc5d626355040218eb25af685774f2ee022b2df70deacbd34bf4"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572159"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
-checksum = "sha256:2b859eaa49b5a795ee64804f75bcdaf5b3882f5053e9e69b3e75668124b4f428"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864287"
+checksum = "sha256:fb11c463ef1ebc5d626355040218eb25af685774f2ee022b2df70deacbd34bf4"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572159"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:fb11c463ef1ebc5d626355040218eb25af685774f2ee022b2df70deacbd34bf4"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572159"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-arm64"]
-checksum = "sha256:b958c81c29b0c6bf0407479f93fef9e3d540e8e1588bc42f76acc33fa1a9287a"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-darwin-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864286"
+checksum = "sha256:b639605f496b629ebb2cdab30f1e070e004efd945b9cd0baf1981acfab64a151"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-darwin-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572157"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64"]
-checksum = "sha256:4630ff77c6fdbda809fd62a6cce807852e0f1ffaaa3e60a0ff4e46919f6188ca"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864285"
+checksum = "sha256:190de038807079de7c20cb133f874658750a0887da30fe563dbe7f35f593ce29"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572161"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64-baseline"]
+checksum = "sha256:190de038807079de7c20cb133f874658750a0887da30fe563dbe7f35f593ce29"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572161"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64"]
-checksum = "sha256:cbe2a1c26fed8af6c2c3195af87b08393155d4370e6c022c65df274312a68922"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.2/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/480864311"
+checksum = "sha256:d27f77cb4ed7120a25f0b60030b306fe6788be0997f5a6baad74f74a2c0ec627"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572174"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64-baseline"]
+checksum = "sha256:d27f77cb4ed7120a25f0b60030b306fe6788be0997f5a6baad74f74a2c0ec627"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572174"
 
 [[tools."aqua:walles/moor"]]
 version = "2.15.1"
@@ -3089,49 +3109,73 @@ url = "https://github.com/erikjuhani/basalt/releases/download/basalt/v0.12.5/bas
 url_api = "https://api.github.com/repos/erikjuhani/basalt/releases/assets/422061327"
 
 [[tools."github:janosmiko/lfk"]]
-version = "0.15.10"
+version = "0.15.12"
 backend = "github:janosmiko/lfk"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64"]
-checksum = "sha256:fc4b9b79b12c56c55f924ca58b68ea21c0c7bfe834abb5eb75687fe307fffb6d"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844185"
+checksum = "sha256:f9486b088895928d8e46143b4279ce39b5f3658dd7c58f677b4afedaa7bef1be"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143191"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64-musl"]
-checksum = "sha256:fc4b9b79b12c56c55f924ca58b68ea21c0c7bfe834abb5eb75687fe307fffb6d"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844185"
+checksum = "sha256:f9486b088895928d8e46143b4279ce39b5f3658dd7c58f677b4afedaa7bef1be"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143191"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64"]
-checksum = "sha256:ca26dbc050c41a0857d939127d051a303505d74f4035bc06d31ca35a065ab722"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844186"
+checksum = "sha256:69d85a392d231ae8db082d93c8a9a399c1c2b3cb63a5639a8a3546f2757e1cf2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143190"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-baseline"]
+checksum = "sha256:69d85a392d231ae8db082d93c8a9a399c1c2b3cb63a5639a8a3546f2757e1cf2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143190"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
-checksum = "sha256:ca26dbc050c41a0857d939127d051a303505d74f4035bc06d31ca35a065ab722"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844186"
+checksum = "sha256:69d85a392d231ae8db082d93c8a9a399c1c2b3cb63a5639a8a3546f2757e1cf2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143190"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:69d85a392d231ae8db082d93c8a9a399c1c2b3cb63a5639a8a3546f2757e1cf2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143190"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-arm64"]
-checksum = "sha256:26bdf49af3913288e8183bb4936dad5b90dd6c9a735f34e4cd51d48c097ac8f8"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844184"
+checksum = "sha256:cd52a34bb78e55b28ff2615739d3f5270e074dab41303fa0a2894beda37c63c3"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143162"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-x64"]
-checksum = "sha256:551e42bfcd9e2cb7d60687b88d7aa13f648d28edec21b5ebbe1a5b5dc3275eca"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844187"
+checksum = "sha256:73a546ffc7ad71dc13b0a57ebb994f3c8e48c9a04ad1c44aa8f51b54f563c84a"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143163"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.macos-x64-baseline"]
+checksum = "sha256:73a546ffc7ad71dc13b0a57ebb994f3c8e48c9a04ad1c44aa8f51b54f563c84a"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143163"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.windows-x64"]
-checksum = "sha256:4c5de89d5351595997d1ad23ee6b61293cb520dc1917893622a6f5552802551c"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.10/lfk_0.15.10_windows_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/480844204"
+checksum = "sha256:13e6bdcd7f476e28f8c1739d314e5758eb4a94e9cb996a682c12d74626dccc21"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143159"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.windows-x64-baseline"]
+checksum = "sha256:13e6bdcd7f476e28f8c1739d314e5758eb4a94e9cb996a682c12d74626dccc21"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.12/lfk_0.15.12_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/483143159"
 provenance = "github-attestations"
 
 [[tools."github:kitlangton/ghui"]]
@@ -3208,49 +3252,73 @@ url = "https://github.com/max-sixty/worktrunk/releases/download/v0.68.0/worktrun
 url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/478537409"
 
 [[tools."github:modem-dev/hunk"]]
-version = "0.17.2"
+version = "0.17.3"
 backend = "github:modem-dev/hunk"
 
 [tools."github:modem-dev/hunk"."platforms.linux-arm64"]
-checksum = "sha256:a478a2e0270566375345fd36058c9fe4a76f01d676aeafb3b8cd20f4c0c79465"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675282"
+checksum = "sha256:b5bb4e219cbd5e13f34c34ef8ce06ce2467e2f9f3037e260f10ecb563a67ba6d"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681570"
 provenance = "github-attestations"
 
 [tools."github:modem-dev/hunk"."platforms.linux-arm64-musl"]
-checksum = "sha256:a478a2e0270566375345fd36058c9fe4a76f01d676aeafb3b8cd20f4c0c79465"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675282"
+checksum = "sha256:b5bb4e219cbd5e13f34c34ef8ce06ce2467e2f9f3037e260f10ecb563a67ba6d"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681570"
 provenance = "github-attestations"
 
 [tools."github:modem-dev/hunk"."platforms.linux-x64"]
-checksum = "sha256:71ea5a40c806df025fda7cde5c7487b61f07026deb8ca89169b0098b363fc56a"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675280"
+checksum = "sha256:6e192e42365a81f2083f16a1c176cd18e92a016f0d981b60637cd02b2cd0706d"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681571"
+provenance = "github-attestations"
+
+[tools."github:modem-dev/hunk"."platforms.linux-x64-baseline"]
+checksum = "sha256:6e192e42365a81f2083f16a1c176cd18e92a016f0d981b60637cd02b2cd0706d"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681571"
 provenance = "github-attestations"
 
 [tools."github:modem-dev/hunk"."platforms.linux-x64-musl"]
-checksum = "sha256:71ea5a40c806df025fda7cde5c7487b61f07026deb8ca89169b0098b363fc56a"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675280"
+checksum = "sha256:6e192e42365a81f2083f16a1c176cd18e92a016f0d981b60637cd02b2cd0706d"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681571"
+provenance = "github-attestations"
+
+[tools."github:modem-dev/hunk"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:6e192e42365a81f2083f16a1c176cd18e92a016f0d981b60637cd02b2cd0706d"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681571"
 provenance = "github-attestations"
 
 [tools."github:modem-dev/hunk"."platforms.macos-arm64"]
-checksum = "sha256:57d46dc5bcd94a0732184635fe00392c74c808c420956ea36cee59ff06b132f9"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675283"
+checksum = "sha256:7bf6fce9dfe66b59227c2adcf96781cdca68a10944182a9872354ae36efe36b0"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681572"
 provenance = "github-attestations"
 
 [tools."github:modem-dev/hunk"."platforms.macos-x64"]
-checksum = "sha256:c8bf02742fd7512578d69a8a8112feed2287214235ede200df78d9516a58a5ed"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675284"
+checksum = "sha256:ecf4db36357cb31e08aaad15a8d07531507d78717cff01df87b301e3c2f07b57"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681574"
+provenance = "github-attestations"
+
+[tools."github:modem-dev/hunk"."platforms.macos-x64-baseline"]
+checksum = "sha256:ecf4db36357cb31e08aaad15a8d07531507d78717cff01df87b301e3c2f07b57"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681574"
 provenance = "github-attestations"
 
 [tools."github:modem-dev/hunk"."platforms.windows-x64"]
-checksum = "sha256:998a2dd8ca84702a7f80a469b8d4ef7ec09bb6c9f509e9d0227e0cb3a5dd9d5f"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.17.2/hunkdiff-windows-x64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/481675279"
+checksum = "sha256:57f6765d9edc7eec6e14f53e63e2b5e396365944db0786bef7f41cdb392a70d0"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-windows-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681567"
+provenance = "github-attestations"
+
+[tools."github:modem-dev/hunk"."platforms.windows-x64-baseline"]
+checksum = "sha256:57f6765d9edc7eec6e14f53e63e2b5e396365944db0786bef7f41cdb392a70d0"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.17.3/hunkdiff-windows-x64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/482681567"
 provenance = "github-attestations"
 
 [[tools."github:nolabs-ai/nono"]]
@@ -3544,7 +3612,7 @@ version = "0.11.3"
 backend = "npm:opkg"
 
 [[tools."npm:prettier"]]
-version = "3.9.5"
+version = "3.9.6"
 backend = "npm:prettier"
 
 [[tools."npm:pyright"]]
