@@ -1,5 +1,46 @@
 # Changelog
 
+## [0.50.0](https://github.com/scottames/dots/compare/v0.49.0...v0.50.0) (2026-07-24)
+
+
+### Updates & Misc Chores
+
+* **agents/pi:** bring nono profile in-line with opencode ([1b3acd9](https://github.com/scottames/dots/commit/1b3acd926d58f14cbd0f665b4ce1d5d6f8d4dddf))
+* **deps:** lock file maintenance ([#982](https://github.com/scottames/dots/issues/982)) ([379a163](https://github.com/scottames/dots/commit/379a163188ac17fbacd5befbfaeeac65cdb26ad5))
+* **deps:** update ⬆️ aqua-packages ([#989](https://github.com/scottames/dots/issues/989)) ([39c8f59](https://github.com/scottames/dots/commit/39c8f59e71d63df3b1badbe67744cb4e02ca37c6))
+* **deps:** update ⬆️ mise-packages ([#980](https://github.com/scottames/dots/issues/980)) ([dcb7a0e](https://github.com/scottames/dots/commit/dcb7a0eac8be543f35a85300ae025c361236af8f))
+* **deps:** update ⬆️ mise-packages ([#985](https://github.com/scottames/dots/issues/985)) ([71bff2d](https://github.com/scottames/dots/commit/71bff2daa9717b1040e2f498f7daa5d30e12aafc))
+* **deps:** update ⬆️ mise-packages ([#986](https://github.com/scottames/dots/issues/986)) ([87d6146](https://github.com/scottames/dots/commit/87d614685df672e28f16160495604c36bfab7345))
+* **deps:** update ⬆️ mise-packages ([#992](https://github.com/scottames/dots/issues/992)) ([6eb700c](https://github.com/scottames/dots/commit/6eb700c1e161effa3802ec3874e969a23a552d52))
+* **deps:** update ⬆️ mise-packages to v1.3.0 ([#984](https://github.com/scottames/dots/issues/984)) ([84f4fc7](https://github.com/scottames/dots/commit/84f4fc75d69d5962bcb6c17c6557a4cdf85fb346))
+* **deps:** update github-actions ([#990](https://github.com/scottames/dots/issues/990)) ([b40bc47](https://github.com/scottames/dots/commit/b40bc476b6f20ca73453b838f1f7afe99f6df856))
+* **deps:** update github-actions to v7 ([#991](https://github.com/scottames/dots/issues/991)) ([9f003d9](https://github.com/scottames/dots/commit/9f003d980d23ce5fa46145945c4ba74b97e0ec28))
+* **mise/herdr:** bump 0.7.4 ([8e3ba01](https://github.com/scottames/dots/commit/8e3ba01e2d623f486694a74ce37b7d7605da311b))
+* **mise/nono:** bump to 0.69.0 (fixes bug) ([560101f](https://github.com/scottames/dots/commit/560101f02579eeb18ec43c6915f1a31ca1b92f79))
+* upgrade trunk ([#979](https://github.com/scottames/dots/issues/979)) ([f995e68](https://github.com/scottames/dots/commit/f995e688f6745e23ea830a361d8afa41f92c098d))
+
+
+### Features
+
+* **agents/pi:** custom theme/keys ([9f0da00](https://github.com/scottames/dots/commit/9f0da00edf78dd8eb74c6f63682b65ce7d2b2fcc))
+* **agents/pi:** replace subagent extension ([818271e](https://github.com/scottames/dots/commit/818271ee4176ab7308f1bac1ee8b4a73ac376f5c))
+* **agents:** add pi.dev ([66bc085](https://github.com/scottames/dots/commit/66bc085049e1ab0c694c2a269ebf159164e91c8b))
+* **niri:** add play/pause keys ([71242a0](https://github.com/scottames/dots/commit/71242a0a255641dda56c699b9085d02c83d364f7))
+* **nono:** add claude/codex + DRY up ([8bef8f8](https://github.com/scottames/dots/commit/8bef8f884e23570a34c817dc70a0b66aecb923f2))
+* **opencode:** hardcode built-in subagent models to gpt5.6-* ([63d70fb](https://github.com/scottames/dots/commit/63d70fbb9f48a9cc574488df96ad66ede667f182))
+
+
+### Bug Fixes
+
+* **chezmoi/herdr:** warn on extension install ([4a76ddf](https://github.com/scottames/dots/commit/4a76ddf7d23c9ccdaede7a453fbe20cfe3aacf4d))
+* **chezmoi:** no bat paging ([61b24ce](https://github.com/scottames/dots/commit/61b24ce3556ad9ca1f92feda74d371caa654da6b))
+* **macos:** skip mise pkgs + cleanup ([16327ed](https://github.com/scottames/dots/commit/16327ed021731447754cd31dbda466ec9878dffc))
+
+
+### Code Refactoring
+
+* **nvim/thts:** adjust picker settings ([1c8ed29](https://github.com/scottames/dots/commit/1c8ed290ac01ffcc18cc8555f8a476bf28664c64))
+
 ## [0.49.0](https://github.com/scottames/dots/compare/v0.48.0...v0.49.0) (2026-07-16)
 
 
