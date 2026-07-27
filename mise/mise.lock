@@ -184,26 +184,35 @@ url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-
 url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447571006"
 
 [[tools."aqua:anthropics/claude-code"]]
-version = "2.1.217"
+version = "2.1.218"
 backend = "aqua:anthropics/claude-code"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-arm64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.217/linux-arm64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/linux-arm64/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-arm64-musl"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.217/linux-arm64-musl/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/linux-arm64-musl/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-x64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.217/linux-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/linux-x64/claude"
+
+[tools."aqua:anthropics/claude-code"."platforms.linux-x64-baseline"]
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/linux-x64/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.linux-x64-musl"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.217/linux-x64-musl/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/linux-x64-musl/claude"
+
+[tools."aqua:anthropics/claude-code"."platforms.linux-x64-musl-baseline"]
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/linux-x64-musl/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.macos-arm64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.217/darwin-arm64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/darwin-arm64/claude"
 
 [tools."aqua:anthropics/claude-code"."platforms.macos-x64"]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.217/darwin-x64/claude"
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/darwin-x64/claude"
+
+[tools."aqua:anthropics/claude-code"."platforms.macos-x64-baseline"]
+url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.218/darwin-x64/claude"
 
 [[tools."aqua:antonmedv/fx"]]
 version = "39.2.0"
@@ -2732,43 +2741,63 @@ url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/48385804
 provenance = "cosign"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
-version = "0.32.3"
+version = "0.32.4"
 backend = "aqua:vercel-labs/agent-browser"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64"]
-checksum = "sha256:87fd2efb67995fc433569f0383260bfee44a785d6d45ca07c77179c45b70de18"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572158"
+checksum = "sha256:e65c546b3b0c5f863bfdb29fe3848f66eb36482596894e693af2d1edb23f598a"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555690"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:5f73da13c6521ea8d1f3d7a77eda7758879bcc1ba3fd3043041799673e90d8f0"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572160"
+checksum = "sha256:08a46855445c426800b19d61afa78ce50967219ccc9199221fe9d311fab08e5e"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-linux-musl-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555695"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64"]
-checksum = "sha256:fb11c463ef1ebc5d626355040218eb25af685774f2ee022b2df70deacbd34bf4"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572159"
+checksum = "sha256:4a10ca2313e2d5b8e0c6f4f007e4a7f9e785f5d28b08640095d425b26dd951be"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555691"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-baseline"]
+checksum = "sha256:4a10ca2313e2d5b8e0c6f4f007e4a7f9e785f5d28b08640095d425b26dd951be"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555691"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
-checksum = "sha256:fb11c463ef1ebc5d626355040218eb25af685774f2ee022b2df70deacbd34bf4"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572159"
+checksum = "sha256:4a10ca2313e2d5b8e0c6f4f007e4a7f9e785f5d28b08640095d425b26dd951be"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555691"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:4a10ca2313e2d5b8e0c6f4f007e4a7f9e785f5d28b08640095d425b26dd951be"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555691"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-arm64"]
-checksum = "sha256:b639605f496b629ebb2cdab30f1e070e004efd945b9cd0baf1981acfab64a151"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-darwin-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572157"
+checksum = "sha256:15360460f2fa682bb17cbf27ae92ee42972296c39d452a9c8aaffb90f29cd8b3"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-darwin-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555692"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64"]
-checksum = "sha256:190de038807079de7c20cb133f874658750a0887da30fe563dbe7f35f593ce29"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572161"
+checksum = "sha256:349293d5973461df37c2ecfc12a36ef82af8de9d347d4b7acb0a5b6c5cde02e3"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555693"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64-baseline"]
+checksum = "sha256:349293d5973461df37c2ecfc12a36ef82af8de9d347d4b7acb0a5b6c5cde02e3"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555693"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64"]
-checksum = "sha256:d27f77cb4ed7120a25f0b60030b306fe6788be0997f5a6baad74f74a2c0ec627"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.3/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/482572174"
+checksum = "sha256:cf390d5e1aca9c834eff6ac0f1c129b54f7f06b4df471debdb3823ee3c802506"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555711"
+
+[tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64-baseline"]
+checksum = "sha256:cf390d5e1aca9c834eff6ac0f1c129b54f7f06b4df471debdb3823ee3c802506"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.32.4/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/486555711"
 
 [[tools."aqua:walles/moor"]]
 version = "2.15.1"
@@ -3089,49 +3118,74 @@ url = "https://github.com/erikjuhani/basalt/releases/download/basalt/v0.12.5/bas
 url_api = "https://api.github.com/repos/erikjuhani/basalt/releases/assets/422061327"
 
 [[tools."github:janosmiko/lfk"]]
-version = "0.15.13"
+version = "0.15.14"
 backend = "github:janosmiko/lfk"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64"]
-checksum = "sha256:b78289d5e9a59a22f94930ea92bbd3ba334653bccfcc30df43261e5ea34b6f45"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329057"
+checksum = "sha256:4810121c8ca5acdfeedd2b441263cb6d371d66bce8782d60ca1c83ab057ec497"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881946"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64-musl"]
-checksum = "sha256:b78289d5e9a59a22f94930ea92bbd3ba334653bccfcc30df43261e5ea34b6f45"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329057"
+checksum = "sha256:4810121c8ca5acdfeedd2b441263cb6d371d66bce8782d60ca1c83ab057ec497"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881946"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64"]
-checksum = "sha256:2b6c0a2a8d073448b2cc1fb47a24309635486bdeef361d936d01607985172226"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329058"
+checksum = "sha256:2419c075074347c8c6473407564b6780078140ef8b0590e60c585bc4a5e43348"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881957"
+provenance = "github-attestations"
+provenance_verified = true
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-baseline"]
+checksum = "sha256:2419c075074347c8c6473407564b6780078140ef8b0590e60c585bc4a5e43348"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881957"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
-checksum = "sha256:2b6c0a2a8d073448b2cc1fb47a24309635486bdeef361d936d01607985172226"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329058"
+checksum = "sha256:2419c075074347c8c6473407564b6780078140ef8b0590e60c585bc4a5e43348"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881957"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:2419c075074347c8c6473407564b6780078140ef8b0590e60c585bc4a5e43348"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881957"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-arm64"]
-checksum = "sha256:6217dc677543bf96746df2772db825151ec841cc25a7410d7766d4249e587b43"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329060"
+checksum = "sha256:94c6df7e13cf17bbc5221e43fd130b5a2466fb288884530c2e65ca4d0b1998e8"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881947"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-x64"]
-checksum = "sha256:9f91b6f14808bcfc407309460df46c0c5dfdf784ed3502442420a56124d0260c"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329077"
+checksum = "sha256:b0237e933825a9f30e7b5f6b034aabe4a8aa7efb544829d96d89a4db6d996593"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881944"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.macos-x64-baseline"]
+checksum = "sha256:b0237e933825a9f30e7b5f6b034aabe4a8aa7efb544829d96d89a4db6d996593"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881944"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.windows-x64"]
-checksum = "sha256:dce708df5b75ca8a5308a305cd9cf31caac7dfdc326044f951c50573615f1697"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.15.13/lfk_0.15.13_windows_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/484329071"
+checksum = "sha256:f72fbeea46d0d0745fbcc6c059e06a49d9a3f218fae5539589fd912ad57ece3d"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881945"
+provenance = "github-attestations"
+
+[tools."github:janosmiko/lfk"."platforms.windows-x64-baseline"]
+checksum = "sha256:f72fbeea46d0d0745fbcc6c059e06a49d9a3f218fae5539589fd912ad57ece3d"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.15.14/lfk_0.15.14_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/486881945"
 provenance = "github-attestations"
 
 [[tools."github:kitlangton/ghui"]]
@@ -3596,7 +3650,7 @@ version = "0.0.62"
 backend = "pipx:ruff-lsp"
 
 [[tools."pipx:semgrep"]]
-version = "1.170.1"
+version = "1.171.0"
 backend = "pipx:semgrep"
 
 [[tools."pipx:sqlfluff"]]
