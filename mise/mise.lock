@@ -4725,6 +4725,77 @@ checksum = "sha256:2739f59bcc455210baba4584c4c9796a48006eeb6622b2705e4916fa01661
 url = "https://github.com/erikjuhani/basalt/releases/download/basalt/v0.12.5/basalt-0.12.5-x86_64-pc-windows-gnu.zip"
 url_api = "https://api.github.com/repos/erikjuhani/basalt/releases/assets/422061324"
 
+[[tools."github:github/gh-stack"]]
+version = "0.1.0"
+backend = "github:github/gh-stack"
+
+[tools."github:github/gh-stack"."platforms.linux-arm64"]
+checksum = "sha256:a79649e121845b7404109de21d65601c09c8c6d021d93738a3428d23986a8841"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/linux-arm64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339470"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.linux-arm64-musl"]
+checksum = "sha256:a79649e121845b7404109de21d65601c09c8c6d021d93738a3428d23986a8841"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/linux-arm64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339470"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.linux-x64"]
+checksum = "sha256:358552dd7dce0a46ce153fe196270cec482b84f080947890aad4061a8d44bc0b"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/linux-amd64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339465"
+provenance = "github-attestations"
+provenance_verified = true
+
+[tools."github:github/gh-stack"."platforms.linux-x64-baseline"]
+checksum = "sha256:358552dd7dce0a46ce153fe196270cec482b84f080947890aad4061a8d44bc0b"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/linux-amd64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339465"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.linux-x64-musl"]
+checksum = "sha256:358552dd7dce0a46ce153fe196270cec482b84f080947890aad4061a8d44bc0b"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/linux-amd64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339465"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:358552dd7dce0a46ce153fe196270cec482b84f080947890aad4061a8d44bc0b"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/linux-amd64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339465"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.macos-arm64"]
+checksum = "sha256:5ca98241a265d6de018095cdae5f3c40da5ca782450eec0ea91aa8e3eb183103"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/darwin-arm64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339447"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.macos-x64"]
+checksum = "sha256:712266939bf40349dce6c8893037b88e0453334d30d06750b61ce1a6c8640bb9"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/darwin-amd64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339445"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.macos-x64-baseline"]
+checksum = "sha256:712266939bf40349dce6c8893037b88e0453334d30d06750b61ce1a6c8640bb9"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/darwin-amd64"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339445"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.windows-x64"]
+checksum = "sha256:6ddbb230c9467d7bcca8a2175244ddeee7951c00365d2d557d44dd797f362304"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/windows-amd64.exe"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339492"
+provenance = "github-attestations"
+
+[tools."github:github/gh-stack"."platforms.windows-x64-baseline"]
+checksum = "sha256:6ddbb230c9467d7bcca8a2175244ddeee7951c00365d2d557d44dd797f362304"
+url = "https://github.com/github/gh-stack/releases/download/v0.1.0/windows-amd64.exe"
+url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/494339492"
+provenance = "github-attestations"
+
 [[tools."github:janosmiko/lfk"]]
 version = "0.15.14"
 backend = "github:janosmiko/lfk"
@@ -5040,48 +5111,48 @@ backend = "github:ogulcancelik/herdr"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-arm64"]
 checksum = "sha256:32e763a1499a6b694b1d708e4f062b743be1da9f34fcfa4d212d6db6fe09a8b9"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-linux-aarch64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992543"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992543"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-arm64-musl"]
 checksum = "sha256:32e763a1499a6b694b1d708e4f062b743be1da9f34fcfa4d212d6db6fe09a8b9"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-linux-aarch64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992543"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992543"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64"]
 checksum = "sha256:3dc83288073e4c2d3c679a30e7be97bcca9141c6fd17dbbb9219142e95c59253"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992544"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992544"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-baseline"]
 checksum = "sha256:3dc83288073e4c2d3c679a30e7be97bcca9141c6fd17dbbb9219142e95c59253"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992544"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992544"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl"]
 checksum = "sha256:3dc83288073e4c2d3c679a30e7be97bcca9141c6fd17dbbb9219142e95c59253"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992544"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992544"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:3dc83288073e4c2d3c679a30e7be97bcca9141c6fd17dbbb9219142e95c59253"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992544"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992544"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-arm64"]
 checksum = "sha256:37350546b0012555943b92eaf962665de4e264395baeb44227b8015e8ff5b0d6"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-macos-aarch64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992542"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-macos-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992542"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-x64"]
 checksum = "sha256:3fe50c4a63dc8102306b1322178628ddb3655cd3ae56d784f094153408d69e62"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-macos-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992541"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992541"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-x64-baseline"]
 checksum = "sha256:3fe50c4a63dc8102306b1322178628ddb3655cd3ae56d784f094153408d69e62"
-url = "https://github.com/ogulcancelik/herdr/releases/download/v0.7.5/herdr-macos-x86_64"
-url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/484992541"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992541"
 
 [[tools."github:tassiovirginio/try-rs"]]
 version = "1.7.11"

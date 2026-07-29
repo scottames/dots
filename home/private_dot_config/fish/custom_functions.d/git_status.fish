@@ -44,6 +44,12 @@ function git_status --description "Git project status" --wraps "git status"
             | string replace "$_base_pwd" (printf_color -c yellow -b $_base_pwd)
     end
 
-    set -q HAS_GT && PAGER="" gt ls
+    if test "$GH_STACK_ENABLED" = true -a "$HAS_GH" = true -a "$HAS_GH_STACK" = true
+        PAGER="" gh stack view --short 2>/dev/null
+        or true
+    else if test "$GRAPHITE_ENABLED" = true -a "$HAS_GT" = true
+        PAGER="" gt ls 2>/dev/null
+        or true
+    end
     git status $argv
 end

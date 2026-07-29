@@ -51,8 +51,9 @@ set has_bins \
     direnv \
     dyff \
     git \
-    gh \
     gcloud \
+    gh \
+    gh-stack \
     ghtkn \
     go \
     gobrew \
@@ -75,7 +76,7 @@ set has_bins \
     zoxide
 
 for bin in $has_bins
-    set _upper_bin (string upper $bin | string replace -a "-" "")
+    set _upper_bin (string upper $bin | string replace -a "-" "_")
 
     type -q $bin \
         && set -gx "HAS_$_upper_bin" true \

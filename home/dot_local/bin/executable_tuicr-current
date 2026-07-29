@@ -2,7 +2,7 @@
 
 # dirty worktree → tuicr -w
 # existing PR    → tuicr pr <number>
-# Graphite repo  → tuicr -r <merge-base-with-gt-parent>..HEAD
+# gh-stack layer → tuicr -r <merge-base-with-direct-parent>..HEAD
 # normal repo    → tuicr -r <merge-base-with-default-branch>..HEAD
 # fallback       → tuicr
 
@@ -15,10 +15,30 @@ current_pr_number() {
   gh pr view --json number -q .number 2>/dev/null || true
 }
 
-graphite_parent() {
-  [[ ${GRAPHITE_ENABLED-} == "true" ]] || return 0
-  command -v gt >/dev/null 2>&1 || return 0
-  gt parent 2>/dev/null | head -n1 || true
+stack_parent() {
+  local stack_json
+
+  [[ ${GH_STACK_ENABLED-} == "true" ]] || return 0
+  command -v gh >/dev/null 2>&1 || return 0
+  command -v jq >/dev/null 2>&1 || return 0
+  gh stack --help >/dev/null 2>&1 || return 0
+  stack_json="$(gh stack view --json 2>/dev/null)" || return 0
+
+  jq -er '
+    if (.trunk | type) != "string"
+      or (.currentBranch | type) != "string"
+      or (.branches | type) != "array"
+    then empty
+    else
+      . as $stack
+      | ($stack.branches | map(.name) | index($stack.currentBranch)) as $index
+      | if $index == null then empty
+        elif $index == 0 then $stack.trunk
+        else $stack.branches[$index - 1].name
+        end
+      | select(type == "string" and length > 0)
+    end
+  ' <<<"${stack_json}" 2>/dev/null || true
 }
 
 default_branch_name() {
@@ -63,8 +83,9 @@ default_base_ref() {
 
 best_base_ref() {
   local parent
-  parent="$(graphite_parent)"
-  if [[ -n ${parent} ]]; then
+  parent="$(stack_parent)"
+  if [[ -n ${parent} ]] &&
+    git rev-parse --verify --quiet "${parent}^{commit}" >/dev/null; then
     echo "${parent}"
     return 0
   fi

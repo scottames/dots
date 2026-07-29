@@ -1,7 +1,7 @@
 #!/bin/env fish
 
 function nvim
-    if $HAS_DISTROBOXHOSTEXEC
+    if $HAS_DISTROBOX_HOST_EXEC
         and ! is_distrobox >/dev/null
         and set -q DISTROBOX_DEFAULT
 

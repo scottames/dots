@@ -87,6 +87,18 @@ or exit 1
 source "$function_dir/zw.fish"
 or exit 1
 
+set -l help_output (zw --help)
+assert_not_contains "$help_output" 'graphite' 'zw help does not advertise Graphite integration'
+assert_contains "$help_output" '-c/--create' 'zw retains ordinary Worktrunk creation'
+assert_contains "$help_output" '-a/--agent' 'zw retains agent startup'
+assert_contains "$help_output" '-b/--base=REF' 'zw retains base selection'
+
+zw --graphite feature-x >/dev/null 2>&1
+if test $status -eq 0
+    printf 'ASSERTION FAILED: zw rejects the removed --graphite option\n' >&2
+    exit 1
+end
+
 pushd "$main_checkout" >/dev/null
 zw feature-x
 popd >/dev/null
@@ -97,5 +109,9 @@ assert_contains "$command_log" '--name dots/feature-x' 'zw uses layout-aware sla
 assert_not_contains "$command_log" '--name main/feature-x' 'zw does not label normal-layout tabs as main'
 assert_contains "$command_log" 'plugin location="status-bar"' 'zw generated layout uses built-in status bar'
 assert_not_contains "$command_log" 'zellij-status' 'zw generated layout does not use retired zellij-status plugin'
+
+zw --agent=claude feature-x
+set command_log (string trim -- (command cat "$log_file"))
+assert_contains "$command_log" 'pane command="claude"' 'zw retains explicit agent startup'
 
 printf 'ok\n'

@@ -31,6 +31,8 @@ instructions supersede them, except explicit safety constraints.
 - I use Fedora Silverblue with distrobox. If you need host access, ask me.
 - Active `scottames` repositories live under `~/src/github.com/scottames/`.
 - Prefer OpenTofu over Terraform unless directed otherwise.
+- If hardware (yubikey) blocks git/ssh, do not attempt to work around it. Prompt
+  the user.
 ## Worktrees And Skills
 - Before mutating worktrees, use read-only commands to inspect the Git common
   directory, repository top level, remote default branch, and worktree list. In

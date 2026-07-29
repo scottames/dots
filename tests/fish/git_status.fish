@@ -3,17 +3,31 @@
 set -l repo_root (path dirname (path dirname (path dirname (status filename))))
 set -l function_dir "$repo_root/home/private_dot_config/fish/custom_functions.d"
 set -l tmpdir (mktemp -d)
+set -l fakebin "$tmpdir/bin"
+set -l gh_log "$tmpdir/gh.log"
+set -l gt_log "$tmpdir/gt.log"
 
-mkdir -p "$tmpdir/remotes" "$tmpdir/github.com/scottames/dots" "$tmpdir/legacy/github.com/scottames/dots" "$tmpdir/no-hooks" "$tmpdir/home"
+mkdir -p "$fakebin" "$tmpdir/remotes" "$tmpdir/github.com/scottames/dots" "$tmpdir/legacy/github.com/scottames/dots" "$tmpdir/no-hooks" "$tmpdir/home"
 
 function cleanup --on-event fish_exit
     rm -rf "$tmpdir"
 end
 
 set -gx HOME "$tmpdir/home"
-set -gx PATH /usr/bin /bin
+set -gx PATH "$fakebin" /usr/bin /bin
+set -gx GIT_STATUS_TEST_GH_LOG "$gh_log"
+set -gx GIT_STATUS_TEST_GT_LOG "$gt_log"
 set fish_function_path "$function_dir" $fish_function_path
-set -e HAS_GT
+
+printf '%s\n' '#!/usr/bin/env bash' \
+    'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_GH_LOG"' \
+    'if [[ "$*" == "stack view --short" ]]; then printf "stack-short-output\n"; exit "${GIT_STATUS_TEST_GH_EXIT:-0}"; fi' >"$fakebin/gh"
+chmod +x "$fakebin/gh"
+printf '%s\n' '#!/usr/bin/env bash' \
+    'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_GT_LOG"' \
+    'printf "graphite-output\n"' \
+    'exit "${GIT_STATUS_TEST_GT_EXIT:-0}"' >"$fakebin/gt"
+chmod +x "$fakebin/gt"
 
 function printf_green_bold
     printf '%s' $argv
@@ -79,6 +93,59 @@ assert_contains "$normal_output" "$normal_main" 'fallback git worktree list incl
 assert_contains "$normal_output" "$normal_feature" 'fallback git worktree list includes normal sibling worktree'
 assert_contains "$normal_path_line" '[dots]' 'normal main path highlights repo name'
 assert_not_contains "$normal_path_line" '[main]' 'normal main path does not highlight main as project'
+
+set -gx GH_STACK_ENABLED true
+set -gx HAS_GH true
+set -gx HAS_GH_STACK true
+set -gx GRAPHITE_ENABLED true
+set -gx HAS_GT true
+pushd "$normal_main" >/dev/null
+set -l stack_output (git_status --short)
+popd >/dev/null
+assert_contains "$stack_output" 'stack-short-output' 'enabled gh-stack status uses short view'
+assert_not_contains "$stack_output" 'graphite-output' 'GitHub Stack takes precedence over Graphite'
+set -l gh_calls (string trim -- (command cat "$gh_log"))
+if test "$gh_calls" != 'stack view --short'
+    printf 'ASSERTION FAILED: git_status invokes exactly gh stack view --short\nactual: %s\n' "$gh_calls" >&2
+    exit 1
+end
+if test -e "$gt_log"
+    printf 'ASSERTION FAILED: git_status does not invoke Graphite when GitHub Stack is selected\n' >&2
+    exit 1
+end
+
+command truncate -s 0 "$gh_log"
+set -gx HAS_GH false
+pushd "$normal_main" >/dev/null
+set -l graphite_output (git_status --short)
+popd >/dev/null
+assert_contains "$graphite_output" 'graphite-output' 'Graphite is used when GitHub Stack capability is incomplete'
+if test -s "$gh_log"
+    printf 'ASSERTION FAILED: git_status requires HAS_GH before invoking gh stack\n' >&2
+    exit 1
+end
+
+command truncate -s 0 "$gt_log"
+set -gx HAS_GH true
+set -gx GIT_STATUS_TEST_GH_EXIT 1
+touch "$normal_main/status-proof"
+pushd "$normal_main" >/dev/null
+set -l failed_gh_output (git_status --short)
+popd >/dev/null
+assert_contains "$failed_gh_output" '?? status-proof' 'failed gh stack display continues to git status'
+assert_not_contains "$failed_gh_output" 'graphite-output' 'failed selected GitHub Stack mode does not switch modes'
+if test -s "$gt_log"
+    printf 'ASSERTION FAILED: git_status does not invoke Graphite after selected gh stack fails\n' >&2
+    exit 1
+end
+
+set -e GIT_STATUS_TEST_GH_EXIT
+set -gx GH_STACK_ENABLED false
+set -gx GIT_STATUS_TEST_GT_EXIT 1
+pushd "$normal_main" >/dev/null
+set -l failed_gt_output (git_status --short)
+popd >/dev/null
+assert_contains "$failed_gt_output" '?? status-proof' 'failed Graphite display continues to git status'
 
 set -l legacy_root "$tmpdir/legacy/github.com/scottames/dots"
 command git clone --bare "$remote" "$legacy_root/.bare" >/dev/null 2>/dev/null

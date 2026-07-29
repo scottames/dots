@@ -2,17 +2,16 @@
 
 # zw: Open a git worktree in a new Zellij tab with auto-derived naming
 #
-# Combines worktrunk (wt), zellij, and optionally graphite (gt) to reduce
-# friction when spinning up worktree tabs for parallel work.
+# Combines worktrunk (wt) and zellij to reduce friction when spinning up
+# worktree tabs for parallel work.
 #
 # Usage: zw [OPTIONS] [BRANCH]
 #
 # Options:
 #   -c/--create       Create a new worktree (passes -c to wt switch)
-#   -g/--graphite     Create as graphite-tracked branch (uses gt-wt-create)
 #   -a/--agent        Start an agent in the tab (default: opencode)
 #   --agent=NAME      Specify which agent (opencode, claude, etc.)
-#   -b/--base=REF     Base branch for creation (passed to wt switch -b / gt-wt-create -b)
+#   -b/--base=REF     Base branch for creation (passed to wt switch -b)
 #   -n/--name=NAME    Override the auto-derived tab name
 #   -h/--help         Show usage
 #
@@ -28,8 +27,6 @@
 #   zw                              # fuzzy pick from worktrees
 #   zw -c my-feature                # create worktree + tab
 #   zw -ca my-feature               # create worktree + tab + start opencode
-#   zw -cg my-feature               # create graphite-tracked worktree + tab
-#   zw -cga my-feature              # create graphite-tracked worktree + tab + opencode
 #   zw -c --agent=claude my-feature # create worktree + tab + start claude
 #   zw -c -b develop my-feature     # create worktree from 'develop' branch
 #   zw -n "custom-name" feature-a   # override tab name
@@ -39,12 +36,10 @@
 #   - worktrunk (wt)
 #   - jq
 #   - gum (for picker mode)
-#   - graphite (gt) + gt-wt-create (only with -g flag)
 
 function zw --description "Open a git worktree in a new Zellij tab"
     argparse \
         'c/create' \
-        'g/graphite' \
         'a/agent=?' \
         'b/base=' \
         'n/name=' \
@@ -57,7 +52,6 @@ function zw --description "Open a git worktree in a new Zellij tab"
         echo ""
         echo "Options:"
         echo "  -c/--create       Create a new worktree"
-        echo "  -g/--graphite     Create as graphite-tracked branch"
         echo "  -a/--agent        Start an agent in the tab (default: opencode)"
         echo "  --agent=NAME      Specify which agent"
         echo "  -b/--base=REF     Base branch for creation"
@@ -118,35 +112,17 @@ function zw --description "Open a git worktree in a new Zellij tab"
 
     if test -z "$worktree_path"
         # Worktree doesn't exist — create it
-        if set -q _flag_graphite
-            # Graphite-tracked creation
-            if not type -q gt-wt-create
-                printf_err "gt-wt-create is required with -g flag\n"
-                return 1
-            end
-
-            set -l gt_args --no-cd
-            if set -q _flag_base
-                set -a gt_args -b "$_flag_base"
-            end
-            set -a gt_args "$branch"
-
-            gt-wt-create $gt_args
-            or return 1
-        else
-            # Standard wt creation
-            set -l wt_args --no-cd
-            if set -q _flag_create
-                set -a wt_args -c
-            end
-            if set -q _flag_base
-                set -a wt_args -b "$_flag_base"
-            end
-            set -a wt_args "$branch"
-
-            command wt switch $wt_args
-            or return 1
+        set -l wt_args --no-cd
+        if set -q _flag_create
+            set -a wt_args -c
         end
+        if set -q _flag_base
+            set -a wt_args -b "$_flag_base"
+        end
+        set -a wt_args "$branch"
+
+        command wt switch $wt_args
+        or return 1
 
         # Query the path after creation
         set worktree_path (wt list --format=json | jq -r --arg b "$branch" '.[] | select(.branch == $b) | .path')
