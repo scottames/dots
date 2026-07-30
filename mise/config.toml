@@ -30,7 +30,7 @@ bun = "1.3.14"
 go = "1.26.5"
 node = "24.18.0"
 rust = "1.97.1"
-usage = "3.5.6"
+usage = "3.6.0"
 
 ## tools
 
@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.71.1"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"aqua:anthropics/claude-code" = "2.1.218"
+"aqua:anthropics/claude-code" = "2.1.220"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.96.0"
@@ -141,7 +141,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "v0.7.5"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.17.4"
+"github:modem-dev/hunk" = "v0.17.6"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -174,14 +174,14 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.114.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.18.4"
+"aqua:sst/opencode" = "1.18.5"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
 "npm:opkg" = "0.11.3"
 # Minimal, extensible terminal coding agent
 #  https://github.com/earendil-works/pi
-"aqua:earendil-works/pi" = "v0.82.0"
+"aqua:earendil-works/pi" = "v0.82.1"
 # pinact is a CLI to edit GitHub Workflow and Composite action files
 # and pin versions of Actions and Reusable Workflows.
 #  https://github.com/suzuki-shunsuke/pinact
@@ -229,7 +229,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.19.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.69.0"
+"github:max-sixty/worktrunk" = "v0.69.2"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -271,7 +271,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:tree-sitter/tree-sitter" = "0.26.11"
 "go:golang.org/x/tools/gopls" = "v0.23.0"
 "npm:@commitlint/cli" = "21.2.1"
-"npm:@fsouza/prettierd" = "0.28.0"
+"npm:@fsouza/prettierd" = "0.29.0"
 "npm:bash-language-server" = "5.6.0"
 "npm:cspell" = "10.0.1"
 "npm:dockerfile-language-server-nodejs" = "0.15.0"
