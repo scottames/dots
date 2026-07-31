@@ -34,9 +34,12 @@
 {{- /* Nono treats shell config as sensitive, so Fish config needs explicit deny bypasses. */ -}}
 {{- $allowPaths := list
        $ntbkDir
+      (joinPath $home ".cargo/registry/cache")
+      (joinPath $home ".cargo/registry/src")
       (joinPath $home ".config/graphite")
       (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
       (joinPath $home ".local/share/graphite")
+      (joinPath $home ".local/share/uv/python")
       (joinPath $home ".local/state/thts")
       (joinPath $home ".npm-global/lib/node_modules")
       (joinPath $home ".tenv")
@@ -56,11 +59,13 @@
 {{- $allowPaths = append $allowPaths (joinPath $home ".gnupg") -}}
 {{- $readPaths := list
       "/etc/fish"
+      "/etc/mime.types"
       "/etc/pki/ca-trust"
-      "/usr/libexec/git-core"
-      "/usr/libexec/gcc"
-      "/usr/include"
       "/etc/pki/tls/openssl.cnf"
+      "/run/user/1000/just"
+      "/usr/include"
+      "/usr/libexec/gcc"
+      "/usr/libexec/git-core"
       (joinPath $dots "mise")
       (joinPath $home ".cache/mise")
       (joinPath $home ".cargo/registry/src")
