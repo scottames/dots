@@ -115,7 +115,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:dlvhdr/gh-enhance" = "0.6.1"
 # gh extension to preview GitHub Flavored Markdown
 #  https://github.com/thiagokokada/gh-gfm-preview
-"github:thiagokokada/gh-gfm-preview" = "v1.3.1"
+"github:thiagokokada/gh-gfm-preview" = { version = "v1.3.1", bin = "gh-gfm-preview" }
 # GitHub CLI extension for stacking pull requests
 #  https://github.com/github/gh-stack
 "github:github/gh-stack" = { version = "v0.1.0", bin = "gh-stack" }
