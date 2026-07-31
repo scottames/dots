@@ -1,9 +1,9 @@
-theme = "catppuccin-mocha"
-
 appearance = "system"
 theme_dark = "catppuccin-mocha"
 theme_light = "catppuccin-latte"
+ignore_whitespace = true
 
+scroll_offset = 20
 show_file_list = true
 diff_view = "unified" # "side-by-side"
 wrap = true
