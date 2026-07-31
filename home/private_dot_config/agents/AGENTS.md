@@ -38,5 +38,3 @@ instructions supersede them, except explicit safety constraints.
   directory, repository top level, remote default branch, and worktree list. In
   a managed `<repo>/main` layout, create sibling worktrees and never delete,
   replace, or repurpose the durable `main` worktree. See: `git-commit` skill.
-- Before any response or action, load `using-superpowers` and follow its
-  skill-selection workflow.
