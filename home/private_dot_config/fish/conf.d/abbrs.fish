@@ -157,7 +157,9 @@ abbr -a l "ls -alh$_ls_arg" # list all (including hidden)
 abbr -a ll "ls -hl$_ls_arg" # list long w/ headers
 abbr -a lt "load_env ~/.tkns"
 abbr -a makepass "openssl rand -base64 12"
-abbr -a md mkdir_cd
+abbr -a md ink
+abbr -a mdb "ink ."
+abbr -a mdcd mkdir_cd
 abbr -a mdp "gh gfm-preview"
 abbr -a mi "mise install"
 abbr -a mk 'KUBECONFIG=~/.kube/configs/minikube minikube kubectl --'

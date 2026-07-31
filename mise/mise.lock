@@ -522,6 +522,65 @@ checksum = "sha256:eb08d642f016787bb9fc918a4dc5f34665463657fddf83a40f2441cbf020f
 url = "https://github.com/bootandy/dust/releases/download/v1.2.4/dust-v1.2.4-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/bootandy/dust/releases/assets/338102043"
 
+[[tools."aqua:borghei/ink"]]
+version = "0.6.7"
+backend = "aqua:borghei/ink"
+
+[tools."aqua:borghei/ink"."platforms.linux-arm64"]
+checksum = "sha256:8be92c76ec33bea529d2d6d3c4a33d46fea443b49ca05c3504120f26829b278a"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-linux-arm64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409599"
+
+[tools."aqua:borghei/ink"."platforms.linux-arm64-musl"]
+checksum = "sha256:8be92c76ec33bea529d2d6d3c4a33d46fea443b49ca05c3504120f26829b278a"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-linux-arm64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409599"
+
+[tools."aqua:borghei/ink"."platforms.linux-x64"]
+checksum = "sha256:fc6c357e63bfe222565729f04cfb3df5ece273d5e9618a2da2a09b02b0fc98fa"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-linux-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409605"
+
+[tools."aqua:borghei/ink"."platforms.linux-x64-baseline"]
+checksum = "sha256:fc6c357e63bfe222565729f04cfb3df5ece273d5e9618a2da2a09b02b0fc98fa"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-linux-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409605"
+
+[tools."aqua:borghei/ink"."platforms.linux-x64-musl"]
+checksum = "sha256:fc6c357e63bfe222565729f04cfb3df5ece273d5e9618a2da2a09b02b0fc98fa"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-linux-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409605"
+
+[tools."aqua:borghei/ink"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:fc6c357e63bfe222565729f04cfb3df5ece273d5e9618a2da2a09b02b0fc98fa"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-linux-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409605"
+
+[tools."aqua:borghei/ink"."platforms.macos-arm64"]
+checksum = "sha256:00c367c156ccf90cb5645ad2b12e1270457e6cf72cac193587e8a230e99f46ee"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-macos-arm64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409601"
+
+[tools."aqua:borghei/ink"."platforms.macos-x64"]
+checksum = "sha256:d8b365e72d28c58c35afd007bdcdc613ccf4545398c78c15d65738ca53d749cd"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-macos-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409598"
+
+[tools."aqua:borghei/ink"."platforms.macos-x64-baseline"]
+checksum = "sha256:d8b365e72d28c58c35afd007bdcdc613ccf4545398c78c15d65738ca53d749cd"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-macos-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409598"
+
+[tools."aqua:borghei/ink"."platforms.windows-x64"]
+checksum = "sha256:a170964dc28bb870d9a6475b97d12dd043e26a4e83a9601b11f84cc17e6c5949"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-windows-amd64.exe"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409596"
+
+[tools."aqua:borghei/ink"."platforms.windows-x64-baseline"]
+checksum = "sha256:a170964dc28bb870d9a6475b97d12dd043e26a4e83a9601b11f84cc17e6c5949"
+url = "https://github.com/borghei/ink/releases/download/v0.6.7/ink-windows-amd64.exe"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/490409596"
+
 [[tools."aqua:casey/just"]]
 version = "1.57.0"
 backend = "aqua:casey/just"

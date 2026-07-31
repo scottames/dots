@@ -1,0 +1,36 @@
+# ink configuration
+# https://github.com/borghei/ink
+
+# Color theme: dark, light, dracula, catppuccin, nord, tokyo-night, gruvbox, solarized
+theme = "catppuccin"
+
+# Max rendering width in columns (or use --width on the CLI)
+# width = 90
+
+# Line spacing: compact, normal, relaxed
+# spacing = "normal"
+
+# Show table of contents on startup
+# toc = false
+
+# Show YAML/TOML frontmatter as a code block at the top of the document
+frontmatter = true
+
+[behavior]
+# When true, q/Esc returns to the file browser instead of exiting.
+# Default: false (q exits ink entirely; Shift+B reopens the browser on demand).
+# browser_loop = false
+
+# When false, ink does not capture the mouse, so your terminal's own
+# click-to-open links and text selection keep working (you lose wheel-scroll
+# inside ink). Default: true.
+# mouse_capture = true
+
+[keybindings]
+# Built-in preset: "default" (vim-flavored), "vim", or "emacs"
+# preset = "default"
+
+# Per-action overrides on top of the preset.
+# Run `ink keybindings` to see the full list of action IDs and their current keys.
+# [keybindings.bindings]
+# toggle_toc = ["ctrl-t"]

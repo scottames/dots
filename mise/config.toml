@@ -145,6 +145,9 @@ amazon-ecr-credential-helper = "0.12.0"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
+# A terminal markdown reader that actually looks good
+#   https://github.com/borghei/ink
+"aqua:borghei/ink" = "0.6.7"
 #   https://github.com/casey/just
 "aqua:casey/just" = "1.57.0"
 # kubernetes tui
