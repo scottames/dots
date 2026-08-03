@@ -28,9 +28,9 @@ package_manager = "bun"
 
 bun = "1.3.14"
 go = "1.26.5"
-node = "24.18.0"
+node = "24.18.1"
 rust = "1.97.1"
-usage = "4.0.0"
+usage = "4.1.0"
 
 ## tools
 
@@ -39,16 +39,16 @@ usage = "4.0.0"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.33.0"
+"aqua:vercel-labs/agent-browser" = "0.33.1"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.45.0"
 # magical shell history
 #   https://github.com/atuinsh/atuin
-"aqua:atuinsh/atuin" = "18.17.1"
+"aqua:atuinsh/atuin" = "18.18.1"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.62.1"
+"github:aquaproj/aqua" = "v2.62.2"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -66,13 +66,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:cli/cli" = "2.96.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.145.0"
+"aqua:openai/codex" = "rust-v0.146.0"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.21.7"
 # runtime for composable workflows
 #   https://github.com/dagger/dagger
-"aqua:dagger/dagger" = "0.21.7"
+"aqua:dagger/dagger" = "0.21.8"
 # syntax-highlighting pager for git, diff, grep, and blame output
 #   https://github.com/dandavison/delta
 "aqua:dandavison/delta" = "0.19.2"
@@ -121,7 +121,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:github/gh-stack" = { version = "v0.1.0", bin = "gh-stack" }
 # A CLI to create GitHub App User Access Token for secure local development
 #  https://github.com/suzuki-shunsuke/ghtkn
-"aqua:suzuki-shunsuke/ghtkn" = "0.3.3"
+"aqua:suzuki-shunsuke/ghtkn" = "0.3.4"
 # github tui
 #  https://github.com/kitlangton/ghui
 "github:kitlangton/ghui" = "v0.9.0"
@@ -141,7 +141,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "v0.7.5"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.17.6"
+"github:modem-dev/hunk" = "v0.17.7"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -161,38 +161,38 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.15.14"
+"github:janosmiko/lfk" = "v0.15.15"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
-"aqua:walles/moor" = "2.15.1"
+"aqua:walles/moor" = "2.16.1"
 #   https://github.com/neovim/neovim
 "aqua:neovim/neovim" = "0.12.4"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/nolabs-ai/nono
-"github:nolabs-ai/nono" = "0.69.0"
+"github:nolabs-ai/nono" = "v0.70.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.114.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.18.5"
+"aqua:sst/opencode" = "1.18.10"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
 "npm:opkg" = "0.11.3"
 # Minimal, extensible terminal coding agent
 #  https://github.com/earendil-works/pi
-"aqua:earendil-works/pi" = "v0.82.1"
+"aqua:earendil-works/pi" = "v0.83.0"
 # pinact is a CLI to edit GitHub Workflow and Composite action files
 # and pin versions of Actions and Reusable Workflows.
 #  https://github.com/suzuki-shunsuke/pinact
-"aqua:suzuki-shunsuke/pinact" = "4.1.0"
+"aqua:suzuki-shunsuke/pinact" = "4.1.1"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.25.0"
+"github:backnotprop/plannotator" = "v0.25.1"
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
 "aqua:sethvargo/ratchet" = "0.12.0"
@@ -232,7 +232,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.19.1"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.69.2"
+"github:max-sixty/worktrunk" = "v0.70.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
@@ -251,7 +251,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
 "aqua:astral-sh/ruff" = "0.16.0"
-"aqua:astral-sh/uv" = "0.11.32"
+"aqua:astral-sh/uv" = "0.12.0"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.48.0"
 "aqua:dprint/dprint" = "0.55.2"
@@ -261,14 +261,14 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:gotestyourself/gotestsum" = "1.13.0"
 "aqua:incu6us/goimports-reviser" = "3.12.6"
 "aqua:koalaman/shellcheck" = "0.11.0"
-"aqua:mvdan/gofumpt" = "0.10.0"
+"aqua:mvdan/gofumpt" = "0.11.0"
 "aqua:mvdan/sh" = "3.13.1"
 "aqua:nametake/golangci-lint-langserver" = "0.0.12"
 "aqua:psf/black" = "26.5.1"
 "aqua:rhysd/actionlint" = "v1.7.12"
 "aqua:rust-lang/rust-analyzer" = "2026-02-16"
 "aqua:segmentio/golines" = "0.13.0"
-"aqua:snyk/cli" = "1.1306.1"
+"aqua:snyk/cli" = "1.1306.2"
 "aqua:tamasfe/taplo" = "0.10.0"
 "aqua:terraform-linters/tflint" = "0.64.0"
 "aqua:tree-sitter/tree-sitter" = "0.26.11"
@@ -294,6 +294,6 @@ amazon-ecr-credential-helper = "0.12.0"
 "pipx:mypy" = "2.3.0"
 "pipx:pyproject-flake8" = "7.0.0"
 "pipx:ruff-lsp" = "0.0.62"
-"pipx:semgrep" = "1.171.0"
+"pipx:semgrep" = "1.172.0"
 "pipx:sqlfluff" = "4.2.2"
 "pipx:yamllint" = "1.38.0"
