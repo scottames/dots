@@ -1,1 +1,1 @@
-type -q ink; and ink completion fish | source
+type -q ink; and ink completions fish | source
