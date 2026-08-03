@@ -9,13 +9,13 @@
 
 "go:golang.org/x/vuln/cmd/govulncheck" = "1.1.4"
 
-"cargo:cargo-audit" = "0.22.0"
-"cargo:cargo-deny" = "0.20.0"
+"cargo:cargo-audit" = "0.22.2"
+"cargo:cargo-deny" = "0.20.2"
 "cargo:cargo-geiger" = "0.13.0"
 
-"pipx:semgrep" = "1.171.0"
+"pipx:semgrep" = "1.172.0"
 "pipx:bandit" = "1.9.4"
 "pipx:pip-audit" = "2.10.1"
 "pipx:guarddog" = "3.1.0"
 
-"npm:socket" = "1.1.146"
+"npm:socket" = "1.1.147"
