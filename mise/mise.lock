@@ -2470,49 +2470,73 @@ url = "https://github.com/stern/stern/releases/download/v1.34.0/stern_1.34.0_win
 url_api = "https://api.github.com/repos/stern/stern/releases/assets/410516130"
 
 [[tools."aqua:suzuki-shunsuke/ghtkn"]]
-version = "0.3.4"
+version = "v0.3.6"
 backend = "aqua:suzuki-shunsuke/ghtkn"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64"]
-checksum = "sha256:3c75ede775eb05d3b0943ce13c26f90415b46999ff5880f339cbfbca1dcd3770"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671254"
+checksum = "sha256:e7682163d4180e15629ac59e387aebdebb24e005dff1671221a37816093c0dc4"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538974"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64-musl"]
-checksum = "sha256:3c75ede775eb05d3b0943ce13c26f90415b46999ff5880f339cbfbca1dcd3770"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671254"
+checksum = "sha256:e7682163d4180e15629ac59e387aebdebb24e005dff1671221a37816093c0dc4"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538974"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64"]
-checksum = "sha256:2d47f2d649c5c1103ed21f3bcaf38684daf65b6f4aed7d480d65299f5beb4b2e"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671250"
+checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-baseline"]
+checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl"]
-checksum = "sha256:2d47f2d649c5c1103ed21f3bcaf38684daf65b6f4aed7d480d65299f5beb4b2e"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671250"
+checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-arm64"]
-checksum = "sha256:7463d826f7b834e696d4132a022106d35bbc52182d06fd9eceb72e64dcab888f"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671245"
+checksum = "sha256:b39767b59d9d12431b7a04e6242f3dfe59693d6953a41b1e8c8c2d710ac640f6"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538965"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64"]
-checksum = "sha256:147496f882439f6affa1e493c08a57f90ed7d28d499c0a6c169c907f33a4448e"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671244"
+checksum = "sha256:57e2f117e42dc95f4ec8895dc7aabf8ac89bb6f80fa8b2327509495482127c3c"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538964"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64-baseline"]
+checksum = "sha256:57e2f117e42dc95f4ec8895dc7aabf8ac89bb6f80fa8b2327509495482127c3c"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538964"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64"]
-checksum = "sha256:33c1814dcb61710c2add618eec2fdbcb101efea5779c9e6b3745bb91014d3a81"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.4/ghtkn_windows_amd64.zip"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/494671256"
+checksum = "sha256:7405a0eb146b686a7b4868348b0e89aa786d9562710c740092d87799c3549dc5"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_windows_amd64.zip"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538978"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64-baseline"]
+checksum = "sha256:7405a0eb146b686a7b4868348b0e89aa786d9562710c740092d87799c3549dc5"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_windows_amd64.zip"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538978"
 provenance = "github-attestations"
 
 [[tools."aqua:suzuki-shunsuke/pinact"]]
@@ -3431,38 +3455,53 @@ url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/494174571
 provenance = "github-attestations"
 
 [[tools."github:ogulcancelik/herdr"]]
-version = "0.7.5"
+version = "0.8.0"
 backend = "github:ogulcancelik/herdr"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-arm64"]
-checksum = "sha256:32e763a1499a6b694b1d708e4f062b743be1da9f34fcfa4d212d6db6fe09a8b9"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-aarch64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992543"
+checksum = "sha256:f647ac66468d9efbc642fe534fb284468f0aea60641606fc008dfc0d82a3ca87"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422627"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-arm64-musl"]
-checksum = "sha256:32e763a1499a6b694b1d708e4f062b743be1da9f34fcfa4d212d6db6fe09a8b9"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-aarch64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992543"
+checksum = "sha256:f647ac66468d9efbc642fe534fb284468f0aea60641606fc008dfc0d82a3ca87"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422627"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64"]
-checksum = "sha256:3dc83288073e4c2d3c679a30e7be97bcca9141c6fd17dbbb9219142e95c59253"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992544"
+checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
+
+[tools."github:ogulcancelik/herdr"."platforms.linux-x64-baseline"]
+checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl"]
-checksum = "sha256:3dc83288073e4c2d3c679a30e7be97bcca9141c6fd17dbbb9219142e95c59253"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992544"
+checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
+
+[tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-arm64"]
-checksum = "sha256:37350546b0012555943b92eaf962665de4e264395baeb44227b8015e8ff5b0d6"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-macos-aarch64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992542"
+checksum = "sha256:d53a9f93fccfdfcc55632927bf51002f5add0aa7990bcdf508ffbd84ac658178"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-aarch64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422629"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-x64"]
-checksum = "sha256:3fe50c4a63dc8102306b1322178628ddb3655cd3ae56d784f094153408d69e62"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.7.5/herdr-macos-x86_64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/484992541"
+checksum = "sha256:77cb5afd6c8fcaaaf3bc28e474ec01c209331ad08094e20d7f8aa9b0bb78d649"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422626"
+
+[tools."github:ogulcancelik/herdr"."platforms.macos-x64-baseline"]
+checksum = "sha256:77cb5afd6c8fcaaaf3bc28e474ec01c209331ad08094e20d7f8aa9b0bb78d649"
+url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-x86_64"
+url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422626"
 
 [[tools."github:tassiovirginio/try-rs"]]
 version = "1.7.11"

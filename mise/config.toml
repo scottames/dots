@@ -121,7 +121,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:github/gh-stack" = { version = "v0.1.0", bin = "gh-stack" }
 # A CLI to create GitHub App User Access Token for secure local development
 #  https://github.com/suzuki-shunsuke/ghtkn
-"aqua:suzuki-shunsuke/ghtkn" = "0.3.4"
+"aqua:suzuki-shunsuke/ghtkn" = "v0.3.6"
 # github tui
 #  https://github.com/kitlangton/ghui
 "github:kitlangton/ghui" = "v0.9.0"
@@ -138,7 +138,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:helm/helm" = "4.2.3"
 # agent multiplexer that lives in your terminal
 #   https://github.com/ogulcancelik/herdr
-"github:ogulcancelik/herdr" = "v0.7.5"
+"github:ogulcancelik/herdr" = "0.8.0"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
 "github:modem-dev/hunk" = "v0.17.7"
