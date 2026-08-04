@@ -5,9 +5,6 @@ function fzfpr --wraps "gh pr list" --description "Fzf query PRs via gh"
     argparse -n fzfpr $options -- $argv
     or return
 
-    # Set token for this function scope - exported to fzf and its preview subshells
-    set -lx GITHUB_TOKEN (github_token_get)
-
     set _pr (GH_FORCE_TTY=100% \
     command gh pr list $argv \
     | fzf --ansi --preview "GH_FORCE_TTY=100% gh pr view {1}" \

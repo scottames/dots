@@ -1,0 +1,3 @@
+# Sourced by every zsh, including non-interactive zsh -c. Keep silent.
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+[ -f "$HOME/.shell_env" ] && . "$HOME/.shell_env"

@@ -6,6 +6,10 @@
 	gpgsign = true
 [url "git@github.com:scottames"]
   insteadOf = https://github.com/scottames
+[credential "https://github.com"]
+	helper =
+	helper = !ghtkn git-credential
+	useHttpPath = true
 [include]
 	path = ~/.gitconfig-work
 [core]

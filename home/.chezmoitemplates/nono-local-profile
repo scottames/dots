@@ -77,6 +77,7 @@
       (joinPath $home ".config/nvim")
       (joinPath $home ".config/thts")
       (joinPath $home ".gobrew")
+      (joinPath $home ".local/bin")
       (joinPath $home ".local/share/aquaproj-aqua")
       (joinPath $home ".local/share/mise")
       (joinPath $home ".local/share/nvim")
@@ -103,7 +104,7 @@
 {{-   $readPaths = append $readPaths $p -}}
 {{- end -}}
 {{- $writePaths := list
-      "/run/user/1000"
+      "/run/user/1000/ghtkn"
       "/var/home/scta/.npm/_cacache/tmp/"
       (joinPath $home ".config/fish")
       (joinPath $home ".local/share/aquaproj-aqua/bin/registry-cache")
@@ -119,7 +120,8 @@
 {{- $readFiles := list
       (joinPath $home ".gitconfig-work")
       (joinPath $home ".setenv")
-      (joinPath $home ".bash_env")
+      (joinPath $home ".shell_env")
+      (joinPath $home ".zshenv")
       (joinPath $home ".cargo/env.fish")
       (joinPath $home ".config/ghtkn/ghtkn.yaml")
 -}}

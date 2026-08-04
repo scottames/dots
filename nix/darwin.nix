@@ -9,6 +9,22 @@
   nix.enable = true;
   system.primaryUser = username;
 
+  # The agent starts locked; unlock it from a trusted terminal after launch or restart.
+  launchd.user.agents.ghtkn-agent = {
+    serviceConfig = {
+      ProgramArguments = [
+        "/Users/${username}/.local/share/mise/shims/ghtkn"
+        "agent"
+        "start"
+      ];
+      RunAtLoad = true;
+      KeepAlive = {
+        SuccessfulExit = false;
+      };
+      ProcessType = "Background";
+    };
+  };
+
   networking = {
     computerName = hostname;
     hostName = hostname;

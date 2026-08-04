@@ -1,9 +1,9 @@
 [Unit]
 Description=Detects when your YubiKey is waiting for a touch
 Requires=yubikey-touch-detector.socket
-ConditionPathIsExecutable=%h/.local/bin/yubikey-touch-detector
 
 [Service]
+ExecCondition=/usr/bin/test -x %h/.local/bin/yubikey-touch-detector
 ExecStart=%h/.local/bin/yubikey-touch-detector
 EnvironmentFile=-%E/yubikey-touch-detector/service.conf
 

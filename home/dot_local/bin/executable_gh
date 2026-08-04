@@ -38,22 +38,16 @@ main() {
     exec "${real_gh}" "$@"
   fi
 
-  if [[ -n ${GITHUB_TOKEN-} ]]; then
+  if [[ -n ${GH_TOKEN-} || -n ${GITHUB_TOKEN-} ]]; then
     exec "${real_gh}" "$@"
   fi
 
-  if GITHUB_TOKEN='' "${real_gh}" auth status >/dev/null 2>&1; then
-    exec env GITHUB_TOKEN='' "${real_gh}" "$@"
+  if ! command -v ghtkn >/dev/null 2>&1; then
+    printf 'gh wrapper: ghtkn is required; set GH_WRAPPER_BYPASS=1 to use gh directly\n' >&2
+    return 127
   fi
 
-  if command -v github-token-get >/dev/null 2>&1; then
-    local token
-    if token=$(github-token-get); then
-      exec env GITHUB_TOKEN="${token}" "${real_gh}" "$@"
-    fi
-  fi
-
-  exec "${real_gh}" "$@"
+  exec ghtkn exec -e GH_TOKEN -- "${real_gh}" "$@"
 }
 
 main "$@"

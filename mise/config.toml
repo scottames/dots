@@ -19,7 +19,7 @@ minisign = true
 slsa = true
 
 [settings.github]
-credential_command = "github-token-get"
+credential_command = "ghtkn get -m 1h"
 
 [settings.npm]
 package_manager = "bun"

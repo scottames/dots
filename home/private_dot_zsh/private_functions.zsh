@@ -395,8 +395,6 @@ function gpo() {
 #   view PR w/ fzf
 # -------------------------------------------------------------------
 function fzpr() {
-  # Set token for this function scope - exported to fzf and its preview subshells
-  export GITHUB_TOKEN=$(github-token-get)
   GH_FORCE_TTY=100% \
     command gh pr list \
     | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' \
@@ -701,16 +699,6 @@ function zellij_attach() {
   fi
 }
 alias zja=zellij_attach
-
-# -------------------------------------------------------------------
-# GitHub token wrapper for aqua (gh is handled by ~/.local/bin/gh)
-# -------------------------------------------------------------------
-if (( $+commands[github-token-get] )); then
-  function aqua() {
-    GITHUB_TOKEN=$(github-token-get) command aqua "$@"
-  }
-fi
-
 
 # /begin mac specific functions
 

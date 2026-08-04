@@ -14,6 +14,7 @@ setenv VAR_HOME                    "/var$HOME"
 setenv AQUA_CONFIG_DIR             "$HOME/.config/aquaproj-aqua"
 setenv AQUA_GLOBAL_CONFIG          "$AQUA_CONFIG_DIR/aqua.yaml"
 setenv AQUA_LOG_COLOR              "always"
+setenv AQUA_GHTKN_ENABLED          true
 [ -f "$AQUA_CONFIG_DIR/aqua-policy.yaml" ] \
   && setenv AQUA_POLICY_CONFIG     "$AQUA_CONFIG_DIR/aqua-policy.yaml"
 # avoid aqua yelling about ignored policy
@@ -25,7 +26,7 @@ setenv AQUA_LOG_COLOR              "always"
 setenv AQUA_PROGRESS_BAR           "true"
 setenv AQUA_ROOT_DIR               "$HOME/.local/share/aquaproj-aqua/bin"
 setenv AWS_PAGER                   ""
-setenv BASH_ENV                    "$HOME/.bash_env"
+setenv BASH_ENV                    "$HOME/.shell_env"
 $IS_LIGHT \
   && setenv BAT_THEME              "Catppuccin Latte"
 $IS_DARK \

@@ -74,6 +74,23 @@ __path.fish            # 4. Builds $PATH using vars from setenv
 `custom_functions.d/` contains fish functions, including wrappers that extend
 CLI tools (e.g., `gh.fish` wraps `gh` with token handling).
 
+## GitHub Tokens
+
+`ghtkn` runs as a host-managed agent: a systemd user service on Linux and a
+launchd user agent on macOS. Never run a refresh-enabled agent in a
+passwordless-root container.
+
+- Do not display or log `ghtkn get` output.
+- Inspect non-secret state with `ghtkn info`; use `ghtkn docs list` and
+  `ghtkn docs show <name>` for troubleshooting.
+- The agent starts locked after every start or restart. From a trusted host
+  terminal, unlock it with `ghtkn agent unlock --enable-refresh`.
+- Linux distrobox clients use the host agent socket. On macOS, container VMs
+  cannot mount a host Unix socket; forward it over SSH and set
+  `GHTKN_AGENT_SOCKET` only inside the container.
+- Login shells use Fish. OpenCode task commands use non-interactive Bash; other
+  agents may use Zsh. Bash and Zsh both source `~/.shell_env`.
+
 ## Build/Lint/Test Commands
 
 ### Linting (Primary)

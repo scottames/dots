@@ -1,0 +1,11 @@
+[Unit]
+Description=ghtkn agent
+
+[Service]
+# Skip cleanly until mise creates the ghtkn shim.
+ExecCondition=/usr/bin/test -x %h/.local/share/mise/shims/ghtkn
+ExecStart=%h/.local/share/mise/shims/ghtkn agent start
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
