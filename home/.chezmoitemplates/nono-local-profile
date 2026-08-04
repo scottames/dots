@@ -49,6 +49,8 @@
 {{- if ne $workNotebook "" -}}
 {{-   $allowPaths = append $allowPaths $workNotebook -}}
 {{- end -}}
+{{- /* just/justfile requires read/write */ -}}
+{{- $allowPaths = append $allowPaths "/run/user/1000/just" -}}
 {{- /* Neovim needs read+write state access because ShaDa merges existing state before writing. */ -}}
 {{- $allowPaths = append $allowPaths (joinPath $home ".local/state/nvim") -}}
 {{- $allowPaths = append $allowPaths (joinPath $home ".local/share/nvim") -}}
@@ -62,7 +64,7 @@
       "/etc/mime.types"
       "/etc/pki/ca-trust"
       "/etc/pki/tls/openssl.cnf"
-      "/run/user/1000/just"
+      "/proc"
       "/usr/include"
       "/usr/libexec/gcc"
       "/usr/libexec/git-core"
@@ -119,6 +121,7 @@
 {{- /* Aqua wants to refresh its metadata and registry cache during tool startup. */ -}}
 {{- $readFiles := list
       (joinPath $home ".gitconfig-work")
+      (joinPath $home ".config/git/config")
       (joinPath $home ".setenv")
       (joinPath $home ".shell_env")
       (joinPath $home ".zshenv")
