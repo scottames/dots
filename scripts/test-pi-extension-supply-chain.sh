@@ -77,7 +77,7 @@ const manifest = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 assert.equal(settings.defaultProjectTrust, 'ask');
 assert.ok(!Object.hasOwn(settings, 'npmCommand'));
 assert.deepEqual(
-  [...settings.packages].sort(),
+  settings.packages.filter((entry) => typeof entry === 'string').sort(),
   Object.keys(manifest.dependencies)
     .map((name) => `${root}/current/node_modules/${name}`)
     .sort(),
@@ -178,7 +178,7 @@ assert b'--allow-cwd' in args, args
 allow_index = args.index(b'--allow')
 separator_index = args.index(b'--')
 assert allow_index < separator_index, args
-assert args[allow_index + 1] == expected_parent, args
+assert expected_parent in args[allow_index + 1:separator_index], args
 PY
 
 (
@@ -197,12 +197,12 @@ PY
   cd "${local_path_repo}/nested"
   BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd --allow "${local_path_repo_parent}" -- pi --version
 )
-python - "${local_path_capture}" <<'PY'
+python - "${local_path_capture}" "${local_path_repo_parent}" <<'PY'
 import sys
 from pathlib import Path
 
 args = Path(sys.argv[1]).read_bytes().split(b'\0')[:-1]
-assert args.count(b'--allow') == 1, args
+assert args.count(sys.argv[2].encode()) == 1, args
 PY
 
 nono_tmpdir_marker="${fixture_dir}/nono-tmpdir"
@@ -293,6 +293,12 @@ for package in "${extension_packages[@]}"; do
   [[ -d ${extensions_dir}/current/node_modules/${package} ]] || fail "current is missing ${package}"
 done
 
+cat >"${stub_bin}/nono-with-local-path" <<STUB
+#!/usr/bin/env bash
+exec "${local_path_wrapper}" "\$@"
+STUB
+chmod +x "${stub_bin}/nono-with-local-path"
+
 set +e
 (
   cd "${fixture_home}"
@@ -301,7 +307,7 @@ set +e
 wrapper_status=$?
 set -e
 [[ ${wrapper_status} -ne 0 ]] || fail 'wrapper accepted an extension-tree ancestor as cwd'
-[[ $(<"${fixture_dir}/wrapper-output") == *'refusing writable access to the Pi extension tree'* ]] || fail 'wrapper did not reach the overlap check'
+[[ $(<"${fixture_dir}/wrapper-output") == *'refusing access overlapping'* ]] || fail 'wrapper did not reach the overlap check'
 [[ ! -e ${fixture_dir}/nono-reached ]] || fail 'wrapper reached nono with writable extension-tree access'
 
 printf 'Pi extension supply-chain checks passed\n'

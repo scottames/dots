@@ -9,6 +9,7 @@ at startup.
 | `pi-ask-user` | Structured questions |
 | `@narumitw/pi-statusline` | Status line |
 | `@tintinweb/pi-subagents` | Subagent workflows |
+| `pi-web-search` | Provider-native web search and Gemini URL context |
 
 `package.json` pins the direct versions. `package-lock.json` pins the complete
 npm registry closure and its artifact integrity hashes. The chezmoi script
@@ -30,8 +31,9 @@ inside `~/.local/share/pi-extensions`; chezmoi owns `current` and its builds.
 ## Scope And Limits
 
 The approved baseline is only `pi-ask-user@0.13.0`,
-`@narumitw/pi-statusline@0.16.0`, and `@tintinweb/pi-subagents@0.14.2` on the
-current Linux host with Pi 0.80.10, `pi-local.json`, and the `nono-pi` launcher.
+`@narumitw/pi-statusline@0.34.0`, `@tintinweb/pi-subagents@0.14.3`, and
+`pi-web-search@1.3.1` on the current Linux host with Pi 0.83.0,
+`pi-local.json`, and the `nono-pi` launcher.
 It accepts the expected terminal-rendering risk and that the subagents run
 in-process with Pi's environment and Nono-authorized authority. Upstream
 defaults keep transcripts and scheduling enabled; transcripts use Nono's
@@ -39,6 +41,17 @@ private `TMPDIR`, and project schedules, optional memory, and explicit
 worktree mode can write Pi or Git state. The installer is portable to macOS,
 but macOS requires a separate review and approval before activation. Re-review
 after changing any package, Pi, operating system, Nono profile, or launcher.
+
+`pi-web-search@1.3.1` is approved from npm registry tarball integrity
+`sha512-FBmGupWahqLU+uMSDLy+As7zn/4oiHGxC/MPtGuzOZNHEJw8ACJvCsZhyflprBJB31m0WIa4iiRKtbARRByaZg==`,
+signed with npm key `SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U`, and source commit
+`118b3eee3f5900cef3141745109a300315630592`. It registers `web_search` and
+Gemini-only `url_context`; it reads Pi's configured provider credentials and
+sends user queries and supplied public URLs to OpenAI, Anthropic, or Gemini.
+It also reads the optional `~/.pi/agent/web-search.json` model selection file
+and resolves Google grounding redirects. No lifecycle script, binary, native
+or WASM component, or direct production dependency is present. It relies on
+Pi-provided peers including `typebox`; its Pi peer minimum is 0.80.3.
 
 The lock and review establish the identity of downloaded artifacts; they do not
 prove an extension is benign. Extensions execute inside Pi with Pi's authority.
