@@ -419,19 +419,7 @@ url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-unknow
 url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097157"
 provenance = "github-attestations"
 
-[tools."aqua:astral-sh/uv"."platforms.linux-x64-baseline"]
-checksum = "sha256:47823f814693bab8623308341369190de30b5c621eec5b1ee20352eae8c7982c"
-url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097157"
-provenance = "github-attestations"
-
 [tools."aqua:astral-sh/uv"."platforms.linux-x64-musl"]
-checksum = "sha256:47823f814693bab8623308341369190de30b5c621eec5b1ee20352eae8c7982c"
-url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097157"
-provenance = "github-attestations"
-
-[tools."aqua:astral-sh/uv"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:47823f814693bab8623308341369190de30b5c621eec5b1ee20352eae8c7982c"
 url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-unknown-linux-musl.tar.gz"
 url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097157"
@@ -449,19 +437,7 @@ url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-apple-
 url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097144"
 provenance = "github-attestations"
 
-[tools."aqua:astral-sh/uv"."platforms.macos-x64-baseline"]
-checksum = "sha256:69d9f9a00337f25a50dcb13882052da08b8469bac11091c98c5694c3c6721467"
-url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097144"
-provenance = "github-attestations"
-
 [tools."aqua:astral-sh/uv"."platforms.windows-x64"]
-checksum = "sha256:8fcb0cb46e1229065e344758980924e569bef5882ef45f46fada8fb24e06b74a"
-url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097149"
-provenance = "github-attestations"
-
-[tools."aqua:astral-sh/uv"."platforms.windows-x64-baseline"]
 checksum = "sha256:8fcb0cb46e1229065e344758980924e569bef5882ef45f46fada8fb24e06b74a"
 url = "https://github.com/astral-sh/uv/releases/download/0.12.1/uv-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/497097149"
@@ -1263,17 +1239,7 @@ checksum = "sha256:59b59f68ee37aba51f5523d69ec779ee925d9be4e279f9220eca357267f2e
 url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Linux_x86_64.tar.gz"
 url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031348"
 
-[tools."aqua:google/go-containerregistry"."platforms.linux-x64-baseline"]
-checksum = "sha256:59b59f68ee37aba51f5523d69ec779ee925d9be4e279f9220eca357267f2ee67"
-url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031348"
-
 [tools."aqua:google/go-containerregistry"."platforms.linux-x64-musl"]
-checksum = "sha256:59b59f68ee37aba51f5523d69ec779ee925d9be4e279f9220eca357267f2ee67"
-url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031348"
-
-[tools."aqua:google/go-containerregistry"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:59b59f68ee37aba51f5523d69ec779ee925d9be4e279f9220eca357267f2ee67"
 url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Linux_x86_64.tar.gz"
 url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031348"
@@ -1288,17 +1254,7 @@ checksum = "sha256:3a81c792d4c696fc852e46f60e649be67957c27036b542ba8b0489e0da697
 url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Darwin_x86_64.tar.gz"
 url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031392"
 
-[tools."aqua:google/go-containerregistry"."platforms.macos-x64-baseline"]
-checksum = "sha256:3a81c792d4c696fc852e46f60e649be67957c27036b542ba8b0489e0da69714f"
-url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031392"
-
 [tools."aqua:google/go-containerregistry"."platforms.windows-x64"]
-checksum = "sha256:1c58f89954b006e8c0f287cd6c6293e62ec2b0fbcef105488d690a9b88fa8d62"
-url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Windows_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031375"
-
-[tools."aqua:google/go-containerregistry"."platforms.windows-x64-baseline"]
 checksum = "sha256:1c58f89954b006e8c0f287cd6c6293e62ec2b0fbcef105488d690a9b88fa8d62"
 url = "https://github.com/google/go-containerregistry/releases/download/v0.21.8/go-containerregistry_Windows_x86_64.tar.gz"
 url_api = "https://api.github.com/repos/google/go-containerregistry/releases/assets/497031375"
@@ -1583,17 +1539,7 @@ checksum = "sha256:b3648f48675612b69ee35371cf6dc99ca96d767e89b912d079080916ac8ba
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342478"
 
-[tools."aqua:junegunn/fzf"."platforms.linux-x64-baseline"]
-checksum = "sha256:b3648f48675612b69ee35371cf6dc99ca96d767e89b912d079080916ac8ba8bd"
-url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342478"
-
 [tools."aqua:junegunn/fzf"."platforms.linux-x64-musl"]
-checksum = "sha256:b3648f48675612b69ee35371cf6dc99ca96d767e89b912d079080916ac8ba8bd"
-url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342478"
-
-[tools."aqua:junegunn/fzf"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:b3648f48675612b69ee35371cf6dc99ca96d767e89b912d079080916ac8ba8bd"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342478"
@@ -1608,17 +1554,7 @@ checksum = "sha256:b019ae8bcca33945a2ffbbbf8369705405cd1406fc4d74267e712797010e3
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-darwin_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342631"
 
-[tools."aqua:junegunn/fzf"."platforms.macos-x64-baseline"]
-checksum = "sha256:b019ae8bcca33945a2ffbbbf8369705405cd1406fc4d74267e712797010e3676"
-url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342631"
-
 [tools."aqua:junegunn/fzf"."platforms.windows-x64"]
-checksum = "sha256:a5a3b27dd203469139d10669721952335b9b46f19346e3d1abc102a67ea60804"
-url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-windows_amd64.zip"
-url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342617"
-
-[tools."aqua:junegunn/fzf"."platforms.windows-x64-baseline"]
 checksum = "sha256:a5a3b27dd203469139d10669721952335b9b46f19346e3d1abc102a67ea60804"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-windows_amd64.zip"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/497342617"
@@ -2555,19 +2491,7 @@ url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_l
 url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
 provenance = "github-attestations"
 
-[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-baseline"]
-checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
-provenance = "github-attestations"
-
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl"]
-checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
-provenance = "github-attestations"
-
-[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:8a725f2b446e16001cf2dd30190c98b1ecf84c939e862e1a23d7e6d136b3584a"
 url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538971"
@@ -2585,19 +2509,7 @@ url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_d
 url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538964"
 provenance = "github-attestations"
 
-[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64-baseline"]
-checksum = "sha256:57e2f117e42dc95f4ec8895dc7aabf8ac89bb6f80fa8b2327509495482127c3c"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538964"
-provenance = "github-attestations"
-
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64"]
-checksum = "sha256:7405a0eb146b686a7b4868348b0e89aa786d9562710c740092d87799c3549dc5"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_windows_amd64.zip"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538978"
-provenance = "github-attestations"
-
-[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64-baseline"]
 checksum = "sha256:7405a0eb146b686a7b4868348b0e89aa786d9562710c740092d87799c3549dc5"
 url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.3.6/ghtkn_windows_amd64.zip"
 url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/500538978"
@@ -3500,19 +3412,7 @@ url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816965
 provenance = "github-attestations"
 provenance_verified = true
 
-[tools."github:nolabs-ai/nono"."platforms.linux-x64-baseline"]
-checksum = "sha256:9ee2966184e8afa664199c21e089eae596c8d763371a253104623e0f5b0f0a2d"
-url = "https://github.com/nolabs-ai/nono/releases/download/v0.71.0/nono-v0.71.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816965"
-provenance = "github-attestations"
-
 [tools."github:nolabs-ai/nono"."platforms.linux-x64-musl"]
-checksum = "sha256:9ee2966184e8afa664199c21e089eae596c8d763371a253104623e0f5b0f0a2d"
-url = "https://github.com/nolabs-ai/nono/releases/download/v0.71.0/nono-v0.71.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816965"
-provenance = "github-attestations"
-
-[tools."github:nolabs-ai/nono"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:9ee2966184e8afa664199c21e089eae596c8d763371a253104623e0f5b0f0a2d"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.71.0/nono-v0.71.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816965"
@@ -3525,12 +3425,6 @@ url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816971
 provenance = "github-attestations"
 
 [tools."github:nolabs-ai/nono"."platforms.macos-x64"]
-checksum = "sha256:ca0ff3e24d04be3c71f76ae898b069efc1fdb865dbe7ed4f477af7064cda22ca"
-url = "https://github.com/nolabs-ai/nono/releases/download/v0.71.0/nono-v0.71.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816963"
-provenance = "github-attestations"
-
-[tools."github:nolabs-ai/nono"."platforms.macos-x64-baseline"]
 checksum = "sha256:ca0ff3e24d04be3c71f76ae898b069efc1fdb865dbe7ed4f477af7064cda22ca"
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.71.0/nono-v0.71.0-x86_64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/496816963"
@@ -3555,17 +3449,7 @@ checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9ac
 url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
 
-[tools."github:ogulcancelik/herdr"."platforms.linux-x64-baseline"]
-checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
-
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl"]
-checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
-
-[tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:b872ea7e40fa2cb17e857ac9b62b1bf26db7b403c622f5d2f3f5b35f6e9acd28"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422625"
@@ -3576,11 +3460,6 @@ url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-aa
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422629"
 
 [tools."github:ogulcancelik/herdr"."platforms.macos-x64"]
-checksum = "sha256:77cb5afd6c8fcaaaf3bc28e474ec01c209331ad08094e20d7f8aa9b0bb78d649"
-url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-x86_64"
-url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422626"
-
-[tools."github:ogulcancelik/herdr"."platforms.macos-x64-baseline"]
 checksum = "sha256:77cb5afd6c8fcaaaf3bc28e474ec01c209331ad08094e20d7f8aa9b0bb78d649"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422626"
