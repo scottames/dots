@@ -69,7 +69,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:openai/codex" = "rust-v0.146.0"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
-"aqua:google/go-containerregistry" = "0.21.7"
+"aqua:google/go-containerregistry" = "0.21.8"
 # runtime for composable workflows
 #   https://github.com/dagger/dagger
 "aqua:dagger/dagger" = "0.21.8"
@@ -103,7 +103,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:antonmedv/fx" = "39.2.0"
 # command-line fuzzy finder
 #   https://github.com/junegunn/fzf
-"aqua:junegunn/fzf" = "0.74.1"
+"aqua:junegunn/fzf" = "0.74.2"
 # fork a repository, commit files and create a pull request using github api
 #   https://github.com/int128/ghcp
 "aqua:int128/ghcp" = "1.15.3"
@@ -171,7 +171,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/nolabs-ai/nono
-"github:nolabs-ai/nono" = "v0.70.0"
+"github:nolabs-ai/nono" = "v0.71.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.114.1"
@@ -251,7 +251,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
 "aqua:astral-sh/ruff" = "0.16.1"
-"aqua:astral-sh/uv" = "0.12.0"
+"aqua:astral-sh/uv" = "0.12.1"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.48.0"
 "aqua:dprint/dprint" = "0.55.2"
