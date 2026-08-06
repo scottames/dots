@@ -3464,6 +3464,65 @@ checksum = "sha256:77cb5afd6c8fcaaaf3bc28e474ec01c209331ad08094e20d7f8aa9b0bb78d
 url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-macos-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/500422626"
 
+[[tools."github:schpet/linear-cli"]]
+version = "2.3.1"
+backend = "github:schpet/linear-cli"
+
+[tools."github:schpet/linear-cli"."platforms.linux-arm64"]
+checksum = "sha256:9575ca01ed4fdb3967543b513ba973dc008b0306684905614b837d4b0f2b3102"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844099"
+
+[tools."github:schpet/linear-cli"."platforms.linux-arm64-musl"]
+checksum = "sha256:9575ca01ed4fdb3967543b513ba973dc008b0306684905614b837d4b0f2b3102"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844099"
+
+[tools."github:schpet/linear-cli"."platforms.linux-x64"]
+checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
+
+[tools."github:schpet/linear-cli"."platforms.linux-x64-baseline"]
+checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
+
+[tools."github:schpet/linear-cli"."platforms.linux-x64-musl"]
+checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
+
+[tools."github:schpet/linear-cli"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
+
+[tools."github:schpet/linear-cli"."platforms.macos-arm64"]
+checksum = "sha256:1cc76fde1ad308543cc69fae67bbae51d7c67ec6cb43d2b249f30ba19615d474"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844091"
+
+[tools."github:schpet/linear-cli"."platforms.macos-x64"]
+checksum = "sha256:ac305606934ae06b8b2495b472eba00d2c18887b5ff146564cf0afc01262d60d"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844113"
+
+[tools."github:schpet/linear-cli"."platforms.macos-x64-baseline"]
+checksum = "sha256:ac305606934ae06b8b2495b472eba00d2c18887b5ff146564cf0afc01262d60d"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844113"
+
+[tools."github:schpet/linear-cli"."platforms.windows-x64"]
+checksum = "sha256:72fd1f18b930d5b9eae8eae154e00705c0f252a49441b591f97858880381d71e"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844131"
+
+[tools."github:schpet/linear-cli"."platforms.windows-x64-baseline"]
+checksum = "sha256:72fd1f18b930d5b9eae8eae154e00705c0f252a49441b591f97858880381d71e"
+url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844131"
+
 [[tools."github:tassiovirginio/try-rs"]]
 version = "1.7.11"
 backend = "github:tassiovirginio/try-rs"

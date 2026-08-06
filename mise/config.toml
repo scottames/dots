@@ -162,6 +162,10 @@ amazon-ecr-credential-helper = "0.12.0"
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
 "github:janosmiko/lfk" = "v0.15.16"
+# linear without leaving the command line: list, start, and create PRs for
+# linear issues. agent friendly.
+#  https://github.com/schpet/linear-cli
+"github:schpet/linear-cli" = "2.3.1"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
