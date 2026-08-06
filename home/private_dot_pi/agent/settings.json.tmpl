@@ -4,7 +4,7 @@
   "defaultProvider": "openai-codex",
   "defaultThinkingLevel": "high",
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.80.10",
+  "lastChangelogVersion": "{{ trimPrefix "v" (output "mise" "current" "aqua:earendil-works/pi" | trim) }}",
   "packages": [
     "{{ .chezmoi.homeDir }}/.local/share/pi-extensions/current/node_modules/@tintinweb/pi-subagents",
     "{{ .chezmoi.homeDir }}/.local/share/pi-extensions/current/node_modules/pi-ask-user",

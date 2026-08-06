@@ -23,7 +23,7 @@ running Pi session keeps its files.
 2. Regenerate the lock from this directory with `npm install --registry=https://registry.npmjs.org/ --legacy-peer-deps --package-lock-only --ignore-scripts`.
 3. Review the upstream source diff, exact tarball, package capabilities, and full lock diff. Stop for an unexplained new dependency, lifecycle script, binary, native/WASM component, network access, credential access, or Pi hook.
 4. Run `bash scripts/test-pi-extension-supply-chain.sh` and a disposable `npm ci --ignore-scripts --legacy-peer-deps --omit=dev`.
-5. Review `chezmoi diff`. After explicit approval, run the normal `chezmoi apply` workflow, confirm `readlink ~/.local/share/pi-extensions/current`, then smoke-test through `nono-pi`.
+5. Review `chezmoi diff`. After explicit approval, run the normal `chezmoi apply` workflow, confirm `readlink ~/.local/share/pi-extensions/current`, then smoke-test through `nnp`.
 
 Renovate may propose updates but cannot automerge them. Do not run `npm install`
 inside `~/.local/share/pi-extensions`; chezmoi owns `current` and its builds.
@@ -36,8 +36,8 @@ The approved baseline is only `pi-ask-user@0.13.0`,
 `pi-local.json`, and the `nono-pi` launcher.
 It accepts the expected terminal-rendering risk and that the subagents run
 in-process with Pi's environment and Nono-authorized authority. Upstream
-defaults keep transcripts and scheduling enabled; transcripts use Nono's
-private `TMPDIR`, and project schedules, optional memory, and explicit
+defaults keep transcripts and scheduling enabled; transcripts use Pi's private
+`/tmp/pi-$UID` directory, and project schedules, optional memory, and explicit
 worktree mode can write Pi or Git state. The installer is portable to macOS,
 but macOS requires a separate review and approval before activation. Re-review
 after changing any package, Pi, operating system, Nono profile, or launcher.

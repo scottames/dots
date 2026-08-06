@@ -11,6 +11,7 @@ lockfile="${extension_source}/package-lock.json"
 installer="${repo_root}/home/.chezmoiscripts/run_before_52_pi_extensions.sh.tmpl"
 settings="${repo_root}/home/private_dot_pi/agent/settings.json.tmpl"
 profile="${repo_root}/home/private_dot_config/nono/profiles/pi-local.json.tmpl"
+removals="${repo_root}/home/.chezmoiremove.tmpl"
 wrapper="${repo_root}/home/dot_local/bin/executable_nono-pi"
 local_path_wrapper="${repo_root}/home/dot_local/bin/executable_nono-with-local-path"
 
@@ -19,9 +20,11 @@ fail() {
   exit 1
 }
 
-for required in "${manifest}" "${lockfile}" "${installer}" "${settings}" "${profile}" "${wrapper}" "${local_path_wrapper}"; do
+for required in "${manifest}" "${lockfile}" "${installer}" "${settings}" "${profile}" "${removals}" "${wrapper}" "${local_path_wrapper}"; do
   [[ -f ${required} ]] || fail "missing ${required#"${repo_root}/"}"
 done
+
+[[ $(<"${removals}") == *'.pi/agent/tmp'* ]] || fail 'chezmoi does not remove the retired Pi temporary directory'
 
 node - "${manifest}" "${lockfile}" <<'NODE'
 const assert = require('node:assert/strict');
@@ -89,6 +92,8 @@ assert.ok(profile.filesystem.read.includes('/proc'));
 assert.ok(profile.filesystem.read.includes(`${process.env.HOME_DIR}/.config/mise`));
 assert.ok(profile.filesystem.read_file.includes(`${process.env.HOME_DIR}/.config/agents/AGENTS.md`));
 assert.ok(profile.filesystem.allow.includes(`${process.env.HOME_DIR}/.npm`));
+assert.ok(profile.filesystem.allow.includes('/tmp/pi-$UID'));
+assert.ok(!profile.filesystem.allow.includes('/tmp'));
 assert.ok(!Object.hasOwn(profile, 'groups'));
 assert.deepEqual(profile.security, {
   signal_mode: 'allow_same_sandbox',
@@ -100,6 +105,7 @@ assert.ok(!Object.hasOwn(profile, 'open_urls'));
 assert.ok(!Object.hasOwn(profile, 'allow_launch_services'));
 assert.ok(!Object.hasOwn(profile, 'rollback'));
 assert.ok(!Object.hasOwn(profile, 'undo'));
+assert.ok(!Object.hasOwn(profile, 'session_hooks'));
 NODE
 
 extensions_dir="${fixture_home}/.local/share/pi-extensions"
@@ -134,11 +140,6 @@ shift
 printf 'manifest runtime unavailable\n' >&2
 exit 1
 STUB
-cat >"${stub_bin}/nono-with-local-path" <<'STUB'
-#!/usr/bin/env bash
-printf '%s\n%s\n%s\n' "${TMPDIR-}" "${PI_SUBAGENTS_WORKTREE_DIR-}" "${PI_SUBAGENT_PI_BINARY-}" >"${NONO_TMPDIR_MARKER}"
-[[ -z "${NONO_REACHED_MARKER-}" ]] || touch "${NONO_REACHED_MARKER}"
-STUB
 real_git="$(command -v git)"
 cat >"${stub_bin}/git" <<STUB
 #!/usr/bin/env bash
@@ -151,12 +152,14 @@ cat >"${stub_bin}/realpath" <<'STUB'
 #!/usr/bin/env bash
 exit 127
 STUB
-chmod +x "${stub_bin}/mise" "${stub_bin}/nono-with-local-path" "${stub_bin}/git" "${stub_bin}/realpath"
+chmod +x "${stub_bin}/mise" "${stub_bin}/git" "${stub_bin}/realpath"
 
 local_path_capture="${fixture_dir}/local-path-args"
 cat >"${stub_bin}/nono" <<'STUB'
 #!/usr/bin/env bash
 printf '%s\0' "$@" >"${NONO_ARGS_CAPTURE}"
+[[ -z "${NONO_REJECT_OVERLAP_CAPTURE-}" ]] || printf '%s\n' "${NONO_REJECT_OVERLAP-}" >"${NONO_REJECT_OVERLAP_CAPTURE}"
+[[ -z "${NONO_REACHED_MARKER-}" ]] || touch "${NONO_REACHED_MARKER}"
 STUB
 chmod +x "${stub_bin}/nono"
 
@@ -164,9 +167,10 @@ local_path_repo_parent="${fixture_dir}/git-parent"
 local_path_repo="${local_path_repo_parent}/main"
 mkdir -p "${local_path_repo}/nested" "${fixture_dir}/project"
 git -C "${local_path_repo}" init --quiet
+overlap_capture="${fixture_dir}/overlap"
 (
   cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi --version
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi --version
 )
 python - "${local_path_capture}" "${local_path_repo_parent}" <<'PY'
 import sys
@@ -180,10 +184,11 @@ separator_index = args.index(b'--')
 assert allow_index < separator_index, args
 assert expected_parent in args[allow_index + 1:separator_index], args
 PY
+[[ $(<"${overlap_capture}") == "${fixture_home}/.local/share/pi-extensions" ]] || fail 'pi-local does not protect the extension tree'
 
 (
   cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local -- pi --version
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local -- pi --version
 )
 python - "${local_path_capture}" <<'PY'
 import sys
@@ -195,7 +200,19 @@ PY
 
 (
   cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd --allow "${local_path_repo_parent}" -- pi --version
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile=pi-local -- pi --version
+)
+[[ $(<"${overlap_capture}") == "${fixture_home}/.local/share/pi-extensions" ]] || fail 'attached pi-local profile does not protect the extension tree'
+
+(
+  cd "${local_path_repo}/nested"
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile opencode-local -- --profile pi-local
+)
+[[ -z $(<"${overlap_capture}") ]] || fail 'profile argument after the command separator enabled Pi protection'
+
+(
+  cd "${local_path_repo}/nested"
+  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd --allow "${local_path_repo_parent}" -- pi --version
 )
 python - "${local_path_capture}" "${local_path_repo_parent}" <<'PY'
 import sys
@@ -205,22 +222,35 @@ args = Path(sys.argv[1]).read_bytes().split(b'\0')[:-1]
 assert args.count(sys.argv[2].encode()) == 1, args
 PY
 
+wrapper_stub_bin="${fixture_dir}/wrapper-bin"
 nono_tmpdir_marker="${fixture_dir}/nono-tmpdir"
+mkdir -p "${wrapper_stub_bin}"
+cat >"${wrapper_stub_bin}/nono-with-local-path" <<'STUB'
+#!/usr/bin/env bash
+printf '%s\n%s\n%s\n' "${TMPDIR-}" "${PI_SUBAGENTS_WORKTREE_DIR-}" "${PI_SUBAGENT_PI_BINARY-}" >"${NONO_TMPDIR_MARKER}"
+STUB
+cat >"${wrapper_stub_bin}/mkdir" <<'STUB'
+#!/usr/bin/env bash
+[[ $1 == -p && $2 == /tmp/pi-* ]] || exit 2
+STUB
+cat >"${wrapper_stub_bin}/stat" <<'STUB'
+#!/usr/bin/env bash
+[[ $1 == -c && $2 == %u && $3 == /tmp/pi-* ]] || exit 2
+printf '%s\n' "${UID}"
+STUB
+cat >"${wrapper_stub_bin}/chmod" <<'STUB'
+#!/usr/bin/env bash
+[[ $1 == 700 && $2 == /tmp/pi-* ]] || exit 2
+STUB
+chmod +x "${wrapper_stub_bin}/nono-with-local-path" "${wrapper_stub_bin}/mkdir" "${wrapper_stub_bin}/stat" "${wrapper_stub_bin}/chmod"
 (
-  cd "${fixture_dir}/project"
-  BASH_ENV=/dev/null HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" STUB_GIT_FAIL=1 bash "${wrapper}"
+  BASH_ENV=/dev/null PATH="${wrapper_stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" bash "${wrapper}"
 )
-expected_tmpdir="${fixture_home}/.pi/agent/tmp"
+expected_tmpdir="/tmp/pi-${UID}"
 mapfile -t wrapper_environment <"${nono_tmpdir_marker}"
-[[ ${wrapper_environment[0]} == "${expected_tmpdir}" ]] || fail 'wrapper does not use a private Pi temp directory'
+[[ ${wrapper_environment[0]} == "${expected_tmpdir}" ]] || fail 'wrapper does not use the scoped Pi temporary directory'
 [[ -z ${wrapper_environment[1]} ]] || fail 'wrapper sets PI_SUBAGENTS_WORKTREE_DIR'
 [[ -z ${wrapper_environment[2]} ]] || fail 'wrapper sets PI_SUBAGENT_PI_BINARY'
-node - "${expected_tmpdir}" <<'NODE'
-const assert = require('node:assert/strict');
-const fs = require('node:fs');
-
-assert.equal(fs.statSync(process.argv[2]).mode & 0o777, 0o700, 'private Pi temp directory mode');
-NODE
 
 set +e
 HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" bash "${installer_fixture}" >"${fixture_dir}/installer-output" 2>&1
@@ -293,21 +323,15 @@ for package in "${extension_packages[@]}"; do
   [[ -d ${extensions_dir}/current/node_modules/${package} ]] || fail "current is missing ${package}"
 done
 
-cat >"${stub_bin}/nono-with-local-path" <<STUB
-#!/usr/bin/env bash
-exec "${local_path_wrapper}" "\$@"
-STUB
-chmod +x "${stub_bin}/nono-with-local-path"
-
 set +e
 (
   cd "${fixture_home}"
-  HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_REACHED_MARKER="${fixture_dir}/nono-reached" bash "${wrapper}"
+  HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REACHED_MARKER="${fixture_dir}/nono-reached" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi
 ) >"${fixture_dir}/wrapper-output" 2>&1
 wrapper_status=$?
 set -e
-[[ ${wrapper_status} -ne 0 ]] || fail 'wrapper accepted an extension-tree ancestor as cwd'
-[[ $(<"${fixture_dir}/wrapper-output") == *'refusing access overlapping'* ]] || fail 'wrapper did not reach the overlap check'
+[[ ${wrapper_status} -ne 0 ]] || fail 'pi-local accepted an extension-tree ancestor as cwd'
+[[ $(<"${fixture_dir}/wrapper-output") == *'refusing access overlapping'* ]] || fail 'pi-local did not reach the overlap check'
 [[ ! -e ${fixture_dir}/nono-reached ]] || fail 'wrapper reached nono with writable extension-tree access'
 
 printf 'Pi extension supply-chain checks passed\n'

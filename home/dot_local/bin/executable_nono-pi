@@ -1,19 +1,24 @@
 #!/usr/bin/env bash
 
-# Run Pi inside the pi-local Nono profile. The shared nono-with-local-path
-# wrapper handles PATH plus the per-invocation Git worktree and Herdr socket
-# grants; this wrapper adds only the two Pi-specific concerns:
-# - A private, readable TMPDIR (Nono grants shared /tmp write-only, but Pi
-#   extensions need to read back their own temporary files).
-# - NONO_REJECT_OVERLAP, so the shared wrapper refuses any worktree/cwd grant
-#   that would expose the Pi extension tree as writable.
-
+# Run Pi inside the pi-local Nono profile. Pi extensions need a readable
+# temporary directory, while Nono keeps shared /tmp write-only.
+# Keep this pre-sandbox setup until direct `nono wrap` supports session hooks:
+# Nono 0.71.0 cannot create the hook environment file in direct mode and
+# continues without applying a hook-provided TMPDIR.
 set -eufo pipefail
 
-export TMPDIR="${HOME}/.pi/agent/tmp"
-mkdir -p "${TMPDIR}"
-chmod 700 "${TMPDIR}"
+export TMPDIR="/tmp/pi-${UID}"
 
-export NONO_REJECT_OVERLAP="${HOME}/.local/share/pi-extensions"
+if [[ -L ${TMPDIR} || (-e ${TMPDIR} && ! -d ${TMPDIR}) ]]; then
+  printf 'nono-pi: refusing unsafe temporary path: %s\n' "${TMPDIR}" >&2
+  exit 1
+fi
+
+mkdir -p "${TMPDIR}"
+if [[ $(stat -c '%u' "${TMPDIR}") != "${UID}" ]]; then
+  printf 'nono-pi: temporary directory has unexpected owner: %s\n' "${TMPDIR}" >&2
+  exit 1
+fi
+chmod 700 "${TMPDIR}"
 
 exec nono-with-local-path wrap --profile pi-local --allow-cwd -- pi "$@"

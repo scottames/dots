@@ -2,7 +2,7 @@
       "ctx" .
       "extends" "pi"
       "name" "pi-local"
-      "version" "0.2.0"
+      "version" "0.3.0"
       "description" "Pi with local workflow access on top of the registry-managed nolabs-ai/pi profile"
       "security" true
       "extraRead" (list
@@ -11,5 +11,8 @@
       )
       "extraReadFile" (list
         (joinPath .chezmoi.homeDir ".config/agents/AGENTS.md")
+      )
+      "extraAllowPaths" (list
+        "/tmp/pi-$UID"
       )
 ) -}}
