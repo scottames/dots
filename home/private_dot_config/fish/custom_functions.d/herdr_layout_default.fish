@@ -30,26 +30,29 @@ function herdr_layout_default \
     end
     set cwd (path resolve "$cwd")
 
-    set -l right_pane_result (command herdr pane split $_flag_pane \
-        --direction right \
-        --cwd "$cwd" \
-        --no-focus)
-    or return 1
+    ## split pane vertical |
+    # set -l right_pane_result (command herdr pane split $_flag_pane \
+    #     --direction right \
+    #     --cwd "$cwd" \
+    #     --no-focus)
+    # or return 1
 
     set -l right_pane_id (_herdr_response_id pane_id "$right_pane_result")
     or return 1
 
-    command herdr pane split "$right_pane_id" \
-        --direction down \
-        --cwd "$cwd" \
-        --no-focus >/dev/null
-    or return 1
+    ## split right pane horizontally |-
+    # command herdr pane split "$right_pane_id" \
+    #     --direction down \
+    #     --cwd "$cwd" \
+    #     --no-focus >/dev/null
+    # or return 1
 
-    command herdr tab create \
-        --workspace $_flag_workspace \
-        --cwd "$cwd" \
-        --no-focus >/dev/null
-    or return 1
+    ## create second tab
+    # command herdr tab create \
+    #     --workspace $_flag_workspace \
+    #     --cwd "$cwd" \
+    #     --no-focus >/dev/null
+    # or return 1
 
     command herdr tab focus $_flag_tab >/dev/null
 end
