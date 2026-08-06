@@ -186,7 +186,7 @@ abbr -a nosleep "systemd-inhibit --what=handle-lid-switch sleep 2592000" # disab
 abbr -a nncl "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude"
 abbr -a nnclc "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude --continue"
 abbr -a nno "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode"
-abbr -a nno "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue"
+abbr -a nnoc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue"
 abbr -a nncx "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex"
 abbr -a nncxc "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex resume --last"
 abbr -a nnp nono-pi
