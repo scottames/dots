@@ -10,7 +10,8 @@
 #
 # NONO_REJECT_OVERLAP (optional): if set to a directory, refuse to grant any path
 # that overlaps it. The pi-local profile enables this automatically to keep the
-# Pi extension tree out of writable worktree/cwd grants.
+# Pi extension tree out of writable worktree/cwd grants. This policy applies only
+# to this wrapper invocation and is not passed into the sandboxed command.
 
 set -eufo pipefail
 
@@ -51,17 +52,21 @@ uses_pi_local_profile() {
   return 1
 }
 
+# An explicit policy is available to non-Pi callers. Pi always protects its
+# managed extension tree, so its profile-specific policy takes precedence.
+reject_overlap="${NONO_REJECT_OVERLAP-}"
 if uses_pi_local_profile; then
-  export NONO_REJECT_OVERLAP="${HOME}/.local/share/pi-extensions"
+  reject_overlap="${HOME}/.local/share/pi-extensions"
 fi
 
 reject_root=""
-if [[ -n ${NONO_REJECT_OVERLAP-} ]]; then
-  if ! reject_root=$(cd "${NONO_REJECT_OVERLAP}" && pwd -P); then
-    printf 'nono-with-local-path: NONO_REJECT_OVERLAP is unavailable: %s\n' "${NONO_REJECT_OVERLAP}" >&2
+if [[ -n ${reject_overlap} ]]; then
+  if ! reject_root=$(cd "${reject_overlap}" && pwd -P); then
+    printf 'nono-with-local-path: overlap root is unavailable: %s\n' "${reject_overlap}" >&2
     exit 1
   fi
 fi
+unset NONO_REJECT_OVERLAP
 
 reject_if_overlap() {
   local grant_name="${1}"

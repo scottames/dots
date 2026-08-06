@@ -184,7 +184,7 @@ separator_index = args.index(b'--')
 assert allow_index < separator_index, args
 assert expected_parent in args[allow_index + 1:separator_index], args
 PY
-[[ $(<"${overlap_capture}") == "${fixture_home}/.local/share/pi-extensions" ]] || fail 'pi-local does not protect the extension tree'
+[[ -z $(<"${overlap_capture}") ]] || fail 'pi-local leaks overlap protection into the sandboxed command'
 
 (
   cd "${local_path_repo}/nested"
@@ -202,7 +202,7 @@ PY
   cd "${local_path_repo}/nested"
   BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile=pi-local -- pi --version
 )
-[[ $(<"${overlap_capture}") == "${fixture_home}/.local/share/pi-extensions" ]] || fail 'attached pi-local profile does not protect the extension tree'
+[[ -z $(<"${overlap_capture}") ]] || fail 'attached pi-local profile leaks overlap protection into the sandboxed command'
 
 (
   cd "${local_path_repo}/nested"
