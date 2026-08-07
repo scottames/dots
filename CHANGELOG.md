@@ -1,5 +1,85 @@
 # Changelog
 
+## [0.50.0](https://github.com/scottames/dots/compare/v0.49.0...v0.50.0) (2026-08-06)
+
+
+### Updates & Misc Chores
+
+* **agents/pi:** bring nono profile in-line with opencode ([1b3acd9](https://github.com/scottames/dots/commit/1b3acd926d58f14cbd0f665b4ce1d5d6f8d4dddf))
+* **deps:** lock file maintenance ([#982](https://github.com/scottames/dots/issues/982)) ([379a163](https://github.com/scottames/dots/commit/379a163188ac17fbacd5befbfaeeac65cdb26ad5))
+* **deps:** update ⬆️ agent extensions ([#988](https://github.com/scottames/dots/issues/988)) ([032c73b](https://github.com/scottames/dots/commit/032c73bbcec4be299c0f69cd9f76ecd7563d329c))
+* **deps:** update ⬆️ aqua-packages ([#1000](https://github.com/scottames/dots/issues/1000)) ([3574482](https://github.com/scottames/dots/commit/357448235a5d1ec6dfc8131cd0b1e450426f0c38))
+* **deps:** update ⬆️ aqua-packages ([#989](https://github.com/scottames/dots/issues/989)) ([39c8f59](https://github.com/scottames/dots/commit/39c8f59e71d63df3b1badbe67744cb4e02ca37c6))
+* **deps:** update ⬆️ aqua-packages to v4.540.0 ([#993](https://github.com/scottames/dots/issues/993)) ([f38e00f](https://github.com/scottames/dots/commit/f38e00fb8158f9657bb23fa14451bfc5fa6c6913))
+* **deps:** update ⬆️ container digests to dc2d74b ([#1005](https://github.com/scottames/dots/issues/1005)) ([3995f91](https://github.com/scottames/dots/commit/3995f91dded0c9417a19e3ad6319c8f36900c4e1))
+* **deps:** update ⬆️ mise-packages ([#1002](https://github.com/scottames/dots/issues/1002)) ([fa80d45](https://github.com/scottames/dots/commit/fa80d45ec9904a7799027a8c25247d4ece420516))
+* **deps:** update ⬆️ mise-packages ([#1003](https://github.com/scottames/dots/issues/1003)) ([208186a](https://github.com/scottames/dots/commit/208186af63449f142ba6749eddb3fb8b3454fd02))
+* **deps:** update ⬆️ mise-packages ([#1004](https://github.com/scottames/dots/issues/1004)) ([21076bf](https://github.com/scottames/dots/commit/21076bf03eb349ef01a535f700997ba73ba667a6))
+* **deps:** update ⬆️ mise-packages ([#980](https://github.com/scottames/dots/issues/980)) ([dcb7a0e](https://github.com/scottames/dots/commit/dcb7a0eac8be543f35a85300ae025c361236af8f))
+* **deps:** update ⬆️ mise-packages ([#985](https://github.com/scottames/dots/issues/985)) ([71bff2d](https://github.com/scottames/dots/commit/71bff2daa9717b1040e2f498f7daa5d30e12aafc))
+* **deps:** update ⬆️ mise-packages ([#986](https://github.com/scottames/dots/issues/986)) ([87d6146](https://github.com/scottames/dots/commit/87d614685df672e28f16160495604c36bfab7345))
+* **deps:** update ⬆️ mise-packages ([#992](https://github.com/scottames/dots/issues/992)) ([6eb700c](https://github.com/scottames/dots/commit/6eb700c1e161effa3802ec3874e969a23a552d52))
+* **deps:** update ⬆️ mise-packages ([#994](https://github.com/scottames/dots/issues/994)) ([9b45e8e](https://github.com/scottames/dots/commit/9b45e8e7b344a54bb45903219758e3f39bfec327))
+* **deps:** update ⬆️ mise-packages ([#995](https://github.com/scottames/dots/issues/995)) ([8b204dc](https://github.com/scottames/dots/commit/8b204dc5e00d2dc499943a5c81dff01bcc524c2d))
+* **deps:** update ⬆️ mise-packages ([#996](https://github.com/scottames/dots/issues/996)) ([cea1144](https://github.com/scottames/dots/commit/cea11445cf44c5efd7ce849388fe396273deccd6))
+* **deps:** update ⬆️ mise-packages ([#997](https://github.com/scottames/dots/issues/997)) ([f0b232b](https://github.com/scottames/dots/commit/f0b232b3bfe296f74baa35dc1afbef64d389cfd8))
+* **deps:** update ⬆️ mise-packages to v1.3.0 ([#984](https://github.com/scottames/dots/issues/984)) ([84f4fc7](https://github.com/scottames/dots/commit/84f4fc75d69d5962bcb6c17c6557a4cdf85fb346))
+* **deps:** update ⬆️ mise-packages to v4 ([#998](https://github.com/scottames/dots/issues/998)) ([3984f71](https://github.com/scottames/dots/commit/3984f716fecc364ac71b577ed5e4a8bb546391ed))
+* **deps:** update github-actions ([#1001](https://github.com/scottames/dots/issues/1001)) ([cffdc69](https://github.com/scottames/dots/commit/cffdc6900cb129d0087acc98b36e4c44107672d6))
+* **deps:** update github-actions ([#990](https://github.com/scottames/dots/issues/990)) ([b40bc47](https://github.com/scottames/dots/commit/b40bc476b6f20ca73453b838f1f7afe99f6df856))
+* **deps:** update github-actions to v7 ([#991](https://github.com/scottames/dots/issues/991)) ([9f003d9](https://github.com/scottames/dots/commit/9f003d980d23ce5fa46145945c4ba74b97e0ec28))
+* **mise/herdr:** bump 0.7.4 ([8e3ba01](https://github.com/scottames/dots/commit/8e3ba01e2d623f486694a74ce37b7d7605da311b))
+* **mise/nono:** bump to 0.69.0 (fixes bug) ([560101f](https://github.com/scottames/dots/commit/560101f02579eeb18ec43c6915f1a31ca1b92f79))
+* **mise:** bump herdr + ghtkn ([269c569](https://github.com/scottames/dots/commit/269c5699e0f42a7a81556f7e3f6ece2f4c69da45))
+* upgrade trunk ([#979](https://github.com/scottames/dots/issues/979)) ([f995e68](https://github.com/scottames/dots/commit/f995e688f6745e23ea830a361d8afa41f92c098d))
+* upgrade trunk ([#987](https://github.com/scottames/dots/issues/987)) ([00be077](https://github.com/scottames/dots/commit/00be077fe826d15ab910a9e933d13891e657d5fb))
+* upgrade trunk ([#999](https://github.com/scottames/dots/issues/999)) ([09f8f54](https://github.com/scottames/dots/commit/09f8f54151fb8cfa9345547a41abac91af4abbd4))
+* **zen-browser:** add keybinds/search from latest releases ([4ca741a](https://github.com/scottames/dots/commit/4ca741a14b901138c2efc1432773162f79731d2f))
+
+
+### Features
+
+* add ink ([4cafd25](https://github.com/scottames/dots/commit/4cafd2578b87ef8914d4a102f4391262fbe73214))
+* **agents/pi:** custom theme/keys ([9f0da00](https://github.com/scottames/dots/commit/9f0da00edf78dd8eb74c6f63682b65ce7d2b2fcc))
+* **agents/pi:** replace subagent extension ([818271e](https://github.com/scottames/dots/commit/818271ee4176ab7308f1bac1ee8b4a73ac376f5c))
+* **agents:** add pi.dev ([66bc085](https://github.com/scottames/dots/commit/66bc085049e1ab0c694c2a269ebf159164e91c8b))
+* **fish/ghtkn:** add ghtkn agent unlock abbr ([b47df17](https://github.com/scottames/dots/commit/b47df173f63bbeba718e48016dfb5f6d35c2b1af))
+* **ghtkn/gh:** leverage ghtkn agent for auth/refresh ([5af247e](https://github.com/scottames/dots/commit/5af247e49e40811d0de899bc986063ba09af434b))
+* **herdr:** config tweaks for improved copy nav + notifications ([3f0703b](https://github.com/scottames/dots/commit/3f0703b35aae82abcc0545082fa60e737a06a1a1))
+* **mise:** add linear-cli (+skill) ([583b914](https://github.com/scottames/dots/commit/583b91414d97c5adbb0c50155fb0d3e1398b1f3d))
+* **mise:** add plannotator ([1bf4fec](https://github.com/scottames/dots/commit/1bf4fece8699e9e001a8cbf7285b76a5697cf17e))
+* move to gh-stack as primary stacking mechanism ([40689ac](https://github.com/scottames/dots/commit/40689ac74394bd061d98b8ee366df0e28454ad9b))
+* **niri:** add play/pause keys ([71242a0](https://github.com/scottames/dots/commit/71242a0a255641dda56c699b9085d02c83d364f7))
+* **nono:** add claude/codex + DRY up ([8bef8f8](https://github.com/scottames/dots/commit/8bef8f884e23570a34c817dc70a0b66aecb923f2))
+* **opencode:** hardcode built-in subagent models to gpt5.6-* ([63d70fb](https://github.com/scottames/dots/commit/63d70fbb9f48a9cc574488df96ad66ede667f182))
+* **pi:** add web search extension ([1c34ea2](https://github.com/scottames/dots/commit/1c34ea2051ae3e0f9f3fdfa3b28e214de3b06826))
+* **pi:** scope Nono temporary state ([e5e0d33](https://github.com/scottames/dots/commit/e5e0d33fe0d2d3091988d71e8e2a5c7f40fc6756))
+* **pi:** track tintinweb/pi-subagents ([d04f936](https://github.com/scottames/dots/commit/d04f9362c32b379f9fba534157b5295d428bd0e3))
+
+
+### Bug Fixes
+
+* **agents:** just permissions + nono/pi setting ([5df9b51](https://github.com/scottames/dots/commit/5df9b51b17b4750109d003920e07027812ab6395))
+* **chezmoi/herdr:** warn on extension install ([4a76ddf](https://github.com/scottames/dots/commit/4a76ddf7d23c9ccdaede7a453fbe20cfe3aacf4d))
+* **chezmoi:** no bat paging ([61b24ce](https://github.com/scottames/dots/commit/61b24ce3556ad9ca1f92feda74d371caa654da6b))
+* **fish/abbr:** nono opencode overlap ([535129e](https://github.com/scottames/dots/commit/535129e926af7d228477b5883c68d26174ee434e))
+* **fish/ink:** completions ([9077393](https://github.com/scottames/dots/commit/90773934ad1cdbd8a04d0f9d0d447ed913da4706))
+* **herdr:** rid of removed config key ([f7602b8](https://github.com/scottames/dots/commit/f7602b8c0b9c1d59a56491752cbcefa9af158258))
+* **macos:** skip mise pkgs + cleanup ([16327ed](https://github.com/scottames/dots/commit/16327ed021731447754cd31dbda466ec9878dffc))
+* **mise:** gh-gfm-preview bin name ([e25c669](https://github.com/scottames/dots/commit/e25c66915acd592d978f8202f71efa16e2113e00))
+* **nono:** scope overlap policy to wrapper ([23646c0](https://github.com/scottames/dots/commit/23646c033ea2c82f6d2166f0fdefebbf1fb8ad5b))
+
+
+### Code Refactoring
+
+* **agents:** rm using-superpowers requirement ([db754cf](https://github.com/scottames/dots/commit/db754cf8d5c54240a51353878cbbe287196b1aec))
+* **ghostty:** unbind a few unused keys ([b5ad538](https://github.com/scottames/dots/commit/b5ad5384a083189431f01a100ecc7c0794cc6ccc))
+* **herdr:** reduce panes/tabs for default new layout (from fish) ([8f0270d](https://github.com/scottames/dots/commit/8f0270d9d3c043e2eeb860de4f2672a60e0a9321))
+* move ~/bin/* to ~/.local/bin/ ([bd84a77](https://github.com/scottames/dots/commit/bd84a771360458945023f930ec9625d0a03d7698))
+* **nono:** all more build-related permissions ([78843d4](https://github.com/scottames/dots/commit/78843d49eadc1cd980f8c85538a11a602433d8a4))
+* **nvim/thts:** adjust picker settings ([1c8ed29](https://github.com/scottames/dots/commit/1c8ed290ac01ffcc18cc8555f8a476bf28664c64))
+* **tuicr:** tweaks to config ([3e08e10](https://github.com/scottames/dots/commit/3e08e10b16197161e2b54482ab8e335f15d1016a))
+
 ## [0.49.0](https://github.com/scottames/dots/compare/v0.48.0...v0.49.0) (2026-07-16)
 
 
