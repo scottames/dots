@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.50.1](https://github.com/scottames/dots/compare/v0.50.0...v0.50.1) (2026-08-07)
+
+
+### Updates & Misc Chores
+
+* **deps:** update ⬆️ aqua-packages ([#1006](https://github.com/scottames/dots/issues/1006)) ([e27736d](https://github.com/scottames/dots/commit/e27736d4758e3d722d2ca65e689816eaa1e5987d))
+* **deps:** update ⬆️ dagger to v0.21.8 ([#1007](https://github.com/scottames/dots/issues/1007)) ([d1c9857](https://github.com/scottames/dots/commit/d1c9857fb7890ebeae13e5f04ca12478d1c7b9ae))
+* **deps:** update dependency ryanoasis/nerd-fonts to v3.5.0 ([#1010](https://github.com/scottames/dots/issues/1010)) ([d41b747](https://github.com/scottames/dots/commit/d41b7473c30d12ffb619a40787a38999e5a71049))
+* **deps:** update github-actions ([#1011](https://github.com/scottames/dots/issues/1011)) ([535154f](https://github.com/scottames/dots/commit/535154fb1e843b9805d9d8b0cfa9c94a7f80360e))
+
 ## [0.50.0](https://github.com/scottames/dots/compare/v0.49.0...v0.50.0) (2026-08-06)
 
 
