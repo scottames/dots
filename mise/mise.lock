@@ -3483,17 +3483,7 @@ checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988
 url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
 url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
 
-[tools."github:schpet/linear-cli"."platforms.linux-x64-baseline"]
-checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
-
 [tools."github:schpet/linear-cli"."platforms.linux-x64-musl"]
-checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
-
-[tools."github:schpet/linear-cli"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:115c7c8949cfa097120084032eb632caf327176070192857f917fa04be988d75"
 url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-unknown-linux-gnu.tar.xz"
 url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844136"
@@ -3508,17 +3498,7 @@ checksum = "sha256:ac305606934ae06b8b2495b472eba00d2c18887b5ff146564cf0afc01262d
 url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-apple-darwin.tar.xz"
 url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844113"
 
-[tools."github:schpet/linear-cli"."platforms.macos-x64-baseline"]
-checksum = "sha256:ac305606934ae06b8b2495b472eba00d2c18887b5ff146564cf0afc01262d60d"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844113"
-
 [tools."github:schpet/linear-cli"."platforms.windows-x64"]
-checksum = "sha256:72fd1f18b930d5b9eae8eae154e00705c0f252a49441b591f97858880381d71e"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844131"
-
-[tools."github:schpet/linear-cli"."platforms.windows-x64-baseline"]
 checksum = "sha256:72fd1f18b930d5b9eae8eae154e00705c0f252a49441b591f97858880381d71e"
 url = "https://github.com/schpet/linear-cli/releases/download/v2.3.1/linear-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/501844131"
@@ -3827,17 +3807,7 @@ checksum = "sha256:16e87ac9110face925d39a9aae5c90767738df2cc390af1be1f00e625b599
 url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-x86_64-unknown-linux-musl.tar.gz"
 url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501424566"
 
-[tools.usage."platforms.linux-x64-baseline"]
-checksum = "sha256:16e87ac9110face925d39a9aae5c90767738df2cc390af1be1f00e625b599280"
-url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501424566"
-
 [tools.usage."platforms.linux-x64-musl"]
-checksum = "sha256:16e87ac9110face925d39a9aae5c90767738df2cc390af1be1f00e625b599280"
-url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501424566"
-
-[tools.usage."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:16e87ac9110face925d39a9aae5c90767738df2cc390af1be1f00e625b599280"
 url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-x86_64-unknown-linux-musl.tar.gz"
 url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501424566"
@@ -3852,17 +3822,7 @@ checksum = "sha256:35f1703ed922486387d499265c9d6c0dbc84b8347e565fb31d54ad23fdff7
 url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-universal-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501428939"
 
-[tools.usage."platforms.macos-x64-baseline"]
-checksum = "sha256:35f1703ed922486387d499265c9d6c0dbc84b8347e565fb31d54ad23fdff712d"
-url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-universal-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501428939"
-
 [tools.usage."platforms.windows-x64"]
-checksum = "sha256:0ca7cbc821d6fe274ef42162058935261bf0f7ad8029a197275ff83cc36d996e"
-url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501427490"
-
-[tools.usage."platforms.windows-x64-baseline"]
 checksum = "sha256:0ca7cbc821d6fe274ef42162058935261bf0f7ad8029a197275ff83cc36d996e"
 url = "https://github.com/jdx/usage/releases/download/v5.0.0/usage-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/jdx/usage/releases/assets/501427490"
