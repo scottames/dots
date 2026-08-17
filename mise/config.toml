@@ -60,7 +60,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.72.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.228"
+"github:anthropics/claude-code" = "v2.1.231"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.97.0"
@@ -157,11 +157,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:kubernetes/kubectl" = "1.35.3"
 # simple terminal ui for git commands
 #   https://github.com/jesseduffield/lazygit
-"aqua:jesseduffield/lazygit" = "0.64.0"
+"aqua:jesseduffield/lazygit" = "0.64.1"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.16.1"
+"github:janosmiko/lfk" = "v0.17.0"
 # linear without leaving the command line: list, start, and create PRs for
 # linear issues. agent friendly.
 #  https://github.com/schpet/linear-cli
@@ -181,7 +181,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.114.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.18.16"
+"aqua:sst/opencode" = "1.18.18"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -196,7 +196,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.26.8"
+"github:backnotprop/plannotator" = "v0.27.1"
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
 "aqua:sethvargo/ratchet" = "0.12.0"
@@ -236,7 +236,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.21.0"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
-"github:max-sixty/worktrunk" = "v0.72.0"
+"github:max-sixty/worktrunk" = "v0.73.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
 "aqua:sxyazi/yazi" = "26.5.6"
