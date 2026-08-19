@@ -3,9 +3,9 @@
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
 git:
   overrideGpg: true
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --dark --paging=never
+      command: delta --dark --paging=never
   autoFetch: false
 customCommands:
   - key:
