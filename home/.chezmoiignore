@@ -1,5 +1,14 @@
 # vim: set ft=gitignore
 
+{{- /* Ignore zn unless ZenNotes is installed on the current host. */ -}}
+{{- $hasZenNotes := ne (lookPath "/usr/lib64/zennotes/resources/zen") "" -}}
+{{- if ne (env "DISTROBOX_ENTER_PATH") "" -}}
+{{-   $hasZenNotes = eq (trim (output "distrobox-host-exec" "sh" "-c" "test -x /usr/lib64/zennotes/resources/zen && printf true || true")) "true" -}}
+{{- end -}}
+{{- if not $hasZenNotes }}
+.local/bin/zn
+{{- end }}
+
 **/*.{bak,log,old,foo}
 .cache
 .gsettings.yaml

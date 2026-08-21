@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ -n ${DISTROBOX_ENTER_PATH-} ]]; then
+	exec distrobox-host-exec /usr/lib64/zennotes/resources/zen "$@"
+fi
+
+exec /usr/lib64/zennotes/resources/zen "$@"
+
+# vi: ft=bash
