@@ -2246,43 +2246,43 @@ url = "https://github.com/snyk/cli/releases/download/v1.1306.4/snyk-win.exe"
 url_api = "https://api.github.com/repos/snyk/cli/releases/assets/513130185"
 
 [[tools."aqua:spacelift-io/spacectl"]]
-version = "1.24.0"
+version = "1.25.0"
 backend = "aqua:spacelift-io/spacectl"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-arm64"]
-checksum = "sha256:d4a5773989991ed01e4f43b6662561b242f97974d3b83d61ecaf40db539afcf6"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_linux_arm64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961676"
+checksum = "sha256:cb0e1b1211e91231de3bc6533385170d61a231b7bcf4c9ed813218a00cf5227c"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_linux_arm64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124716"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-arm64-musl"]
-checksum = "sha256:d4a5773989991ed01e4f43b6662561b242f97974d3b83d61ecaf40db539afcf6"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_linux_arm64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961676"
+checksum = "sha256:cb0e1b1211e91231de3bc6533385170d61a231b7bcf4c9ed813218a00cf5227c"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_linux_arm64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124716"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-x64"]
-checksum = "sha256:0eed19652333dc8a4430820f96179b940cf64fa3542d2541bcd28c872b18d01d"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_linux_amd64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961696"
+checksum = "sha256:997fe30c4444a9aedd6b925b7281e3b3723d6edb11b37fdc18d65fdec1946460"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_linux_amd64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124720"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.linux-x64-musl"]
-checksum = "sha256:0eed19652333dc8a4430820f96179b940cf64fa3542d2541bcd28c872b18d01d"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_linux_amd64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961696"
+checksum = "sha256:997fe30c4444a9aedd6b925b7281e3b3723d6edb11b37fdc18d65fdec1946460"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_linux_amd64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124720"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.macos-arm64"]
-checksum = "sha256:6d98eb07937eb5aff2912d3436624f54ef6e4ff26c0cbc3e601a21d16956bd05"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961694"
+checksum = "sha256:682ecfc4713cadd5832613a29c4fb15af4da4c69c13bfc2c0348173e519b535c"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124719"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.macos-x64"]
-checksum = "sha256:bfbb0e19e8173f2cc4a5732e93d6c1b26ad2bffcc9ec9f19b20232e54c6967cb"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961677"
+checksum = "sha256:e4daf65c5fbcc3f20eee3394cc3200df6ff645868454587d1a3dba87eb5d8c20"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124717"
 
 [tools."aqua:spacelift-io/spacectl"."platforms.windows-x64"]
-checksum = "sha256:3bd81870193f1fa34cd024a90fc1de540a724175e555a638ae666e4d02fdf7c2"
-url = "https://github.com/spacelift-io/spacectl/releases/download/v1.24.0/spacectl_1.24.0_windows_amd64.zip"
-url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/460961679"
+checksum = "sha256:9d8185a7d2e5f51b46b2d96e74a2340c9529cba13e323bffb398669971fc9fa4"
+url = "https://github.com/spacelift-io/spacectl/releases/download/v1.25.0/spacectl_1.25.0_windows_amd64.zip"
+url_api = "https://api.github.com/repos/spacelift-io/spacectl/releases/assets/519124734"
 
 [[tools."aqua:sst/opencode"]]
 version = "1.18.18"
