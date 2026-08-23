@@ -991,17 +991,7 @@ checksum = "sha256:49fe9d970cdbe0f742e18187c221a7a1dd985d35d4fa9bf4740f7a261c08d
 url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-unknown-linux-gnu.zip"
 url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466718"
 
-[tools."aqua:dprint/dprint"."platforms.linux-x64-baseline"]
-checksum = "sha256:49fe9d970cdbe0f742e18187c221a7a1dd985d35d4fa9bf4740f7a261c08d96c"
-url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-unknown-linux-gnu.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466718"
-
 [tools."aqua:dprint/dprint"."platforms.linux-x64-musl"]
-checksum = "sha256:e958bfa3fec5256e72c2e4e028fa5674e43023eaff80d704ca96827af2eba240"
-url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-unknown-linux-musl.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466719"
-
-[tools."aqua:dprint/dprint"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:e958bfa3fec5256e72c2e4e028fa5674e43023eaff80d704ca96827af2eba240"
 url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-unknown-linux-musl.zip"
 url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466719"
@@ -1016,17 +1006,7 @@ checksum = "sha256:466dd67e15fca266f3749008ef5d23ea7a6c657ef8204257dbb8c23636fc9
 url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-apple-darwin.zip"
 url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466717"
 
-[tools."aqua:dprint/dprint"."platforms.macos-x64-baseline"]
-checksum = "sha256:466dd67e15fca266f3749008ef5d23ea7a6c657ef8204257dbb8c23636fc9aca"
-url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-apple-darwin.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466717"
-
 [tools."aqua:dprint/dprint"."platforms.windows-x64"]
-checksum = "sha256:cbcb0c6fdbb72289e895c3857720eb769046d42069973f38655b6aee16c01c73"
-url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466712"
-
-[tools."aqua:dprint/dprint"."platforms.windows-x64-baseline"]
 checksum = "sha256:cbcb0c6fdbb72289e895c3857720eb769046d42069973f38655b6aee16c01c73"
 url = "https://github.com/dprint/dprint/releases/download/0.56.0/dprint-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/519466712"
@@ -1650,19 +1630,7 @@ url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_linux_amd64"
 url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402337"
 provenance = "cosign"
 
-[tools."aqua:mikefarah/yq"."platforms.linux-x64-baseline"]
-checksum = "sha256:f67d8a6a2dc2308c961f83d5ba8707fd4c7c44ad77902fef87eb3a4646cdfa2a"
-url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_linux_amd64"
-url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402337"
-provenance = "cosign"
-
 [tools."aqua:mikefarah/yq"."platforms.linux-x64-musl"]
-checksum = "sha256:f67d8a6a2dc2308c961f83d5ba8707fd4c7c44ad77902fef87eb3a4646cdfa2a"
-url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_linux_amd64"
-url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402337"
-provenance = "cosign"
-
-[tools."aqua:mikefarah/yq"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:f67d8a6a2dc2308c961f83d5ba8707fd4c7c44ad77902fef87eb3a4646cdfa2a"
 url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_linux_amd64"
 url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402337"
@@ -1680,19 +1648,7 @@ url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_darwin_amd64
 url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402310"
 provenance = "cosign"
 
-[tools."aqua:mikefarah/yq"."platforms.macos-x64-baseline"]
-checksum = "sha256:5b81548feb916f7bc312fb0d119ea7c2103be81f12fbe7862d8ee435381f5613"
-url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_darwin_amd64"
-url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402310"
-provenance = "cosign"
-
 [tools."aqua:mikefarah/yq"."platforms.windows-x64"]
-checksum = "sha256:acf5c8f9b49b173a30c413636a72a0cc4eccecc3eed137fd0b2c89587a1c8766"
-url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_windows_amd64.exe"
-url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402299"
-provenance = "cosign"
-
-[tools."aqua:mikefarah/yq"."platforms.windows-x64-baseline"]
 checksum = "sha256:acf5c8f9b49b173a30c413636a72a0cc4eccecc3eed137fd0b2c89587a1c8766"
 url = "https://github.com/mikefarah/yq/releases/download/v4.53.4/yq_windows_amd64.exe"
 url_api = "https://api.github.com/repos/mikefarah/yq/releases/assets/520402299"
@@ -1912,17 +1868,7 @@ checksum = "sha256:8c790500af2ba6e74ce4948fe26c651ac1f77f6dbb005b47c8d26ff711146
 url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
 url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046609"
 
-[tools."aqua:openai/codex"."platforms.linux-x64-baseline"]
-checksum = "sha256:8c790500af2ba6e74ce4948fe26c651ac1f77f6dbb005b47c8d26ff711146262"
-url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046609"
-
 [tools."aqua:openai/codex"."platforms.linux-x64-musl"]
-checksum = "sha256:8c790500af2ba6e74ce4948fe26c651ac1f77f6dbb005b47c8d26ff711146262"
-url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046609"
-
-[tools."aqua:openai/codex"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:8c790500af2ba6e74ce4948fe26c651ac1f77f6dbb005b47c8d26ff711146262"
 url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
 url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046609"
@@ -1937,17 +1883,7 @@ checksum = "sha256:9ac9245ea244629a9ba4db3315f0cdaebb05182b790ee34271a5060875d83
 url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046640"
 
-[tools."aqua:openai/codex"."platforms.macos-x64-baseline"]
-checksum = "sha256:9ac9245ea244629a9ba4db3315f0cdaebb05182b790ee34271a5060875d836e1"
-url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046640"
-
 [tools."aqua:openai/codex"."platforms.windows-x64"]
-checksum = "sha256:cc09f725b8ed133b76a2882fda750b3f1672b10701e8172c9680b5ab79b861ff"
-url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046611"
-
-[tools."aqua:openai/codex"."platforms.windows-x64-baseline"]
 checksum = "sha256:cc09f725b8ed133b76a2882fda750b3f1672b10701e8172c9680b5ab79b861ff"
 url = "https://github.com/openai/codex/releases/download/rust-v0.148.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
 url_api = "https://api.github.com/repos/openai/codex/releases/assets/520046611"
@@ -2246,19 +2182,7 @@ url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-li
 url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547641"
 provenance = "cosign"
 
-[tools."aqua:siderolabs/talos"."platforms.linux-x64-baseline"]
-checksum = "sha256:7e1d4b7d5846964bdcf63a794e3c8161bb6ef2983d5ace58ea5322f3bf32a27e"
-url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-linux-amd64"
-url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547641"
-provenance = "cosign"
-
 [tools."aqua:siderolabs/talos"."platforms.linux-x64-musl"]
-checksum = "sha256:7e1d4b7d5846964bdcf63a794e3c8161bb6ef2983d5ace58ea5322f3bf32a27e"
-url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-linux-amd64"
-url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547641"
-provenance = "cosign"
-
-[tools."aqua:siderolabs/talos"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:7e1d4b7d5846964bdcf63a794e3c8161bb6ef2983d5ace58ea5322f3bf32a27e"
 url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-linux-amd64"
 url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547641"
@@ -2276,19 +2200,7 @@ url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-da
 url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547607"
 provenance = "cosign"
 
-[tools."aqua:siderolabs/talos"."platforms.macos-x64-baseline"]
-checksum = "sha256:55902fec33e93d11b64e5e01ddd9dde7ae50679328b8f3556e6d86a51dbce866"
-url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-darwin-amd64"
-url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547607"
-provenance = "cosign"
-
 [tools."aqua:siderolabs/talos"."platforms.windows-x64"]
-checksum = "sha256:ae82483d1dd3a0bd879be5d204fb430ceb7688e8d3036d07a1783d31dec235f2"
-url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-windows-amd64.exe"
-url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547637"
-provenance = "cosign"
-
-[tools."aqua:siderolabs/talos"."platforms.windows-x64-baseline"]
 checksum = "sha256:ae82483d1dd3a0bd879be5d204fb430ceb7688e8d3036d07a1783d31dec235f2"
 url = "https://github.com/siderolabs/talos/releases/download/v1.13.9/talosctl-windows-amd64.exe"
 url_api = "https://api.github.com/repos/siderolabs/talos/releases/assets/520547637"
@@ -3010,17 +2922,7 @@ checksum = "sha256:28d736150c3a234e3efd883ccf7215633300008cdf8d67c7eff7a94b822bb
 url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520040107"
 
-[tools."github:agavra/tuicr"."platforms.linux-x64-baseline"]
-checksum = "sha256:28d736150c3a234e3efd883ccf7215633300008cdf8d67c7eff7a94b822bbd56"
-url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520040107"
-
 [tools."github:agavra/tuicr"."platforms.linux-x64-musl"]
-checksum = "sha256:d6b01c893688e2b61603201b42f63c56740a18b1804eb0bf76a19c09d796922b"
-url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520040317"
-
-[tools."github:agavra/tuicr"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:d6b01c893688e2b61603201b42f63c56740a18b1804eb0bf76a19c09d796922b"
 url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-unknown-linux-musl.tar.gz"
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520040317"
@@ -3035,17 +2937,7 @@ checksum = "sha256:c07763a58e21c68643529edcce246b5d004de3d05d9aa1fdf28a3a75293b9
 url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520044636"
 
-[tools."github:agavra/tuicr"."platforms.macos-x64-baseline"]
-checksum = "sha256:c07763a58e21c68643529edcce246b5d004de3d05d9aa1fdf28a3a75293b902d"
-url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520044636"
-
 [tools."github:agavra/tuicr"."platforms.windows-x64"]
-checksum = "sha256:6e496dab5d66c759ec20e210905ab771dd4bd6adf0ad57dfc42ebfe33083f845"
-url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520042812"
-
-[tools."github:agavra/tuicr"."platforms.windows-x64-baseline"]
 checksum = "sha256:6e496dab5d66c759ec20e210905ab771dd4bd6adf0ad57dfc42ebfe33083f845"
 url = "https://github.com/agavra/tuicr/releases/download/v0.23.0/tuicr-0.23.0-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/520042812"
@@ -3069,17 +2961,7 @@ checksum = "sha256:22c0c8a3fe6cc592eb5368b2bd6fea1b66bce0e915b853fa12841907bee34
 url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-linux-x64.tar.gz"
 url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746739"
 
-[tools."github:anthropics/claude-code"."platforms.linux-x64-baseline"]
-checksum = "sha256:22c0c8a3fe6cc592eb5368b2bd6fea1b66bce0e915b853fa12841907bee348e8"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746739"
-
 [tools."github:anthropics/claude-code"."platforms.linux-x64-musl"]
-checksum = "sha256:64e5c866d6b12a5eee9a8a0297e90c4fa5f24a8c4c02cf3bb7a9ad0f7b9731ee"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746678"
-
-[tools."github:anthropics/claude-code"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:64e5c866d6b12a5eee9a8a0297e90c4fa5f24a8c4c02cf3bb7a9ad0f7b9731ee"
 url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-linux-x64-musl.tar.gz"
 url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746678"
@@ -3094,17 +2976,7 @@ checksum = "sha256:de2eba31be18fdd8b15345df67e15b1d3eb9a7beb2196c3f97d26ace38085
 url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-darwin-x64.tar.gz"
 url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746676"
 
-[tools."github:anthropics/claude-code"."platforms.macos-x64-baseline"]
-checksum = "sha256:de2eba31be18fdd8b15345df67e15b1d3eb9a7beb2196c3f97d26ace38085e5f"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746676"
-
 [tools."github:anthropics/claude-code"."platforms.windows-x64"]
-checksum = "sha256:929caf7cd3183e18b7b2ff9d24781265a459b7e5d6c2836c157158c90dfd3a8c"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-win32-x64.zip"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746745"
-
-[tools."github:anthropics/claude-code"."platforms.windows-x64-baseline"]
 checksum = "sha256:929caf7cd3183e18b7b2ff9d24781265a459b7e5d6c2836c157158c90dfd3a8c"
 url = "https://github.com/anthropics/claude-code/releases/download/v2.1.235/claude-win32-x64.zip"
 url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/519746745"
@@ -3390,19 +3262,7 @@ url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336144"
 provenance = "github-attestations"
 provenance_verified = true
 
-[tools."github:janosmiko/lfk"."platforms.linux-x64-baseline"]
-checksum = "sha256:a6ba79ac1988e2f6ee83cc7dfde5f831577f631ef384179e2ddb701ab5172bd8"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336144"
-provenance = "github-attestations"
-
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
-checksum = "sha256:a6ba79ac1988e2f6ee83cc7dfde5f831577f631ef384179e2ddb701ab5172bd8"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336144"
-provenance = "github-attestations"
-
-[tools."github:janosmiko/lfk"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:a6ba79ac1988e2f6ee83cc7dfde5f831577f631ef384179e2ddb701ab5172bd8"
 url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336144"
@@ -3420,19 +3280,7 @@ url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_dar
 url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336148"
 provenance = "github-attestations"
 
-[tools."github:janosmiko/lfk"."platforms.macos-x64-baseline"]
-checksum = "sha256:c33ebc9855d2c2aa7c4b0e758387b25c2a297c01a6bf1327b791c421526e2fe8"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336148"
-provenance = "github-attestations"
-
 [tools."github:janosmiko/lfk"."platforms.windows-x64"]
-checksum = "sha256:7c0622d0eb1505a3ea0b146eee7ee4cb1f89df0c67a732653882f84b72157eda"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_windows_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336199"
-provenance = "github-attestations"
-
-[tools."github:janosmiko/lfk"."platforms.windows-x64-baseline"]
 checksum = "sha256:7c0622d0eb1505a3ea0b146eee7ee4cb1f89df0c67a732653882f84b72157eda"
 url = "https://github.com/janosmiko/lfk/releases/download/v0.17.4/lfk_0.17.4_windows_amd64.zip"
 url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/520336199"
