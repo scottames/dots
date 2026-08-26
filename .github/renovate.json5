@@ -96,6 +96,15 @@
       automerge: false,
     },
     {
+      // The reviewed lock is intentionally changed only with an approved extension update.
+      matchFileNames: [
+        'home/dot_local/share/private_pi-extensions/package.json',
+        'home/dot_local/share/private_pi-extensions/package-lock.json',
+      ],
+      matchUpdateTypes: ['lockFileMaintenance'],
+      enabled: false,
+    },
+    {
       matchFileNames: [
         'home/dot_local/share/private_pi-extensions/package.json',
         'home/dot_local/share/private_pi-extensions/package-lock.json',
