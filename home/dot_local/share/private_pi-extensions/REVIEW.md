@@ -7,7 +7,7 @@ at startup.
 | Package | Purpose |
 | --- | --- |
 | `pi-ask-user` | Structured questions |
-| `@narumitw/pi-statusline` | Status line |
+| `@narumitw/pi-starship` | Starship-style status line |
 | `@tintinweb/pi-subagents` | Subagent workflows |
 | `pi-web-search` | Provider-native web search and Gemini URL context |
 
@@ -30,9 +30,9 @@ inside `~/.local/share/pi-extensions`; chezmoi owns `current` and its builds.
 
 ## Scope And Limits
 
-The approved baseline is only `pi-ask-user@0.13.0`,
-`@narumitw/pi-statusline@0.34.0`, `@tintinweb/pi-subagents@0.14.3`, and
-`pi-web-search@1.3.1` on the current Linux host with Pi 0.83.0,
+The approved baseline is only `pi-ask-user@0.14.0`,
+`@narumitw/pi-starship@0.52.2`, `@tintinweb/pi-subagents@0.18.0`, and
+`pi-web-search@1.3.1` on the current Linux host with Pi 0.84.2,
 `pi-local.json`, and the `nono-pi` launcher.
 It accepts the expected terminal-rendering risk and that the subagents run
 in-process with Pi's environment and Nono-authorized authority. Upstream
@@ -52,6 +52,19 @@ It also reads the optional `~/.pi/agent/web-search.json` model selection file
 and resolves Google grounding redirects. No lifecycle script, binary, native
 or WASM component, or direct production dependency is present. It relies on
 Pi-provided peers including `typebox`; its Pi peer minimum is 0.80.3.
+
+`@narumitw/pi-starship@0.52.2` is approved from npm registry tarball integrity
+`sha512-HabpICSacpZ5fSuNU+Yip8FtI0rwhQ9idphj+ucshGexT6ZGRNFHtPudksiuRtzGEFsBD0OOOzh/53NIUOsDqA==`,
+signed with npm key `SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U`, and
+SLSA provenance for source commit `d1879fd073ff1bbe9ef6570f42974a926ccecb57`.
+It replaces Pi's footer and uses its palette-free built-in default unless the
+user explicitly saves `~/.pi/agent/pi-starship.toml`; it never reads
+`~/.config/starship.toml`. Its default does not enable the optional
+GitHub-CLI-backed pull-request module. The locked production closure adds
+`@narumitw/pi-tui-kit@0.58.2`, `smol-toml@1.8.0`, and `yaml@2.9.0`; the
+`yaml` CLI is present but not invoked. The package has a build-only `prepack`
+script, which the installer does not run. No native or WASM component is
+present.
 
 The lock and review establish the identity of downloaded artifacts; they do not
 prove an extension is benign. Extensions execute inside Pi with Pi's authority.
