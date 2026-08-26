@@ -1,5 +1,58 @@
 # Changelog
 
+## [0.51.0](https://github.com/scottames/dots/compare/v0.50.0...v0.51.0) (2026-08-26)
+
+
+### Updates & Misc Chores
+
+* **deps:** lock file maintenance ([#1023](https://github.com/scottames/dots/issues/1023)) ([21aa7bc](https://github.com/scottames/dots/commit/21aa7bca1f13be404c4d58f0a49e0975ae28b8c3))
+* **deps:** update ⬆️ agent extensions ([#1008](https://github.com/scottames/dots/issues/1008)) ([27fcf84](https://github.com/scottames/dots/commit/27fcf84ffc8cdfe3be447280ba355342b11a8173))
+* **deps:** update ⬆️ aqua-packages ([#1006](https://github.com/scottames/dots/issues/1006)) ([e27736d](https://github.com/scottames/dots/commit/e27736d4758e3d722d2ca65e689816eaa1e5987d))
+* **deps:** update ⬆️ aqua-packages to v4.548.0 ([#1012](https://github.com/scottames/dots/issues/1012)) ([546615c](https://github.com/scottames/dots/commit/546615c5521421f7b747dc825a93e59d760bd63a))
+* **deps:** update ⬆️ aqua-packages to v4.549.0 ([#1015](https://github.com/scottames/dots/issues/1015)) ([5e1f812](https://github.com/scottames/dots/commit/5e1f812921712871f93d218576c92e5f3b7573f7))
+* **deps:** update ⬆️ aqua-packages to v4.551.0 ([#1016](https://github.com/scottames/dots/issues/1016)) ([2c61054](https://github.com/scottames/dots/commit/2c610544ab14e0c1904fc96e63965b1b6c6b5864))
+* **deps:** update ⬆️ aqua-packages to v4.553.0 ([#1027](https://github.com/scottames/dots/issues/1027)) ([14e27e8](https://github.com/scottames/dots/commit/14e27e86f3e1cf954e5e5e26e507b01162cd471d))
+* **deps:** update ⬆️ dagger to v0.21.8 ([#1007](https://github.com/scottames/dots/issues/1007)) ([d1c9857](https://github.com/scottames/dots/commit/d1c9857fb7890ebeae13e5f04ca12478d1c7b9ae))
+* **deps:** update ⬆️ github-actions to v24.19.0 ([#1019](https://github.com/scottames/dots/issues/1019)) ([f1ec18f](https://github.com/scottames/dots/commit/f1ec18f71c598ce839849b579e1c19dd9ed6bbf5))
+* **deps:** update ⬆️ mise-packages ([#1013](https://github.com/scottames/dots/issues/1013)) ([9975403](https://github.com/scottames/dots/commit/99754037b93dfce87de4988c7ef454ff214457d8))
+* **deps:** update ⬆️ mise-packages ([#1020](https://github.com/scottames/dots/issues/1020)) ([ee15b02](https://github.com/scottames/dots/commit/ee15b0205b41d6a211b8a2419f8cecdfade437d2))
+* **deps:** update ⬆️ mise-packages ([#1022](https://github.com/scottames/dots/issues/1022)) ([99a86d6](https://github.com/scottames/dots/commit/99a86d63c69a2fd0165544781933876fd61c2865))
+* **deps:** update ⬆️ mise-packages ([#1025](https://github.com/scottames/dots/issues/1025)) ([4b2e66c](https://github.com/scottames/dots/commit/4b2e66c3ceceaeac482c0c53de71b03c71e13635))
+* **deps:** update ⬆️ mise-packages ([#1028](https://github.com/scottames/dots/issues/1028)) ([c8fe436](https://github.com/scottames/dots/commit/c8fe4360a4bc50889527b9f9b848ced7e2316421))
+* **deps:** update ⬆️ mise-packages ([#1029](https://github.com/scottames/dots/issues/1029)) ([a633909](https://github.com/scottames/dots/commit/a633909b6031fbb659086f61c6dcab55cf9a9c95))
+* **deps:** update ⬆️ mise-packages (major) ([#1031](https://github.com/scottames/dots/issues/1031)) ([24aeb11](https://github.com/scottames/dots/commit/24aeb11b10eaa16cca43f6b7b94d84ba4e4ca842))
+* **deps:** update ⬆️ mise-packages to v1.25.0 ([#1026](https://github.com/scottames/dots/issues/1026)) ([c9a04c9](https://github.com/scottames/dots/commit/c9a04c9fb60894c86aee2a07f1cd8bafba30e8ac))
+* **deps:** update ⬆️ mise-packages to v3 ([#1021](https://github.com/scottames/dots/issues/1021)) ([c6d35ce](https://github.com/scottames/dots/commit/c6d35ceb46d5c22763a990c33e1849dfd1be8d9e))
+* **deps:** update ⬆️ mise-packages to v5 ([#1014](https://github.com/scottames/dots/issues/1014)) ([e98d1ca](https://github.com/scottames/dots/commit/e98d1ca3286b13a9061732ba2a202e5368dc9e6a))
+* **deps:** update dependency gabm/satty to v0.22.0 ([#1018](https://github.com/scottames/dots/issues/1018)) ([3574d6a](https://github.com/scottames/dots/commit/3574d6a47576e07e111bb742ce726dded5094959))
+* **deps:** update dependency ryanoasis/nerd-fonts to v3.5.0 ([#1010](https://github.com/scottames/dots/issues/1010)) ([d41b747](https://github.com/scottames/dots/commit/d41b7473c30d12ffb619a40787a38999e5a71049))
+* **deps:** update dependency ryanoasis/nerd-fonts to v3.5.1 ([#1030](https://github.com/scottames/dots/issues/1030)) ([09be75d](https://github.com/scottames/dots/commit/09be75d7aadc9374a1de7ff7fb6bc9010c1f9f2c))
+* **deps:** update github-actions ([#1011](https://github.com/scottames/dots/issues/1011)) ([535154f](https://github.com/scottames/dots/commit/535154fb1e843b9805d9d8b0cfa9c94a7f80360e))
+* **lazygit:** update config schema ([688dab9](https://github.com/scottames/dots/commit/688dab981c777521a5bdf3caffb97821cd9388b9))
+* **mise/herdr:** bump herdr 0.8.2 ([cc02837](https://github.com/scottames/dots/commit/cc02837906c03b470deebfbc4107054b46bfd464))
+* **pi:** bump default model to gpt-5.6-terra ([9a48abb](https://github.com/scottames/dots/commit/9a48abb2c8e93bd9732e56ae228b78c5426f32e5))
+* **renovate:** disable lockfile maintenance on pi extensions ([3264d62](https://github.com/scottames/dots/commit/3264d627919137e2963efed6f6bec5432b0b0b48))
+* upgrade trunk ([#1017](https://github.com/scottames/dots/issues/1017)) ([305ae55](https://github.com/scottames/dots/commit/305ae55fec82cbd17714231f03164ac4f3eac755))
+* upgrade trunk ([#1024](https://github.com/scottames/dots/issues/1024)) ([4379cef](https://github.com/scottames/dots/commit/4379cefaad9308f38c4bfb6baa27309af29addb3))
+* **zen-browser:** update keybinds from latest ([5c8dba0](https://github.com/scottames/dots/commit/5c8dba0767b8798f2c283be46a91998a9a0069c0))
+
+
+### Features
+
+* **herdr:** symbols for ui.status_indicators ([d30493b](https://github.com/scottames/dots/commit/d30493baef56d3b3ab0c2eac5bcc8884a897e2c0))
+* **pi:** migrate statusline to starship ([cf39db5](https://github.com/scottames/dots/commit/cf39db5eae71e867e7b2ce6248a10a43d6a3bc3c))
+* **zennotes:** handle distrobox zennotes bin ([c3eccd5](https://github.com/scottames/dots/commit/c3eccd51ac07cdb74d5768817214bc22365688af))
+
+
+### Bug Fixes
+
+* **mise/claude:** use github over broken aqua registry ([eb54907](https://github.com/scottames/dots/commit/eb549079f02168a4c9de4f1e72988b072a93fb0f))
+
+
+### Code Refactoring
+
+* **openpackage:** trim larger skill packages ([734023a](https://github.com/scottames/dots/commit/734023a22671ac9ed07be67a8b90508e26ba445f))
+
 ## [0.50.0](https://github.com/scottames/dots/compare/v0.49.0...v0.50.0) (2026-08-06)
 
 
