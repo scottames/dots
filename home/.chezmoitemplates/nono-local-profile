@@ -90,6 +90,7 @@
       (joinPath $home ".gobrew")
       (joinPath $home ".local/bin")
       (joinPath $home ".local/share/aquaproj-aqua")
+      (joinPath $home ".local/share/gh")
       (joinPath $home ".local/share/mise")
       (joinPath $home ".local/share/nvim")
       (joinPath $home ".local/state/gh")
