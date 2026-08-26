@@ -30,7 +30,7 @@ bun = "1.3.14"
 go = "1.26.6"
 node = "24.19.0"
 rust = "1.97.1"
-usage = "5.1.0"
+usage = "6.0.0"
 
 ## tools
 
@@ -132,7 +132,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:@withgraphite/graphite-cli" = "1.8.6"
 # tool for glamorous shell scripts
 #   https://github.com/charmbracelet/gum
-"aqua:charmbracelet/gum" = "0.17.0"
+"aqua:charmbracelet/gum" = "2.0.0"
 # kubernetes package manager
 #   https://github.com/helm/helm
 "aqua:helm/helm" = "4.2.4"
