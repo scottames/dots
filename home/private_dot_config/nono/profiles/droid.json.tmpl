@@ -1,0 +1,76 @@
+{{- /* Local stand-in for a registry-managed base pack: the Nono registry ships
+       no nolabs-ai/droid pack (`nono search droid` finds nothing), so this
+       mirrors the structure of the official agent packs to keep droid-local a
+       thin delta. Delete this file and repoint droid-local at the pack if one
+       ever ships.
+
+       - ~/.factory is droid's entire config tree: settings.json, the auth
+         keyring, sessions, logs, droids, snapshots, specs, bin/rg, certs.
+       - ~/.agents is where droid discovers personal skills and AGENTS.md.
+       - $TMPDIR needs read as well as write: droid's Execute tool creates
+         /tmp/droid-terminal-XXXXXX and reads back from it, while Nono's
+         system_write_linux group leaves /tmp write-only. */ -}}
+{
+  "$schema": "https://raw.githubusercontent.com/nolabs-ai/nono/refs/heads/main/crates/nono-cli/data/nono-profile.schema.json",
+  "extends": "default",
+  "meta": {
+    "name": "droid",
+    "version": "0.1.0",
+    "description": "Factory Droid CLI agent (local base profile)"
+  },
+  "groups": {
+    "include": [
+      "node_runtime",
+      "rust_runtime",
+      "python_runtime",
+      { "name": "user_caches_macos", "when": "macos" },
+      { "name": "user_caches_linux", "when": "linux" },
+      { "name": "linux_sysfs_read", "when": "linux" },
+      "nix_runtime",
+      "git_config",
+      "unlink_protection"
+    ]
+  },
+  "security": {
+    "signal_mode": "isolated",
+    "capability_elevation": false
+  },
+  "filesystem": {
+    "allow": [
+      "{{ joinPath .chezmoi.homeDir ".factory" }}",
+      "{{ joinPath .chezmoi.homeDir ".config/nono/profile-drafts" }}",
+      "$TMPDIR"
+    ],
+    "read": [
+      "{{ joinPath .chezmoi.homeDir ".agents" }}",
+      "{{ joinPath .chezmoi.homeDir ".config/nono/packages" }}",
+      "{{ joinPath .chezmoi.homeDir ".config/nono/profiles" }}"
+    ]
+  },
+  "network": {
+    "block": false
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "open_urls": {
+    "allow_origins": [
+      "https://app.factory.ai",
+      "https://factory.ai",
+      "https://github.com"
+    ],
+    "allow_localhost": true
+  },
+  "allow_launch_services": true,
+  "undo": {
+    "exclude_patterns": [
+      "node_modules",
+      ".next",
+      "__pycache__",
+      "target",
+      ".factory"
+    ],
+    "exclude_globs": ["*.tmp.[0-9]*.[0-9]*"]
+  },
+  "interactive": true
+}
