@@ -151,7 +151,11 @@
 {{- end -}}
 {{- /* thts + ntbk deploy key */ -}}
 {{- $readFiles = append $readFiles (joinPath $home ".ssh/ntbk") -}}
-{{- /* Agent-specific extra read files (e.g. Pi's ~/.config/agents/AGENTS.md). */ -}}
+{{- /* Every harness instruction file is a symlink to this shared target, and
+       Landlock resolves the link, so the target needs its own read grant on top
+       of the grant covering the directory holding the symlink. */ -}}
+{{- $readFiles = append $readFiles (joinPath $home ".config/agents/AGENTS.md") -}}
+{{- /* Agent-specific extra read files. */ -}}
 {{- range $p := $extraReadFile -}}
 {{-   $readFiles = append $readFiles $p -}}
 {{- end -}}

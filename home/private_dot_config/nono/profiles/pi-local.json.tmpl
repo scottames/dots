@@ -9,9 +9,6 @@
         "/proc"
         (joinPath .chezmoi.homeDir ".local/share/pi-extensions")
       )
-      "extraReadFile" (list
-        (joinPath .chezmoi.homeDir ".config/agents/AGENTS.md")
-      )
       "extraAllowPaths" (list
         "/tmp/pi-$UID"
       )

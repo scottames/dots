@@ -1,9 +1,7 @@
 {{- /* extends "droid" is the local base profile alongside this one, not a
        registry pack: the Nono registry has no nolabs-ai/droid pack. Droid
        spawns and signals its own children (droid exec subagents, background
-       processes), so it needs signal_mode allow_same_sandbox via "security".
-       ~/.agents/AGENTS.md is a symlink, so reading it needs its target granted
-       on top of the base profile's ~/.agents read. */ -}}
+       processes), so it needs signal_mode allow_same_sandbox via "security". */ -}}
 {{- includeTemplate "nono-local-profile" (dict
       "ctx" .
       "extends" "droid"
@@ -11,7 +9,4 @@
       "version" "0.1.0"
       "description" "Droid with local mise runtime access and external git include access"
       "security" true
-      "extraReadFile" (list
-        (joinPath .chezmoi.homeDir ".config/agents/AGENTS.md")
-      )
 ) -}}
