@@ -2,7 +2,9 @@
 
 This directory is the declarative source for Pi's reviewed global extensions.
 Pi loads only the local paths selected by `current`; it does not install packages
-at startup.
+at startup. Pi scopes each local package's module resolution, so the installer
+copies pi-starship's hoisted runtime dependencies beside its generated chunks
+and replaces its incompatible TOML `createRequire()` bridge with a static import.
 
 | Package | Purpose |
 | --- | --- |

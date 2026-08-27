@@ -1,0 +1,39 @@
+# Pi footer configuration. This is intentionally separate from ~/.config/starship.toml.
+format = "$model$thinking$directory$git_branch$git_status$context${fill}$time"
+
+[model]
+symbol = "󰚩"
+format = "[$symbol](#a6adc8)[ $model]($style) "
+style = "bold #89b4fa"
+
+[thinking]
+symbol = "󰔟"
+format = "[$symbol](#a6adc8)[ $level]($style) "
+style = "bold #cba6f7"
+
+[directory]
+symbol = "󰉋"
+format = "[$symbol](#a6adc8)[ $path]($style) "
+style = "bold #89dceb"
+truncate_to_repo = false
+truncation_length = 2
+
+[git_branch]
+symbol = ""
+format = "[$symbol](#a6adc8)[ $branch]($style) "
+style = "bold #cba6f7"
+
+[git_status]
+style = "bold #f38ba8"
+
+[context]
+symbol = "󰍛"
+format = "[$symbol](#a6adc8)[ $percentage]($style) "
+
+[time]
+symbol = ""
+format = "[$symbol](#a6adc8)[ $time]($style)"
+style = "dimmed #a6adc8"
+
+[fill]
+style = "none"

@@ -16,12 +16,12 @@ wrapper="${repo_root}/home/dot_local/bin/executable_nono-pi"
 local_path_wrapper="${repo_root}/home/dot_local/bin/executable_nono-with-local-path"
 
 fail() {
-  printf 'ASSERTION FAILED: %s\n' "$1" >&2
-  exit 1
+	printf 'ASSERTION FAILED: %s\n' "$1" >&2
+	exit 1
 }
 
 for required in "${manifest}" "${lockfile}" "${installer}" "${settings}" "${profile}" "${removals}" "${wrapper}" "${local_path_wrapper}"; do
-  [[ -f ${required} ]] || fail "missing ${required#"${repo_root}/"}"
+	[[ -f ${required} ]] || fail "missing ${required#"${repo_root}/"}"
 done
 
 [[ $(<"${removals}") == *'.pi/agent/tmp'* ]] || fail 'chezmoi does not remove the retired Pi temporary directory'
@@ -49,7 +49,7 @@ for (const [location, pkg] of Object.entries(lockfile.packages)) {
 NODE
 
 mapfile -t extension_packages < <(
-  node - "${manifest}" <<'NODE'
+	node - "${manifest}" <<'NODE'
 const fs = require('node:fs');
 
 const manifest = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
@@ -62,7 +62,7 @@ trap 'rm -rf -- "${fixture_dir}"' EXIT
 fixture_home="${fixture_dir}/home"
 
 render() {
-  HOME="${fixture_home}" chezmoi --source "${repo_root}" execute-template <"$1"
+	HOME="${fixture_home}" chezmoi --source "${repo_root}" execute-template <"$1"
 }
 
 settings_json="$(render "${settings}")"
@@ -118,13 +118,15 @@ installer_fixture="${fixture_dir}/installer.sh"
 render "${installer}" >"${installer_fixture}"
 installer_contents="$(<"${installer_fixture}")"
 installer_template_contents="$(<"${installer}")"
+[[ ${installer_template_contents} == *'pi-extension-layout-v4'* ]] || fail 'installer build hash omits the package layout version'
 [[ ${installer_contents} == *'mise exec -- npm'* ]] || fail 'installer does not use the Mise-managed npm version'
 [[ ${installer_contents} == *'mise exec -- node'* ]] || fail 'installer does not use the Mise-managed Node version'
 [[ ${installer_contents} == *"mise exec -- node - \"\${staging_dir}/package.json\""* ]] || fail 'installer does not validate the staged manifest'
 [[ ${installer_contents} != *'node@'* ]] || fail 'installer pins a Node version outside Mise configuration'
 [[ ${installer_contents} == *'fs.renameSync('* ]] || fail 'installer does not atomically replace current'
 for package in "${extension_packages[@]}"; do
-  [[ ${installer_template_contents} != *"${package}"* ]] || fail "installer duplicates manifest package ${package}"
+	[[ ${package} == '@narumitw/pi-starship' ]] && continue
+	[[ ${installer_template_contents} != *"${package}"* ]] || fail "installer duplicates manifest package ${package}"
 done
 
 package_list="${fixture_dir}/packages"
@@ -169,8 +171,8 @@ mkdir -p "${local_path_repo}/nested" "${fixture_dir}/project"
 git -C "${local_path_repo}" init --quiet
 overlap_capture="${fixture_dir}/overlap"
 (
-  cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi --version
+	cd "${local_path_repo}/nested"
+	BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi --version
 )
 python - "${local_path_capture}" "${local_path_repo_parent}" <<'PY'
 import sys
@@ -187,8 +189,8 @@ PY
 [[ -z $(<"${overlap_capture}") ]] || fail 'pi-local leaks overlap protection into the sandboxed command'
 
 (
-  cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local -- pi --version
+	cd "${local_path_repo}/nested"
+	BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local -- pi --version
 )
 python - "${local_path_capture}" <<'PY'
 import sys
@@ -199,20 +201,20 @@ assert b'--allow' not in args, args
 PY
 
 (
-  cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile=pi-local -- pi --version
+	cd "${local_path_repo}/nested"
+	BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile=pi-local -- pi --version
 )
 [[ -z $(<"${overlap_capture}") ]] || fail 'attached pi-local profile leaks overlap protection into the sandboxed command'
 
 (
-  cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile opencode-local -- --profile pi-local
+	cd "${local_path_repo}/nested"
+	BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile opencode-local -- --profile pi-local
 )
 [[ -z $(<"${overlap_capture}") ]] || fail 'profile argument after the command separator enabled Pi protection'
 
 (
-  cd "${local_path_repo}/nested"
-  BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd --allow "${local_path_repo_parent}" -- pi --version
+	cd "${local_path_repo}/nested"
+	BASH_ENV=/dev/null HOME="${fixture_home}" HOME_LOCAL_BIN="${stub_bin}/home-bin" MISE_SHIMS_DIR="${stub_bin}/mise-shims" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REJECT_OVERLAP_CAPTURE="${overlap_capture}" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd --allow "${local_path_repo_parent}" -- pi --version
 )
 python - "${local_path_capture}" "${local_path_repo_parent}" <<'PY'
 import sys
@@ -244,7 +246,7 @@ cat >"${wrapper_stub_bin}/chmod" <<'STUB'
 STUB
 chmod +x "${wrapper_stub_bin}/nono-with-local-path" "${wrapper_stub_bin}/mkdir" "${wrapper_stub_bin}/stat" "${wrapper_stub_bin}/chmod"
 (
-  BASH_ENV=/dev/null PATH="${wrapper_stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" bash "${wrapper}"
+	BASH_ENV=/dev/null PATH="${wrapper_stub_bin}:${PATH}" NONO_TMPDIR_MARKER="${nono_tmpdir_marker}" bash "${wrapper}"
 )
 expected_tmpdir="/tmp/pi-${UID}"
 mapfile -t wrapper_environment <"${nono_tmpdir_marker}"
@@ -308,6 +310,20 @@ case "$1" in
     while IFS= read -r package; do
       mkdir -p "${prefix}/node_modules/${package}"
     done <"${PI_EXTENSION_PACKAGES_FILE}"
+    mkdir -p "${prefix}/node_modules/@narumitw/pi-starship/node_modules/@narumitw/pi-tui-kit" "${prefix}/node_modules/smol-toml" "${prefix}/node_modules/yaml"
+    cat >"${prefix}/node_modules/@narumitw/pi-starship/package.json" <<'JSON'
+{"dependencies":{"@narumitw/pi-tui-kit":"^0.58.0","smol-toml":"^1.8.0","yaml":"^2.9.0"}}
+JSON
+    mkdir -p "${prefix}/node_modules/@narumitw/pi-starship/dist/chunks"
+    cat >"${prefix}/node_modules/@narumitw/pi-starship/dist/chunks/chunk-test.js" <<'JS'
+import { createRequire } from "node:module";
+var require2 = createRequire(import.meta.url);
+var parseTomlImplementation;
+function parseToml(document) {
+  parseTomlImplementation ??= require2("smol-toml").parse;
+  return parseTomlImplementation(document);
+}
+JS
     ;;
   node)
     shift
@@ -320,13 +336,22 @@ STUB
 PI_EXTENSION_PACKAGES_FILE="${package_list}" HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" bash "${installer_fixture}" >"${fixture_dir}/success-output" 2>&1
 [[ $(readlink "${extensions_dir}/current") != "${old_build}" ]] || fail "successful install did not replace current: $(<"${fixture_dir}/success-output")"
 for package in "${extension_packages[@]}"; do
-  [[ -d ${extensions_dir}/current/node_modules/${package} ]] || fail "current is missing ${package}"
+	[[ -d ${extensions_dir}/current/node_modules/${package} ]] || fail "current is missing ${package}"
 done
+for dependency in smol-toml yaml; do
+	target_dependency="${extensions_dir}/current/node_modules/@narumitw/pi-starship/node_modules/${dependency}"
+	chunk_dependency="${extensions_dir}/current/node_modules/@narumitw/pi-starship/dist/chunks/node_modules/${dependency}"
+	[[ -d ${target_dependency} && ! -L ${target_dependency} ]] || fail "pi-starship is missing copied ${dependency}"
+	[[ -d ${chunk_dependency} && ! -L ${chunk_dependency} ]] || fail "pi-starship chunks are missing copied ${dependency}"
+done
+chunk="${extensions_dir}/current/node_modules/@narumitw/pi-starship/dist/chunks/chunk-test.js"
+[[ $(<"${chunk}") == *'import { parse as parseTomlImplementation } from "smol-toml";'* ]] || fail 'pi-starship TOML bridge was not replaced'
+[[ $(<"${chunk}") != *'createRequire'* ]] || fail 'pi-starship TOML bridge still uses createRequire'
 
 set +e
 (
-  cd "${fixture_home}"
-  HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REACHED_MARKER="${fixture_dir}/nono-reached" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi
+	cd "${fixture_home}"
+	HOME="${fixture_home}" PATH="${stub_bin}:${PATH}" NONO_ARGS_CAPTURE="${local_path_capture}" NONO_REACHED_MARKER="${fixture_dir}/nono-reached" bash "${local_path_wrapper}" wrap --profile pi-local --allow-cwd -- pi
 ) >"${fixture_dir}/wrapper-output" 2>&1
 wrapper_status=$?
 set -e
