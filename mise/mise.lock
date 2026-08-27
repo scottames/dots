@@ -3770,6 +3770,27 @@ version = "0.23.0"
 backend = "go:golang.org/x/tools/gopls"
 specifiers = ["v0.23.0"]
 
+[[tools."http:droid"]]
+version = "0.204.0"
+backend = "http:droid"
+specifiers = ["0.204.0"]
+
+[tools."http:droid"."platforms.linux-arm64"]
+checksum = "sha256:33e8b8e6e6bb686e407f08494e47242543b7a698f8aafb91857de3d93b4076ec"
+url = "https://downloads.factory.ai/factory-cli/releases/0.204.0/linux/arm64/droid"
+
+[tools."http:droid"."platforms.linux-x64"]
+checksum = "sha256:27d5ded22ebc1a7434df86926f4a1235cfb4e1df41132ea9017df5e1d11cad18"
+url = "https://downloads.factory.ai/factory-cli/releases/0.204.0/linux/x64/droid"
+
+[tools."http:droid"."platforms.macos-arm64"]
+checksum = "sha256:6758de645126837391d0c36963f4ae93ddb62077462a6e1bfb438d0dff073f92"
+url = "https://downloads.factory.ai/factory-cli/releases/0.204.0/darwin/arm64/droid"
+
+[tools."http:droid"."platforms.macos-x64"]
+checksum = "sha256:eb8bf48d486e5b96bf2fb580d2266d92d662384e254cdda0a58f36283665a9f8"
+url = "https://downloads.factory.ai/factory-cli/releases/0.204.0/darwin/x64/droid"
+
 [[tools.node]]
 version = "24.19.0"
 backend = "core:node"

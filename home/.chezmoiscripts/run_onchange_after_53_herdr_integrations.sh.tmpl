@@ -3,6 +3,7 @@
 set -eufo pipefail
 
 # herdr version: {{ index (fromToml (include "../mise/config.toml")).tools "github:ogulcancelik/herdr" }}
+# droid version: {{ (index (fromToml (include "../mise/config.toml")).tools "http:droid").version }}
 
 yellow='\033[0;33m'
 clear='\033[0m'

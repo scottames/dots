@@ -24,6 +24,9 @@ credential_command = "ghtkn get -m 1h"
 [settings.npm]
 package_manager = "bun"
 
+[env]
+FACTORY_DROID_AUTO_UPDATE_ENABLED = "false"
+
 [tools]
 
 bun = "1.4.0"
@@ -301,3 +304,16 @@ amazon-ecr-credential-helper = "0.12.0"
 "pipx:semgrep" = "1.174.0"
 "pipx:sqlfluff" = "4.3.0"
 "pipx:yamllint" = "1.38.0"
+
+# Factory AI's autonomous software development agent
+#  https://docs.factory.ai/droid-cli/cli-reference
+# renovate: datasource=npm depName=droid
+[tools."http:droid"]
+version = "0.204.0"
+bin = "droid"
+
+[tools."http:droid".platforms]
+linux-arm64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/linux/arm64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/linux/arm64/droid.sha256" }
+linux-x64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/linux/x64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/linux/x64/droid.sha256" }
+macos-arm64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/arm64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/arm64/droid.sha256" }
+macos-x64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/x64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/x64/droid.sha256" }

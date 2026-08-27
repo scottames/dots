@@ -47,6 +47,16 @@
       ],
       datasourceTemplate: 'github-tags',
     },
+    {
+      // Renovate's mise manager does not support the HTTP backend.
+      customType: 'regex',
+      managerFilePatterns: [
+        '/mise/config\\.toml/',
+      ],
+      matchStrings: [
+        '# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n\\[tools\\."http:droid"\\]\\nversion = "(?<currentValue>[^"]+)"',
+      ],
+    },
   ],
   packageRules: [
     {

@@ -44,6 +44,7 @@ $HAS_VIM \
   && setenv EDITOR                 "vim"
 $HAS_NVIM \
   && setenv EDITOR                 "nvim"
+setenv FACTORY_DROID_AUTO_UPDATE_ENABLED false
 setenv FISH_CONFIG                 "$XDG_CONFIG_HOME/fish"
 setenv FZF_DEFAULT_OPTS            "--bind ctrl-j:down,ctrl-k:up"
 setenv GITHUB_USERNAME             "$GITHUB_USER"
