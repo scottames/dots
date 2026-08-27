@@ -83,6 +83,7 @@ lint:
         - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
         - home/private_dot_config/vicinae/settings.json
         - home/dot_claude/settings.json
+        - home/private_dot_factory/modify_private_settings.json
 runtimes:
   enabled:
     - go@1.21.0

@@ -1,0 +1,25 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Droid rewrites this file at runtime. trustedFolders is local state
+       (repo paths + trust timestamps), so it is read back from the live
+       file instead of being tracked here. */ -}}
+{{- $live := dict -}}
+{{- if .chezmoi.stdin }}{{ $live = fromJson .chezmoi.stdin }}{{ end -}}
+{{- $settings := dict
+      "logoAnimation" "off"
+      "nerdFont" true
+      "overrideTerminalColors" false
+      "theme" "auto"
+-}}
+{{- $herdr := joinPath .chezmoi.homeDir ".factory/hooks/herdr-agent-state.sh" -}}
+{{- if stat $herdr -}}
+{{-   $settings = set $settings "hooks" (dict
+        "SessionStart" (list (dict "hooks" (list (dict
+          "command" (printf "bash '%s' session" $herdr)
+          "timeout" 10
+          "type" "command"))))) -}}
+{{- end -}}
+{{- /* Local-only keys: preserved as-is, never tracked. */ -}}
+{{- range $k := list "trustedFolders" -}}
+{{-   if hasKey $live $k }}{{ $settings = set $settings $k (get $live $k) }}{{ end -}}
+{{- end -}}
+{{ $settings | toPrettyJson }}
