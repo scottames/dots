@@ -311,34 +311,49 @@ url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/mar
 url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747911"
 
 [[tools."aqua:ast-grep/ast-grep"]]
-version = "0.45.1"
+version = "0.45.2"
 backend = "aqua:ast-grep/ast-grep"
-specifiers = ["0.45.1"]
+specifiers = ["0.45.2"]
 
 [tools."aqua:ast-grep/ast-grep"."platforms.linux-arm64"]
-checksum = "sha256:9ee7ec49aada3dc05135d21977af089a33fc3154ada25bab102daca90b5098f2"
-url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.1/app-aarch64-unknown-linux-gnu.zip"
-url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/505306241"
+checksum = "sha256:e67ee2f5928b4d77a472114edf6e227d90fefe22fa47e7a78db187c55d206564"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-aarch64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526582046"
 
 [tools."aqua:ast-grep/ast-grep"."platforms.linux-x64"]
-checksum = "sha256:76fb6555be6734fb5057dba8d2fb756430f374bb9e1af694cf1ce00e13238d63"
-url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.1/app-x86_64-unknown-linux-gnu.zip"
-url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/505305291"
+checksum = "sha256:67aff72dd2994bf152fcc3a8a09cf93b13193abe59f39393095167c729af2015"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-x86_64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526581269"
+
+[tools."aqua:ast-grep/ast-grep"."platforms.linux-x64-baseline"]
+checksum = "sha256:67aff72dd2994bf152fcc3a8a09cf93b13193abe59f39393095167c729af2015"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-x86_64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526581269"
 
 [tools."aqua:ast-grep/ast-grep"."platforms.macos-arm64"]
-checksum = "sha256:6c761afbdc072a7a9006d0dc5c49b3247fef195b8bebe675b4aa385ff872d9c3"
-url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.1/app-aarch64-apple-darwin.zip"
-url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/505305714"
+checksum = "sha256:1fc21214234bf6f5a3f841d5b2493a4fc4b6087f69b055c9ad5f94f77c0ab76e"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-aarch64-apple-darwin.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526581149"
 
 [tools."aqua:ast-grep/ast-grep"."platforms.macos-x64"]
-checksum = "sha256:38ec2d1c7c97f1efc1c1080526e3c54b964e263478e347f44a65b5287ef5a6ad"
-url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.1/app-x86_64-apple-darwin.zip"
-url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/505306213"
+checksum = "sha256:037e5b4a9aed2ba03a2b4710e4fe3439d5d1154d1266d5e8f9f6df7452169181"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-x86_64-apple-darwin.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526582632"
+
+[tools."aqua:ast-grep/ast-grep"."platforms.macos-x64-baseline"]
+checksum = "sha256:037e5b4a9aed2ba03a2b4710e4fe3439d5d1154d1266d5e8f9f6df7452169181"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-x86_64-apple-darwin.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526582632"
 
 [tools."aqua:ast-grep/ast-grep"."platforms.windows-x64"]
-checksum = "sha256:b816b375df6a30f8e5d91d706dccae6127346e68970788cf8c2decee54bcaa31"
-url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.1/app-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/505308188"
+checksum = "sha256:e14c3e33c6813111a41b8e4307e13462ebb2fea783d17ae22fc50d32a04ea77d"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526584448"
+
+[tools."aqua:ast-grep/ast-grep"."platforms.windows-x64-baseline"]
+checksum = "sha256:e14c3e33c6813111a41b8e4307e13462ebb2fea783d17ae22fc50d32a04ea77d"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.2/app-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/526584448"
 
 [[tools."aqua:astral-sh/ruff"]]
 version = "0.16.4"
@@ -1900,44 +1915,64 @@ url = "https://github.com/nushell/nushell/releases/download/0.115.1/nu-0.115.1-x
 url_api = "https://api.github.com/repos/nushell/nushell/releases/assets/526030176"
 
 [[tools."aqua:openai/codex"]]
-version = "rust-v0.149.0"
+version = "rust-v0.149.1"
 backend = "aqua:openai/codex"
-specifiers = ["rust-v0.149.0"]
+specifiers = ["rust-v0.149.1"]
 
 [tools."aqua:openai/codex"."platforms.linux-arm64"]
-checksum = "sha256:dac03e4db966e94f7083b9eb9f95d8b40da9d568fd2fdbb6885b0ea7d5b0d97f"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789114"
+checksum = "sha256:57095f9f4ced36d8e173f67e26c5c142d5b3e1e1984bbcae35684209ed236a9b"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526818032"
 
 [tools."aqua:openai/codex"."platforms.linux-arm64-musl"]
-checksum = "sha256:dac03e4db966e94f7083b9eb9f95d8b40da9d568fd2fdbb6885b0ea7d5b0d97f"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789114"
+checksum = "sha256:57095f9f4ced36d8e173f67e26c5c142d5b3e1e1984bbcae35684209ed236a9b"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526818032"
 
 [tools."aqua:openai/codex"."platforms.linux-x64"]
-checksum = "sha256:1c08ba262820b78d49ea7a93f326b6b430b72e5fe46830e433edef12e5123244"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789085"
+checksum = "sha256:1e8531ae5f6dea3c6e11e53e74cc5ac81bf1ba597f9b296fb112d6ea30fdaf5d"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817914"
+
+[tools."aqua:openai/codex"."platforms.linux-x64-baseline"]
+checksum = "sha256:1e8531ae5f6dea3c6e11e53e74cc5ac81bf1ba597f9b296fb112d6ea30fdaf5d"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817914"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-musl"]
-checksum = "sha256:1c08ba262820b78d49ea7a93f326b6b430b72e5fe46830e433edef12e5123244"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789085"
+checksum = "sha256:1e8531ae5f6dea3c6e11e53e74cc5ac81bf1ba597f9b296fb112d6ea30fdaf5d"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817914"
+
+[tools."aqua:openai/codex"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:1e8531ae5f6dea3c6e11e53e74cc5ac81bf1ba597f9b296fb112d6ea30fdaf5d"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817914"
 
 [tools."aqua:openai/codex"."platforms.macos-arm64"]
-checksum = "sha256:6c7589a52fe90e3742e35662115a4c55c39715601df0d41345ba8ec8f4221d4e"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789134"
+checksum = "sha256:4cbb17468b5d86b4b182a28c016d62e9d273a241cec04885ccfae76e6983ae3f"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526818142"
 
 [tools."aqua:openai/codex"."platforms.macos-x64"]
-checksum = "sha256:ba332e647cc898e3b4e86a3bc6e8db414a124eb88d8480f4707bbc66b0432f9d"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789003"
+checksum = "sha256:4c50fb92bb238a4067009d4a99c13351325c8840da91edd0ce4e5b7a21d53bc3"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817972"
+
+[tools."aqua:openai/codex"."platforms.macos-x64-baseline"]
+checksum = "sha256:4c50fb92bb238a4067009d4a99c13351325c8840da91edd0ce4e5b7a21d53bc3"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817972"
 
 [tools."aqua:openai/codex"."platforms.windows-x64"]
-checksum = "sha256:bc470b4b90654c38ee52716056d6d5fc19a49afd08f419328034f4f324536459"
-url = "https://github.com/openai/codex/releases/download/rust-v0.149.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/522789078"
+checksum = "sha256:e302697785b0761833779fe2d7b65614d6d156e8e6b8b9fa9725b6503d552613"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817947"
+
+[tools."aqua:openai/codex"."platforms.windows-x64-baseline"]
+checksum = "sha256:e302697785b0761833779fe2d7b65614d6d156e8e6b8b9fa9725b6503d552613"
+url = "https://github.com/openai/codex/releases/download/rust-v0.149.1/codex-package-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/526817947"
 
 [[tools."aqua:psf/black"]]
 version = "26.5.1"
@@ -3858,9 +3893,9 @@ backend = "npm:bash-language-server"
 specifiers = ["5.6.0"]
 
 [[tools."npm:cspell"]]
-version = "10.1.0"
+version = "10.1.1"
 backend = "npm:cspell"
-specifiers = ["10.1.0"]
+specifiers = ["10.1.1"]
 
 [[tools."npm:dockerfile-language-server-nodejs"]]
 version = "0.15.0"
@@ -3973,41 +4008,61 @@ backend = "core:rust"
 specifiers = ["1.98.0"]
 
 [[tools.usage]]
-version = "6.1.1"
+version = "6.2.0"
 backend = "aqua:jdx/usage"
-specifiers = ["6.1.1"]
+specifiers = ["6.2.0"]
 
 [tools.usage."platforms.linux-arm64"]
-checksum = "sha256:4f5c2f08acbbb6e1e675bbd98c58c4b698e88829d1d150e3f3fc688fa1e3db4f"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526185438"
+checksum = "sha256:93502e6ec4c4efe5437a8ef0970b0d87cd88020e341bcdd6b0b78022ce316a4b"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527050809"
 
 [tools.usage."platforms.linux-arm64-musl"]
-checksum = "sha256:9e2b57c5e423eb8eb38682567ef2d7722f83c13e9d398f50c1c4fb30888cb292"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526184171"
+checksum = "sha256:86d8273aee09adc471ac34e8e61ef8386fc26b2d06cc43985722b705a52c5a7e"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527051257"
 
 [tools.usage."platforms.linux-x64"]
-checksum = "sha256:cb367c1b753819a9fa5de704d1dd0887609b99334e76124c6a5ac179a9f56319"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526183094"
+checksum = "sha256:38df801e9ed2b4d23ea66793a25369f52d92c4aefd55ebacb6e343a2ab84528d"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527050648"
+
+[tools.usage."platforms.linux-x64-baseline"]
+checksum = "sha256:38df801e9ed2b4d23ea66793a25369f52d92c4aefd55ebacb6e343a2ab84528d"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527050648"
 
 [tools.usage."platforms.linux-x64-musl"]
-checksum = "sha256:1e8cde78b39d675b6bd4104c8c349ce2e5f00eb1bb164c3ff86756db62a6979f"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526184443"
+checksum = "sha256:ded7d1815254fe064b07a8f33251b8e112ec346c338e476ce0e9ee8d8babc0ed"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527051701"
+
+[tools.usage."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:ded7d1815254fe064b07a8f33251b8e112ec346c338e476ce0e9ee8d8babc0ed"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527051701"
 
 [tools.usage."platforms.macos-arm64"]
-checksum = "sha256:0ec220c5083182667c9ba2c456b8e1297132b4d12ade966889ba3fd4e96d5aef"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-universal-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526174096"
+checksum = "sha256:6c2d37e3cba67d45fdfeb5edaff81962388bfde09667cc9ed35b0734b7c0a8c1"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-universal-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527053103"
 
 [tools.usage."platforms.macos-x64"]
-checksum = "sha256:0ec220c5083182667c9ba2c456b8e1297132b4d12ade966889ba3fd4e96d5aef"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-universal-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526174096"
+checksum = "sha256:6c2d37e3cba67d45fdfeb5edaff81962388bfde09667cc9ed35b0734b7c0a8c1"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-universal-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527053103"
+
+[tools.usage."platforms.macos-x64-baseline"]
+checksum = "sha256:6c2d37e3cba67d45fdfeb5edaff81962388bfde09667cc9ed35b0734b7c0a8c1"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-universal-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527053103"
 
 [tools.usage."platforms.windows-x64"]
-checksum = "sha256:61efe94b592007219f7925be05df93c6eaf0e147d93b2db32e5283dd2158f0c9"
-url = "https://github.com/jdx/usage/releases/download/v6.1.1/usage-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/usage/releases/assets/526177722"
+checksum = "sha256:c13234e43cee2b172376ade8d0cdd1ea26c8a2032275b283243b05de57256c3f"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527054199"
+
+[tools.usage."platforms.windows-x64-baseline"]
+checksum = "sha256:c13234e43cee2b172376ade8d0cdd1ea26c8a2032275b283243b05de57256c3f"
+url = "https://github.com/jdx/usage/releases/download/v6.2.0/usage-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jdx/usage/releases/assets/527054199"
