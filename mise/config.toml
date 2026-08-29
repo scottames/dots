@@ -33,7 +33,7 @@ bun = "1.4.0"
 go = "1.27.0"
 node = "24.19.0"
 rust = "1.98.0"
-usage = "6.2.0"
+usage = "6.4.0"
 
 ## tools
 
@@ -42,7 +42,7 @@ usage = "6.2.0"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.34.0"
+"aqua:vercel-labs/agent-browser" = "0.35.0"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.45.2"
@@ -63,7 +63,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.72.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.241"
+"github:anthropics/claude-code" = "v2.1.245"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.98.0"
@@ -144,7 +144,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "0.8.2"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.19.0"
+"github:modem-dev/hunk" = "v0.19.1"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -164,7 +164,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.18.1"
+"github:janosmiko/lfk" = "v0.18.2"
 # linear without leaving the command line: list, start, and create PRs for
 # linear issues. agent friendly.
 #  https://github.com/schpet/linear-cli
@@ -184,14 +184,14 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:nushell/nushell" = "0.115.1"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.18.21"
+"aqua:sst/opencode" = "1.18.23"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
 "npm:opkg" = "0.11.3"
 # Minimal, extensible terminal coding agent
 #  https://github.com/earendil-works/pi
-"aqua:earendil-works/pi" = "v0.84.2"
+"aqua:earendil-works/pi" = "v0.84.3"
 # pinact is a CLI to edit GitHub Workflow and Composite action files
 # and pin versions of Actions and Reusable Workflows.
 #  https://github.com/suzuki-shunsuke/pinact
@@ -199,7 +199,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.27.7"
+"github:backnotprop/plannotator" = "v0.27.8"
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
 "aqua:sethvargo/ratchet" = "0.12.0"
