@@ -31,9 +31,9 @@ FACTORY_DROID_AUTO_UPDATE_ENABLED = "false"
 
 bun = "1.4.0"
 go = "1.27.0"
-node = "24.19.0"
+node = "24.20.0"
 rust = "1.98.0"
-usage = "6.4.0"
+usage = "6.4.1"
 
 ## tools
 
@@ -48,7 +48,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:ast-grep/ast-grep" = "0.45.2"
 # magical shell history
 #   https://github.com/atuinsh/atuin
-"aqua:atuinsh/atuin" = "18.19.0"
+"aqua:atuinsh/atuin" = "18.20.0"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
 "github:aquaproj/aqua" = "v2.62.3"
@@ -63,7 +63,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.72.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.245"
+"github:anthropics/claude-code" = "v2.1.246"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.98.0"
@@ -72,7 +72,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:openai/codex" = "rust-v0.149.1"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
-"aqua:google/go-containerregistry" = "0.21.9"
+"aqua:google/go-containerregistry" = "0.22.0"
 # runtime for composable workflows
 #   https://github.com/dagger/dagger
 "aqua:dagger/dagger" = "0.21.8"
@@ -100,7 +100,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:fastfetch-cli/fastfetch" = "2.67.1"
 # better find
 #   https://github.com/sharkdp/fd
-"aqua:sharkdp/fd" = "10.4.2"
+"aqua:sharkdp/fd" = "10.5.0"
 # terminal json viewer & processor
 #   https://github.com/antonmedv/fx
 "aqua:antonmedv/fx" = "39.2.0"
@@ -144,7 +144,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "0.8.2"
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
-"github:modem-dev/hunk" = "v0.19.1"
+"github:modem-dev/hunk" = "v0.20.0"
 # command-line json processor
 #   https://github.com/stedolan/jq
 "aqua:stedolan/jq" = "1.8.1"
@@ -172,7 +172,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Moor is a pager. It's designed to just do the right thing
 # without any configuration.
 #  https://github.com/walles/moor
-"aqua:walles/moor" = "2.17.0"
+"aqua:walles/moor" = "2.18.0"
 #   https://github.com/neovim/neovim
 "aqua:neovim/neovim" = "0.12.5"
 # Capability-based sandboxes with fine-grained policies. Brokering access
@@ -236,7 +236,7 @@ amazon-ecr-credential-helper = "0.12.0"
 ] }
 # code review TUI with vim keybindings
 #  https://github.com/agavra/tuicr
-"github:agavra/tuicr" = "v0.23.1"
+"github:agavra/tuicr" = "v0.24.0"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
 "github:max-sixty/worktrunk" = "v0.74.0"
@@ -258,11 +258,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
 "aqua:astral-sh/ruff" = "0.16.4"
-"aqua:astral-sh/uv" = "0.12.5"
+"aqua:astral-sh/uv" = "0.12.6"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.49.0"
 "aqua:dprint/dprint" = "0.56.1"
-"aqua:editorconfig-checker/editorconfig-checker" = "3.11.1"
+"aqua:editorconfig-checker/editorconfig-checker" = "3.11.2"
 "aqua:golangci/golangci-lint" = "2.13.1"
 "aqua:google/yamlfmt" = "0.21.0"
 "aqua:gotestyourself/gotestsum" = "1.13.0"
@@ -309,7 +309,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "0.204.0"
+version = "0.205.1"
 bin = "droid"
 
 [tools."http:droid".platforms]
