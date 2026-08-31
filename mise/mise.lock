@@ -1419,6 +1419,11 @@ checksum = "sha256:f791c83f055cc651c8a2f70894b51461594bc6f41f2876168cc72d4bb81ab
 url = "https://github.com/homeport/dyff/releases/download/v1.12.0/dyff_1.12.0_darwin_amd64.tar.gz"
 url_api = "https://api.github.com/repos/homeport/dyff/releases/assets/406097926"
 
+[tools."aqua:homeport/dyff"."platforms.windows-x64"]
+checksum = "sha256:63d237debecd0188287df4de01ded6dbede28ee15a616d5eeaf061c0cdd9a394"
+url = "https://github.com/homeport/dyff/releases/download/v1.12.0/dyff_1.12.0_windows_amd64.tar.gz"
+url_api = "https://api.github.com/repos/homeport/dyff/releases/assets/406097914"
+
 [[tools."aqua:incu6us/goimports-reviser"]]
 version = "3.12.6"
 backend = "aqua:incu6us/goimports-reviser"
@@ -3933,9 +3938,9 @@ backend = "pipx:gitlint-core"
 specifiers = ["0.19.1"]
 
 [[tools."pipx:isort"]]
-version = "8.0.1"
+version = "9.0.0"
 backend = "pipx:isort"
-specifiers = ["8.0.1"]
+specifiers = ["9.0.0"]
 
 [[tools."pipx:mypy"]]
 version = "2.3.1"
