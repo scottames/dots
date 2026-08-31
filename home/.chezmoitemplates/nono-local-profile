@@ -88,6 +88,7 @@
       (joinPath $home ".config/nono")
       (joinPath $home ".config/nvim")
       (joinPath $home ".config/thts")
+      (joinPath $home ".config/yamllint")
       (joinPath $home ".gobrew")
       (joinPath $home ".local/bin")
       (joinPath $home ".local/share/aquaproj-aqua")
