@@ -3867,6 +3867,11 @@ version = "10.1.1"
 backend = "npm:cspell"
 specifiers = ["10.1.1"]
 
+[[tools."npm:ctx7"]]
+version = "0.5.9"
+backend = "npm:ctx7"
+specifiers = ["0.5.9"]
+
 [[tools."npm:dockerfile-language-server-nodejs"]]
 version = "0.15.0"
 backend = "npm:dockerfile-language-server-nodejs"

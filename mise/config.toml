@@ -70,6 +70,9 @@ amazon-ecr-credential-helper = "0.12.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
 "aqua:openai/codex" = "rust-v0.150.1"
+# Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
+#  https://github.com/upstash/context7
+"npm:ctx7" = "0.5.9"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.22.0"
