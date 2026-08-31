@@ -22,7 +22,7 @@ slsa = true
 credential_command = "ghtkn get -m 1h"
 
 [settings.npm]
-package_manager = "bun"
+package_manager = "aube"
 
 [env]
 FACTORY_DROID_AUTO_UPDATE_ENABLED = "false"
