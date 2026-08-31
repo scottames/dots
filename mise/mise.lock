@@ -3933,9 +3933,9 @@ backend = "pipx:gitlint-core"
 specifiers = ["0.19.1"]
 
 [[tools."pipx:isort"]]
-version = "8.0.1"
+version = "9.0.0"
 backend = "pipx:isort"
-specifiers = ["8.0.1"]
+specifiers = ["9.0.0"]
 
 [[tools."pipx:mypy"]]
 version = "2.3.1"
