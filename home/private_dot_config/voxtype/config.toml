@@ -1,4 +1,5 @@
 # Voxtype Configuration
+#  https://github.com/peteonrails/voxtype/blob/main/docs/CONFIGURATION.md
 #
 # Location: ~/.config/voxtype/config.toml
 # All settings can be overridden via CLI flags
@@ -52,6 +53,11 @@ max_duration_secs = 60
 # Pause MPRIS media players (Spotify, Firefox, etc.) when recording starts,
 # resume them when recording stops. Requires playerctl.
 # pause_media = false
+
+# Lower MPRIS media streams while recording, then restore their prior volumes.
+# Use this instead of pause_media for background music.
+duck_media = true
+duck_media_volume_percent = 50
 
 [audio.feedback]
 enabled = true
