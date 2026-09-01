@@ -4,8 +4,14 @@
 	signingkey = {{ .me.git.signing_key }}{{/* gitleaks:allow */}}
 [commit]
 	gpgsign = true
+{{ if eq .me.git.transport "https" -}}
+[url "https://github.com/"]
+  insteadOf = git@github.com:
+  insteadOf = ssh://git@github.com/
+{{ else -}}
 [url "git@github.com:scottames"]
   insteadOf = https://github.com/scottames
+{{ end -}}
 [credential "https://github.com"]
 	helper =
 	helper = !ghtkn git-credential
@@ -29,8 +35,10 @@
 	forceSignAnnotated = false
 	gpgSign = true
 [gpg]
+{{ if eq .me.git.signing_format "openpgp" -}}
 	program = gpg
-	format = {{ if contains "ssh" .me.git.signing_key }}ssh{{ else }}openpgp{{ end }}
+{{ end -}}
+	format = {{ .me.git.signing_format }}
 [init]
 	defaultBranch = main
 [interactive]

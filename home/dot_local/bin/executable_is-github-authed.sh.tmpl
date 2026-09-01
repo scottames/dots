@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+{{ if eq .me.git.transport "https" -}}
+if command -v ghtkn >/dev/null 2>&1 \
+  && command -v gh >/dev/null 2>&1 \
+  && ghtkn exec -e GH_TOKEN -- gh api /user >/dev/null 2>&1; then
+  printf 'true'
+else
+  printf 'false'
+fi
+{{ else -}}
+ssh -T git@github.com >/dev/null 2>&1
+exit_status=$?
+
+if [[ ${exit_status} -eq 0 || ${exit_status} -eq 1 ]]; then
+  printf 'true'
+else
+  printf 'false'
+fi
+{{ end -}}

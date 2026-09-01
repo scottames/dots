@@ -141,8 +141,21 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{- end -}}
 
 {{- $workOrg := promptStringOnce . "work.org" "GitHub org for work profile" "" -}}
+{{- $isRemoteWorkstation := promptBoolOnce . "host.is_remote_workstation" "Configure as an unattended remote workstation" false -}}
 
-{{- $gitSigningKey := promptStringOnce . "me.git.signing_key" "Key to use for git signing" "6207D796C3BDA7278077465F14E140E80951AB78" }}
+{{- $gitSigningFormat := "openpgp" -}}
+{{- $gitSigningKey := "" -}}
+{{- $gitTransport := "ssh" -}}
+{{- if $isRemoteWorkstation -}}
+{{-   $gitSigningFormat = "ssh" -}}
+{{-   $gitSigningKey = joinPath .chezmoi.homeDir ".ssh/id_ed25519_git_signing" -}}
+{{-   $gitTransport = "https" -}}
+{{- else -}}
+{{-   $gitSigningKey = promptStringOnce . "me.git.signing_key" "Key to use for git signing" "6207D796C3BDA7278077465F14E140E80951AB78" -}}
+{{-   if contains "ssh" $gitSigningKey -}}
+{{-     $gitSigningFormat = "ssh" -}}
+{{-   end -}}
+{{- end }}
 
 sourceDir = "{{ $chezmoiSourceDir }}"
 progress = true
@@ -180,6 +193,7 @@ progress = true
   [data.host]
     name = "{{ $hostname }}"
     chassis = "{{ $chassis }}"
+    is_remote_workstation = {{ $isRemoteWorkstation }}
     is_ublue = {{ $isUblue }}
     os_variant = "{{ $osVariant }}"
     os_version = "{{ $osVersion }}"
@@ -211,7 +225,9 @@ progress = true
       id = "{{ $gravatarID }}"
 
     [data.me.git]
+      signing_format = "{{ $gitSigningFormat }}"
       signing_key = "{{ $gitSigningKey }}"
+      transport = "{{ $gitTransport }}"
     [data.me.github]
       username = "{{  $githubUser }}"
 
