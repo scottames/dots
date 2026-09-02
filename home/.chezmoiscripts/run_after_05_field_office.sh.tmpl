@@ -41,7 +41,7 @@ fi
 
 chmod 600 "${key_path}"
 
-if [[ ! -f ${key_path}.pub ]]; then
+if [[ ${key_created} == true || ! -f ${key_path}.pub ]]; then
   info "Recreating the Git signing public key..."
   ssh-keygen -y -f "${key_path}" >"${key_path}.pub"
   key_created=true

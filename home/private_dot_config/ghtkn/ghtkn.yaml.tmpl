@@ -5,11 +5,11 @@ backend:
   type: agent
 min_expiration: 1h
 apps:
-{{ if .host.is_field_office }}
+{{- if .host.is_field_office }}
   - name: scottames/field-office
     client_id: Iv23li7AIeurGrXPkadz
-{{ else }}
+{{- else }}
   - name: scottames/ghtkn
     client_id: Iv23liQXrtOYmxQ2nhVa
-{{ end }}
+{{- end }}
     git_owner: scottames
