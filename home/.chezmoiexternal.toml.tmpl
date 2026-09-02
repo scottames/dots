@@ -175,6 +175,10 @@
     url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
+{{ $githubRepoPrefix := "git@github.com:scottames" -}}
+{{ if eq .me.git.transport "https" -}}
+{{-   $githubRepoPrefix = "https://github.com/scottames" -}}
+{{- end -}}
 {{ if not (eq "root" .me.user) -}} # skip if running in CI
 {{- if and (lookPath "is-github-authed.sh") (eq (output "is-github-authed.sh") "true") -}}
 #  ╭──────────────────────────────────────────────────────────╮
@@ -184,67 +188,67 @@
 
 ["src/github.com/scottames/.agents/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/.agents.git"
+    url = "{{ $githubRepoPrefix }}/.agents.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/.trunk/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/.trunk.git"
+    url = "{{ $githubRepoPrefix }}/.trunk.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/daggerverse/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/daggerverse.git"
+    url = "{{ $githubRepoPrefix }}/daggerverse.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/containers/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/containers.git"
+    url = "{{ $githubRepoPrefix }}/containers.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/copr/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/copr.git"
+    url = "{{ $githubRepoPrefix }}/copr.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/cv/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/cv.git"
+    url = "{{ $githubRepoPrefix }}/cv.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/infra/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/infra.git"
+    url = "{{ $githubRepoPrefix }}/infra.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/ntbk/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/ntbk.git"
+    url = "{{ $githubRepoPrefix }}/ntbk.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/misc/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/misc.git"
+    url = "{{ $githubRepoPrefix }}/misc.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/renovate/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/renovate.git"
+    url = "{{ $githubRepoPrefix }}/renovate.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/scottames.github.io/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/scottames.github.io.git"
+    url = "{{ $githubRepoPrefix }}/scottames.github.io.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/thts/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/thts.git"
+    url = "{{ $githubRepoPrefix }}/thts.git"
     refreshPeriod = "0"
 
 ["src/github.com/scottames/walls/main"]
     type = "git-repo"
-    url = "git@github.com:scottames/walls.git"
+    url = "{{ $githubRepoPrefix }}/walls.git"
     refreshPeriod = "0"
 
 {{ end -}} # end: is-github-authed

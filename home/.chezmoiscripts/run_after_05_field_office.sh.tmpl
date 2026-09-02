@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo '
+███████╗██╗███████╗██╗     ██████╗
+██╔════╝██║██╔════╝██║     ██╔══██╗
+█████╗  ██║█████╗  ██║     ██║  ██║
+██╔══╝  ██║██╔══╝  ██║     ██║  ██║
+██║     ██║███████╗███████╗██████╔╝
+╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝
+
+     ██████╗ ███████╗███████╗██╗ ██████╗███████╗
+    ██╔═══██╗██╔════╝██╔════╝██║██╔════╝██╔════╝
+    ██║   ██║█████╗  █████╗  ██║██║     █████╗
+    ██║   ██║██╔══╝  ██╔══╝  ██║██║     ██╔══╝
+    ╚██████╔╝██║     ██║     ██║╚██████╗███████╗
+     ╚═════╝ ╚═╝     ╚═╝     ╚═╝ ╚═════╝╚══════╝
+'
+
+info() { printf '\033[0;35m%s\033[0m\n' "${1}"; }
+warn() { printf '\033[0;33m%s\033[0m\n' "${1}" >&2; }
+
+{{ if and .host.is_field_office (eq .chezmoi.os "linux") -}}
+user="${USER:-$(id -un)}"
+key_path="${HOME}/.ssh/id_ed25519_git_signing"
+key_created=false
+
+if [[ ! -e ${key_path} ]]; then
+  info "Generating Field Office Git signing key..."
+  mkdir -p "$(dirname "${key_path}")"
+  chmod 700 "$(dirname "${key_path}")"
+  ssh-keygen -q -t ed25519 -N '' \
+    -C "${user}@$(hostname) git signing" \
+    -f "${key_path}"
+  key_created=true
+elif [[ ! -f ${key_path} ]]; then
+  warn "Git signing key path is not a regular file: ${key_path}"
+  exit 1
+fi
+
+chmod 600 "${key_path}"
+
+if [[ ${key_created} == true || ! -f ${key_path}.pub ]]; then
+  info "Recreating the Git signing public key..."
+  ssh-keygen -y -f "${key_path}" >"${key_path}.pub"
+  key_created=true
+fi
+
+chmod 644 "${key_path}.pub"
+
+if [[ ${key_created} == true ]]; then
+  info "Register the public key with GitHub as a signing key:"
+  printf 'gh ssh-key add %q --type signing --title %q\n' \
+    "${key_path}.pub" "$(hostname) Git signing"
+fi
+
+if command -v loginctl >/dev/null 2>&1 \
+  && [[ $(loginctl show-user "${user}" --property=Linger --value 2>/dev/null || true) != yes ]]; then
+  info "Enabling systemd user lingering for ${user}..."
+  if ! loginctl enable-linger "${user}"; then
+    warn "Unable to enable lingering; run: loginctl enable-linger ${user}"
+  fi
+fi
+{{ end -}}

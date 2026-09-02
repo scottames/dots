@@ -30,6 +30,7 @@
 {{- end -}}
 {{- $bypassProtection := list
       (joinPath $home ".ssh/known_hosts")
+      (joinPath $home ".ssh/id_ed25519_git_signing")
       (joinPath $home ".gnupg")
       (joinPath $home ".config/fish/config.fish")
       (joinPath $home ".config/fish/fish_variables")
@@ -95,6 +96,8 @@
       (joinPath $home ".local/share/gh")
       (joinPath $home ".local/share/mise")
       (joinPath $home ".local/share/nvim")
+      (joinPath $home ".local/share/yubikey-touch-detector-src")
+      (joinPath $home ".local/share/yubico-authenticator")
       (joinPath $home ".local/state/gh")
       (joinPath $home ".npm-global")
       (joinPath $home ".npmrc")
@@ -140,6 +143,8 @@
       (joinPath $home ".zshenv")
       (joinPath $home ".cargo/env.fish")
       (joinPath $home ".config/ghtkn/ghtkn.yaml")
+      (joinPath $home ".wallpaper")
+      (joinPath $home ".ssh/id_ed25519_git_signing")
 -}}
 {{- /* SSH (git push) requires user id lookup */ -}}
 {{- $readFiles = append $readFiles "/etc/passwd" -}}
