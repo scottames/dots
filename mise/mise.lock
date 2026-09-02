@@ -190,6 +190,69 @@ checksum = "sha256:b6ecb3bf2587d8068a50c855671b2b693acaf172fcddb6542b6f80db1e38b
 url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-x86_64-pc-windows-msvc.tar.gz"
 url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447571006"
 
+[[tools."aqua:anchore/syft"]]
+version = "1.51.1"
+backend = "aqua:anchore/syft"
+specifiers = [
+    "1.51.1",
+    "latest",
+]
+
+[tools."aqua:anchore/syft"."platforms.linux-arm64"]
+checksum = "sha256:a7fd2b784e6664acd44719270574f6cd8c6864fc2b1700bf9099bd1cccda7d7f"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610134"
+
+[tools."aqua:anchore/syft"."platforms.linux-arm64-musl"]
+checksum = "sha256:a7fd2b784e6664acd44719270574f6cd8c6864fc2b1700bf9099bd1cccda7d7f"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610134"
+
+[tools."aqua:anchore/syft"."platforms.linux-x64"]
+checksum = "sha256:8fcb33017a0dc1058298c923c436d19dfa68ae93968e0b423248542e3afb9fc3"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610151"
+
+[tools."aqua:anchore/syft"."platforms.linux-x64-baseline"]
+checksum = "sha256:8fcb33017a0dc1058298c923c436d19dfa68ae93968e0b423248542e3afb9fc3"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610151"
+
+[tools."aqua:anchore/syft"."platforms.linux-x64-musl"]
+checksum = "sha256:8fcb33017a0dc1058298c923c436d19dfa68ae93968e0b423248542e3afb9fc3"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610151"
+
+[tools."aqua:anchore/syft"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:8fcb33017a0dc1058298c923c436d19dfa68ae93968e0b423248542e3afb9fc3"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610151"
+
+[tools."aqua:anchore/syft"."platforms.macos-arm64"]
+checksum = "sha256:ac063af3b9874769deb7ea1e6d76841e68f9e3bb50cd654226fc977de65532c1"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610139"
+
+[tools."aqua:anchore/syft"."platforms.macos-x64"]
+checksum = "sha256:0e186ce1d4351ec276126851ca3ff258ed070e93e73574ed64858d4fc2339867"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610142"
+
+[tools."aqua:anchore/syft"."platforms.macos-x64-baseline"]
+checksum = "sha256:0e186ce1d4351ec276126851ca3ff258ed070e93e73574ed64858d4fc2339867"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610142"
+
+[tools."aqua:anchore/syft"."platforms.windows-x64"]
+checksum = "sha256:5e4bc3e6b6344b4625de0f7aa5351aaa72856d11d78462972de0a101ee2c1c8f"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_windows_amd64.zip"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610136"
+
+[tools."aqua:anchore/syft"."platforms.windows-x64-baseline"]
+checksum = "sha256:5e4bc3e6b6344b4625de0f7aa5351aaa72856d11d78462972de0a101ee2c1c8f"
+url = "https://github.com/anchore/syft/releases/download/v1.51.1/syft_1.51.1_windows_amd64.zip"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/532610136"
+
 [[tools."aqua:antonmedv/fx"]]
 version = "39.2.0"
 backend = "aqua:antonmedv/fx"
