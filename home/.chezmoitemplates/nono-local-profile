@@ -30,6 +30,7 @@
 {{- end -}}
 {{- $bypassProtection := list
       (joinPath $home ".ssh/known_hosts")
+      (joinPath $home ".ssh/id_ed25519_git_signing")
       (joinPath $home ".gnupg")
       (joinPath $home ".config/fish/config.fish")
       (joinPath $home ".config/fish/fish_variables")
@@ -140,6 +141,8 @@
       (joinPath $home ".zshenv")
       (joinPath $home ".cargo/env.fish")
       (joinPath $home ".config/ghtkn/ghtkn.yaml")
+      (joinPath $home ".wallpaper")
+      (joinPath $home ".ssh/id_ed25519_git_signing")
 -}}
 {{- /* SSH (git push) requires user id lookup */ -}}
 {{- $readFiles = append $readFiles "/etc/passwd" -}}

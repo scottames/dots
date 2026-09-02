@@ -141,12 +141,12 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 {{- end -}}
 
 {{- $workOrg := promptStringOnce . "work.org" "GitHub org for work profile" "" -}}
-{{- $isRemoteWorkstation := promptBoolOnce . "host.is_remote_workstation" "Configure as an unattended remote workstation" false -}}
+{{- $isFieldOffice := promptBoolOnce . "host.is_field_office" "Configure as a Field Office" false -}}
 
 {{- $gitSigningFormat := "openpgp" -}}
 {{- $gitSigningKey := "" -}}
 {{- $gitTransport := "ssh" -}}
-{{- if $isRemoteWorkstation -}}
+{{- if $isFieldOffice -}}
 {{-   $gitSigningFormat = "ssh" -}}
 {{-   $gitSigningKey = joinPath .chezmoi.homeDir ".ssh/id_ed25519_git_signing" -}}
 {{-   $gitTransport = "https" -}}
@@ -193,7 +193,7 @@ progress = true
   [data.host]
     name = "{{ $hostname }}"
     chassis = "{{ $chassis }}"
-    is_remote_workstation = {{ $isRemoteWorkstation }}
+    is_field_office = {{ $isFieldOffice }}
     is_ublue = {{ $isUblue }}
     os_variant = "{{ $osVariant }}"
     os_version = "{{ $osVersion }}"
