@@ -1,0 +1,44 @@
+# Included from ~/.config/git/config, so it themes every delta caller at once:
+# git itself, lazygit's diffRenderer, and `chezmoi diff`.
+#
+# Every hex is quoted. Git config treats an unquoted `#` as a comment, so a bare
+# hex would be silently truncated to nothing.
+[delta]
+	{{ if eq .variant "light" }}light = true{{ else }}dark = true{{ end }}
+
+	# Should match the bat theme, which is what delta uses for syntax
+	# highlighting inside the diff body.
+	syntax-theme = {{ .bat }}
+
+	file-style = "{{ .fg }}"
+	file-decoration-style = "{{ .muted }}"
+	commit-decoration-style = "{{ .muted }}" bold box ul
+
+	hunk-header-style = file line-number syntax
+	hunk-header-file-style = bold
+	hunk-header-line-number-style = bold "{{ .accent }}"
+	hunk-header-decoration-style = "{{ .muted }}" box ul
+
+	line-numbers-left-style = "{{ .muted }}"
+	line-numbers-right-style = "{{ .muted }}"
+	line-numbers-zero-style = "{{ .muted }}"
+	line-numbers-minus-style = bold "{{ .red }}"
+	line-numbers-plus-style = bold "{{ .green }}"
+
+	# Delta strips these by default, which leaves add-vs-remove resting entirely
+	# on background hue.
+	keep-plus-minus-markers = true
+
+	# `syntax` keeps the code's own highlighting as the foreground and paints
+	# only the background, so a diff still reads as code. That does cost
+	# contrast on the tint -- Aura's accent sits near 3.4:1 there -- which is a
+	# deliberate trade for keeping the colors.
+	#
+	# zero-style is left alone, so context lines keep full syntax highlighting
+	# on the untinted background, where those colors were designed to sit.
+	minus-style = syntax "{{ .diff_del_bg }}"
+	minus-emph-style = bold syntax "{{ .diff_del_emph_bg }}"
+	plus-style = syntax "{{ .diff_add_bg }}"
+	plus-emph-style = bold syntax "{{ .diff_add_emph_bg }}"
+
+	blame-palette = "{{ .bg }} {{ .bg_float }} {{ .bg_dim }} {{ .bg_alt }} {{ .selection }}"

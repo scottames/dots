@@ -1,0 +1,12 @@
+[theme]
+name = "current"
+
+[colors]
+AlertInfo = "{{ .green }}"
+AlertWarn = "{{ .orange }}"
+AlertError = "{{ .red }}"
+Annotation = "{{ .yellow }}"
+Base = "{{ .fg }}"
+Guidance = "{{ .muted }}"
+Important = "{{ .red }}"
+Title = "{{ .accent }}"

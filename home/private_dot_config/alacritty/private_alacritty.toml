@@ -4,7 +4,9 @@ key = "Return"
 mods = "Control|Shift"
 
 [general]
-import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+# The symlink must be the *imported* file: alacritty canonicalises its main
+# config path and misses symlink replacement there.
+import = ["~/.config/themes/current/alacritty.toml"]
 
 [terminal]
 

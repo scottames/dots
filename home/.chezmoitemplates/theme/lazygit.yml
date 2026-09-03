@@ -1,0 +1,23 @@
+gui:
+  theme:
+    activeBorderColor:
+      - "{{ .accent }}"
+      - bold
+    inactiveBorderColor:
+      - "{{ .muted }}"
+    searchingActiveBorderColor:
+      - "{{ .yellow }}"
+    optionsTextColor:
+      - "{{ .blue }}"
+    selectedLineBgColor:
+      - "{{ .selection }}"
+    cherryPickedCommitBgColor:
+      - "{{ .border }}"
+    cherryPickedCommitFgColor:
+      - "{{ .accent }}"
+    unstagedChangesColor:
+      - "{{ .red }}"
+    defaultFgColor:
+      - "{{ .fg }}"
+  authorColors:
+    "*": "{{ .pink }}"

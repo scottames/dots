@@ -1,0 +1,17 @@
+/* waybar palette. Structure lives in ~/.config/waybar/style.css. */
+@define-color bg {{ .bg }};
+@define-color bg_dim {{ .bg_dim }};
+@define-color bg_alt {{ .bg_alt }};
+@define-color selection {{ .selection }};
+@define-color border {{ .border }};
+@define-color fg {{ .fg }};
+@define-color muted {{ .muted }};
+@define-color fg_dim {{ .fg_dim }};
+@define-color accent {{ .accent }};
+@define-color green {{ .green }};
+@define-color cyan {{ .cyan }};
+@define-color orange {{ .orange }};
+@define-color yellow {{ .yellow }};
+@define-color pink {{ .pink }};
+@define-color blue {{ .blue }};
+@define-color red {{ .red }};

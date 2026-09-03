@@ -82,28 +82,6 @@ keybindings:
     - key: E # https://www.gh-dash.dev/companions/enhance/dash-integration/
       command: gh enhance -R {{.RepoName}} {{.PrNumber}}
 repoPaths: {}
-theme:
-  ui:
-    sectionsShowCount: true
-    table:
-      showSeparator: true
-      compact: false
-  colors:
-    # https://github.com/catppuccin/gh-dash/
-    text: # lavender
-      primary: "#cdd6f4"
-      secondary: "#b4befe"
-      inverted: "#11111b"
-      faint: "#bac2de"
-      warning: "#f9e2af"
-      success: "#a6e3a1"
-      error: "#f38ba8"
-    background:
-      selected: "#313244"
-    border:
-      primary: "#b4befe"
-      secondary: "#45475a"
-      faint: "#313244"
 pager:
   diff: ""
 confirmQuit: false

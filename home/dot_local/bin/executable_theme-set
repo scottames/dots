@@ -1,0 +1,141 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# Point ~/.config/themes/current at a theme, wire up the tools that need a
+# stable file name or an inline palette, then reload what can reload live.
+#
+# With no argument, opens a vicinae picker. Bash rather than a fish function
+# because vicinae cannot invoke fish functions.
+#
+# Themes themselves are rendered by chezmoi
+# (.chezmoiscripts/run_onchange_after_60_themes.sh.tmpl); this only selects one.
+
+magenta='\033[0;35m'
+red='\033[0;31m'
+yellow='\033[0;33m'
+clear='\033[0m'
+info() { printf "${magenta}%s${clear}\n" "${@}"; }
+err() {
+	printf "${red}%s${clear}\n" "${@}"
+	exit 1
+}
+warn() { printf "${yellow}%s${clear}\n" "${@}"; }
+
+themes="${HOME}/.config/themes"
+current="${themes}/current"
+
+# Silent and empty before the first apply, so shell completion can call this
+# without the themes directory existing yet.
+# `-exec basename` rather than `-printf`, which is GNU only and this script also
+# runs on darwin. A glob is not an option either: `set -f` above disables
+# pathname expansion. `-type d` does not follow symlinks, so the `current`
+# pointer is skipped for free.
+list_themes() {
+	[[ -d ${themes} ]] || return 0
+	find "${themes}" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sort
+}
+
+usage() {
+	cat <<EOF
+usage: theme-set [<name>]
+
+Available themes:
+$(list_themes | sed 's/^/  /')
+EOF
+}
+
+case "${1-}" in
+-h | --help)
+	usage
+	exit 0
+	;;
+-l | --list)
+	list_themes
+	exit 0
+	;;
+*) ;;
+esac
+
+[[ -d ${themes} ]] || err "no themes directory at ${themes}; run 'chezmoi apply' first"
+
+name="${1-}"
+if [[ -z ${name} ]]; then
+	command -v vicinae >/dev/null 2>&1 ||
+		err "no theme given and vicinae is not available"
+	available="$(list_themes)"
+	name="$(printf '%s\n' "${available}" | vicinae dmenu -p 'Theme' || true)"
+	# Cancelling the picker is not an error.
+	[[ -n ${name} ]] || exit 0
+fi
+
+[[ -d "${themes}/${name}" ]] || err "no such theme: ${name}"
+
+ln -sfn "${themes}/${name}" "${current}"
+info "theme: ${name}"
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ Stable-name symlinks                                     │
+#  ╰──────────────────────────────────────────────────────────╯
+# These point *through* ~/.config/themes/current, so they survive a switch and
+# only need to exist. Re-linking every time keeps them self-healing.
+
+link() {
+	local src="${current}/$1" dest="$2"
+	[[ -f ${src} ]] || return 0
+	mkdir -p "$(dirname "${dest}")"
+	ln -sfn "${src}" "${dest}"
+}
+
+link k9s.yaml "${HOME}/.config/k9s/skins/current.yaml"
+link atuin.toml "${HOME}/.config/atuin/themes/current.toml"
+link zellij.kdl "${HOME}/.config/zellij/themes/current.kdl"
+link television.toml "${HOME}/.config/television/themes/current.toml"
+link tuicr.toml "${HOME}/.config/tuicr/themes/current.toml"
+link vicinae.toml "${HOME}/.local/share/vicinae/themes/current.toml"
+link pi.json "${HOME}/.pi/agent/themes/current.json"
+# yazi flavors are directories, not files.
+link yazi.toml "${HOME}/.config/yazi/flavors/current.yazi/flavor.toml"
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ Render-step configs                                      │
+#  ╰──────────────────────────────────────────────────────────╯
+# No include mechanism and no theme-name indirection: the palette has to end up
+# inline. Base halves are chezmoi-managed; these outputs are not.
+
+render() {
+	local base="$1" fragment="${current}/$2" out="$3"
+	[[ -f ${base} && -f ${fragment} ]] || return 0
+	cat "${base}" "${fragment}" >"${out}"
+}
+
+render "${HOME}/.config/starship.base.toml" starship.toml \
+	"${HOME}/.config/starship.toml"
+render "${HOME}/.config/gh-dash/config.base.yml" gh-dash.yml \
+	"${HOME}/.config/gh-dash/config.yml"
+
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ Reload                                                   │
+#  ╰──────────────────────────────────────────────────────────╯
+# Everything here is best-effort: a daemon that is not running must not fail the
+# switch. niri is absent on purpose — it watches its own included files.
+# Running TUIs (zellij sessions, open k9s, running nvim) re-theme on next launch.
+
+reload() {
+	command -v "$1" >/dev/null 2>&1 || return 0
+	"$@" >/dev/null 2>&1 || true
+}
+
+pkill -SIGUSR2 waybar >/dev/null 2>&1 || true
+# ghostty reloads on SIGUSR2 *only* — any other signal crashes it. Needs >= 1.2.
+pkill -SIGUSR2 ghostty >/dev/null 2>&1 || true
+reload makoctl reload
+# alacritty does not watch imported files; touching the main config does it.
+if [[ -f ${HOME}/.config/alacritty/alacritty.toml ]]; then
+	touch "${HOME}/.config/alacritty/alacritty.toml"
+fi
+reload tmux source-file "${HOME}/.config/tmux/tmux.conf"
+# vicinae hot-reloads theme files, but a symlink swap may not trip its watcher.
+reload vicinae theme set current
+
+info "desktop reloaded; TUIs pick this up on next launch"

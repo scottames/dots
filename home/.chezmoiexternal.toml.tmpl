@@ -96,70 +96,16 @@
     stripComponents = 1
     refreshPeriod = "168h"
 
-[".config/k9s/skins"]
-    type = "archive"
-    url = "https://github.com/catppuccin/k9s/archive/main.tar.gz"
-    include = ["*/dist/*.yaml"]
-    exact = true
-    stripComponents = 2
-    refreshPeriod = "168h"
-
-[".config/fuzzel/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/fuzzel/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 2
-    include = ["*/themes/**"]
-
-
-[".config/atuin/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/atuin/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 3
-    include = ["*/themes/*/*.toml"]
-
-[".config/yazi/flavors"]
-    type = "archive"
-    url = "https://github.com/yazi-rs/flavors/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 1
-    include = ["*/catppuccin-mocha.yazi/**"]
-
-[".config/hypr/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/hyprland/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 2
-    include = ["*/themes/**"]
-
-[".config/waybar/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/waybar/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 2
-    include = ["*/themes/**"]
-
-[".config/bat/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/bat/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 2
-    include = ["*/themes/*.tmTheme"]
-
-[".pi/agent/themes"]
-    type = "archive"
-    url = "https://github.com/scarcekoi/pi/archive/main.tar.gz"
-    exact = true
-    refreshPeriod = "168h"
-    stripComponents = 3
-    include = ["*/themes/**/*.json"]
+# Theme fragments for k9s, fuzzel, atuin, yazi, hyprlock, waybar, alacritty and
+# pi are generated from .chezmoidata/themes.toml instead of vendored, so the
+# upstream archives that used to land here are gone. They were `exact = true`,
+# which would delete the `current` symlinks theme-set writes into these dirs.
+#
+# bat needs no theme externals at all: 0.26 bundles the Catppuccin themes, and
+# Aura's is vendored at private_dot_config/bat/themes/aura/ because upstream's
+# is broken (see the comment at the top of that file). bat scans themes/
+# recursively and names each theme after its filename stem, so it lands as
+# `aura-theme`.
 
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ git-repo                                                 │
@@ -168,11 +114,6 @@
 [".config/alacritty/alacritty-themes"]
     type = "git-repo"
     url = "https://github.com/rajasegar/alacritty-themes.git"
-    refreshPeriod = "168h"
-
-[".config/alacritty/catppuccin"]
-    type = "git-repo"
-    url = "https://github.com/catppuccin/alacritty.git"
     refreshPeriod = "168h"
 
 {{ $githubRepoPrefix := "git@github.com:scottames" -}}

@@ -1,0 +1,9 @@
+// Colors only. Structure lives in ~/.config/niri/config.kdl.
+// niri merges duplicate top-level sections field by field, and settings after
+// an `include` win, so this must be included *after* the main layout block.
+layout {
+    focus-ring {
+        active-color "{{ .accent }}"
+        inactive-color "{{ .border }}"
+    }
+}

@@ -1,6 +1,6 @@
-appearance = "system"
-theme_dark = "catppuccin-mocha"
-theme_light = "catppuccin-latte"
+# `current` is a symlink in ~/.config/tuicr/themes/, re-pointed by theme-set.
+# An explicit `theme` wins over theme_dark/theme_light and appearance.
+theme = "current"
 ignore_whitespace = true
 
 scroll_offset = 20

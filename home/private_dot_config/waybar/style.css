@@ -1,4 +1,4 @@
-@import "themes/mocha.css";
+@import "../themes/current/colors.css";
 
 * {
   border: none;
@@ -9,46 +9,43 @@
   min-height: 0;
 }
 
-/* https://catppuccin.com/palette */
-/* TODO: import catppuccin.mocha CSS from chezmoiexternal */
-
 window#waybar {
-  background: rgba(21, 18, 27, 0);
-  color: #cdd6f4;
+  background: transparent;
+  color: @fg;
 }
 
 tooltip {
-  background: @base;
+  background: @bg;
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
-  border-color: @crust;
+  border-color: @border;
 }
 
 #workspaces button {
   padding: 5px;
-  color: @surface0;
+  color: @fg_dim;
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  color: @subtext0;
+  color: @muted;
 }
 
 #workspaces button.focused {
-  color: @lavender;
+  color: @accent;
   border-radius: 10px;
 }
 
 #workspaces button.urgent {
-  color: @crust;
-  background: @subtext0;
+  color: @bg_dim;
+  background: @muted;
   border-radius: 10px;
 }
 
 #workspaces button:hover {
-  background: @crust;
-  color: @text;
+  background: @bg_dim;
+  color: @fg;
   border-radius: 10px;
 }
 
@@ -70,11 +67,11 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-  background: @base;
+  background: @bg;
   padding: 0px 10px;
   margin: 3px 0px;
   margin-top: 10px;
-  border: 1px solid #181825;
+  border: 1px solid @bg_alt;
 }
 
 #tray {
@@ -83,7 +80,7 @@ tooltip {
 }
 
 #workspaces {
-  background: @base;
+  background: @bg;
   border-radius: 10px;
   margin-left: 10px;
   padding-right: 0px;
@@ -106,19 +103,19 @@ tooltip {
 #clock {
   color: @yellow;
   border-radius: 10px;
-  background: @base;
+  background: @bg;
   margin-top: 10px;
-  border: 1px solid @mantle;
+  border: 1px solid @bg_alt;
 }
 
 #custom-lock {
-  color: @text;
+  color: @fg;
   border-left: 0px;
   border-right: 0px;
 }
 
 #pulseaudio {
-  color: @rosewater;
+  color: @pink;
   border-left: 0px;
   border-right: 0px;
   border-radius: 10px 0 0 10px;
@@ -140,7 +137,7 @@ tooltip {
 }
 
 #custom-voxtype.stopped {
-  color: @text;
+  color: @fg;
 }
 
 @keyframes pulse {
@@ -156,19 +153,19 @@ tooltip {
 }
 
 #cpu {
-  color: @maroon;
+  color: @orange;
   border-left: 0px;
   border-right: 0px;
 }
 
 #memory {
-  color: @lavender;
+  color: @accent;
   border-left: 0px;
   border-right: 0px;
 }
 
 #temperature {
-  color: @sapphire;
+  color: @cyan;
   border-left: 0px;
   border-right: 0px;
 }
@@ -181,13 +178,13 @@ tooltip {
 }
 
 #disk {
-  color: @mauve;
+  color: @pink;
   border-left: 0px;
   border-right: 0px;
 }
 
 #network {
-  color: @text;
+  color: @fg;
   border-left: 0px;
   border-radius: 0 10px 10px 0;
   margin-right: 10px;
@@ -204,7 +201,7 @@ tooltip {
   border-right: 0px;
 }
 #custom-tailscale.disabled {
-  color: @text;
+  color: @fg;
   border-left: 0px;
   border-right: 0px;
 }
@@ -215,15 +212,14 @@ tooltip {
 }
 
 #custom-power {
-  color: @mauve;
+  color: @pink;
   border-radius: 0 10px 10px 0;
   margin-right: 10px;
   border-left: 0px;
 }
 
 #backlight {
-  /* color: #cba6f7; */
-  color: @flamingo;
+  color: @orange;
   border-left: 0px;
   border-right: 0px;
 }

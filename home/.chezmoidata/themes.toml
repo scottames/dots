@@ -1,0 +1,153 @@
+# Theme palette contract.
+#
+# One table per theme, identical key set. Consumed by
+# .chezmoiscripts/run_onchange_after_60_themes.sh.tmpl, which renders every
+# theme into ~/.config/themes/<name>/ using the partials in
+# .chezmoitemplates/theme/. The `theme-set` script re-points
+# ~/.config/themes/current at one of them.
+#
+# The contract is shaped to Aura, the most constrained palette here: one
+# background, one foreground, one gray, six accents. Richer palettes map *down*
+# into it. Fitting in that direction is what keeps every value sourced from a
+# real upstream port rather than invented.
+#
+# Keys ending in a tool name are theme *names* for tools with a genuine
+# upstream port; everything else is a color.
+
+[themes.aura]
+# https://github.com/daltonmenezes/aura-theme
+variant = "dark"
+
+# native ports, not colors
+# bat names themes after the filename stem, not the tmTheme's own <name>.
+bat = "aura-theme" # packages/sublime-text/aura-theme.tmTheme
+ghostty = "Aura"   # bundled with ghostty (resources)
+nvim = "aura-dark" # packages/neovim/colors/aura-dark.lua
+# bubbletint's registry has no Aura tint and takes no custom ones, so this is
+# a fixed approximation that does not follow theme-set. dracula is the
+# nearest: dark violet ground, purple accent, mint green, hot pink.
+bubbletint = "dracula"
+
+# surfaces
+bg = "#15141b"        # black
+bg_dim = "#110f18"    # alacritty normal.black
+bg_alt = "#21202e"    # aura-soft-dark background
+bg_float = "#121016"  # vscode editorWidget.background
+selection = "#29263c" # alacritty colors.selection
+border = "#3d375e"    # purple_faded, opaque
+
+# text
+fg = "#edecee"     # white
+muted = "#6d6d6d"  # gray
+fg_dim = "#4d4d4d" # alacritty bright.black
+
+# accents
+accent = "#a277ff" # purple
+green = "#61ffca"
+cyan = "#61ffca"   # Aura has no distinct cyan; alacritty normal.cyan
+orange = "#ffca85"
+yellow = "#ffca85" # Aura has no distinct yellow; alacritty normal.yellow
+pink = "#f694ff"
+blue = "#82e2ff"
+red = "#ff6767"
+
+# Diff backgrounds: 20% of the accent over bg, 50% for word-level emphasis.
+# The 20% base is catppuccin/delta's, and reproduces their published hexes.
+# The emphasis blend is ours: at their 35% the two tints differ by only dE 14,
+# which reads as one shade. 50% doubles that to dE 27..32 while leaving the base
+# untouched, so the block stays exactly as visible against the page as before.
+# Raising emphasis rather than lowering the base is deliberate -- a lighter base
+# would separate the two just as well but wash the block out against bg.
+#
+# Red and green stay red and green: add/remove is the one place a palette
+# should not reassign hue.
+diff_add_bg = "#24433e"      # 20% green
+diff_add_emph_bg = "#3b8a72" # 50% green
+diff_del_bg = "#44252a"      # 20% red
+diff_del_emph_bg = "#8a3e41" # 50% red
+
+# The terminal's 16 ANSI slots, copied verbatim from ghostty's bundled theme
+# (/usr/share/ghostty/themes/Aura) so alacritty and ghostty agree slot for slot.
+# Deliberately *not* derived from the accents above: Aura's own port collapses
+# these onto four hues and puts orange in bright_red and purple in bright_green.
+# Anything that wants a real blue or pink should read the accents, not these.
+[themes.aura.ansi]
+black = "#110f18"
+red = "#ff6767"
+green = "#61ffca"
+yellow = "#ffca85"
+blue = "#a277ff"
+magenta = "#a277ff"
+cyan = "#61ffca"
+white = "#edecee"
+bright_black = "#4d4d4d"
+bright_red = "#ffca85"
+bright_green = "#a277ff"
+bright_yellow = "#ffca85"
+bright_blue = "#a277ff"
+bright_magenta = "#a277ff"
+bright_cyan = "#61ffca"
+bright_white = "#edecee"
+
+[themes.catppuccin-mocha]
+# https://github.com/catppuccin/catppuccin
+variant = "dark"
+
+# native ports, not colors
+bat = "Catppuccin Mocha"        # bundled with bat 0.26+
+ghostty = "Catppuccin Mocha"    # bundled with ghostty (resources)
+nvim = "catppuccin-mocha"
+bubbletint = "catppuccin_mocha"
+
+# surfaces
+bg = "#1e1e2e"        # base
+bg_dim = "#11111b"    # crust
+bg_alt = "#313244"    # surface0
+bg_float = "#181825"  # mantle
+selection = "#45475a" # surface1
+border = "#585b70"    # surface2
+
+# text
+fg = "#cdd6f4"     # text
+muted = "#7f849c"  # overlay1
+fg_dim = "#585b70" # surface2
+
+# accents
+accent = "#cba6f7" # mauve
+green = "#a6e3a1"
+cyan = "#94e2d5"   # teal
+orange = "#fab387" # peach
+yellow = "#f9e2af"
+pink = "#f5c2e7"
+blue = "#89b4fa"
+red = "#f38ba8"
+
+# Base tints are catppuccin/delta's published values verbatim. The emphasis
+# tints are raised to 50% for the same reason as Aura's above; upstream's 35%
+# left the two only dE 11..15 apart.
+diff_add_bg = "#394545"
+diff_add_emph_bg = "#628068"
+diff_del_bg = "#493447"
+diff_del_emph_bg = "#88546b"
+
+# From ghostty's bundled "Catppuccin Mocha", same reasoning as above. This one
+# is well formed: sixteen distinct values, each bright slot a lighter sibling.
+[themes.catppuccin-mocha.ansi]
+black = "#45475a"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#f5c2e7"
+cyan = "#94e2d5"
+white = "#a6adc8"
+bright_black = "#585b70"
+bright_red = "#f37799"
+bright_green = "#89d88b"
+bright_yellow = "#ebd391"
+bright_blue = "#74a8fc"
+bright_magenta = "#f2aede"
+bright_cyan = "#6bd7ca"
+bright_white = "#bac2de"
+
+# vi: ft=toml

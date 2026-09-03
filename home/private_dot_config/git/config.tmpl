@@ -45,7 +45,10 @@
     diffFilter = delta --color-only
 [delta]
     navigate = true    # use n and N to move between diff sections
-    light = false
+# Colors for delta. Must follow the [delta] block above: git config is
+# last-one-wins, and this sets dark/light per theme.
+[include]
+    path = ~/.config/themes/current/delta.gitconfig
 [alias]
   add-fzf = "!f(){ git add $(git ls-files --modified --others --exclude-standard | fzf -m --preview 'git diff --color=always {} | delta');}; f"
   alias = "!git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /"

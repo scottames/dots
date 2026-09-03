@@ -1,0 +1,100 @@
+k9s:
+  body:
+    fgColor: "{{ .fg }}"
+    bgColor: "{{ .bg }}"
+    logoColor: "{{ .accent }}"
+  prompt:
+    fgColor: "{{ .fg }}"
+    bgColor: "{{ .bg_float }}"
+    suggestColor: "{{ .blue }}"
+  help:
+    fgColor: "{{ .fg }}"
+    bgColor: "{{ .bg }}"
+    sectionColor: "{{ .green }}"
+    keyColor: "{{ .blue }}"
+    numKeyColor: "{{ .orange }}"
+  frame:
+    title:
+      fgColor: "{{ .cyan }}"
+      bgColor: "{{ .bg }}"
+      highlightColor: "{{ .pink }}"
+      counterColor: "{{ .yellow }}"
+      filterColor: "{{ .green }}"
+    border:
+      fgColor: "{{ .accent }}"
+      focusColor: "{{ .blue }}"
+    menu:
+      fgColor: "{{ .fg }}"
+      keyColor: "{{ .blue }}"
+      numKeyColor: "{{ .orange }}"
+    crumbs:
+      fgColor: "{{ .bg }}"
+      bgColor: "{{ .orange }}"
+      activeColor: "{{ .pink }}"
+    status:
+      newColor: "{{ .blue }}"
+      modifyColor: "{{ .accent }}"
+      addColor: "{{ .green }}"
+      pendingColor: "{{ .orange }}"
+      errorColor: "{{ .red }}"
+      highlightColor: "{{ .cyan }}"
+      killColor: "{{ .accent }}"
+      completedColor: "{{ .muted }}"
+  info:
+    fgColor: "{{ .orange }}"
+    sectionColor: "{{ .fg }}"
+  views:
+    table:
+      fgColor: "{{ .fg }}"
+      bgColor: "{{ .bg }}"
+      cursorFgColor: "{{ .bg_alt }}"
+      cursorBgColor: "{{ .selection }}"
+      markColor: "{{ .pink }}"
+      header:
+        fgColor: "{{ .yellow }}"
+        bgColor: "{{ .bg }}"
+        sorterColor: "{{ .cyan }}"
+    xray:
+      fgColor: "{{ .fg }}"
+      bgColor: "{{ .bg }}"
+      cursorColor: "{{ .selection }}"
+      cursorTextColor: "{{ .bg }}"
+      graphicColor: "{{ .pink }}"
+    charts:
+      bgColor: "{{ .bg }}"
+      chartBgColor: "{{ .bg }}"
+      dialBgColor: "{{ .bg }}"
+      defaultDialColors:
+        - "{{ .green }}"
+        - "{{ .red }}"
+      defaultChartColors:
+        - "{{ .green }}"
+        - "{{ .red }}"
+      resourceColors:
+        cpu:
+          - "{{ .accent }}"
+          - "{{ .blue }}"
+        mem:
+          - "{{ .yellow }}"
+          - "{{ .orange }}"
+    yaml:
+      keyColor: "{{ .blue }}"
+      valueColor: "{{ .fg }}"
+      colonColor: "{{ .muted }}"
+    logs:
+      fgColor: "{{ .fg }}"
+      bgColor: "{{ .bg }}"
+      indicator:
+        fgColor: "{{ .accent }}"
+        bgColor: "{{ .bg }}"
+        toggleOnColor: "{{ .green }}"
+        toggleOffColor: "{{ .muted }}"
+  dialog:
+    fgColor: "{{ .yellow }}"
+    bgColor: "{{ .bg_alt }}"
+    buttonFgColor: "{{ .bg }}"
+    buttonBgColor: "{{ .muted }}"
+    buttonFocusFgColor: "{{ .bg }}"
+    buttonFocusBgColor: "{{ .pink }}"
+    labelFgColor: "{{ .pink }}"
+    fieldFgColor: "{{ .fg }}"

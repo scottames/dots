@@ -1,14 +1,4 @@
 return {
-  -- lazy
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = function()
-        require("catppuccin").load() -- force catppuccin to load
-      end,
-    },
-  },
-
   { -- https://github.com/MeanderingProgrammer/markdown.nvim
     "MeanderingProgrammer/markdown.nvim",
     name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim

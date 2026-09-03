@@ -2,11 +2,5 @@ default-timeout=5000
 font={{ .desktop.fonts.monospace }} 12
 anchor=top-center
 
-# https://github.com/catppuccin/mako
-background-color=#1e1e2e
-border-color=#cba6f7
-progress-color=over #313244
-text-color=#cdd6f4
-
-[urgency=high]
-border-color=#fab387
+# mako only accepts absolute or ~/ include paths.
+include={{ .chezmoi.homeDir }}/.config/themes/current/mako.ini

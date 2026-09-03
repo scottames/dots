@@ -1,0 +1,16 @@
+
+# Appended to ~/.config/starship.base.toml by theme-set. Structure lives there;
+# this supplies only the palette it selects with `palette = "current"`.
+[palettes.current]
+bg = "{{ .bg }}"
+bg_alt = "{{ .bg_alt }}"
+fg = "{{ .fg }}"
+muted = "{{ .muted }}"
+accent = "{{ .accent }}"
+green = "{{ .green }}"
+cyan = "{{ .cyan }}"
+orange = "{{ .orange }}"
+yellow = "{{ .yellow }}"
+pink = "{{ .pink }}"
+blue = "{{ .blue }}"
+red = "{{ .red }}"

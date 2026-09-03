@@ -1,0 +1,31 @@
+[colors.primary]
+background = "{{ .bg }}"
+foreground = "{{ .fg }}"
+
+# Straight from the theme's ANSI block so this matches ghostty slot for slot.
+[colors.normal]
+black = "{{ .ansi.black }}"
+red = "{{ .ansi.red }}"
+green = "{{ .ansi.green }}"
+yellow = "{{ .ansi.yellow }}"
+blue = "{{ .ansi.blue }}"
+magenta = "{{ .ansi.magenta }}"
+cyan = "{{ .ansi.cyan }}"
+white = "{{ .ansi.white }}"
+
+[colors.bright]
+black = "{{ .ansi.bright_black }}"
+red = "{{ .ansi.bright_red }}"
+green = "{{ .ansi.bright_green }}"
+yellow = "{{ .ansi.bright_yellow }}"
+blue = "{{ .ansi.bright_blue }}"
+magenta = "{{ .ansi.bright_magenta }}"
+cyan = "{{ .ansi.bright_cyan }}"
+white = "{{ .ansi.bright_white }}"
+
+[colors.cursor]
+cursor = "{{ .accent }}"
+
+[colors.selection]
+background = "{{ .selection }}"
+text = "CellForeground"

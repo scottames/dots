@@ -6,7 +6,7 @@ env = SHELL={{ lookPath "fish" }}
 font-family = FiraCode Nerd Font Mono
 font-size = 14
 gtk-titlebar = false
-theme = Catppuccin Mocha
+config-file = ?{{ .chezmoi.homeDir }}/.config/themes/current/ghostty.conf
 window-decoration = {{ not (eq .chezmoi.os "linux") }}
 
 keybind = ctrl+shift+arrow_right=unbind

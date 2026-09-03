@@ -1,0 +1,76 @@
+[meta]
+name = "current"
+description = "Active theme, written by chezmoi and re-pointed by theme-set"
+variant = "{{ .variant }}"
+
+[colors.core]
+accent = "{{ .accent }}"
+accent_foreground = "{{ .bg }}"
+background = "{{ .bg }}"
+foreground = "{{ .fg }}"
+secondary_background = "{{ .bg_alt }}"
+border = "{{ .border }}"
+
+[colors.main_window]
+border = "{{ .border }}"
+footer = { background = "colors.core.secondary_background" }
+
+[colors.settings_window]
+border = "{{ .border }}"
+
+[colors.accents]
+blue = "{{ .blue }}"
+green = "{{ .green }}"
+magenta = "{{ .pink }}"
+orange = "{{ .orange }}"
+red = "{{ .red }}"
+yellow = "{{ .yellow }}"
+cyan = "{{ .cyan }}"
+purple = "{{ .accent }}"
+
+[colors.shortcut]
+border = "colors.core.border"
+
+[colors.text]
+default = "colors.core.foreground"
+muted = "{{ .muted }}"
+danger = "{{ .red }}"
+success = "{{ .green }}"
+placeholder = "{{ .fg_dim }}"
+selection = { background = "{{ .selection }}", foreground = "{{ .fg }}" }
+
+[colors.text.links]
+default = "{{ .blue }}"
+visited = "{{ .pink }}"
+
+[colors.input]
+border = "{{ .border }}"
+border_focus = "{{ .accent }}"
+border_error = "{{ .red }}"
+
+[colors.button.primary]
+background = "{{ .bg_alt }}"
+foreground = "{{ .fg }}"
+focus = { outline = "colors.core.accent" }
+
+[colors.list.item.hover]
+foreground = "{{ .fg }}"
+secondary_foreground = "{{ .fg }}"
+
+[colors.list.item.selection]
+background = "{{ .selection }}"
+foreground = "{{ .fg }}"
+secondary_background = "{{ .selection }}"
+secondary_foreground = "{{ .fg }}"
+
+[colors.grid.item]
+background = "{{ .bg_alt }}"
+hover = { outline = "{{ .accent }}" }
+selection = { outline = "{{ .accent }}" }
+
+[colors.scrollbars]
+background = "{{ .border }}"
+
+[colors.loading]
+bar = "{{ .accent }}"
+spinner = "{{ .fg }}"

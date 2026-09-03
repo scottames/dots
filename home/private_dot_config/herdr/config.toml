@@ -4,7 +4,8 @@ onboarding = false
 default_shell = "fish"
 
 [theme]
-name = "catppuccin"
+name = "terminal"
+auto_switch = false
 
 [keys]
 help = "prefix+?"

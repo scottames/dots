@@ -2,7 +2,10 @@
 # https://github.com/borghei/ink
 
 # Color theme: dark, light, dracula, catppuccin, nord, tokyo-night, gruvbox, solarized
-theme = "catppuccin"
+#
+# Fixed enum, no custom themes — ink cannot follow theme-set. dracula is the
+# closest standing in for Aura: dark violet ground, purple accent, mint, pink.
+theme = "dracula"
 
 # Max rendering width in columns (or use --width on the CLI)
 # width = 90

@@ -1,0 +1,50 @@
+# Flat schema per docs/CONFIG.md; every color key is required.
+panel_bg = "{{ .bg }}"
+bg_highlight = "{{ .selection }}"
+fg_primary = "{{ .fg }}"
+fg_secondary = "{{ .muted }}"
+fg_dim = "{{ .fg_dim }}"
+
+diff_add = "{{ .green }}"
+diff_add_bg = "{{ .diff_add_bg }}"
+diff_del = "{{ .red }}"
+diff_del_bg = "{{ .diff_del_bg }}"
+diff_context = "{{ .fg }}"
+diff_hunk_header = "{{ .blue }}"
+expanded_context_fg = "{{ .fg_dim }}"
+
+syntax_add_bg = "{{ .diff_add_emph_bg }}"
+syntax_del_bg = "{{ .diff_del_emph_bg }}"
+
+file_added = "{{ .green }}"
+file_modified = "{{ .yellow }}"
+file_deleted = "{{ .red }}"
+file_renamed = "{{ .accent }}"
+
+reviewed = "{{ .green }}"
+pending = "{{ .yellow }}"
+
+comment_note = "{{ .blue }}"
+comment_suggestion = "{{ .cyan }}"
+comment_issue = "{{ .red }}"
+comment_praise = "{{ .green }}"
+
+border_focused = "{{ .accent }}"
+border_unfocused = "{{ .border }}"
+status_bar_bg = "{{ .bg_alt }}"
+cursor_color = "{{ .yellow }}"
+cursor_line_bg = "{{ .selection }}"
+branch_name = "{{ .pink }}"
+help_indicator = "{{ .muted }}"
+
+message_info_fg = "{{ .bg }}"
+message_info_bg = "{{ .blue }}"
+message_warning_fg = "{{ .bg }}"
+message_warning_bg = "{{ .yellow }}"
+message_error_fg = "{{ .bg }}"
+message_error_bg = "{{ .red }}"
+update_badge_fg = "{{ .bg }}"
+update_badge_bg = "{{ .yellow }}"
+
+mode_fg = "{{ .bg }}"
+mode_bg = "{{ .accent }}"

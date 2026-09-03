@@ -1,0 +1,4 @@
+# Sourced by ~/.setenv. Uses fish's csh-compat `setenv`, like its caller.
+setenv BAT_THEME "{{ .bat }}"
+setenv BUBBLETINT_THEME "{{ .bubbletint }}"
+setenv ENHANCE_THEME "$BUBBLETINT_THEME"

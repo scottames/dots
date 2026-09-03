@@ -13,7 +13,8 @@ default_layout "default"
 pane_frames true
 simplified_ui false
 theme_dir "{{ .chezmoi.homeDir }}/.config/zellij/themes"
-theme "catppuccin-mocha"
+// `current` is a symlink re-pointed by theme-set; the name never changes.
+theme "current"
 
 ui {
     pane_frames {

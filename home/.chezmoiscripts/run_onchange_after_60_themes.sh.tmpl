@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# Renders every theme in .chezmoidata/themes.toml into ~/.config/themes/<name>/
+# from the partials in .chezmoitemplates/theme/.
+#
+# chezmoi is one-source-one-target, so N themes x M apps cannot come from M
+# templates — this script loops instead. run_onchange_ hashes the *rendered*
+# script, so editing a palette value or a partial re-runs exactly this and
+# nothing else.
+
+magenta='\033[0;35m'
+yellow='\033[0;33m'
+clear='\033[0m'
+info() { printf "${magenta}%s${clear}\n" "${@}"; }
+warn() { printf "${yellow}%s${clear}\n" "${@}"; }
+
+themes="${HOME}/.config/themes"
+
+{{ $files := dict
+  "alacritty.toml" "theme/alacritty.toml"
+  "atuin.toml"     "theme/atuin.toml"
+  "colors.css"     "theme/waybar.css"
+  "delta.gitconfig" "theme/delta.gitconfig"
+  "env"            "theme/env"
+  "fish.fish"      "theme/fish.fish"
+  "fuzzel.ini"     "theme/fuzzel.ini"
+  "gh-dash.yml"    "theme/gh-dash.yml"
+  "ghostty.conf"   "theme/ghostty.conf"
+  "hyprlock.conf"  "theme/hyprlock.conf"
+  "k9s.yaml"       "theme/k9s.yaml"
+  "lazygit.yml"    "theme/lazygit.yml"
+  "mako.ini"       "theme/mako.ini"
+  "niri.kdl"       "theme/niri.kdl"
+  "nvim.lua"       "theme/nvim.lua"
+  "pi.json"        "theme/pi.json"
+  "starship.toml"  "theme/starship.toml"
+  "television.toml" "theme/television.toml"
+  "tmux.conf"      "theme/tmux.conf"
+  "tuicr.toml"     "theme/tuicr.toml"
+  "vicinae.toml"   "theme/vicinae.toml"
+  "yazi.toml"      "theme/yazi.toml"
+  "zellij.kdl"     "theme/zellij.kdl"
+-}}
+
+{{ range $name, $t := .themes }}
+info "rendering theme: {{ $name }}"
+mkdir -p "${themes}/{{ $name }}"
+{{ range $out, $tpl := $files }}
+cat >"${themes}/{{ $name }}/{{ $out }}" <<'THEME_EOF'
+{{ includeTemplate $tpl $t }}
+THEME_EOF
+{{ end }}
+{{ end }}
+
+# Bootstrap the pointer. Never clobber a working one — it is the only mutable
+# state in the whole scheme, and re-pointing it is the user's call.
+if [[ ! -L ${themes}/current || ! -d ${themes}/current ]]; then
+  info "pointing themes/current at aura"
+  ln -sfn "${themes}/aura" "${themes}/current"
+fi
+
+# Re-run the switcher against whatever is already selected so the stable-name
+# symlinks and generated configs match the freshly rendered fragments.
+if [[ -x ${HOME}/.local/bin/theme-set ]]; then
+  # Plain `readlink`, not `readlink -f`: the latter is GNU only and this runs on
+  # darwin too. The pointer is always written with an absolute target, so the
+  # single hop is enough.
+  "${HOME}/.local/bin/theme-set" "$(basename "$(readlink "${themes}/current")")"
+else
+  warn "theme-set not found; skipping symlink and render steps"
+fi
+
+# vi: ft=bash

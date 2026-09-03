@@ -1,8 +1,10 @@
+@import "../themes/current/colors.css";
+
 window {
   font-family: monospace;
   font-size: 14pt;
-  color: #cdd6f4; /* text */
-  background-color: rgba(30, 30, 46, 0.5);
+  color: @fg;
+  background-color: alpha(@bg, 0.5);
 }
 
 button {
@@ -10,7 +12,7 @@ button {
   background-position: center;
   background-size: 25%;
   border: none;
-  background-color: rgba(30, 30, 46, 0);
+  background-color: transparent;
   margin: 5px;
   transition:
     box-shadow 0.2s ease-in-out,
@@ -18,12 +20,12 @@ button {
 }
 
 button:hover {
-  background-color: rgba(49, 50, 68, 0.1);
+  background-color: alpha(@bg_alt, 0.1);
 }
 
 button:focus {
-  background-color: #cba6f7;
-  color: #1e1e2e;
+  background-color: @accent;
+  color: @bg;
 }
 
 #lock {

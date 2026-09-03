@@ -105,4 +105,5 @@ on buffer open).
 - **Zellij**: Terminal multiplexer navigation via zellij-nav.nvim
 - **Obsidian**: Vault at `.obsidian/this/` with custom diagnostic suppression
 - **SSH**: OSC 52 clipboard support for remote sessions
-- **Catppuccin**: Default colorscheme
+- **Aura**: Default colorscheme (`aura-dark`); the plugin is a monorepo, so the
+  rtp is appended to `packages/neovim` in `lua/plugins/colorscheme.lua`

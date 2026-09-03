@@ -58,6 +58,13 @@ lint:
             - 0
   ignore:
     - linters:
+        - ALL
+      paths:
+        # chezmoi theme fragments: Go templates that happen to carry a .css /
+        # .toml / .yml suffix so the rendered output lands with the right one.
+        # They are not valid in those languages until rendered.
+        - home/.chezmoitemplates/theme/**
+    - linters:
         - shellcheck
         - shfmt
       paths:

@@ -1,0 +1,15 @@
+themes {
+    current {
+        fg "{{ .fg }}"
+        bg "{{ .bg_alt }}"
+        black "{{ .bg }}"
+        red "{{ .red }}"
+        green "{{ .green }}"
+        yellow "{{ .yellow }}"
+        blue "{{ .blue }}"
+        magenta "{{ .accent }}"
+        cyan "{{ .cyan }}"
+        white "{{ .fg }}"
+        orange "{{ .orange }}"
+    }
+}

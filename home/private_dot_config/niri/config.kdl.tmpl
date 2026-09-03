@@ -108,7 +108,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        off
+        // off
 
         // How many logical pixels the ring extends out from the windows.
         width 4
@@ -123,10 +123,8 @@ layout {
         // Color of the ring on inactive monitors.
         // inactive-color "#505050"
 
-        // catppuccin-mocha Sapphire
-        active-color "#74c7ec"
-        // catppuccin-mocha Surface2
-        inactive-color "#585b70"
+        // Colors come from the theme include at the bottom of this file.
+
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
         // The angle is the same as in linear-gradient, and is optional,
@@ -150,13 +148,7 @@ layout {
     //     // off
 
     //     width 2
-    //     // catppuccin-mocha Sapphire
-    //     // active-color "#74c7ec"
-    //     active-color "#cba6f7"
-    //     // catppuccin-mocha Surface2
-    //     inactive-color "#6c7086"
-    //     // active-color "#ffc87f"
-    //     // inactive-color "#505050"
+    //     // colors would come from the theme include at the bottom of this file
 
     //     // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
     //     // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -210,16 +202,6 @@ animations {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
 window-rule {
     default-column-width { proportion 0.33; }
 }
@@ -260,6 +242,12 @@ window-rule {
 
 // Rounded corners
 window-rule {
+    // Draw the focus ring as an outline *around* the window rather than as a
+    // solid rectangle behind it. Niri's default is the rectangle, because a
+    // client-side-decorated window can be any shape -- but it bleeds through
+    // semitransparent windows like ghostty, tinting the whole surface.
+    draw-border-with-background false
+
     focus-ring {}
 
     border {
@@ -549,3 +537,7 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+// Theme colors. Must stay last: niri merges duplicate top-level sections field
+// by field, and settings after an include win. optional=true needs niri 26.04+.
+include optional=true "{{ .chezmoi.homeDir }}/.config/themes/current/niri.kdl"

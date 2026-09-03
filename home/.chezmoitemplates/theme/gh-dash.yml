@@ -1,0 +1,24 @@
+# Appended to ~/.config/gh-dash/config.base.yml by theme-set. gh-dash has no
+# include mechanism and `theme:` cannot be split across files, so the handful of
+# non-color `ui:` keys ride along here.
+theme:
+  ui:
+    sectionsShowCount: true
+    table:
+      showSeparator: true
+      compact: false
+  colors:
+    text:
+      primary: "{{ .fg }}"
+      secondary: "{{ .accent }}"
+      inverted: "{{ .bg_dim }}"
+      faint: "{{ .muted }}"
+      warning: "{{ .yellow }}"
+      success: "{{ .green }}"
+      error: "{{ .red }}"
+    background:
+      selected: "{{ .selection }}"
+    border:
+      primary: "{{ .accent }}"
+      secondary: "{{ .border }}"
+      faint: "{{ .bg_alt }}"

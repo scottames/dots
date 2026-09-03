@@ -25,9 +25,10 @@ echo '
 🦇 ╚═════╝ ╚═╝  ╚═╝   ╚═╝
 '
 
-{{ if (stat (joinPath .chezmoi.homeDir ".config/bat/themes/Catppuccin Mocha.tmTheme" | sha256sum)) -}}
-# {{ include (joinPath .chezmoi.homeDir ".config/bat/themes/Catppuccin Mocha.tmTheme" | sha256sum) }}
-{{ end -}}
+# Rebuild whenever the vendored theme changes. Hashing the *source* rather than
+# the deployed copy means this fires on the same apply that installs it, not the
+# one after.
+# {{ include "private_dot_config/bat/themes/aura/aura-theme.tmTheme" | sha256sum }}
 
 if command -v bat; then
   print_info "rebuilding 🦇 bat cache"

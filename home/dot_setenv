@@ -27,10 +27,6 @@ setenv AQUA_PROGRESS_BAR           "true"
 setenv AQUA_ROOT_DIR               "$HOME/.local/share/aquaproj-aqua/bin"
 setenv AWS_PAGER                   ""
 setenv BASH_ENV                    "$HOME/.shell_env"
-$IS_LIGHT \
-  && setenv BAT_THEME              "Catppuccin Latte"
-$IS_DARK \
-  && setenv BAT_THEME              "Catppuccin Mocha"
 setenv BOB_BIN                     "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                    1
 setenv COMMAND_LABEL_SUBSTITUTIONS "nono-with-local-path=oc opencode=oc fish=󰈺 vim= nvim="
@@ -85,10 +81,14 @@ $HAS_BAT \
 $HAS_BAT \
   && setenv MANPAGER               "nvim +Man!"
 
-# bubbletint | https://lrstanley.github.io/bubbletint/
-setenv BUBBLETINT_THEME "catppuccin_mocha"
-# https://www.gh-dash.dev/companions/enhance/theme/
-setenv ENHANCE_THEME "$BUBBLETINT_THEME"
+# lazygit takes a comma-separated list; later files win, so the theme half is
+# layered over the repo-managed config.
+setenv LG_CONFIG_FILE "$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/themes/current/lazygit.yml"
+
+# Active theme: BAT_THEME, BUBBLETINT_THEME and ENHANCE_THEME.
+# Written by chezmoi, re-pointed by theme-set. See ~/.config/themes/.
+[ -f "$HOME/.config/themes/current/env" ] \
+  && . "$HOME/.config/themes/current/env"
 
 # handy unicode
 setenv TICK "✔"
