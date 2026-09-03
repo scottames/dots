@@ -1,5 +1,54 @@
 # Changelog
 
+## [0.52.0](https://github.com/scottames/dots/compare/v0.51.0...v0.52.0) (2026-09-03)
+
+
+### Updates & Misc Chores
+
+* **deps:** update ⬆️ agent extensions to v0.18.2 ([#1036](https://github.com/scottames/dots/issues/1036)) ([7b44360](https://github.com/scottames/dots/commit/7b4436000e2766c325d13ac9ba47b0c879154d11))
+* **deps:** update ⬆️ aqua-packages to v4.554.0 ([#1034](https://github.com/scottames/dots/issues/1034)) ([47f9b9b](https://github.com/scottames/dots/commit/47f9b9bc0cffbd12a71b616590e14ed50e973265))
+* **deps:** update ⬆️ aqua-packages to v4.555.0 ([#1041](https://github.com/scottames/dots/issues/1041)) ([2030de0](https://github.com/scottames/dots/commit/2030de0a9b55a497edd9103b9f1db8773d30c3b6))
+* **deps:** update ⬆️ github-actions to v2 ([#1038](https://github.com/scottames/dots/issues/1038)) ([39534fa](https://github.com/scottames/dots/commit/39534fa220085b43459570359df1cf42dc53d0cb))
+* **deps:** update ⬆️ github-actions to v4.2.5 ([#1037](https://github.com/scottames/dots/issues/1037)) ([670907c](https://github.com/scottames/dots/commit/670907c904a4583000edc01bf80ba2636687b7e3))
+* **deps:** update ⬆️ mise-packages ([#1033](https://github.com/scottames/dots/issues/1033)) ([456f480](https://github.com/scottames/dots/commit/456f480e67f45f63a4c595718005aeb6d575acbf))
+* **deps:** update ⬆️ mise-packages ([#1039](https://github.com/scottames/dots/issues/1039)) ([ee5783a](https://github.com/scottames/dots/commit/ee5783a1bcd4bbe446f41912ea04d208a3bd6cbb))
+* **deps:** update ⬆️ mise-packages ([#1040](https://github.com/scottames/dots/issues/1040)) ([f3f078c](https://github.com/scottames/dots/commit/f3f078cf030d75143b5ae9e6b8d3f0cf7de07868))
+* **deps:** update ⬆️ mise-packages ([#1042](https://github.com/scottames/dots/issues/1042)) ([28f7af1](https://github.com/scottames/dots/commit/28f7af1ac179b06cbb51bde5ffdc621afe850b31))
+* **deps:** update ⬆️ mise-packages ([#1043](https://github.com/scottames/dots/issues/1043)) ([7dd3241](https://github.com/scottames/dots/commit/7dd32414d0b51016f2ad62e1ff7b99f7bf354451))
+* **deps:** update ⬆️ mise-packages ([#1045](https://github.com/scottames/dots/issues/1045)) ([d855e64](https://github.com/scottames/dots/commit/d855e64218f1c47f603f7e7f75a860021036f7c3))
+* **deps:** update ⬆️ mise-packages ([#1047](https://github.com/scottames/dots/issues/1047)) ([c3e8abe](https://github.com/scottames/dots/commit/c3e8abe9cce8bd96bb725cec3b0f1c73c41a62ba))
+* **deps:** update ⬆️ mise-packages to v9 ([#1044](https://github.com/scottames/dots/issues/1044)) ([60b7a06](https://github.com/scottames/dots/commit/60b7a06805e5a65ff62f892a8061ba77b02223b8))
+* **herdr:** explicitly define shell ([320a6ec](https://github.com/scottames/dots/commit/320a6ec8909ed2524a12c7eb2bb8740ffb7ecd90))
+* **mise:** add syft bin ([0a2cb19](https://github.com/scottames/dots/commit/0a2cb197dcaea422b61bf767c4e30774b2083bae))
+* **nono:** add ~/.local/share/gh read ([25e2712](https://github.com/scottames/dots/commit/25e2712e472858cfd43612f28ebecd046e9e33cc))
+* **nono:** add yamllint config path ([9a71d9e](https://github.com/scottames/dots/commit/9a71d9ec68ef6b30e0bc482d77a6438cf099e378))
+* **nono:** allow mise state to run/update mise config ([99cd7be](https://github.com/scottames/dots/commit/99cd7be5dd588c89ab883be2920438016b5c3321))
+* upgrade trunk ([#1035](https://github.com/scottames/dots/issues/1035)) ([0eab6da](https://github.com/scottames/dots/commit/0eab6daf63f50f71f439e6e37c6d1c944d7f3c8e))
+* **voxtype:** add duck media config for 1.0 release ([3d6ff83](https://github.com/scottames/dots/commit/3d6ff831708ccc48b5023280d2a31843085fa8f9))
+
+
+### Features
+
+* **agents:** add ctx7 CLI skill ([ea76e81](https://github.com/scottames/dots/commit/ea76e8125747f98f4034225dad41e0615f1320a7))
+* **droid:** track ~/.factory/settings.json ([fc230b5](https://github.com/scottames/dots/commit/fc230b54a6f6569667ab3c6389311efac4396128))
+* **git:** add Field Office workstation profile ([#1046](https://github.com/scottames/dots/issues/1046)) ([7ec8062](https://github.com/scottames/dots/commit/7ec806271b0c1de8915679f9f99a9f955d8d4ae7))
+* **mise:** add `ctx7` CLI ([130fe18](https://github.com/scottames/dots/commit/130fe18c93f090fcd2175665ca7aed72986f1656))
+* **mise:** add checksum-verified Droid ([1f7907c](https://github.com/scottames/dots/commit/1f7907cc06e5817f52bc16c0cc2f5e69b83b9193))
+* **nono:** add droid-local profile ([67ead60](https://github.com/scottames/dots/commit/67ead600dc65abb25c29a64086b1ccdaac321ec7))
+* **themes:** runtime theme switcher with aura and catppuccin-mocha ([00007ed](https://github.com/scottames/dots/commit/00007ed606bd1f8f8d90887c43944c4e45d9e8fc))
+
+
+### Bug Fixes
+
+* **nono:** grant AGENTS.md symlink target in local profiles ([4559c6a](https://github.com/scottames/dots/commit/4559c6a14a171c500f06fe6955916c2dd68706df))
+* **pi:** configure Starship footer ([85587bc](https://github.com/scottames/dots/commit/85587bcc4d242beb65f4ce100232adac47103c8a))
+
+
+### Code Refactoring
+
+* **mise:** move npm package_manager from bun to aube ([5fa82f3](https://github.com/scottames/dots/commit/5fa82f3816af4dbb8d98b1304cf0c5897c038e17))
+* **opencode:** rm context7 mcp in favor of cli/skill ([9ff06fb](https://github.com/scottames/dots/commit/9ff06fb4511696e83fe39348ecfd349ac0184fdf))
+
 ## [0.51.0](https://github.com/scottames/dots/compare/v0.50.0...v0.51.0) (2026-08-26)
 
 
