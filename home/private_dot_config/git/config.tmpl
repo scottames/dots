@@ -35,9 +35,9 @@
 	forceSignAnnotated = false
 	gpgSign = true
 [gpg]
-{{ if eq .me.git.signing_format "openpgp" -}}
+{{- if eq .me.git.signing_format "openpgp" }}
 	program = gpg
-{{ end -}}
+{{- end }}
 	format = {{ .me.git.signing_format }}
 [init]
 	defaultBranch = main
