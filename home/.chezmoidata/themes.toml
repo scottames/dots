@@ -23,6 +23,12 @@ variant = "dark"
 bat = "aura-theme" # packages/sublime-text/aura-theme.tmTheme
 ghostty = "Aura"   # bundled with ghostty (resources)
 nvim = "aura-dark" # packages/neovim/colors/aura-dark.lua
+# herdr has no Aura port, so the palette is supplied inline via [theme.custom].
+# The name below is only a substrate: with all 19 tokens set, swapping it for
+# `gruvbox-light` renders byte-identical output, so it is inert in practice.
+# Pinned dark anyway, for whatever surface the overlay does not reach.
+herdr = "catppuccin"
+herdr_custom = true
 # bubbletint's registry has no Aura tint and takes no custom ones, so this is
 # a fixed approximation that does not follow theme-set. dracula is the
 # nearest: dark violet ground, purple accent, mint green, hot pink.
@@ -98,6 +104,11 @@ bat = "Catppuccin Mocha"        # bundled with bat 0.26+
 ghostty = "Catppuccin Mocha"    # bundled with ghostty (resources)
 nvim = "catppuccin-mocha"
 bubbletint = "catppuccin_mocha"
+# herdr's "catppuccin" IS mocha; latte is a separate built-in. A genuine port,
+# so no [theme.custom] colors -- restating them measurably degrades it: our
+# `overlay0` approximation replaces herdr's #6c7086 with the darker #585b70.
+herdr = "catppuccin"
+herdr_custom = false
 
 # surfaces
 bg = "#1e1e2e"        # base

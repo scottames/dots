@@ -1,11 +1,17 @@
+#  ╭──────────────────────────────────────────────────────────╮
+#  │ herdr                                                    │
+#  │ https://herdr.dev/docs/configuration/                    │
+#  │   [theme] comes from ~/.config/themes/current/herdr.toml │
+#  ╰──────────────────────────────────────────────────────────╯
+# theme-set concatenates this file and that fragment into config.toml, which is
+# therefore *not* chezmoi-managed. Edit this half, never the output.
+# herdr has no include mechanism, hence the concat; `herdr config check`
+# validates the result.
+
 onboarding = false
 
 [terminal]
 default_shell = "fish"
-
-[theme]
-name = "vesper"
-auto_switch = false
 
 [keys]
 help = "prefix+?"

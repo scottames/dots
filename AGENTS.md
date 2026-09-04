@@ -290,7 +290,8 @@ constrained palette, so richer palettes map *down* into it.
    - point the app at a theme *named* `current` and add a symlink to the table
      in `theme-set`
    - split the config into a `*.base.*` half plus a generated tail, and
-     concatenate in `theme-set` (last resort; only starship and gh-dash need it)
+     concatenate in `theme-set` (last resort; only starship, gh-dash and herdr
+     need it)
 
 **App config owns structure, theme fragment owns color.** Without that rule
 every theme ends up duplicating every stylesheet.

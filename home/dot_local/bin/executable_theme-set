@@ -113,6 +113,8 @@ render "${HOME}/.config/starship.base.toml" starship.toml \
 	"${HOME}/.config/starship.toml"
 render "${HOME}/.config/gh-dash/config.base.yml" gh-dash.yml \
 	"${HOME}/.config/gh-dash/config.yml"
+render "${HOME}/.config/herdr/config.base.toml" herdr.toml \
+	"${HOME}/.config/herdr/config.toml"
 
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ Reload                                                   │
@@ -130,6 +132,8 @@ pkill -SIGUSR2 waybar >/dev/null 2>&1 || true
 # ghostty reloads on SIGUSR2 *only* — any other signal crashes it. Needs >= 1.2.
 pkill -SIGUSR2 ghostty >/dev/null 2>&1 || true
 reload makoctl reload
+# herdr re-reads config.toml in place; panes are untouched.
+reload herdr server reload-config
 # alacritty does not watch imported files; touching the main config does it.
 if [[ -f ${HOME}/.config/alacritty/alacritty.toml ]]; then
 	touch "${HOME}/.config/alacritty/alacritty.toml"

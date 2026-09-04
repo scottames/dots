@@ -1,0 +1,49 @@
+# Appended to ~/.config/herdr/config.base.toml by theme-set. Structure lives
+# there; this supplies only the theme.
+#
+# herdr takes no theme files -- only a built-in name plus a [theme.custom]
+# overlay on top of it. So a theme goes one of two ways, per `herdr_custom` in
+# the contract:
+#
+#   port exists    -> name it, override nothing. Restating the colors
+#                     measurably degrades it, because the contract carries no
+#                     `overlay0`/`subtext0` and has to approximate them.
+#   no port        -> the overlay carries the whole palette, and `name` is then
+#                     inert: with all 19 tokens set, a light built-in renders
+#                     byte-identical output.
+#
+# `panel_bg` is orthogonal to both and always set: it is a transparency
+# preference, not a color. Verify edits with `herdr config check` -- it names
+# unknown keys and rejects unknown theme names.
+[theme]
+name = "{{ .herdr }}"
+auto_switch = false
+
+[theme.custom]
+# Leave the pane area unpainted so the terminal's own background shows through.
+# herdr paints an opaque panel otherwise.
+panel_bg = "reset"
+{{ if .herdr_custom }}
+# No upstream port: every token below comes from the contract. The set is
+# catppuccin-shaped, so `mauve`/`teal`/`peach` take `accent`/`cyan`/`orange`.
+# `overlay0` and `subtext0` have no source and collapse onto `fg_dim`/`muted` --
+# the contract is shaped to Aura, which genuinely has two grays.
+sidebar_bg = "{{ .bg_float }}"
+active_row_bg = "{{ .bg }}"
+selection_bg = "{{ .bg_alt }}"
+surface0 = "{{ .bg_alt }}"
+surface1 = "{{ .selection }}"
+surface_dim = "{{ .bg_dim }}"
+overlay0 = "{{ .fg_dim }}"
+overlay1 = "{{ .muted }}"
+text = "{{ .fg }}"
+subtext0 = "{{ .muted }}"
+accent = "{{ .accent }}"
+mauve = "{{ .accent }}"
+green = "{{ .green }}"
+teal = "{{ .cyan }}"
+yellow = "{{ .yellow }}"
+peach = "{{ .orange }}"
+red = "{{ .red }}"
+blue = "{{ .blue }}"
+{{- end }}
