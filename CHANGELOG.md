@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.52.1](https://github.com/scottames/dots/compare/v0.52.0...v0.52.1) (2026-09-05)
+
+
+### Updates & Misc Chores
+
+* **deps:** update ⬆️ aqua-packages to v4.558.0 ([#1054](https://github.com/scottames/dots/issues/1054)) ([91c2445](https://github.com/scottames/dots/commit/91c2445849b7e23a03f94f3aa507d9bd757a2055))
+* **deps:** update ⬆️ aqua-packages to v4.558.1 ([#1056](https://github.com/scottames/dots/issues/1056)) ([391c2ef](https://github.com/scottames/dots/commit/391c2efb01ad1c9057a6d2c8b3cc9d7a8819931d))
+* **deps:** update ⬆️ dagger to v0.21.9 ([#1050](https://github.com/scottames/dots/issues/1050)) ([8fe4ff6](https://github.com/scottames/dots/commit/8fe4ff67d7b1f9e282dfe7c9df8dec2b2fbafb10))
+* **deps:** update ⬆️ mise-packages ([#1053](https://github.com/scottames/dots/issues/1053)) ([d76311f](https://github.com/scottames/dots/commit/d76311fa247281385fcbd43df30e30f923f0cc58))
+* **deps:** update ⬆️ mise-packages ([#1055](https://github.com/scottames/dots/issues/1055)) ([06381b7](https://github.com/scottames/dots/commit/06381b700aed9ff6dd6420aba7abcb149d4b8251))
+* **deps:** update github-actions ([#1052](https://github.com/scottames/dots/issues/1052)) ([45f41aa](https://github.com/scottames/dots/commit/45f41aa0f89d894a910abec051bbb9cbf1c3faab))
+* upgrade trunk ([#1048](https://github.com/scottames/dots/issues/1048)) ([448a094](https://github.com/scottames/dots/commit/448a094efc79d368e37cf9423f69823d2d0eb227))
+
+
+### Bug Fixes
+
+* **git/config:** formatting ([2de44b6](https://github.com/scottames/dots/commit/2de44b6db4728ed47a3f4f131f3fb0d07182894b))
+
+
+### Styles
+
+* **herdr:** use vesper theme ([dba6fdd](https://github.com/scottames/dots/commit/dba6fddbeb9bd993092b0681fad810f14af237eb))
+* **theme:** fix herdr -&gt; aura ([caebf77](https://github.com/scottames/dots/commit/caebf77c7954d56ac60c5af91e3ea79d8a6e118a))
+
 ## [0.52.0](https://github.com/scottames/dots/compare/v0.51.0...v0.52.0) (2026-09-03)
 
 
