@@ -42,13 +42,13 @@ usage = "6.6.0"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.35.2"
+"aqua:vercel-labs/agent-browser" = "0.36.0"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.45.3"
 # magical shell history
 #   https://github.com/atuinsh/atuin
-"aqua:atuinsh/atuin" = "18.20.1"
+"aqua:atuinsh/atuin" = "18.21.0"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
 "github:aquaproj/aqua" = "v2.62.3"
@@ -63,13 +63,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.72.1"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.251"
+"github:anthropics/claude-code" = "v2.1.252"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.98.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.151.0"
+"aqua:openai/codex" = "rust-v0.152.0"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
 "npm:ctx7" = "0.5.9"
@@ -100,7 +100,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # A maintained, feature-rich and performance oriented, neofetch like
 # system information tool.
 #  https://github.com/fastfetch-cli/fastfetch
-"aqua:fastfetch-cli/fastfetch" = "2.67.1"
+"aqua:fastfetch-cli/fastfetch" = "2.68.1"
 # better find
 #   https://github.com/sharkdp/fd
 "aqua:sharkdp/fd" = "10.5.0"
@@ -202,7 +202,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.27.9"
+"github:backnotprop/plannotator" = "v0.27.10"
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
 "aqua:sethvargo/ratchet" = "0.12.0"
@@ -245,7 +245,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:max-sixty/worktrunk" = "v0.75.0"
 # Blazing fast terminal file manager
 #   https://github.com/sxyazi/yazi
-"aqua:sxyazi/yazi" = "26.8.15"
+"aqua:sxyazi/yazi" = "26.9.1"
 # a lightweight and portable command-line YAML, JSON and XML processor.
 #   https://github.com/mikefarah/yq
 "aqua:mikefarah/yq" = "4.53.6"
@@ -261,7 +261,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:aquasecurity/tfsec" = "1.28.14"
 "aqua:artempyanykh/marksman" = "2026-02-08"
 "aqua:astral-sh/ruff" = "0.16.5"
-"aqua:astral-sh/uv" = "0.12.7"
+"aqua:astral-sh/uv" = "0.12.8"
 "aqua:checkmake/checkmake" = "0.3.2"
 "aqua:crate-ci/typos" = "1.50.0"
 "aqua:dprint/dprint" = "0.57.0"
@@ -313,7 +313,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "0.209.1"
+version = "0.210.0"
 bin = "droid"
 
 [tools."http:droid".platforms]
