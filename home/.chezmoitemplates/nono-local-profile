@@ -69,6 +69,7 @@
 {{-   $allowPaths = append $allowPaths $p -}}
 {{- end -}}
 {{- $readPaths := list
+      "/etc/dnf"
       "/etc/fish"
       "/etc/mime.types"
       "/etc/pki/ca-trust"
