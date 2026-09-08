@@ -59,22 +59,23 @@ nix run .#install
 
 | project                                                     | description                                                                                                              |
 | :---------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| [aqua](https://aquaproj.github.io/)                         | declarative cli version manager                                                                                          |
 | [atuin](https://atuin.sh/)                                  | sync, search and backup shell history                                                                                    |
 | [chezmoi](https://www.chezmoi.io/)                          | manage your dotfiles across multiple diverse machines, securely                                                          |
 | [fish](https://fishshell.com/)                              | smart and user-friendly command line shell                                                                               |
 | [lazygit](https://github.com/jesseduffield/lazygit)         | simple terminal UI for git commands                                                                                      |
+| [monstar](https://github.com/rockorager/monstar)            | Wayland terminal emulator built on libghostty                                                                            |
 | [ghostty](https://ghostty.org/)                             | Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration. |
+| [herdr](https://herdr.dev/)                                 | terminal workspace manager for running and coordinating AI coding agents                                                 |
 | [just](https://just.systems/)                               | 🤖 Just a command runner                                                                                                 |
 | [intelli-shell](https://github.com/lasantosr/intelli-shell) | like IntelliSense, but for shells                                                                                        |
 | [lix](https://lix.systems/)                                 | a modern, implementation of the Nix package manager, focused on correctness, usability, and growth. (MacOS only)         |
+| [mise](https://mise.jdx.dev/)                               | development environment and tool version manager                                                                         |
 | [nix-darwin](https://github.com/nix-darwin/nix-darwin)      | nix modules for darwin                                                                                                   |
 | [neovim](https://neovim.io/)                                | hyperextensible Vim-based text editor                                                                                    |
 | [Niri](https://github.com/YaLTeR/niri)                      | a scrollable-tiling Wayland compositor.                                                                                  |
 | [starship](https://starship.rs/)                            | minimal, blazing-fast, and infinitely customizable prompt for any shell!                                                 |
 | [trunk.io](https://trunk.io/)                               | check, merge, and monitor your code                                                                                      |
 | [vicinae](https://docs.vicinae.com/)                        | a focused launcher for your desktop — native, fast, extensible                                                           |
-| [zellij](https://zellij.dev/)                               | terminal workspace with batteries included                                                                               |
 | [zen browser](https://zen-browser.app/)                     | welcome to a calmer internet                                                                                             |
 
 ## 🧪 Testing
