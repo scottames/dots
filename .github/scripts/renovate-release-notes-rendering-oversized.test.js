@@ -233,6 +233,62 @@ describe("createReleaseNotesSections oversized rendering", () => {
     }
   });
 
+  test("flattens nested details before splitting oversized release notes", () => {
+    const commits = Array.from(
+      { length: 100 },
+      (_, index) => `unique-commit-${index.toString().padStart(3, "0")}`,
+    );
+    const sections = createReleaseNotesSections(
+      [
+        collectionResult(
+          githubUpdate("siderolabs/talos", "1.14.0"),
+          "target-only-found",
+          [
+            renderedRelease(
+              "siderolabs/talos",
+              "1.14.0",
+              [
+                "### Changes",
+                "<details><summary>100 commits</summary>",
+                "<p>",
+                "",
+                ...commits.map((commit) => `* ${commit}`),
+                "",
+                "</p>",
+                "</details>",
+              ].join("\n"),
+            ),
+          ],
+        ),
+      ],
+      { maxSectionChars: 500 },
+    );
+    const packageSections = sections.filter((section) =>
+      section.startsWith("<details>\n<summary>siderolabs/talos"),
+    );
+
+    expect(packageSections.length).toBeGreaterThan(1);
+    expect(packageSections.every((section) => section.length <= 500)).toBe(
+      true,
+    );
+    expect(
+      packageSections.every(
+        (section) => (section.match(/<details\b/gi) ?? []).length === 1,
+      ),
+    ).toBe(true);
+    expect(
+      packageSections.every(
+        (section) => (section.match(/<\/details>/gi) ?? []).length === 1,
+      ),
+    ).toBe(true);
+    expect(sections.join("\n")).toContain("**100 commits**");
+    for (const commit of commits) {
+      expect(sections.join("\n").match(new RegExp(commit, "g"))).toHaveLength(
+        1,
+      );
+    }
+  });
+
   test("drops the inter-release separator when moving to a fresh block", () => {
     const update = {
       ...githubUpdate("o/r", "2"),

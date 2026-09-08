@@ -153,9 +153,20 @@ function renderReleaseMetadata(update, release) {
 }
 
 function releaseBody(release) {
-  return neutralizeMentions(
-    release.body || "No release notes body was provided by GitHub.",
+  return flattenDetails(
+    neutralizeMentions(
+      release.body || "No release notes body was provided by GitHub.",
+    ),
   );
+}
+
+function flattenDetails(body) {
+  return body
+    .replace(
+      /<summary\b[^>]*>([\s\S]*?)<\/summary\s*>/gi,
+      (_, summary) => `**${summary}**`,
+    )
+    .replace(/<\/?details\b[^>]*>/gi, "");
 }
 
 function splitReleaseBody(body, maxChars) {
