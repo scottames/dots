@@ -89,6 +89,7 @@ link() {
 
 link k9s.yaml "${HOME}/.config/k9s/skins/current.yaml"
 link atuin.toml "${HOME}/.config/atuin/themes/current.toml"
+link monstar.conf "${HOME}/.config/monstar/themes/current"
 link zellij.kdl "${HOME}/.config/zellij/themes/current.kdl"
 link television.toml "${HOME}/.config/television/themes/current.toml"
 link tuicr.toml "${HOME}/.config/tuicr/themes/current.toml"
@@ -131,6 +132,8 @@ reload() {
 pkill -SIGUSR2 waybar >/dev/null 2>&1 || true
 # ghostty reloads on SIGUSR2 *only* — any other signal crashes it. Needs >= 1.2.
 pkill -SIGUSR2 ghostty >/dev/null 2>&1 || true
+# Monstar re-reads its named custom theme after SIGUSR1.
+pkill -SIGUSR1 monstar >/dev/null 2>&1 || true
 reload makoctl reload
 # herdr re-reads config.toml in place; panes are untouched.
 reload herdr server reload-config
