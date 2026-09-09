@@ -1,0 +1,21 @@
+---
+prSections:
+  - title: Personal / All
+    filters: >-
+      is:open
+      user:{{ .me.github.username }}
+  - title: Personal / Renovate
+    filters: >-
+      is:open
+      user:{{ .me.github.username }}
+      author:app/renovate
+keybindings:
+  issues:
+    - key: t
+      name: scope fixed at launch
+      command: "true"
+  prs:
+    - key: t
+      name: scope fixed at launch
+      command: "true"
+smartFilteringAtLaunch: false

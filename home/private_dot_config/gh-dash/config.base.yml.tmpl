@@ -78,9 +78,16 @@ defaults:
         hidden: true
   refetchIntervalMinutes: 30
 keybindings:
+  issues:
+    - key: t
+      name: scope fixed at launch
+      command: "true"
   prs:
     - key: E # https://www.gh-dash.dev/companions/enhance/dash-integration/
-      command: gh enhance -R {{.RepoName}} {{.PrNumber}}
+      command: gh enhance -R {{ "{{.RepoName}}" }} {{ "{{.PrNumber}}" }}
+    - key: t
+      name: scope fixed at launch
+      command: "true"
 repoPaths: {}
 pager:
   diff: ""

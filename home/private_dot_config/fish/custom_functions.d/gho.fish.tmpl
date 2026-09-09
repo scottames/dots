@@ -1,0 +1,25 @@
+#!/usr/bin/env fish
+
+function gho --description "Open gh-dash with sections for the current source tree"
+    set -l config_home "$XDG_CONFIG_HOME"
+    if test -z "$config_home"
+        set config_home "$HOME/.config"
+    end
+
+    set -l current_dir (path resolve "$PWD")
+    set -l personal_root "{{ .home.src_github_dir }}"
+    set -l dash_config "$config_home/gh-dash/central.yml"
+
+    if test "$current_dir" = "$personal_root"; or string match -q -- "$personal_root/*" "$current_dir"
+        set dash_config "$config_home/gh-dash/personal.yml"
+{{ if hasKey . "work" }}
+    else
+        set -l work_root "{{ .work.src_dir }}"
+        if test "$current_dir" = "$work_root"; or string match -q -- "$work_root/*" "$current_dir"
+            set dash_config "$config_home/gh-dash/work.yml"
+        end
+{{ end }}
+    end
+
+    gh dash --config "$dash_config" $argv
+end

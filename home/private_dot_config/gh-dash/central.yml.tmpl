@@ -1,0 +1,34 @@
+---
+prSections:
+{{ if hasKey . "work" }}
+  - title: Work / Review Requested
+    filters: >-
+      is:open
+      org:{{ .work.org }}
+      review-requested:@me
+      draft:false
+  - title: Work / My PRs
+    filters: >-
+      is:open
+      org:{{ .work.org }}
+      author:@me
+{{ end }}
+  - title: Personal / All
+    filters: >-
+      is:open
+      user:{{ .me.github.username }}
+  - title: Personal / Renovate
+    filters: >-
+      is:open
+      user:{{ .me.github.username }}
+      author:app/renovate
+keybindings:
+  issues:
+    - key: t
+      name: scope fixed at launch
+      command: "true"
+  prs:
+    - key: t
+      name: scope fixed at launch
+      command: "true"
+smartFilteringAtLaunch: false

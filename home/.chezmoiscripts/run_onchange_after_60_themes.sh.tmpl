@@ -22,7 +22,8 @@ echo '
 # The base halves are managed separately, so include their hashes to also
 # re-render inline-palette configs when one changes.
 # starship.base.toml: {{ include "private_dot_config/starship.base.toml.tmpl" | sha256sum }}
-# gh-dash/config.base.yml: {{ include "private_dot_config/gh-dash/config.base.yml" | sha256sum }}
+# gh-dash/config.base.yml: {{ include "private_dot_config/gh-dash/config.base.yml.tmpl" | sha256sum }}
+# gh-dash/profile: {{ if hasKey . "work" }}{{ printf "%s/%s" .me.github.username .work.org | sha256sum }}{{ else }}{{ .me.github.username | sha256sum }}{{ end }}
 # herdr/config.base.toml: {{ include "private_dot_config/herdr/config.base.toml" | sha256sum }}
 
 magenta='\033[0;35m'
