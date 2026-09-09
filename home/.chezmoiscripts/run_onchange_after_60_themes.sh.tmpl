@@ -19,6 +19,11 @@ echo '
 # templates — this script loops instead. run_onchange_ hashes the *rendered*
 # script, so editing a palette value or a partial re-runs exactly this and
 # nothing else.
+# The base halves are managed separately, so include their hashes to also
+# re-render inline-palette configs when one changes.
+# starship.base.toml: {{ include "private_dot_config/starship.base.toml.tmpl" | sha256sum }}
+# gh-dash/config.base.yml: {{ include "private_dot_config/gh-dash/config.base.yml" | sha256sum }}
+# herdr/config.base.toml: {{ include "private_dot_config/herdr/config.base.toml" | sha256sum }}
 
 magenta='\033[0;35m'
 yellow='\033[0;33m'
