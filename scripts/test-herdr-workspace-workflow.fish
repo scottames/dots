@@ -361,6 +361,24 @@ set expected_log (string join \n \
     'tab rename w-test:1 fish')
 assert_eq "$command_log" "$expected_log" 'first pane restores tab label to shell after command lifecycle'
 
+set -gx COMMAND_LABEL_SUBSTITUTIONS 'bash= zsh='
+for shell in bash zsh
+    set -gx SHELL "/usr/bin/$shell"
+    printf '' >"$log_file"
+    __herdr_dynamic_title_preexec 'nvim README.md'
+    __herdr_dynamic_title_postexec
+    set command_log (string join \n (string trim -- (command cat "$log_file")))
+    set expected_log (string join \n \
+        'pane list' \
+        'pane report-metadata w-test-1 --source fish-command --title nvim --ttl-ms 300000' \
+        'tab rename w-test:1 nvim' \
+        'pane report-metadata w-test-1 --source fish-command --clear-title' \
+        'tab rename w-test:1 ')
+    assert_eq "$command_log" "$expected_log" "$shell first pane restores tab label to shell icon"
+end
+set -gx SHELL /usr/bin/fish
+set -e COMMAND_LABEL_SUBSTITUTIONS
+
 printf '%s\n' '{"result":{"panes":[{"pane_id":"w-test-1","tab_id":"w-test:1","workspace_id":"w-test","focused":false},{"pane_id":"w-test-2","tab_id":"w-test:1","workspace_id":"w-test","focused":true}]}}' >"$pane_list_file"
 printf '' >"$log_file"
 __herdr_dynamic_title_preexec 'git status --short'

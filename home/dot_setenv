@@ -29,7 +29,7 @@ setenv AWS_PAGER                   ""
 setenv BASH_ENV                    "$HOME/.shell_env"
 setenv BOB_BIN                     "$HOME/.local/share/bob/nvim-bin"
 setenv CLICOLOR                    1
-setenv COMMAND_LABEL_SUBSTITUTIONS "nono-with-local-path=oc opencode=oc fish=󰈺 vim= nvim="
+setenv COMMAND_LABEL_SUBSTITUTIONS "nono-with-local-path=oc opencode=oc fish=󰈺 bash= zsh= vim= nvim="
 setenv DISABLE_TELEMETRY           1
 setenv DBX_ASSEMBLE_DEFAULT        "$HOME/.config/distrobox/assemble.ini"
 setenv DBX_DEFAULT                 "f"
