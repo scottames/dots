@@ -5,11 +5,12 @@
 {{- $live := dict -}}
 {{- if .chezmoi.stdin }}{{ $live = fromJson .chezmoi.stdin }}{{ end -}}
 {{- $settings := dict
+      "hasSeenMissionOnboarding" true
       "logoAnimation" "off"
-       "nerdFont" true
-       "overrideTerminalColors" false
-       "theme" "auto"
-       "telemetry" (dict "enabled" false)
+      "nerdFont" true
+      "overrideTerminalColors" false
+      "telemetry" (dict "enabled" false)
+      "theme" "auto"
 -}}
 {{- $herdr := joinPath .chezmoi.homeDir ".factory/hooks/herdr-agent-state.sh" -}}
 {{- if stat $herdr -}}
