@@ -89,8 +89,7 @@ assert.equal(profile.extends, 'pi');
 assert.ok(profile.filesystem.read.includes(root));
 assert.ok(!profile.filesystem.allow.includes(root));
 assert.ok(profile.filesystem.read.includes('/proc'));
-assert.ok(profile.filesystem.read.includes(`${process.env.HOME_DIR}/.config/mise`));
-assert.ok(profile.filesystem.read_file.includes(`${process.env.HOME_DIR}/.config/agents/AGENTS.md`));
+assert.ok(profile.filesystem.read.includes(`${process.env.HOME_DIR}/.config`));
 assert.ok(profile.filesystem.allow.includes(`${process.env.HOME_DIR}/.npm`));
 assert.ok(profile.filesystem.allow.includes('/tmp/pi-$UID'));
 assert.ok(!profile.filesystem.allow.includes('/tmp'));
@@ -310,9 +309,9 @@ case "$1" in
     while IFS= read -r package; do
       mkdir -p "${prefix}/node_modules/${package}"
     done <"${PI_EXTENSION_PACKAGES_FILE}"
-    mkdir -p "${prefix}/node_modules/@narumitw/pi-starship/node_modules/@narumitw/pi-tui-kit" "${prefix}/node_modules/smol-toml" "${prefix}/node_modules/yaml"
+    mkdir -p "${prefix}/node_modules/@narumitw/pi-tui-kit" "${prefix}/node_modules/smol-toml" "${prefix}/node_modules/yaml"
     cat >"${prefix}/node_modules/@narumitw/pi-starship/package.json" <<'JSON'
-{"dependencies":{"@narumitw/pi-tui-kit":"^0.58.0","smol-toml":"^1.8.0","yaml":"^2.9.0"}}
+{"dependencies":{"@narumitw/pi-tui-kit":"^0.59.0","smol-toml":"^1.8.0","yaml":"^2.9.0"}}
 JSON
     mkdir -p "${prefix}/node_modules/@narumitw/pi-starship/dist/chunks"
     cat >"${prefix}/node_modules/@narumitw/pi-starship/dist/chunks/chunk-test.js" <<'JS'
@@ -338,7 +337,7 @@ PI_EXTENSION_PACKAGES_FILE="${package_list}" HOME="${fixture_home}" PATH="${stub
 for package in "${extension_packages[@]}"; do
 	[[ -d ${extensions_dir}/current/node_modules/${package} ]] || fail "current is missing ${package}"
 done
-for dependency in smol-toml yaml; do
+for dependency in @narumitw/pi-tui-kit smol-toml yaml; do
 	target_dependency="${extensions_dir}/current/node_modules/@narumitw/pi-starship/node_modules/${dependency}"
 	chunk_dependency="${extensions_dir}/current/node_modules/@narumitw/pi-starship/dist/chunks/node_modules/${dependency}"
 	[[ -d ${target_dependency} && ! -L ${target_dependency} ]] || fail "pi-starship is missing copied ${dependency}"
