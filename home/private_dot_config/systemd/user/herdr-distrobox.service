@@ -1,0 +1,21 @@
+[Unit]
+Description=Herdr default session inside running Distrobox f
+# Ordering only: starting Herdr must not start or assemble the container.
+After=distrobox-fedora-oneshot.service
+
+[Service]
+Type=exec
+WorkingDirectory=%h
+Environment="PATH=%h/.local/bin:%h/.local/share/mise/shims:/usr/local/bin:/usr/bin:/bin"
+Environment=SHELL=/usr/bin/fish
+Environment=XDG_CONFIG_HOME=%h/.config
+UnsetEnvironment=HERDR_SESSION HERDR_SOCKET_PATH HERDR_CLIENT_SOCKET_PATH
+ExecCondition=%h/.local/bin/herdr-distrobox-ready
+# Distrobox rewrites XDG paths; keep the server and host-side checks aligned.
+ExecStart=/usr/bin/distrobox enter --no-tty --name f -- /usr/bin/env XDG_CONFIG_HOME=${XDG_CONFIG_HOME} %h/.local/share/mise/shims/herdr server
+# Stop only this unit's processes, never whichever server owns the shared socket.
+KillMode=control-group
+Restart=no
+
+[Install]
+WantedBy=default.target

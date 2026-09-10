@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# ExecCondition: 1 skips startup; 255 reports a failed prerequisite check.
+containers=$(podman ps --filter 'name=^f$' --filter status=running --format '{{.Names}}') || exit 255
+if [[ ${containers} != f ]]; then
+	printf 'Skipping Herdr startup: Distrobox f is not running.\n'
+	exit 1
+fi
+
+shims="${HOME}/.local/share/mise/shims"
+status=$("${shims}/herdr" status server --json) || exit 255
+running=$("${shims}/jq" -r '.running' <<<"${status}") || exit 255
+case "${running}" in
+false) exit 0 ;;
+true)
+	printf 'Skipping Herdr startup: the default session already has a server.\n'
+	exit 1
+	;;
+*)
+	printf 'Unable to determine whether the default Herdr server is running.\n' >&2
+	exit 255
+	;;
+esac
