@@ -73,6 +73,7 @@ NODE
     target_dependency="${starship_dir}/node_modules/${dependency}"
     [[ -e ${target_dependency} ]] && continue
     [[ -d ${source_dependency} ]] || { printf 'Pi-starship dependency is missing after install: %s\n' "${dependency}" >&2; exit 1; }
+    mkdir -p "$(dirname "${target_dependency}")"
     cp -R "${source_dependency}" "${target_dependency}"
   done
 
