@@ -1,0 +1,21 @@
+{{ if eq .chezmoi.os "linux" -}}
+{{ $stores := dict
+  "raycast" "https://backend.raycast.com/api/v1/extensions"
+  "vicinae" "https://api.vicinae.com/v1/store"
+-}}
+
+# Cache by stable download endpoints, not the signed URLs they redirect to.
+{{ range $store, $extensions := .vicinae.extensions -}}
+{{ range $name, $owner := $extensions }}
+[".local/share/vicinae/extensions/store.{{ $store }}.{{ $name }}"]
+  type = "archive"
+  url = "{{ index $stores $store }}/{{ $owner }}/{{ $name }}/download"
+  format = "zip"
+  stripComponents = 1
+  exact = true
+  refreshPeriod = "168h"
+{{ end -}}
+{{ end -}}
+{{ end -}} # linux
+
+# vi: ft=toml
