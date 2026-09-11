@@ -101,6 +101,43 @@ type = "pane"
 command = "fish -lc 'herdr_wt_switch'"
 description = "switch/create worktree with wt and open in herdr"
 
+# Annotate is provisioned by chezmoi and mise without upstream install hooks.
+[[keys.command]]
+key = "prefix+a"
+type = "plugin_action"
+command = "annotate.capture"
+description = "annotate text"
+
+[[keys.command]]
+key = "prefix+shift+a"
+type = "plugin_action"
+command = "annotate.copy-context"
+description = "copy annotations as context"
+
+[[keys.command]]
+key = "prefix+ctrl+a"
+type = "plugin_action"
+command = "annotate.copy-archive"
+description = "copy annotations as context and archive"
+
+[[keys.command]]
+key = "prefix+m"
+type = "plugin_action"
+command = "annotate.manage"
+description = "manage annotations"
+
+[[keys.command]]
+key = "prefix+alt+a"
+type = "plugin_action"
+command = "annotate.open"
+description = "review documents in this folder"
+
+[[keys.command]]
+key = "prefix+alt+m"
+type = "plugin_action"
+command = "annotate.last"
+description = "review the agent's last reply"
+
 [ui]
 accent = "magenta"
 prompt_new_tab_name = false

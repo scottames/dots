@@ -145,6 +145,12 @@ amazon-ecr-credential-helper = "0.12.0"
 # agent multiplexer that lives in your terminal
 #   https://github.com/ogulcancelik/herdr
 "github:ogulcancelik/herdr" = "v0.9.0"
+# Native runtime for the hook-free Herdr Annotate plugin
+#   https://github.com/plannotator/herdr-annotate
+"github:plannotator/herdr-annotate" = { version = "rust-lite-v0.1.0", bin = "herdr-annotate", prerelease = true, os = [
+  "linux",
+  "macos",
+] }
 # Review-first terminal diff viewer for agentic coders
 #  https://github.com/modem-dev/hunk
 "github:modem-dev/hunk" = "v0.21.1"
@@ -203,6 +209,12 @@ amazon-ecr-credential-helper = "0.12.0"
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
 "github:backnotprop/plannotator" = "v0.27.12"
+# Document review runtime for the hook-free Herdr Annotate plugin
+#   https://github.com/plannotator/plannotator-tui
+"github:plannotator/plannotator-tui" = { version = "v0.8.0", bin = "plannotator-tui", os = [
+  "linux",
+  "macos",
+] }
 # a tool for securing CI/CD workflows with version pinning
 #  https://github.com/sethvargo/ratchet
 "aqua:sethvargo/ratchet" = "0.12.0"

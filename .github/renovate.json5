@@ -70,6 +70,18 @@
         '# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n\\[tools\\."http:droid"\\]\\nversion = "(?<currentValue>[^"]+)"',
       ],
     },
+    {
+      // Track annotated branch refs while keeping the source pinned to a full SHA.
+      customType: 'regex',
+      managerFilePatterns: [
+        '/^home/\\.chezmoiexternals/herdr\\.toml\\.tmpl$/',
+      ],
+      matchStrings: [
+        '(?:^|\\n)# renovate: datasource=git-refs depName=(?<depName>[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+) currentValue=(?<currentValue>\\S+)\\r?\\n\\{\\{ \\$[A-Za-z_][A-Za-z0-9_]* := "(?<currentDigest>[a-f0-9]{40})" -\\}\\}',
+      ],
+      datasourceTemplate: 'git-refs',
+      packageNameTemplate: 'https://github.com/{{{depName}}}',
+    },
   ],
   packageRules: [
     {
@@ -86,6 +98,34 @@
       commitMessageTopic: '⬆️ mise-packages',
       automerge: true,
       schedule: ["* 3-5 * * *"],
+    },
+    {
+      matchManagers: ['mise', 'custom.regex'],
+      matchDepNames: [
+        'github:plannotator/herdr-annotate',
+        'github:plannotator/plannotator-tui',
+        'plannotator/herdr-annotate',
+      ],
+      groupName: 'herdr plugins',
+      groupSlug: 'herdr-plugins',
+      commitMessageTopic: 'herdr plugins',
+      automerge: false,
+      separateMajorMinor: false,
+      schedule: ["* 3-5 * * *"],
+    },
+    {
+      // git-refs has no release timestamps; waive the inherited age gate only here.
+      matchManagers: ['custom.regex'],
+      matchDatasources: ['git-refs'],
+      matchDepNames: ['plannotator/herdr-annotate'],
+      minimumReleaseAge: '0 days',
+      minimumReleaseAgeBehaviour: 'timestamp-optional',
+    },
+    {
+      matchManagers: ['mise'],
+      matchDepNames: ['github:plannotator/herdr-annotate'],
+      versioning: 'regex:^rust-lite-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$',
+      ignoreUnstable: false,
     },
     {
       matchFileNames: ['aqua/**'],
