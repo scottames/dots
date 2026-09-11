@@ -30,8 +30,7 @@
     stripComponents = 1
     refreshPeriod = "168h"
 
-# renovate: datasource=github-releases depName=max-baz/yubikey-touch-detector
-{{ $yubikeyTouchDetectorVersion := "1.13.0" -}}
+{{ $yubikeyTouchDetectorVersion := .versions.yubikeyTouchDetectorVersion -}}
 
 [".local/share/yubikey-touch-detector-src"]
     type = "archive"

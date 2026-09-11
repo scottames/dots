@@ -1,0 +1,5 @@
+# Version pins shared by chezmoi templates.
+
+[versions]
+# renovate: datasource=github-releases depName=max-baz/yubikey-touch-detector
+yubikeyTouchDetectorVersion = "1.13.0"
