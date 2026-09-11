@@ -20,11 +20,11 @@
 {{- $thtsPrompt := joinPath .chezmoi.homeDir ".claude/hooks/thts-prompt-check.sh" -}}
 {{- $herdrAgentState := joinPath .chezmoi.homeDir ".claude/hooks/herdr-agent-state.sh" -}}
 {{- $sessionStart := list -}}
-{{- if stat $thtsStart -}}
-{{- $sessionStart = append $sessionStart (dict "hooks" (list (dict "command" $thtsStart "type" "command"))) -}}
-{{- end -}}
 {{- if stat $herdrAgentState -}}
 {{- $sessionStart = append $sessionStart (dict "hooks" (list (dict "command" (printf "bash '%s' session" $herdrAgentState) "timeout" 10 "type" "command")) "matcher" "*") -}}
+{{- end -}}
+{{- if stat $thtsStart -}}
+{{- $sessionStart = append $sessionStart (dict "hooks" (list (dict "command" $thtsStart "type" "command"))) -}}
 {{- end -}}
 {{- $userPromptSubmit := list -}}
 {{- if stat $thtsPrompt -}}
