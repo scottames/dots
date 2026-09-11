@@ -1,0 +1,43 @@
+{{- if or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin") -}}
+{{- $tools := (fromToml (include "../mise/config.toml")).tools -}}
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# Herdr registration follows HOME, not chezmoi's destination override.
+if [[ "{{ .chezmoi.destDir }}" != "{{ .chezmoi.homeDir }}" ]]; then
+  printf '%s\n' 'Herdr plugin registration requires the chezmoi destination to be HOME' >&2
+  exit 1
+fi
+
+# External source pins: {{ include ".chezmoiexternals/herdr.toml.tmpl" | sha256sum }}
+# Binary locks: {{ include "../mise/mise.lock" | sha256sum }}
+plugin_root="{{ .chezmoi.homeDir }}/.local/share/herdr-annotate"
+annotate_version="{{ (index $tools "github:plannotator/herdr-annotate").version }}"
+tui_version="{{ (index $tools "github:plannotator/plannotator-tui").version }}"
+herdr_version="{{ index $tools "github:ogulcancelik/herdr" }}"
+
+# Refuse an independently updated source/binary combination before changing links.
+if [[ "rust-lite-v$(<"${plugin_root}/herdr-annotate.version")" != "${annotate_version}" ||
+  "v$(<"${plugin_root}/plannotator-tui.version")" != "${tui_version}" ]]; then
+  printf '%s\n' 'Herdr Annotate source and mise binary pins do not match' >&2
+  exit 1
+fi
+
+# Resolve concrete pinned binaries, not shims influenced by the reviewed project's config.
+annotate_bin="$(mise which --tool "github:plannotator/herdr-annotate@${annotate_version}" herdr-annotate)"
+tui_bin="$(mise which --tool "github:plannotator/plannotator-tui@${tui_version}" plannotator-tui)"
+herdr_bin="$(mise which --tool "github:ogulcancelik/herdr@${herdr_version}" herdr)"
+for bin in "${annotate_bin}" "${tui_bin}" "${herdr_bin}"; do
+  if [[ ! -x ${bin} ]]; then
+    printf 'Missing mise binary: %s\n' "${bin}" >&2
+    exit 1
+  fi
+done
+
+mkdir -p "${plugin_root}/bin"
+ln -sfn "${annotate_bin}" "${plugin_root}/bin/herdr-annotate.exe"
+ln -sfn "${tui_bin}" "${plugin_root}/bin/plannotator-tui.exe"
+# Unlike plugin install, link registers the manifest without executing build hooks.
+"${herdr_bin}" plugin link "${plugin_root}"
+{{ end -}}
