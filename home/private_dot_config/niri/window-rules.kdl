@@ -1,8 +1,4 @@
 window-rule {
-    default-column-width { proportion 0.33; }
-}
-
-window-rule {
     match app-id="ghostty$"
     opacity 0.95
 }
