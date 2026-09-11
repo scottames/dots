@@ -24,6 +24,7 @@ warn() { printf '\033[0;33m%s\033[0m\n' "${1}" >&2; }
 {{ if and .host.is_field_office (eq .chezmoi.os "linux") -}}
 user="${USER:-$(id -un)}"
 key_path="${HOME}/.ssh/id_ed25519_git_signing"
+allowed_signers_path="${HOME}/.config/git/allowed_signers"
 key_created=false
 
 if [[ ! -e ${key_path} ]]; then
@@ -48,6 +49,12 @@ if [[ ${key_created} == true || ! -f ${key_path}.pub ]]; then
 fi
 
 chmod 644 "${key_path}.pub"
+
+info "Configuring Field Office Git signature verification..."
+mkdir -p "$(dirname "${allowed_signers_path}")"
+printf '%s ' "{{ .me.email }}" >"${allowed_signers_path}"
+cat "${key_path}.pub" >>"${allowed_signers_path}"
+chmod 644 "${allowed_signers_path}"
 
 if [[ ${key_created} == true ]]; then
   info "Register the public key with GitHub as a signing key:"

@@ -39,6 +39,10 @@
 	program = gpg
 {{- end }}
 	format = {{ .me.git.signing_format }}
+{{ if and .host.is_field_office (eq .chezmoi.os "linux") -}}
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+{{ end -}}
 [init]
 	defaultBranch = main
 [interactive]
