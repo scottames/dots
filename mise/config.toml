@@ -255,6 +255,9 @@ amazon-ecr-credential-helper = "0.12.0"
 # terminal workspace with batteries included
 #   https://github.com/zellij-org/zellij
 "aqua:zellij-org/zellij" = "0.45.1"
+# ZenNotes TUI
+#   https://github.com/ZenNotes/tui
+"github:ZenNotes/tui" = "0.1.0"
 
 # linters & de related
 "aqua:LuaLS/lua-language-server" = "3.19.1"
