@@ -15,7 +15,7 @@ src_dir="${HOME}/.local/share/yubikey-touch-detector-src"
 bin_dir="${HOME}/.local/bin"
 bin_path="${bin_dir}/yubikey-touch-detector"
 
-command -v go >/dev/null 2>&1 || err "yubikey-touch-detector ${yubikey_touch_detector_version}: go is not installed"
+mise exec -- go version >/dev/null 2>&1 || err "yubikey-touch-detector ${yubikey_touch_detector_version}: go is not installed through mise"
 command -v pkg-config >/dev/null 2>&1 || err "yubikey-touch-detector ${yubikey_touch_detector_version}: pkg-config is not installed"
 pkg-config --exists gpgme || err "yubikey-touch-detector ${yubikey_touch_detector_version}: gpgme development files are missing. On Fedora, install gpgme-devel."
 
@@ -23,7 +23,7 @@ pkg-config --exists gpgme || err "yubikey-touch-detector ${yubikey_touch_detecto
 
 mkdir -p "${bin_dir}"
 info "building yubikey-touch-detector ${yubikey_touch_detector_version}"
-go build -C "${src_dir}" -mod=vendor -o "${bin_path}" .
+mise exec -- go build -C "${src_dir}" -mod=vendor -o "${bin_path}" .
 
 if [[ -n "${XDG_RUNTIME_DIR:-}" ]] && command -v systemctl >/dev/null 2>&1; then
   systemctl --user daemon-reload || warn "failed to reload user systemd units"
