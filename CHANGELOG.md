@@ -1,5 +1,84 @@
 # Changelog
 
+## [0.53.0](https://github.com/scottames/dots/compare/v0.52.0...v0.53.0) (2026-09-11)
+
+
+### Updates & Misc Chores
+
+* **agents:** add note about attribution ([2841a4a](https://github.com/scottames/dots/commit/2841a4a86f1a5246c1f72ef307ff606a401684bb))
+* **claude:** settings/hooks alphabetic ([c265be5](https://github.com/scottames/dots/commit/c265be56c07fb8673d7161c4a5a0b741b3026b67))
+* **dagger:** develop ([348cce6](https://github.com/scottames/dots/commit/348cce66a171bb43ab7bd04b8628e42961d58c6a))
+* **deps:** update ⬆️ agent extensions ([#1051](https://github.com/scottames/dots/issues/1051)) ([cf2d588](https://github.com/scottames/dots/commit/cf2d5880b70356a2766e2868739b93a2c799d3c7))
+* **deps:** update ⬆️ aqua-packages to v4.558.0 ([#1054](https://github.com/scottames/dots/issues/1054)) ([91c2445](https://github.com/scottames/dots/commit/91c2445849b7e23a03f94f3aa507d9bd757a2055))
+* **deps:** update ⬆️ aqua-packages to v4.558.1 ([#1056](https://github.com/scottames/dots/issues/1056)) ([391c2ef](https://github.com/scottames/dots/commit/391c2efb01ad1c9057a6d2c8b3cc9d7a8819931d))
+* **deps:** update ⬆️ aqua-packages to v4.559.0 ([#1061](https://github.com/scottames/dots/issues/1061)) ([de7573a](https://github.com/scottames/dots/commit/de7573a274f0f2c8c507b50ebad3808366bccddf))
+* **deps:** update ⬆️ dagger to v0.21.9 ([#1050](https://github.com/scottames/dots/issues/1050)) ([8fe4ff6](https://github.com/scottames/dots/commit/8fe4ff67d7b1f9e282dfe7c9df8dec2b2fbafb10))
+* **deps:** update ⬆️ mise-packages ([#1053](https://github.com/scottames/dots/issues/1053)) ([d76311f](https://github.com/scottames/dots/commit/d76311fa247281385fcbd43df30e30f923f0cc58))
+* **deps:** update ⬆️ mise-packages ([#1055](https://github.com/scottames/dots/issues/1055)) ([06381b7](https://github.com/scottames/dots/commit/06381b700aed9ff6dd6420aba7abcb149d4b8251))
+* **deps:** update ⬆️ mise-packages ([#1057](https://github.com/scottames/dots/issues/1057)) ([5719760](https://github.com/scottames/dots/commit/57197606b3ed774744bd900c60c8430f0b712f90))
+* **deps:** update ⬆️ mise-packages ([#1058](https://github.com/scottames/dots/issues/1058)) ([3cb3a06](https://github.com/scottames/dots/commit/3cb3a065d7d7d479f24786a4adcde7fad4a3faf6))
+* **deps:** update ⬆️ mise-packages ([#1060](https://github.com/scottames/dots/issues/1060)) ([ac9c40b](https://github.com/scottames/dots/commit/ac9c40b6b94510ac41d0b86cbd0333d30e2908f9))
+* **deps:** update ⬆️ mise-packages to v4 ([#1059](https://github.com/scottames/dots/issues/1059)) ([bc2cc15](https://github.com/scottames/dots/commit/bc2cc15e13c67b76c2912965bf3700a9572acdc4))
+* **deps:** update github-actions ([#1052](https://github.com/scottames/dots/issues/1052)) ([45f41aa](https://github.com/scottames/dots/commit/45f41aa0f89d894a910abec051bbb9cbf1c3faab))
+* **droid:** has seen mission onboarding ([546d832](https://github.com/scottames/dots/commit/546d8327cfd5a5301c841e7cc701ace40d2e8c18))
+* **droid:** telemetry opt ([e4807e2](https://github.com/scottames/dots/commit/e4807e2136d8240dc01c27998a7eaf74a6a12db3))
+* **herdr:** tab naming, include bash/zsh as icons ([6237bbc](https://github.com/scottames/dots/commit/6237bbc998749149a8d0b45c4c4355a7cfe3a810))
+* **mise:** bump herdr v0.9.0 ([8fe046e](https://github.com/scottames/dots/commit/8fe046e459c089be04dc9ff0c5adfea7d3efc549))
+* **nono:** add everything needed for `chezmoi diff` to local profiles ([99ed7a5](https://github.com/scottames/dots/commit/99ed7a57daff80f04fc400f67db7a9f3c51ba9b9))
+* **nono:** add read /etc/containers ([b1fa0a3](https://github.com/scottames/dots/commit/b1fa0a3287a742c65c6dfcaf35d04b1b722442a7))
+* **nono:** expand scope (`.config`/`.local/share`) to simplify ([4e22410](https://github.com/scottames/dots/commit/4e224108fe6b5aea4e5846afaafd7c90a6d0892b))
+* **nvim:** lazy updates ([fbbef79](https://github.com/scottames/dots/commit/fbbef794060fbc685915dfa9cb5937d8c0ffbbf4))
+* **opencode:** rm tree plugin ([fc3b6ce](https://github.com/scottames/dots/commit/fc3b6ce1d0985ba6897fda1bdd1938a604d38c6a))
+* upgrade trunk ([#1048](https://github.com/scottames/dots/issues/1048)) ([448a094](https://github.com/scottames/dots/commit/448a094efc79d368e37cf9423f69823d2d0eb227))
+* upgrade trunk ([#1062](https://github.com/scottames/dots/issues/1062)) ([9877d20](https://github.com/scottames/dots/commit/9877d20552d93a2139352a5612d3a28b9c34923e))
+
+
+### Documentation
+
+* minor updates ([1c2e98e](https://github.com/scottames/dots/commit/1c2e98e37695232098af1fa40a919ad8c3159240))
+
+
+### Features
+
+* **agents:** add humanlayer package from .agents (show-me) ([244a26e](https://github.com/scottames/dots/commit/244a26ed672082cf4a8a6edd134e151703b7591e))
+* **fish:** shell completion for herdr wt switch helper ([e1355ae](https://github.com/scottames/dots/commit/e1355ae135b047d32ccde76a7e9c812df98f22da))
+* **gh-dash:** separate repository and owner dashboards ([7ed4dd5](https://github.com/scottames/dots/commit/7ed4dd51d517e3f9adf1dd96a5068d02e3f130b6))
+* **herdr:** add right tab bar status indicator ([5022b0c](https://github.com/scottames/dots/commit/5022b0c52bc7048d77a276a5609c4d9104fced0a))
+* **herdr:** systemd managed server ([b4bbdf6](https://github.com/scottames/dots/commit/b4bbdf62c794d7ec3d714a0136812dc96d7b8e8a))
+* **mise:** add zennotes tui ([81384d5](https://github.com/scottames/dots/commit/81384d5b33ebef02680f0d06c382bb49757aae52))
+* track monstar config ([e43f2c1](https://github.com/scottames/dots/commit/e43f2c18661f549d584c0f2c34b7d4215380d6d0))
+* **vicinae:** manage pulling extensions with chezmoi ([e3eb4d8](https://github.com/scottames/dots/commit/e3eb4d8d16121e1ea1f974ef9852a89422412850))
+
+
+### Bug Fixes
+
+* **agents/linear:** sync linear-cli bin/skill version ([d3a47a2](https://github.com/scottames/dots/commit/d3a47a2db645461d6b238df108b68356e13cc322))
+* **field-office:** add allowed signers for pub key ([6a33adb](https://github.com/scottames/dots/commit/6a33adba9e403a5c70d28342405afb5e52a06cfe))
+* **git/config:** formatting ([2de44b6](https://github.com/scottames/dots/commit/2de44b6db4728ed47a3f4f131f3fb0d07182894b))
+* **init:** run yubikey touch detector install through mise exec ([3e155ef](https://github.com/scottames/dots/commit/3e155ef15b684c873a92f6c02e1cf2f11dde6893))
+* **niri:** remove redundant window-rule ([204f20b](https://github.com/scottames/dots/commit/204f20bd92c10081e30177aac61fb10bf6fb3f90))
+* **niri:** vicinae/other key binds ([5402dd1](https://github.com/scottames/dots/commit/5402dd1142f431e5ccc8f5be08a6ab25dcfec416))
+* **nono:** add /etc/dnf ([b0a4f72](https://github.com/scottames/dots/commit/b0a4f72a9b072f1c7d8077bc43fdf8c2026d1a0a))
+* **nono:** add new themes dir read ([a4bcfef](https://github.com/scottames/dots/commit/a4bcfefd32f96dcffdd405472dc701e5fdc9a080))
+* **renovate:** flatten nested release note details ([6d8bd8b](https://github.com/scottames/dots/commit/6d8bd8b246f320fa92037b2433163a5df21952ac))
+* **themes:** include base configs in script for re-rendering ([acc5567](https://github.com/scottames/dots/commit/acc55671c271a1434f7c3133dd732df9b1fa8469))
+* **yubikey-touch-detector:** properly track version ([ba112a5](https://github.com/scottames/dots/commit/ba112a59343f0320878f97acb4cdc5ba4c760421))
+* **zennotes:** rm wrapper for `zn` bin from host in favor of tui ([12f6542](https://github.com/scottames/dots/commit/12f654264528da7817948f0731e0d0aa58de8505))
+
+
+### Code Refactoring
+
+* **chezmoi:** break out externals ([a467b05](https://github.com/scottames/dots/commit/a467b054f04c4d06a1e7b6cef5aeba208172cff3))
+* **chezmoi:** dry up external repos ([0ba56a1](https://github.com/scottames/dots/commit/0ba56a1259abf00390f208f849ba2d93833d2f02))
+* **niri:** break out config using includes ([d02b461](https://github.com/scottames/dots/commit/d02b461dab621c2638958916878d951bb23e5afd))
+
+
+### Styles
+
+* **herdr:** use vesper theme ([dba6fdd](https://github.com/scottames/dots/commit/dba6fddbeb9bd993092b0681fad810f14af237eb))
+* **starship:** {user,host}name ([01fe87b](https://github.com/scottames/dots/commit/01fe87be2e2ef51868ef2444aa800279747c57f6))
+* **theme:** fix herdr -&gt; aura ([caebf77](https://github.com/scottames/dots/commit/caebf77c7954d56ac60c5af91e3ea79d8a6e118a))
+
 ## [0.52.0](https://github.com/scottames/dots/compare/v0.51.0...v0.52.0) (2026-09-03)
 
 
