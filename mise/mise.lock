@@ -1146,17 +1146,7 @@ checksum = "sha256:90139c6ed52373c0acfc9deb2a07aa812e5184753afd4bc8252bf44eb4909
 url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-linux-amd64.tar.gz"
 url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952355"
 
-[tools."aqua:editorconfig-checker/editorconfig-checker"."platforms.linux-x64-baseline"]
-checksum = "sha256:90139c6ed52373c0acfc9deb2a07aa812e5184753afd4bc8252bf44eb4909155"
-url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952355"
-
 [tools."aqua:editorconfig-checker/editorconfig-checker"."platforms.linux-x64-musl"]
-checksum = "sha256:90139c6ed52373c0acfc9deb2a07aa812e5184753afd4bc8252bf44eb4909155"
-url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952355"
-
-[tools."aqua:editorconfig-checker/editorconfig-checker"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:90139c6ed52373c0acfc9deb2a07aa812e5184753afd4bc8252bf44eb4909155"
 url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-linux-amd64.tar.gz"
 url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952355"
@@ -1171,17 +1161,7 @@ checksum = "sha256:9ed547505176d7384e1fb861ecfdd13df8c15e37d4bbcc2bd40e52e81ab32
 url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-darwin-all.tar.gz"
 url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952367"
 
-[tools."aqua:editorconfig-checker/editorconfig-checker"."platforms.macos-x64-baseline"]
-checksum = "sha256:9ed547505176d7384e1fb861ecfdd13df8c15e37d4bbcc2bd40e52e81ab32176"
-url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-darwin-all.tar.gz"
-url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952367"
-
 [tools."aqua:editorconfig-checker/editorconfig-checker"."platforms.windows-x64"]
-checksum = "sha256:a5f1eb57b62a3499b920f6ddb1561c7f8b0276289ff0c4fefc03a5225d721c11"
-url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-windows-amd64.zip"
-url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952342"
-
-[tools."aqua:editorconfig-checker/editorconfig-checker"."platforms.windows-x64-baseline"]
 checksum = "sha256:a5f1eb57b62a3499b920f6ddb1561c7f8b0276289ff0c4fefc03a5225d721c11"
 url = "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/editorconfig-checker-windows-amd64.zip"
 url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checker/releases/assets/543952342"
@@ -3158,7 +3138,6 @@ checksum = "sha256:89cb081adb19e425b1dca6b16d912c349a43535ce88d8713050738c926361
 url = "https://github.com/aquaproj/aqua/releases/download/v2.62.3/aqua_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/aquaproj/aqua/releases/assets/498541913"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:aquaproj/aqua"."platforms.linux-x64-musl"]
 checksum = "sha256:89cb081adb19e425b1dca6b16d912c349a43535ce88d8713050738c9263618d0"
@@ -3206,7 +3185,6 @@ checksum = "sha256:479ba2717caa2da77e2e18b0a3d61f425747ce5fa687b24137842bd55574f
 url = "https://github.com/backnotprop/plannotator/releases/download/v0.27.12/plannotator-linux-x64"
 url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/542844001"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl"]
 checksum = "sha256:479ba2717caa2da77e2e18b0a3d61f425747ce5fa687b24137842bd55574f66d"
@@ -3374,7 +3352,6 @@ checksum = "sha256:9ed103934fab0f90d3341fdfc4a342785396d39f5621fc7313a62602ce2b5
 url = "https://github.com/github/gh-stack/releases/download/v0.1.1/linux-amd64"
 url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/541392055"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:github/gh-stack"."platforms.linux-x64-musl"]
 checksum = "sha256:9ed103934fab0f90d3341fdfc4a342785396d39f5621fc7313a62602ce2b5462"
@@ -3422,7 +3399,6 @@ checksum = "sha256:b29f4e3bdcf1a4758d9bfbf46eebb4e2d32eab76ceb05cacefa39379573df
 url = "https://github.com/janosmiko/lfk/releases/download/v0.18.8/lfk_0.18.8_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/545604245"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
 checksum = "sha256:b29f4e3bdcf1a4758d9bfbf46eebb4e2d32eab76ceb05cacefa39379573df8a0"
@@ -3545,7 +3521,6 @@ checksum = "sha256:c7d1e23ba4ffb6ca3330797e9f0c82dbada50e3cfe1b719f4194747f2cbca
 url = "https://github.com/modem-dev/hunk/releases/download/v0.21.1/hunkdiff-linux-x64.tar.gz"
 url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/545159494"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:modem-dev/hunk"."platforms.linux-x64-musl"]
 checksum = "sha256:c7d1e23ba4ffb6ca3330797e9f0c82dbada50e3cfe1b719f4194747f2cbca122"
@@ -3593,7 +3568,6 @@ checksum = "sha256:2f883269824d85f96a75fb8788f6c31619e60d2c0865e93402d2f34746105
 url = "https://github.com/nolabs-ai/nono/releases/download/v0.75.0/nono-v0.75.0-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/nolabs-ai/nono/releases/assets/539754562"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:nolabs-ai/nono"."platforms.linux-x64-musl"]
 checksum = "sha256:a58a676badfae859081a7d03dc5227cfe69236d435232da20b4e610d551b60ed"
@@ -3635,7 +3609,6 @@ checksum = "sha256:4fa1a01158dd8043da92d31b270780b0dcc10603038d9b61cac4d81ab63fb
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.0/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/549270163"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:ogulcancelik/herdr"."platforms.linux-x64-musl"]
 checksum = "sha256:4fa1a01158dd8043da92d31b270780b0dcc10603038d9b61cac4d81ab63fb71f"
@@ -3743,7 +3716,6 @@ checksum = "sha256:f61f628ce5fb2d4851e82460e76dccb21daf61398522ec04c4326f2dbbf05
 url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.1/linux-amd64"
 url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/488157822"
 provenance = "github-attestations"
-provenance_verified = true
 
 [tools."github:thiagokokada/gh-gfm-preview"."platforms.linux-x64-musl"]
 checksum = "sha256:f61f628ce5fb2d4851e82460e76dccb21daf61398522ec04c4326f2dbbf05c6d"
