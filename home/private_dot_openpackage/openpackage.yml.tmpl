@@ -16,7 +16,8 @@ dependencies:
   base: {{ $packagePath }}
 {{- end }}
 {{- end }}
+{{- $linearCliVersion := index (fromToml (include "../mise/config.toml")).tools "github:schpet/linear-cli" }}
 - name: gh@schpet/linear-cli/skills/linear-cli
-  url: https://github.com/schpet/linear-cli.git#v2.4.0
+  url: https://github.com/schpet/linear-cli.git#{{ $linearCliVersion }}
   path: skills/linear-cli
 dev-dependencies: []

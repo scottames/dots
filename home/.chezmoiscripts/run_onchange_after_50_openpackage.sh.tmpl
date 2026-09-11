@@ -42,7 +42,7 @@ if ! mise exec -- sh -c 'command -v opkg' &>/dev/null; then
   exit 0 # exit 0 to not block chezmoi apply
 fi
 
-# .openpackage/openpackage.yml hash: {{ include "../home/private_dot_openpackage/openpackage.yml.tmpl" | sha256sum }}
+# .openpackage/openpackage.yml hash: {{ includeTemplate "../home/private_dot_openpackage/openpackage.yml.tmpl" . | sha256sum }}
 mise exec -- opkg install -g --platforms claude codex opencode
 
 print_success "openpackage done"
