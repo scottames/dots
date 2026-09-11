@@ -1,0 +1,41 @@
+{{ if eq .chezmoi.os "linux" -}}
+
+# renovate: datasource=github-releases depName=ryanoasis/nerd-fonts
+{{ $nerdFontsVersion := "v3.5.1" -}}
+
+[".local/share/fonts/FiraCode"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ $nerdFontsVersion }}/FiraCode.zip"
+    exact = true
+    refreshPeriod = "168h"
+
+[".local/share/fonts/Hack"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ $nerdFontsVersion }}/Hack.zip"
+    exact = true
+    refreshPeriod = "168h"
+
+[".local/share/fonts/Monaspace"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ $nerdFontsVersion }}/Monaspace.zip"
+    exact = true
+    refreshPeriod = "168h"
+
+[".local/share/fonts/RobotoMono"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ $nerdFontsVersion }}/RobotoMono.zip"
+    exact = true
+    refreshPeriod = "168h"
+
+{{ $ubuntuFontsVersion := "0.83" -}}
+
+[".local/share/fonts/ubuntu"]
+    type = "archive"
+    url = "https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-{{ $ubuntuFontsVersion }}.zip"
+    exact = true
+    refreshPeriod = "168h"
+    stripComponents = 1
+
+{{ end -}} # linux
+
+# vi: ft=toml

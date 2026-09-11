@@ -1,0 +1,45 @@
+{{ if eq .chezmoi.os "linux" -}}
+
+[".local/bin/keymapp"]
+    type = "archive-file"
+    url = "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz"
+    path = "keymapp"
+    refreshPeriod = "168h"
+
+# renovate: datasource=github-releases depName=gabm/Satty
+{{ $sattyVersion := "v0.22.0" -}}
+
+[".local/bin/satty"]
+    type = "archive-file"
+    url = "https://github.com/gabm/Satty/releases/download/{{ $sattyVersion }}/satty-x86_64-unknown-linux-gnu.tar.gz"
+    path = "satty"
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+[".config/fish/completions/satty.fish"]
+  type = "archive-file"
+  url = "https://github.com/gabm/Satty/releases/download/{{ $sattyVersion }}/satty-x86_64-unknown-linux-gnu.tar.gz"
+  path = "completions/satty.fish"
+  stripComponents = 1
+  refreshPeriod = "168h"
+
+[".local/share/yubico-authenticator"]
+    type = "archive"
+    url = "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+# renovate: datasource=github-releases depName=max-baz/yubikey-touch-detector
+{{ $yubikeyTouchDetectorVersion := "1.13.0" -}}
+
+[".local/share/yubikey-touch-detector-src"]
+    type = "archive"
+    url = "https://github.com/max-baz/yubikey-touch-detector/releases/download/{{ $yubikeyTouchDetectorVersion }}/yubikey-touch-detector-{{ $yubikeyTouchDetectorVersion }}-vendored.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+{{ end -}} # linux
+
+# vi: ft=toml

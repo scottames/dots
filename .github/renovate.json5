@@ -19,6 +19,18 @@
     {
       customType: 'regex',
       managerFilePatterns: [
+        '/^home\\/\\.chezmoiexternals\\/[^/]+\\.toml(?:\\.tmpl)?$/',
+      ],
+      matchStrings: [
+        'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+.*?[vV][eE][rR][sS][iI][oO][nN]\\s?[:=]+\\s*[\'\"]?(?<currentValue>[^\'\" \\n]+)[\'\"]?\\s',
+        'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+.*?[tT][aA][gG]\\s?[:=]+\\s*[\'\"]?(?<currentValue>[^\'\" \\n]+)[\'\"]?\\s',
+        '\\s+.*?[vV][eE][rR][sS][iI][oO][nN]\\s?[:=]+ +[\'\"]?(?<currentValue>[^\'\" \\n]+)[\'\"]?\\s+.+ renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s',
+        '\\s+.*?[tT][aA][gG]\\s?[:=]+ +[\'\"]?(?<currentValue>[^\'\" \\n]+)[\'\"]?\\s+.+ renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s',
+      ],
+    },
+    {
+      customType: 'regex',
+      managerFilePatterns: [
         '/home/private_dot_config/k9s/private_config.yaml.tmpl/',
       ],
       matchStrings: [
