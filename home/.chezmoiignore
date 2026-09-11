@@ -36,7 +36,7 @@ src/github.com/paperwm*
 {{- end }} # end .desktop.session = gnome
 
 {{- if not (regexMatch "niri" .desktop.session) }}
-.config/niri/config.kdl
+.config/niri/
 .config/systemd/user/niri.service.wants/*
 .config/systemd/user/swaybg.service
 .config/waybar/

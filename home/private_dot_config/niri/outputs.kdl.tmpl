@@ -1,0 +1,7 @@
+{{ if regexMatch "^zx1" .host.name -}}
+output "DP-2" {
+    mode "5120x1440@120.000"
+    scale 1
+    transform "normal"
+}
+{{- end }}

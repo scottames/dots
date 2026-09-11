@@ -1,0 +1,47 @@
+window-rule {
+    default-column-width { proportion 0.33; }
+}
+
+window-rule {
+    match app-id="ghostty$"
+    opacity 0.95
+}
+
+window-rule {
+    match app-id="keymapp$"
+    opacity 0.75
+    open-floating true
+    default-column-width { fixed 680; }
+    default-window-height { fixed 470; }
+}
+
+window-rule {
+    match app-id="zen$" title="^Picture-in-Picture$"
+    open-floating true
+    default-column-width { fixed 480; }
+    default-window-height { fixed 270; }
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.Calculator$"#
+    open-floating true
+    default-column-width { fixed 500; }
+    default-window-height { proportion 0.25; }
+}
+
+window-rule {
+    match app-id="zoom"
+    open-floating true
+}
+
+// Draw the focus ring around each window rather than behind it.
+// This avoids tinting semitransparent clients.
+window-rule {
+    draw-border-with-background false
+    focus-ring {}
+    border {
+        width 3
+    }
+    geometry-corner-radius 5
+    clip-to-geometry true
+}
