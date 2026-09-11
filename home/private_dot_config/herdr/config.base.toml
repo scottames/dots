@@ -106,6 +106,12 @@ accent = "magenta"
 prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
 status_indicators = "symbols"
+tab_bar_position = "top"
+tab_bar_right = [
+  { type = "command", command = "hostnamectl hostname", interval_seconds = 5, timeout_seconds = 2 },
+  { type = "datetime", format = "%H:%M" },
+]
+tab_bar_right_separator = " · "
 
 agent_panel_sort = "spaces"
 [ui.toast]
