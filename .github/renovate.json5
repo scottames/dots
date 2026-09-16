@@ -21,6 +21,7 @@
       managerFilePatterns: [
         '/^home\\/\\.chezmoiexternals\\/[^/]+\\.toml(?:\\.tmpl)?$/',
         '/^home\\/\\.chezmoidata\\/versions\\.toml$/',
+        '/^\\.github\\/workflows\\/pr_mise_lock\\.yaml$/',
       ],
       matchStrings: [
         'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+.*?[vV][eE][rR][sS][iI][oO][nN]\\s?[:=]+\\s*[\'\"]?(?<currentValue>[^\'\" \\n]+)[\'\"]?\\s',
