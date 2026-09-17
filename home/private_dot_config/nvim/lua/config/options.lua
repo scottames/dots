@@ -35,15 +35,59 @@ opt.smarttab = true
 -- opt.smartindent = true
 -- opt.breakindent = true
 
--- yank to clipboard over ssh
-if vim.env.SSH_TTY then
+-- Herdr forwards OSC 52 copies to its client, but does not support clipboard queries.
+-- NVIM_CLIPBOARD=osc52 opts into copy + cached paste without any native reads.
+local herdr = vim.env.HERDR_ENV == "1"
+local osc52_only = vim.env.NVIM_CLIPBOARD == "osc52"
+  or (not herdr and (vim.env.SSH_TTY ~= nil or vim.env.SSH_CONNECTION ~= nil))
+if herdr or osc52_only then
   opt.clipboard:append("unnamedplus")
-  local paste = function()
-    return vim.split(vim.fn.getreg(""), "\\n")
+  local cached = { { "" }, "v" }
+  local osc52_copy = require("vim.ui.clipboard.osc52").copy("+")
+  local paste_command
+  if not osc52_only then
+    if vim.fn.has("mac") == 1 then
+      paste_command = { "pbpaste" }
+    elseif vim.env.WAYLAND_DISPLAY and vim.fn.executable("wl-paste") == 1 then
+      paste_command = { "wl-paste", "--no-newline" }
+    elseif vim.env.DISPLAY and vim.fn.executable("xsel") == 1 then
+      paste_command = { "xsel", "--output", "--clipboard" }
+    elseif vim.env.DISPLAY and vim.fn.executable("xclip") == 1 then
+      paste_command = { "xclip", "-selection", "clipboard", "-o" }
+    end
   end
+
+  local function copy(lines, regtype)
+    cached = { vim.deepcopy(lines), regtype }
+    osc52_copy(lines)
+  end
+
+  local function paste()
+    -- In remote herdr this is still the server's clipboard; use terminal paste
+    -- for client clipboard contents. Bound reads so wl-paste cannot freeze Nvim.
+    if paste_command then
+      local ok, result = pcall(function()
+        return vim.system(paste_command, { text = true }):wait(250)
+      end)
+      if ok and result.code == 0 then
+        local lines = vim.split(result.stdout, "\n", { plain = true })
+        if not vim.deep_equal(lines, cached[1]) then
+          local regtype = "v"
+          if #lines > 1 and lines[#lines] == "" then
+            -- Nvim consumes the trailing empty item as the final newline.
+            regtype = "V"
+          end
+          cached = { lines, regtype }
+        end
+      end
+    end
+    return cached
+  end
+
+  -- Herdr only forwards the standard clipboard, so both registers use it.
   vim.g.clipboard = {
-    name = "OSC 52",
-    copy = { ["+"] = require("vim.ui.clipboard.osc52").copy("+"), ["*"] = require("vim.ui.clipboard.osc52").copy("*") },
+    name = "OSC 52 with cached/native paste",
+    copy = { ["+"] = copy, ["*"] = copy },
     paste = { ["+"] = paste, ["*"] = paste },
   }
 end
