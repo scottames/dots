@@ -1,13 +1,3 @@
-local executable = function(bin)
-  return function(_)
-    local has_bin = vim.fn.executable(bin) == 1
-    if not has_bin then
-      vim.notify("Missing executable: " .. bin, vim.log.levels.WARN, { title = "LSP required bin missing" })
-    end
-    return has_bin
-  end
-end
-
 return {
   {
     "neovim/nvim-lspconfig",
@@ -26,28 +16,17 @@ return {
       --   https://github.com/folke/dot/blob/1007fc65738ad1f7a3e9c91432430017a6878378/nvim/lua/plugins/lsp.lua#L193
       --   https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatter-options
       formatters_by_ft = {
-        awk = { "awk" },
         bash = { "shfmt" },
-        css = { "stylelint" },
-        cue = { "cue_fmt" },
-        containerfile = { "dprint" },
-        dockerfile = { "dprint" },
         fish = { "fish_indent" },
-        hcl = { "terragrunt_hclfmt" },
-        json = { "prettierd", "prettier", stop_after_first = true },
+        json = { "prettier" },
+        jsonc = { "prettier" },
         justfile = { "just" },
-        markdown = { "protect_gh_alerts", "prettierd", "markdown-toc" },
-        ["markdown.mdx"] = { "prettierd", "prettier", stop_after_first = true },
+        markdown = { "protect_gh_alerts", "prettier" },
+        ["markdown.mdx"] = { "prettier" },
         lua = { "stylua" },
-        packer = { "packer_fmt" },
-        python = { "auto_optional", "ruff_fix", "ruff_format", "isort" },
-        rust = { "rustfmt" },
         sh = { "shfmt" },
-        sql = { "sqlfluff" },
-        terraform = { "terraform_fmt" },
         toml = { "taplo" },
-        yaml = { "yamlfmt" },
-        zsh = { "beautysh" },
+        yaml = { "prettier" },
       },
       formatters = {
         -- Protect GitHub-style alert blocks from Prettier reformatting
@@ -63,25 +42,8 @@ return {
             return { vim.fn.stdpath("config") .. "/lua/util/protect_gh_alerts.lua" }
           end,
         },
-        beautysh = {
-          prepend_args = { "--indent-size", "2" },
-        },
-        goimports_reviser = {
-          command = "goimports-reviser",
-          -- prepend_args = { "-rmunused", "-set-alias" },
-        },
-        markdownlint = {},
-        dprint = {
-          condition = function(ctx)
-            return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
-          end,
-        },
         shfmt = {
           prepend_args = { "-i", "2", "-ci" },
-        },
-        -- Because they can only be installed via pip
-        auto_optional = {
-          condition = executable("auto-optional"),
         },
       },
     },
@@ -156,18 +118,8 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- reference: https://mason-registry.dev/registry/list
-        "buf-language-server",
-        "woke",
-        "bash-debug-adapter",
-        "cuelsp",
-        "gotests",
-        "html-lsp",
         "jq-lsp",
         "json-lsp",
-        "luacheck",
-        "luaformatter",
-        "nginx-language-server",
-        "rustfmt",
         "stylua",
       })
     end,
@@ -177,23 +129,11 @@ return {
     "mfussenegger/nvim-lint",
     opts = function(_, opts)
       opts.linters_by_ft = {
-        ["*"] = { "typos", "snyk_iac", "woke" },
-        ansible = { "ansible_lint" },
-        cue = { "cue" },
+        ["*"] = { "typos" },
         bash = { "shellcheck" },
         sh = { "shellcheck" },
         fish = { "fish" },
-        git = { "commitlint" },
-        html = { "tidy" },
-        json = { "jsonlint" },
-        lua = { "selene", "luacheck" },
-        make = { "checkmake" },
         markdown = { "markdownlint" },
-        protobuf = { "buf_lint" },
-        python = { "bandit", "blocklint", "ruff", "mypy" },
-        sql = { "sqlfluff" },
-        systemd = { "systemdlint" },
-        terraform = { "tfsec" },
         yaml = { "actionlint", "yamllint" },
         zsh = { "zsh" },
       }
@@ -203,35 +143,12 @@ return {
             return string.find(vim.fn.expand("%:p"), ".github/workflows")
           end,
         },
-        -- Example of using selene only when a selene.toml file is present
-        selene = {
-          condition = function(ctx)
-            return vim.fs.find({ "selene.toml" }, { path = ctx.filename, upward = true })[1]
-          end,
-        },
-        -- Example of using luacheck only when a .luacheckrc file is present
-        luacheck = {
-          condition = function(ctx)
-            return vim.fs.find({ ".luacheckrc" }, { path = ctx.filename, upward = true })[1]
-          end,
-        },
         yamllint = {
           prepend_args = { "-d", "relaxed" },
-        },
-        -- Because they can only be installed via pip
-        bandit = {
-          condition = executable("bandit"),
-        },
-        blocklint = {
-          condition = executable("blocklint"),
-        },
-        systemdlint = {
-          condition = executable("systemdlint"),
-        },
-        tidy = {
-          condition = executable("tidy"),
         },
       }
     end,
   },
 }
+
+-- vi: ft=lua
