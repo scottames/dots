@@ -21,7 +21,7 @@
           "type" "command"))))) -}}
 {{- end -}}
 {{- /* Local-only keys: preserved as-is, never tracked. */ -}}
-{{- range $k := list "trustedFolders" -}}
+{{- range $k := list "modelFavorites" "trustedFolders" -}}
 {{-   if hasKey $live $k }}{{ $settings = set $settings $k (get $live $k) }}{{ end -}}
 {{- end -}}
 {{ $settings | toPrettyJson }}
