@@ -3624,6 +3624,56 @@ checksum = "sha256:2943f15baf6c0b498bd5535726c481678621fcccb939a57ab1c35fdd1c2c0
 url = "https://github.com/agavra/tuicr/releases/download/v0.25.0/tuicr-0.25.0-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/541535482"
 
+[[tools."github:angristan/fast-resume"]]
+version = "2.12.0"
+backend = "github:angristan/fast-resume"
+specifiers = ["2.12.0"]
+
+[tools."github:angristan/fast-resume"."platforms.linux-arm64"]
+checksum = "sha256:f757d8dc28a4eb2e9bc02698685fb5c2e23ef5ff9020e91ddb1a85c4e98026d2"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541194443"
+
+[tools."github:angristan/fast-resume"."platforms.linux-arm64-musl"]
+checksum = "sha256:f757d8dc28a4eb2e9bc02698685fb5c2e23ef5ff9020e91ddb1a85c4e98026d2"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541194443"
+
+[tools."github:angristan/fast-resume"."platforms.linux-x64"]
+checksum = "sha256:2f1cc881e330827ca80fcb78e17c0a2cc80eedf9905fa883e8222a88a393a221"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541195076"
+
+[tools."github:angristan/fast-resume"."platforms.linux-x64-baseline"]
+checksum = "sha256:2f1cc881e330827ca80fcb78e17c0a2cc80eedf9905fa883e8222a88a393a221"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541195076"
+
+[tools."github:angristan/fast-resume"."platforms.linux-x64-musl"]
+checksum = "sha256:2f1cc881e330827ca80fcb78e17c0a2cc80eedf9905fa883e8222a88a393a221"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541195076"
+
+[tools."github:angristan/fast-resume"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:2f1cc881e330827ca80fcb78e17c0a2cc80eedf9905fa883e8222a88a393a221"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541195076"
+
+[tools."github:angristan/fast-resume"."platforms.macos-arm64"]
+checksum = "sha256:559389a39bce9e00d4cc0605ff41b4bb582373790ea8b5b99fe3860123d0afcc"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-macos-arm64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541195252"
+
+[tools."github:angristan/fast-resume"."platforms.macos-x64"]
+checksum = "sha256:3ef3a7af2bcf9d1680d8e1c1dcaf38e33eb4fb4598a791fd754af4551bc81655"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-macos-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541196064"
+
+[tools."github:angristan/fast-resume"."platforms.macos-x64-baseline"]
+checksum = "sha256:3ef3a7af2bcf9d1680d8e1c1dcaf38e33eb4fb4598a791fd754af4551bc81655"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.12.0/fast-resume-2.12.0-macos-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/541196064"
+
 [[tools."github:anthropics/claude-code"]]
 version = "2.1.270"
 backend = "github:anthropics/claude-code"
