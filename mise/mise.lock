@@ -4795,6 +4795,69 @@ url = "https://github.com/thiagokokada/gh-gfm-preview/releases/download/v1.3.1/w
 url_api = "https://api.github.com/repos/thiagokokada/gh-gfm-preview/releases/assets/488157835"
 provenance = "github-attestations"
 
+[[tools."github:usagi-flow/evil-helix"]]
+version = "release-20250915"
+backend = "github:usagi-flow/evil-helix"
+specifiers = [
+    "latest",
+    "release-20250915",
+]
+
+[tools."github:usagi-flow/evil-helix"."platforms.linux-arm64"]
+checksum = "sha256:ec968d37819fce4488904012aaa7a25e08a6704ebdef9088b5e1801d6b740868"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-aarch64-linux.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585213"
+
+[tools."github:usagi-flow/evil-helix"."platforms.linux-arm64-musl"]
+checksum = "sha256:f47375ff1b284a6bbcf90108688217fc63def2880bf600ee15a2967ecbb26eb8"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-aarch64-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585221"
+
+[tools."github:usagi-flow/evil-helix"."platforms.linux-x64"]
+checksum = "sha256:3c46157547e200c946f05bcf297ecc89f7ccd1a9ba94aeff3a68348636efcb6c"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-linux.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585193"
+
+[tools."github:usagi-flow/evil-helix"."platforms.linux-x64-baseline"]
+checksum = "sha256:3c46157547e200c946f05bcf297ecc89f7ccd1a9ba94aeff3a68348636efcb6c"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-linux.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585193"
+
+[tools."github:usagi-flow/evil-helix"."platforms.linux-x64-musl"]
+checksum = "sha256:20d7b7be9f9c82e0374021c38b56947081cf741fd44aef0db3a21a8b641459d3"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585198"
+
+[tools."github:usagi-flow/evil-helix"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:20d7b7be9f9c82e0374021c38b56947081cf741fd44aef0db3a21a8b641459d3"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585198"
+
+[tools."github:usagi-flow/evil-helix"."platforms.macos-arm64"]
+checksum = "sha256:2f79fb3f842658d384939f3a9f1f784479cd2e9d7b9984f98b98f22894847b57"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-aarch64-macos.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585206"
+
+[tools."github:usagi-flow/evil-helix"."platforms.macos-x64"]
+checksum = "sha256:084d86d1ac9dbc506ade26ba2e0a4f79e8e34cbf176b0865fbc08f909d83dbe0"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-macos.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585189"
+
+[tools."github:usagi-flow/evil-helix"."platforms.macos-x64-baseline"]
+checksum = "sha256:084d86d1ac9dbc506ade26ba2e0a4f79e8e34cbf176b0865fbc08f909d83dbe0"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-macos.tar.gz"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585189"
+
+[tools."github:usagi-flow/evil-helix"."platforms.windows-x64"]
+checksum = "sha256:43f2265cbcd67f70d961b13c03b20e21d68cce03753da679174df1c1514f378e"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-windows.zip"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585184"
+
+[tools."github:usagi-flow/evil-helix"."platforms.windows-x64-baseline"]
+checksum = "sha256:43f2265cbcd67f70d961b13c03b20e21d68cce03753da679174df1c1514f378e"
+url = "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-windows.zip"
+url_api = "https://api.github.com/repos/usagi-flow/evil-helix/releases/assets/293585184"
+
 [[tools."github:vitor-mariano/regex-tui"]]
 version = "0.7.0"
 backend = "github:vitor-mariano/regex-tui"

@@ -23,6 +23,7 @@ variant = "dark"
 bat = "aura-theme" # packages/sublime-text/aura-theme.tmTheme
 ghostty = "Aura"   # bundled with ghostty (resources)
 nvim = "aura-dark" # packages/neovim/colors/aura-dark.lua
+helix = ""         # No upstream port; render the custom Aura theme.
 # herdr has no Aura port, so the palette is supplied inline via [theme.custom].
 # The name below is only a substrate: with all 19 tokens set, swapping it for
 # `gruvbox-light` renders byte-identical output, so it is inert in practice.
@@ -103,6 +104,7 @@ variant = "dark"
 bat = "Catppuccin Mocha"        # bundled with bat 0.26+
 ghostty = "Catppuccin Mocha"    # bundled with ghostty (resources)
 nvim = "catppuccin-mocha"
+helix = "catppuccin_mocha"      # bundled with Helix
 bubbletint = "catppuccin_mocha"
 # herdr's "catppuccin" IS mocha; latte is a separate built-in. A genuine port,
 # so no [theme.custom] colors -- restating them measurably degrades it: our

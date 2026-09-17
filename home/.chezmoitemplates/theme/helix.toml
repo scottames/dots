@@ -1,0 +1,138 @@
+{{ if .helix -}}
+# Use the genuine bundled port when available.
+inherits = "{{ .helix }}"
+{{ else -}}
+# Aura for Helix: https://github.com/daltonmenezes/aura-theme
+# Syntax roles follow Aura's Neovim Tree-sitter port; colors come from the
+# shared palette contract. https://docs.helix-editor.com/themes.html
+
+attribute = "accent"
+type = "blue"
+"type.builtin" = "accent"
+constructor = "blue"
+constant = "accent"
+"constant.builtin.boolean" = "green"
+"constant.character" = "green"
+"constant.character.escape" = { fg = "green", modifiers = ["bold"] }
+"constant.numeric" = "green"
+string = "green"
+"string.regexp" = { fg = "green", modifiers = ["bold"] }
+"string.special.url" = { fg = "green", underline = { style = "line" } }
+comment = { fg = "muted", modifiers = ["italic"] }
+variable = "fg"
+"variable.builtin" = "accent"
+"variable.other.member" = "pink"
+label = "accent"
+punctuation = "fg"
+"punctuation.delimiter" = "pink"
+"punctuation.special" = "accent"
+keyword = "accent"
+"keyword.function" = "orange"
+operator = "accent"
+function = "orange"
+"function.method" = { fg = "orange", modifiers = ["bold"] }
+tag = "accent"
+special = "accent"
+
+"markup.heading" = { fg = "green", modifiers = ["bold"] }
+"markup.list" = "accent"
+"markup.list.checked" = "green"
+"markup.list.unchecked" = "muted"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "blue", underline = { style = "line" } }
+"markup.link.label" = "pink"
+"markup.link.text" = "green"
+"markup.quote" = "muted"
+"markup.raw" = "green"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "blue"
+"diff.delta.moved" = "accent"
+"diff.delta.conflict" = "orange"
+
+"ui.background" = { bg = "bg" }
+"ui.background.separator" = "border"
+"ui.text" = "fg"
+"ui.text.focus" = { fg = "fg", bg = "selection", modifiers = ["bold"] }
+"ui.text.inactive" = "muted"
+"ui.text.info" = "fg"
+"ui.text.directory" = "green"
+"ui.cursor" = { fg = "bg", bg = "muted" }
+"ui.cursor.primary" = { fg = "bg", bg = "accent" }
+"ui.cursor.primary.normal" = { fg = "bg", bg = "accent" }
+"ui.cursor.primary.insert" = { fg = "bg", bg = "green" }
+"ui.cursor.primary.select" = { fg = "bg", bg = "pink" }
+"ui.cursor.match" = { fg = "orange", bg = "border", modifiers = ["bold"] }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "border" }
+"ui.cursorline.primary" = { bg = "bg_alt" }
+"ui.cursorline.secondary" = { bg = "bg_alt" }
+"ui.cursorcolumn.primary" = { bg = "bg_alt" }
+"ui.cursorcolumn.secondary" = { bg = "bg_alt" }
+"ui.linenr" = "muted"
+"ui.linenr.selected" = { fg = "fg", modifiers = ["bold"] }
+"ui.gutter" = { bg = "bg" }
+"ui.gutter.selected" = { bg = "bg_alt" }
+"ui.statusline" = { fg = "fg", bg = "bg_alt" }
+"ui.statusline.inactive" = { fg = "muted", bg = "bg_dim" }
+"ui.statusline.normal" = { fg = "bg", bg = "accent", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg", bg = "pink", modifiers = ["bold"] }
+"ui.statusline.separator" = "border"
+"ui.bufferline" = { fg = "muted", bg = "bg_dim" }
+"ui.bufferline.active" = { fg = "accent", bg = "bg_alt", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "bg_dim" }
+"ui.popup" = { fg = "fg", bg = "bg_float" }
+"ui.popup.info" = { fg = "fg", bg = "bg_float" }
+"ui.window" = "border"
+"ui.help" = { fg = "fg", bg = "bg_float" }
+"ui.menu" = { fg = "fg", bg = "bg_float" }
+"ui.menu.selected" = { fg = "fg", bg = "border", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "accent", bg = "bg_alt" }
+"ui.picker.header" = { fg = "fg", bg = "bg_alt" }
+"ui.picker.header.column" = "muted"
+"ui.picker.header.column.active" = { fg = "accent", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "bg_alt" }
+"ui.virtual.whitespace" = "fg_dim"
+"ui.virtual.indent-guide" = "border"
+"ui.virtual.inlay-hint" = { fg = "muted", modifiers = ["italic"] }
+"ui.virtual.wrap" = "fg_dim"
+"ui.virtual.jump-label" = { fg = "pink", modifiers = ["bold"] }
+"ui.highlight" = { bg = "selection" }
+"ui.highlight.frameline" = { bg = "selection" }
+"ui.debug.breakpoint" = "red"
+"ui.debug.active" = "orange"
+
+warning = "orange"
+error = "red"
+info = "blue"
+hint = "accent"
+diagnostic = { underline = { style = "curl" } }
+"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "accent", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+tabstop = { bg = "selection" }
+
+[palette]
+bg = "{{ .bg }}"
+bg_dim = "{{ .bg_dim }}"
+bg_alt = "{{ .bg_alt }}"
+bg_float = "{{ .bg_float }}"
+selection = "{{ .selection }}"
+border = "{{ .border }}"
+fg = "{{ .fg }}"
+muted = "{{ .muted }}"
+fg_dim = "{{ .fg_dim }}"
+accent = "{{ .accent }}"
+green = "{{ .green }}"
+orange = "{{ .orange }}"
+pink = "{{ .pink }}"
+blue = "{{ .blue }}"
+red = "{{ .red }}"
+{{ end -}}

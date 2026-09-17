@@ -1,0 +1,54 @@
+# `current` follows theme-set via ~/.config/helix/themes/current.toml.
+# In a running editor, use :theme current to reload after a switch.
+theme = "current"
+
+[editor]
+line-number = "relative"
+# yank to clipboard by default
+default-yank-register = "+"
+
+cursorline = true       # Highlight lines containing a cursor
+bufferline = "multiple" # Show open buffers when there's more than one
+color-modes = true      # Give each editing mode a different-colored statusline indicator
+scrolloff = 8           # Keep eight lines of context above/below the cursor when scrolling
+popup-border = "all"    # Draw borders around both popups and menus
+
+# Don't insert completion candidates merely by highlighting them
+# preview-completion-insert = false
+
+# Replace the whole word when completing within an existing word
+# completion-replace = true
+#
+# Compact diagnostics on other lines
+end-of-line-diagnostics = "warning"
+
+# [editor.cursor-shape]
+# normal = "block" # Use a block cursor for navigation and editing commands
+# insert = "bar" # Use a thin vertical cursor when typing
+# select = "underline" # Use an underline cursor when extending selections
+
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+rainbow-option = "normal"
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # Expand warnings/errors beneath the current line
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.soft-wrap]
+enable = true
+
+# [editor.smart-tab]
+# enable = false
+
+[keys.normal]
+H = "goto_previous_buffer"
+"S-left" = "goto_previous_buffer"
+L = "goto_next_buffer"
+"S-right" = "goto_next_buffer"

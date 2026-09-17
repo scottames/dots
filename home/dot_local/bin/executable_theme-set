@@ -89,6 +89,7 @@ link() {
 
 link k9s.yaml "${HOME}/.config/k9s/skins/current.yaml"
 link atuin.toml "${HOME}/.config/atuin/themes/current.toml"
+link helix.toml "${HOME}/.config/helix/themes/current.toml"
 link monstar.conf "${HOME}/.config/monstar/themes/current"
 link zellij.kdl "${HOME}/.config/zellij/themes/current.kdl"
 link television.toml "${HOME}/.config/television/themes/current.toml"
