@@ -142,6 +142,12 @@
       versioning: 'regex:^rust-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$',
     },
     {
+      // Aqua releases cannot provide OpenCode v2; the trial has a separate HTTP pin.
+      matchManagers: ['mise'],
+      matchDepNames: ['aqua:sst/opencode'],
+      allowedVersions: '/^1\\./',
+    },
+    {
       // pin 1.43.x until the 0.44 CPU issue resolved
       matchDepNames: ['zellij-org/zellij'],
       allowedVersions: '/^v0\\.43\\./',
