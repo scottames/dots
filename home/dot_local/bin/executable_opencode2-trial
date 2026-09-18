@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+trial_root="${HOME}/.local/share/opencode/v2-trial"
+original_xdg_data_home="${XDG_DATA_HOME-}"
+original_xdg_cache_home="${XDG_CACHE_HOME-}"
+original_xdg_state_home="${XDG_STATE_HOME-}"
+
+export OPENCODE_CONFIG_DIR="${HOME}/.config/opencode-v2-trial"
+export OPENCODE_DISABLE_AUTOUPDATE=1
+OPENCODE_CLI_CONFIG_CONTENT="$(<"${OPENCODE_CONFIG_DIR}/cli.json")"
+export OPENCODE_CLI_CONFIG_CONTENT
+export XDG_DATA_HOME="${trial_root}/data"
+export XDG_CACHE_HOME="${trial_root}/cache"
+export XDG_STATE_HOME="${trial_root}/state"
+
+opencode2 --standalone "$@"
+
+# The standalone server owns the process lifetime. This adapter only exists for
+# subprocesses opened through the interactive shell, not MCP servers.
+unset OPENCODE_CONFIG_DIR OPENCODE_DISABLE_AUTOUPDATE
+if [[ -n ${original_xdg_data_home} ]]; then export XDG_DATA_HOME="${original_xdg_data_home}"; else unset XDG_DATA_HOME; fi
+if [[ -n ${original_xdg_cache_home} ]]; then export XDG_CACHE_HOME="${original_xdg_cache_home}"; else unset XDG_CACHE_HOME; fi
+if [[ -n ${original_xdg_state_home} ]]; then export XDG_STATE_HOME="${original_xdg_state_home}"; else unset XDG_STATE_HOME; fi
+
+exec "${SHELL:-/bin/sh}"

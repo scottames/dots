@@ -5011,6 +5011,27 @@ url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/darwin/x64/droi
 checksum = "sha256:577ec7a29f50fd90ac64a28b1c4903f9c9a08a33c2825cab86fe7db4fb5bc466"
 url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/darwin/x64/droid"
 
+[[tools."http:opencode-v2"]]
+version = "2.0.8"
+backend = "http:opencode-v2"
+specifiers = ["2.0.8"]
+
+[tools."http:opencode-v2"."platforms.linux-x64"]
+checksum = "sha256:b9bfbb9afd1148341c594d88fd2ebef257eb5801a9cea06a39e034c2417fb34f"
+url = "https://opencode.ai/files/bin/2.0.8/opencode-linux-x64.tar.gz"
+
+[tools."http:opencode-v2"."platforms.linux-x64-baseline"]
+checksum = "sha256:b9bfbb9afd1148341c594d88fd2ebef257eb5801a9cea06a39e034c2417fb34f"
+url = "https://opencode.ai/files/bin/2.0.8/opencode-linux-x64.tar.gz"
+
+[tools."http:opencode-v2"."platforms.linux-x64-musl"]
+checksum = "sha256:b9bfbb9afd1148341c594d88fd2ebef257eb5801a9cea06a39e034c2417fb34f"
+url = "https://opencode.ai/files/bin/2.0.8/opencode-linux-x64.tar.gz"
+
+[tools."http:opencode-v2"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:b9bfbb9afd1148341c594d88fd2ebef257eb5801a9cea06a39e034c2417fb34f"
+url = "https://opencode.ai/files/bin/2.0.8/opencode-linux-x64.tar.gz"
+
 [[tools.node]]
 version = "24.21.0"
 backend = "core:node"

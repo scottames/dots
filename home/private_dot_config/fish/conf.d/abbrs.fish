@@ -187,6 +187,7 @@ abbr -a nncl "nono-with-local-path wrap --profile claude-local --allow-cwd -- cl
 abbr -a nnclc "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude --continue"
 abbr -a nno "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode"
 abbr -a nnoc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue"
+abbr -a nno2 "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode2-trial"
 abbr -a nncx "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex"
 abbr -a nncxc "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex resume --last"
 abbr -a nnp nono-pi
