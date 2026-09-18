@@ -59,6 +59,7 @@ set has_bins \
     gobrew \
     gt \
     gum \
+    hx \
     hub \
     kubectl \
     nvim \

@@ -22,11 +22,10 @@ popup-border = "all"    # Draw borders around both popups and menus
 # Compact diagnostics on other lines
 end-of-line-diagnostics = "warning"
 
-# [editor.cursor-shape]
-# normal = "block" # Use a block cursor for navigation and editing commands
-# insert = "bar" # Use a thin vertical cursor when typing
-# select = "underline" # Use an underline cursor when extending selections
-
+[editor.cursor-shape]
+normal = "block"     # Use a block cursor for navigation and editing commands
+insert = "bar"       # Use a thin vertical cursor when typing
+select = "underline" # Use an underline cursor when extending selections
 
 [editor.file-picker]
 hidden = false
@@ -47,8 +46,42 @@ enable = true
 # [editor.smart-tab]
 # enable = false
 
+[editor.statusline]
+# Mode, language-server activity, and Git branch
+left = ["mode", "spinner", "version-control", "file-name"]
+
+# File path and indicators for unsaved changes or read-only files
+center = ["file-modification-indicator", "read-only-indicator"]
+
+# Diagnostics, active selections, cursor position, and file type
+right = ["diagnostics", "selections", "position", "file-type"]
+
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
 [keys.normal]
 H = "goto_previous_buffer"
 "S-left" = "goto_previous_buffer"
 L = "goto_next_buffer"
 "S-right" = "goto_next_buffer"
+
+[keys.normal.space.o]
+c = ":config-open"
+r = ":config-reload"
+l = ":lsp-restart"
+
+[keys.normal.space.q]
+b = ":buffer-close"
+q = ":quit-all"
+o = ":buffer-close-others"
+s = ":write-quit-all"
+
+[keys.normal.space.t]
+c = ":toggle cursorline"
+f = ":toggle auto-format"
+h = ":toggle lsp.display-inlay-hints"
+w = ":toggle soft-wrap.enable"
+i = ":toggle indent-guides.render"
+n = ":toggle line-number relative absolute"
+W = ":toggle whitespace.render all none"

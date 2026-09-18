@@ -73,7 +73,7 @@ special = "accent"
 "ui.cursorcolumn.primary" = { bg = "bg_alt" }
 "ui.cursorcolumn.secondary" = { bg = "bg_alt" }
 "ui.linenr" = "muted"
-"ui.linenr.selected" = { fg = "fg", modifiers = ["bold"] }
+"ui.linenr.selected" = { fg = "accent", bg = "bg", modifiers = ["bold"] }
 "ui.gutter" = { bg = "bg" }
 "ui.gutter.selected" = { bg = "bg_alt" }
 "ui.statusline" = { fg = "fg", bg = "bg_alt" }
