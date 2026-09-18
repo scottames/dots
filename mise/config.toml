@@ -147,7 +147,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:helm/helm" = "4.3.0"
 # agent multiplexer that lives in your terminal
 #   https://github.com/ogulcancelik/herdr
-"github:ogulcancelik/herdr" = "v0.9.0"
+"github:ogulcancelik/herdr" = "0.9.1"
 # Native runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/herdr-annotate
 "github:plannotator/herdr-annotate" = { version = "rust-lite-v0.1.0", bin = "herdr-annotate", prerelease = true, os = [
