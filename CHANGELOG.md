@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.53.1](https://github.com/scottames/dots/compare/v0.53.0...v0.53.1) (2026-09-18)
+
+
+### Updates & Misc Chores
+
+* **deps:** update ⬆️ aqua-packages to v4.562.0 ([#1071](https://github.com/scottames/dots/issues/1071)) ([0582ab0](https://github.com/scottames/dots/commit/0582ab0fad1595d62ab4a2e7407ca73b03b36d69))
+* **deps:** update ⬆️ github-actions to v24.21.0 ([#1069](https://github.com/scottames/dots/issues/1069)) ([940f20e](https://github.com/scottames/dots/commit/940f20ea65efb0c96d02f6ba7eeb75d3511ff24f))
+* **helix:** additional config ([2df03bc](https://github.com/scottames/dots/commit/2df03bc6fdc41f0f60584e71b8fc6e2291c4bbc3))
+* **mise:** bump herdr 0.9.1 ([8b6880b](https://github.com/scottames/dots/commit/8b6880bcad1e2513315b3ba11654f9be69891017))
+* **opencode:** allow find-docs skill use ([d89459c](https://github.com/scottames/dots/commit/d89459c299060f7dbf3d13b82416f7875a76cb8b))
+* **renovate:** pin opencode to v1 ([0026d54](https://github.com/scottames/dots/commit/0026d54bf5da78f5fe48a27d14684c6dfeedde52))
+
+
+### Bug Fixes
+
+* **nono:** correct legacy config in profiles ([65ff663](https://github.com/scottames/dots/commit/65ff6634ce8aa372c8b9905ab9d4d8f1aa1ad70d))
+
 ## [0.53.0](https://github.com/scottames/dots/compare/v0.52.0...v0.53.0) (2026-09-17)
 
 
