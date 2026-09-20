@@ -4971,45 +4971,45 @@ checksum = "sha256:a3911b5e0e1b1053f25ed0675f4c1c6aad1e2bfcf253df2b9be4caabd2edd
 url = "https://dl.google.com/go/go1.27.1.windows-amd64.zip"
 
 [[tools."http:droid"]]
-version = "0.218.1"
+version = "0.221.0"
 backend = "http:droid"
-specifiers = ["0.218.1"]
+specifiers = ["0.221.0"]
 
 [tools."http:droid"."platforms.linux-arm64"]
-checksum = "sha256:5e39c549f992e2860852ce9284838208256ce920d574a4712b2c4e170821a4b6"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/linux/arm64/droid"
+checksum = "sha256:35d00ad5ad47ed2b6a6bf52a110b8443b9ec5ebfa229e03ca7b6c608c0a38fb4"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/linux/arm64/droid"
 
 [tools."http:droid"."platforms.linux-arm64-musl"]
-checksum = "sha256:5e39c549f992e2860852ce9284838208256ce920d574a4712b2c4e170821a4b6"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/linux/arm64/droid"
+checksum = "sha256:35d00ad5ad47ed2b6a6bf52a110b8443b9ec5ebfa229e03ca7b6c608c0a38fb4"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/linux/arm64/droid"
 
 [tools."http:droid"."platforms.linux-x64"]
-checksum = "sha256:9854f661a76460b80151392eab6619112038a980a35daab797cba86bad4efce2"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/linux/x64/droid"
+checksum = "sha256:3b9e16b2f8ac907334060244565ac0982471a346bd3d45c570ea5870834fd2eb"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.linux-x64-baseline"]
-checksum = "sha256:9854f661a76460b80151392eab6619112038a980a35daab797cba86bad4efce2"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/linux/x64/droid"
+checksum = "sha256:3b9e16b2f8ac907334060244565ac0982471a346bd3d45c570ea5870834fd2eb"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.linux-x64-musl"]
-checksum = "sha256:9854f661a76460b80151392eab6619112038a980a35daab797cba86bad4efce2"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/linux/x64/droid"
+checksum = "sha256:3b9e16b2f8ac907334060244565ac0982471a346bd3d45c570ea5870834fd2eb"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:9854f661a76460b80151392eab6619112038a980a35daab797cba86bad4efce2"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/linux/x64/droid"
+checksum = "sha256:3b9e16b2f8ac907334060244565ac0982471a346bd3d45c570ea5870834fd2eb"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.macos-arm64"]
-checksum = "sha256:076c78e42f94dd21767f5094002259efb256cc294cce63d6552b6607bc714589"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/darwin/arm64/droid"
+checksum = "sha256:51a00e79a7b30937a545fb85bcdc0298baeb0bc3e77365b05536c6c9aaac8572"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/darwin/arm64/droid"
 
 [tools."http:droid"."platforms.macos-x64"]
-checksum = "sha256:577ec7a29f50fd90ac64a28b1c4903f9c9a08a33c2825cab86fe7db4fb5bc466"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/darwin/x64/droid"
+checksum = "sha256:8e6990f15cd74cfe4ab9add14f78774a80a0a255cc7756da9531c25753b4468b"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/darwin/x64/droid"
 
 [tools."http:droid"."platforms.macos-x64-baseline"]
-checksum = "sha256:577ec7a29f50fd90ac64a28b1c4903f9c9a08a33c2825cab86fe7db4fb5bc466"
-url = "https://downloads.factory.ai/factory-cli/releases/0.218.1/darwin/x64/droid"
+checksum = "sha256:8e6990f15cd74cfe4ab9add14f78774a80a0a255cc7756da9531c25753b4468b"
+url = "https://downloads.factory.ai/factory-cli/releases/0.221.0/darwin/x64/droid"
 
 [[tools.node]]
 version = "24.21.0"
