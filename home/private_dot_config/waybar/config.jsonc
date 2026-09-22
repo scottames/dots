@@ -4,13 +4,13 @@
   "position": "top",
   "modules-left": [
     "niri/workspaces",
-    "niri/window",
-    "custom/music"
+    "niri/window"
   ],
   "modules-center": [
     "clock"
   ],
   "modules-right": [
+    "custom/music",
     "tray",
     "power-profiles-daemon",
     "cpu",
@@ -28,7 +28,13 @@
   ],
   "niri/window": {
     "icon": true,
-    "format": ""
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "🌎 $1",
+      "(.*) — Zen Browser": "🌎 $1",
+      "(.*) — zsh": " [$1]",
+      "(.*) — fish": " [$1]"
+    }
   },
   "niri/workspaces": {
     "format": "{icon}",
@@ -75,11 +81,11 @@
     ]
   },
   "custom/music": {
-    "format": "  {}",
+    "format": "  {} ",
     "escape": true,
     "interval": 5,
     "tooltip": false,
-    "exec": "playerctl metadata --format='{{ title }}'",
+    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
     "on-click": "playerctl play-pause",
     "max-length": 50
   },
