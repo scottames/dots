@@ -60,6 +60,8 @@
 {{- if ne $workNotebook "" -}}
 {{-   $allowPaths = append $allowPaths $workNotebook -}}
 {{- end -}}
+{{- /* SQLite (opencode) uses /var/tmp for disk-backed temporary data, including large session forks. */ -}}
+{{- $allowPaths = append $allowPaths "/var/tmp" -}}
 {{- /* just/justfile requires read/write */ -}}
 {{- $allowPaths = append $allowPaths "/run/user/1000/just" -}}
 {{- /* Neovim needs read+write state access because ShaDa merges existing state before writing. */ -}}

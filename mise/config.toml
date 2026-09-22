@@ -28,6 +28,7 @@ package_manager = "aube"
 
 [env]
 FACTORY_DROID_AUTO_UPDATE_ENABLED = "false"
+OPENCODE_DISABLE_AUTOUPDATE = "1"
 
 [tools]
 
@@ -199,9 +200,6 @@ amazon-ecr-credential-helper = "0.12.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.115.1"
-# The open source coding agent
-#  https://github.com/anomalyco/opencode
-"aqua:sst/opencode" = "1.18.31"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -311,3 +309,19 @@ linux-arm64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ vers
 linux-x64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/linux/x64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/linux/x64/droid.sha256" }
 macos-arm64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/arm64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/arm64/droid.sha256" }
 macos-x64 = { url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/x64/droid", checksum_url = "https://downloads.factory.ai/factory-cli/releases/{{ version }}/darwin/x64/droid.sha256" }
+
+
+# The open source coding agent
+#  https://github.com/anomalyco/opencode
+#  https://opencode.ai/v2/docs/cli
+[tools."http:opencode"]
+version = "2.0.8"
+os = ["linux", "macos"]
+
+[tools."http:opencode".platforms]
+# HTTP platform overrides match OS/arch, including their baseline/musl variants.
+# Linux hosts require glibc; baseline x64 builds also work without AVX2.
+linux-arm64 = { url = "https://opencode.ai/files/bin/{{ version }}/opencode-linux-arm64.tar.gz", checksum = "sha256:6674454f5250d5784e7a0c61c2838c550e362b119a9207eaa167fe59a4de947c" }
+linux-x64 = { url = "https://opencode.ai/files/bin/{{ version }}/opencode-linux-x64-baseline.tar.gz", checksum = "sha256:ff381e3b462a46b3ebdb348105041217d413ab152e98fff93a399c94a989d2e5" }
+macos-arm64 = { url = "https://opencode.ai/files/bin/{{ version }}/opencode-darwin-arm64.zip", checksum = "sha256:43699eca8ca0752eafa5d0fbd55f48a2d60df534619bb410b7b7692ac0ef9299" }
+macos-x64 = { url = "https://opencode.ai/files/bin/{{ version }}/opencode-darwin-x64-baseline.zip", checksum = "sha256:4f722aef0d9a4e99bf3dae6c9e266ef5df49aaf90a0f26591e958ae958d6176f" }

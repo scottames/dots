@@ -185,8 +185,9 @@ abbr -a nmap_web_safe_osscan "sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy "
 abbr -a nosleep "systemd-inhibit --what=handle-lid-switch sleep 2592000" # disable systemd sleep
 abbr -a nncl "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude"
 abbr -a nnclc "nono-with-local-path wrap --profile claude-local --allow-cwd -- claude --continue"
-abbr -a nno "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode"
-abbr -a nnoc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --continue"
+abbr -a nno "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --standalone"
+abbr -a nnoa "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --standalone --auto"
+abbr -a nnoc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --standalone --continue"
 abbr -a nncx "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex"
 abbr -a nncxc "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex resume --last"
 abbr -a nnp nono-pi
