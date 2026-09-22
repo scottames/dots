@@ -49,19 +49,51 @@ jobs:
           mise install aqua:astral-sh/uv
           mise lock
       - name: push lockfile changes
-        uses: IAreKyleW00t/verified-bot-commit@42a042b0407248f3c0acac00c389e729e3476e86 # v2.3.5
-        id: commit
-        with:
-          token: ${{ steps.generate-token.outputs.token }}
-          ref: ${{ github.event.pull_request.head.ref }}
-          message: "chore(mise): lock"
-          files: |
-            mise/mise.lock
-            mise/.mise/locks/**
-          if-no-commit: notice
-          update-local: false
-      - name: require checks on updated lockfile
-        if: steps.commit.outputs.ref != ''
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          PR_BRANCH: ${{ github.event.pull_request.head.ref }}
+        shell: bash
         run: |
+          paths=(mise/mise.lock mise/.mise/locks)
+          git add --all -- "${paths[@]}"
+          if git diff --cached --quiet -- "${paths[@]}"; then
+            echo "::notice ::No lockfile changes"
+            exit 0
+          fi
+          python3 - "${paths[@]}" > "${RUNNER_TEMP}/mise-commit.json" <<'PY'
+          import base64
+          import json
+          import os
+          import subprocess
+          import sys
+
+          def git(*args):
+              return subprocess.check_output(["git", *args])
+
+          changes = git("diff", "--cached", "--no-renames", "--name-status", "-z",
+                        "--", *sys.argv[1:]).split(b"\0")[:-1]
+          additions, deletions = [], []
+          for status, raw_path in zip(changes[::2], changes[1::2]):
+              path = raw_path.decode("utf-8")
+              if status == b"D":
+                  deletions.append({"path": path})
+              else:
+                  content = base64.b64encode(git("show", ":" + path)).decode("ascii")
+                  additions.append({"path": path, "contents": content})
+          payload = {
+              "branch": {"repositoryNameWithOwner": os.environ["GH_REPO"],
+                         "branchName": os.environ["PR_BRANCH"]},
+              "expectedHeadOid": git("rev-parse", "HEAD").decode().strip(),
+              "message": {"headline": "chore(mise): lock"},
+              "fileChanges": {"additions": additions, "deletions": deletions},
+          }
+          query = """mutation($input: CreateCommitOnBranchInput!) {
+            createCommitOnBranch(input: $input) { commit { url } }
+          }"""
+          json.dump({"query": query, "variables": {"input": payload}}, sys.stdout)
+          PY
+          gh api graphql --input "${RUNNER_TEMP}/mise-commit.json" \
+            --jq '.data.createCommitOnBranch.commit.url // error("No commit returned")'
           echo "::notice ::Lockfile changes pushed; checks will run on the new commit"
           exit 1
