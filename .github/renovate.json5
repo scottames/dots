@@ -3,10 +3,11 @@
   extends: [ // make sure above rules take priority
     'github>scottames/renovate:default.json5',
   ],
-  // This repository's only npm lockfile is the reviewed Pi extension tree.
+  // The reviewed Pi extension tree is the only Renovate-managed npm lockfile.
   npmrc: 'registry=https://registry.npmjs.org/\nlegacy-peer-deps=true\nignore-scripts=true',
   ignorePaths: [
     '.dagger/go.mod',
+    'mise/.mise/locks/**',
   ],
   gitIgnoredAuthors: [
     '162828115+scottames-github-bot[bot]@users.noreply.github.com',
@@ -21,7 +22,6 @@
       managerFilePatterns: [
         '/^home\\/\\.chezmoiexternals\\/[^/]+\\.toml(?:\\.tmpl)?$/',
         '/^home\\/\\.chezmoidata\\/versions\\.toml$/',
-        '/^\\.github\\/workflows\\/pr_mise_lock\\.yaml$/',
       ],
       matchStrings: [
         'renovate:(\\sdatasource=(?<datasource>.*?))?\\sdepName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+.*?[vV][eE][rR][sS][iI][oO][nN]\\s?[:=]+\\s*[\'\"]?(?<currentValue>[^\'\" \\n]+)[\'\"]?\\s',
@@ -91,6 +91,11 @@
       enabled: false,
     },
     {
+      // CI publishes mise.lock and its sidecars together, including Droid updates.
+      matchFileNames: ['mise/config.toml'],
+      skipArtifactsUpdate: true,
+    },
+    {
       matchFileNames: [
         'mise/**',
         '**/mise.toml',
@@ -99,6 +104,12 @@
       commitMessageTopic: '⬆️ mise-packages',
       automerge: true,
       schedule: ["* 3-5 * * *"],
+    },
+    {
+      // This separate config is not locked by pr_mise_lock; keep its artifacts native.
+      matchFileNames: ['home/dot_local/share/private_vet/mise.toml'],
+      groupName: '⬆️ vet-packages',
+      commitMessageTopic: '⬆️ vet-packages',
     },
     {
       matchManagers: ['mise', 'custom.regex'],
@@ -113,6 +124,8 @@
       automerge: false,
       separateMajorMinor: false,
       schedule: ["* 3-5 * * *"],
+      // Every upgrade in this mixed mise/regex group must skip artifacts.
+      skipArtifactsUpdate: true,
     },
     {
       // git-refs has no release timestamps; waive the inherited age gate only here.

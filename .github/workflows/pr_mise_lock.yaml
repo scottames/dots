@@ -3,29 +3,25 @@ name: mise
 on:
   pull_request:
     paths:
+      - .github/workflows/pr_mise_lock.yaml
       - mise/config.toml
       - mise/mise.lock
       - mise/.mise/locks/**
-permissions: read-all
+permissions:
+  contents: read
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-env:
-  MISE_EXPERIMENTAL: true
 jobs:
   lock:
     if: "! github.event.pull_request.head.repo.fork"
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
       # yamllint disable-line rule:line-length
       - name: Generate GitHub token
         # https://github.com/actions/create-github-app-token
         uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: generate-token
-        if: "! github.event.pull_request.head.repo.fork"
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
@@ -40,11 +36,11 @@ jobs:
         uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
         with:
           # renovate: datasource=github-releases depName=jdx/mise
-          version: 2026.9.10
-          install: true
-          install_args: aqua:int128/ghcp
-          cache: true
-          experimental: true
+          version: 2026.9.12
+          install: false
+          # Lock generation needs no exported tool paths from the stale lock.
+          env: false
+          cache: false
           github_token: ${{ steps.generate-token.outputs.token }}
       - name: mise lock
         env:
@@ -53,27 +49,19 @@ jobs:
           mise install aqua:astral-sh/uv
           mise lock
       - name: push lockfile changes
-        env:
-          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+        uses: IAreKyleW00t/verified-bot-commit@42a042b0407248f3c0acac00c389e729e3476e86 # v2.3.5
+        id: commit
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          message: "chore(mise): lock"
+          files: |
+            mise/mise.lock
+            mise/.mise/locks/**
+          if-no-commit: notice
+          update-local: false
+      - name: require checks on updated lockfile
+        if: steps.commit.outputs.ref != ''
         run: |
-          set -euo pipefail
-
-          # Version 1 lockfiles do not generate a sidecar directory.
-          mkdir -p mise/.mise/locks
-          git add --all -- mise/mise.lock mise/.mise/locks
-          if git diff --cached --quiet; then
-            echo "::notice ::No lockfile changes needed"
-            exit 0
-          fi
-
-          # ponytail: ghcp cannot delete files; handle deletions manually.
-          if ! git diff --cached --no-renames --diff-filter=D --quiet; then
-            echo "::error ::ghcp cannot delete files; commit lockfile changes manually"
-            exit 1
-          fi
-
-          mapfile -d '' -t files < <(git diff --cached --name-only --no-renames -z)
-          ghcp commit -r "${GITHUB_REPOSITORY}" -b "${GITHUB_HEAD_REF}" \
-            -m "chore(mise): lock" "${files[@]}"
           echo "::notice ::Lockfile changes pushed; checks will run on the new commit"
           exit 1

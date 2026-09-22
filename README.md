@@ -15,7 +15,7 @@
 
 ## 🚀 init
 
-Requirements: `curl`, `git`, and `mise`
+Requirements: `curl`, `git`, and `mise` >= 2026.9.12
 
 > 🙈 Don't do this at home.
 

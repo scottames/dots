@@ -1,11 +1,13 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
+# Includes the v2 global-lockfile symlink fix; keep installers at least this new.
+min_version = "2026.9.12"
+
 [settings]
 experimental = true
 lockfile = true
 locked_verify_provenance = true
-## cannot enforce until all used backends support lock (npm/pipx)
-## https://mise.jdx.dev/dev-tools/mise-lock.html#backend-support
+# V2 sidecars freeze npm/aube and Python/uv dependency graphs.
 locked = true
 
 # Optional “paranoid” hardening + signature verification

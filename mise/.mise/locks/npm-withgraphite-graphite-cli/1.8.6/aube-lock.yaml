@@ -1,0 +1,74 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@withgraphite/graphite-cli':
+        specifier: 1.8.6
+        version: 1.8.6
+
+packages:
+
+  '@withgraphite/graphite-cli-darwin-arm64@1.8.6':
+    resolution: {integrity: sha512-d2XdL4OBaSCapc60IKgOVXV58R+SsYdeTzvnsU+uznp9QOManvGtHDgsgGV2amdoYfNYpTWyF/7hx4fKAncOcw==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+
+  '@withgraphite/graphite-cli-darwin-x64@1.8.6':
+    resolution: {integrity: sha512-xFeWtXhT6fh0iv+iWNMzdAQCI3h0L+zy3TmlUwgtYaO++zHSvwfGs2YCowY+cMtq14zzCC4j2H0iWvfdW/dEXw==}
+    cpu: [x64]
+    os: [darwin]
+    hasBin: true
+
+  '@withgraphite/graphite-cli-linux-arm64@1.8.6':
+    resolution: {integrity: sha512-1w+yi0VPzt52FIzQNLyXdsnhiScarLSqsNwiB6qD9LNaVmNSKKTzrlzKYhvP2i+Qeq7R16y2EvkhuLibBXO3oA==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+
+  '@withgraphite/graphite-cli-linux-x64@1.8.6':
+    resolution: {integrity: sha512-nlP3NL3oG5TnWWR5WrPMVnAx7Bksr8/zpMFtJ+mpUXEDYr/Y73z+hYQk8sqEs8xpIsRPXc92mwBZBMsL9nlH8Q==}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
+
+  '@withgraphite/graphite-cli-win32-x64@1.8.6':
+    resolution: {integrity: sha512-HFygjftw3knJwqcREBRSwi09MNMSBBLtS/9IQgodptoxFqhSicnw9Yn9XJYOghUYXENvMajjTpMOblQxWsmlhQ==}
+    cpu: [x64]
+    os: [win32]
+    hasBin: true
+
+  '@withgraphite/graphite-cli@1.8.6':
+    resolution: {integrity: sha512-VGYE6fGpLysi3yaHLeAJd8W59ymrBfFRrgBYx0duLBKf4iyQ7Jf/j32tXq1/HpojMf+Ffl2I3qnE/BwIYm+tIw==}
+    hasBin: true
+
+snapshots:
+
+  '@withgraphite/graphite-cli-darwin-arm64@1.8.6':
+    optional: true
+
+  '@withgraphite/graphite-cli-darwin-x64@1.8.6':
+    optional: true
+
+  '@withgraphite/graphite-cli-linux-arm64@1.8.6':
+    optional: true
+
+  '@withgraphite/graphite-cli-linux-x64@1.8.6':
+    optional: true
+
+  '@withgraphite/graphite-cli-win32-x64@1.8.6':
+    optional: true
+
+  '@withgraphite/graphite-cli@1.8.6':
+    optionalDependencies:
+      '@withgraphite/graphite-cli-darwin-arm64': 1.8.6
+      '@withgraphite/graphite-cli-darwin-x64': 1.8.6
+      '@withgraphite/graphite-cli-linux-arm64': 1.8.6
+      '@withgraphite/graphite-cli-linux-x64': 1.8.6
+      '@withgraphite/graphite-cli-win32-x64': 1.8.6
