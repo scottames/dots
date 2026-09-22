@@ -58,6 +58,14 @@ lint:
             - 0
   ignore:
     - linters:
+        - prettier
+        - taplo
+        - yamllint
+      paths:
+        # Native generated graphs: changing bytes invalidates mise.lock digests.
+        # Keep security/dependency scanning enabled.
+        - mise/.mise/locks/**
+    - linters:
         - ALL
       paths:
         # chezmoi theme fragments: Go templates that happen to carry a .css /
@@ -94,6 +102,6 @@ lint:
 runtimes:
   enabled:
     - go@1.21.0
-    - rust@1.85.0
+    - rust@1.98.1
     - node@22.16.0
     - python@3.14.4

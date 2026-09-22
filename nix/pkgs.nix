@@ -8,7 +8,7 @@
     ghostty-bin
     gnupg
     gnugrep
-    mise
+    (callPackage ./mise.nix { })
     nodejs
     nushell
     nixfmt-rfc-style
