@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       bash-language-server:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.8.1
+        version: 5.8.1
 
 packages:
 
@@ -36,8 +36,8 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  bash-language-server@5.8.0:
-    resolution: {integrity: sha512-zdbIsxWTZcDipT/qsU6qw1GP25ORdvI7XFvplZR5eR0S+x5cBuodYjASUq+ca+s9GPXZYGQ2TRG8cZAHYKAjcQ==}
+  bash-language-server@5.8.1:
+    resolution: {integrity: sha512-F3g0hKZhCiKbLUf9wkrST6+ZypsHvJqaJxw/+J7WK2ywhFyc8+7jSHSTU1UDYncZkyWgbKV6+eZy5qWTZtoXww==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -170,7 +170,7 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  bash-language-server@5.8.0:
+  bash-language-server@5.8.1:
     dependencies:
       editorconfig: 3.0.2
       fast-glob: 3.3.3
