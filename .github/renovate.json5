@@ -78,10 +78,11 @@
         '/^home/\\.chezmoiexternals/herdr\\.toml\\.tmpl$/',
       ],
       matchStrings: [
-        '(?:^|\\n)# renovate: datasource=git-refs depName=(?<depName>[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+) currentValue=(?<currentValue>\\S+)\\r?\\n\\{\\{ \\$[A-Za-z_][A-Za-z0-9_]* := "(?<currentDigest>[a-f0-9]{40})" -\\}\\}',
+        '(?:^|\\n)# renovate: datasource=github-digest depName=(?<depName>[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+) currentValue=(?<currentValue>\\S+)\\r?\\n\\{\\{ \\$[A-Za-z_][A-Za-z0-9_]* := "(?<currentDigest>[a-f0-9]{40})" -\\}\\}',
       ],
-      datasourceTemplate: 'git-refs',
-      packageNameTemplate: 'https://github.com/{{{depName}}}',
+      datasourceTemplate: 'github-digest',
+      packageNameTemplate: '{{{depName}}}',
+      versioningTemplate: 'exact',
     },
   ],
   packageRules: [
@@ -126,14 +127,6 @@
       schedule: ["* 3-5 * * *"],
       // Every upgrade in this mixed mise/regex group must skip artifacts.
       skipArtifactsUpdate: true,
-    },
-    {
-      // git-refs has no release timestamps; waive the inherited age gate only here.
-      matchManagers: ['custom.regex'],
-      matchDatasources: ['git-refs'],
-      matchDepNames: ['plannotator/herdr-annotate'],
-      minimumReleaseAge: '0 days',
-      minimumReleaseAgeBehaviour: 'timestamp-optional',
     },
     {
       matchManagers: ['mise'],
