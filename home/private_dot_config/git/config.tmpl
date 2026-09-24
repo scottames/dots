@@ -53,6 +53,10 @@
 # last-one-wins, and this sets dark/light per theme.
 [include]
     path = ~/.config/themes/current/delta.gitconfig
+[rerere]
+	enabled = true
+[rebase]
+	autoStash = true
 [alias]
   add-fzf = "!f(){ git add $(git ls-files --modified --others --exclude-standard | fzf -m --preview 'git diff --color=always {} | delta');}; f"
   alias = "!git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /"

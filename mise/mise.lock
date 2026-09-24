@@ -3827,6 +3827,80 @@ url = "https://github.com/backnotprop/plannotator/releases/download/v0.27.18/pla
 url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/582407419"
 provenance = "github-attestations"
 
+[[tools."github:cesarferreira/stax"]]
+version = "0.113.1"
+backend = "github:cesarferreira/stax"
+specifiers = [
+    "0.113.1",
+    "latest",
+]
+
+[tools."github:cesarferreira/stax"."platforms.linux-arm64"]
+checksum = "sha256:e371f2ea9ed2128347540ab9293f4440b879c1ad28fbc8e71f5d607dc900346b"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096919"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.linux-arm64-musl"]
+checksum = "sha256:e371f2ea9ed2128347540ab9293f4440b879c1ad28fbc8e71f5d607dc900346b"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096919"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.linux-x64"]
+checksum = "sha256:42bf8f63b7253c5e41cc9e76c8d388a21dc85521c6d1339d2344b65446e8c27f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096921"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.linux-x64-baseline"]
+checksum = "sha256:42bf8f63b7253c5e41cc9e76c8d388a21dc85521c6d1339d2344b65446e8c27f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096921"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.linux-x64-musl"]
+checksum = "sha256:42bf8f63b7253c5e41cc9e76c8d388a21dc85521c6d1339d2344b65446e8c27f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096921"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:42bf8f63b7253c5e41cc9e76c8d388a21dc85521c6d1339d2344b65446e8c27f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096921"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.macos-arm64"]
+checksum = "sha256:865f69488b3cc6daf2a259c842bd0c6a6c0dc5b69b70b4fd3d5aae12213293a2"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096924"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.macos-x64"]
+checksum = "sha256:c0a4a4d830afda8f6126c65d597eaf20864ad29ba224c33838472d028bf7d7d7"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096920"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.macos-x64-baseline"]
+checksum = "sha256:c0a4a4d830afda8f6126c65d597eaf20864ad29ba224c33838472d028bf7d7d7"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096920"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.windows-x64"]
+checksum = "sha256:6f0913d04ee632de9719a4e17208b52235b1f9309e529d59ee46114873bbd5d8"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096926"
+provenance = "github-attestations"
+
+[tools."github:cesarferreira/stax"."platforms.windows-x64-baseline"]
+checksum = "sha256:6f0913d04ee632de9719a4e17208b52235b1f9309e529d59ee46114873bbd5d8"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.113.1/stax-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/566096926"
+provenance = "github-attestations"
+
 [[tools."github:dlvhdr/gh-dash"]]
 version = "4.26.0"
 backend = "github:dlvhdr/gh-dash"

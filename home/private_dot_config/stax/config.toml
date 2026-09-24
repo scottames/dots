@@ -1,0 +1,75 @@
+[branch]
+date = false
+date_format = "%m-%d"
+replacement = "-"
+lowercase = true
+stale_days = 30
+
+[remote]
+name = "origin"
+base_url = "https://github.com"
+auto_fork = false
+
+[submit]
+stack_links = "comment"
+native_stack = "auto"
+stack_links_when_native = "keep"
+single_stack = "on"
+commit_messages_in_body = true
+
+[ci]
+alert = true
+
+[ui]
+tips = true
+
+[display]
+worktree_glyph = "tree"
+
+[ai.generate]
+agent = "codex"
+model = "gpt-6-luna"
+
+[ai.standup]
+agent = "codex"
+model = "gpt-6-luna"
+
+[ai.resolve]
+agent = "codex"
+model = "gpt-6-luna"
+
+[ai.lane]
+agent = "opencode"
+model = "openai/gpt-6-sol"
+
+[auth]
+use_gh_cli = true
+allow_github_token_env = false
+
+[worktree]
+root_dir = ".."
+reuse_slots = true
+max_idle_slots = 4
+
+[worktree.hooks]
+# TODO: move wt command
+# TODO: make thts hook skip if thts not in main
+post_start = """
+wt step copy-ignored
+command -v thts && thts init --no-agents --force
+test -f .trunk/trunk.yaml && trunk check
+"""
+
+[git]
+rerere = true
+
+[restack]
+preflight_auto_repair = true
+preflight_warn = true
+
+[skills]
+# Unset = auto (detected + already installed).
+# harnesses = ["claude", "codex", "opencode", "pi"]
+
+[board]
+mine_only = true

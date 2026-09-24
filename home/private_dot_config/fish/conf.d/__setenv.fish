@@ -4,6 +4,7 @@ set -q XDG_CONFIG_HOME[1] \
     || set -x XDG_CONFIG_HOME "$HOME/.config"
 
 set -x FISH_CONFIG "$XDG_CONFIG_HOME/fish"
+set -x SHELL fish
 
 set _setenv "$HOME/.setenv"
 if test -f $_setenv

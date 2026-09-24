@@ -4,7 +4,7 @@ set -l repo_root (path dirname (path dirname (path dirname (status filename))))
 set -l function_dir "$repo_root/home/private_dot_config/fish/custom_functions.d"
 set -l tmpdir (mktemp -d)
 set -l fakebin "$tmpdir/bin"
-set -l gh_log "$tmpdir/gh.log"
+set -l stax_log "$tmpdir/stax.log"
 set -l gt_log "$tmpdir/gt.log"
 
 mkdir -p "$fakebin" "$tmpdir/remotes" "$tmpdir/github.com/scottames/dots" "$tmpdir/legacy/github.com/scottames/dots" "$tmpdir/no-hooks" "$tmpdir/home"
@@ -15,14 +15,14 @@ end
 
 set -gx HOME "$tmpdir/home"
 set -gx PATH "$fakebin" /usr/bin /bin
-set -gx GIT_STATUS_TEST_GH_LOG "$gh_log"
+set -gx GIT_STATUS_TEST_STAX_LOG "$stax_log"
 set -gx GIT_STATUS_TEST_GT_LOG "$gt_log"
 set fish_function_path "$function_dir" $fish_function_path
 
 printf '%s\n' '#!/usr/bin/env bash' \
-    'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_GH_LOG"' \
-    'if [[ "$*" == "stack view --short" ]]; then printf "stack-short-output\n"; exit "${GIT_STATUS_TEST_GH_EXIT:-0}"; fi' >"$fakebin/gh"
-chmod +x "$fakebin/gh"
+    'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_STAX_LOG"' \
+    'if [[ "$*" == "status --current --quiet" ]]; then printf "stax-status-output\n"; exit "${GIT_STATUS_TEST_STAX_EXIT:-0}"; fi' >"$fakebin/stax"
+chmod +x "$fakebin/stax"
 printf '%s\n' '#!/usr/bin/env bash' \
     'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_GT_LOG"' \
     'printf "graphite-output\n"' \
@@ -94,53 +94,73 @@ assert_contains "$normal_output" "$normal_feature" 'fallback git worktree list i
 assert_contains "$normal_path_line" '[dots]' 'normal main path highlights repo name'
 assert_not_contains "$normal_path_line" '[main]' 'normal main path does not highlight main as project'
 
-set -gx GH_STACK_ENABLED true
-set -gx HAS_GH true
-set -gx HAS_GH_STACK true
+mkdir -p "$normal_main/.git/stax"
 set -gx GRAPHITE_ENABLED true
 set -gx HAS_GT true
 pushd "$normal_main" >/dev/null
-set -l stack_output (git_status --short)
+set -l uninitialized_output (git_status --short)
 popd >/dev/null
-assert_contains "$stack_output" 'stack-short-output' 'enabled gh-stack status uses short view'
-assert_not_contains "$stack_output" 'graphite-output' 'GitHub Stack takes precedence over Graphite'
-set -l gh_calls (string trim -- (command cat "$gh_log"))
-if test "$gh_calls" != 'stack view --short'
-    printf 'ASSERTION FAILED: git_status invokes exactly gh stack view --short\nactual: %s\n' "$gh_calls" >&2
-    exit 1
-end
-if test -e "$gt_log"
-    printf 'ASSERTION FAILED: git_status does not invoke Graphite when GitHub Stack is selected\n' >&2
-    exit 1
-end
-
-command truncate -s 0 "$gh_log"
-set -gx HAS_GH false
-pushd "$normal_main" >/dev/null
-set -l graphite_output (git_status --short)
-popd >/dev/null
-assert_contains "$graphite_output" 'graphite-output' 'Graphite is used when GitHub Stack capability is incomplete'
-if test -s "$gh_log"
-    printf 'ASSERTION FAILED: git_status requires HAS_GH before invoking gh stack\n' >&2
+assert_contains "$uninitialized_output" 'graphite-output' 'uninitialized repo uses Graphite even when stax cache exists'
+if test -e "$stax_log"
+    printf 'ASSERTION FAILED: git_status does not invoke stax before init\n' >&2
     exit 1
 end
 
 command truncate -s 0 "$gt_log"
-set -gx HAS_GH true
-set -gx GIT_STATUS_TEST_GH_EXIT 1
-touch "$normal_main/status-proof"
+set -l trunk_blob (printf 'main' | command git -C "$normal_main" hash-object -w --stdin)
+command git -C "$normal_main" update-ref refs/stax/trunk "$trunk_blob"
 pushd "$normal_main" >/dev/null
-set -l failed_gh_output (git_status --short)
+set -l stack_output (git_status --short)
 popd >/dev/null
-assert_contains "$failed_gh_output" '?? status-proof' 'failed gh stack display continues to git status'
-assert_not_contains "$failed_gh_output" 'graphite-output' 'failed selected GitHub Stack mode does not switch modes'
+assert_contains "$stack_output" 'stax-status-output' 'stax status uses current stack view'
+assert_not_contains "$stack_output" 'graphite-output' 'stax takes precedence over Graphite'
+set -l stax_calls (string trim -- (command cat "$stax_log"))
+if test "$stax_calls" != 'status --current --quiet'
+    printf 'ASSERTION FAILED: git_status invokes exactly stax status --current --quiet\nactual: %s\n' "$stax_calls" >&2
+    exit 1
+end
 if test -s "$gt_log"
-    printf 'ASSERTION FAILED: git_status does not invoke Graphite after selected gh stack fails\n' >&2
+    printf 'ASSERTION FAILED: git_status does not invoke Graphite when stax is selected\n' >&2
     exit 1
 end
 
-set -e GIT_STATUS_TEST_GH_EXIT
-set -gx GH_STACK_ENABLED false
+command truncate -s 0 "$stax_log"
+pushd "$normal_feature" >/dev/null
+set -l worktree_output (git_status --short)
+popd >/dev/null
+assert_contains "$worktree_output" 'stax-status-output' 'linked worktree sees shared stax initialization'
+if test (string trim -- (command cat "$stax_log")) != 'status --current --quiet'
+    printf 'ASSERTION FAILED: linked worktree invokes stax exactly once\n' >&2
+    exit 1
+end
+
+command truncate -s 0 "$stax_log"
+mv "$fakebin/stax" "$tmpdir/stax"
+pushd "$normal_main" >/dev/null
+set -l graphite_output (git_status --short)
+popd >/dev/null
+assert_contains "$graphite_output" 'graphite-output' 'Graphite is used when stax is unavailable'
+if test -s "$stax_log"
+    printf 'ASSERTION FAILED: git_status does not invoke stax when unavailable\n' >&2
+    exit 1
+end
+
+command truncate -s 0 "$gt_log"
+mv "$tmpdir/stax" "$fakebin/stax"
+set -gx GIT_STATUS_TEST_STAX_EXIT 1
+touch "$normal_main/status-proof"
+pushd "$normal_main" >/dev/null
+set -l failed_stax_output (git_status --short)
+popd >/dev/null
+assert_contains "$failed_stax_output" '?? status-proof' 'failed stax display continues to git status'
+assert_not_contains "$failed_stax_output" 'graphite-output' 'failed selected stax mode does not switch modes'
+if test -s "$gt_log"
+    printf 'ASSERTION FAILED: git_status does not invoke Graphite after selected stax fails\n' >&2
+    exit 1
+end
+
+set -e GIT_STATUS_TEST_STAX_EXIT
+mv "$fakebin/stax" "$tmpdir/stax"
 set -gx GIT_STATUS_TEST_GT_EXIT 1
 pushd "$normal_main" >/dev/null
 set -l failed_gt_output (git_status --short)

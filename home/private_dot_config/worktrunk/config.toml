@@ -14,6 +14,46 @@ template = "{{ vars.agent }}"
 width = 10
 priority = 3
 
+# Stax lifecycle: before switch, remember; before start, track; after removal, forget.
+# 1. Before Worktrunk creates anything, mark a missing local branch with the
+#    per-branch stax-new variable. Clear stale markers for existing branches.
+#    Skip remote-only names: opening one and --create shadowing it look the
+#    same here. This gate matters because post-start means "new worktree," not
+#    "new branch"; {{ base }} could otherwise be the worktree we came from.
+[pre-switch]
+stax_new = '''
+{% if target %}
+if command -v stax >/dev/null 2>&1 &&
+   git show-ref --verify --quiet refs/stax/trunk &&
+   git check-ref-format --branch {{ target }} >/dev/null 2>&1 &&
+   ! git show-ref --verify --quiet refs/heads/{{ target }} &&
+   ! git for-each-ref --format='%(refname:strip=3)' refs/remotes | grep -Fxq -- {{ target }}; then
+  wt config state vars set stax-new=1 --branch {{ target }}
+else
+  wt config state vars clear stax-new --branch {{ target }}
+fi
+{% endif %}
+'''
+
+# 2. In the new worktree, consume the marker and track it under the resolved
+#    creation base. No marker means an existing branch merely gained a worktree:
+#    leave its parent alone. Require a local base and skip already-tracked
+#    branches. Pre-start blocks, so this finishes before --execute opens Herdr.
+[pre-start]
+stax_track = '''
+if [ "$(wt config state vars get stax-new --branch {{ branch }} 2>/dev/null)" = 1 ]; then
+  wt config state vars clear stax-new --branch {{ branch }}
+  {% if base %}
+  if command -v stax >/dev/null 2>&1 &&
+     git show-ref --verify --quiet refs/stax/trunk &&
+     git show-ref --verify --quiet refs/heads/{{ base }} &&
+     ! git show-ref --verify --quiet refs/branch-metadata/{{ branch }}; then
+    stax branch track --parent {{ base }}
+  fi
+  {% endif %}
+fi
+'''
+
 [post-start]
 copy_ignored = "wt step copy-ignored"
 thts = "command -v thts && thts init --no-agents --force"
@@ -21,6 +61,20 @@ trunk = """
 test -f .trunk/trunk.yaml && trunk check
 """
 graphite_track = 'if [ "${GRAPHITE_ENABLED:-}" = true ]; then gt track; fi'
+
+# 3. Forget stax metadata only after Git deleted the branch. Worktrunk can
+#    remove a worktree but retain its branch (--no-delete-branch or unmerged);
+#    those branches must keep their tracking. Stax can untrack a deleted ref.
+[post-remove]
+stax_untrack = '''
+{% if branch %}
+if command -v stax >/dev/null 2>&1 &&
+   ! git show-ref --verify --quiet refs/heads/{{ branch }} &&
+   git show-ref --verify --quiet refs/branch-metadata/{{ branch }}; then
+  stax branch untrack {{ branch }}
+fi
+{% endif %}
+'''
 
 [projects]
 
