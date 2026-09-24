@@ -29,5 +29,10 @@
     "model.list": "<leader>m",
     "agent.list": "<leader>a",
     "prompt.submit": "return"
+  },
+  "tabs": {
+    "layout": "horizontal",
+    "enabled": false,
+    "scope": "cwd"
   }
 }
