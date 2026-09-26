@@ -4609,64 +4609,64 @@ url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite
 url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303187"
 
 [[tools."github:plannotator/plannotator-tui"]]
-version = "0.8.0"
+version = "0.9.2"
 backend = "github:plannotator/plannotator-tui"
-specifiers = ["v0.8.0"]
+specifiers = ["v0.9.2"]
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-arm64"]
-checksum = "sha256:23f91e5b1e5d04a1ac41f1d8f50ebf4c20f0461141952862972a630ef690e18e"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-aarch64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143424"
+checksum = "sha256:ef579f63c24bbe474019be3cc5cc5a5bd0541eb79391b190957e50ab6ea0edb3"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-aarch64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868086"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-arm64-musl"]
-checksum = "sha256:23f91e5b1e5d04a1ac41f1d8f50ebf4c20f0461141952862972a630ef690e18e"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-aarch64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143424"
+checksum = "sha256:ef579f63c24bbe474019be3cc5cc5a5bd0541eb79391b190957e50ab6ea0edb3"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-aarch64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868086"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:874ecabaa35e3ace549d5bf3c7383fa4d1288ba06b36e9f04eb4f4b7b55229a5"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868108"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64-baseline"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:874ecabaa35e3ace549d5bf3c7383fa4d1288ba06b36e9f04eb4f4b7b55229a5"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868108"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64-musl"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:874ecabaa35e3ace549d5bf3c7383fa4d1288ba06b36e9f04eb4f4b7b55229a5"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868108"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:874ecabaa35e3ace549d5bf3c7383fa4d1288ba06b36e9f04eb4f4b7b55229a5"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868108"
 
 [tools."github:plannotator/plannotator-tui"."platforms.macos-arm64"]
-checksum = "sha256:7d057f3a1a3aa23cb0a44843fed3f04d498a1da52197cdec0212c6f8e1618cb2"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-aarch64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143426"
+checksum = "sha256:79c8801babac5cd257034036536bbcf51a7b4cd8d06b437f1e85713714521eb0"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-aarch64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868087"
 
 [tools."github:plannotator/plannotator-tui"."platforms.macos-x64"]
-checksum = "sha256:6b6084d16ed8aa09915892f907e58186a6ec69c560752cff9d042bdcbb62820f"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143425"
+checksum = "sha256:36ef05666c066db7c32759c8d6eebe62237117b88748818463fa2acf94ef5834"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868090"
 
 [tools."github:plannotator/plannotator-tui"."platforms.macos-x64-baseline"]
-checksum = "sha256:6b6084d16ed8aa09915892f907e58186a6ec69c560752cff9d042bdcbb62820f"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143425"
+checksum = "sha256:36ef05666c066db7c32759c8d6eebe62237117b88748818463fa2acf94ef5834"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868090"
 
 [tools."github:plannotator/plannotator-tui"."platforms.windows-x64"]
-checksum = "sha256:78ab14b4f8abb065be202336528e0c375f37961e989ee7f1d40e739786cfaf01"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143437"
+checksum = "sha256:b9638d31d1dd82e12d46d5cabe96c8ae0039769b5c82db1d51881c4d841f8b49"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868104"
 
 [tools."github:plannotator/plannotator-tui"."platforms.windows-x64-baseline"]
-checksum = "sha256:78ab14b4f8abb065be202336528e0c375f37961e989ee7f1d40e739786cfaf01"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143437"
+checksum = "sha256:b9638d31d1dd82e12d46d5cabe96c8ae0039769b5c82db1d51881c4d841f8b49"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.2/plannotator-tui-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/579868104"
 
 [[tools."github:schpet/linear-cli"]]
 version = "2.6.0"
