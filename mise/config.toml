@@ -217,7 +217,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:backnotprop/plannotator" = "v0.27.18"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
-"github:plannotator/plannotator-tui" = { version = "v0.8.0", bin = "plannotator-tui", os = [
+"github:plannotator/plannotator-tui" = { version = "v0.9.2", bin = "plannotator-tui", os = [
   "linux",
   "macos",
 ] }
