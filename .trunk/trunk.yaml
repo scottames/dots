@@ -15,7 +15,7 @@ actions:
     - trunk-upgrade-available
 lint:
   enabled:
-    - golangci-lint2@2.13.2
+    - golangci-lint2@2.14.0
     - nixpkgs-fmt@1.3.0
     - oxipng@10.2.1
     - bandit@1.9.4
@@ -28,15 +28,15 @@ lint:
     - osv-scanner@2.6.0
     - svgo@4.1.0
     - terrascan@1.19.9
-    - trufflehog@3.97.5
+    - trufflehog@3.97.9
     - actionlint@1.7.12
     - git-diff-check@SYSTEM
     - gitleaks@8.30.1
     - gofmt@1.20.4
     - hadolint@2.15.1
     - markdownlint@0.49.1
-    - prettier@3.9.7
-    - renovate@44.97.1
+    - prettier@3.9.9
+    - renovate@44.112.3
     - shellcheck@0.11.0
     - shfmt@3.14.1
     - stylua@2.5.2
