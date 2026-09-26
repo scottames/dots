@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.54.0](https://github.com/scottames/dots/compare/v0.53.0...v0.54.0) (2026-09-26)
+
+
+### Updates & Misc Chores
+
+* **deps:** update ⬆️ aqua-packages ([#1076](https://github.com/scottames/dots/issues/1076)) ([192e953](https://github.com/scottames/dots/commit/192e953813466122752fc70c5b57e2d1d79d0d13))
+* **deps:** update ⬆️ aqua-packages to v4.562.0 ([#1071](https://github.com/scottames/dots/issues/1071)) ([0582ab0](https://github.com/scottames/dots/commit/0582ab0fad1595d62ab4a2e7407ca73b03b36d69))
+* **deps:** update ⬆️ aqua-packages to v4.565.0 ([#1080](https://github.com/scottames/dots/issues/1080)) ([bd9a756](https://github.com/scottames/dots/commit/bd9a7566bbb95af96c6b1a3f1341336a53100134))
+* **deps:** update ⬆️ github-actions to v24.21.0 ([#1069](https://github.com/scottames/dots/issues/1069)) ([940f20e](https://github.com/scottames/dots/commit/940f20ea65efb0c96d02f6ba7eeb75d3511ff24f))
+* **deps:** update ⬆️ mise-packages ([#1066](https://github.com/scottames/dots/issues/1066)) ([d344dbe](https://github.com/scottames/dots/commit/d344dbef533b26af8ed48be7c312f13ea7168595))
+* **deps:** update ⬆️ mise-packages ([#1072](https://github.com/scottames/dots/issues/1072)) ([01bd1ef](https://github.com/scottames/dots/commit/01bd1ef5a1650e315b6edb27139cea97efcd0eb5))
+* **deps:** update ⬆️ mise-packages ([#1074](https://github.com/scottames/dots/issues/1074)) ([8242502](https://github.com/scottames/dots/commit/82425023845e025d116341702932a5e9d829f16a))
+* **deps:** update ⬆️ mise-packages ([#1078](https://github.com/scottames/dots/issues/1078)) ([e716e0b](https://github.com/scottames/dots/commit/e716e0baee069f60d0419342653fcc8e07075cf8))
+* **deps:** update ⬆️ vet-packages to v1.1.178 ([#1081](https://github.com/scottames/dots/issues/1081)) ([a8878c5](https://github.com/scottames/dots/commit/a8878c59f0f49e458b32ecc2436ba2803c463882))
+* **deps:** update dependency max-baz/yubikey-touch-detector to v1.15.0 ([#1077](https://github.com/scottames/dots/issues/1077)) ([349a736](https://github.com/scottames/dots/commit/349a7367bb6843ed2701e13a03f345a7fbce8bd0))
+* **helix:** additional config ([2df03bc](https://github.com/scottames/dots/commit/2df03bc6fdc41f0f60584e71b8fc6e2291c4bbc3))
+* **mise:** bump herdr 0.9.1 ([8b6880b](https://github.com/scottames/dots/commit/8b6880bcad1e2513315b3ba11654f9be69891017))
+* **nvim:** lazy updates ([533c158](https://github.com/scottames/dots/commit/533c15831b66059287c1e3428452c55686ecf688))
+* **opencode:** allow find-docs skill use ([d89459c](https://github.com/scottames/dots/commit/d89459c299060f7dbf3d13b82416f7875a76cb8b))
+* **opencode:** disable tabs ([73a0bb9](https://github.com/scottames/dots/commit/73a0bb9dd7d2fbd1a2f9606b3bd47348baf1f7f7))
+* **renovate:** pin opencode to v1 ([0026d54](https://github.com/scottames/dots/commit/0026d54bf5da78f5fe48a27d14684c6dfeedde52))
+* **renovate:** use github-digest for plannotator/herdr-annotate ([515d9d4](https://github.com/scottames/dots/commit/515d9d4882aacbd096ab7eef92d5c59d117b8457))
+
+
+### Features
+
+* **herdr:** better window title ([92f5b79](https://github.com/scottames/dots/commit/92f5b79e564b316334c37b5ad616cd4422fc81f7))
+* **mise:** support v2 lockfiles and verified sidecar writeback ([#1073](https://github.com/scottames/dots/issues/1073)) ([f09473b](https://github.com/scottames/dots/commit/f09473b0c5b4332bbb44009f65290e6b45527994))
+* **opencode:** upgrade to v2 ([6da6ec2](https://github.com/scottames/dots/commit/6da6ec240aae553afee9a2f087399c732c71e9d7))
+* stax, stacked git branches ([04f7417](https://github.com/scottames/dots/commit/04f7417623f6c620886f32551c501000803c551a))
+* **waybar:** better titles + reorder ([5c88aab](https://github.com/scottames/dots/commit/5c88aaba93b0e561c46e2430bb9e4e92ebfdd1b5))
+
+
+### Bug Fixes
+
+* **nono/droid:** rm deprecated/missing interactive policy val ([fed276c](https://github.com/scottames/dots/commit/fed276c681e16939277632fe6e4613925a286f6f))
+* **nono:** correct legacy config in profiles ([65ff663](https://github.com/scottames/dots/commit/65ff6634ce8aa372c8b9905ab9d4d8f1aa1ad70d))
+
 ## [0.53.0](https://github.com/scottames/dots/compare/v0.52.0...v0.53.0) (2026-09-17)
 
 
