@@ -153,7 +153,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:ogulcancelik/herdr" = "0.9.1"
 # Native runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/herdr-annotate
-"github:plannotator/herdr-annotate" = { version = "rust-lite-v0.1.0", bin = "herdr-annotate", prerelease = true, os = [
+"github:plannotator/herdr-annotate" = { version = "rust-lite-v0.2.0", bin = "herdr-annotate", prerelease = true, os = [
   "linux",
   "macos",
 ] }
@@ -217,7 +217,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:backnotprop/plannotator" = "v0.27.22"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
-"github:plannotator/plannotator-tui" = { version = "v0.8.0", bin = "plannotator-tui", os = [
+"github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
   "linux",
   "macos",
 ] }
