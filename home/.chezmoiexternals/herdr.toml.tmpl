@@ -1,7 +1,7 @@
 # Herdr Annotate is linked, never installed through upstream build hooks.
 # Keep exact disabled: the after-script owns bin/ symlinks to pinned mise binaries.
 # renovate: datasource=github-digest depName=plannotator/herdr-annotate currentValue=main
-{{ $herdrAnnotateRef := "7c8f5a177b8285dc56efc471ef04f7ab44a2b4b6" -}}
+{{ $herdrAnnotateRef := "cbba4732229191347ff5128e3da71f64474a6a49" -}}
 
 {{ if or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin") -}}
 [".local/share/herdr-annotate"]

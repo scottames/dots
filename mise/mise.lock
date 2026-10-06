@@ -4546,124 +4546,124 @@ url_api = "https://api.github.com/repos/ogulcancelik/herdr/releases/assets/59903
 provenance = "github-attestations"
 
 [[tools."github:plannotator/herdr-annotate"]]
-version = "rust-lite-v0.1.0"
+version = "rust-lite-v0.2.0"
 backend = "github:plannotator/herdr-annotate"
-specifiers = ["rust-lite-v0.1.0"]
+specifiers = ["rust-lite-v0.2.0"]
 
 [tools."github:plannotator/herdr-annotate"."platforms.linux-arm64"]
-checksum = "sha256:aa1df188d43efd76893caa5f8c3b89b59bffe7b1dc3c21cb90972388793822e6"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-aarch64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303152"
+checksum = "sha256:c4d380ed5a70cd7b4364282c3d70290a481a97935062bbe5c67257991c691f6f"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-aarch64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598985992"
 
 [tools."github:plannotator/herdr-annotate"."platforms.linux-arm64-musl"]
-checksum = "sha256:aa1df188d43efd76893caa5f8c3b89b59bffe7b1dc3c21cb90972388793822e6"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-aarch64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303152"
+checksum = "sha256:c4d380ed5a70cd7b4364282c3d70290a481a97935062bbe5c67257991c691f6f"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-aarch64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598985992"
 
 [tools."github:plannotator/herdr-annotate"."platforms.linux-x64"]
-checksum = "sha256:3f57111c23ad7062163f6164c5642b749309d3cc597430be1def08dc0dabd712"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303189"
+checksum = "sha256:a3ef4e72784bba8cf79e582d6021ca34f0d600f170da3095bcc60a87b1bcb942"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986015"
 
 [tools."github:plannotator/herdr-annotate"."platforms.linux-x64-baseline"]
-checksum = "sha256:3f57111c23ad7062163f6164c5642b749309d3cc597430be1def08dc0dabd712"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303189"
+checksum = "sha256:a3ef4e72784bba8cf79e582d6021ca34f0d600f170da3095bcc60a87b1bcb942"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986015"
 
 [tools."github:plannotator/herdr-annotate"."platforms.linux-x64-musl"]
-checksum = "sha256:3f57111c23ad7062163f6164c5642b749309d3cc597430be1def08dc0dabd712"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303189"
+checksum = "sha256:a3ef4e72784bba8cf79e582d6021ca34f0d600f170da3095bcc60a87b1bcb942"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986015"
 
 [tools."github:plannotator/herdr-annotate"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:3f57111c23ad7062163f6164c5642b749309d3cc597430be1def08dc0dabd712"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303189"
+checksum = "sha256:a3ef4e72784bba8cf79e582d6021ca34f0d600f170da3095bcc60a87b1bcb942"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986015"
 
 [tools."github:plannotator/herdr-annotate"."platforms.macos-arm64"]
-checksum = "sha256:2234392a1cedf4b0b0561b4ca54da75aa5139df296dbd4e59371cf7fa201fab7"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-aarch64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303156"
+checksum = "sha256:5a9c53d377cd87e64de01b9e43c8490453f6ab81a11311d340a4bff070ea4308"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-aarch64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598985998"
 
 [tools."github:plannotator/herdr-annotate"."platforms.macos-x64"]
-checksum = "sha256:91cad162445a72919db618d1642ac9c005f46513edc4978662b8667c8cf5507c"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303150"
+checksum = "sha256:19431fe2f1a40bdf122fb6fdc22a68ff5ff955cc4e8c9c3b8b3dea24e340ffed"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598985989"
 
 [tools."github:plannotator/herdr-annotate"."platforms.macos-x64-baseline"]
-checksum = "sha256:91cad162445a72919db618d1642ac9c005f46513edc4978662b8667c8cf5507c"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303150"
+checksum = "sha256:19431fe2f1a40bdf122fb6fdc22a68ff5ff955cc4e8c9c3b8b3dea24e340ffed"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598985989"
 
 [tools."github:plannotator/herdr-annotate"."platforms.windows-x64"]
-checksum = "sha256:15263e6d9f39504eec6ad504283faaf45543ac51692c369ccccadcf2c8ad407b"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303187"
+checksum = "sha256:4d9b08e6c169820742d133ce5ed20af4689861f58c9b2d1669cae0407c9b20d2"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986014"
 
 [tools."github:plannotator/herdr-annotate"."platforms.windows-x64-baseline"]
-checksum = "sha256:15263e6d9f39504eec6ad504283faaf45543ac51692c369ccccadcf2c8ad407b"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.1.0/herdr-annotate-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/554303187"
+checksum = "sha256:4d9b08e6c169820742d133ce5ed20af4689861f58c9b2d1669cae0407c9b20d2"
+url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986014"
 
 [[tools."github:plannotator/plannotator-tui"]]
-version = "0.8.0"
+version = "0.9.4"
 backend = "github:plannotator/plannotator-tui"
-specifiers = ["v0.8.0"]
+specifiers = ["v0.9.4"]
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-arm64"]
-checksum = "sha256:23f91e5b1e5d04a1ac41f1d8f50ebf4c20f0461141952862972a630ef690e18e"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-aarch64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143424"
+checksum = "sha256:e39077aac2e1e77ed798d2590f845cf998e456fa2a212fe7cae2e25febf62082"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-aarch64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174936"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-arm64-musl"]
-checksum = "sha256:23f91e5b1e5d04a1ac41f1d8f50ebf4c20f0461141952862972a630ef690e18e"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-aarch64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143424"
+checksum = "sha256:e39077aac2e1e77ed798d2590f845cf998e456fa2a212fe7cae2e25febf62082"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-aarch64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174936"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:d54dc603c95f710677bc13ebe6b24b2e6eb10ce761577af8a95a05002862b74d"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174947"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64-baseline"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:d54dc603c95f710677bc13ebe6b24b2e6eb10ce761577af8a95a05002862b74d"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174947"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64-musl"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:d54dc603c95f710677bc13ebe6b24b2e6eb10ce761577af8a95a05002862b74d"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174947"
 
 [tools."github:plannotator/plannotator-tui"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:faa6513ad1a4757a2861e95570168f2c8118f219b7e8d6a5175a008fe234fe0b"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-unknown-linux-gnu"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143450"
+checksum = "sha256:d54dc603c95f710677bc13ebe6b24b2e6eb10ce761577af8a95a05002862b74d"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-unknown-linux-gnu"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174947"
 
 [tools."github:plannotator/plannotator-tui"."platforms.macos-arm64"]
-checksum = "sha256:7d057f3a1a3aa23cb0a44843fed3f04d498a1da52197cdec0212c6f8e1618cb2"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-aarch64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143426"
+checksum = "sha256:a9da49dd6a44d3494fed0e8366ca32996ecdf40e0271fced410cec3c8839175d"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-aarch64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174935"
 
 [tools."github:plannotator/plannotator-tui"."platforms.macos-x64"]
-checksum = "sha256:6b6084d16ed8aa09915892f907e58186a6ec69c560752cff9d042bdcbb62820f"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143425"
+checksum = "sha256:5d19683d6f90a4249ffaf3a6a7ed0ba1325a136a795c7b11a8ba1fb16fe8d14f"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174931"
 
 [tools."github:plannotator/plannotator-tui"."platforms.macos-x64-baseline"]
-checksum = "sha256:6b6084d16ed8aa09915892f907e58186a6ec69c560752cff9d042bdcbb62820f"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-apple-darwin"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143425"
+checksum = "sha256:5d19683d6f90a4249ffaf3a6a7ed0ba1325a136a795c7b11a8ba1fb16fe8d14f"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-apple-darwin"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174931"
 
 [tools."github:plannotator/plannotator-tui"."platforms.windows-x64"]
-checksum = "sha256:78ab14b4f8abb065be202336528e0c375f37961e989ee7f1d40e739786cfaf01"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143437"
+checksum = "sha256:0611f6276cf1f3a1a1f29834e117ab2789d610095e9b3062d76dfa9673eee9f3"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174941"
 
 [tools."github:plannotator/plannotator-tui"."platforms.windows-x64-baseline"]
-checksum = "sha256:78ab14b4f8abb065be202336528e0c375f37961e989ee7f1d40e739786cfaf01"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.8.0/plannotator-tui-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/554143437"
+checksum = "sha256:0611f6276cf1f3a1a1f29834e117ab2789d610095e9b3062d76dfa9673eee9f3"
+url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174941"
 
 [[tools."github:schpet/linear-cli"]]
 version = "2.6.0"
