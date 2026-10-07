@@ -66,7 +66,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.73.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.287"
+"github:anthropics/claude-code" = "v2.1.288"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.102.0"
@@ -130,7 +130,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:thiagokokada/gh-gfm-preview" = { version = "v1.3.1", bin = "gh-gfm-preview" }
 # GitHub CLI extension for stacking pull requests
 #  https://github.com/github/gh-stack
-"github:github/gh-stack" = { version = "v0.1.1", bin = "gh-stack" }
+"github:github/gh-stack" = { version = "v0.2.0", bin = "gh-stack" }
 # A CLI to create GitHub App User Access Token for secure local development
 #  https://github.com/suzuki-shunsuke/ghtkn
 "aqua:suzuki-shunsuke/ghtkn" = "v0.4.1"
