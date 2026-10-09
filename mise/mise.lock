@@ -62,9 +62,9 @@ url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15
 url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478119579"
 
 [tools."aqua:BurntSushi/ripgrep"."platforms.linux-arm64-musl"]
-checksum = "sha256:800b1e7206afe799dfb5a6901f23147cfaabe0e52210538100f61e86e1740915"
-url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478120060"
+checksum = "sha256:a740b91c82eaf9914cfedd353572f2791cbe0162c84101ee0951058f4dcbc90d"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478119579"
 
 [tools."aqua:BurntSushi/ripgrep"."platforms.linux-x64"]
 checksum = "sha256:33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c"
@@ -241,6 +241,11 @@ checksum = "sha256:78a246170c9d83bea0f0c4a3fa8c9bc5cee80bbe66d34946d06fdc5a17a2c
 url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-aarch64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447569994"
 
+[tools."aqua:alexpasmantier/television"."platforms.linux-arm64-musl"]
+checksum = "sha256:78a246170c9d83bea0f0c4a3fa8c9bc5cee80bbe66d34946d06fdc5a17a2cd1a"
+url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447569994"
+
 [tools."aqua:alexpasmantier/television"."platforms.linux-x64"]
 checksum = "sha256:87d47d071f3c3bac939b1e9b2c63e45c299c9ad31cf8711f63dede614d0c6608"
 url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-x86_64-unknown-linux-gnu.tar.gz"
@@ -357,9 +362,9 @@ url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/mar
 url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747912"
 
 [tools."aqua:artempyanykh/marksman"."platforms.linux-arm64-musl"]
-checksum = "sha256:cd3b91b630042cc09b20505583203f875fbb4bf2fdf74dd6d87fddc3238d2798"
-url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-musl-arm64"
-url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747925"
+checksum = "sha256:db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb"
+url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-arm64"
+url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747912"
 
 [tools."aqua:artempyanykh/marksman"."platforms.linux-x64"]
 checksum = "sha256:be5098e8213219269c47fc0d916a66fa31ce0602ec967475c722260aabf26087"
@@ -372,14 +377,14 @@ url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/mar
 url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747902"
 
 [tools."aqua:artempyanykh/marksman"."platforms.linux-x64-musl"]
-checksum = "sha256:d33df4544bb1f9f1b93b862ea78375ca8c04cd467ed2bcee354d605fc483ceee"
-url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-musl-x64"
-url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747928"
+checksum = "sha256:be5098e8213219269c47fc0d916a66fa31ce0602ec967475c722260aabf26087"
+url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-x64"
+url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747902"
 
 [tools."aqua:artempyanykh/marksman"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:d33df4544bb1f9f1b93b862ea78375ca8c04cd467ed2bcee354d605fc483ceee"
-url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-musl-x64"
-url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747928"
+checksum = "sha256:be5098e8213219269c47fc0d916a66fa31ce0602ec967475c722260aabf26087"
+url = "https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-x64"
+url_api = "https://api.github.com/repos/artempyanykh/marksman/releases/assets/352747902"
 
 [tools."aqua:artempyanykh/marksman"."platforms.macos-arm64"]
 checksum = "sha256:6a801c17b5ac0dba69787c5282b3b3bd416e66c96253fae098d311c6bbd1833b"
@@ -416,12 +421,27 @@ checksum = "sha256:b39cfbc58da4b869a88b8a4bc57bd5deb0d24541e704cf7c257da7b53ec81
 url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-unknown-linux-gnu.zip"
 url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/537333400"
 
+[tools."aqua:ast-grep/ast-grep"."platforms.linux-arm64-musl"]
+checksum = "sha256:b39cfbc58da4b869a88b8a4bc57bd5deb0d24541e704cf7c257da7b53ec81c8f"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/537333400"
+
 [tools."aqua:ast-grep/ast-grep"."platforms.linux-x64"]
 checksum = "sha256:f8ac830881339d1edee6b2652f54798c0f4da5a827f2db38a08ee31117783ce8"
 url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-x86_64-unknown-linux-gnu.zip"
 url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/537332692"
 
 [tools."aqua:ast-grep/ast-grep"."platforms.linux-x64-baseline"]
+checksum = "sha256:f8ac830881339d1edee6b2652f54798c0f4da5a827f2db38a08ee31117783ce8"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-x86_64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/537332692"
+
+[tools."aqua:ast-grep/ast-grep"."platforms.linux-x64-musl"]
+checksum = "sha256:f8ac830881339d1edee6b2652f54798c0f4da5a827f2db38a08ee31117783ce8"
+url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-x86_64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/537332692"
+
+[tools."aqua:ast-grep/ast-grep"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:f8ac830881339d1edee6b2652f54798c0f4da5a827f2db38a08ee31117783ce8"
 url = "https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-x86_64-unknown-linux-gnu.zip"
 url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/537332692"
@@ -652,9 +672,9 @@ url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-arm64"
 url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771307"
 
 [tools."aqua:borghei/ink"."platforms.linux-arm64-musl"]
-checksum = "sha256:853a3ad62a778583e9c268a5e7823c8a132fbf496bc1b2261ecb245b5794f03f"
-url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-arm64-musl"
-url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771298"
+checksum = "sha256:c1296b6430ead14bc9c41a6931a050910bac70bca82eca8144a16761757c76d4"
+url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-arm64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771307"
 
 [tools."aqua:borghei/ink"."platforms.linux-x64"]
 checksum = "sha256:742a407d4043d25ae5f17b41ffffb9b728b0268bdbd7699b0db0a3ed745bc5ef"
@@ -667,14 +687,14 @@ url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-amd64"
 url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771300"
 
 [tools."aqua:borghei/ink"."platforms.linux-x64-musl"]
-checksum = "sha256:43938e3697a02d71faaeca084e120887b67ac8ff388dcf5555ea75f0028c5ea5"
-url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-amd64-musl"
-url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771281"
+checksum = "sha256:742a407d4043d25ae5f17b41ffffb9b728b0268bdbd7699b0db0a3ed745bc5ef"
+url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771300"
 
 [tools."aqua:borghei/ink"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:43938e3697a02d71faaeca084e120887b67ac8ff388dcf5555ea75f0028c5ea5"
-url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-amd64-musl"
-url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771281"
+checksum = "sha256:742a407d4043d25ae5f17b41ffffb9b728b0268bdbd7699b0db0a3ed745bc5ef"
+url = "https://github.com/borghei/ink/releases/download/v0.10.0/ink-linux-amd64"
+url_api = "https://api.github.com/repos/borghei/ink/releases/assets/603771300"
 
 [tools."aqua:borghei/ink"."platforms.macos-arm64"]
 checksum = "sha256:5afb8c41a4acc8809f8d5748e06ecb29ef1d86753d882029e8691236a5b6f353"
@@ -1104,6 +1124,11 @@ checksum = "sha256:0bfce159a5cddd5feb3d6db4a616d883ff51253ce08ac7ec11cb1d208cfaa
 url = "https://github.com/dandavison/delta/releases/download/0.19.2/delta-0.19.2-aarch64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/383662337"
 
+[tools."aqua:dandavison/delta"."platforms.linux-arm64-musl"]
+checksum = "sha256:0bfce159a5cddd5feb3d6db4a616d883ff51253ce08ac7ec11cb1d208cfaab9e"
+url = "https://github.com/dandavison/delta/releases/download/0.19.2/delta-0.19.2-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/383662337"
+
 [tools."aqua:dandavison/delta"."platforms.linux-x64"]
 checksum = "sha256:8e695c5f586a8c53d6c3b01be0b4a422ed218bfed2a56191caebe373a1c18ab2"
 url = "https://github.com/dandavison/delta/releases/download/0.19.2/delta-0.19.2-x86_64-unknown-linux-gnu.tar.gz"
@@ -1385,6 +1410,11 @@ backend = "aqua:eza-community/eza"
 specifiers = ["0.23.5"]
 
 [tools."aqua:eza-community/eza"."platforms.linux-arm64"]
+checksum = "sha256:40b87ae8628aa2ff0f0d2dc24ab52f689631366385c3da630bae745671fd71ec"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228867"
+
+[tools."aqua:eza-community/eza"."platforms.linux-arm64-musl"]
 checksum = "sha256:40b87ae8628aa2ff0f0d2dc24ab52f689631366385c3da630bae745671fd71ec"
 url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_aarch64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/eza-community/eza/releases/assets/471228867"
@@ -2139,9 +2169,9 @@ url = "https://github.com/nushell/nushell/releases/download/0.116.0/nu-0.116.0-a
 url_api = "https://api.github.com/repos/nushell/nushell/releases/assets/591220342"
 
 [tools."aqua:nushell/nushell"."platforms.linux-arm64-musl"]
-checksum = "sha256:bc3503d0588caa7c2835d61337825152141c748c126817739cb86519c593416e"
-url = "https://github.com/nushell/nushell/releases/download/0.116.0/nu-0.116.0-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/nushell/nushell/releases/assets/591238656"
+checksum = "sha256:bd854a1c7286cabb7830e744810c27152e3d332192e75cea9e3c92dced4e3dce"
+url = "https://github.com/nushell/nushell/releases/download/0.116.0/nu-0.116.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/nushell/nushell/releases/assets/591220342"
 
 [tools."aqua:nushell/nushell"."platforms.linux-x64"]
 checksum = "sha256:9f73a6913f9515a621bd916dc91d7f3e0494e488161c2d686f6b98ffa0555945"
@@ -3184,15 +3214,15 @@ url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/59627098
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-musl"]
-checksum = "sha256:09559524c5c724df9d452f1e78cfeca063d68c18a38b3bebb8bf48e9b13249b7"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.0/chezmoi_2.73.0_linux-musl_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/596271005"
+checksum = "sha256:b597729b687af4488a848240134cb633de8ca0f04e0d26d48f400ee2ac338ffa"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.0/chezmoi_2.73.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/596270752"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:09559524c5c724df9d452f1e78cfeca063d68c18a38b3bebb8bf48e9b13249b7"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.0/chezmoi_2.73.0_linux-musl_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/596271005"
+checksum = "sha256:b597729b687af4488a848240134cb633de8ca0f04e0d26d48f400ee2ac338ffa"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.0/chezmoi_2.73.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/596270752"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.macos-arm64"]
@@ -3236,9 +3266,9 @@ url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.2/ag
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/604194739"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:eafeca9ca0fdb2fa2aa60c4554723348c739656b0ddba0d82ff654d4d33311b1"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.2/agent-browser-linux-musl-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/604194738"
+checksum = "sha256:690c02d952de8497bba4f8cc58b59acbf27dc27b346755869b518f4b411c7f40"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.2/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/604194739"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64"]
 checksum = "sha256:993d462f4dcfc19860d93a6521a452eba4502bfc449fe0120303c2ccb998e675"
