@@ -66,7 +66,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.73.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.288"
+"github:anthropics/claude-code" = "v2.1.289"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.102.0"
@@ -75,7 +75,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:openai/codex" = "rust-v0.160.0"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
-"npm:ctx7" = "0.5.12"
+"npm:ctx7" = "0.5.13"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.22.1"
@@ -84,7 +84,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:dagger/dagger" = "0.21.10"
 # syntax-highlighting pager for git, diff, grep, and blame output
 #   https://github.com/dandavison/delta
-"aqua:dandavison/delta" = "0.19.2"
+"aqua:dandavison/delta" = "0.20.1"
 # A git diff pager based on delta but with a file tree, à la GitHub
 #  https://github.com/dlvhdr/diffnav
 "aqua:dlvhdr/diffnav" = "0.12.0"
@@ -168,7 +168,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:stedolan/jq" = "1.8.1"
 # A terminal markdown reader that actually looks good
 #   https://github.com/borghei/ink
-"aqua:borghei/ink" = "0.10.0"
+"aqua:borghei/ink" = "0.11.1"
 #   https://github.com/casey/just
 "aqua:casey/just" = "1.58.0"
 # kubernetes tui
@@ -199,7 +199,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:nolabs-ai/nono" = "v0.79.0"
 # A new type of shell
 #  https://www.nushell.sh/
-"aqua:nushell/nushell" = "0.116.0"
+"aqua:nushell/nushell" = "0.116.1"
 # open, universal, coding agent skills, agents, rules,
 # and commands organizer and package manager
 #  https://github.com/enulus/OpenPackage
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.27.25"
+"github:backnotprop/plannotator" = "v0.28.3"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
@@ -267,7 +267,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.27.0"
 # Python package and tool manager
 #  https://github.com/astral-sh/uv
-"aqua:astral-sh/uv" = "0.12.22"
+"aqua:astral-sh/uv" = "0.12.23"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
 "github:max-sixty/worktrunk" = "v0.80.0"
@@ -305,7 +305,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "0.233.0"
+version = "0.234.0"
 bin = "droid"
 
 [tools."http:droid".platforms]
