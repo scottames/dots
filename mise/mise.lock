@@ -292,64 +292,64 @@ url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-
 url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447571006"
 
 [[tools."aqua:antonmedv/fx"]]
-version = "39.2.0"
+version = "40.0.0"
 backend = "aqua:antonmedv/fx"
-specifiers = ["39.2.0"]
+specifiers = ["40.0.0"]
 
 [tools."aqua:antonmedv/fx"."platforms.linux-arm64"]
-checksum = "sha256:85ea8435b0a80b6d31ffa9f61ac9b67d9bb8f0ffffabdfe5e7e587b07a0a0684"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_linux_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468985"
+checksum = "sha256:1200eb9c7e78aae2108c84809a90e361193b2859c2ea528ad49f2e8b690620c9"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037499"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-arm64-musl"]
-checksum = "sha256:85ea8435b0a80b6d31ffa9f61ac9b67d9bb8f0ffffabdfe5e7e587b07a0a0684"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_linux_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468985"
+checksum = "sha256:1200eb9c7e78aae2108c84809a90e361193b2859c2ea528ad49f2e8b690620c9"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037499"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64"]
-checksum = "sha256:17ea6549c7cf0b8be5ec109d04da7fbf1d5de9f7b99d957a6215081933528afe"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468989"
+checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-baseline"]
-checksum = "sha256:17ea6549c7cf0b8be5ec109d04da7fbf1d5de9f7b99d957a6215081933528afe"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468989"
+checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-musl"]
-checksum = "sha256:17ea6549c7cf0b8be5ec109d04da7fbf1d5de9f7b99d957a6215081933528afe"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468989"
+checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:17ea6549c7cf0b8be5ec109d04da7fbf1d5de9f7b99d957a6215081933528afe"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468989"
+checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-arm64"]
-checksum = "sha256:5d7dadbf8ac4e4a55b5b6d31bdd958b90823292997ba9ddae395f66417bb4a9b"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_darwin_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468988"
+checksum = "sha256:d3a93b9e78d77ebc2c8cfc9b7101e20d6e46317d5b41ee149d8ff8b6c1899d66"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_darwin_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037515"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-x64"]
-checksum = "sha256:2ad7d0a6e1ea67ab10a22cc06825fdc776511e8f412926d1c752b630eac12e02"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_darwin_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468986"
+checksum = "sha256:b071f677c13b25aa8576d7af3a7b8e8c16488c430f5a8360a370b5cbeec94ec2"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_darwin_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037527"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-x64-baseline"]
-checksum = "sha256:2ad7d0a6e1ea67ab10a22cc06825fdc776511e8f412926d1c752b630eac12e02"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_darwin_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468986"
+checksum = "sha256:b071f677c13b25aa8576d7af3a7b8e8c16488c430f5a8360a370b5cbeec94ec2"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_darwin_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037527"
 
 [tools."aqua:antonmedv/fx"."platforms.windows-x64"]
-checksum = "sha256:00fbddd7bd67f747a51aecc0a5bafcc695a21dfae7b912684510722c8e2d6d22"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_windows_amd64.exe"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468991"
+checksum = "sha256:95ad6b786a435c7e06e15c7090f4fe0d6e92ef6f47e9a5e76f493a9626629f70"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_windows_amd64.exe"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037500"
 
 [tools."aqua:antonmedv/fx"."platforms.windows-x64-baseline"]
-checksum = "sha256:00fbddd7bd67f747a51aecc0a5bafcc695a21dfae7b912684510722c8e2d6d22"
-url = "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_windows_amd64.exe"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/315468991"
+checksum = "sha256:95ad6b786a435c7e06e15c7090f4fe0d6e92ef6f47e9a5e76f493a9626629f70"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_windows_amd64.exe"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037500"
 
 [[tools."aqua:artempyanykh/marksman"]]
 version = "2026-02-08"
@@ -1345,64 +1345,64 @@ url = "https://github.com/dlvhdr/diffnav/releases/download/v0.12.0/diffnav_Windo
 url_api = "https://api.github.com/repos/dlvhdr/diffnav/releases/assets/488282401"
 
 [[tools."aqua:earendil-works/pi"]]
-version = "v0.99.2"
+version = "v1.0.4"
 backend = "aqua:earendil-works/pi"
-specifiers = ["v0.99.2"]
+specifiers = ["v1.0.4"]
 
 [tools."aqua:earendil-works/pi"."platforms.linux-arm64"]
-checksum = "sha256:61fc3cd9a854cabb8554e353ff324701c952d2fdd0b1a96aa16ac44cf5357360"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628126"
+checksum = "sha256:6a6bc66a6ac2750bd7ccd7f2109090463f564d447feefb10a5965f6b6aed2211"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707171"
 
 [tools."aqua:earendil-works/pi"."platforms.linux-arm64-musl"]
-checksum = "sha256:61fc3cd9a854cabb8554e353ff324701c952d2fdd0b1a96aa16ac44cf5357360"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628126"
+checksum = "sha256:6a6bc66a6ac2750bd7ccd7f2109090463f564d447feefb10a5965f6b6aed2211"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707171"
 
 [tools."aqua:earendil-works/pi"."platforms.linux-x64"]
-checksum = "sha256:f998cc1232733eab240526d74acdce429d650b9e01f5804636d7aa96eb629846"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628119"
+checksum = "sha256:284c45dd28cf975a13cff6af34741dd0a0cdca6634e8bdfc0083ae7d452e86d6"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707163"
 
 [tools."aqua:earendil-works/pi"."platforms.linux-x64-baseline"]
-checksum = "sha256:f998cc1232733eab240526d74acdce429d650b9e01f5804636d7aa96eb629846"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628119"
+checksum = "sha256:284c45dd28cf975a13cff6af34741dd0a0cdca6634e8bdfc0083ae7d452e86d6"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707163"
 
 [tools."aqua:earendil-works/pi"."platforms.linux-x64-musl"]
-checksum = "sha256:f998cc1232733eab240526d74acdce429d650b9e01f5804636d7aa96eb629846"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628119"
+checksum = "sha256:284c45dd28cf975a13cff6af34741dd0a0cdca6634e8bdfc0083ae7d452e86d6"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707163"
 
 [tools."aqua:earendil-works/pi"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:f998cc1232733eab240526d74acdce429d650b9e01f5804636d7aa96eb629846"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628119"
+checksum = "sha256:284c45dd28cf975a13cff6af34741dd0a0cdca6634e8bdfc0083ae7d452e86d6"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707163"
 
 [tools."aqua:earendil-works/pi"."platforms.macos-arm64"]
-checksum = "sha256:564707a7378dae4cce29d92693b45b49d3a3a25187dddcc6d8c2e4aca4fb3719"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628127"
+checksum = "sha256:717dcd38a03849e919f9dec9daa96f5ca102e15ea33d804e5db57b1d47e513bc"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707162"
 
 [tools."aqua:earendil-works/pi"."platforms.macos-x64"]
-checksum = "sha256:afa8bda5c77b7ae1a14afe2c7a206925e89ea703a8479b4b7a743b1b52c0fd90"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628125"
+checksum = "sha256:665022918678542dd7c87fe7b0da70d2a3dcd926bc6ff4cc712308f2ca313358"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707174"
 
 [tools."aqua:earendil-works/pi"."platforms.macos-x64-baseline"]
-checksum = "sha256:afa8bda5c77b7ae1a14afe2c7a206925e89ea703a8479b4b7a743b1b52c0fd90"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628125"
+checksum = "sha256:665022918678542dd7c87fe7b0da70d2a3dcd926bc6ff4cc712308f2ca313358"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707174"
 
 [tools."aqua:earendil-works/pi"."platforms.windows-x64"]
-checksum = "sha256:6f0bd9869d5cf45d5adde79ebedb54357e0c26cb4c64bd4a256f7ae548995f22"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-windows-x64.zip"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628165"
+checksum = "sha256:6bdbfb7bac252eea36a0095e4b741c9d5784d5ba99146e2d76e9246dee409b58"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-windows-x64.zip"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707217"
 
 [tools."aqua:earendil-works/pi"."platforms.windows-x64-baseline"]
-checksum = "sha256:6f0bd9869d5cf45d5adde79ebedb54357e0c26cb4c64bd4a256f7ae548995f22"
-url = "https://github.com/earendil-works/pi/releases/download/v0.99.2/pi-windows-x64.zip"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/601628165"
+checksum = "sha256:6bdbfb7bac252eea36a0095e4b741c9d5784d5ba99146e2d76e9246dee409b58"
+url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-windows-x64.zip"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707217"
 
 [[tools."aqua:eza-community/eza"]]
 version = "0.23.5"
@@ -4696,64 +4696,64 @@ url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/p
 url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174941"
 
 [[tools."github:schpet/linear-cli"]]
-version = "2.6.0"
+version = "3.0.0"
 backend = "github:schpet/linear-cli"
-specifiers = ["v2.6.0"]
+specifiers = ["v3.0.0"]
 
 [tools."github:schpet/linear-cli"."platforms.linux-arm64"]
-checksum = "sha256:55cc4a6b2489a403ad9eb80f612dfa841287bfa16b98390bb4d4e072d79e2361"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-aarch64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654224"
+checksum = "sha256:f6580185f3a07c558c64de44506d7ae56c13615c7d2139e5cd22ff3b03822fcd"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859200"
 
 [tools."github:schpet/linear-cli"."platforms.linux-arm64-musl"]
-checksum = "sha256:55cc4a6b2489a403ad9eb80f612dfa841287bfa16b98390bb4d4e072d79e2361"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-aarch64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654224"
+checksum = "sha256:f6580185f3a07c558c64de44506d7ae56c13615c7d2139e5cd22ff3b03822fcd"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859200"
 
 [tools."github:schpet/linear-cli"."platforms.linux-x64"]
-checksum = "sha256:bbcb9d365308bc3728a1ec9913ad1880f88c0ce68767383297e348c057f35b8d"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654271"
+checksum = "sha256:5064a63a7e6a8b5893a550e138c0a7ba373aad65d425dde6b2b66b50a6c10289"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859316"
 
 [tools."github:schpet/linear-cli"."platforms.linux-x64-baseline"]
-checksum = "sha256:bbcb9d365308bc3728a1ec9913ad1880f88c0ce68767383297e348c057f35b8d"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654271"
+checksum = "sha256:5064a63a7e6a8b5893a550e138c0a7ba373aad65d425dde6b2b66b50a6c10289"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859316"
 
 [tools."github:schpet/linear-cli"."platforms.linux-x64-musl"]
-checksum = "sha256:bbcb9d365308bc3728a1ec9913ad1880f88c0ce68767383297e348c057f35b8d"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654271"
+checksum = "sha256:5064a63a7e6a8b5893a550e138c0a7ba373aad65d425dde6b2b66b50a6c10289"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859316"
 
 [tools."github:schpet/linear-cli"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:bbcb9d365308bc3728a1ec9913ad1880f88c0ce68767383297e348c057f35b8d"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-unknown-linux-gnu.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654271"
+checksum = "sha256:5064a63a7e6a8b5893a550e138c0a7ba373aad65d425dde6b2b66b50a6c10289"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859316"
 
 [tools."github:schpet/linear-cli"."platforms.macos-arm64"]
-checksum = "sha256:b9abdd4b5aec14459e434a2899203757de8ae847f055eae4f1faee7bb1fbc078"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-aarch64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654219"
+checksum = "sha256:85eb84e795544a577adc17b96f8b00771bcec94f38d26442fd7d561cd82336f2"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859166"
 
 [tools."github:schpet/linear-cli"."platforms.macos-x64"]
-checksum = "sha256:08aba19af4f00629e5e89ab04017d31d18573fbc9dc922280828702fdae27a3f"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654245"
+checksum = "sha256:723c32e044453818f0b539c2dd8da20a815a9683442499058e1069a711f726ab"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859244"
 
 [tools."github:schpet/linear-cli"."platforms.macos-x64-baseline"]
-checksum = "sha256:08aba19af4f00629e5e89ab04017d31d18573fbc9dc922280828702fdae27a3f"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654245"
+checksum = "sha256:723c32e044453818f0b539c2dd8da20a815a9683442499058e1069a711f726ab"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859244"
 
 [tools."github:schpet/linear-cli"."platforms.windows-x64"]
-checksum = "sha256:a215b1c4e89af509e94a5618193b61a55d4b12fd3c63d065e4d1fffcdcbc0f57"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654263"
+checksum = "sha256:b8c6bd5fde4b4f23555b566f791c872ea76137bc662c63c8a27200d487407e81"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859261"
 
 [tools."github:schpet/linear-cli"."platforms.windows-x64-baseline"]
-checksum = "sha256:a215b1c4e89af509e94a5618193b61a55d4b12fd3c63d065e4d1fffcdcbc0f57"
-url = "https://github.com/schpet/linear-cli/releases/download/v2.6.0/linear-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/541654263"
+checksum = "sha256:b8c6bd5fde4b4f23555b566f791c872ea76137bc662c63c8a27200d487407e81"
+url = "https://github.com/schpet/linear-cli/releases/download/v3.0.0/linear-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/schpet/linear-cli/releases/assets/615859261"
 
 [[tools."github:tassiovirginio/try-rs"]]
 version = "1.7.11"
