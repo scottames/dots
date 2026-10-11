@@ -36,7 +36,7 @@ bun = "1.4.2"
 go = "1.27.1"
 node = "24.21.0"
 rust = "1.99.0"
-usage = "6.12.0"
+usage = "6.12.1"
 
 ## tools
 
@@ -54,7 +54,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:atuinsh/atuin" = "18.23.0"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.63.0"
+"github:aquaproj/aqua" = "v2.64.0"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -66,16 +66,16 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.73.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.289"
+"github:anthropics/claude-code" = "v2.1.292"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.102.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.160.0"
+"aqua:openai/codex" = "rust-v0.160.1"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
-"npm:ctx7" = "0.5.13"
+"npm:ctx7" = "0.5.15"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.22.1"
@@ -87,9 +87,9 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:dandavison/delta" = "0.20.1"
 # A git diff pager based on delta but with a file tree, à la GitHub
 #  https://github.com/dlvhdr/diffnav
-"aqua:dlvhdr/diffnav" = "0.12.0"
+"aqua:dlvhdr/diffnav" = "0.13.0"
 #   https://github.com/direnv/direnv
-"aqua:direnv/direnv" = "2.37.1"
+"aqua:direnv/direnv" = "2.38.1"
 #  more intuitive version of du in rust
 #   https://github.com/bootandy/dust/
 "aqua:bootandy/dust" = "1.2.6"
@@ -106,7 +106,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:fastfetch-cli/fastfetch" = "2.69.0"
 # Find that one coding agent session you want to get back to!
 #  https://github.com/angristan/fast-resume
-"github:angristan/fast-resume" = "v2.13.0"
+"github:angristan/fast-resume" = "v2.13.2"
 # better find
 #   https://github.com/sharkdp/fd
 "aqua:sharkdp/fd" = "10.5.0"
@@ -178,7 +178,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:kubernetes/kubectl" = "1.35.3"
 # simple terminal ui for git commands
 #   https://github.com/jesseduffield/lazygit
-"aqua:jesseduffield/lazygit" = "0.65.1"
+"aqua:jesseduffield/lazygit" = "0.66.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.28.3"
+"github:backnotprop/plannotator" = "v0.28.6"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
@@ -232,14 +232,14 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:BurntSushi/ripgrep" = "15.2.0"
 # Spacelift client and CLI
 #   https://github.com/spacelift-io/spacectl
-"aqua:spacelift-io/spacectl" = "1.26.0"
+"aqua:spacelift-io/spacectl" = "1.27.0"
 # minimal, blazing-fast, and infinitely customizable prompt for any shell!
 #   https://github.com/starship/starship
 "aqua:starship/starship" = "1.26.0"
 # The fastest stacked-branch workflow for Git.
 # Interactive TUI, smart PRs, safe undo.
 #   https://github.com/cesarferreira/stax
-"github:cesarferreira/stax" = "0.113.1"
+"github:cesarferreira/stax" = "v0.114.0"
 # multi pod and container log tailing for kubernetes
 #   https://github.com/stern/stern
 "aqua:stern/stern" = "1.34.0"
@@ -285,13 +285,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:zellij-org/zellij" = "0.45.1"
 # ZenNotes TUI
 #   https://github.com/ZenNotes/tui
-"github:ZenNotes/tui" = "v0.6.2"
+"github:ZenNotes/tui" = "v0.6.3"
 
 # linters & language servers
 # dotfiles baseline; language-specific tools belong in projects
 "aqua:LuaLS/lua-language-server" = "3.19.1"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:crate-ci/typos" = "1.50.3"
+"aqua:crate-ci/typos" = "1.51.1"
 "aqua:koalaman/shellcheck" = "0.11.0"
 "aqua:mvdan/sh" = "3.14.1"
 "aqua:rhysd/actionlint" = "v1.7.12"
@@ -305,7 +305,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "0.234.0"
+version = "0.236.0"
 bin = "droid"
 
 [tools."http:droid".platforms]
