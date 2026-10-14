@@ -150,9 +150,9 @@
     remapCapsLockToControl = true;
   };
 
-  users.users.scta = {
-    name = "scta";
-    home = "/Users/scta";
+  users.users.${username} = {
+    name = username;
+    home = "/Users/${username}";
     shell = pkgs.fish;
   };
 }

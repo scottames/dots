@@ -1,6 +1,8 @@
 { homebrew-bundle
 , homebrew-core
 , homebrew-cask
+, lib
+, manageHomebrew
 , nix-homebrew
 , username
 , ...
@@ -10,7 +12,8 @@
     nix-homebrew.darwinModules.nix-homebrew
   ];
 
-  nix-homebrew = {
+  nix-homebrew = lib.mkIf manageHomebrew {
+    autoMigrate = true;
     enable = true;
     enableRosetta = true;
     user = username;
@@ -27,12 +30,12 @@
     greedyCasks = true;
     global.autoUpdate = true;
     onActivation = {
-      cleanup = "zap";
-      autoUpdate = true;
-      upgrade = true;
+      cleanup = if manageHomebrew then "zap" else "none";
+      autoUpdate = manageHomebrew;
+      upgrade = manageHomebrew;
     };
 
-    taps = [
+    taps = lib.optionals manageHomebrew [
       "homebrew/cask"
       "homebrew/core"
       "homebrew/bundle"
@@ -43,27 +46,32 @@
       "docker-credential-helper"
       "eza"
       "lima"
+      "openssh"
       "try-rs"
     ];
 
     casks = [
-      "1password"
       "1password-cli"
       "akiflow"
       "docker-desktop"
       "firefox"
       "ghostty"
-      "google-chrome"
+      "google-cloud-sdk"
+      "granola"
       "iterm2"
       "notion"
       "obsidian"
       "raycast"
-      "slack"
       "tailscale-app"
-      "visual-studio-code"
       "vlc"
       "zen"
       "zoom"
+    ] ++ lib.optionals manageHomebrew [
+      # Leave these apps to the company when Homebrew is externally managed.
+      "1password"
+      "google-chrome"
+      "slack"
+      "visual-studio-code"
     ];
   };
 }

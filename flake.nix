@@ -35,36 +35,38 @@
             nixpkgs.hostPlatform = "aarch64-darwin";
           };
 
-        hostname =
-          let
-            h = builtins.getEnv "HOSTNAME";
-          in
-          if h == "" then "zmbp" else h;
-        username =
-          let
-            u = builtins.getEnv "USERNAME";
-          in
-          if u == "" then "scta" else u;
-      in
-      {
-        darwinConfigurations."${hostname}" = nix-darwin.lib.darwinSystem {
-          modules = [
-            configuration
-            ./nix/darwin.nix
-            ./nix/homebrew.nix
-            ./nix/pkgs.nix
-          ];
-          specialArgs = {
-            inherit
-              homebrew-bundle
-              homebrew-core
-              homebrew-cask
-              hostname
-              nix-homebrew
-              username
-              ;
+        machines = {
+          zmbp = {
+            username = "scta";
+          };
+          safmbp = {
+            username = "scott";
+            manageHomebrew = false;
           };
         };
+      in
+      {
+        darwinConfigurations = nixpkgs.lib.mapAttrs
+          (hostname: { username, manageHomebrew ? true }: nix-darwin.lib.darwinSystem {
+            modules = [
+              configuration
+              ./nix/darwin.nix
+              ./nix/homebrew.nix
+              ./nix/pkgs.nix
+            ];
+            specialArgs = {
+              inherit
+                homebrew-bundle
+                homebrew-core
+                homebrew-cask
+                hostname
+                manageHomebrew
+                nix-homebrew
+                username
+                ;
+            };
+          })
+          machines;
       }
       // flake-utils.lib.eachDefaultSystem (system: {
         apps.install = {
@@ -73,7 +75,6 @@
             nixpkgs.legacyPackages.${system}.writeShellScript "install" ''
               # Set defaults from system
               HOSTNAME=$(hostname | cut -d. -f1)
-              USERNAME=$(whoami)
 
               # Optionally override with command line arguments
               if [[ $# -gt 0 ]]; then
@@ -85,20 +86,7 @@
                 esac
               fi
 
-              if [[ $# -gt 0 ]]; then
-                case $1 in
-                  --username=*)
-                    USERNAME="''${1#*=}"
-                    shift
-                    ;;
-                esac
-              fi
-
-              # Export variables for the flake
-              export HOSTNAME
-              export USERNAME
-
-              sudo --preserve-env=HOSTNAME,USERNAME \
+              sudo \
                 ${nix-darwin.packages.${system}.darwin-rebuild}/bin/darwin-rebuild \
                 switch --flake .#"$HOSTNAME"
             ''
