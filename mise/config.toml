@@ -115,7 +115,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:antonmedv/fx" = "40.0.0"
 # command-line fuzzy finder
 #   https://github.com/junegunn/fzf
-"aqua:junegunn/fzf" = "0.74.4"
+"aqua:junegunn/fzf" = "0.74.5"
 # fork a repository, commit files and create a pull request using github api
 #   https://github.com/int128/ghcp
 "aqua:int128/ghcp" = "1.15.3"
@@ -178,7 +178,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:kubernetes/kubectl" = "1.35.3"
 # simple terminal ui for git commands
 #   https://github.com/jesseduffield/lazygit
-"aqua:jesseduffield/lazygit" = "0.66.0"
+"aqua:jesseduffield/lazygit" = "0.66.1"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.28.11"
+"github:backnotprop/plannotator" = "v0.28.12"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
