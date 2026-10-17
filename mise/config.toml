@@ -63,7 +63,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:sharkdp/bat" = "0.26.1"
 # manage your dotfiles across multiple diverse machines, securely
 #   https://github.com/twpayne/chezmoi
-"aqua:twpayne/chezmoi" = "2.73.0"
+"aqua:twpayne/chezmoi" = "2.73.1"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
 "github:anthropics/claude-code" = "v2.1.296"
@@ -75,7 +75,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:openai/codex" = "rust-v0.162.1"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
-"npm:ctx7" = "0.6.0"
+"npm:ctx7" = "0.6.1"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.22.1"
@@ -196,7 +196,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Capability-based sandboxes with fine-grained policies. Brokering access
 # directly within the agent's operating context
 #  https://github.com/nolabs-ai/nono
-"github:nolabs-ai/nono" = "v0.79.0"
+"github:nolabs-ai/nono" = "v0.80.0"
 # A new type of shell
 #  https://www.nushell.sh/
 "aqua:nushell/nushell" = "0.116.1"
@@ -206,7 +206,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:opkg" = "0.11.3"
 # Minimal, extensible terminal coding agent
 #  https://github.com/earendil-works/pi
-"aqua:earendil-works/pi" = "v1.1.0"
+"aqua:earendil-works/pi" = "v1.2.0"
 # pinact is a CLI to edit GitHub Workflow and Composite action files
 # and pin versions of Actions and Reusable Workflows.
 #  https://github.com/suzuki-shunsuke/pinact
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.28.12"
+"github:backnotprop/plannotator" = "v0.28.17"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
@@ -232,7 +232,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:BurntSushi/ripgrep" = "15.2.0"
 # Spacelift client and CLI
 #   https://github.com/spacelift-io/spacectl
-"aqua:spacelift-io/spacectl" = "1.27.0"
+"aqua:spacelift-io/spacectl" = "1.28.0"
 # minimal, blazing-fast, and infinitely customizable prompt for any shell!
 #   https://github.com/starship/starship
 "aqua:starship/starship" = "1.26.0"
@@ -285,11 +285,11 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:zellij-org/zellij" = "0.45.1"
 # ZenNotes TUI
 #   https://github.com/ZenNotes/tui
-"github:ZenNotes/tui" = "v0.6.3"
+"github:ZenNotes/tui" = "v0.7.0"
 
 # linters & language servers
 # dotfiles baseline; language-specific tools belong in projects
-"aqua:LuaLS/lua-language-server" = "3.19.1"
+"aqua:LuaLS/lua-language-server" = "3.19.2"
 "aqua:artempyanykh/marksman" = "2026-02-08"
 "aqua:crate-ci/typos" = "1.51.1"
 "aqua:koalaman/shellcheck" = "0.11.0"
@@ -305,7 +305,7 @@ amazon-ecr-credential-helper = "0.12.0"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "0.238.0"
+version = "0.241.1"
 bin = "droid"
 
 [tools."http:droid".platforms]
