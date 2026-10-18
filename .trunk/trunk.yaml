@@ -19,13 +19,13 @@ lint:
     - nixpkgs-fmt@1.3.0
     - oxipng@10.2.1
     - bandit@1.9.4
-    - black@26.10.0
-    - checkov@3.3.26
+    - black@26.10.1
+    - checkov@3.3.29
     - isort@9.0.2
-    - ruff@0.16.10
-    - trivy@0.75.0
+    - ruff@0.17.1
+    - trivy@0.76.0
     - gokart@0.5.1
-    - osv-scanner@2.6.0
+    - osv-scanner@2.7.0
     - svgo@4.1.0
     - terrascan@1.19.9
     - trufflehog@3.99.2
@@ -35,11 +35,11 @@ lint:
     - gofmt@1.20.4
     - hadolint@2.15.1
     - markdownlint@0.49.1
-    - prettier@3.9.9
-    - renovate@44.147.0
+    - prettier@3.9.10
+    - renovate@44.164.5
     - shellcheck@0.11.0
     - shfmt@3.14.1
-    - stylua@2.5.2
+    - stylua@2.6.0
     - taplo@0.10.0
     - yamllint@1.38.0
   files:
