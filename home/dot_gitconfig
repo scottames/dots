@@ -1,0 +1,3 @@
+# Git reads this after ~/.config/git/config, so work overrides win.
+[include]
+	path = ~/.gitconfig-work
