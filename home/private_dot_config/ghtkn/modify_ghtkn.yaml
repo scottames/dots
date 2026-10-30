@@ -1,0 +1,24 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Other dotfiles (e.g. work) merge their own apps into the live file.
+       Keep every app this template does not own; ghtkn rejects duplicate
+       names and client IDs. Each app is rendered with toYaml (sorted keys)
+       so external merges that keep sorted keys re-render byte-identically. */ -}}
+{{- $live := dict -}}
+{{- if .chezmoi.stdin }}{{ $live = fromYaml .chezmoi.stdin | default dict }}{{ end -}}
+{{- $fieldOffice := dict "name" "scottames/field-office" "client_id" "Iv23li7AIeurGrXPkadz" "git_owner" "scottames" -}}
+{{- $personal := dict "name" "scottames/ghtkn" "client_id" "Iv23liQXrtOYmxQ2nhVa" "git_owner" "scottames" -}}
+{{- $owned := list $fieldOffice.name $fieldOffice.client_id $personal.name $personal.client_id -}}
+{{- $apps := list (ternary $fieldOffice $personal .host.is_field_office) -}}
+{{- range (get $live "apps" | default list) -}}
+{{-   if not (or (has .name $owned) (has .client_id $owned)) }}{{ $apps = append $apps . }}{{ end -}}
+{{- end -}}
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghtkn/refs/heads/main/json-schema/ghtkn.json
+# ghtkn - https://github.com/suzuki-shunsuke/ghtkn
+backend:
+  type: agent
+min_expiration: 1h
+apps:
+{{- range $apps }}
+  - {{ . | toYaml | trim | indent 4 | trimPrefix "    " }}
+{{- end }}

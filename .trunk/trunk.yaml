@@ -72,6 +72,9 @@ lint:
         # .toml / .yml suffix so the rendered output lands with the right one.
         # They are not valid in those languages until rendered.
         - home/.chezmoitemplates/theme/**
+        # chezmoi modify templates: Go templates that read the live file on
+        # stdin; not valid in their target language until rendered.
+        - home/**/modify_*
     - linters:
         - shellcheck
         - shfmt
