@@ -1,5 +1,109 @@
 # Changelog
 
+## [0.54.0](https://github.com/scottames/dots/compare/v0.53.0...v0.54.0) (2026-10-31)
+
+
+### Updates & Misc Chores
+
+* **deps:** lock file maintenance ([#1097](https://github.com/scottames/dots/issues/1097)) ([5174419](https://github.com/scottames/dots/commit/51744191c2ab2a4b4bb3afc37f6d126abfab5a20))
+* **deps:** lock file maintenance ([#1112](https://github.com/scottames/dots/issues/1112)) ([4aebe05](https://github.com/scottames/dots/commit/4aebe059b7a04bd14467781bd1b1ebcb3096d27c))
+* **deps:** update ⬆️ aqua-packages ([#1076](https://github.com/scottames/dots/issues/1076)) ([192e953](https://github.com/scottames/dots/commit/192e953813466122752fc70c5b57e2d1d79d0d13))
+* **deps:** update ⬆️ aqua-packages ([#1118](https://github.com/scottames/dots/issues/1118)) ([6a4c8ea](https://github.com/scottames/dots/commit/6a4c8ea944f64a4c3bf787c8ee10d7a37949143d))
+* **deps:** update ⬆️ aqua-packages to v4.562.0 ([#1071](https://github.com/scottames/dots/issues/1071)) ([0582ab0](https://github.com/scottames/dots/commit/0582ab0fad1595d62ab4a2e7407ca73b03b36d69))
+* **deps:** update ⬆️ aqua-packages to v4.565.0 ([#1080](https://github.com/scottames/dots/issues/1080)) ([bd9a756](https://github.com/scottames/dots/commit/bd9a7566bbb95af96c6b1a3f1341336a53100134))
+* **deps:** update ⬆️ aqua-packages to v4.566.0 ([#1082](https://github.com/scottames/dots/issues/1082)) ([89cf309](https://github.com/scottames/dots/commit/89cf309ceafca04d941d4564a5d80b2188b67464))
+* **deps:** update ⬆️ aqua-packages to v4.568.0 ([#1090](https://github.com/scottames/dots/issues/1090)) ([3fee82d](https://github.com/scottames/dots/commit/3fee82dd2c8d64eb03bb77bf055e3a6b04b8b32a))
+* **deps:** update ⬆️ aqua-packages to v4.569.0 ([#1095](https://github.com/scottames/dots/issues/1095)) ([cc9c08f](https://github.com/scottames/dots/commit/cc9c08fa8f4b88358280668fc570e682d2d22b4f))
+* **deps:** update ⬆️ aqua-packages to v4.570.0 ([#1098](https://github.com/scottames/dots/issues/1098)) ([7c11e68](https://github.com/scottames/dots/commit/7c11e68e0486d9ca29b9f6eee0aac74591f5d8b2))
+* **deps:** update ⬆️ aqua-packages to v4.572.0 ([#1108](https://github.com/scottames/dots/issues/1108)) ([0035b33](https://github.com/scottames/dots/commit/0035b3325c90691afce394c07374035dec9a0ccd))
+* **deps:** update ⬆️ aqua-packages to v4.575.0 ([#1122](https://github.com/scottames/dots/issues/1122)) ([877bc9f](https://github.com/scottames/dots/commit/877bc9f804199d2a0ead9285a7018288ad188de7))
+* **deps:** update ⬆️ aqua-packages to v4.576.0 ([#1131](https://github.com/scottames/dots/issues/1131)) ([902e3da](https://github.com/scottames/dots/commit/902e3da3db5beb80b4db617501ce1f6d8e2b07cb))
+* **deps:** update ⬆️ aqua-packages to v4.578.0 ([#1135](https://github.com/scottames/dots/issues/1135)) ([e174fa2](https://github.com/scottames/dots/commit/e174fa2105bf2e960204504f7a89856edf47809e))
+* **deps:** update ⬆️ container digests to fd7dc98 ([#1085](https://github.com/scottames/dots/issues/1085)) ([ff9c562](https://github.com/scottames/dots/commit/ff9c5625db42f194fb24294f8f1e495d57781591))
+* **deps:** update ⬆️ dagger to v0.21.10 ([#1102](https://github.com/scottames/dots/issues/1102)) ([b672fd5](https://github.com/scottames/dots/commit/b672fd54efe17644701dba70935e26d37c7774c0))
+* **deps:** update ⬆️ github-actions to 949feb2 ([#1119](https://github.com/scottames/dots/issues/1119)) ([186738a](https://github.com/scottames/dots/commit/186738a74644b70e9a844d6c9310092d51a6be01))
+* **deps:** update ⬆️ github-actions to v2026.10.2 ([#1104](https://github.com/scottames/dots/issues/1104)) ([e740816](https://github.com/scottames/dots/commit/e740816a40590d59b9f024cd76220232a96d4e01))
+* **deps:** update ⬆️ github-actions to v2026.9.15 ([#1087](https://github.com/scottames/dots/issues/1087)) ([ae0b04e](https://github.com/scottames/dots/commit/ae0b04eb9e2b28a6f8a2ceb0e2a04a8443d7cb10))
+* **deps:** update ⬆️ github-actions to v24.21.0 ([#1069](https://github.com/scottames/dots/issues/1069)) ([940f20e](https://github.com/scottames/dots/commit/940f20ea65efb0c96d02f6ba7eeb75d3511ff24f))
+* **deps:** update ⬆️ github-actions to v26 ([#1134](https://github.com/scottames/dots/issues/1134)) ([616d3da](https://github.com/scottames/dots/commit/616d3da894272b791eb14c13d18fccd8e8da2a27))
+* **deps:** update ⬆️ github-actions to v5 ([#1105](https://github.com/scottames/dots/issues/1105)) ([b7709df](https://github.com/scottames/dots/commit/b7709dfda3f35d7fc21186d5a7b732c8e60b865f))
+* **deps:** update ⬆️ mise-packages ([#1066](https://github.com/scottames/dots/issues/1066)) ([d344dbe](https://github.com/scottames/dots/commit/d344dbef533b26af8ed48be7c312f13ea7168595))
+* **deps:** update ⬆️ mise-packages ([#1072](https://github.com/scottames/dots/issues/1072)) ([01bd1ef](https://github.com/scottames/dots/commit/01bd1ef5a1650e315b6edb27139cea97efcd0eb5))
+* **deps:** update ⬆️ mise-packages ([#1074](https://github.com/scottames/dots/issues/1074)) ([8242502](https://github.com/scottames/dots/commit/82425023845e025d116341702932a5e9d829f16a))
+* **deps:** update ⬆️ mise-packages ([#1078](https://github.com/scottames/dots/issues/1078)) ([e716e0b](https://github.com/scottames/dots/commit/e716e0baee069f60d0419342653fcc8e07075cf8))
+* **deps:** update ⬆️ mise-packages ([#1083](https://github.com/scottames/dots/issues/1083)) ([4faff6e](https://github.com/scottames/dots/commit/4faff6e479bc8d631e64a5db5bf0fa149cf20fcf))
+* **deps:** update ⬆️ mise-packages ([#1088](https://github.com/scottames/dots/issues/1088)) ([4cb1740](https://github.com/scottames/dots/commit/4cb17403db20eb6bca9ce3ce968a5fac42eecc7c))
+* **deps:** update ⬆️ mise-packages ([#1091](https://github.com/scottames/dots/issues/1091)) ([8e3e4a2](https://github.com/scottames/dots/commit/8e3e4a2eef1c362d3682396d17d7786668ca9477))
+* **deps:** update ⬆️ mise-packages ([#1093](https://github.com/scottames/dots/issues/1093)) ([3472e91](https://github.com/scottames/dots/commit/3472e91ebe53d13f562e6789440ea88272e6d2ab))
+* **deps:** update ⬆️ mise-packages ([#1096](https://github.com/scottames/dots/issues/1096)) ([6c43d9e](https://github.com/scottames/dots/commit/6c43d9ec410a8c82c241bea3b53e682cf6014629))
+* **deps:** update ⬆️ mise-packages ([#1099](https://github.com/scottames/dots/issues/1099)) ([8271fd6](https://github.com/scottames/dots/commit/8271fd68aea664a9829b9e93f1acd6cf040dec3d))
+* **deps:** update ⬆️ mise-packages ([#1106](https://github.com/scottames/dots/issues/1106)) ([b1a6930](https://github.com/scottames/dots/commit/b1a6930431fe819401e76d0673a93010ea37eb77))
+* **deps:** update ⬆️ mise-packages ([#1109](https://github.com/scottames/dots/issues/1109)) ([d74e907](https://github.com/scottames/dots/commit/d74e9076668f48ac839a38bc8b52f920d6fcf289))
+* **deps:** update ⬆️ mise-packages ([#1111](https://github.com/scottames/dots/issues/1111)) ([f18ef1d](https://github.com/scottames/dots/commit/f18ef1def2921603b8af3ed32a669c56d0cfe420))
+* **deps:** update ⬆️ mise-packages ([#1113](https://github.com/scottames/dots/issues/1113)) ([a3a5f26](https://github.com/scottames/dots/commit/a3a5f26fe4a88235104302af1a2a28d8a87e4298))
+* **deps:** update ⬆️ mise-packages ([#1115](https://github.com/scottames/dots/issues/1115)) ([e6b6f87](https://github.com/scottames/dots/commit/e6b6f8724f2f67d1ced14eaceb9cbf07a19af294))
+* **deps:** update ⬆️ mise-packages ([#1120](https://github.com/scottames/dots/issues/1120)) ([6c25080](https://github.com/scottames/dots/commit/6c25080d45e313cf1b88600c766a435e0e4cf4fd))
+* **deps:** update ⬆️ mise-packages ([#1123](https://github.com/scottames/dots/issues/1123)) ([88beae9](https://github.com/scottames/dots/commit/88beae9f1acac714b249f7047826a43897741bec))
+* **deps:** update ⬆️ mise-packages to v7 ([#1126](https://github.com/scottames/dots/issues/1126)) ([60ac71e](https://github.com/scottames/dots/commit/60ac71eb6fe1f4e463772bd7cabcf74a441c0794))
+* **deps:** update ⬆️ vet-packages ([#1084](https://github.com/scottames/dots/issues/1084)) ([74603c7](https://github.com/scottames/dots/commit/74603c739d663b43bfd3a3d857b59dc7d8e06e33))
+* **deps:** update ⬆️ vet-packages ([#1094](https://github.com/scottames/dots/issues/1094)) ([c3f0a7f](https://github.com/scottames/dots/commit/c3f0a7fb5d0e79e076233931acd42e2da5a7712b))
+* **deps:** update ⬆️ vet-packages ([#1100](https://github.com/scottames/dots/issues/1100)) ([0d0d8d0](https://github.com/scottames/dots/commit/0d0d8d0a59e55fb9048c0587e0f3cadf221a8f2a))
+* **deps:** update ⬆️ vet-packages ([#1110](https://github.com/scottames/dots/issues/1110)) ([af32751](https://github.com/scottames/dots/commit/af3275189a883d5bd615037532f2f6b6ce0c3ea8))
+* **deps:** update ⬆️ vet-packages ([#1121](https://github.com/scottames/dots/issues/1121)) ([1a7cd19](https://github.com/scottames/dots/commit/1a7cd1960991f0be0554daa567ff3b82aa84af66))
+* **deps:** update ⬆️ vet-packages ([#1124](https://github.com/scottames/dots/issues/1124)) ([c9c6ff5](https://github.com/scottames/dots/commit/c9c6ff5b318e214b872a761708ce865c2a91af83))
+* **deps:** update ⬆️ vet-packages ([#1137](https://github.com/scottames/dots/issues/1137)) ([41094b5](https://github.com/scottames/dots/commit/41094b54f5879c23f326be1739e3564dadb29687))
+* **deps:** update ⬆️ vet-packages to v1.1.178 ([#1081](https://github.com/scottames/dots/issues/1081)) ([a8878c5](https://github.com/scottames/dots/commit/a8878c59f0f49e458b32ecc2436ba2803c463882))
+* **deps:** update ⬆️ vet-packages to v1.3.0 ([#1089](https://github.com/scottames/dots/issues/1089)) ([f2bc48d](https://github.com/scottames/dots/commit/f2bc48d67649b09a626759bc4c3ff7dbd57e82c3))
+* **deps:** update ⬆️ vet-packages to v1.4.0 ([#1092](https://github.com/scottames/dots/issues/1092)) ([aa6f384](https://github.com/scottames/dots/commit/aa6f384833337d4ef08753284b8f7f094069be37))
+* **deps:** update ⬆️ vet-packages to v1.5.0 ([#1107](https://github.com/scottames/dots/issues/1107)) ([0af3ff4](https://github.com/scottames/dots/commit/0af3ff48938177477f7be16eceba17cfea81cd87))
+* **deps:** update ⬆️ vet-packages to v1.7.0 ([#1114](https://github.com/scottames/dots/issues/1114)) ([f39424f](https://github.com/scottames/dots/commit/f39424f0d30960b83ac078f563afe3a79703d411))
+* **deps:** update dependency jdx/mise to v2026.10.14 ([#1128](https://github.com/scottames/dots/issues/1128)) ([855bbb5](https://github.com/scottames/dots/commit/855bbb51e35ed2dcc95d235d2230080e24a054ee))
+* **deps:** update dependency jdx/mise to v2026.10.19 ([#1132](https://github.com/scottames/dots/issues/1132)) ([5e168a2](https://github.com/scottames/dots/commit/5e168a2c7715f12fd51573283e19d8d1e585c9b1))
+* **deps:** update dependency jdx/mise to v2026.10.2 ([#1103](https://github.com/scottames/dots/issues/1103)) ([04bc319](https://github.com/scottames/dots/commit/04bc319ebdc9221b7bc166ebf029c5505c6ba417))
+* **deps:** update dependency jdx/mise to v2026.10.8 ([#1117](https://github.com/scottames/dots/issues/1117)) ([ba30c01](https://github.com/scottames/dots/commit/ba30c01ee580e789083a319e5385522520e5d95d))
+* **deps:** update dependency jdx/mise to v2026.9.15 ([#1086](https://github.com/scottames/dots/issues/1086)) ([2432cab](https://github.com/scottames/dots/commit/2432cabf77c620bbd965d06c5be07ef7dce61c41))
+* **deps:** update dependency max-baz/yubikey-touch-detector to v1.15.0 ([#1077](https://github.com/scottames/dots/issues/1077)) ([349a736](https://github.com/scottames/dots/commit/349a7367bb6843ed2701e13a03f345a7fbce8bd0))
+* **deps:** update github-actions ([#1129](https://github.com/scottames/dots/issues/1129)) ([3441592](https://github.com/scottames/dots/commit/3441592ce2754abe1bfce4397faddc71adc32ba3))
+* **deps:** update github-actions ([#1133](https://github.com/scottames/dots/issues/1133)) ([118fd25](https://github.com/scottames/dots/commit/118fd25281a55cd93c1585ba8cdf59b5c44c87a2))
+* **deps:** update herdr plugins ([#1075](https://github.com/scottames/dots/issues/1075)) ([559dfd0](https://github.com/scottames/dots/commit/559dfd095fcb182b6d3a191953ab23a71b11cf3c))
+* **helix:** additional config ([2df03bc](https://github.com/scottames/dots/commit/2df03bc6fdc41f0f60584e71b8fc6e2291c4bbc3))
+* **mise:** bump herdr 0.9.1 ([8b6880b](https://github.com/scottames/dots/commit/8b6880bcad1e2513315b3ba11654f9be69891017))
+* **nvim/lazy:** updates ([a8064d6](https://github.com/scottames/dots/commit/a8064d613ff9b71fec8c7ceaf2979c98a4c37f49))
+* **nvim:** lazy updates ([533c158](https://github.com/scottames/dots/commit/533c15831b66059287c1e3428452c55686ecf688))
+* **opencode:** allow find-docs skill use ([d89459c](https://github.com/scottames/dots/commit/d89459c299060f7dbf3d13b82416f7875a76cb8b))
+* **opencode:** disable tabs ([73a0bb9](https://github.com/scottames/dots/commit/73a0bb9dd7d2fbd1a2f9606b3bd47348baf1f7f7))
+* **renovate:** pin opencode to v1 ([0026d54](https://github.com/scottames/dots/commit/0026d54bf5da78f5fe48a27d14684c6dfeedde52))
+* **renovate:** use github-digest for plannotator/herdr-annotate ([515d9d4](https://github.com/scottames/dots/commit/515d9d4882aacbd096ab7eef92d5c59d117b8457))
+* upgrade trunk ([#1079](https://github.com/scottames/dots/issues/1079)) ([93cbb05](https://github.com/scottames/dots/commit/93cbb05ba09ebdd4521b666a09023bf56d79e7eb))
+* upgrade trunk ([#1101](https://github.com/scottames/dots/issues/1101)) ([cab92fd](https://github.com/scottames/dots/commit/cab92fd5095b7469b809359b98235807eec11fa3))
+* upgrade trunk ([#1116](https://github.com/scottames/dots/issues/1116)) ([8a330d7](https://github.com/scottames/dots/commit/8a330d7ad710de17025f35456280d379969fd167))
+* upgrade trunk ([#1127](https://github.com/scottames/dots/issues/1127)) ([ceb7924](https://github.com/scottames/dots/commit/ceb79247991e186f6d8caaf67a8f110592e595a5))
+
+
+### Features
+
+* **agents:** allow edits from outside tmpl ([35b1c27](https://github.com/scottames/dots/commit/35b1c27052683077405af94b3d2d69a93a08e019))
+* **ghtkn:** keep apps merged in by other dotfiles ([21b9021](https://github.com/scottames/dots/commit/21b90219bdcf156419a17c40a2b8fc8ba30f0c30))
+* **herdr:** better window title ([92f5b79](https://github.com/scottames/dots/commit/92f5b79e564b316334c37b5ad616cd4422fc81f7))
+* **mise:** support v2 lockfiles and verified sidecar writeback ([#1073](https://github.com/scottames/dots/issues/1073)) ([f09473b](https://github.com/scottames/dots/commit/f09473b0c5b4332bbb44009f65290e6b45527994))
+* **opencode:** upgrade to v2 ([6da6ec2](https://github.com/scottames/dots/commit/6da6ec240aae553afee9a2f087399c732c71e9d7))
+* stax, stacked git branches ([04f7417](https://github.com/scottames/dots/commit/04f7417623f6c620886f32551c501000803c551a))
+* **waybar:** better titles + reorder ([5c88aab](https://github.com/scottames/dots/commit/5c88aaba93b0e561c46e2430bb9e4e92ebfdd1b5))
+
+
+### Bug Fixes
+
+* **chezmoi:** preserve Satty archive paths ([#1130](https://github.com/scottames/dots/issues/1130)) ([29a7fed](https://github.com/scottames/dots/commit/29a7fed343ee1ba5586b1921e4735f3c190c74e1))
+* **git:** work config signing conflicts ([fc880e1](https://github.com/scottames/dots/commit/fc880e1ea777f6dca9389481ac7e81777e03026a))
+* **nono/droid:** rm deprecated/missing interactive policy val ([fed276c](https://github.com/scottames/dots/commit/fed276c681e16939277632fe6e4613925a286f6f))
+* **nono:** correct legacy config in profiles ([65ff663](https://github.com/scottames/dots/commit/65ff6634ce8aa372c8b9905ab9d4d8f1aa1ad70d))
+
+
+### Code Refactoring
+
+* **agents:** agents as raw files rather than symlinks ([c6c1fb0](https://github.com/scottames/dots/commit/c6c1fb073ba68b809045bd15429fe87d04f76645))
+* **nix:** darwin/homebrew related changes based on new macbook ([e32baff](https://github.com/scottames/dots/commit/e32baffd84ef657c5fe5d6244ff01883fff08a26))
+
 ## [0.53.0](https://github.com/scottames/dots/compare/v0.52.0...v0.53.0) (2026-09-17)
 
 
