@@ -2510,75 +2510,75 @@ url = "https://github.com/nushell/nushell/releases/download/0.116.1/nu-0.116.1-x
 url_api = "https://api.github.com/repos/nushell/nushell/releases/assets/610069956"
 
 [[tools."aqua:openai/codex"]]
-version = "rust-v0.164.0"
+version = "rust-v0.165.0"
 backend = "aqua:openai/codex"
-specifiers = ["rust-v0.164.0"]
+specifiers = ["rust-v0.165.0"]
 
 [tools."aqua:openai/codex"."platforms.linux-arm64"]
-checksum = "sha256:5918add6c7e9cf1e14a9af1b4c0f4bf1d24a43903faac26df5dc4c019ea91bd5"
+checksum = "sha256:c8b2844fdef57498572db960344aee8c836ce9f75c203379da0a9c3a334fc3b7"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667986980"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682726582"
 
 [tools."aqua:openai/codex"."platforms.linux-arm64-musl"]
-checksum = "sha256:5918add6c7e9cf1e14a9af1b4c0f4bf1d24a43903faac26df5dc4c019ea91bd5"
+checksum = "sha256:c8b2844fdef57498572db960344aee8c836ce9f75c203379da0a9c3a334fc3b7"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667986980"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682726582"
 
 [tools."aqua:openai/codex"."platforms.linux-x64"]
-checksum = "sha256:3ec55053109608d5038f7e50750f7d25f768dfd740fef071aa710e2559b63aac"
+checksum = "sha256:e97c4463d7f146692a955d7b0e1c8cf48f97cd4d616cd45c5dcab2e8d9743316"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667994796"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682734800"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-baseline"]
-checksum = "sha256:3ec55053109608d5038f7e50750f7d25f768dfd740fef071aa710e2559b63aac"
+checksum = "sha256:e97c4463d7f146692a955d7b0e1c8cf48f97cd4d616cd45c5dcab2e8d9743316"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667994796"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682734800"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-musl"]
-checksum = "sha256:3ec55053109608d5038f7e50750f7d25f768dfd740fef071aa710e2559b63aac"
+checksum = "sha256:e97c4463d7f146692a955d7b0e1c8cf48f97cd4d616cd45c5dcab2e8d9743316"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667994796"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682734800"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:3ec55053109608d5038f7e50750f7d25f768dfd740fef071aa710e2559b63aac"
+checksum = "sha256:e97c4463d7f146692a955d7b0e1c8cf48f97cd4d616cd45c5dcab2e8d9743316"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667994796"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682734800"
 
 [tools."aqua:openai/codex"."platforms.macos-arm64"]
-checksum = "sha256:dd99e9092270691a67bdde7be04ac283dea9da8e86cbde356c2cc851a79205fa"
+checksum = "sha256:34d12384d90f8e09b0b9abaabf2a0ac02a52093b131504aeaf282107f54a44b2"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667983476"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682722375"
 
 [tools."aqua:openai/codex"."platforms.macos-x64"]
-checksum = "sha256:cfb2a9988d7ea448511166a35789af07a0065d1117db54350b17d46cf03d0294"
+checksum = "sha256:792ecab0596006bd9f286430b2790aa487fd40fca2f351ca313ad85991720226"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667989634"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682730388"
 
 [tools."aqua:openai/codex"."platforms.macos-x64-baseline"]
-checksum = "sha256:cfb2a9988d7ea448511166a35789af07a0065d1117db54350b17d46cf03d0294"
+checksum = "sha256:792ecab0596006bd9f286430b2790aa487fd40fca2f351ca313ad85991720226"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667989634"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682730388"
 
 [tools."aqua:openai/codex"."platforms.windows-x64"]
-checksum = "sha256:700116be3143576d006467af8576f7f4c9dada1feddfdb7f69743bfde0997018"
+checksum = "sha256:2a64beb5856c3170738793e0aa65b44aa3f2d7b8f53221a3f72bdafe6485d119"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667993208"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682733151"
 
 [tools."aqua:openai/codex"."platforms.windows-x64-baseline"]
-checksum = "sha256:700116be3143576d006467af8576f7f4c9dada1feddfdb7f69743bfde0997018"
+checksum = "sha256:2a64beb5856c3170738793e0aa65b44aa3f2d7b8f53221a3f72bdafe6485d119"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.164.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/667993208"
+url = "https://github.com/openai/codex/releases/download/rust-v0.165.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/682733151"
 
 [[tools."aqua:rhysd/actionlint"]]
 version = "v1.7.12"
@@ -3635,75 +3635,75 @@ url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/65966620
 provenance = "cosign"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
-version = "0.39.4"
+version = "0.40.0"
 backend = "aqua:vercel-labs/agent-browser"
-specifiers = ["0.39.4"]
+specifiers = ["0.40.0"]
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64"]
-checksum = "sha256:922b60dbd9f5c8b5c0f39b453bfe8cbf61b83abd487344028a508e8c4dca7883"
+checksum = "sha256:f33b4dd9bd7707ad952125937f9de18f93548c5d51283b18092fe21ced6b9e53"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-linux-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167274"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935171"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:922b60dbd9f5c8b5c0f39b453bfe8cbf61b83abd487344028a508e8c4dca7883"
+checksum = "sha256:f33b4dd9bd7707ad952125937f9de18f93548c5d51283b18092fe21ced6b9e53"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-linux-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167274"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935171"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64"]
-checksum = "sha256:34a8be7c062a99164fc02322f22ac5f42870206cc7b59bb40ef045958ad3705b"
+checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167277"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-baseline"]
-checksum = "sha256:34a8be7c062a99164fc02322f22ac5f42870206cc7b59bb40ef045958ad3705b"
+checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167277"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
-checksum = "sha256:34a8be7c062a99164fc02322f22ac5f42870206cc7b59bb40ef045958ad3705b"
+checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167277"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:34a8be7c062a99164fc02322f22ac5f42870206cc7b59bb40ef045958ad3705b"
+checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167277"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-arm64"]
-checksum = "sha256:0317ce35172905c775c25b393914bc259701a464877aab9753ec8896f6e38bf7"
+checksum = "sha256:b064c9107a0431c76d8916e47c2c8ac322f49c2b2720d6c9036ab538ec1ed911"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-darwin-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167273"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935174"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64"]
-checksum = "sha256:21522a8ec34063fa294b0c928ad03d3485f1821ebe22f9da2b47b89963f731af"
+checksum = "sha256:478cba056938c5cde286fbeea3994a8b8144f2e18f054684b93abb80c0340d25"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167276"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935172"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.macos-x64-baseline"]
-checksum = "sha256:21522a8ec34063fa294b0c928ad03d3485f1821ebe22f9da2b47b89963f731af"
+checksum = "sha256:478cba056938c5cde286fbeea3994a8b8144f2e18f054684b93abb80c0340d25"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167276"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935172"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64"]
-checksum = "sha256:be19a109a004f84c367d7913c22b8046390b3e0e5241f9f6c7e83c7bacd22aae"
+checksum = "sha256:b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167313"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935281"
 
 [tools."aqua:vercel-labs/agent-browser"."platforms.windows-x64-baseline"]
-checksum = "sha256:be19a109a004f84c367d7913c22b8046390b3e0e5241f9f6c7e83c7bacd22aae"
+checksum = "sha256:b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
 checksum_source = "mise-versions"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.39.4/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/677167313"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935281"
 
 [[tools."aqua:walles/moor"]]
 version = "2.19.5"
@@ -4086,74 +4086,74 @@ url = "https://github.com/angristan/fast-resume/releases/download/v2.14.0/fast-r
 url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/650581285"
 
 [[tools."github:anthropics/claude-code"]]
-version = "2.1.311"
+version = "2.1.312"
 backend = "github:anthropics/claude-code"
-specifiers = ["v2.1.311"]
+specifiers = ["v2.1.312"]
 
 [tools."github:anthropics/claude-code"."platforms.linux-arm64"]
-checksum = "sha256:f464c31d01cd364d1d5df529dc4c202ce9a05c7a87b9fd4fefebb0a8ffe1ecb5"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248780"
+checksum = "sha256:0635c6245b11bbb4ca16e4119b0ac3980ee99e2f8cf5ab6e8d6c0e9e0db3ee5b"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510791"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-arm64-musl"]
-checksum = "sha256:916fe5c7e0593f42982ae8491a04a51f3d840bb06e54c68bdd8a731e421c4473"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-linux-arm64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248779"
+checksum = "sha256:8f7615a7259d867ef61e707c4cb633f80686b2013ccd258b342b0bbdb81ab0e4"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-linux-arm64-musl.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510788"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64"]
-checksum = "sha256:1e506d1d4466d854f0a2ea662f04122c77475e8c71a680bbbdc1c99fefff3fa7"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248991"
+checksum = "sha256:d9324231c4e3dfe342e853f56c752348ae060f9f221cdf4b0f90ef1dc47ee907"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682511222"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64-baseline"]
-checksum = "sha256:1e506d1d4466d854f0a2ea662f04122c77475e8c71a680bbbdc1c99fefff3fa7"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248991"
+checksum = "sha256:d9324231c4e3dfe342e853f56c752348ae060f9f221cdf4b0f90ef1dc47ee907"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682511222"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64-musl"]
-checksum = "sha256:21cf8759ce58e9040457a0dafb6ad36a855b57c350337a3bd865f42d7e69f377"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248775"
+checksum = "sha256:1387c15f9bbc6e7641791b0fa502d25254be633b8a26538d4a9890e6e5345795"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510786"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:21cf8759ce58e9040457a0dafb6ad36a855b57c350337a3bd865f42d7e69f377"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248775"
+checksum = "sha256:1387c15f9bbc6e7641791b0fa502d25254be633b8a26538d4a9890e6e5345795"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510786"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.macos-arm64"]
-checksum = "sha256:28dc437c4530e4fbd5e4f8924119cb001c332b64de5e817b35898c39ec107155"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248777"
+checksum = "sha256:b5ff41139e79b6ffdabe4df93c09ee628b1306a78be6459139fd7c7f175c85ac"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510790"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.macos-x64"]
-checksum = "sha256:d35c77b739797451772b8179c076bd7230f456239bf538890fbc0b38ca209bde"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248778"
+checksum = "sha256:f4378cda8b6c256e36da75b8571971bbfc54f02901855d5c15fae16255e17188"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510784"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.macos-x64-baseline"]
-checksum = "sha256:d35c77b739797451772b8179c076bd7230f456239bf538890fbc0b38ca209bde"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679248778"
+checksum = "sha256:f4378cda8b6c256e36da75b8571971bbfc54f02901855d5c15fae16255e17188"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682510784"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.windows-x64"]
-checksum = "sha256:d5ceb396733c2b96c163b925149abce37ed075adac9a3d94208279986e4546ed"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-win32-x64.zip"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679249047"
+checksum = "sha256:91da0973a98d82485359895d43c22f924002ff9247d7204b137b7d4a0ab7a623"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-win32-x64.zip"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682511259"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.windows-x64-baseline"]
-checksum = "sha256:d5ceb396733c2b96c163b925149abce37ed075adac9a3d94208279986e4546ed"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.311/claude-win32-x64.zip"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/679249047"
+checksum = "sha256:91da0973a98d82485359895d43c22f924002ff9247d7204b137b7d4a0ab7a623"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.312/claude-win32-x64.zip"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/682511259"
 provenance = "github-attestations"
 
 [[tools."github:aquaproj/aqua"]]
@@ -4228,74 +4228,74 @@ url_api = "https://api.github.com/repos/aquaproj/aqua/releases/assets/665751231"
 provenance = "github-attestations"
 
 [[tools."github:backnotprop/plannotator"]]
-version = "0.28.33"
+version = "0.28.35"
 backend = "github:backnotprop/plannotator"
-specifiers = ["v0.28.33"]
+specifiers = ["v0.28.35"]
 
 [tools."github:backnotprop/plannotator"."platforms.linux-arm64"]
-checksum = "sha256:7c082a38356e7de36d0639eacfc8b3aca231b5d21c5f06423cad9e12bc15ff13"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-linux-arm64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862673"
+checksum = "sha256:38dc1a40e7a8827bee7691603b329402154fc5b7e7538f29c9eb98294974a29b"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-linux-arm64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118646"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-arm64-musl"]
-checksum = "sha256:7c082a38356e7de36d0639eacfc8b3aca231b5d21c5f06423cad9e12bc15ff13"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-linux-arm64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862673"
+checksum = "sha256:38dc1a40e7a8827bee7691603b329402154fc5b7e7538f29c9eb98294974a29b"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-linux-arm64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118646"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64"]
-checksum = "sha256:a92298746987432104c60e5321c995b02e462809cd5596ff4b1faa6dd6613648"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862676"
+checksum = "sha256:d00baed30211311682886f846f4c04b9cc090082b963cedd752d9327310915f5"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118653"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-baseline"]
-checksum = "sha256:a92298746987432104c60e5321c995b02e462809cd5596ff4b1faa6dd6613648"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862676"
+checksum = "sha256:d00baed30211311682886f846f4c04b9cc090082b963cedd752d9327310915f5"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118653"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl"]
-checksum = "sha256:a92298746987432104c60e5321c995b02e462809cd5596ff4b1faa6dd6613648"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862676"
+checksum = "sha256:d00baed30211311682886f846f4c04b9cc090082b963cedd752d9327310915f5"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118653"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:a92298746987432104c60e5321c995b02e462809cd5596ff4b1faa6dd6613648"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862676"
+checksum = "sha256:d00baed30211311682886f846f4c04b9cc090082b963cedd752d9327310915f5"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118653"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-arm64"]
-checksum = "sha256:0bdcdd955d9c3c23221e5d53e44142c36e72e98718b5ca9a78e41bf544605018"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-darwin-arm64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862669"
+checksum = "sha256:4a8e2e5c833ba5f0cef6fa9c18292d5ddb7becefa67d90458c83a22e004ed8e3"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-darwin-arm64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118647"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-x64"]
-checksum = "sha256:3ebb817fc07b8db6ee82c6bb8dfd0e5628130ef2e385465ea444b6979c685c42"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-darwin-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862677"
+checksum = "sha256:17bae6fc49150f8d5357903c28f39217c21c436995a6e6ff7143bf808d8fd0f5"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-darwin-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118664"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-x64-baseline"]
-checksum = "sha256:3ebb817fc07b8db6ee82c6bb8dfd0e5628130ef2e385465ea444b6979c685c42"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-darwin-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862677"
+checksum = "sha256:17bae6fc49150f8d5357903c28f39217c21c436995a6e6ff7143bf808d8fd0f5"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-darwin-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118664"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.windows-x64"]
-checksum = "sha256:bd871a8acef61aa4e388de23b62090f14849cb190e9cb2836278f8e01fbc1e4f"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-win32-x64.exe"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862653"
+checksum = "sha256:fa888520f4a348295ea9329f5ecc8bce0e7b7e2779e3159ebc764ebd69e7d890"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-win32-x64.exe"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118657"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.windows-x64-baseline"]
-checksum = "sha256:bd871a8acef61aa4e388de23b62090f14849cb190e9cb2836278f8e01fbc1e4f"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.33/plannotator-win32-x64.exe"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/681862653"
+checksum = "sha256:fa888520f4a348295ea9329f5ecc8bce0e7b7e2779e3159ebc764ebd69e7d890"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.35/plannotator-win32-x64.exe"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/684118657"
 provenance = "github-attestations"
 
 [[tools."github:cesarferreira/stax"]]
