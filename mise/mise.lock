@@ -620,62 +620,62 @@ url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/679980629"
 provenance = "github-attestations"
 
 [[tools."aqua:atuinsh/atuin"]]
-version = "18.24.3"
+version = "18.24.4"
 backend = "aqua:atuinsh/atuin"
-specifiers = ["18.24.3"]
+specifiers = ["18.24.4"]
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-arm64"]
-checksum = "sha256:fb9b67771736bfd47ddbe2cf49a2c0c57f50b1f74e396b579833a977551104d4"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132645"
+checksum = "sha256:5216c5fc98d46c0f99106699f88f122e4a5332e8151f481fdaac408329e3d0c6"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584609"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-arm64-musl"]
-checksum = "sha256:48d7bc0e6821bcaef7e9752abaa4ded541b36889b1620923d8abb17fa34059b3"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132649"
+checksum = "sha256:7698bd70195bde165bb37ea3133aa6663dd48ff7d6a23042cda2c7be4c22ba78"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584613"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64"]
-checksum = "sha256:f26874cae03d6436a6f5997d9bcebef3b37237eedf9aedee12eed7421f90b847"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132780"
+checksum = "sha256:d5ed5958ef04a4c20cb876feaa7fbad965f6ccd7b997e7ed54e862adec9ce0fc"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584795"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64-baseline"]
-checksum = "sha256:f26874cae03d6436a6f5997d9bcebef3b37237eedf9aedee12eed7421f90b847"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132780"
+checksum = "sha256:d5ed5958ef04a4c20cb876feaa7fbad965f6ccd7b997e7ed54e862adec9ce0fc"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584795"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64-musl"]
-checksum = "sha256:7e2ae5dbbced1c40ee9eb20815436253a7fac2363a77024021892880beb0b589"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132786"
+checksum = "sha256:788cff5b3903ca7f1f5bdff3e4b4975c38b3c20385176a49b01ad1bea5b37636"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584812"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:7e2ae5dbbced1c40ee9eb20815436253a7fac2363a77024021892880beb0b589"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132786"
+checksum = "sha256:788cff5b3903ca7f1f5bdff3e4b4975c38b3c20385176a49b01ad1bea5b37636"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584812"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.macos-arm64"]
-checksum = "sha256:dd266366b1b00c298d689b0613c1acbe82855f04eb47d3f3f96262b148d8ebb9"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132647"
+checksum = "sha256:edd06294377599bf4d85ca3337abc802256a991262260bdd980d1b649583553d"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584610"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.windows-x64"]
-checksum = "sha256:faa3d3af8f51a676dde3cb6d250c5e65b33a67ff824d7d1092da94585ae8c953"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132765"
+checksum = "sha256:773cb6a6538ac1f6d563abfe69c9a75e7e0455b5210d9ff071ef2b3f28368f3e"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584780"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.windows-x64-baseline"]
-checksum = "sha256:faa3d3af8f51a676dde3cb6d250c5e65b33a67ff824d7d1092da94585ae8c953"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.3/atuin-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/687132765"
+checksum = "sha256:773cb6a6538ac1f6d563abfe69c9a75e7e0455b5210d9ff071ef2b3f28368f3e"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.4/atuin-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/690584780"
 provenance = "github-attestations"
 
 [[tools."aqua:bootandy/dust"]]
@@ -3885,75 +3885,75 @@ checksum = "sha256:0f20ce6674d4f2dbcc8c5d59fdf99f7ba45f8c3b367e0f5781cbfa30a1c78
 url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64-baseline.zip"
 
 [[tools."github:ZenNotes/tui"]]
-version = "0.12.2"
+version = "0.13.1"
 backend = "github:ZenNotes/tui"
-specifiers = ["v0.12.2"]
+specifiers = ["v0.13.1"]
 
 [tools."github:ZenNotes/tui"."platforms.linux-arm64"]
-checksum = "sha256:882ec3fb8f988069c2208412e3ce72bfe8be8dfff461c0ec503f5734c7417786"
+checksum = "sha256:90c3aa7463a1de2d106b31b20474ac753d4c4747a52539a753c2973b492cf448"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509811"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210589"
 
 [tools."github:ZenNotes/tui"."platforms.linux-arm64-musl"]
-checksum = "sha256:882ec3fb8f988069c2208412e3ce72bfe8be8dfff461c0ec503f5734c7417786"
+checksum = "sha256:90c3aa7463a1de2d106b31b20474ac753d4c4747a52539a753c2973b492cf448"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509811"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210589"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64"]
-checksum = "sha256:2617004481aee2e4f9677cc362d76ed9c0c414e6ec7858fa34db3d09156a33fe"
+checksum = "sha256:3ea08b4728c36384e8ccb008e29daa8b7ebfeb4c5264497966d41039fb326aa1"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509741"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210591"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64-baseline"]
-checksum = "sha256:2617004481aee2e4f9677cc362d76ed9c0c414e6ec7858fa34db3d09156a33fe"
+checksum = "sha256:3ea08b4728c36384e8ccb008e29daa8b7ebfeb4c5264497966d41039fb326aa1"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509741"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210591"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64-musl"]
-checksum = "sha256:2617004481aee2e4f9677cc362d76ed9c0c414e6ec7858fa34db3d09156a33fe"
+checksum = "sha256:3ea08b4728c36384e8ccb008e29daa8b7ebfeb4c5264497966d41039fb326aa1"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509741"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210591"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:2617004481aee2e4f9677cc362d76ed9c0c414e6ec7858fa34db3d09156a33fe"
+checksum = "sha256:3ea08b4728c36384e8ccb008e29daa8b7ebfeb4c5264497966d41039fb326aa1"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509741"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210591"
 
 [tools."github:ZenNotes/tui"."platforms.macos-arm64"]
-checksum = "sha256:7e7b3be038dfa63dc4a79bc6068cb459462cf81e809e5b070d73bfbe3e7bd5ac"
+checksum = "sha256:f3c9f9ec75e93a7ce975e8acb099cec5c4889f38ab2e6a39a2159c7132e62d37"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509829"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210596"
 
 [tools."github:ZenNotes/tui"."platforms.macos-x64"]
-checksum = "sha256:091f8b2a2f5ceb8f03acfd90f4337b085551b36058b7326b9ee64d4b1a330a12"
+checksum = "sha256:3aac2fb65558760a861a10a9caa8eab892d34cbdcf52230e83aa80ba6737ef04"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509740"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210590"
 
 [tools."github:ZenNotes/tui"."platforms.macos-x64-baseline"]
-checksum = "sha256:091f8b2a2f5ceb8f03acfd90f4337b085551b36058b7326b9ee64d4b1a330a12"
+checksum = "sha256:3aac2fb65558760a861a10a9caa8eab892d34cbdcf52230e83aa80ba6737ef04"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509740"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210590"
 
 [tools."github:ZenNotes/tui"."platforms.windows-x64"]
-checksum = "sha256:2a656a2f673947e766c831b248f9aaa0fb7e3492dadabfa0a240402746697bd3"
+checksum = "sha256:0667dbea74360325ac0417fdc0d264500c1072c38afd2afbffcb2f3c1ec0c73e"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_windows_amd64.zip"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509743"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_windows_amd64.zip"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210651"
 
 [tools."github:ZenNotes/tui"."platforms.windows-x64-baseline"]
-checksum = "sha256:2a656a2f673947e766c831b248f9aaa0fb7e3492dadabfa0a240402746697bd3"
+checksum = "sha256:0667dbea74360325ac0417fdc0d264500c1072c38afd2afbffcb2f3c1ec0c73e"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.12.2/zn_0.12.2_windows_amd64.zip"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/682509743"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.13.1/zn_0.13.1_windows_amd64.zip"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/693210651"
 
 [[tools."github:agavra/tuicr"]]
 version = "0.28.0"
@@ -4228,74 +4228,74 @@ url_api = "https://api.github.com/repos/aquaproj/aqua/releases/assets/665751231"
 provenance = "github-attestations"
 
 [[tools."github:backnotprop/plannotator"]]
-version = "0.28.38"
+version = "0.28.40"
 backend = "github:backnotprop/plannotator"
-specifiers = ["v0.28.38"]
+specifiers = ["v0.28.40"]
 
 [tools."github:backnotprop/plannotator"."platforms.linux-arm64"]
-checksum = "sha256:2d67740ebaf4d58edbba3190b53dba888943a5a72751e09598e6218701194943"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-linux-arm64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820859"
+checksum = "sha256:b1cbc8609bd0f0838bb2972ba573b3cfdc97c6e1dcadb99b86e2eb60195d04d4"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-linux-arm64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232103"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-arm64-musl"]
-checksum = "sha256:2d67740ebaf4d58edbba3190b53dba888943a5a72751e09598e6218701194943"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-linux-arm64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820859"
+checksum = "sha256:b1cbc8609bd0f0838bb2972ba573b3cfdc97c6e1dcadb99b86e2eb60195d04d4"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-linux-arm64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232103"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64"]
-checksum = "sha256:0e0cbeaded05eee864e781abcf97c2cfa47babf895cf81e4ad0bd900d86f4a82"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820863"
+checksum = "sha256:c3090921bcaf0d73aec49d6d06d33a41238c06275a6420aba557afb9d2f00e01"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232104"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-baseline"]
-checksum = "sha256:0e0cbeaded05eee864e781abcf97c2cfa47babf895cf81e4ad0bd900d86f4a82"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820863"
+checksum = "sha256:c3090921bcaf0d73aec49d6d06d33a41238c06275a6420aba557afb9d2f00e01"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232104"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl"]
-checksum = "sha256:0e0cbeaded05eee864e781abcf97c2cfa47babf895cf81e4ad0bd900d86f4a82"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820863"
+checksum = "sha256:c3090921bcaf0d73aec49d6d06d33a41238c06275a6420aba557afb9d2f00e01"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232104"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:0e0cbeaded05eee864e781abcf97c2cfa47babf895cf81e4ad0bd900d86f4a82"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-linux-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820863"
+checksum = "sha256:c3090921bcaf0d73aec49d6d06d33a41238c06275a6420aba557afb9d2f00e01"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-linux-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232104"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-arm64"]
-checksum = "sha256:1fd0c46e54f38b1fb79873496862231bb6a9deeb3db4758bc71bf5ad8b2ad466"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-darwin-arm64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820862"
+checksum = "sha256:4c41692c88cffd0840b9901f79dd2e73bec612ca34ce2cd2d4c77f33c5373db1"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-darwin-arm64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232098"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-x64"]
-checksum = "sha256:079a9c9fb162fe129ab699d844a3089e55135cc116969f909223c0146b536dfa"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-darwin-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820861"
+checksum = "sha256:51781e11092d0a7887bd639a20f0f999acb940965eb64e17eb53c4594266663b"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-darwin-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232105"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-x64-baseline"]
-checksum = "sha256:079a9c9fb162fe129ab699d844a3089e55135cc116969f909223c0146b536dfa"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-darwin-x64"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820861"
+checksum = "sha256:51781e11092d0a7887bd639a20f0f999acb940965eb64e17eb53c4594266663b"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-darwin-x64"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232105"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.windows-x64"]
-checksum = "sha256:ef0c0c1b625e3ddce9528e7d38d1f43de1b92892edac5e5ad7e13e49f140e7ec"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-win32-x64.exe"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820851"
+checksum = "sha256:a010b2e9d9c6ef8f214307464bcc18fb19cb8a1732bfdab9277aa3056d49a5dc"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-win32-x64.exe"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232099"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.windows-x64-baseline"]
-checksum = "sha256:ef0c0c1b625e3ddce9528e7d38d1f43de1b92892edac5e5ad7e13e49f140e7ec"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.38/plannotator-win32-x64.exe"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/689820851"
+checksum = "sha256:a010b2e9d9c6ef8f214307464bcc18fb19cb8a1732bfdab9277aa3056d49a5dc"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.40/plannotator-win32-x64.exe"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/693232099"
 provenance = "github-attestations"
 
 [[tools."github:cesarferreira/stax"]]
@@ -5756,61 +5756,61 @@ backend = "core:rust"
 specifiers = ["1.99.1"]
 
 [[tools.usage]]
-version = "7.1.3"
+version = "7.1.4"
 backend = "packslip:github.com/jdx/usage"
-specifiers = ["7.1.3"]
+specifiers = ["7.1.4"]
 
 [tools.usage."platforms.linux-arm64"]
-checksum = "sha256:f5e8cb2d9fea663e0b17472ce30ccc398c5dae4ddd7c6fb60f6b0f1d59386677"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-aarch64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:2f25a923192210891b19d2ea4b4dbf6fe6c851ba8067b5ffd646517026e1f656"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-aarch64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.linux-arm64-musl"]
-checksum = "sha256:2e3cc3ae62b3ef008eb739c527101087864e210da9df23c8e2b456c90b8dc8b4"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:c8256c38ec82a28288326d48d3c8fcfa56e1fb1c76e82f66c58ad5fa18965e1b"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-aarch64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.linux-x64"]
-checksum = "sha256:8862647112681941439df958ea8240a96e14319adc7f28497f09bd2ba10c0344"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:eb213eb6c1cbc6896d7f8b627af984a9c1734d67bdf703788038bc50c326c676"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.linux-x64-baseline"]
-checksum = "sha256:8862647112681941439df958ea8240a96e14319adc7f28497f09bd2ba10c0344"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:eb213eb6c1cbc6896d7f8b627af984a9c1734d67bdf703788038bc50c326c676"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.linux-x64-musl"]
-checksum = "sha256:826cb318a95ac418e8c3f8237439ac39239dfe88e491adc3ecddd3fa4e58d057"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:662fe04a2a1b7947e73b7ad4d608f50b96a500e5bc2c9d1961e28894a8c87f5d"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-x86_64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:826cb318a95ac418e8c3f8237439ac39239dfe88e491adc3ecddd3fa4e58d057"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:662fe04a2a1b7947e73b7ad4d608f50b96a500e5bc2c9d1961e28894a8c87f5d"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-x86_64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.macos-arm64"]
-checksum = "sha256:4878938599894c051baaf601cb5c7ee351f4276c9da0acbf959e868884f2b99b"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-universal-apple-darwin.tar.gz"
+checksum = "sha256:cae1865b2bb4eb8c22087381d4fbc29344837960c71dbf865dc55296c19d535d"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-universal-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.macos-x64"]
-checksum = "sha256:4878938599894c051baaf601cb5c7ee351f4276c9da0acbf959e868884f2b99b"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-universal-apple-darwin.tar.gz"
+checksum = "sha256:cae1865b2bb4eb8c22087381d4fbc29344837960c71dbf865dc55296c19d535d"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-universal-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.macos-x64-baseline"]
-checksum = "sha256:4878938599894c051baaf601cb5c7ee351f4276c9da0acbf959e868884f2b99b"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-universal-apple-darwin.tar.gz"
+checksum = "sha256:cae1865b2bb4eb8c22087381d4fbc29344837960c71dbf865dc55296c19d535d"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-universal-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.windows-x64"]
-checksum = "sha256:4abb3f7b7e9ecac17558be73336137fa83ec9a43d0c1168a9bbb5aedd1685a27"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:3254065ef86acb0131be75909ee9010cd41de22e10bcbbc1c1829494b9c7a23f"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
 
 [tools.usage."platforms.windows-x64-baseline"]
-checksum = "sha256:4abb3f7b7e9ecac17558be73336137fa83ec9a43d0c1168a9bbb5aedd1685a27"
-url = "https://github.com/jdx/usage/releases/download/v7.1.3/usage-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:3254065ef86acb0131be75909ee9010cd41de22e10bcbbc1c1829494b9c7a23f"
+url = "https://github.com/jdx/usage/releases/download/v7.1.4/usage-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/usage/.github/workflows/publish-cli.yml"
