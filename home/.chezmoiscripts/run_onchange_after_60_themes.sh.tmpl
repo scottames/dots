@@ -27,9 +27,14 @@ echo '
 # herdr/config.base.toml: {{ include "private_dot_config/herdr/config.base.toml" | sha256sum }}
 
 magenta='\033[0;35m'
+red='\033[0;31m'
 yellow='\033[0;33m'
 clear='\033[0m'
 info() { printf "${magenta}%s${clear}\n" "${@}"; }
+err() {
+  printf "${red}%s${clear}\n" "${@}"
+  exit 1
+}
 warn() { printf "${yellow}%s${clear}\n" "${@}"; }
 
 themes="${HOME}/.config/themes"
@@ -72,6 +77,13 @@ cat >"${themes}/{{ $name }}/{{ $out }}" <<'THEME_EOF'
 THEME_EOF
 {{ end }}
 {{ end }}
+
+# A tool that writes through the pointer before the first apply (lazygit
+# creates missing LG_CONFIG_FILE entries) leaves a real directory here. `ln -sfn`
+# would then link *inside* it and readlink below would return nothing.
+if [[ -e ${themes}/current && ! -L ${themes}/current ]]; then
+  err "${themes}/current is not a symlink; move it aside and re-run"
+fi
 
 # Bootstrap the pointer. Never clobber a working one — it is the only mutable
 # state in the whole scheme, and re-pointing it is the user's call.
