@@ -11,6 +11,9 @@
       "overrideTerminalColors" false
       "telemetry" (dict "enabled" false)
       "theme" "auto"
+      "vimMode" true
+      "reauthBannerShownTui" true
+      "automationQuitWarningDismissed" true
 -}}
 {{- $herdr := joinPath .chezmoi.homeDir ".factory/hooks/herdr-agent-state.sh" -}}
 {{- if stat $herdr -}}
