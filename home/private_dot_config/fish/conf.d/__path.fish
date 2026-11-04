@@ -61,6 +61,7 @@ set -a _bin_dirs \
     $HOME/bin \
     $HOME/src/bin \
     $HOME/.npm-global/bin \
+    $HOME/.bun/bin \
     $HOME/.cargo/bin \
     $GOPATH/bin \
     /opt/homebrew/bin
