@@ -9,7 +9,7 @@ else
   printf 'false'
 fi
 {{ else -}}
-ssh -T git@github.com >/dev/null 2>&1
+ssh -T -o BatchMode=yes -o ConnectTimeout=5 git@github.com >/dev/null 2>&1
 exit_status=$?
 
 if [[ ${exit_status} -eq 0 || ${exit_status} -eq 1 ]]; then
