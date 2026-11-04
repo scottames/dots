@@ -61,6 +61,7 @@
       "iterm2"
       "notion"
       "obsidian"
+      "omniwm"
       "raycast"
       "tailscale-app"
       "vlc"
