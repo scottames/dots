@@ -18,6 +18,25 @@ instructions supersede them, except explicit safety constraints.
   interests include Rust, TypeScript/JavaScript and frontend development,
   Python for AI/data science, and DevOps.
 
+## Writing format
+
+- Write notes, plans, and summaries as nested outlines, not prose split into
+  bullets.
+- Put a label alone on a bold parent bullet. Put its details in child bullets,
+  indented two spaces. Do not write `- **Label**: text`.
+- Give each bullet one thought. Start a new bullet for a sentence that adds a
+  separate point. Short related fragments may share a bullet.
+- Nest a bullet under the bullet it explains or depends on, not as a flat
+  sibling.
+- Example:
+
+  ```markdown
+  - **Release**
+    - Tests passed.
+      - One flaky test still needs a fix.
+    - Deploy waits on review.
+  ```
+
 ## Engineering
 
 - Make the smallest correct scoped change. Understand the problem and reuse
