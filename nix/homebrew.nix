@@ -42,6 +42,10 @@
     ];
 
     brews = [
+      "colima"
+      "container"
+      "docker"
+      "docker-buildx"
       "docker-compose"
       "docker-credential-helper"
       "eza"
@@ -53,7 +57,6 @@
     casks = [
       "1password-cli"
       "akiflow"
-      "docker-desktop"
       "firefox"
       "ghostty"
       "google-cloud-sdk"
