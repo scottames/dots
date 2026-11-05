@@ -18,7 +18,7 @@ systemctl --user enable --now herdr-distrobox.service
 ```
 
 With user lingering enabled, startup happens at boot; otherwise it normally
-happens at first login. The [Field Office setup script](../home/.chezmoiscripts/run_after_05_field_office.sh.tmpl)
+happens at first login. The [Field Office setup script](../home/.chezmoiscripts/run_onchange_after_05_field_office.sh.tmpl)
 enables lingering on Linux when `host.is_field_office` is `true`, unless it is
 already enabled. If permission is denied, it warns with the command to run
 manually. Other machines' lingering settings are left unchanged.
