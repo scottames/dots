@@ -3593,15 +3593,15 @@ url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/65966643
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-musl"]
-checksum = "sha256:6e5827598cbfc02d132b04f95b5ea10efb5b79230e2a4a0e52df4af144a8ee9f"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.3/chezmoi_2.73.3_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/659666088"
+checksum = "sha256:f2fbda5a865e2725adc42090ea6deabf3e1a4d40bfd59a8942c3ad20284b39cb"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.3/chezmoi_2.73.3_linux-musl_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/659666461"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:6e5827598cbfc02d132b04f95b5ea10efb5b79230e2a4a0e52df4af144a8ee9f"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.3/chezmoi_2.73.3_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/659666088"
+checksum = "sha256:f2fbda5a865e2725adc42090ea6deabf3e1a4d40bfd59a8942c3ad20284b39cb"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.73.3/chezmoi_2.73.3_linux-musl_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/659666461"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.macos-arm64"]
@@ -5114,18 +5114,6 @@ checksum_source = "mise-versions"
 url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-apple-darwin"
 url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598985989"
 
-[tools."github:plannotator/herdr-annotate"."platforms.windows-x64"]
-checksum = "sha256:4d9b08e6c169820742d133ce5ed20af4689861f58c9b2d1669cae0407c9b20d2"
-checksum_source = "mise-versions"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986014"
-
-[tools."github:plannotator/herdr-annotate"."platforms.windows-x64-baseline"]
-checksum = "sha256:4d9b08e6c169820742d133ce5ed20af4689861f58c9b2d1669cae0407c9b20d2"
-checksum_source = "mise-versions"
-url = "https://github.com/plannotator/herdr-annotate/releases/download/rust-lite-v0.2.0/herdr-annotate-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/herdr-annotate/releases/assets/598986014"
-
 [[tools."github:plannotator/plannotator-tui"]]
 version = "0.9.4"
 backend = "github:plannotator/plannotator-tui"
@@ -5184,18 +5172,6 @@ checksum = "sha256:5d19683d6f90a4249ffaf3a6a7ed0ba1325a136a795c7b11a8ba1fb16fe8d
 checksum_source = "mise-versions"
 url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-apple-darwin"
 url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174931"
-
-[tools."github:plannotator/plannotator-tui"."platforms.windows-x64"]
-checksum = "sha256:0611f6276cf1f3a1a1f29834e117ab2789d610095e9b3062d76dfa9673eee9f3"
-checksum_source = "mise-versions"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174941"
-
-[tools."github:plannotator/plannotator-tui"."platforms.windows-x64-baseline"]
-checksum = "sha256:0611f6276cf1f3a1a1f29834e117ab2789d610095e9b3062d76dfa9673eee9f3"
-checksum_source = "mise-versions"
-url = "https://github.com/plannotator/plannotator-tui/releases/download/v0.9.4/plannotator-tui-x86_64-pc-windows-msvc.exe"
-url_api = "https://api.github.com/repos/plannotator/plannotator-tui/releases/assets/587174941"
 
 [[tools."github:schpet/linear-cli"]]
 version = "3.1.0"
