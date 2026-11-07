@@ -36,7 +36,7 @@ bun = "1.4.4"
 go = "1.27.3"
 node = "24.22.2"
 rust = "1.99.1"
-usage = "7.1.4"
+usage = "7.1.5"
 
 ## tools
 
@@ -45,16 +45,16 @@ usage = "7.1.4"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.41.0"
+"aqua:vercel-labs/agent-browser" = "0.41.1"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
-"aqua:ast-grep/ast-grep" = "0.51.0"
+"aqua:ast-grep/ast-grep" = "0.51.1"
 # magical shell history
 #   https://github.com/atuinsh/atuin
 "aqua:atuinsh/atuin" = "18.24.4"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.65.2"
+"github:aquaproj/aqua" = "v2.66.0"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -63,10 +63,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:sharkdp/bat" = "0.26.1"
 # manage your dotfiles across multiple diverse machines, securely
 #   https://github.com/twpayne/chezmoi
-"aqua:twpayne/chezmoi" = "2.73.3"
+"aqua:twpayne/chezmoi" = "2.74.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.314"
+"github:anthropics/claude-code" = "v2.1.317"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.103.3"
@@ -75,7 +75,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:openai/codex" = "rust-v0.166.0"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
-"npm:ctx7" = "0.8.2"
+"npm:ctx7" = "0.9.0"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.22.1"
@@ -92,7 +92,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:direnv/direnv" = "2.38.2"
 #  more intuitive version of du in rust
 #   https://github.com/bootandy/dust/
-"aqua:bootandy/dust" = "1.2.6"
+"aqua:bootandy/dust" = "1.2.7"
 # diff tool for YAML files, and sometimes JSON
 #  https://github.com/homeport/dyff
 "aqua:homeport/dyff" = "1.12.0"
@@ -182,7 +182,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.19.12"
+"github:janosmiko/lfk" = "v0.19.13"
 # linear without leaving the command line: list, start, and create PRs for
 # linear issues. agent friendly.
 #  https://github.com/schpet/linear-cli
@@ -206,7 +206,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "npm:opkg" = "0.11.3"
 # Minimal, extensible terminal coding agent
 #  https://github.com/earendil-works/pi
-"aqua:earendil-works/pi" = "v1.4.0"
+"aqua:earendil-works/pi" = "v1.5.0"
 # pinact is a CLI to edit GitHub Workflow and Composite action files
 # and pin versions of Actions and Reusable Workflows.
 #  https://github.com/suzuki-shunsuke/pinact
@@ -214,7 +214,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.28.40"
+"github:backnotprop/plannotator" = "v0.28.48"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
@@ -226,7 +226,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:sethvargo/ratchet" = "0.12.0"
 # A simple TUI to visualize regular expressions right in your terminal.
 #  https://github.com/vitor-mariano/regex-tui
-"github:vitor-mariano/regex-tui" = "0.7.0"
+"github:vitor-mariano/regex-tui" = "v0.8.0"
 # better grep
 #   https://github.com/BurntSushi/ripgrep
 "aqua:BurntSushi/ripgrep" = "15.2.0"
@@ -267,7 +267,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:agavra/tuicr" = "v0.28.0"
 # Python package and tool manager
 #  https://github.com/astral-sh/uv
-"aqua:astral-sh/uv" = "0.13.6"
+"aqua:astral-sh/uv" = "0.13.7"
 # Git worktree management, designed for parallel AI agent workflows
 #  https://github.com/max-sixty/worktrunk
 "github:max-sixty/worktrunk" = "v0.81.0"
@@ -285,13 +285,13 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:zellij-org/zellij" = "0.45.1"
 # ZenNotes TUI
 #   https://github.com/ZenNotes/tui
-"github:ZenNotes/tui" = "v0.13.1"
+"github:ZenNotes/tui" = "v0.14.0"
 
 # linters & language servers
 # dotfiles baseline; language-specific tools belong in projects
 "aqua:LuaLS/lua-language-server" = "3.19.2"
 "aqua:artempyanykh/marksman" = "2026-02-08"
-"aqua:crate-ci/typos" = "1.51.1"
+"aqua:crate-ci/typos" = "1.52.0"
 "aqua:koalaman/shellcheck" = "0.11.0"
 "aqua:mvdan/sh" = "3.14.1"
 "aqua:rhysd/actionlint" = "v1.7.12"
