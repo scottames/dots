@@ -98,6 +98,8 @@ lint:
     - linters:
         - prettier
       paths:
+        # Runtime-generated declarations; gpui-shell rewrites these on every run.
+        - home/private_dot_config/herdr-app/mods/**/gpui-kit.d.ts
         - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
         - home/private_dot_config/vicinae/settings.json
         - home/dot_claude/settings.json

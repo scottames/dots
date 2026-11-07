@@ -1,0 +1,30 @@
+{
+  "background": "{{ .bg }}",
+  "foreground": "{{ .fg }}",
+  "selection": "{{ .selection }}",
+  "cursor": "{{ .accent }}",
+  "ansi": [
+    "{{ .ansi.black }}", "{{ .ansi.red }}", "{{ .ansi.green }}", "{{ .ansi.yellow }}",
+    "{{ .ansi.blue }}", "{{ .ansi.magenta }}", "{{ .ansi.cyan }}", "{{ .ansi.white }}",
+    "{{ .ansi.bright_black }}", "{{ .ansi.bright_red }}", "{{ .ansi.bright_green }}", "{{ .ansi.bright_yellow }}",
+    "{{ .ansi.bright_blue }}", "{{ .ansi.bright_magenta }}", "{{ .ansi.bright_cyan }}", "{{ .ansi.bright_white }}"
+  ],
+  "colors": {
+    "surface": "{{ .bg_alt }}",
+    "canvas": "{{ .bg_dim }}",
+    "chrome": "{{ .bg_float }}",
+    "popover": "{{ .bg_float }}",
+    "raised": "{{ .selection }}",
+    "hover": "{{ .bg_alt }}",
+    "selected": "{{ .bg }}",
+    "border": "{{ .border }}",
+    "foreground": "{{ .fg }}",
+    "muted": "{{ .muted }}",
+    "dim": "{{ .fg_dim }}",
+    "accent": "{{ .accent }}",
+    "selection": "{{ .selection }}",
+    "working": "{{ .yellow }}",
+    "blocked": "{{ .red }}",
+    "done": "{{ .green }}"
+  }
+}

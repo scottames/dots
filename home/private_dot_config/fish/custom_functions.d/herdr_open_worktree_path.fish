@@ -57,6 +57,13 @@ function herdr_open_worktree_path \
     end
     set worktree_path (path resolve "$worktree_path")
 
+    if set -q HC_TERMINAL_ID
+        herdr_new_workspace "$main_checkout"
+        or return 1
+        herdr_new_workspace "$worktree_path"
+        return $status
+    end
+
     set -l label (project_label "$worktree_path")
 
     set -l worktree_result (command herdr worktree open \

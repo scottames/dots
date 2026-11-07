@@ -1,10 +1,19 @@
 #!/usr/bin/env fish
 
 function herdr_new_workspace \
-    --description "Create a new Herdr workspace with a resolved cwd and derived label."
+    --description "Open a Herdr workspace using the current runtime and project naming."
 
-    argparse -n herdr_new_workspace 'l/label=' 's/simple' -- $argv
+    argparse -n herdr_new_workspace 'l/label=' 's/simple' 'h/help' -- $argv
     or return 1
+
+    if set -q _flag_help
+        printf 'Usage: herdr_new_workspace [--label NAME] [--simple] [PATH]\n'
+        return 0
+    end
+    if test (count $argv) -gt 1
+        printf 'Usage: herdr_new_workspace [--label NAME] [--simple] [PATH]\n' >&2
+        return 1
+    end
 
     set -l target .
     if set -q argv[1]
@@ -25,8 +34,18 @@ function herdr_new_workspace \
     set -l label
     if set -q _flag_label
         set label $_flag_label
+    else if set -q HC_TERMINAL_ID
+        set label (project_label "$cwd")
+        or return 1
     else
         set label (zellij_tab_name "$target")
+    end
+
+    if set -q HC_TERMINAL_ID
+        set -l rename
+        set -q _flag_label; and set rename rename
+        _herdr_app_open_space "$cwd" "$label" $rename
+        return $status
     end
 
     if set -q _flag_simple

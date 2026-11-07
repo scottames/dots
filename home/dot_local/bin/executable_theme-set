@@ -96,6 +96,7 @@ link television.toml "${HOME}/.config/television/themes/current.toml"
 link tuicr.toml "${HOME}/.config/tuicr/themes/current.toml"
 link vicinae.toml "${HOME}/.local/share/vicinae/themes/current.toml"
 link pi.json "${HOME}/.pi/agent/themes/current.json"
+link herdr-app.json "${HOME}/.config/herdr-app/themes/current.json"
 # yazi flavors are directories, not files.
 link yazi.toml "${HOME}/.config/yazi/flavors/current.yazi/flavor.toml"
 
@@ -138,6 +139,9 @@ pkill -SIGUSR1 monstar >/dev/null 2>&1 || true
 reload makoctl reload
 # herdr re-reads config.toml in place; panes are untouched.
 reload herdr server reload-config
+# Explicitly reselect the named theme: a symlink change may not trip the watcher,
+# and a theme picked in the app overrides settings.json on that layout.
+reload herdr-app 'do' app.theme --name current
 # alacritty does not watch imported files; touching the main config does it.
 if [[ -f ${HOME}/.config/alacritty/alacritty.toml ]]; then
 	touch "${HOME}/.config/alacritty/alacritty.toml"

@@ -3,6 +3,7 @@
 set -l repo_root (path dirname (path dirname (status filename)))
 set -l function_dir "$repo_root/home/private_dot_config/fish/custom_functions.d"
 set -l tmpdir (mktemp -d)
+set tmpdir (path resolve "$tmpdir")
 set -l fakebin "$tmpdir/bin"
 set -l log_file "$tmpdir/herdr.log"
 set -l wt_log_file "$tmpdir/wt.log"
@@ -41,7 +42,7 @@ chmod +x "$fakebin/herdr"
 
 printf '%s\n' '#!/usr/bin/env bash' \
     'printf "%s\n" "$*" >>"$WT_LOG"' \
-    'if [[ "$*" == "switch --no-cd --format json" ]]; then' \
+    'if [[ "$*" == switch\ --no-cd*\ --format\ json ]]; then' \
     '  printf '\''{"action":"switched","branch":"feature-x","path":"%s"}\n'\'' "$WT_WORKTREE_PATH"' \
     '  exit 0' \
     'fi' \
@@ -49,38 +50,7 @@ printf '%s\n' '#!/usr/bin/env bash' \
     '  printf '\''%s\n'\'' "$WT_PRIMARY_WORKTREE_PATH"' \
     '  exit 0' \
     'fi' \
-    'execute=""' \
-    'args=()' \
-    'while (($#)); do' \
-    '  case "$1" in' \
-    '    -x|--execute)' \
-    '      execute="$2"' \
-    '      shift 2' \
-    '      ;;' \
-    '    --)' \
-    '      shift' \
-    '      while (($#)); do' \
-    '        case "$1" in' \
-    '          "{{ primary_worktree_path }}") args+=("$WT_PRIMARY_WORKTREE_PATH") ;;' \
-    '          "{{ worktree_path }}") args+=("$WT_WORKTREE_PATH") ;;' \
-    '          *) args+=("$1") ;;' \
-    '        esac' \
-    '        shift' \
-    '      done' \
-    '      break' \
-    '      ;;' \
-    '    *) shift ;;' \
-    '  esac' \
-    'done' \
-    'if [[ -n "$execute" ]]; then' \
-    '  if [[ "$execute" == fish ]]; then' \
-    '    command_text="${args[1]}"' \
-    '    command_args=("${args[@]:2}")' \
-    '    PATH="$TEST_PATH" "$execute" --no-config -c '\''set -l function_dir "$argv[1]"; set -l command_text "$argv[2]"; set -e argv[1]; set -e argv[1]; source "$function_dir/project_label.fish"; source "$function_dir/zellij_tab_name.fish"; source "$function_dir/_herdr_response_id.fish"; source "$function_dir/herdr_layout_default.fish"; source "$function_dir/herdr_open_worktree_path.fish"; eval "$command_text"'\'' -- "$TEST_FUNCTION_DIR" "$command_text" "${command_args[@]}"' \
-    '    exit $?' \
-    '  fi' \
-    '  "$execute" "${args[@]}"' \
-    'fi' >"$fakebin/wt"
+    'exit 1' >"$fakebin/wt"
 chmod +x "$fakebin/wt"
 
 printf '%s\n' '#!/usr/bin/env python3' \
@@ -135,10 +105,8 @@ set -gx LEGACY_DOTS "$tmpdir/legacy-dots"
 set -gx SHELL /usr/bin/fish
 set -gx WT_PRIMARY_WORKTREE_PATH "$DOTS"
 set -gx WT_WORKTREE_PATH "$tmpdir/feature-x"
-set -gx TEST_FUNCTION_DIR "$function_dir"
-set -gx TEST_PATH "$fakebin:"(string join : $PATH)
 set -gx COMMAND_LABEL_SUBSTITUTIONS ''
-set -e HERDR_ENV \
+set -e HC_TERMINAL_ID HERDR_ENV \
     __herdr_dynamic_title_pane_id \
     __herdr_dynamic_title_tab_id \
     __herdr_dynamic_title_is_first_pane \
@@ -279,7 +247,7 @@ set -e HERDR_WORKTREE_OPEN_RESPONSE
 printf '' >"$log_file"
 printf '' >"$wt_log_file"
 herdr_wt_switch feature-x
-assert_eq (string trim -- (command cat "$wt_log_file")) "switch --no-cd feature-x -x fish -- -lc herdr_open_worktree_path \"\$argv[1]\" \"\$argv[2]\" {{ primary_worktree_path }} {{ worktree_path }}" 'Worktrunk switch uses primary worktree and destination templates'
+assert_eq (string join \n (command cat "$wt_log_file")) (string join \n "switch --no-cd feature-x --format json" "step eval {{ primary_worktree_path }}") 'Worktrunk switch resolves destination and primary checkout'
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
     "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
@@ -309,7 +277,7 @@ assert_eq "$command_log" "$expected_log" 'no branch opens the Worktrunk picker s
 printf '' >"$log_file"
 printf '' >"$wt_log_file"
 herdr_wt_switch --create --base main feature-y
-assert_eq (string trim -- (command cat "$wt_log_file")) "switch --no-cd --create --base main feature-y -x fish -- -lc herdr_open_worktree_path \"\$argv[1]\" \"\$argv[2]\" {{ primary_worktree_path }} {{ worktree_path }}" 'create and base flags are forwarded to Worktrunk'
+assert_eq (string join \n (command cat "$wt_log_file")) (string join \n "switch --no-cd --create --base main feature-y --format json" "step eval {{ primary_worktree_path }}") 'create and base flags are forwarded to Worktrunk'
 
 set -l abbrs_file "$repo_root/home/private_dot_config/fish/conf.d/abbrs.fish"
 if command grep -q '^abbr -a hwo' "$abbrs_file"

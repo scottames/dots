@@ -57,35 +57,29 @@ function herdr_wt_switch \
         return 1
     end
 
-    if set -q argv[1]
-        set -a wt_args $argv[1]
-    else
-        if not type -q jq
-            printf 'herdr_wt_switch: jq is required for picker mode\n' >&2
-            return 1
-        end
-
-        set -l switch_result (command wt $wt_args --format json)
+    if set -q HC_TERMINAL_ID
+        # Fail before Worktrunk can create a checkout or run hooks.
+        command herdr-app ls >/dev/null
         or return 1
-
-        set -l worktree_path (printf '%s\n' "$switch_result" | command jq -r '.path // empty')
-        or return 1
-
-        if test -z "$worktree_path"
-            return 0
-        end
-
-        set -l primary_worktree_path (command wt step eval '{{ primary_worktree_path }}')
-        or return 1
-
-        herdr_open_worktree_path "$primary_worktree_path" "$worktree_path"
-        return
     end
 
-    command wt $wt_args \
-        -x fish \
-        -- \
-        -lc 'herdr_open_worktree_path "$argv[1]" "$argv[2]"' \
-        '{{ primary_worktree_path }}' \
-        '{{ worktree_path }}'
+    if set -q argv[1]
+        set -a wt_args $argv[1]
+    end
+
+    if not type -q jq
+        printf 'herdr_wt_switch: jq is required\n' >&2
+        return 1
+    end
+
+    # Use the same Worktrunk flow for picker and explicit branch in either runtime.
+    set -l switch_result (command wt $wt_args --format json)
+    or return 1
+    set -l worktree_path (printf '%s\n' "$switch_result" | command jq -r '.path // empty')
+    or return 1
+    test -n "$worktree_path"; or return 0
+
+    set -l primary_worktree_path (command wt step eval '{{ primary_worktree_path }}')
+    or return 1
+    herdr_open_worktree_path "$primary_worktree_path" "$worktree_path"
 end

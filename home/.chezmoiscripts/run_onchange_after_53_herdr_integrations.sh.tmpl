@@ -2,6 +2,9 @@
 
 set -eufo pipefail
 
+# These integrations target the legacy Herdr TUI, not herdr-app/herdr-core.
+# The desktop app consumes agents' native OSC 7501 reports (OpenCode >= 2.2.5
+# is confirmed working); there is no desktop integration installer to run.
 # herdr version: {{ index (fromToml (include "../mise/config.toml")).tools "github:ogulcancelik/herdr" }}
 # droid version: {{ (index (fromToml (include "../mise/config.toml")).tools "http:droid").version }}
 

@@ -1,0 +1,2 @@
+# New terminals and keep recovery use Fish; running terminals are unchanged.
+shell = ["fish", "-l"]

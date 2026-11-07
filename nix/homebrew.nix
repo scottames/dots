@@ -61,6 +61,7 @@
       "ghostty"
       "google-cloud-sdk"
       "granola"
+      "herdr-app"
       "iterm2"
       "notion"
       "obsidian"
