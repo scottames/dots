@@ -61,6 +61,7 @@
       "ghostty"
       "google-cloud-sdk"
       "granola"
+      "anomalyco/tap/hex"
       "herdr-app"
       "iterm2"
       "notion"
@@ -69,7 +70,8 @@
       "raycast"
       "tailscale-app"
       "vlc"
-      "zen"
+      "zen" # zen browser
+      "zennotes/tap/zennotes" # zennotes
       "zoom"
     ] ++ lib.optionals manageHomebrew [
       # Leave these apps to the company when Homebrew is externally managed.
