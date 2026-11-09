@@ -38,7 +38,7 @@ node = "26.13.0"
 # Locked yamllint dependencies need wheels; do not inherit the host Python.
 python = "3.14"
 rust = "1.99.1"
-usage = "7.1.5"
+usage = "7.2.0"
 
 ## tools
 
@@ -47,16 +47,16 @@ usage = "7.1.5"
 amazon-ecr-credential-helper = "0.12.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.41.1"
+"aqua:vercel-labs/agent-browser" = "0.41.2"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.51.1"
 # magical shell history
 #   https://github.com/atuinsh/atuin
-"aqua:atuinsh/atuin" = "18.24.4"
+"aqua:atuinsh/atuin" = "18.24.5"
 # Declarative CLI Version manager
 #  https://github.com/aquaproj/aqua
-"github:aquaproj/aqua" = "v2.66.0"
+"github:aquaproj/aqua" = "v2.66.1"
 # Obsidian TUI
 #  https://github.com/erikjuhani/basalt
 "github:erikjuhani/basalt" = "basalt/v0.12.5"
@@ -68,7 +68,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:twpayne/chezmoi" = "2.74.0"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.317"
+"github:anthropics/claude-code" = "v2.1.318"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.103.3"
@@ -111,7 +111,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:angristan/fast-resume" = "v2.14.0"
 # better find
 #   https://github.com/sharkdp/fd
-"aqua:sharkdp/fd" = "10.5.0"
+"aqua:sharkdp/fd" = "10.5.1"
 # terminal json viewer & processor
 #   https://github.com/antonmedv/fx
 "aqua:antonmedv/fx" = "40.0.1"
@@ -129,7 +129,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "github:dlvhdr/gh-enhance" = "v0.8.1"
 # gh extension to preview GitHub Flavored Markdown
 #  https://github.com/thiagokokada/gh-gfm-preview
-"github:thiagokokada/gh-gfm-preview" = { version = "v1.3.1", bin = "gh-gfm-preview" }
+"github:thiagokokada/gh-gfm-preview" = { version = "v1.4.0", bin = "gh-gfm-preview" }
 # GitHub CLI extension for stacking pull requests
 #  https://github.com/github/gh-stack
 "github:github/gh-stack" = { version = "v0.3.0", bin = "gh-stack" }
@@ -216,7 +216,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.28.48"
+"github:backnotprop/plannotator" = "v0.28.49"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.4", bin = "plannotator-tui", os = [
@@ -241,7 +241,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # The fastest stacked-branch workflow for Git.
 # Interactive TUI, smart PRs, safe undo.
 #   https://github.com/cesarferreira/stax
-"github:cesarferreira/stax" = "v0.118.1"
+"github:cesarferreira/stax" = "v0.118.2"
 # multi pod and container log tailing for kubernetes
 #   https://github.com/stern/stern
 "aqua:stern/stern" = "1.35.0"
@@ -260,7 +260,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # workspace manager for your temporary experiments
 #  https://github.com/tassiovirginio/try-rs
 # Upstream publishes Linux x64 and Windows x64 binaries only; Homebrew provides macOS.
-"github:tassiovirginio/try-rs" = { version = "v1.7.11", os = [
+"github:tassiovirginio/try-rs" = { version = "v1.7.12", os = [
   "linux/x64",
   "windows/x64",
 ] }
@@ -287,7 +287,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:zellij-org/zellij" = "0.45.1"
 # ZenNotes TUI
 #   https://github.com/ZenNotes/tui
-"github:ZenNotes/tui" = "v0.14.0"
+"github:ZenNotes/tui" = "v0.16.0"
 
 # linters & language servers
 # dotfiles baseline; language-specific tools belong in projects
