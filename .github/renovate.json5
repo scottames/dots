@@ -87,6 +87,12 @@
   ],
   packageRules: [
     {
+      // Keep yamllint's wheel-only locked install on a compatible Python minor.
+      matchManagers: ['mise'],
+      matchDepNames: ['python'],
+      allowedVersions: '>=3.13 <3.14',
+    },
+    {
       matchManagers: ['mise'],
       matchUpdateTypes: ['lockFileMaintenance'],
       enabled: false,
