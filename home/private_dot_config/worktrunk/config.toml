@@ -62,16 +62,16 @@ test -f .trunk/trunk.yaml && trunk check
 """
 graphite_track = 'if [ "${GRAPHITE_ENABLED:-}" = true ]; then gt track; fi'
 
-# 3. Forget stax metadata only after Git deleted the branch. Worktrunk can
-#    remove a worktree but retain its branch (--no-delete-branch or unmerged);
-#    those branches must keep their tracking. Stax can untrack a deleted ref.
+# 3. After Git deletes a branch, reparent its children and forget its metadata.
+#    Retained branches keep their tracking. The helper serializes concurrent
+#    prune hooks and preserves rebase boundaries without rewriting history.
 [post-remove]
 stax_untrack = '''
 {% if branch %}
 if command -v stax >/dev/null 2>&1 &&
    ! git show-ref --verify --quiet refs/heads/{{ branch }} &&
    git show-ref --verify --quiet refs/branch-metadata/{{ branch }}; then
-  stax branch untrack {{ branch }}
+  python3 "$HOME/.config/worktrunk/stax-post-remove.py" {{ branch }}
 fi
 {% endif %}
 '''
