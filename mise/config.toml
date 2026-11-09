@@ -34,7 +34,7 @@ OPENCODE_DISABLE_AUTOUPDATE = "1"
 
 bun = "1.4.4"
 go = "1.27.3"
-node = "24.22.2"
+node = "26.13.0"
 # Locked yamllint dependencies need wheels; do not inherit the host Python.
 python = "3.14"
 rust = "1.99.1"
@@ -311,7 +311,7 @@ opencode = "2.2.6"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "0.251.0"
+version = "1.4.1"
 bin = "droid"
 
 [tools."http:droid".platforms]
