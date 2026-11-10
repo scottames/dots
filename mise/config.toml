@@ -38,7 +38,7 @@ node = "26.13.0"
 # Locked yamllint dependencies need wheels; do not inherit the host Python.
 python = "3.14"
 rust = "1.99.1"
-usage = "7.2.0"
+usage = "7.3.0"
 
 ## tools
 
@@ -74,10 +74,10 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:cli/cli" = "2.103.3"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.166.0"
+"aqua:openai/codex" = "rust-v0.167.0"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
-"npm:ctx7" = "0.9.0"
+"npm:ctx7" = "0.10.0"
 # crane - a tool for managing container images
 #  https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md
 "aqua:google/go-containerregistry" = "0.22.1"
@@ -105,10 +105,10 @@ amazon-ecr-credential-helper = "0.12.0"
 # A maintained, feature-rich and performance oriented, neofetch like
 # system information tool.
 #  https://github.com/fastfetch-cli/fastfetch
-"aqua:fastfetch-cli/fastfetch" = "2.70.0"
+"aqua:fastfetch-cli/fastfetch" = "2.71.0"
 # Find that one coding agent session you want to get back to!
 #  https://github.com/angristan/fast-resume
-"github:angristan/fast-resume" = "v2.14.0"
+"github:angristan/fast-resume" = "v2.14.1"
 # better find
 #   https://github.com/sharkdp/fd
 "aqua:sharkdp/fd" = "10.5.1"
@@ -184,7 +184,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # lightning-fast, keyboard-focused, yazi-inspired terminal user interface for
 # navigating and managing Kubernetes clusters
 #  https://github.com/janosmiko/lfk
-"github:janosmiko/lfk" = "v0.19.13"
+"github:janosmiko/lfk" = "v0.19.15"
 # linear without leaving the command line: list, start, and create PRs for
 # linear issues. agent friendly.
 #  https://github.com/schpet/linear-cli
@@ -216,7 +216,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # Annotate and review coding agent plans and code diffs visually, 
 # share with your team, send feedback to agents with one click.
 #  https://github.com/backnotprop/plannotator
-"github:backnotprop/plannotator" = "v0.28.49"
+"github:backnotprop/plannotator" = "v0.28.51"
 # Document review runtime for the hook-free Herdr Annotate plugin
 #   https://github.com/plannotator/plannotator-tui
 "github:plannotator/plannotator-tui" = { version = "v0.9.9", bin = "plannotator-tui", os = [
@@ -278,7 +278,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:sxyazi/yazi" = "26.9.1"
 # a lightweight and portable command-line YAML, JSON and XML processor.
 #   https://github.com/mikefarah/yq
-"aqua:mikefarah/yq" = "4.54.1"
+"aqua:mikefarah/yq" = "4.54.2"
 # smarter cd
 #   https://github.com/ajeetdsouza/zoxide
 "aqua:ajeetdsouza/zoxide" = "0.10.0"
@@ -287,7 +287,7 @@ amazon-ecr-credential-helper = "0.12.0"
 "aqua:zellij-org/zellij" = "0.45.1"
 # ZenNotes TUI
 #   https://github.com/ZenNotes/tui
-"github:ZenNotes/tui" = "v0.16.0"
+"github:ZenNotes/tui" = "v0.17.1"
 
 # linters & language servers
 # dotfiles baseline; language-specific tools belong in projects
@@ -311,7 +311,7 @@ opencode = "2.2.6"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "1.4.1"
+version = "1.6.0"
 bin = "droid"
 
 [tools."http:droid".platforms]
