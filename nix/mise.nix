@@ -4,11 +4,11 @@
 # Keep this version aligned with the lock generator in pr_mise_lock.yaml.
 stdenvNoCC.mkDerivation rec {
   pname = "mise";
-  version = "2026.9.12";
+  version = "2026.11.8";
 
   src = fetchurl {
     url = "https://github.com/jdx/mise/releases/download/v${version}/mise-v${version}-macos-arm64.tar.gz";
-    sha256 = "0f1c7f3e74d8c9ae82976e6990058f2bc68821acc6b4c37a68c206c836692419";
+    sha256 = "7a7f9342559cc4ca670054337ecf497e69d832a05f66e531628381dc92b88f48";
   };
 
   nativeBuildInputs = [ installShellFiles ];
