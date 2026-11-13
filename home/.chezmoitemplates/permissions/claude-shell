@@ -1,0 +1,3 @@
+{{- range (includeTemplate "permissions/commands" . | fromJson) -}}
+{{ printf "Bash(%s:*)" . | toJson }},
+{{ end -}}

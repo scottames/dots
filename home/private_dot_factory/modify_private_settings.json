@@ -9,6 +9,7 @@
       "logoAnimation" "off"
       "nerdFont" true
       "overrideTerminalColors" false
+      "permissionRules" .agentPermissions.factory
       "telemetry" (dict "enabled" false)
       "theme" "auto"
       "vimMode" true

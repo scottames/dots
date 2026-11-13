@@ -1,0 +1,5 @@
+{{- /* Keep the caller's native suffix; a glob is not a token-prefix rule. */ -}}
+{{- $suffix := .suffix -}}
+{{- range (includeTemplate "permissions/commands" .prefix | fromJson) -}}
+{{ dict "action" "shell" "resource" (printf "%s%s" . $suffix) "effect" "allow" | toJson }},
+{{ end -}}

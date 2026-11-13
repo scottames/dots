@@ -39,28 +39,19 @@
     "allow": [
       "Bash(/bin/ls:*)",
       "Bash(/usr/bin/ls:*)",
-      "Bash(cargo build:*)",
-      "Bash(cargo check:*)",
-      "Bash(cargo doc:*)",
-      "Bash(cargo info:*)",
-      "Bash(cargo run:*)",
-      "Bash(cargo test:*)",
+      {{ includeTemplate "permissions/claude-shell" .agentPermissions.commands.cargo | trimSuffix "\n" | replace "\n" "\n      " }}
       "Bash(git mv:*)",
       "Bash(git show:*)",
-      "Bash(go build:*)",
-      "Bash(go mod tidy:*)",
-      "Bash(go list:*)",
-      "Bash(go run:*)",
-      "Bash(go test:*)",
+      {{ includeTemplate "permissions/claude-shell" .agentPermissions.commands.go | trimSuffix "\n" | replace "\n" "\n      " }}
+      {{ includeTemplate "permissions/claude-shell" .agentPermissions.commands.goModTidy | trimSuffix "\n" | replace "\n" "\n      " }}
       "Bash(grep:*)",
       "Bash(command find:*)",
       "Bash(command grep:*)",
       "Bash(command ls:*)",
       "Bash(ls:*)",
-      "Bash(thts sync:*)",
+      {{ includeTemplate "permissions/claude-shell" .agentPermissions.commands.thtsSync | trimSuffix "\n" | replace "\n" "\n      " }}
       "Bash(tree:*)",
-      "Bash(trunk check:*)",
-      "Bash(trunk fmt:*)",
+      {{ includeTemplate "permissions/claude-shell" .agentPermissions.commands.trunk | trimSuffix "\n" | replace "\n" "\n      " }}
       "Bash(wc:*)",
       "Read(~/.config/agents/*.md)",
       "Read(~/.config/agents/*/*.md)",

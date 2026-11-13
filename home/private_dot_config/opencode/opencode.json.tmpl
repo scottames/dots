@@ -49,12 +49,7 @@
     { "action": "shell", "resource": "bash {{ .chezmoi.homeDir }}/.config/opencode/skills/**", "effect": "allow" },
     { "action": "shell", "resource": "bash \"{{ .chezmoi.homeDir }}/.opencode/skills/**", "effect": "allow" },
     { "action": "shell", "resource": "bash \"{{ .chezmoi.homeDir }}/.config/opencode/skills/**", "effect": "allow" },
-    { "action": "shell", "resource": "cargo build*", "effect": "allow" },
-    { "action": "shell", "resource": "cargo check*", "effect": "allow" },
-    { "action": "shell", "resource": "cargo doc*", "effect": "allow" },
-    { "action": "shell", "resource": "cargo info*", "effect": "allow" },
-    { "action": "shell", "resource": "cargo run*", "effect": "allow" },
-    { "action": "shell", "resource": "cargo test*", "effect": "allow" },
+    {{ includeTemplate "permissions/opencode-shell" (dict "prefix" .agentPermissions.commands.cargo "suffix" "*") | trimSuffix "\n" | replace "\n" "\n    " }}
     { "action": "shell", "resource": "cat*", "effect": "allow" },
     { "action": "shell", "resource": "command grep*", "effect": "allow" },
     { "action": "shell", "resource": "command ls*", "effect": "allow" },
@@ -78,11 +73,8 @@
     { "action": "shell", "resource": "gh run view*", "effect": "allow" },
     { "action": "shell", "resource": "gh release view*", "effect": "allow" },
     { "action": "shell", "resource": "gh stack view --json*", "effect": "allow" },
-    { "action": "shell", "resource": "go build*", "effect": "allow" },
-    { "action": "shell", "resource": "go list*", "effect": "allow" },
-    { "action": "shell", "resource": "go mod tidy*", "effect": "allow" },
-    { "action": "shell", "resource": "go run*", "effect": "allow" },
-    { "action": "shell", "resource": "go test*", "effect": "allow" },
+    {{ includeTemplate "permissions/opencode-shell" (dict "prefix" .agentPermissions.commands.go "suffix" "*") | trimSuffix "\n" | replace "\n" "\n    " }}
+    {{ includeTemplate "permissions/opencode-shell" (dict "prefix" .agentPermissions.commands.goModTidy "suffix" "*") | trimSuffix "\n" | replace "\n" "\n    " }}
     { "action": "shell", "resource": "grep *", "effect": "allow" },
     { "action": "shell", "resource": "gt ls*", "effect": "allow" },
     { "action": "shell", "resource": "helm get*", "effect": "allow" },
@@ -105,10 +97,9 @@
     { "action": "shell", "resource": "thts init --check", "effect": "allow" },
     { "action": "shell", "resource": "thts agent-instructions", "effect": "allow" },
     { "action": "shell", "resource": "thts status", "effect": "allow" },
-    { "action": "shell", "resource": "thts sync*", "effect": "allow" },
+    {{ includeTemplate "permissions/opencode-shell" (dict "prefix" .agentPermissions.commands.thtsSync "suffix" "*") | trimSuffix "\n" | replace "\n" "\n    " }}
     { "action": "shell", "resource": "tree *", "effect": "allow" },
-    { "action": "shell", "resource": "trunk check*", "effect": "allow" },
-    { "action": "shell", "resource": "trunk fmt*", "effect": "allow" },
+    {{ includeTemplate "permissions/opencode-shell" (dict "prefix" .agentPermissions.commands.trunk "suffix" "*") | trimSuffix "\n" | replace "\n" "\n    " }}
     { "action": "shell", "resource": "uv run pytest*", "effect": "allow" },
     { "action": "shell", "resource": "uv run python -m pytest", "effect": "allow" },
     { "action": "shell", "resource": "wc *", "effect": "allow" },

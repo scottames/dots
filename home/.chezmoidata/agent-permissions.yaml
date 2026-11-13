@@ -1,0 +1,166 @@
+# Shared command tokens, not a universal permission policy.
+# Anchors reuse the same prefixes in native Factory rules below.
+# Droid requires one match and one non-match example per rule.
+agentPermissions:
+  commands:
+    cargo: &cargo [cargo, [build, check, doc, info, run, test]]
+    go: &go [go, [build, list, run, test]]
+    goModTidy: &goModTidy [go, mod, tidy]
+    thtsSync: &thtsSync [thts, sync]
+    trunk: &trunk [trunk, [check, fmt]]
+  factory:
+    version: 1
+    rules:
+      - id: user/utilities
+        decision: allow
+        match:
+          prefix:
+            [[actionlint, cat, date, diff, grep, pytest, rg, pwd, tree, wc]]
+        tests:
+          match: [actionlint .github/workflows/ci.yml]
+          noMatch: [rm README.md]
+      - id: user/ls
+        decision: allow
+        match:
+          prefix: [[/bin/ls, /usr/bin/ls, ls]]
+        tests:
+          match: [/bin/ls -la]
+          noMatch: [lsof]
+      - id: user/cargo
+        decision: allow
+        match:
+          prefix: *cargo
+        tests:
+          match: [cargo build]
+          noMatch: [cargo clean]
+      - id: user/git
+        decision: allow
+        match:
+          prefix:
+            [
+              git,
+              [
+                branch,
+                diff,
+                log,
+                ls,
+                ls-files,
+                ls-remote,
+                ls-tree,
+                mv,
+                rev-parse,
+                show,
+                show-branch,
+                show-index,
+                show-ref,
+                status,
+              ],
+            ]
+        tests:
+          match: [git branch]
+          noMatch: [git push]
+      - id: user/git-worktree-list
+        decision: allow
+        match:
+          prefix: [git, worktree, list]
+        tests:
+          match: [git worktree list]
+          noMatch: [git worktree remove /tmp/example]
+      - id: user/gh-view
+        decision: allow
+        match:
+          prefix: [gh, [issue, pr, run, release], view]
+        tests:
+          match: [gh issue view 123]
+          noMatch: [gh pr merge 123]
+      - id: user/gh-stack-view
+        decision: allow
+        match:
+          prefix: [gh, stack, view, --json]
+        tests:
+          match: [gh stack view --json]
+          noMatch: [gh stack view]
+      - id: user/go
+        decision: allow
+        match:
+          prefix: *go
+        tests:
+          match: [go build ./...]
+          noMatch: [go clean]
+      - id: user/go-mod-tidy
+        decision: allow
+        match:
+          prefix: *goModTidy
+        tests:
+          match: [go mod tidy]
+          noMatch: [go mod edit]
+      - id: user/gt-ls
+        decision: allow
+        match:
+          prefix: [gt, ls]
+        tests:
+          match: [gt ls]
+          noMatch: [gt submit]
+      - id: user/helm
+        decision: allow
+        match:
+          prefix: [helm, [get, history, lint, template]]
+        tests:
+          match: [helm get values example]
+          noMatch: [helm upgrade example .]
+      - id: user/kubectl
+        decision: allow
+        match:
+          prefix: [kubectl, [desc, describe, get, list]]
+        tests:
+          match: [kubectl desc pod example]
+          noMatch: [kubectl delete pod example]
+      - id: user/mise-run
+        decision: allow
+        match:
+          prefix: [mise, run]
+        tests:
+          match: [mise run test]
+          noMatch: [mise install]
+      - id: user/npm-ci-test
+        decision: allow
+        match:
+          prefix: [[npm, pnpm], [ci, test]]
+        tests:
+          match: [npm ci]
+          noMatch: [npm publish]
+      - id: user/npm-run
+        decision: allow
+        match:
+          prefix: [[npm, pnpm], run, [build, test]]
+        tests:
+          match: [npm run build]
+          noMatch: [npm run deploy]
+      - id: user/test-file
+        decision: allow
+        match:
+          prefix: [test, -f]
+        tests:
+          match: [test -f README.md]
+          noMatch: [test -d /tmp/example]
+      - id: user/thts-sync
+        decision: allow
+        match:
+          prefix: *thtsSync
+        tests:
+          match: [thts sync]
+          noMatch: [thts init]
+      - id: user/trunk
+        decision: allow
+        match:
+          prefix: *trunk
+        tests:
+          match: [trunk check]
+          noMatch: [trunk upgrade]
+      - id: user/uv-pytest
+        decision: allow
+        match:
+          prefix: [uv, run, pytest]
+        tests:
+          match: [uv run pytest]
+          noMatch: [uv run python script.py]

@@ -1,0 +1,16 @@
+{{- /* Expand native token alternatives without interpreting shell patterns. */ -}}
+{{- $prefixes := list (list) -}}
+{{- range . -}}
+{{-   $choices := . -}}
+{{-   if kindIs "string" . }}{{ $choices = list . }}{{ end -}}
+{{-   $expanded := list -}}
+{{-   range $prefix := $prefixes -}}
+{{-     range $choices -}}
+{{-       $expanded = append $expanded (append $prefix .) -}}
+{{-     end -}}
+{{-   end -}}
+{{-   $prefixes = $expanded -}}
+{{- end -}}
+{{- $commands := list -}}
+{{- range $prefixes }}{{ $commands = append $commands (join " " .) }}{{ end -}}
+{{- $commands | toJson -}}
