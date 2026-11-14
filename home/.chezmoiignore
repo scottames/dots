@@ -68,6 +68,7 @@ src/github.com/paperwm*
 {{- end }}
 
 {{- if not (eq .chezmoi.os "darwin") }}
+.config/omniwm/
 .docker/
 {{- end }}
 
