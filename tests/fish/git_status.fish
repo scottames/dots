@@ -20,6 +20,7 @@ set -gx GIT_STATUS_TEST_GT_LOG "$gt_log"
 set fish_function_path "$function_dir" $fish_function_path
 
 printf '%s\n' '#!/usr/bin/env bash' \
+    'if [[ "$*" == "worktree ll" ]]; then git worktree list | grep -v \.bare; exit; fi' \
     'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_STAX_LOG"' \
     'if [[ "$*" == "status --current --quiet" ]]; then printf "stax-status-output\n"; exit "${GIT_STATUS_TEST_STAX_EXIT:-0}"; fi' >"$fakebin/stax"
 chmod +x "$fakebin/stax"

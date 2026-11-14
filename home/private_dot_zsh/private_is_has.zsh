@@ -29,7 +29,6 @@ _bins=(
   ugum
   vim
   virtualenv
-  wt
   yum
   zplug
 )

@@ -5,8 +5,8 @@ function git_status --description "Git project status" --wraps "git status"
 
     if [ $_is_inside_git_repo ]
         printf_green_bold "\n🌳 worktrees\n\n"
-        if type -q wt
-            wt list 2>/dev/null
+        if type -q stax
+            command stax worktree ll 2>/dev/null
             or command git worktree list \
                 | string match -v -r '\.bare' \
                 | string replace $HOME '~' \

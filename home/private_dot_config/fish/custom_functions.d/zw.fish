@@ -2,16 +2,16 @@
 
 # zw: Open a git worktree in a new Zellij tab with auto-derived naming
 #
-# Combines worktrunk (wt) and zellij to reduce friction when spinning up
+# Combines Stax and zellij to reduce friction when spinning up
 # worktree tabs for parallel work.
 #
 # Usage: zw [OPTIONS] [BRANCH]
 #
 # Options:
-#   -c/--create       Create a new worktree (passes -c to wt switch)
+#   -c/--create       Create a new worktree
 #   -a/--agent        Start an agent in the tab (default: opencode)
 #   --agent=NAME      Specify which agent (opencode, claude, etc.)
-#   -b/--base=REF     Base branch for creation (passed to wt switch -b)
+#   -b/--base=REF     Base branch for creation
 #   -n/--name=NAME    Override the auto-derived tab name
 #   -h/--help         Show usage
 #
@@ -33,9 +33,7 @@
 #
 # Requirements:
 #   - zellij (must be inside a zellij session)
-#   - worktrunk (wt)
-#   - jq
-#   - gum (for picker mode)
+#   - Stax
 
 function zw --description "Open a git worktree in a new Zellij tab"
     argparse \
@@ -72,65 +70,17 @@ function zw --description "Open a git worktree in a new Zellij tab"
         return 1
     end
 
-    if not type -q wt
-        printf_err "worktrunk (wt) is required but not found\n"
+    if not type -q stax
+        printf_err "Stax is required but not found\n"
         return 1
     end
 
-    # --- Resolve branch ---
-
-    set -l branch
-    if test (count $argv) -ge 1
-        set branch $argv[1]
-    else
-        # Picker mode
-        if not type -q jq
-            printf_err "jq is required for picker mode\n"
-            return 1
-        end
-
-        if not type -q gum
-            printf_err "gum is required for picker mode\n"
-            return 1
-        end
-
-        set -l branches (wt list --format=json | jq -r '.[].branch')
-        if test -z "$branches"
-            printf_err "no worktrees found\n"
-            return 1
-        end
-
-        set branch (printf '%s\n' $branches | gum filter --header="pick a worktree...")
-        if test -z "$branch"
-            return 0
-        end
-    end
-
-    # --- Create worktree if needed ---
-
-    set -l worktree_path (wt list --format=json | jq -r --arg b "$branch" '.[] | select(.branch == $b) | .path')
-
-    if test -z "$worktree_path"
-        # Worktree doesn't exist — create it
-        set -l wt_args --no-cd
-        if set -q _flag_create
-            set -a wt_args -c
-        end
-        if set -q _flag_base
-            set -a wt_args -b "$_flag_base"
-        end
-        set -a wt_args "$branch"
-
-        command wt switch $wt_args
-        or return 1
-
-        # Query the path after creation
-        set worktree_path (wt list --format=json | jq -r --arg b "$branch" '.[] | select(.branch == $b) | .path')
-        if test -z "$worktree_path"
-            printf_err "worktree created but could not resolve path for '$branch'\n"
-            return 1
-        end
-    end
+    set -l options
+    set -q _flag_create; and set -a options --create
+    set -q _flag_base; and set -a options --base "$_flag_base"
+    set -l worktree_path (_stax_worktree_path $options $argv)
+    or return $status
+    test -n "$worktree_path"; or return 0
 
     # --- Derive tab name ---
 

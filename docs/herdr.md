@@ -7,16 +7,17 @@
     existing local space in that checkout. PATH defaults to the current folder.
     - New names use `project_label`, such as `dots` and `dots:sa/foo`.
     - `--label NAME` overrides the name, including on an existing space.
-  - `herdr_wt_switch` (`hwt`) opens the Worktrunk picker.
+  - `herdr_wt_switch` (`hwt`) opens the Stax picker.
     - `herdr_wt_switch sa/foo` opens a branch directly.
-    - `herdr_wt_switch --create --base @ sa/foo` creates from the current branch.
+    - `hwtc sa/foo` creates from trunk; `hwtc --base @ sa/foo` explicitly stacks on the current branch.
     - Ensures the main checkout has a space before opening the selected checkout.
-    - Worktrunk controls checkout paths and hooks; the calling shell stays put.
+    - Stax controls checkout paths and hooks; the calling shell stays put.
   - These helpers require a running desktop app, `hc`, and `jq`.
   - `HC_TERMINAL_ID` selects the desktop behavior, including when `HERDR_ENV` is
     also inherited. Without it, the helpers retain the legacy TUI behavior.
     - Legacy terminals expose `HERDR_ENV`; outside either runtime the default
       remains the legacy TUI. `--simple` skips only the legacy split layout.
+- See [worktree workflows and migration](worktrees.md) for setup hooks and cleanup changes.
 - **Configuration**
   - `~/.config/herdr-core/config.toml` selects Fish for new terminals and recovery.
   - `~/.config/herdr-app/keys.json`, `settings.json`, and `mods/tmux-prefix/` are
