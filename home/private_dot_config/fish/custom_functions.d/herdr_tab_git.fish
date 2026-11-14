@@ -64,7 +64,7 @@ function herdr_tab_git \
     command herdr pane run "$bottom_left_pane_id" 'GIT_PAGER=cat PAGER=cat BAT_PAGER=cat git --no-pager stack-watch'
     or return 1
 
-    command herdr pane run "$bottom_right_pane_id" 'wt pane-watch'
+    command herdr pane run "$bottom_right_pane_id" 'while true; clear; stax worktree ll; or stax worktree list; sleep 10; end'
     or return 1
 
     sleep 1

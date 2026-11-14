@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 set -l repo_root (path dirname (path dirname (path dirname (status filename))))
+set repo_root (path resolve "$repo_root")
 set -l function_dir "$repo_root/home/private_dot_config/fish/custom_functions.d"
 set -l tmpdir (mktemp -d)
 set -l fakebin "$tmpdir/bin"
@@ -33,11 +34,8 @@ function assert_not_contains
 end
 
 printf '%s\n' '#!/usr/bin/env bash' \
-    'case "$*" in' \
-    '  "list --format=json") printf '\''[{"branch":"feature-x","path":"%s"}]\n'\'' "$ZW_TEST_WORKTREE_PATH" ;;' \
-    '  *) exit 1 ;;' \
-    'esac' >"$fakebin/wt"
-chmod +x "$fakebin/wt"
+    'printf "STAX_SHELL_PATH=%s\n" "$ZW_TEST_WORKTREE_PATH"' >"$fakebin/stax"
+chmod +x "$fakebin/stax"
 
 printf '%s\n' '#!/usr/bin/env bash' \
     'if [[ "$1" == "-r" && "$2" == "--arg" && "$4" == "feature-x" ]]; then' \
@@ -89,7 +87,7 @@ or exit 1
 
 set -l help_output (zw --help)
 assert_not_contains "$help_output" 'graphite' 'zw help does not advertise Graphite integration'
-assert_contains "$help_output" '-c/--create' 'zw retains ordinary Worktrunk creation'
+assert_contains "$help_output" '-c/--create' 'zw retains ordinary Stax creation'
 assert_contains "$help_output" '-a/--agent' 'zw retains agent startup'
 assert_contains "$help_output" '-b/--base=REF' 'zw retains base selection'
 

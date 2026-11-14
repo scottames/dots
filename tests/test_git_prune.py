@@ -1,21 +1,16 @@
-"""Exercise cleanup with real Git, Fish, Worktrunk, and Stax in temporary repos."""
+"""Exercise cleanup with real Git, Fish, Stax in temporary repos."""
 
 import json
 import os
-import shlex
 import shutil
 import subprocess  # nosec B404 - Local tools operating on temporary fixtures.
-import sys
 import tempfile
-import time
-import tomllib
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FUNCTION = ROOT / "home/private_dot_config/fish/custom_functions.d/git_prune.fish"
-CONFIG = ROOT / "home/private_dot_config/worktrunk/config.toml"
-HOOK = CONFIG.with_name("stax-post-remove.py")
+CONFIG = ROOT / "home/private_dot_config/stax/config.toml"
 
 
 def tool(name):
@@ -27,11 +22,11 @@ def tool(name):
     return path
 
 
-TOOLS = {name: tool(name) for name in ("git", "fish", "wt", "stax")}
+TOOLS = {name: tool(name) for name in ("git", "fish", "stax")}
 
 
-@unittest.skipUnless(all(TOOLS.values()), "requires Git, Fish, Worktrunk, and Stax")
-class GitPruneTests(unittest.TestCase):
+@unittest.skipUnless(all(TOOLS.values()), "requires Git, Fish, Stax")
+class GitFixture(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="git prune ")
         self.addCleanup(self.temp.cleanup)
@@ -40,27 +35,23 @@ class GitPruneTests(unittest.TestCase):
         self.main.mkdir(parents=True)
         self.bin = self.directory / "bin"
         self.bin.mkdir()
-        for name, binary in {**TOOLS, "python3": sys.executable}.items():
+        for name, binary in TOOLS.items():
             (self.bin / name).symlink_to(binary)
-        self.config = self.directory / "wt.toml"
-        hook = tomllib.loads(CONFIG.read_text())["post-remove"]["stax_untrack"]
-        hook = hook.replace(
-            '"$HOME/.config/worktrunk/stax-post-remove.py"', shlex.quote(str(HOOK))
+        self.config = self.directory / "config"
+        self.config.mkdir()
+        (self.config / "config.toml").write_text(
+            '[worktree]\nroot_dir=".."\nreuse_slots=false\n'
         )
-        self.config.write_text(f"[post-remove]\nstax_untrack = '''\n{hook}'''\n")
         self.env = {
             **os.environ,
             "PATH": f"{self.bin}:{os.environ['PATH']}",
-            "WORKTRUNK_CONFIG_PATH": str(self.config),
-            "WORKTRUNK_SYSTEM_CONFIG_PATH": str(self.directory / "no-system.toml"),
-            "WORKTRUNK_PROJECT_CONFIG_PATH": str(self.directory / "no-project.toml"),
+            "STAX_CONFIG_DIR": str(self.config),
         }
         self.git("init", "--quiet", "--initial-branch=main")
         # Fixtures use the existing author identity, without hardware signing or
         # user hooks. Never configure an alternate author/committer identity.
         self.git("config", "commit.gpgsign", "false")
         self.git("config", "core.hooksPath", str(self.directory / "no-hooks"))
-        self.git("config", "worktrunk.default-branch", "main")
         (self.main / ".gitignore").write_text("ignored/\n")
         self.git("add", ".gitignore")
         self.commit(self.main, "initial")
@@ -112,17 +103,6 @@ class GitPruneTests(unittest.TestCase):
     def read_metadata(self, name):
         return json.loads(self.git("show", f"refs/branch-metadata/{name}"))
 
-    def wait_for_parent(self, name, parent):
-        deadline = time.monotonic() + 5
-        while time.monotonic() < deadline:
-            if self.read_metadata(name)["parentBranchName"] == parent:
-                return
-            time.sleep(0.02)
-        logs = "\n".join(
-            path.read_text() for path in (self.main / ".git/wt/logs").rglob("*.log")
-        )
-        self.fail(f"Post-remove hook did not reparent {name} to {parent}:\n{logs}")
-
     def stax_init(self):
         self.write_ref("refs/stax/trunk", "main")
 
@@ -131,7 +111,7 @@ class GitPruneTests(unittest.TestCase):
             TOOLS["fish"],
             "--no-config",
             "-c",
-            'source "$argv[1]"; git_prune $argv[2..]',
+            'set -p fish_function_path (path dirname "$argv[1]"); git_prune $argv[2..]',
             "--",
             str(FUNCTION),
             *args,
@@ -139,62 +119,48 @@ class GitPruneTests(unittest.TestCase):
             check=False,
         )
 
-    def wt(self, *args):
-        return self.run_command(TOOLS["wt"], *args)
 
+class GitPruneTests(GitFixture):
     def test_preview_changes_neither_refs_nor_worktrees(self):
         self.stax_init()
         clean = self.worktree("integrated")
-        artifact = clean / "ignored/evidence"
-        artifact.parent.mkdir()
-        artifact.write_text("keep")
         self.metadata("integrated", "main")
-        self.metadata("orphan", "main")
         before = self.git("show-ref")
-        result = self.prune("--min-age=0s")
+        result = self.prune()
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("integrated", result.stdout)
-        self.assertIn("orphan", result.stdout)
         self.assertEqual(self.git("show-ref"), before)
-        self.assertEqual(artifact.read_text(), "keep")
+        self.assertTrue(clean.exists())
 
-    def test_apply_preserves_dirty_locked_and_unmerged_worktrees(self):
+    def test_apply_retains_all_live_worktrees_and_metadata(self):
         self.stax_init()
-        clean = self.worktree("integrated")
-        self.metadata("integrated", "main")
-        dirty = self.worktree("dirty")
-        (dirty / "unsaved").write_text("keep")
-        self.metadata("dirty", "main")
-        locked = self.worktree("locked")
-        self.git("worktree", "lock", str(locked))
-        active = self.worktree("active")
-        tip = self.commit(active, "unmerged")
-        self.git("push", "--quiet", "--set-upstream", "origin", "active", cwd=active)
-        self.git("push", "--quiet", "origin", "--delete", "active")
-        result = self.prune("--apply", "--min-age=0s")
+        for name in ("integrated", "dirty", "locked", "active"):
+            path = self.worktree(name)
+            self.metadata(name, "main")
+            if name == "dirty":
+                (path / "unsaved").write_text("keep")
+            if name == "locked":
+                self.git("worktree", "lock", str(path))
+        before = self.git("show-ref", "--heads")
+        result = self.prune("--apply")
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertFalse(clean.exists())
-        self.assertNotIn("refs/branch-metadata/integrated", self.git("show-ref"))
-        self.assertEqual((dirty / "unsaved").read_text(), "keep")
-        self.assertEqual(self.read_metadata("dirty")["parentBranchName"], "main")
-        self.assertTrue(locked.exists())
-        self.assertEqual(self.git("rev-parse", "active"), tip)
-        self.assertTrue(self.main.exists())
+        self.assertEqual(self.git("show-ref", "--heads"), before)
+        for name in ("integrated", "dirty", "locked", "active"):
+            self.assertTrue((self.directory / "demo" / name).exists())
 
     def test_default_age_keeps_fresh_worktree(self):
         fresh = self.worktree("fresh")
         result = self.prune("--apply")
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertTrue(fresh.exists())
-        self.assertIn("2d", result.stdout)
+        self.assertIn("retained", result.stdout)
 
     def test_apply_refuses_linked_or_dirty_primary_worktree(self):
         linked = self.worktree("linked")
-        result = self.prune("--apply", "--min-age=0s", cwd=linked)
+        result = self.prune("--apply", cwd=linked)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("run --apply from", result.stderr)
         (self.main / "unsaved").write_text("keep")
-        result = self.prune("--apply", "--min-age=0s")
+        result = self.prune("--apply")
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("must be clean", result.stderr)
         self.assertTrue(linked.exists())
@@ -222,86 +188,54 @@ class GitPruneTests(unittest.TestCase):
         self.commit(source, "remote-again")
         self.git("push", "--quiet", "origin", "remote-source:main")
         local_tip = self.commit(self.main, "local-only")
-        result = self.prune("--apply", "--min-age=0s")
+        result = self.prune("--apply")
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.git("rev-parse", "main"), local_tip)
         self.assertTrue(candidate.exists())
 
-    def test_remove_reparents_without_rewriting_child_or_rebase_boundary(self):
+    def test_invalid_metadata_blocks_apply(self):
         self.stax_init()
-        parent = self.worktree("parent")
-        parent_tip = self.commit(parent, "parent-change")
-        self.metadata("parent", "main")
-        child = self.worktree("child", "parent")
-        child_tip = self.commit(child, "child-change")
-        expected = self.metadata("child", "parent", frozen=True, prInfo={"number": 7})
-        self.git("merge", "--squash", "parent")
-        self.git("commit", "--quiet", "-m", "squashed parent")
-        self.commit(self.main, "later-main-change")
-        self.assertNotEqual(self.git("merge-base", "main", "child"), parent_tip)
-        self.wt("remove", "--foreground", "parent")
-        self.assertFalse(parent.exists())
-        self.wait_for_parent("child", "main")
-        self.assertEqual(
-            self.read_metadata("child"), {**expected, "parentBranchName": "main"}
-        )
-        self.assertEqual(self.git("rev-parse", "child"), child_tip)
-        self.assertEqual(self.git("status", "--porcelain", cwd=child), "")
-
-    def test_retained_branch_keeps_metadata_and_parent_relationship(self):
-        self.stax_init()
-        self.worktree("parent")
-        expected = self.metadata("parent", "main")
-        self.worktree("child", "parent")
-        child_metadata = self.metadata("child", "parent")
-        self.wt("remove", "--foreground", "--no-delete-branch", "parent")
-        self.assertEqual(self.read_metadata("parent"), expected)
-        self.assertEqual(self.read_metadata("child"), child_metadata)
-
-    def test_concurrent_prune_reparents_surviving_leaf(self):
-        self.stax_init()
-        parent = self.worktree("parent")
-        self.metadata("parent", "main")
-        self.commit(parent, "parent-change")
-        middle = self.worktree("middle", "parent")
-        self.metadata("middle", "parent")
-        self.commit(middle, "middle-change")
-        leaf = self.worktree("leaf", "middle")
-        tip = self.commit(leaf, "unmerged-leaf")
-        expected = self.metadata("leaf", "middle")
-        self.git("merge", "--ff-only", "middle")
-        self.wt("step", "prune", "--min-age=0s", "--foreground")
-        self.wait_for_parent("leaf", "main")
-        self.assertEqual(
-            self.read_metadata("leaf"), {**expected, "parentBranchName": "main"}
-        )
-        self.assertEqual(self.git("rev-parse", "leaf"), tip)
-        self.assertNotIn("refs/branch-metadata/parent", self.git("show-ref"))
-        self.assertNotIn("refs/branch-metadata/middle", self.git("show-ref"))
-
-    def test_apply_cleans_branch_only_metadata_and_replay_is_idempotent(self):
-        self.stax_init()
-        self.git("branch", "branch-only")
-        self.metadata("branch-only", "main")
-        result = self.prune("--apply", "--min-age=0s")
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertNotIn("refs/branch-metadata/branch-only", self.git("show-ref"))
-        before = self.git("show-ref")
-        self.run_command(sys.executable, str(HOOK), "branch-only")
-        self.assertEqual(self.git("show-ref"), before)
-
-    def test_missing_parent_keeps_metadata_for_manual_repair(self):
-        self.stax_init()
-        self.metadata("removed", "missing", revision=self.git("rev-parse", "main"))
         self.worktree("child")
-        expected = self.metadata(
-            "child", "removed", revision=self.git("rev-parse", "main")
-        )
-        before = self.git("show-ref")
-        result = self.run_command(sys.executable, str(HOOK), "removed", check=False)
+        self.metadata("child", "missing", revision=self.git("rev-parse", "main"))
+        before = self.git("show-ref", "--heads")
+        result = self.prune("--apply")
         self.assertNotEqual(result.returncode, 0)
-        self.assertEqual(self.git("show-ref"), before)
-        self.assertEqual(self.read_metadata("child"), expected)
+        self.assertEqual(self.git("show-ref", "--heads"), before)
+
+    def test_stale_bookkeeping_age_and_staged_recovery(self):
+        import time
+
+        self.stax_init()
+        old = self.worktree("old-missing")
+        recent = self.worktree("recent-missing")
+        locked = self.worktree("locked-missing")
+        self.git("worktree", "lock", str(locked))
+        shutil.rmtree(old)
+        shutil.rmtree(recent)
+        shutil.rmtree(locked)
+        admin = self.main / ".git/worktrees"
+        timestamp = time.time() - 3 * 86400
+        os.utime(admin / "old-missing/gitdir", (timestamp, timestamp))
+        os.utime(admin / "locked-missing/gitdir", (timestamp, timestamp))
+        self.git("config", "gc.worktreePruneExpire", "now")
+        result = self.prune("--apply")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue((admin / "old-missing").exists())
+        self.assertTrue((admin / "recent-missing").exists())
+        os.utime(admin / "recent-missing/gitdir", (timestamp, timestamp))
+        result = self.prune("--apply")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse((admin / "old-missing").exists())
+        self.assertFalse((admin / "recent-missing").exists())
+        self.assertTrue((admin / "locked-missing").exists())
+        staged = self.worktree("staged-missing")
+        (staged / "recover").write_text("staged content")
+        self.git("add", "recover", cwd=staged)
+        shutil.rmtree(staged)
+        os.utime(admin / "staged-missing/gitdir", (timestamp, timestamp))
+        result = self.prune("--apply")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertTrue((admin / "staged-missing/index").exists())
 
 
 if __name__ == "__main__":
