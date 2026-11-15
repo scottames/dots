@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-function herdr_wt_switch --description "Open a Stax worktree in Herdr"
+function herdr_wt_switch --description "Open a worktree in Herdr"
     argparse --max-args=1 c/create b/base= h/help -- $argv
     or return 2
     if set -q _flag_help

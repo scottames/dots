@@ -248,7 +248,8 @@ abbr -a vst "vagrant status"
 abbr -a vu "vagrant up"
 abbr -a wtr "stax worktree remove"
 abbr -a wts "stax worktree go"
-abbr -a wtsc "stax worktree create"
+abbr -a wtg "stax worktree go"
+abbr -a wtc "stax worktree create"
 abbr -a yz yazi
 abbr -a za zellij_attach # see functions
 abbr -a zja zellij_attach # see functions

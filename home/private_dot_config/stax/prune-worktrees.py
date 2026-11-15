@@ -90,7 +90,9 @@ def process_paths():
 
 def herdr_paths():
     paths = []
-    if shutil.which("herdr-app"):
+    if os.environ.get("HC_TERMINAL_ID"):
+        if not shutil.which("herdr-app"):
+            raise RuntimeError("Herdr desktop CLI unavailable")
         spaces = json.loads(output("herdr-app", "ls"))["spaces"]
         for space in spaces:
             if space.get("machine") is not None:

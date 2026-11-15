@@ -238,8 +238,22 @@ class LiveCleanupTests(GitFixture):
             )
         with patch.object(
             prune.shutil, "which", return_value="/bin/tool"
-        ), patch.object(prune, "output", return_value="{}"):
+        ), patch.object(prune, "output", return_value="{}"), patch.dict(
+            os.environ, {"HC_TERMINAL_ID": "test"}
+        ):
             self.assertIn("activity unknown", prune.activity_reason(self.main))
+
+    def test_herdr_optional_outside_runtime(self):
+        with patch.dict(os.environ, {}, clear=True), patch.object(
+            prune, "output"
+        ) as command:
+            self.assertEqual(prune.herdr_paths(), [])
+            command.assert_not_called()
+        with patch.dict(
+            os.environ, {"HC_TERMINAL_ID": "test"}, clear=True
+        ), patch.object(prune.shutil, "which", return_value=None):
+            with self.assertRaisesRegex(RuntimeError, "unavailable"):
+                prune.herdr_paths()
 
     def test_macos_lsof_paths_and_errors(self):
         result = subprocess.CompletedProcess([], 0, "p42\nfcwd\nn/tmp/repo space\n", "")
