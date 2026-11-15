@@ -99,7 +99,7 @@ description = "review current change with tuicr"
 key = "prefix+alt+w"
 type = "pane"
 command = "fish -lc 'herdr_wt_switch'"
-description = "switch/create worktree with wt and open in herdr"
+description = "switch/create worktree with Stax and open in herdr"
 
 # Annotate is provisioned by chezmoi and mise without upstream install hooks.
 [[keys.command]]

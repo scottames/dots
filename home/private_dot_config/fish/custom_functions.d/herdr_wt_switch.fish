@@ -1,85 +1,24 @@
 #!/usr/bin/env fish
 
-function herdr_wt_switch \
-    --description "Switch/create a Worktrunk worktree and open it in Herdr."
-
-    # Abbreviations:
-    #   hw = herdr_new_workspace
-    #   hwt = herdr_wt_switch
-    #   hwtc = herdr_wt_switch --create
-    #
-    # User workflow:
-    #   herdr_new_workspace
-    #       Open the repo's main Herdr workspace first. Abbreviation: hw.
-    #
-    #   herdr_wt_switch
-    #       Open Worktrunk's picker. Press Enter on an existing worktree to open
-    #       it in Herdr. To create from the picker, type the new branch/worktree
-    #       name first, then press Alt-c. Alt-c uses the current filter text; it
-    #       is not a separate prompt. Abbreviation: hwt.
-    #
-    #   herdr_wt_switch foo
-    #       Open the existing foo worktree directly.
-    #
-    #   herdr_wt_switch --create fix-herdr-flow
-    #       Create fix-herdr-flow through Worktrunk, then open it in Herdr.
-    #       Abbreviation: hwtc fix-herdr-flow.
-    #
-    #   herdr_wt_switch --create --base @ fix-from-current
-    #       Create from the current branch shortcut. Other Worktrunk --base
-    #       values, such as main or pr:123, are forwarded to wt. Abbreviation:
-    #       hwtc --base @ fix-from-current.
-    #
-    # Herdr keybind:
-    #   prefix+alt+w runs this function with no arguments, so it starts the same
-    #   picker flow as herdr_wt_switch.
-
-    argparse -n herdr_wt_switch 'c/create' 'b/base=' 'h/help' -- $argv
-    or return 1
-
+function herdr_wt_switch --description "Open a Stax worktree in Herdr"
+    argparse --max-args=1 c/create b/base= h/help -- $argv
+    or return 2
     if set -q _flag_help
         printf 'Usage: herdr_wt_switch [--create] [--base BASE] [BRANCH]\n'
+        printf 'Creation defaults to trunk; --base @ explicitly uses the current branch.\n'
         return 0
     end
-
-    set -l wt_args switch --no-cd
-
-    if set -q _flag_create
-        set -a wt_args --create
-    end
-
-    if set -q _flag_base
-        set -a wt_args --base "$_flag_base"
-    end
-
-    if test (count $argv) -gt 1
-        printf 'Usage: herdr_wt_switch [--create] [--base BASE] [BRANCH]\n' >&2
-        return 1
-    end
-
     if set -q HC_TERMINAL_ID
-        # Fail before Worktrunk can create a checkout or run hooks.
         command herdr-app ls >/dev/null
         or return 1
     end
-
-    if set -q argv[1]
-        set -a wt_args $argv[1]
-    end
-
-    if not type -q jq
-        printf 'herdr_wt_switch: jq is required\n' >&2
-        return 1
-    end
-
-    # Use the same Worktrunk flow for picker and explicit branch in either runtime.
-    set -l switch_result (command wt $wt_args --format json)
+    set -l primary (_stax_primary_worktree)
     or return 1
-    set -l worktree_path (printf '%s\n' "$switch_result" | command jq -r '.path // empty')
-    or return 1
-    test -n "$worktree_path"; or return 0
-
-    set -l primary_worktree_path (command wt step eval '{{ primary_worktree_path }}')
-    or return 1
-    herdr_open_worktree_path "$primary_worktree_path" "$worktree_path"
+    set -l options
+    set -q _flag_create; and set -a options --create
+    set -q _flag_base; and set -a options --base "$_flag_base"
+    set -l destination (_stax_worktree_path $options $argv)
+    or return $status
+    test -n "$destination"; or return 0
+    herdr_open_worktree_path "$primary" "$destination"
 end

@@ -57,6 +57,15 @@ else:
         self.mock(
             "git",
             """
+if args == ['worktree', 'list', '--porcelain']:
+    print('worktree ' + os.environ['TEST_MAIN'])
+    sys.exit(0)
+if args == ['branch', '--show-current']:
+    print('feature-base')
+    sys.exit(0)
+if args[-2:] == ['rev-parse', '--is-bare-repository']:
+    print('false')
+    sys.exit(0)
 cwd = args[1]
 if args[2:] == ['rev-parse', '--show-toplevel']:
     print(os.environ['TEST_CHILD'] if cwd.startswith(os.environ['TEST_CHILD']) else os.environ['TEST_MAIN'])
@@ -65,14 +74,12 @@ else:
 """,
         )
         self.mock(
-            "wt",
+            "stax",
             """
 if os.environ.get('TEST_WT_FAIL'):
     sys.exit(1)
-if args[0] == 'step':
-    print(os.environ['TEST_MAIN'])
-else:
-    print(json.dumps({'path': '' if os.environ.get('TEST_CANCEL') else os.environ['TEST_CHILD']}))
+if not os.environ.get('TEST_CANCEL'):
+    print('STAX_SHELL_PATH=' + os.environ['TEST_CHILD'])
 """,
         )
 
@@ -184,16 +191,14 @@ end
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn(
             [
-                "switch",
-                "--no-cd",
-                "--create",
-                "--base",
-                "@",
+                "worktree",
+                "create",
                 "feature",
-                "--format",
-                "json",
+                "--from",
+                "feature-base",
+                "--shell-output",
             ],
-            self.commands("wt"),
+            self.commands("stax"),
         )
         created = [c for c in self.commands() if "space.new" in c]
         self.assertEqual(
@@ -208,7 +213,7 @@ end
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(self.commands(), [["ls"]])
 
-    def test_worktrunk_failure_does_not_open_spaces(self):
+    def test_stax_failure_does_not_open_spaces(self):
         self.env["TEST_WT_FAIL"] = "1"
         self.assertNotEqual(self.run_helper("herdr_wt_switch feature").returncode, 0)
         self.assertEqual(self.commands(), [["ls"]])
@@ -257,7 +262,7 @@ end
     def test_picker_opens_selected_worktree(self):
         result = self.run_helper("herdr_wt_switch")
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn(["switch", "--no-cd", "--format", "json"], self.commands("wt"))
+        self.assertIn(["worktree", "go", "--shell-output"], self.commands("stax"))
         self.assertEqual(len([c for c in self.commands() if "space.new" in c]), 2)
 
 
