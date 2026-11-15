@@ -61,21 +61,45 @@ is blocking. No metadata synchronization hook remains.
 
 ## Cleanup safety and deliberate differences
 
-`git_prune` is read-only by default. `--apply` requires the clean primary checkout
-on the configured trunk, validates Stax metadata, pulls with `--ff-only`, and
-prunes only stale Git worktree bookkeeping older than two days. Missing worktrees
-with staged changes, interrupted operations or unreadable state block pruning.
-Stax prune accepts no expiry argument, so one young/unknown missing entry retains
-all stale entries until a later run. The age floor uses the administrative
-`gitdir` file mtime. Locked entries remain protected by Git. Invalid metadata
-requires manual repair.
+`git_prune` previews eligible removals by default. `--apply` requires the clean
+primary checkout on configured trunk, validates Stax metadata and pulls with
+`--ff-only`. A small Python eligibility filter delegates each removal to
+`stax worktree remove <absolute-path>`, never passing force or delete-branch.
 
-**All live worktrees and branches are retained**, including merged, old and
-branch-only entries. This deliberately replaces automatic integrated-branch
-cleanup: native Stax cleanup has no two-day minimum-age or agent-activity filter.
-Keeping all live checkouts protects dirty, locked, newly created and active agent
-worktrees without building another lifecycle manager. `--min-age` is removed;
-unknown options fail rather than disabling protection.
+A live checkout is eligible only when it is clean, unlocked, not primary/current
+or trunk/detached, has no interrupted Git operation or tracked children, is older
+than two days, and its HEAD is an ancestor of trunk. Squash-merged branches that
+are not ancestors stay for manual review. Branches and stack metadata are always
+retained, including after a successful checkout removal.
+
+Age is a conservative proxy using the newest mtime of the checkout's `.git` file,
+administrative `gitdir` pointer, and available HEAD/branch reflogs. Recent Git
+use postpones cleanup; unknown timestamps keep the checkout. No tracking database
+or lifecycle hooks are added. The fixed two-day guard cannot be disabled with
+`--min-age` (unknown options fail).
+
+Activity checks cover local Herdr desktop space folders and live terminal CWDs,
+legacy Herdr pane CWDs when invoked from that runtime, and current-user process
+CWDs (`/proc` on Linux; `lsof` on macOS). A process in any subdirectory protects
+the checkout. An installed desktop CLI must respond successfully; an unreachable
+app, unsupported pane schema, missing `lsof`, or an unreadable process causes the
+candidate to be kept with an "activity unknown" reason. Outside legacy Herdr,
+its live shells are covered by the process check.
+
+These are best-effort snapshots: they do not see other users or processes hidden
+by container/PID namespaces, and a process can start after a check. Use
+`stax wt lock branch` for an explicit keep marker, especially across namespaces.
+Every candidate is rechecked immediately before removal; a changed HEAD/branch,
+new dirty state, or new activity keeps it. Stax receives non-interactive stdin so
+a newly dirty checkout cannot be confirmed for forced removal. Save ignored
+artifacts before applying. Dry runs print candidates and individual skip reasons.
+
+Stale Git worktree bookkeeping is also pruned after live cleanup. Missing
+worktrees with staged changes, interrupted operations or unreadable state block
+pruning. Stax prune accepts no expiry argument, so one young/unknown missing
+entry retains all stale entries until a later run. The age floor uses the
+administrative `gitdir` file mtime. Locked entries remain protected by Git.
+Invalid metadata requires manual repair.
 
 For reviewed individual removals, stop the agent, preserve ignored artifacts, then
 use `stax wt rm branch`. This retains the branch and its stack relationships.

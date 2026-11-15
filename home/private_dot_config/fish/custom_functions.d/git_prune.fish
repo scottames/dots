@@ -1,15 +1,15 @@
 #!/usr/bin/env fish
 
-function git_prune --description "Preview cleanup; --apply prunes stale bookkeeping only"
+function git_prune --description "Preview eligible checkout cleanup; --apply to remove"
     argparse --max-args=0 apply h/help -- $argv
     or return 2
     if set -q _flag_help
         printf '%s\n' \
             'Usage: git_prune [--apply]' \
-            'Live worktrees and branches are always retained (including old, merged ones).' \
-            'Stax lacks the old two-day/activity guard; bulk live deletion is disabled.' \
+            'Remove clean, inactive, ancestry-merged checkouts older than two days.' \
+            'Branches/metadata are retained; parents, uncertain activity and squash merges are skipped.' \
             '--apply requires the clean primary checkout on trunk and pulls --ff-only.' \
-            'Only stale Git worktree bookkeeping is pruned, with a minimum age of two days.' \
+            'Stale bookkeeping is also pruned, with a minimum age of two days.' \
             'Review individual removals with stax worktree rm; keep branches with children.'
         return 0
     end
@@ -38,8 +38,11 @@ function git_prune --description "Preview cleanup; --apply prunes stale bookkeep
         command git pull --ff-only
         or return $status
     end
-    printf 'Live worktrees and branches retained: Stax has no age/activity guard.\n'
-    command stax worktree list
+    set -l options
+    set -q _flag_apply; and set options --apply
+    # Resolve relative to this deployed function, also supporting source-tree tests.
+    set -l helper (path resolve (path dirname (status filename))/../../stax/prune-worktrees.py)
+    command python3 "$helper" --primary "$primary" --trunk "$trunk" $options
     or return $status
     # Stax prune has no expiry argument. Gate the entire native prune: one young
     # or uncertain missing entry keeps all bookkeeping until the next run.
