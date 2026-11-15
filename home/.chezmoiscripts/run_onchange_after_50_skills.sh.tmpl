@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# Rerun skill setup when the mise-pinned Linear CLI changes.
+# linear-cli version: {{ index (fromToml (include "../mise/config.toml")).tools "github:schpet/linear-cli" }}
+
+# Colors
+red='\033[0;31m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+clear='\033[0m'
+print_info() { printf "\n${blue}📦 ${magenta}%s${clear}\n" "${@}"; }
+print_success() { printf "\n${cyan}🎉 %s${clear}\n\n" "${@}"; }
+print_err() { printf "\n${red}💥 %s${clear}\n\n" "${@}"; }
+
+if ! command -v mise &>/dev/null; then
+  print_err "mise not found.
+    install and try again."
+  exit 0 # exit 0 to not block chezmoi apply
+fi
+
+# .openpackage/openpackage.yml hash: {{ includeTemplate "../home/private_dot_openpackage/openpackage.yml.tmpl" . | sha256sum }}
+# Local Linear wrapper manifest hash: {{ include "private_dot_openpackage/packages/linear-cli/openpackage.yml" | sha256sum }}
+if ! mise exec -- sh -c 'command -v opkg' &>/dev/null; then
+  print_err "opkg not found.
+    install and try again."
+  exit 0 # exit 0 to not block chezmoi apply
+fi
+
+print_info "installing skills globally with openpackage"
+mise exec -- opkg install -g --platforms claude codex opencode
+print_success "skills done"
+
+# vi: ft=bash
