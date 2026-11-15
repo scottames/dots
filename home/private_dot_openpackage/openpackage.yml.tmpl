@@ -1,5 +1,4 @@
 name: scta
-dependencies:
 {{- $packageRoot := joinPath .home.src_github_dir ".agents/main/packages" }}
 {{- $packageNames := list
   "ctx7"
@@ -10,15 +9,16 @@ dependencies:
   "ponytail"
   "worktrunk"
 }}
+{{- $packages := list }}
 {{- range $name := $packageNames }}
 {{- $packagePath := joinPath $packageRoot $name }}
 {{- if stat $packagePath }}
-- name: {{ $name }}
-  base: {{ $packagePath }}
+{{- $packages = append $packages (dict "name" $name "base" $packagePath) }}
 {{- end }}
 {{- end }}
-{{- $linearCliVersion := index (fromToml (include "../mise/config.toml")).tools "github:schpet/linear-cli" }}
-- name: gh@schpet/linear-cli/skills/linear-cli
-  url: https://github.com/schpet/linear-cli.git#{{ $linearCliVersion }}
-  path: skills/linear-cli
+dependencies:{{ if not $packages }} []{{ end }}
+{{- range $package := $packages }}
+- name: {{ $package.name }}
+  base: {{ $package.base }}
+{{- end }}
 dev-dependencies: []
