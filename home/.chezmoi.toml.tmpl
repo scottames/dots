@@ -20,6 +20,7 @@
 {{- $loginSession     := 0     -}}
 {{- $loginSessionType := ""    -}}
 {{- $ntbkPath         := ""    -}}
+{{- $notificationDaemon := "mako" -}}
 {{- $osName           := ""    -}}
 {{- $osVariant        := ""    -}}
 {{- $osVersion        := ""    -}}
@@ -142,6 +143,9 @@ output "sh" "-c" "printf 'scott@ames.sh' | md5sum - | cut -d' ' -f1"
 
 {{- $workOrg := promptStringOnce . "work.org" "GitHub org for work profile" "" -}}
 {{- $isFieldOffice := promptBoolOnce . "host.is_field_office" "Configure as a Field Office" false -}}
+{{- if regexMatch "niri" $desktopSession -}}
+{{-   $notificationDaemon = promptChoiceOnce . "desktop.notification_daemon" "Notification daemon" (list "mako" "hokum") "mako" -}}
+{{- end -}}
 
 {{- $gitSigningFormat := "openpgp" -}}
 {{- $gitSigningKey := "" -}}
@@ -202,6 +206,7 @@ progress = true
 
   [data.desktop]
     session = "{{ $desktopSession }}"
+    notification_daemon = "{{ $notificationDaemon }}"
     wallpaper = "{{ $wallpaper }}"
     wallpaper_dir = "{{ $wallpaperDir }}"
 

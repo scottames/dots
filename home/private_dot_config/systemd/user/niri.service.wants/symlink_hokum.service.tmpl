@@ -1,0 +1,3 @@
+{{ if eq (get .desktop "notification_daemon" | default "mako") "hokum" -}}
+/usr/lib/systemd/user/hokum.service
+{{- end }}

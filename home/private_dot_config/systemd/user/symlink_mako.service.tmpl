@@ -1,0 +1,3 @@
+{{ if eq (get .desktop "notification_daemon" | default "mako") "hokum" -}}
+/dev/null
+{{- end }}

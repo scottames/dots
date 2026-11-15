@@ -1,0 +1,14 @@
+// Seeded by chezmoi; Hokum owns subsequent settings and DND changes.
+theme "current"
+
+behaviour {
+    // Hokum 0.1.3 supports corners only, not Mako's top-center.
+    position "top-right"
+    stay 5
+    // Updates belong to the Atomic image.
+    check-for-updates #false
+}
+
+tokens {
+    font "mono"
+}

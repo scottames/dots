@@ -1,0 +1,5 @@
+{{ if eq (get .desktop "notification_daemon" | default "mako") "hokum" -}}
+/usr/share/dbus-1/services/app.hokum.Notifications.service
+{{- else -}}
+/usr/share/dbus-1/services/fr.emersion.mako.service
+{{- end }}

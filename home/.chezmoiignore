@@ -21,6 +21,17 @@ aqua.yaml
 .config/nvim/lazylock.json
 .config/nvim/lazy-vim.json
 
+{{- $notificationDaemon := get .desktop "notification_daemon" | default "mako" -}}
+{{- if not (has $notificationDaemon (list "mako" "hokum")) -}}
+{{-   fail "desktop.notification_daemon must be mako or hokum" -}}
+{{- end }}
+{{- if or (not (regexMatch "niri" .desktop.session)) (ne $notificationDaemon "hokum") }}
+.config/hokum/
+{{- end }}
+{{- if or (not (regexMatch "niri" .desktop.session)) (ne $notificationDaemon "mako") }}
+.config/mako/
+{{- end }}
+
 {{- if not (regexMatch "^gnome" .desktop.session) }}
 ### Ignore if not running gnome
 
@@ -42,6 +53,9 @@ src/github.com/paperwm*
 .config/niri/
 .config/systemd/user/niri.service.wants/*
 .config/systemd/user/swaybg.service
+.config/systemd/user/hokum.service
+.config/systemd/user/mako.service
+.local/share/dbus-1/services/org.freedesktop.Notifications.service
 .config/waybar/
 .config/wlogout/
 .local/share/applications/vivaldi-stable.desktop

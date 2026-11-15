@@ -1,0 +1,3 @@
+{{ if eq (get .desktop "notification_daemon" | default "mako") "mako" -}}
+/usr/lib/systemd/user/mako.service
+{{- end }}

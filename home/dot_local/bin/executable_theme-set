@@ -96,6 +96,7 @@ link television.toml "${HOME}/.config/television/themes/current.toml"
 link tuicr.toml "${HOME}/.config/tuicr/themes/current.toml"
 link vicinae.toml "${HOME}/.local/share/vicinae/themes/current.toml"
 link herdr-app.json "${HOME}/.config/herdr-app/themes/current.json"
+link hokum.kdl "${HOME}/.config/hokum/themes/current.kdl"
 # yazi flavors are directories, not files.
 link yazi.toml "${HOME}/.config/yazi/flavors/current.yazi/flavor.toml"
 
@@ -136,6 +137,10 @@ pkill -SIGUSR2 ghostty >/dev/null 2>&1 || true
 # Monstar re-reads its named custom theme after SIGUSR1.
 pkill -SIGUSR1 monstar >/dev/null 2>&1 || true
 reload makoctl reload
+# Hokum polls its theme's mtime; a symlink swap alone may leave it unchanged.
+if [[ -f ${HOME}/.config/hokum/themes/current.kdl ]]; then
+	touch "${HOME}/.config/hokum/themes/current.kdl"
+fi
 # herdr re-reads config.toml in place; panes are untouched.
 reload herdr server reload-config
 # Explicitly reselect the named theme: a symlink change may not trip the watcher,
