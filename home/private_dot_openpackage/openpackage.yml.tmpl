@@ -1,4 +1,5 @@
 name: scta
+dependencies:
 {{- $packageRoot := joinPath .home.src_github_dir ".agents/main/packages" }}
 {{- $packageNames := list
   "ctx7"
@@ -9,16 +10,13 @@ name: scta
   "ponytail"
   "worktrunk"
 }}
-{{- $packages := list }}
 {{- range $name := $packageNames }}
 {{- $packagePath := joinPath $packageRoot $name }}
 {{- if stat $packagePath }}
-{{- $packages = append $packages (dict "name" $name "base" $packagePath) }}
+- name: {{ $name }}
+  base: {{ $packagePath }}
 {{- end }}
 {{- end }}
-dependencies:{{ if not $packages }} []{{ end }}
-{{- range $package := $packages }}
-- name: {{ $package.name }}
-  base: {{ $package.base }}
-{{- end }}
+- name: gh@schpet/linear-cli/skills/linear-cli
+  base: {{ joinPath .chezmoi.homeDir ".openpackage/packages/linear-cli" }}
 dev-dependencies: []

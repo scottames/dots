@@ -1,0 +1,11 @@
+# Keep the skill documentation aligned with the mise-pinned CLI binary.
+{{ $linearCliVersion := index (fromToml (include "../mise/config.toml")).tools "github:schpet/linear-cli" -}}
+
+[".openpackage/packages/linear-cli/skills/linear-cli"]
+  type = "archive"
+  url = "https://github.com/schpet/linear-cli/archive/refs/tags/{{ $linearCliVersion }}.tar.gz"
+  stripComponents = 3
+  include = ["*/skills/linear-cli/**"]
+  exact = true
+
+# vi: ft=toml

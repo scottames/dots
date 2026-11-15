@@ -22,21 +22,15 @@ if ! command -v mise &>/dev/null; then
 fi
 
 # .openpackage/openpackage.yml hash: {{ includeTemplate "../home/private_dot_openpackage/openpackage.yml.tmpl" . | sha256sum }}
-if mise exec -- sh -c 'command -v opkg' &>/dev/null; then
-  print_info "installing openpackage packages globally"
-  mise exec -- opkg install -g --platforms claude codex opencode
-  print_success "openpackage done"
-else
-  print_err "opkg not found; skipping openpackage packages."
+# Local Linear wrapper manifest hash: {{ include "private_dot_openpackage/packages/linear-cli/openpackage.yml" | sha256sum }}
+if ! mise exec -- sh -c 'command -v opkg' &>/dev/null; then
+  print_err "opkg not found.
+    install and try again."
+  exit 0 # exit 0 to not block chezmoi apply
 fi
 
-if mise exec -- sh -c 'command -v linear' &>/dev/null; then
-  print_info "installing Linear CLI skill globally"
-  # Back up older OpenPackage-installed copies before replacing them.
-  mise exec -- linear skill setup --agent claude --agent codex --agent opencode --force
-  print_success "Linear CLI skill done"
-else
-  print_err "linear not found; skipping Linear CLI skill."
-fi
+print_info "installing skills globally with openpackage"
+mise exec -- opkg install -g --platforms claude codex opencode
+print_success "skills done"
 
 # vi: ft=bash

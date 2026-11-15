@@ -1,0 +1,3 @@
+# Wrapper for the upstream skill: OpenPackage requires a manifest on a fresh clone.
+# Retain the existing package identity when switching from the Git source.
+name: gh@schpet/linear-cli/skills/linear-cli
