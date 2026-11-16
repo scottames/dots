@@ -147,8 +147,10 @@ def parents():
 
 def reason(entry, primary, current, trunk):
     path = Path(entry["worktree"]).resolve()
-    if "bare" in entry or path in (primary, current):
-        return "primary/current checkout"
+    if "bare" in entry or path == primary:
+        return "primary checkout"
+    if path == current:
+        return "current checkout"
     if "locked" in entry:
         return "locked"
     if not path.is_dir() or "prunable" in entry:
@@ -211,19 +213,27 @@ def main():
     primary = args.primary.resolve()
     current = Path(output("git", "rev-parse", "--show-toplevel").strip()).resolve()
     candidates = []
+    kept = []
     for entry in inventory():
         why = reason(entry, primary, current, args.trunk)
         label = entry.get("branch", entry["worktree"]).removeprefix("refs/heads/")
-        print(
-            f"Keeping {label}: {why}"
-            if why
-            else f"Would remove checkout {label}: integrated; older than two days"
-        )
-        if why is None:
+        if why:
+            kept.append(f"  - {label}: {why}")
+        else:
             candidates.append(entry)
-    print(
-        "Branches and stack metadata retained. Save ignored artifacts before applying."
-    )
+    if kept:
+        print("\nKeeping\n" + "\n".join(kept))
+    if candidates:
+        print("\n" + ("Removing" if args.apply else "Would remove"))
+        for entry in candidates:
+            label = entry.get("branch", entry["worktree"]).removeprefix("refs/heads/")
+            print(
+                f"  - {label}: merged into {args.trunk}; passes age and activity checks"
+            )
+        if not args.apply:
+            print("\nSave any needed ignored files before removing these checkouts.")
+    else:
+        print("\nNo checkouts eligible for removal.")
     if not args.apply:
         return
     for candidate in candidates:

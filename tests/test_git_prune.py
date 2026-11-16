@@ -130,6 +130,8 @@ class GitPruneTests(GitFixture):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(self.git("show-ref"), before)
         self.assertTrue(clean.exists())
+        self.assertIn("Keeping\n  - main: primary checkout", result.stdout)
+        self.assertIn("No changes were made. Run git_prune --apply", result.stdout)
 
     def test_apply_retains_all_live_worktrees_and_metadata(self):
         self.stax_init()
@@ -144,6 +146,9 @@ class GitPruneTests(GitFixture):
         result = self.prune("--apply")
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual(self.git("show-ref", "--heads"), before)
+        self.assertEqual(result.stdout.count("Stack validation\n"), 1)
+        self.assertIn("Cleanup complete. Stack validation passed.", result.stdout)
+        self.assertNotIn("before applying", result.stdout)
         for name in ("integrated", "dirty", "locked", "active"):
             self.assertTrue((self.directory / "demo" / name).exists())
 

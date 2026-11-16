@@ -11,6 +11,8 @@ warm-slot recycling is disabled to keep paths stable.
 | `wts [branch]` | Alias for `wtg` |
 | `wtr branch` | Remove a checkout, retaining its branch |
 
+`git_status` shows all worktrees and the full Stax stack tree alongside Git status.
+
 Native creation stacks on the current tracked branch by default. Use `--from`
 for independent work. Existing checkouts and branch metadata are reused in place.
 Legacy `.bare` layouts work; select a checkout rather than the admin directory.

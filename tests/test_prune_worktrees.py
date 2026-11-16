@@ -75,7 +75,7 @@ class LiveCleanupTests(GitFixture):
         with patch.object(prune, "herdr_paths", return_value=[]), patch.object(
             prune, "process_paths", return_value=[]
         ):
-            self.assertIn("Would remove checkout merged", self.execute())
+            self.assertIn("Would remove\n  - merged:", self.execute())
             self.assertTrue(path.exists())
             self.assertEqual(self.git("show-ref"), before)
             report = self.execute(apply=True)

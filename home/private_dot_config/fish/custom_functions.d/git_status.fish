@@ -45,7 +45,7 @@ function git_status --description "Git project status" --wraps "git status"
     end
 
     if type -q stax; and command git show-ref --verify --quiet refs/stax/trunk 2>/dev/null
-        PAGER="" stax status --current --quiet 2>/dev/null
+        PAGER="" command stax ll 2>/dev/null
         or true
     else if test "$GRAPHITE_ENABLED" = true -a "$HAS_GT" = true
         PAGER="" gt ls 2>/dev/null

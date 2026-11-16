@@ -70,10 +70,25 @@ function git_prune --description "Preview eligible checkout cleanup; --apply to 
                 return 1
             end
         end
+        printf '\nStale worktree bookkeeping\n'
         command stax worktree prune
         or return $status
-        command stax validate
+        # Keep the post-cleanup check, but only repeat its details on failure.
+        set -l validation (command stax validate 2>&1)
+        set -l validation_status $status
+        if test $validation_status -ne 0
+            printf '%s\n' $validation >&2
+            return $validation_status
+        end
+        printf '\nCleanup complete. Stack validation passed.\nBranches and stack metadata retained.\n'
     else
-        command git worktree prune --dry-run --verbose --expire=2.days.ago
+        set -l bookkeeping (command git worktree prune --dry-run --verbose --expire=2.days.ago)
+        or return $status
+        if test (count $bookkeeping) -gt 0
+            printf '\nWould prune stale bookkeeping\n'
+            printf '  - %s\n' $bookkeeping
+        end
+        printf '\nNo changes were made. Run git_prune --apply from %s on %s to apply cleanup.\n' "$primary" "$trunk"
+        printf 'Branches and stack metadata will be retained.\n'
     end
 end
