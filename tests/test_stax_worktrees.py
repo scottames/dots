@@ -1,17 +1,32 @@
 """Real Stax/Fish contracts; terminal clients alone are stubbed."""
 
 import json
-import shlex
+import tomllib
 import unittest
 from pathlib import Path
 
-from test_git_prune import ROOT, TOOLS, GitFixture
+from test_git_prune import ROOT, TOOLS, GitFixture, tool
 
 FUNCTIONS = ROOT / "home/private_dot_config/fish/custom_functions.d"
+WT = tool("wt")
 
 
-@unittest.skipUnless(all(TOOLS.values()), "requires Git, Fish, Stax")
-class StaxWorktrees(GitFixture):
+@unittest.skipUnless(all(TOOLS.values()) and WT, "requires Git, Fish, Stax, Worktrunk")
+class StaxFixture(GitFixture):
+    def configure_setup(self):
+        (self.bin / "wt").symlink_to(WT)
+        self.env["WORKTRUNK_CONFIG_PATH"] = str(
+            ROOT / "home/private_dot_config/worktrunk/config.toml"
+        )
+        hook = tomllib.loads(
+            (ROOT / "home/private_dot_config/stax/config.toml").read_text()
+        )["worktree"]["hooks"]["post_create"]
+        (self.config / "config.toml").write_text(
+            '[worktree]\nroot_dir=".."\nreuse_slots=false\n[worktree.hooks]\npost_create='
+            + json.dumps(hook)
+            + "\n"
+        )
+
     def fish(self, script, *args, cwd=None):
         return self.run_command(
             TOOLS["fish"],
@@ -32,6 +47,8 @@ class StaxWorktrees(GitFixture):
         self.assertEqual(result.returncode, 0, result.stderr)
         return Path(result.stdout.strip()).resolve()
 
+
+class StaxWorktrees(StaxFixture):
     def test_default_parent_is_trunk_even_from_feature(self):
         parent = self.create("parent")
         self.commit(parent, "parent-change")
@@ -99,10 +116,18 @@ class StaxWorktrees(GitFixture):
 
     def test_herdr_opens_primary_then_child_without_cd(self):
         # Real Stax, real Herdr bridge, mocked desktop transport.
+        self.configure_setup()
+        setup = self.bin / "thts"
+        setup.write_text("#!/bin/sh\ntouch setup-finished\n")
+        setup.chmod(0o755)
         script = self.bin / "herdr-app"
         log = self.directory / "herdr.jsonl"
         script.write_text(
-            "#!/usr/bin/env python3\nimport json,sys\n"
+            "#!/usr/bin/env python3\nimport json,sys\nfrom pathlib import Path\n"
+            "if 'space.new' in sys.argv:\n"
+            "    folder = Path(sys.argv[sys.argv.index('--folder') + 1])\n"
+            f"    if folder != Path({str(self.main)!r}):\n"
+            "        assert (folder / 'setup-finished').exists()\n"
             f'with open({str(log)!r},"a") as f: f.write(json.dumps(sys.argv[1:])+"\\n")\n'
             'print("{\\"spaces\\":[]}")\n'
         )
@@ -119,36 +144,47 @@ class StaxWorktrees(GitFixture):
         )
 
     def test_copy_ignored_and_configured_setup_failure(self):
+        self.configure_setup()
         self.stax_init()
         (self.main / "ignored").mkdir()
         (self.main / "ignored/config").write_text("local config")
-        (self.main / "ignored/link").symlink_to("/etc/passwd")
-        import tomllib
-
-        hook = tomllib.loads(
-            (ROOT / "home/private_dot_config/stax/config.toml").read_text()
-        )["worktree"]["hooks"]["post_create"]
-        hook = hook.replace(
-            '"$HOME/.config/stax/copy-ignored.py"',
-            shlex.quote(str(ROOT / "home/private_dot_config/stax/copy-ignored.py")),
-        )
-        (self.config / "config.toml").write_text(
-            '[worktree]\nroot_dir=".."\nreuse_slots=false\n[worktree.hooks]\npost_create='
-            + json.dumps(hook)
-            + "\n"
-        )
+        (self.main / "ignored/link").symlink_to("config")
         fake = self.bin / "thts"
         fake.write_text('#!/bin/sh\nprintf "%s\\n" "$*" > thts-ran\n')
         fake.chmod(0o755)
         destination = self.create("setup")
         self.assertEqual((destination / "ignored/config").read_text(), "local config")
-        self.assertFalse((destination / "ignored/link").exists())
+        self.assertTrue((destination / "ignored/link").is_symlink())
+        self.assertEqual((destination / "ignored/link").readlink(), Path("config"))
         self.assertEqual(
             (destination / "thts-ran").read_text().strip(), "init --no-agents --force"
         )
         fake.write_text("#!/bin/sh\nexit 19\n")
         result = self.fish("_stax_worktree_path --create setup-fails")
         self.assertNotEqual(result.returncode, 0)
+
+    def test_copy_respects_worktreeinclude_and_existing_files(self):
+        self.configure_setup()
+        (self.main / "ignored").mkdir()
+        (self.main / "ignored/config").write_text("source config")
+        (self.main / "not-included").mkdir()
+        (self.main / "not-included/config").write_text("do not copy")
+        with (self.main / ".gitignore").open("a") as file:
+            file.write("not-included/\n")
+        (self.main / ".worktreeinclude").write_text("ignored/\n")
+        self.git("add", ".gitignore", ".worktreeinclude")
+        self.git("commit", "-m", "limit ignored copies")
+        fake = self.bin / "thts"
+        fake.write_text("#!/bin/sh\nexit 0\n")
+        fake.chmod(0o755)
+        destination = self.create("included")
+        self.assertEqual((destination / "ignored/config").read_text(), "source config")
+        self.assertFalse((destination / "not-included").exists())
+        (destination / "ignored/config").write_text("destination config")
+        self.run_command(WT, "step", "copy-ignored", cwd=destination)
+        self.assertEqual(
+            (destination / "ignored/config").read_text(), "destination config"
+        )
 
     def test_native_remove_keeps_parent_metadata_and_child_revision(self):
         parent = self.create("parent")
@@ -191,24 +227,11 @@ class StaxWorktrees(GitFixture):
         )
 
     def test_conditional_trunk_failure_blocks_setup(self):
-        import tomllib
-
+        self.configure_setup()
         (self.main / ".trunk").mkdir()
         (self.main / ".trunk/trunk.yaml").write_text("version: 0.1\n")
         self.git("add", ".trunk/trunk.yaml")
         self.git("commit", "-m", "trunk config")
-        hook = tomllib.loads(
-            (ROOT / "home/private_dot_config/stax/config.toml").read_text()
-        )["worktree"]["hooks"]["post_create"]
-        hook = hook.replace(
-            '"$HOME/.config/stax/copy-ignored.py"',
-            shlex.quote(str(ROOT / "home/private_dot_config/stax/copy-ignored.py")),
-        )
-        (self.config / "config.toml").write_text(
-            '[worktree]\nroot_dir=".."\nreuse_slots=false\n[worktree.hooks]\npost_create='
-            + json.dumps(hook)
-            + "\n"
-        )
         fake = self.bin / "trunk"
         fake.write_text("#!/bin/sh\necho check > trunk-ran\nexit 23\n")
         fake.chmod(0o755)

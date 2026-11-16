@@ -19,13 +19,22 @@ Legacy `.bare` layouts work; select a checkout rather than the admin directory.
 
 ## Setup
 
-The blocking `post_create` hook copies ignored regular files from the primary
-checkout, runs `thts init --no-agents --force` when available, then `trunk check`
-if configured. Existing files and symlinks are skipped. Project `stax.toml` can
-replace the hook with project-specific setup.
+The blocking `post_create` hook runs `wt step copy-ignored` from the primary
+checkout, then `thts init --no-agents --force` when available, then `trunk check`
+if configured. Setup progress and output stream to stderr, including through the
+Herdr helpers. Project `stax.toml` can replace the hook with project-specific setup.
+
+Worktrunk remains installed for its clone-aware copier (copy-on-write on APFS and
+other supported filesystems). It preserves symlinks and skips existing files.
+Use `.worktreeinclude` or Worktrunk's `step.copy-ignored.exclude` config to limit
+copying. The restored Worktrunk config keeps display preferences and aliases,
+not the retired Stax synchronization hooks; Stax still owns worktree lifecycle.
 
 A setup failure leaves the checkout in place and stops launch. Fix setup there
 before re-entering; re-entry does not retry `post_create`.
+To retry only copying, run `wt step copy-ignored` inside the new checkout.
+This skips existing files, so it does not repair files truncated by an interrupted
+run of the old Python copier.
 
 ## Cleanup
 

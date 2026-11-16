@@ -55,11 +55,16 @@ reuse_slots = false
 # Blocking: setup failures must be visible before opening an agent/terminal.
 post_create = """
 set -e
-python3 "$HOME/.config/stax/copy-ignored.py"
+# Fish captures stdout for STAX_SHELL_PATH; setup output belongs on stderr.
+exec 1>&2
+echo 'Copying ignored files (Worktrunk)...'
+wt step copy-ignored
 if command -v thts >/dev/null 2>&1; then
+  echo 'Initializing thoughts...'
   thts init --no-agents --force
 fi
 if test -f .trunk/trunk.yaml; then
+  echo 'Running Trunk checks...'
   trunk check
 fi
 """
