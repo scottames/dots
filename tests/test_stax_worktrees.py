@@ -172,7 +172,7 @@ class StaxWorktrees(GitFixture):
         self.assertIn('abbr -a wtc "stax worktree create"', abbrs)
         self.assertIn('abbr -a wtg "stax worktree go"', abbrs)
         self.assertIn('abbr -a wts "stax worktree go"', abbrs)
-        self.assertNotIn('abbr -a wtsc ', abbrs)
+        self.assertNotIn("abbr -a wtsc ", abbrs)
 
     def test_graphite_bridge_keeps_checkout_and_stax_metadata_untouched(self):
         fake = self.bin / "gt"

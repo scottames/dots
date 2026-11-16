@@ -66,9 +66,9 @@ def process_paths():
                 if state == "Z":
                     continue
                 paths.append(Path(os.readlink(proc / "cwd")))
-            except FileNotFoundError:
+            except FileNotFoundError as error:
                 if proc.exists():
-                    raise RuntimeError(f"cannot inspect process {proc.name}")
+                    raise RuntimeError(f"cannot inspect process {proc.name}") from error
                 continue  # Process exited during the snapshot.
         return paths
     if sys.platform == "darwin":

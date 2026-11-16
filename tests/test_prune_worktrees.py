@@ -11,7 +11,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from test_git_prune import ROOT, TOOLS, GitFixture
+from test_git_prune import ROOT, GitFixture
 
 HELPER = ROOT / "home/private_dot_config/stax/prune-worktrees.py"
 spec = importlib.util.spec_from_file_location("prune_worktrees", HELPER)
@@ -256,11 +256,13 @@ class LiveCleanupTests(GitFixture):
                 prune.herdr_paths()
 
     def test_macos_lsof_paths_and_errors(self):
-        result = subprocess.CompletedProcess([], 0, "p42\nfcwd\nn/tmp/repo space\n", "")
+        result = subprocess.CompletedProcess(
+            [], 0, "p42\nfcwd\nn/example/repo space\n", ""
+        )
         with patch.object(prune.sys, "platform", "darwin"), patch.object(
             prune, "run", return_value=result
         ):
-            self.assertEqual(prune.process_paths(), [Path("/tmp/repo space")])
+            self.assertEqual(prune.process_paths(), [Path("/example/repo space")])
             result.stderr = "permission denied"
             with self.assertRaises(RuntimeError):
                 prune.process_paths()
