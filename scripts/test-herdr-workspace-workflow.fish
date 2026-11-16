@@ -1,12 +1,12 @@
 #!/usr/bin/env fish
 
 set -l repo_root (path dirname (path dirname (status filename)))
+set repo_root (path resolve "$repo_root")
 set -l function_dir "$repo_root/home/private_dot_config/fish/custom_functions.d"
 set -l tmpdir (mktemp -d)
 set tmpdir (path resolve "$tmpdir")
 set -l fakebin "$tmpdir/bin"
 set -l log_file "$tmpdir/herdr.log"
-set -l wt_log_file "$tmpdir/wt.log"
 set -l pane_list_file "$tmpdir/pane-list.json"
 
 mkdir -p "$fakebin" "$tmpdir/home" "$tmpdir/scratch/demo"
@@ -39,19 +39,6 @@ printf '%s\n' '#!/usr/bin/env bash' \
     '    ;;' \
     'esac' >"$fakebin/herdr"
 chmod +x "$fakebin/herdr"
-
-printf '%s\n' '#!/usr/bin/env bash' \
-    'printf "%s\n" "$*" >>"$WT_LOG"' \
-    'if [[ "$*" == switch\ --no-cd*\ --format\ json ]]; then' \
-    '  printf '\''{"action":"switched","branch":"feature-x","path":"%s"}\n'\'' "$WT_WORKTREE_PATH"' \
-    '  exit 0' \
-    'fi' \
-    'if [[ "$*" == "step eval {{ primary_worktree_path }}" ]]; then' \
-    '  printf '\''%s\n'\'' "$WT_PRIMARY_WORKTREE_PATH"' \
-    '  exit 0' \
-    'fi' \
-    'exit 1' >"$fakebin/wt"
-chmod +x "$fakebin/wt"
 
 printf '%s\n' '#!/usr/bin/env python3' \
     'import json' \
@@ -97,14 +84,11 @@ chmod +x "$fakebin/jq"
 
 set -gx PATH "$fakebin" $PATH
 set -gx HERDR_LOG "$log_file"
-set -gx WT_LOG "$wt_log_file"
 set -gx HERDR_PANE_LIST "$pane_list_file"
 set -gx HOME "$tmpdir/home"
 set -gx DOTS "$tmpdir/dots"
 set -gx LEGACY_DOTS "$tmpdir/legacy-dots"
 set -gx SHELL /usr/bin/fish
-set -gx WT_PRIMARY_WORKTREE_PATH "$DOTS"
-set -gx WT_WORKTREE_PATH "$tmpdir/feature-x"
 set -gx COMMAND_LABEL_SUBSTITUTIONS ''
 set -e HC_TERMINAL_ID HERDR_ENV \
     __herdr_dynamic_title_pane_id \
@@ -171,41 +155,29 @@ herdr_new_workspace "$tmpdir/feature-x"
 set -l command_log (string join \n (string trim -- (command cat "$log_file")))
 set -l expected_log (string join \n \
     "workspace create --cwd $tmpdir/feature-x --label dots.feature-x --focus" \
-    "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
-    "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
-    "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
     "tab focus w-test:1")
-assert_eq "$command_log" "$expected_log" 'default workspace applies reusable split layout and refocuses first tab'
+assert_eq "$command_log" "$expected_log" 'default workspace focuses the first tab and refocuses first tab'
 
 printf '' >"$log_file"
 herdr_layout_default --workspace w-test --tab w-test:1 --pane w-test-1 --cwd "$tmpdir/feature-x"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
-    "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
-    "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
-    "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
     "tab focus w-test:1")
-assert_eq "$command_log" "$expected_log" 'default layout can be called independently'
+assert_eq "$command_log" "$expected_log" 'default focus layout can be called independently'
 
 printf '' >"$log_file"
 herdr_open_worktree_path "$DOTS" "$tmpdir/feature-x"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
     "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
-    "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
-    "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
-    "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
     "tab focus w-test:1")
-assert_eq "$command_log" "$expected_log" 'opening a worktree uses main cwd, target path, derived label, and default layout'
+assert_eq "$command_log" "$expected_log" 'opening a worktree uses main cwd, target path, derived label, and default focus layout'
 
 printf '' >"$log_file"
 herdr_open_worktree_path "$LEGACY_DOTS/main" "$LEGACY_DOTS/foo"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
     "worktree open --cwd $LEGACY_DOTS/.bare --path $LEGACY_DOTS/foo --label legacy-dots:feature-x --focus --json" \
-    "pane split w-test-1 --direction right --cwd $LEGACY_DOTS/foo --no-focus" \
-    "pane split w-test-2 --direction down --cwd $LEGACY_DOTS/foo --no-focus" \
-    "tab create --workspace w-test --cwd $LEGACY_DOTS/foo --no-focus" \
     "tab focus w-test:1")
 assert_eq "$command_log" "$expected_log" 'legacy bare repos use the bare common dir as Herdr source'
 
@@ -214,9 +186,6 @@ herdr_open_worktree_path "$DOTS/demo.txt" "$tmpdir/feature-x/demo.txt"
 set command_log (string join \n (string trim -- (command cat "$log_file")))
 set expected_log (string join \n \
     "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
-    "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
-    "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
-    "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
     "tab focus w-test:1")
 assert_eq "$command_log" "$expected_log" 'file arguments are normalized to their parent checkout directories'
 
@@ -244,41 +213,6 @@ assert_eq $status 0 'missing herdr response IDs return non-zero'
 assert_eq (command wc -l <"$log_file" | string trim) 1 'missing response IDs do not run layout commands'
 set -e HERDR_WORKTREE_OPEN_RESPONSE
 
-printf '' >"$log_file"
-printf '' >"$wt_log_file"
-herdr_wt_switch feature-x
-assert_eq (string join \n (command cat "$wt_log_file")) (string join \n "switch --no-cd feature-x --format json" "step eval {{ primary_worktree_path }}") 'Worktrunk switch resolves destination and primary checkout'
-set command_log (string join \n (string trim -- (command cat "$log_file")))
-set expected_log (string join \n \
-    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
-    "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
-    "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
-    "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
-    "tab focus w-test:1")
-assert_eq "$command_log" "$expected_log" 'Worktrunk switch opens the resolved worktree in Herdr'
-
-printf '' >"$log_file"
-printf '' >"$wt_log_file"
-herdr_wt_switch
-set -l wt_log (string join \n (string trim -- (command cat "$wt_log_file")))
-set -l expected_wt_log (string join \n \
-    "switch --no-cd --format json" \
-    "step eval {{ primary_worktree_path }}")
-assert_eq "$wt_log" "$expected_wt_log" 'no branch uses Worktrunk JSON picker flow'
-set command_log (string join \n (string trim -- (command cat "$log_file")))
-set expected_log (string join \n \
-    "worktree open --cwd $DOTS --path $tmpdir/feature-x --label dots:feature-x --focus --json" \
-    "pane split w-test-1 --direction right --cwd $tmpdir/feature-x --no-focus" \
-    "pane split w-test-2 --direction down --cwd $tmpdir/feature-x --no-focus" \
-    "tab create --workspace w-test --cwd $tmpdir/feature-x --no-focus" \
-    "tab focus w-test:1")
-assert_eq "$command_log" "$expected_log" 'no branch opens the Worktrunk picker selection in Herdr'
-
-printf '' >"$log_file"
-printf '' >"$wt_log_file"
-herdr_wt_switch --create --base main feature-y
-assert_eq (string join \n (command cat "$wt_log_file")) (string join \n "switch --no-cd --create --base main feature-y --format json" "step eval {{ primary_worktree_path }}") 'create and base flags are forwarded to Worktrunk'
-
 set -l abbrs_file "$repo_root/home/private_dot_config/fish/conf.d/abbrs.fish"
 if command grep -q '^abbr -a hwo' "$abbrs_file"
     printf 'ASSERTION FAILED: hwo abbreviation is removed\n' >&2
@@ -295,15 +229,15 @@ or begin
     exit 1
 end
 
-set -l herdr_config "$repo_root/home/private_dot_config/herdr/config.toml"
+set -l herdr_config "$repo_root/home/private_dot_config/herdr/config.base.toml"
 command grep -q 'key = "prefix+alt+w"' "$herdr_config"
 or begin
-    printf 'ASSERTION FAILED: herdr Worktrunk keybind uses prefix+alt+w\n' >&2
+    printf 'ASSERTION FAILED: herdr Stax keybind uses prefix+alt+w\n' >&2
     exit 1
 end
 command grep -q 'command = "fish -lc '\''herdr_wt_switch'\''"' "$herdr_config"
 or begin
-    printf 'ASSERTION FAILED: herdr Worktrunk keybind launches hwt picker\n' >&2
+    printf 'ASSERTION FAILED: herdr Stax keybind launches hwt picker\n' >&2
     exit 1
 end
 
@@ -331,6 +265,8 @@ assert_eq "$command_log" "$expected_log" 'first pane restores tab label to shell
 
 set -gx COMMAND_LABEL_SUBSTITUTIONS 'bash= zsh='
 for shell in bash zsh
+    # A new shell would have a fresh cached restore label.
+    set -e __herdr_dynamic_title_restore_label
     set -gx SHELL "/usr/bin/$shell"
     printf '' >"$log_file"
     __herdr_dynamic_title_preexec 'nvim README.md'

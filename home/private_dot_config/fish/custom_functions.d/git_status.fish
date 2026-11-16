@@ -5,8 +5,8 @@ function git_status --description "Git project status" --wraps "git status"
 
     if [ $_is_inside_git_repo ]
         printf_green_bold "\n🌳 worktrees\n\n"
-        if type -q wt
-            wt list 2>/dev/null
+        if type -q stax
+            command stax worktree ll 2>/dev/null
             or command git worktree list \
                 | string match -v -r '\.bare' \
                 | string replace $HOME '~' \
@@ -45,7 +45,7 @@ function git_status --description "Git project status" --wraps "git status"
     end
 
     if type -q stax; and command git show-ref --verify --quiet refs/stax/trunk 2>/dev/null
-        PAGER="" stax status --current --quiet 2>/dev/null
+        PAGER="" command stax ll 2>/dev/null
         or true
     else if test "$GRAPHITE_ENABLED" = true -a "$HAS_GT" = true
         PAGER="" gt ls 2>/dev/null

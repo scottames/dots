@@ -48,16 +48,20 @@ allow_github_token_env = false
 
 [worktree]
 root_dir = ".."
-reuse_slots = true
-max_idle_slots = 4
+# Stable branch/path identities are important to Herdr and existing sessions.
+reuse_slots = false
 
 [worktree.hooks]
-# TODO: move wt command
-# TODO: make thts hook skip if thts not in main
-post_start = """
-wt step copy-ignored
-command -v thts && thts init --no-agents --force
-test -f .trunk/trunk.yaml && trunk check
+# Blocking: setup failures must be visible before opening an agent/terminal.
+post_create = """
+set -e
+python3 "$HOME/.config/stax/copy-ignored.py"
+if command -v thts >/dev/null 2>&1; then
+  thts init --no-agents --force
+fi
+if test -f .trunk/trunk.yaml; then
+  trunk check
+fi
 """
 
 [git]

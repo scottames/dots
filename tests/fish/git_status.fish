@@ -20,8 +20,9 @@ set -gx GIT_STATUS_TEST_GT_LOG "$gt_log"
 set fish_function_path "$function_dir" $fish_function_path
 
 printf '%s\n' '#!/usr/bin/env bash' \
+    'if [[ "$*" == "worktree ll" ]]; then git worktree list | grep -v \.bare; exit; fi' \
     'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_STAX_LOG"' \
-    'if [[ "$*" == "status --current --quiet" ]]; then printf "stax-status-output\n"; exit "${GIT_STATUS_TEST_STAX_EXIT:-0}"; fi' >"$fakebin/stax"
+    'if [[ "$*" == "ll" ]]; then printf "stax-status-output\n"; exit "${GIT_STATUS_TEST_STAX_EXIT:-0}"; fi' >"$fakebin/stax"
 chmod +x "$fakebin/stax"
 printf '%s\n' '#!/usr/bin/env bash' \
     'printf "%s\n" "$*" >>"$GIT_STATUS_TEST_GT_LOG"' \
@@ -112,11 +113,11 @@ command git -C "$normal_main" update-ref refs/stax/trunk "$trunk_blob"
 pushd "$normal_main" >/dev/null
 set -l stack_output (git_status --short)
 popd >/dev/null
-assert_contains "$stack_output" 'stax-status-output' 'stax status uses current stack view'
+assert_contains "$stack_output" 'stax-status-output' 'stax ll shows all stacks'
 assert_not_contains "$stack_output" 'graphite-output' 'stax takes precedence over Graphite'
 set -l stax_calls (string trim -- (command cat "$stax_log"))
-if test "$stax_calls" != 'status --current --quiet'
-    printf 'ASSERTION FAILED: git_status invokes exactly stax status --current --quiet\nactual: %s\n' "$stax_calls" >&2
+if test "$stax_calls" != 'll'
+    printf 'ASSERTION FAILED: git_status invokes exactly stax ll\nactual: %s\n' "$stax_calls" >&2
     exit 1
 end
 if test -s "$gt_log"
@@ -129,7 +130,7 @@ pushd "$normal_feature" >/dev/null
 set -l worktree_output (git_status --short)
 popd >/dev/null
 assert_contains "$worktree_output" 'stax-status-output' 'linked worktree sees shared stax initialization'
-if test (string trim -- (command cat "$stax_log")) != 'status --current --quiet'
+if test (string trim -- (command cat "$stax_log")) != 'll'
     printf 'ASSERTION FAILED: linked worktree invokes stax exactly once\n' >&2
     exit 1
 end

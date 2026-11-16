@@ -246,9 +246,10 @@ abbr -a vr "vagrant reload"
 abbr -a vs "vagrant ssh"
 abbr -a vst "vagrant status"
 abbr -a vu "vagrant up"
-abbr -a wtr "wt remove"
-abbr -a wts "wt switch"
-abbr -a wtsc "wt switch --create"
+abbr -a wtr "stax worktree remove"
+abbr -a wts "stax worktree go"
+abbr -a wtg "stax worktree go"
+abbr -a wtc "stax worktree create"
 abbr -a yz yazi
 abbr -a za zellij_attach # see functions
 abbr -a zja zellij_attach # see functions
