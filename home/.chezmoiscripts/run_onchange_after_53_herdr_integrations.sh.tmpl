@@ -32,7 +32,7 @@ if ! mise which herdr >/dev/null 2>&1; then
   exit 0
 fi
 
-agents=(omp claude codex copilot devin droid kimi opencode kilo hermes qodercli cursor mastracode)
+agents=(pi omp claude codex copilot devin droid kimi opencode kilo hermes qodercli cursor mastracode)
 
 for agent in "${agents[@]}"; do
   executable="${agent}"
@@ -44,7 +44,7 @@ for agent in "${agents[@]}"; do
     continue
   fi
 
-  if [[ ${agent} == omp ]]; then
+  if [[ ${agent} == pi || ${agent} == omp ]]; then
     mkdir -p "{{ .chezmoi.homeDir }}/.${agent}/agent/extensions"
   fi
 

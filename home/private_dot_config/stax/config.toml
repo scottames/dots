@@ -78,7 +78,7 @@ preflight_warn = true
 
 [skills]
 # Unset = auto (detected + already installed).
-# harnesses = ["claude", "codex", "opencode"]
+# harnesses = ["claude", "codex", "opencode", "pi"]
 
 [board]
 mine_only = true
