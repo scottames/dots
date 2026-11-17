@@ -9,9 +9,8 @@
 # Grants are only added when the caller opts into CWD access (--allow-cwd).
 #
 # NONO_REJECT_OVERLAP (optional): if set to a directory, refuse to grant any path
-# that overlaps it. The pi-local profile enables this automatically to keep the
-# Pi extension tree out of writable worktree/cwd grants. This policy applies only
-# to this wrapper invocation and is not passed into the sandboxed command.
+# that overlaps it. This policy applies only to this wrapper invocation and is
+# not passed into the sandboxed command.
 
 set -eufo pipefail
 
@@ -28,36 +27,7 @@ export MISE_SHIMS_DIR="${mise_shims_dir}"
 
 args=("$@")
 
-uses_pi_local_profile() {
-  local i
-
-  for ((i = 0; i < ${#args[@]}; i++)); do
-    case ${args[i]} in
-    --)
-      return 1
-      ;;
-    --profile | -p)
-      if [[ ${args[i + 1]-} == pi-local ]]; then
-        return 0
-      fi
-      i=$((i + 1))
-      ;;
-    --profile=pi-local | -ppi-local)
-      return 0
-      ;;
-    *) ;;
-    esac
-  done
-
-  return 1
-}
-
-# An explicit policy is available to non-Pi callers. Pi always protects its
-# managed extension tree, so its profile-specific policy takes precedence.
 reject_overlap="${NONO_REJECT_OVERLAP-}"
-if uses_pi_local_profile; then
-  reject_overlap="${HOME}/.local/share/pi-extensions"
-fi
 
 reject_root=""
 if [[ -n ${reject_overlap} ]]; then

@@ -3,8 +3,6 @@
   extends: [ // make sure above rules take priority
     'github>scottames/renovate:default.json5',
   ],
-  // The reviewed Pi extension tree is the only Renovate-managed npm lockfile.
-  npmrc: 'registry=https://registry.npmjs.org/\nlegacy-peer-deps=true\nignore-scripts=true',
   ignorePaths: [
     '.dagger/go.mod',
     'mise/.mise/locks/**',
@@ -169,31 +167,6 @@
       matchDepNames: ['obra/superpowers'],
       groupName: '⬆️ agent plugins',
       commitMessageTopic: '⬆️ agent plugins',
-      automerge: false,
-    },
-    {
-      // The reviewed lock is intentionally changed only with an approved extension update.
-      matchFileNames: [
-        'home/dot_local/share/private_pi-extensions/package.json',
-        'home/dot_local/share/private_pi-extensions/package-lock.json',
-      ],
-      matchUpdateTypes: ['lockFileMaintenance'],
-      enabled: false,
-    },
-    {
-      matchFileNames: [
-        'home/dot_local/share/private_pi-extensions/package.json',
-        'home/dot_local/share/private_pi-extensions/package-lock.json',
-      ],
-      groupName: '⬆️ agent extensions',
-      commitMessageTopic: '⬆️ agent extensions',
-      rangeStrategy: 'pin',
-      ignoreScripts: true,
-      automerge: false,
-    },
-    {
-      matchDepNames: ['@earendil-works/pi-coding-agent'],
-      groupName: '⬆️ agent extensions',
       automerge: false,
     },
   ],

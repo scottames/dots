@@ -95,7 +95,6 @@ link zellij.kdl "${HOME}/.config/zellij/themes/current.kdl"
 link television.toml "${HOME}/.config/television/themes/current.toml"
 link tuicr.toml "${HOME}/.config/tuicr/themes/current.toml"
 link vicinae.toml "${HOME}/.local/share/vicinae/themes/current.toml"
-link pi.json "${HOME}/.pi/agent/themes/current.json"
 link herdr-app.json "${HOME}/.config/herdr-app/themes/current.json"
 # yazi flavors are directories, not files.
 link yazi.toml "${HOME}/.config/yazi/flavors/current.yazi/flavor.toml"

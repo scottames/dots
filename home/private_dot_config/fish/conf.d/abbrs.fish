@@ -190,8 +190,6 @@ abbr -a nnoa "nono-with-local-path wrap --profile opencode-local --allow-cwd -- 
 abbr -a nnoc "nono-with-local-path wrap --profile opencode-local --allow-cwd -- opencode --standalone --continue"
 abbr -a nncx "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex"
 abbr -a nncxc "nono-with-local-path wrap --profile codex-local --allow-cwd -- codex resume --last"
-abbr -a nnp nono-pi
-abbr -a nnpc "nono-pi --continue"
 abbr -a nnd "nono-with-local-path wrap --profile droid-local --allow-cwd -- droid"
 abbr -a nndc "nono-with-local-path wrap --profile droid-local --allow-cwd -- droid --resume"
 abbr -a o open
