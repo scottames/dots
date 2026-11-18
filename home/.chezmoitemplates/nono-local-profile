@@ -72,7 +72,7 @@
 {{- $allowPaths = append $allowPaths (joinPath $home ".npm") -}}
 {{- /* git commit signing */ -}}
 {{- $allowPaths = append $allowPaths (joinPath $home ".gnupg") -}}
-{{- /* Agent-specific read/write directories (e.g. Pi's private temporary directory). */ -}}
+{{- /* Agent-specific read/write directories. */ -}}
 {{- range $p := $extraAllowPaths -}}
 {{-   $allowPaths = append $allowPaths $p -}}
 {{- end -}}
@@ -101,7 +101,6 @@
       (joinPath $home ".npm-global")
       (joinPath $home ".npmrc")
       (joinPath $home ".openpackage")
-      (joinPath $home ".pi")
       (joinPath $home ".spacelift")
       (joinPath $home ".ssh/known_hosts")
       (joinPath $home ".steam")
@@ -120,7 +119,7 @@
 {{- if ne $workRepo "" -}}
 {{-   $readPaths = append $readPaths $workRepo -}}
 {{- end -}}
-{{- /* Agent-specific extra read dirs (e.g. Pi's /proc and extension tree). */ -}}
+{{- /* Agent-specific extra read dirs. */ -}}
 {{- range $p := $extraRead -}}
 {{-   $readPaths = append $readPaths $p -}}
 {{- end -}}

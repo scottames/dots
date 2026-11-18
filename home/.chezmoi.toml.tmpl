@@ -198,7 +198,7 @@ progress = true
     os_variant = "{{ $osVariant }}"
     os_version = "{{ $osVersion }}"
     os_name = "{{ $osName }}"
-    gpu = "{{ $gpu }}"
+    gpu = {{ $gpu | toJson }}
 
   [data.desktop]
     session = "{{ $desktopSession }}"
