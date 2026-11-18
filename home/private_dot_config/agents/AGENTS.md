@@ -70,3 +70,6 @@ instructions supersede them, except explicit safety constraints.
   directory, repository top level, remote default branch, and worktree list. In
   a managed `<repo>/main` layout, create sibling worktrees and never delete,
   replace, or repurpose the durable `main` worktree. See: `git-commit` skill.
+- When you write or edit any PR description, follow
+  `references/pr-description.md` in the `git-commit` skill, even when another
+  skill creates the PR.
