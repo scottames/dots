@@ -301,7 +301,7 @@ amazon-ecr-credential-helper = "0.12.0"
 # The open source coding agent
 #  https://github.com/anomalyco/opencode
 #  https://opencode.ai/v2/docs/cli
-opencode = "2.3.0"
+"aqua:anomalyco/opencode" = "2.3.0"
 
 # Factory AI's autonomous software development agent
 #  https://docs.factory.ai/droid-cli/cli-reference

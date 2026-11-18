@@ -335,6 +335,55 @@ checksum_source = "mise-versions"
 url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-x86_64-pc-windows-msvc.tar.gz"
 url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447571006"
 
+[[tools."aqua:anomalyco/opencode"]]
+version = "2.3.0"
+backend = "aqua:anomalyco/opencode"
+specifiers = ["2.3.0"]
+
+[tools."aqua:anomalyco/opencode"."platforms.linux-arm64"]
+checksum = "sha256:3207fb5cdec448d479242c0f1a14f4f7bdfcad3a79209b5eb8f9003725e93711"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-arm64.tar.gz"
+
+[tools."aqua:anomalyco/opencode"."platforms.linux-arm64-musl"]
+checksum = "sha256:3207fb5cdec448d479242c0f1a14f4f7bdfcad3a79209b5eb8f9003725e93711"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-arm64.tar.gz"
+
+[tools."aqua:anomalyco/opencode"."platforms.linux-x64"]
+checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+
+[tools."aqua:anomalyco/opencode"."platforms.linux-x64-baseline"]
+checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+
+[tools."aqua:anomalyco/opencode"."platforms.linux-x64-musl"]
+checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+
+[tools."aqua:anomalyco/opencode"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+
+[tools."aqua:anomalyco/opencode"."platforms.macos-arm64"]
+checksum = "sha256:7907df2b12720a840fbb49c5b978b9b82925b6bf75479a5fd216afa8932b6702"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-arm64.zip"
+
+[tools."aqua:anomalyco/opencode"."platforms.macos-x64"]
+checksum = "sha256:79a4841925e3344d5bb4b000acf6c50b11de301e9047aa9bea9e288e77fe4249"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-x64.zip"
+
+[tools."aqua:anomalyco/opencode"."platforms.macos-x64-baseline"]
+checksum = "sha256:79a4841925e3344d5bb4b000acf6c50b11de301e9047aa9bea9e288e77fe4249"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-x64.zip"
+
+[tools."aqua:anomalyco/opencode"."platforms.windows-x64"]
+checksum = "sha256:2e14eee53f4abad803d55fdc472c1b12dc3802d687ae204f81e7908bd2ab1895"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-windows-x64.zip"
+
+[tools."aqua:anomalyco/opencode"."platforms.windows-x64-baseline"]
+checksum = "sha256:2e14eee53f4abad803d55fdc472c1b12dc3802d687ae204f81e7908bd2ab1895"
+url = "https://opencode.ai/files/bin/2.3.0/opencode-windows-x64.zip"
+
 [[tools."aqua:antonmedv/fx"]]
 version = "40.0.1"
 backend = "aqua:antonmedv/fx"
@@ -5607,55 +5656,6 @@ version = "3.10.1"
 aube = { path = ".mise/locks/npm-prettier/3.10.1", digest = "sha256:2d1e8d35e9c42e9df167e305f2f8d5fc6fa8ab982cf1070a7e5148d73b5c5534" }
 backend = "npm:prettier"
 specifiers = ["3.10.1"]
-
-[[tools.opencode]]
-version = "2.3.0"
-backend = "aqua:anomalyco/opencode"
-specifiers = ["2.3.0"]
-
-[tools.opencode."platforms.linux-arm64"]
-checksum = "sha256:3207fb5cdec448d479242c0f1a14f4f7bdfcad3a79209b5eb8f9003725e93711"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-arm64.tar.gz"
-
-[tools.opencode."platforms.linux-arm64-musl"]
-checksum = "sha256:3207fb5cdec448d479242c0f1a14f4f7bdfcad3a79209b5eb8f9003725e93711"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-arm64.tar.gz"
-
-[tools.opencode."platforms.linux-x64"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
-
-[tools.opencode."platforms.linux-x64-baseline"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
-
-[tools.opencode."platforms.linux-x64-musl"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
-
-[tools.opencode."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
-
-[tools.opencode."platforms.macos-arm64"]
-checksum = "sha256:7907df2b12720a840fbb49c5b978b9b82925b6bf75479a5fd216afa8932b6702"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-arm64.zip"
-
-[tools.opencode."platforms.macos-x64"]
-checksum = "sha256:79a4841925e3344d5bb4b000acf6c50b11de301e9047aa9bea9e288e77fe4249"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-x64.zip"
-
-[tools.opencode."platforms.macos-x64-baseline"]
-checksum = "sha256:79a4841925e3344d5bb4b000acf6c50b11de301e9047aa9bea9e288e77fe4249"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-x64.zip"
-
-[tools.opencode."platforms.windows-x64"]
-checksum = "sha256:2e14eee53f4abad803d55fdc472c1b12dc3802d687ae204f81e7908bd2ab1895"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-windows-x64.zip"
-
-[tools.opencode."platforms.windows-x64-baseline"]
-checksum = "sha256:2e14eee53f4abad803d55fdc472c1b12dc3802d687ae204f81e7908bd2ab1895"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-windows-x64.zip"
 
 [[tools."pipx:yamllint"]]
 version = "1.38.0"
