@@ -6,7 +6,6 @@ function secrettool_set_dots \
     # Usage: secrettool_set_dots <name> [--label <label>]
     # Schema: service="dots/<name>", username=$GITHUB_USER
     # Reads secret value from stdin
-    # Example: echo "my-api-key" | secrettool_set_dots tavily --label "Tavily API Key"
 
     argparse 'label=' -- $argv
     or return 1
