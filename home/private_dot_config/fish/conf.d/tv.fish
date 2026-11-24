@@ -3,5 +3,5 @@
 if status --is-interactive
     and type -q tv
 
-    tv init fish | source
+    tv completions fish | source
 end
