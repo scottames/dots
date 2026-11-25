@@ -14,6 +14,7 @@ onboarding = false
 default_shell = "fish"
 
 [keys]
+# Ctrl+Alt owns app navigation; add Shift for panes. Ctrl+Shift belongs to the WM.
 help = "prefix+?"
 settings = "prefix+,"
 detach = "prefix+q"
@@ -38,8 +39,8 @@ new_worktree = "prefix+shift+g"
 open_worktree = "prefix+shift+o"
 # remove_worktree = ""
 
-previous_agent = ["ctrl+alt+shift+up", "ctrl+alt+shift+k"]
-next_agent = ["ctrl+alt+shift+down", "ctrl+alt+shift+j"]
+previous_agent = "ctrl+alt+["
+next_agent = "ctrl+alt+]"
 focus_agent = "prefix+alt+1..9"
 
 new_tab = "prefix+c"
@@ -51,14 +52,29 @@ close_tab = "prefix+shift+x"
 
 edit_scrollback = "prefix+e"
 rename_pane = "prefix+shift+p"
-focus_pane_left = ["prefix+h", "prefix+left", "ctrl+shift+h", "ctrl+shift+left"]
-focus_pane_down = ["prefix+j", "prefix+down", "ctrl+shift+j", "ctrl+shift+down"]
-focus_pane_up = ["prefix+k", "prefix+up", "ctrl+shift+k", "ctrl+shift+up"]
+focus_pane_left = [
+  "prefix+h",
+  "prefix+left",
+  "ctrl+alt+shift+h",
+  "ctrl+alt+shift+left",
+]
+focus_pane_down = [
+  "prefix+j",
+  "prefix+down",
+  "ctrl+alt+shift+j",
+  "ctrl+alt+shift+down",
+]
+focus_pane_up = [
+  "prefix+k",
+  "prefix+up",
+  "ctrl+alt+shift+k",
+  "ctrl+alt+shift+up",
+]
 focus_pane_right = [
   "prefix+l",
   "prefix+right",
-  "ctrl+shift+l",
-  "ctrl+shift+right",
+  "ctrl+alt+shift+l",
+  "ctrl+alt+shift+right",
 ]
 cycle_pane_next = "prefix+tab"
 cycle_pane_previous = "prefix+shift+tab"

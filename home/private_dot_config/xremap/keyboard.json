@@ -1,0 +1,57 @@
+{
+  "virtual_modifiers": ["F24"],
+  "modmap": [
+    {
+      "name": "Built-in Caps: Control fallback with a private virtual marker",
+      "device": {
+        "only": ["REPLACE_WITH_LINUX_BUILT_IN_DEVICE_NAME"],
+        "not": ["ids:0x3297:0x1977"]
+      },
+      "remap": { "CapsLock": ["F24", "Ctrl_L"] }
+    }
+  ],
+  "keymap": [
+    {
+      "name": "Built-in Caps navigation only; select the Linux device before starting",
+      "device": {
+        "only": ["REPLACE_WITH_LINUX_BUILT_IN_DEVICE_NAME"],
+        "not": ["ids:0x3297:0x1977"]
+      },
+      "exact_match": true,
+      "remap": {
+        "F24-Ctrl-H": "Super-Left",
+        "F24-Ctrl-Left": "Super-Left",
+        "F24-Ctrl-J": "Super-Down",
+        "F24-Ctrl-Down": "Super-Down",
+        "F24-Ctrl-K": "Super-Up",
+        "F24-Ctrl-Up": "Super-Up",
+        "F24-Ctrl-L": "Super-Right",
+        "F24-Ctrl-Right": "Super-Right",
+        "F24-Ctrl-Shift-H": "Super-Shift-Left",
+        "F24-Ctrl-Shift-Left": "Super-Shift-Left",
+        "F24-Ctrl-Shift-J": "Super-Shift-Down",
+        "F24-Ctrl-Shift-Down": "Super-Shift-Down",
+        "F24-Ctrl-Shift-K": "Super-Shift-Up",
+        "F24-Ctrl-Shift-Up": "Super-Shift-Up",
+        "F24-Ctrl-Shift-L": "Super-Shift-Right",
+        "F24-Ctrl-Shift-Right": "Super-Shift-Right",
+        "F24-Ctrl-Super-H": "Super-Ctrl-Left",
+        "F24-Ctrl-Super-Left": "Super-Ctrl-Left",
+        "F24-Ctrl-Super-J": "Super-Ctrl-Down",
+        "F24-Ctrl-Super-Down": "Super-Ctrl-Down",
+        "F24-Ctrl-Super-K": "Super-Ctrl-Up",
+        "F24-Ctrl-Super-Up": "Super-Ctrl-Up",
+        "F24-Ctrl-Super-L": "Super-Ctrl-Right",
+        "F24-Ctrl-Super-Right": "Super-Ctrl-Right",
+        "F24-Ctrl-Super-Shift-H": "Super-Ctrl-Shift-Left",
+        "F24-Ctrl-Super-Shift-Left": "Super-Ctrl-Shift-Left",
+        "F24-Ctrl-Super-Shift-J": "Super-Ctrl-Shift-Down",
+        "F24-Ctrl-Super-Shift-Down": "Super-Ctrl-Shift-Down",
+        "F24-Ctrl-Super-Shift-K": "Super-Ctrl-Shift-Up",
+        "F24-Ctrl-Super-Shift-Up": "Super-Ctrl-Shift-Up",
+        "F24-Ctrl-Super-Shift-L": "Super-Ctrl-Shift-Right",
+        "F24-Ctrl-Super-Shift-Right": "Super-Ctrl-Shift-Right"
+      }
+    }
+  ]
+}

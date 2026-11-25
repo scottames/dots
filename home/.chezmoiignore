@@ -31,6 +31,9 @@ aqua.yaml
 {{- if or (not (regexMatch "niri" .desktop.session)) (ne $notificationDaemon "mako") }}
 .config/mako/
 {{- end }}
+{{- if or (ne .chezmoi.os "linux") (not (regexMatch "niri" .desktop.session)) }}
+.config/xremap/
+{{- end }}
 
 {{- if not (regexMatch "^gnome" .desktop.session) }}
 ### Ignore if not running gnome
@@ -82,6 +85,7 @@ src/github.com/paperwm*
 {{- end }}
 
 {{- if not (eq .chezmoi.os "darwin") }}
+.config/karabiner/
 .config/omniwm/
 .docker/
 {{- end }}

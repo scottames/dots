@@ -102,8 +102,15 @@ lint:
         - home/private_dot_config/herdr-app/mods/**/gpui-kit.d.ts
         - home/private_dot_zen/default-release/zen-keyboard-shortcuts.json
         - home/private_dot_config/vicinae/settings.json
+        # Karabiner rewrites JSON formatting; retain its live bytes for chezmoi.
+        - home/private_dot_config/private_karabiner/private_karabiner.json
         - home/dot_claude/settings.json
         - home/private_dot_factory/modify_private_settings.json
+    - linters:
+        - taplo
+      paths:
+        # OmniWM rewrites TOML formatting; retain its live bytes for chezmoi.
+        - home/private_dot_config/omniwm/settings.toml
 runtimes:
   enabled:
     - go@1.21.0

@@ -53,27 +53,27 @@ binds {
     Mod+Home { focus-column-first; }
     Mod+End { focus-column-last; }
 
-    // Column and window movement
-    Mod+Ctrl+Left { move-column-left; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H { move-column-left; }
-    Mod+Ctrl+L { move-column-right; }
-    Mod+Ctrl+J { move-window-down-or-to-workspace-down; }
-    Mod+Ctrl+K { move-window-up-or-to-workspace-up; }
-    Mod+Ctrl+Down { move-window-down-or-to-workspace-down; }
-    Mod+Ctrl+Up { move-window-up-or-to-workspace-up; }
+    // Shift moves: shared by laptop Caps and Voyager hold-T.
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+    Mod+Shift+J { move-window-down-or-to-workspace-down; }
+    Mod+Shift+K { move-window-up-or-to-workspace-up; }
+    Mod+Shift+Down { move-window-down-or-to-workspace-down; }
+    Mod+Shift+Up { move-window-up-or-to-workspace-up; }
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End { move-column-to-last; }
 
-    // Monitor focus and movement
-    Mod+Shift+Left { focus-monitor-left; }
-    Mod+Shift+Down { focus-monitor-down; }
-    Mod+Shift+Up { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
-    Mod+Shift+H { focus-monitor-left; }
-    Mod+Shift+J { focus-monitor-down; }
-    Mod+Shift+K { focus-monitor-up; }
-    Mod+Shift+L { focus-monitor-right; }
+    // Ctrl targets a monitor; add Shift to send the whole column.
+    Mod+Ctrl+Left { focus-monitor-left; }
+    Mod+Ctrl+Down { focus-monitor-down; }
+    Mod+Ctrl+Up { focus-monitor-up; }
+    Mod+Ctrl+Right { focus-monitor-right; }
+    Mod+Ctrl+H { focus-monitor-left; }
+    Mod+Ctrl+J { focus-monitor-down; }
+    Mod+Ctrl+K { focus-monitor-up; }
+    Mod+Ctrl+L { focus-monitor-right; }
     Mod+Shift+Ctrl+Left { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Down { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+Up { move-column-to-monitor-up; }

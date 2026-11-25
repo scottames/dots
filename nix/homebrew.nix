@@ -64,6 +64,7 @@
       "anomalyco/tap/hex"
       "herdr-app"
       "iterm2"
+      "karabiner-elements"
       "notion"
       "obsidian"
       "omniwm"
