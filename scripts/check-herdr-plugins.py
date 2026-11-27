@@ -50,10 +50,12 @@ def fetch_metadata(sha, filename):
         raise ValueError(f"cannot fetch {filename} at {sha}: {error}") from error
 
 
-def check(repo_root):
+def check(repo_root, *, sync=False):
     sha = read_pin((repo_root / EXTERNAL).read_text(encoding="utf-8"))
     with (repo_root / MISE).open("rb") as config:
-        tools = tomllib.load(config).get("tools", {})
+        original = config.read().decode("utf-8")
+    updated = original
+    tools = tomllib.loads(original).get("tools", {})
     for name, prefix in PLUGINS.items():
         key = f"github:plannotator/{name}"
         entry = tools.get(key)
@@ -65,11 +67,18 @@ def check(repo_root):
         ):
             raise ValueError(f"malformed {name}.version at {sha}: expected X.Y.Z")
         expected = prefix + version
-        if entry["version"] != expected:
+        if entry["version"] == expected:
+            continue
+        if not sync:
             raise ValueError(
                 f"{name} at {sha} requires {expected}; mise pins {entry['version']}"
             )
-        print(f"{name}: {expected} matches source {sha}")
+        pattern = rf'^("{re.escape(key)}"\s*=\s*\{{\s*version\s*=\s*"){re.escape(entry["version"])}"'
+        updated, count = re.subn(pattern, rf'\g<1>{expected}"', updated, flags=re.M)
+        if count != 1:
+            raise ValueError(f"cannot locate unique inline version for {key}")
+    if updated != original:
+        (repo_root / MISE).write_text(updated, encoding="utf-8")
 
 
 def main():
@@ -77,9 +86,10 @@ def main():
     parser.add_argument(
         "repo_root", nargs="?", type=Path, default=Path(__file__).resolve().parents[1]
     )
+    parser.add_argument("--sync", action="store_true", help="update mise runtime pins")
     args = parser.parse_args()
     try:
-        check(args.repo_root)
+        check(args.repo_root, sync=args.sync)
     except (OSError, ValueError) as error:
         print(f"herdr plugin check failed: {error}", file=sys.stderr)
         return 1

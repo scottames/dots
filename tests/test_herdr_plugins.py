@@ -47,6 +47,23 @@ class CompatibilityTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, f"{name} .* requires"):
                     checker.check(Path("/repo"))
 
+    def test_sync_updates_only_versions_then_becomes_a_noop(self):
+        expected = MISE.replace(b"0.1.0", b"0.2.4").replace(b"0.8.0", b"0.10.0")
+        self.fetch.side_effect = ["0.2.4", "0.10.0"] * 2
+        with patch.object(Path, "write_text") as write:
+            checker.check(Path("/repo"), sync=True)
+            write.assert_called_once_with(expected.decode(), encoding="utf-8")
+            self.config.return_value.__enter__.side_effect = lambda: io.BytesIO(expected)
+            checker.check(Path("/repo"), sync=True)
+            self.assertEqual(write.call_count, 1)
+
+    def test_sync_validates_both_versions_before_writing(self):
+        self.fetch.side_effect = ["0.2.4", "invalid"]
+        with patch.object(Path, "write_text") as write:
+            with self.assertRaisesRegex(ValueError, "malformed"):
+                checker.check(Path("/repo"), sync=True)
+            write.assert_not_called()
+
     def test_invalid_metadata(self):
         for invalid in ("", "v0.1.0", "0.1", "01.2.3", "<html>", "0.1.0\n0.2.0"):
             for index in range(2):
