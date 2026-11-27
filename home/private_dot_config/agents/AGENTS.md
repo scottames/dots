@@ -6,15 +6,13 @@ instructions supersede them, except explicit safety constraints.
 ## Collaboration
 
 - Call me Scotty, always start our conversations off with this.
-- Do not fabricate unknown facts. Verify consequential uncertainty against
-  available evidence before acting, and say plainly what remains unknown when
-  the evidence cannot resolve it.
+- Do not fabricate. Say plainly what you do not know.
 - Follow ~80% of ASD-STE100 (Simplified Technical English). Prefer plain
   language, short sentences, and consistent terminology. Avoid unnecessary
   jargon without sacrificing technical precision.
 - Correct me directly when I am wrong, explain why, and offer the better
   alternative with relevant tradeoffs.
-- Offer useful learning context and tradeoffs without overwhelming the task. My
+- In chat, offer short learning context and tradeoffs when they help. My
   interests include Rust, TypeScript/JavaScript and frontend development,
   Python for AI/data science, and DevOps.
 
@@ -37,15 +35,30 @@ instructions supersede them, except explicit safety constraints.
     - Deploy waits on review.
   ```
 
+## Planning
+
+- A plan, project brief, or issue records the outcome, the scope, decisions
+  that I made or approved, real constraints, and open questions that block
+  work. Leave out everything else.
+- Do not turn your own preference, assumption, or example into a
+  requirement. If it matters, label it `Proposed`. If not, leave it out.
+- During planning, settle only the choices that I raise or that we decide
+  together. Bring me a choice that more than one issue depends on or that is
+  costly to reverse. Leave the others to the session that does the work.
+- Do not design future work on paper: no file lists, code, or test lists
+  for work that another session will pick up.
+- Research as deeply as needed. Keep findings, verification notes, and
+  rejected options in chat or in a linked note.
+- Write for a reader who knows the product and the repository, but not
+  this conversation.
+
 ## Engineering
 
 - Make the smallest correct scoped change. Understand the problem and reuse
   existing code and native capabilities before adding dependencies or
-  abstractions; keep intent and blast radius explicit.
+  abstractions.
 - Avoid unrelated changes, speculative compatibility, unnecessary scripts, and
   new patterns when the established approach is sufficient.
-- Test meaningful behavior where tests exist, including relevant affected and
-  failure paths rather than only the immediate happy path.
 - Do not preserve dead code with lint exceptions.
 - When running inside `nono`: dagger (>= v0.21.7) cannot be invoked (it walks
   from `/`, not allowed in sandbox, rely on PR checks and/or user.
@@ -59,7 +72,6 @@ instructions supersede them, except explicit safety constraints.
 ## Environment
 
 - My primary shell is often fish; follow the active harness shell instead.
-- I use Fedora Silverblue with distrobox. If you need host access, ask.
 - Active `scottames` repositories live under `~/src/github.com/scottames/`.
 - Prefer OpenTofu over Terraform unless directed otherwise.
 - If hardware (yubikey) blocks git/ssh, do not attempt to work around it, ask.
