@@ -672,6 +672,10 @@ provenance = "github-attestations"
 version = "18.24.8"
 backend = "aqua:atuinsh/atuin"
 specifiers = ["18.24.8"]
+unsupported_platforms = [
+    "macos-x64",
+    "macos-x64-baseline",
+]
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-arm64"]
 checksum = "sha256:98f643d576b236e7ea6b1232dc2761d8469a4eed619cabd9eb1b9dc38a788e90"
@@ -1299,6 +1303,10 @@ url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013767"
 version = "0.20.1"
 backend = "aqua:dandavison/delta"
 specifiers = ["0.20.1"]
+unsupported_platforms = [
+    "macos-x64",
+    "macos-x64-baseline",
+]
 
 [tools."aqua:dandavison/delta"."platforms.linux-arm64"]
 checksum = "sha256:da7f4338f593572ff426ae153e0870e2fdc72729416eff551b40cdeb67940db8"
@@ -1638,16 +1646,16 @@ url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastf
 url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/715731359"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.linux-x64-musl"]
-checksum = "sha256:abf5c99a3702cce8d3c7fa2cccd3ac205076ae0f2e45bced24a42a68821702d6"
+checksum = "sha256:8182deaeb2d3c42ecf043a5b6ad9da274d26edba051f1a5d59c217db39a13639"
 checksum_source = "mise-versions"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastfetch-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/715731359"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastfetch-musl-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/715730270"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:abf5c99a3702cce8d3c7fa2cccd3ac205076ae0f2e45bced24a42a68821702d6"
+checksum = "sha256:8182deaeb2d3c42ecf043a5b6ad9da274d26edba051f1a5d59c217db39a13639"
 checksum_source = "mise-versions"
-url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastfetch-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/715731359"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastfetch-musl-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/715730270"
 
 [tools."aqua:fastfetch-cli/fastfetch"."platforms.macos-arm64"]
 checksum = "sha256:6e503980ac268b072259f00e5c439eb90a420535f3593704c096b5b3bea64199"
@@ -4020,6 +4028,10 @@ url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748379657"
 version = "2.14.4"
 backend = "github:angristan/fast-resume"
 specifiers = ["v2.14.4"]
+unsupported_platforms = [
+    "windows-x64",
+    "windows-x64-baseline",
+]
 
 [tools."github:angristan/fast-resume"."platforms.linux-arm64"]
 checksum = "sha256:47a773cff81eef1fb24623acba0085b070dc6607a584fb94a98e29d191f370cf"
@@ -4718,6 +4730,10 @@ provenance = "github-attestations"
 version = "0.9.1"
 backend = "github:kitlangton/ghui"
 specifiers = ["v0.9.1"]
+unsupported_platforms = [
+    "windows-x64",
+    "windows-x64-baseline",
+]
 
 [tools."github:kitlangton/ghui"."platforms.linux-arm64"]
 checksum = "sha256:9a90264d830d1dc3388086f0e55a294364beb53c48f33e6e2e7c58a52f044c0d"
@@ -4919,6 +4935,10 @@ provenance = "github-attestations"
 version = "0.82.0"
 backend = "github:nolabs-ai/nono"
 specifiers = ["v0.82.0"]
+unsupported_platforms = [
+    "windows-x64",
+    "windows-x64-baseline",
+]
 
 [tools."github:nolabs-ai/nono"."platforms.linux-arm64"]
 checksum = "sha256:de16b663f1941b4ff8500f75f34d10a497ef1d1934281573888fb9e808dab53e"
@@ -5541,6 +5561,10 @@ url = "https://dl.google.com/go/go1.27.4.windows-amd64.zip"
 version = "1.13.1"
 backend = "http:droid"
 specifiers = ["1.13.1"]
+unsupported_platforms = [
+    "windows-x64",
+    "windows-x64-baseline",
+]
 
 [tools."http:droid"."platforms.linux-arm64"]
 checksum = "sha256:7a3e3b52983fd75bafee5b8fdcfa108b2693a5cd4006d4323b934b97e00ee05d"
