@@ -117,26 +117,21 @@
       commitMessageTopic: '⬆️ vet-packages',
     },
     {
-      matchManagers: ['mise', 'custom.regex'],
-      matchDepNames: [
-        'github:plannotator/herdr-annotate',
-        'github:plannotator/plannotator-tui',
-        'plannotator/herdr-annotate',
-      ],
+      matchManagers: ['custom.regex'],
+      matchDepNames: ['plannotator/herdr-annotate'],
       groupName: 'herdr plugins',
       groupSlug: 'herdr-plugins',
       commitMessageTopic: 'herdr plugins',
       automerge: false,
       separateMajorMinor: false,
       schedule: ["* 3-5 * * *"],
-      // Every upgrade in this mixed mise/regex group must skip artifacts.
-      skipArtifactsUpdate: true,
     },
     {
+      // The pinned source declares both runtime versions.
       matchManagers: ['mise'],
-      matchDepNames: ['github:plannotator/herdr-annotate'],
-      versioning: 'regex:^rust-lite-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$',
-      ignoreUnstable: false,
+      matchFileNames: ['mise/config.toml'],
+      matchDepNames: ['github:plannotator/herdr-annotate', 'github:plannotator/plannotator-tui'],
+      enabled: false,
     },
     {
       matchFileNames: ['aqua/**'],
