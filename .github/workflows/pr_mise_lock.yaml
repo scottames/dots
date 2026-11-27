@@ -53,6 +53,7 @@ jobs:
           github_token: ${{ steps.generate-token.outputs.token }}
       - name: mise lock
         env:
+          MISE_GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           MISE_LOCKED: 0 # disable "locked=true" for update
         run: |
           mise install aqua:astral-sh/uv

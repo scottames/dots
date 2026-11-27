@@ -53,7 +53,9 @@ class CompatibilityTests(unittest.TestCase):
         with patch.object(Path, "write_text") as write:
             checker.check(Path("/repo"), sync=True)
             write.assert_called_once_with(expected.decode(), encoding="utf-8")
-            self.config.return_value.__enter__.side_effect = lambda: io.BytesIO(expected)
+            self.config.return_value.__enter__.side_effect = lambda: io.BytesIO(
+                expected
+            )
             checker.check(Path("/repo"), sync=True)
             self.assertEqual(write.call_count, 1)
 
