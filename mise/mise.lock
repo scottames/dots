@@ -336,124 +336,124 @@ url = "https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-
 url_api = "https://api.github.com/repos/alexpasmantier/television/releases/assets/447571006"
 
 [[tools."aqua:anomalyco/opencode"]]
-version = "2.3.0"
+version = "2.4.1"
 backend = "aqua:anomalyco/opencode"
-specifiers = ["2.3.0"]
+specifiers = ["2.4.1"]
 
 [tools."aqua:anomalyco/opencode"."platforms.linux-arm64"]
-checksum = "sha256:3207fb5cdec448d479242c0f1a14f4f7bdfcad3a79209b5eb8f9003725e93711"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-arm64.tar.gz"
+checksum = "sha256:cb28cf94541aeb62a4b2ea5997a99b5dd6bae595a772f36fbe279299f2032a4f"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-linux-arm64.tar.gz"
 
 [tools."aqua:anomalyco/opencode"."platforms.linux-arm64-musl"]
-checksum = "sha256:3207fb5cdec448d479242c0f1a14f4f7bdfcad3a79209b5eb8f9003725e93711"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-arm64.tar.gz"
+checksum = "sha256:cb28cf94541aeb62a4b2ea5997a99b5dd6bae595a772f36fbe279299f2032a4f"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-linux-arm64.tar.gz"
 
 [tools."aqua:anomalyco/opencode"."platforms.linux-x64"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+checksum = "sha256:9ddd18e3faf64eaeccf6a0fcbc96a5c7a14520ae5fd5b61e5be51d894f478b47"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-linux-x64.tar.gz"
 
 [tools."aqua:anomalyco/opencode"."platforms.linux-x64-baseline"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+checksum = "sha256:9ddd18e3faf64eaeccf6a0fcbc96a5c7a14520ae5fd5b61e5be51d894f478b47"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-linux-x64.tar.gz"
 
 [tools."aqua:anomalyco/opencode"."platforms.linux-x64-musl"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+checksum = "sha256:9ddd18e3faf64eaeccf6a0fcbc96a5c7a14520ae5fd5b61e5be51d894f478b47"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-linux-x64.tar.gz"
 
 [tools."aqua:anomalyco/opencode"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-linux-x64.tar.gz"
+checksum = "sha256:9ddd18e3faf64eaeccf6a0fcbc96a5c7a14520ae5fd5b61e5be51d894f478b47"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-linux-x64.tar.gz"
 
 [tools."aqua:anomalyco/opencode"."platforms.macos-arm64"]
-checksum = "sha256:7907df2b12720a840fbb49c5b978b9b82925b6bf75479a5fd216afa8932b6702"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-arm64.zip"
+checksum = "sha256:95a101eda95108478f1db43cff8fcbd4811f6c0e79af1e167301843c6a48d731"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-darwin-arm64.zip"
 
 [tools."aqua:anomalyco/opencode"."platforms.macos-x64"]
-checksum = "sha256:79a4841925e3344d5bb4b000acf6c50b11de301e9047aa9bea9e288e77fe4249"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-x64.zip"
+checksum = "sha256:a7a4c758a32488138531ab2d82be86e2a1438c35c017664f83daa1d5b63bb82c"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-darwin-x64.zip"
 
 [tools."aqua:anomalyco/opencode"."platforms.macos-x64-baseline"]
-checksum = "sha256:79a4841925e3344d5bb4b000acf6c50b11de301e9047aa9bea9e288e77fe4249"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-darwin-x64.zip"
+checksum = "sha256:a7a4c758a32488138531ab2d82be86e2a1438c35c017664f83daa1d5b63bb82c"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-darwin-x64.zip"
 
 [tools."aqua:anomalyco/opencode"."platforms.windows-x64"]
-checksum = "sha256:2e14eee53f4abad803d55fdc472c1b12dc3802d687ae204f81e7908bd2ab1895"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-windows-x64.zip"
+checksum = "sha256:831e00806531fabb184533ef85fead96eb92287cab2d0f21db7daaa494e75083"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-windows-x64.zip"
 
 [tools."aqua:anomalyco/opencode"."platforms.windows-x64-baseline"]
-checksum = "sha256:2e14eee53f4abad803d55fdc472c1b12dc3802d687ae204f81e7908bd2ab1895"
-url = "https://opencode.ai/files/bin/2.3.0/opencode-windows-x64.zip"
+checksum = "sha256:831e00806531fabb184533ef85fead96eb92287cab2d0f21db7daaa494e75083"
+url = "https://opencode.ai/files/bin/2.4.1/opencode-windows-x64.zip"
 
 [[tools."aqua:antonmedv/fx"]]
-version = "40.0.1"
+version = "40.0.2"
 backend = "aqua:antonmedv/fx"
-specifiers = ["40.0.1"]
+specifiers = ["40.0.2"]
 
 [tools."aqua:antonmedv/fx"."platforms.linux-arm64"]
-checksum = "sha256:90377fbdbe3a01f791032a289986867ff1f8fe20ce94b45f20ecb399f7b69411"
+checksum = "sha256:fea049506ea3cbe64384d45e53df2ca11b433af05c1b72aa1f846fa4bed4ed0c"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017521"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_linux_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277711"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-arm64-musl"]
-checksum = "sha256:90377fbdbe3a01f791032a289986867ff1f8fe20ce94b45f20ecb399f7b69411"
+checksum = "sha256:fea049506ea3cbe64384d45e53df2ca11b433af05c1b72aa1f846fa4bed4ed0c"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017521"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_linux_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277711"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64"]
-checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum = "sha256:1bafc3685d531a2440cdf14d756d7aa396b1ed401eb51dda90148685e4eba9a8"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277704"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-baseline"]
-checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum = "sha256:1bafc3685d531a2440cdf14d756d7aa396b1ed401eb51dda90148685e4eba9a8"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277704"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-musl"]
-checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum = "sha256:1bafc3685d531a2440cdf14d756d7aa396b1ed401eb51dda90148685e4eba9a8"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277704"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum = "sha256:1bafc3685d531a2440cdf14d756d7aa396b1ed401eb51dda90148685e4eba9a8"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277704"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-arm64"]
-checksum = "sha256:c03fead7e2d5ccedbe54e905b0b7ad4b38042d89829a766744bce0c9600f4d80"
+checksum = "sha256:dc72348c27b6716388076857580f28d0d09bfc1b01d6d9986694e771ecdcc1ca"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_darwin_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017507"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_darwin_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277689"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-x64"]
-checksum = "sha256:40b8b253cf578b69ab0b6464918ddb14a66a45ee1d87320a58611141721ae511"
+checksum = "sha256:41ea20ec4addf232a5c9dcd786af76b10c54ec3d9cf71086af58b02038af87ce"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_darwin_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017508"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_darwin_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277701"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-x64-baseline"]
-checksum = "sha256:40b8b253cf578b69ab0b6464918ddb14a66a45ee1d87320a58611141721ae511"
+checksum = "sha256:41ea20ec4addf232a5c9dcd786af76b10c54ec3d9cf71086af58b02038af87ce"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_darwin_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017508"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_darwin_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277701"
 
 [tools."aqua:antonmedv/fx"."platforms.windows-x64"]
-checksum = "sha256:6482626d21f8f09e3b89836651e7fbac4d612e2e699abc7b324aab9bb0915e94"
+checksum = "sha256:9bd2715d51cbbb478720f060a04fc0501ca5a66e24782652ff423aa86735fe06"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_windows_amd64.exe"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017512"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_windows_amd64.exe"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277703"
 
 [tools."aqua:antonmedv/fx"."platforms.windows-x64-baseline"]
-checksum = "sha256:6482626d21f8f09e3b89836651e7fbac4d612e2e699abc7b324aab9bb0915e94"
+checksum = "sha256:9bd2715d51cbbb478720f060a04fc0501ca5a66e24782652ff423aa86735fe06"
 checksum_source = "mise-versions"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_windows_amd64.exe"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017512"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.2/fx_windows_amd64.exe"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/772277703"
 
 [[tools."aqua:artempyanykh/marksman"]]
 version = "2026-02-08"
@@ -598,137 +598,137 @@ url = "https://github.com/ast-grep/ast-grep/releases/download/0.51.3/app-x86_64-
 url_api = "https://api.github.com/repos/ast-grep/ast-grep/releases/assets/753401129"
 
 [[tools."aqua:astral-sh/uv"]]
-version = "0.13.8"
+version = "0.13.9"
 backend = "aqua:astral-sh/uv"
-specifiers = ["0.13.8"]
+specifiers = ["0.13.9"]
 
 [tools."aqua:astral-sh/uv"."platforms.linux-arm64"]
-checksum = "sha256:74f2f5c6024d397481db228db8fc25eed420db192243f88438c118e7e013e585"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313629"
+checksum = "sha256:0797542018e541a9288855df555c8077eed06f7a47d206362030480e8ecc9f3d"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513657"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.linux-arm64-musl"]
-checksum = "sha256:0c6f8593fcf1eadfc60e663b685c408267559d7c5d61c689bbb9f3a7e369ba32"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313665"
+checksum = "sha256:37fbb7c5bc66cf99c12aa881949d216181e201dec449772c4329e56487d61179"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513671"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.linux-x64"]
-checksum = "sha256:5acfd9177cfecf0bf87578f059728215ccc884388988f55f7a65041b57387d91"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313966"
+checksum = "sha256:a7fbaff2b9a271d85c1bdb540941090fd1ce011797b4abeb48e4dcd39c2471d5"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513954"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.linux-x64-baseline"]
-checksum = "sha256:5acfd9177cfecf0bf87578f059728215ccc884388988f55f7a65041b57387d91"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313966"
+checksum = "sha256:a7fbaff2b9a271d85c1bdb540941090fd1ce011797b4abeb48e4dcd39c2471d5"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513954"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.linux-x64-musl"]
-checksum = "sha256:61fb26dabc4f0cf1d050fc6c67d40e43e4fae2994af21ebc1e050b233bf2b5ed"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313983"
+checksum = "sha256:58ccf5f1792b8a5a88d01bc910ea131a8b3db4a319a17ad5fad75e0845a3e271"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513984"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:61fb26dabc4f0cf1d050fc6c67d40e43e4fae2994af21ebc1e050b233bf2b5ed"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313983"
+checksum = "sha256:58ccf5f1792b8a5a88d01bc910ea131a8b3db4a319a17ad5fad75e0845a3e271"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513984"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.macos-arm64"]
-checksum = "sha256:6b71028a6b904f2ae3340ef52e595512de807d06c0a20eaef2f692581b246558"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313603"
+checksum = "sha256:5aeca67f2283f75235de40d0bd9c0a5bbc5fce23b6d48b3bf9fa1b2db08382ca"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513631"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.macos-x64"]
-checksum = "sha256:a04c2ffeac28b2003a2c13caf538ab425fcd7def3e4a41571f4a8fb370a66af3"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313917"
+checksum = "sha256:617a3211261b0fc739562f0071aa34e9739797c510208ede8e2977c30903d041"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513912"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.macos-x64-baseline"]
-checksum = "sha256:a04c2ffeac28b2003a2c13caf538ab425fcd7def3e4a41571f4a8fb370a66af3"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313917"
+checksum = "sha256:617a3211261b0fc739562f0071aa34e9739797c510208ede8e2977c30903d041"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513912"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.windows-x64"]
-checksum = "sha256:529e78a9cec6cd7e3e014f7ecd8bda0c113969d4ed0f2efeedb85c30943325b8"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313927"
+checksum = "sha256:edd61f7f5728a56cc62455386661860bdfc7bab65872f39b0c25bdcc1d8e1beb"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513940"
 provenance = "github-attestations"
 
 [tools."aqua:astral-sh/uv"."platforms.windows-x64-baseline"]
-checksum = "sha256:529e78a9cec6cd7e3e014f7ecd8bda0c113969d4ed0f2efeedb85c30943325b8"
-url = "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/740313927"
+checksum = "sha256:edd61f7f5728a56cc62455386661860bdfc7bab65872f39b0c25bdcc1d8e1beb"
+url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/astral-sh/uv/releases/assets/758513940"
 provenance = "github-attestations"
 
 [[tools."aqua:atuinsh/atuin"]]
-version = "18.24.8"
+version = "18.25.1"
 backend = "aqua:atuinsh/atuin"
-specifiers = ["18.24.8"]
+specifiers = ["18.25.1"]
 unsupported_platforms = [
     "macos-x64",
     "macos-x64-baseline",
 ]
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-arm64"]
-checksum = "sha256:98f643d576b236e7ea6b1232dc2761d8469a4eed619cabd9eb1b9dc38a788e90"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927121"
+checksum = "sha256:19713ba9447f6429412c349379a62b98f519bc311b38c31c95c06bdbfceb4ed8"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455323"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-arm64-musl"]
-checksum = "sha256:e058ab045e9a694e709a23fb87bb55a8737e98dfda9752cb33ea5e9f70c32a13"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927122"
+checksum = "sha256:a76aff915be408f15eca033dfbd555bb8d1237e83b09562f7481636f7894555f"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455319"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64"]
-checksum = "sha256:7433290f39b6c4fc9ec44f4fb0ebfbc5a574a81d4234b9a7d39741f24794edbd"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927279"
+checksum = "sha256:bd586c8c5ba631c3e545b1665fdd0bfc1d8aa4954e6b6a488dc712c8d8a89f10"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455537"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64-baseline"]
-checksum = "sha256:7433290f39b6c4fc9ec44f4fb0ebfbc5a574a81d4234b9a7d39741f24794edbd"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927279"
+checksum = "sha256:bd586c8c5ba631c3e545b1665fdd0bfc1d8aa4954e6b6a488dc712c8d8a89f10"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455537"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64-musl"]
-checksum = "sha256:f8dfc3f9d27cadc2e2c9d489394ef7c568291e2382a4d184865701bf1a4ac30a"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927292"
+checksum = "sha256:f2bc97588d5aa91f49b992298544e13776df044cb4baf606875c7cc8444e9e00"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455551"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:f8dfc3f9d27cadc2e2c9d489394ef7c568291e2382a4d184865701bf1a4ac30a"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927292"
+checksum = "sha256:f2bc97588d5aa91f49b992298544e13776df044cb4baf606875c7cc8444e9e00"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455551"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.macos-arm64"]
-checksum = "sha256:1c33bb672cf09eecf595578ad3136e415a3e54eb34de92247f637d1fa9eae688"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927123"
+checksum = "sha256:c2d94ae74da55c644de08ce3eedb0abd5f4a32340f3e9b8e2dade29764ac524c"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455322"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.windows-x64"]
-checksum = "sha256:f6ff4e13feed0e49853618ab5f1ec849ccbb34dcab2df711c85d5f0333d8e717"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927272"
+checksum = "sha256:8c1a4c51251fd79f93551dcb66d23e8e34b3d49df56e47dbf853418cfadc167a"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455517"
 provenance = "github-attestations"
 
 [tools."aqua:atuinsh/atuin"."platforms.windows-x64-baseline"]
-checksum = "sha256:f6ff4e13feed0e49853618ab5f1ec849ccbb34dcab2df711c85d5f0333d8e717"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.8/atuin-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/741927272"
+checksum = "sha256:8c1a4c51251fd79f93551dcb66d23e8e34b3d49df56e47dbf853418cfadc167a"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.25.1/atuin-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/773455517"
 provenance = "github-attestations"
 
 [[tools."aqua:bootandy/dust"]]
@@ -1087,74 +1087,74 @@ url_api = "https://api.github.com/repos/charmbracelet/gum/releases/assets/585508
 provenance = "cosign"
 
 [[tools."aqua:cli/cli"]]
-version = "2.104.0"
+version = "2.105.0"
 backend = "aqua:cli/cli"
-specifiers = ["2.104.0"]
+specifiers = ["2.105.0"]
 
 [tools."aqua:cli/cli"."platforms.linux-arm64"]
-checksum = "sha256:cb34cefc6f4e77b90731374a2b737516bb8f3033c6ca46aa949e5344f68069e3"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740718938"
+checksum = "sha256:b1278c75107423d818f1937fd92cafc9e5e9b606631568f68d7fb816f5885a02"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188590"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.linux-arm64-musl"]
-checksum = "sha256:cb34cefc6f4e77b90731374a2b737516bb8f3033c6ca46aa949e5344f68069e3"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740718938"
+checksum = "sha256:b1278c75107423d818f1937fd92cafc9e5e9b606631568f68d7fb816f5885a02"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188590"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.linux-x64"]
-checksum = "sha256:98cb101ad87dbbd3f6b2f2bfcbd43197ccd07643140121d8a9cfaa91eadbc24e"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740718892"
+checksum = "sha256:79e7ab5db738c48777b696e374f8b428f0647debfb424f44d2f426370407fe2f"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188566"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.linux-x64-baseline"]
-checksum = "sha256:98cb101ad87dbbd3f6b2f2bfcbd43197ccd07643140121d8a9cfaa91eadbc24e"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740718892"
+checksum = "sha256:79e7ab5db738c48777b696e374f8b428f0647debfb424f44d2f426370407fe2f"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188566"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.linux-x64-musl"]
-checksum = "sha256:98cb101ad87dbbd3f6b2f2bfcbd43197ccd07643140121d8a9cfaa91eadbc24e"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740718892"
+checksum = "sha256:79e7ab5db738c48777b696e374f8b428f0647debfb424f44d2f426370407fe2f"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188566"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:98cb101ad87dbbd3f6b2f2bfcbd43197ccd07643140121d8a9cfaa91eadbc24e"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740718892"
+checksum = "sha256:79e7ab5db738c48777b696e374f8b428f0647debfb424f44d2f426370407fe2f"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188566"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.macos-arm64"]
-checksum = "sha256:23b12706219b9892e44236f988444a24adcf29284e16b35e03ba5b863fb6eb8e"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_macOS_arm64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740719079"
+checksum = "sha256:2a5d03103ae444927383b93d9ffd65579a26e2eb900ce1cf11f55258d5319ded"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_macOS_arm64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188673"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.macos-x64"]
-checksum = "sha256:a8c2a708dbae89dc7c05ba7b0beafc95bd8d09ab4a3505467b77d32ebf364dc6"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_macOS_amd64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740719067"
+checksum = "sha256:23602cbccbbdc6285a8520745b714cb927ce2ca621779373c2a20cd8e33fda66"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_macOS_amd64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188667"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.macos-x64-baseline"]
-checksum = "sha256:a8c2a708dbae89dc7c05ba7b0beafc95bd8d09ab4a3505467b77d32ebf364dc6"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_macOS_amd64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740719067"
+checksum = "sha256:23602cbccbbdc6285a8520745b714cb927ce2ca621779373c2a20cd8e33fda66"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_macOS_amd64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188667"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.windows-x64"]
-checksum = "sha256:08c06d10482f12c478018cd259f64acbd5f625712cadf331aad19ba973c879e5"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_windows_amd64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740719168"
+checksum = "sha256:8813a72c899900afaa10e3fec8fbc64b908c89dbfe837e95ed2fa500fc140627"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_windows_amd64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188741"
 provenance = "github-attestations"
 
 [tools."aqua:cli/cli"."platforms.windows-x64-baseline"]
-checksum = "sha256:08c06d10482f12c478018cd259f64acbd5f625712cadf331aad19ba973c879e5"
-url = "https://github.com/cli/cli/releases/download/v2.104.0/gh_2.104.0_windows_amd64.zip"
-url_api = "https://api.github.com/repos/cli/cli/releases/assets/740719168"
+checksum = "sha256:8813a72c899900afaa10e3fec8fbc64b908c89dbfe837e95ed2fa500fc140627"
+url = "https://github.com/cli/cli/releases/download/v2.105.0/gh_2.105.0_windows_amd64.zip"
+url_api = "https://api.github.com/repos/cli/cli/releases/assets/761188741"
 provenance = "github-attestations"
 
 [[tools."aqua:crate-ci/typos"]]
@@ -1229,138 +1229,138 @@ url = "https://github.com/crate-ci/typos/releases/download/v1.52.2/typos-v1.52.2
 url_api = "https://api.github.com/repos/crate-ci/typos/releases/assets/733790297"
 
 [[tools."aqua:dagger/dagger"]]
-version = "0.21.11"
+version = "0.21.12"
 backend = "aqua:dagger/dagger"
-specifiers = ["0.21.11"]
+specifiers = ["0.21.12"]
 
 [tools."aqua:dagger/dagger"."platforms.linux-arm64"]
-checksum = "sha256:7a19fc16ce58d8aa80e273629a38a3cf3e49951df8928b38a908805c9a08cc50"
+checksum = "sha256:922a6644d91f1e0db6d86bd3ffd6d4ffe9624c1b776d780198dbd5f4fcb2cf9f"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013768"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665350"
 
 [tools."aqua:dagger/dagger"."platforms.linux-arm64-musl"]
-checksum = "sha256:7a19fc16ce58d8aa80e273629a38a3cf3e49951df8928b38a908805c9a08cc50"
+checksum = "sha256:922a6644d91f1e0db6d86bd3ffd6d4ffe9624c1b776d780198dbd5f4fcb2cf9f"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013768"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665350"
 
 [tools."aqua:dagger/dagger"."platforms.linux-x64"]
-checksum = "sha256:a2d3ef96e7305abc18663a3606d9c1c592278ba3c8f48e01d6be14eef72276ef"
+checksum = "sha256:1c8a2949b461c488506e5e668d6e3a0ff3b90ad588fb151f9a8fe77845bc9d7f"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013771"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665348"
 
 [tools."aqua:dagger/dagger"."platforms.linux-x64-baseline"]
-checksum = "sha256:a2d3ef96e7305abc18663a3606d9c1c592278ba3c8f48e01d6be14eef72276ef"
+checksum = "sha256:1c8a2949b461c488506e5e668d6e3a0ff3b90ad588fb151f9a8fe77845bc9d7f"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013771"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665348"
 
 [tools."aqua:dagger/dagger"."platforms.linux-x64-musl"]
-checksum = "sha256:a2d3ef96e7305abc18663a3606d9c1c592278ba3c8f48e01d6be14eef72276ef"
+checksum = "sha256:1c8a2949b461c488506e5e668d6e3a0ff3b90ad588fb151f9a8fe77845bc9d7f"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013771"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665348"
 
 [tools."aqua:dagger/dagger"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:a2d3ef96e7305abc18663a3606d9c1c592278ba3c8f48e01d6be14eef72276ef"
+checksum = "sha256:1c8a2949b461c488506e5e668d6e3a0ff3b90ad588fb151f9a8fe77845bc9d7f"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013771"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665348"
 
 [tools."aqua:dagger/dagger"."platforms.macos-arm64"]
-checksum = "sha256:58490db22e1d975f6e454955e605d0f90564517733528b18d65f4ad7929b6350"
+checksum = "sha256:61617d1843006466f516c4858f919819082957a7d136c878ae9ffddd193e0d59"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013772"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665339"
 
 [tools."aqua:dagger/dagger"."platforms.macos-x64"]
-checksum = "sha256:eacde97aeb3ee3a0c1c628d374dbb01a2303640f10bb6739e689c10442496bee"
+checksum = "sha256:bfe036218d3ce8d19b3d46e2c8124e3dd6fc7a7b6c7c1c991c2e249f5bbdee16"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013773"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665338"
 
 [tools."aqua:dagger/dagger"."platforms.macos-x64-baseline"]
-checksum = "sha256:eacde97aeb3ee3a0c1c628d374dbb01a2303640f10bb6739e689c10442496bee"
+checksum = "sha256:bfe036218d3ce8d19b3d46e2c8124e3dd6fc7a7b6c7c1c991c2e249f5bbdee16"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013773"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665338"
 
 [tools."aqua:dagger/dagger"."platforms.windows-x64"]
-checksum = "sha256:7afd2804cbc66463a31d6bddc79e93504e1b467cfc70773a040304e493951ea0"
+checksum = "sha256:990ef9cd7050ae1a911f5dc7d4a2a6e511dd665f63935b4d0c2678ba539513c8"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_windows_amd64.zip"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013767"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_windows_amd64.zip"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665344"
 
 [tools."aqua:dagger/dagger"."platforms.windows-x64-baseline"]
-checksum = "sha256:7afd2804cbc66463a31d6bddc79e93504e1b467cfc70773a040304e493951ea0"
+checksum = "sha256:990ef9cd7050ae1a911f5dc7d4a2a6e511dd665f63935b4d0c2678ba539513c8"
 checksum_source = "mise-versions"
-url = "https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_windows_amd64.zip"
-url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/664013767"
+url = "https://github.com/dagger/dagger/releases/download/v0.21.12/dagger_v0.21.12_windows_amd64.zip"
+url_api = "https://api.github.com/repos/dagger/dagger/releases/assets/760665344"
 
 [[tools."aqua:dandavison/delta"]]
-version = "0.20.1"
+version = "0.22.0"
 backend = "aqua:dandavison/delta"
-specifiers = ["0.20.1"]
+specifiers = ["0.22.0"]
 unsupported_platforms = [
     "macos-x64",
     "macos-x64-baseline",
 ]
 
 [tools."aqua:dandavison/delta"."platforms.linux-arm64"]
-checksum = "sha256:da7f4338f593572ff426ae153e0870e2fdc72729416eff551b40cdeb67940db8"
+checksum = "sha256:9f462d3ffb74d188964f2f0c408619f1d63f60425f87f3dce83bab0db1c71313"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610499593"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781464908"
 
 [tools."aqua:dandavison/delta"."platforms.linux-arm64-musl"]
-checksum = "sha256:da7f4338f593572ff426ae153e0870e2fdc72729416eff551b40cdeb67940db8"
+checksum = "sha256:9f462d3ffb74d188964f2f0c408619f1d63f60425f87f3dce83bab0db1c71313"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610499593"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781464908"
 
 [tools."aqua:dandavison/delta"."platforms.linux-x64"]
-checksum = "sha256:50f08c879f84c81ceb220e476491a7f492d2c9c671e79918cc44badf961a6240"
+checksum = "sha256:10d20fd7b7e0350e7996ff191a68bfd52093a2361c72b08f6fa10b31dd6782ce"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610498121"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781463517"
 
 [tools."aqua:dandavison/delta"."platforms.linux-x64-baseline"]
-checksum = "sha256:50f08c879f84c81ceb220e476491a7f492d2c9c671e79918cc44badf961a6240"
+checksum = "sha256:10d20fd7b7e0350e7996ff191a68bfd52093a2361c72b08f6fa10b31dd6782ce"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610498121"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781463517"
 
 [tools."aqua:dandavison/delta"."platforms.linux-x64-musl"]
-checksum = "sha256:69dcb4043f55c29118f408c6efd30115e0a4e0a6709253343b8c8fa814ab4a31"
+checksum = "sha256:04bc8cde7e73e8603ce75fe6054453f316ca47263aa7d5832748ab442f5ad051"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610498263"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781461863"
 
 [tools."aqua:dandavison/delta"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:69dcb4043f55c29118f408c6efd30115e0a4e0a6709253343b8c8fa814ab4a31"
+checksum = "sha256:04bc8cde7e73e8603ce75fe6054453f316ca47263aa7d5832748ab442f5ad051"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610498263"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781461863"
 
 [tools."aqua:dandavison/delta"."platforms.macos-arm64"]
-checksum = "sha256:bc1839cea69288d4673a24faffbb825d408ca907e0f7d33b1678c9e6cdd5e58e"
+checksum = "sha256:1baa389d6de21e41f6de8a328ed2e19a4fdef6112641420bf591ead50299cab5"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610498923"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781465750"
 
 [tools."aqua:dandavison/delta"."platforms.windows-x64"]
-checksum = "sha256:c9af7484b33f1dbc1312a892fc7d5753a6d3365140a4000d49e575a2de742c25"
+checksum = "sha256:c9e1eb86cceaa4713c47bdeb4ce2476b78ac7f1082dac8b9cb66cad508cbdd5c"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610501426"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781464813"
 
 [tools."aqua:dandavison/delta"."platforms.windows-x64-baseline"]
-checksum = "sha256:c9af7484b33f1dbc1312a892fc7d5753a6d3365140a4000d49e575a2de742c25"
+checksum = "sha256:c9e1eb86cceaa4713c47bdeb4ce2476b78ac7f1082dac8b9cb66cad508cbdd5c"
 checksum_source = "mise-versions"
-url = "https://github.com/dandavison/delta/releases/download/0.20.1/delta-0.20.1-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/610501426"
+url = "https://github.com/dandavison/delta/releases/download/0.22.0/delta-0.22.0-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/dandavison/delta/releases/assets/781464813"
 
 [[tools."aqua:derailed/k9s"]]
 version = "0.51.0"
@@ -2496,75 +2496,75 @@ url = "https://github.com/nushell/nushell/releases/download/0.117.0/nu-0.117.0-x
 url_api = "https://api.github.com/repos/nushell/nushell/releases/assets/729111223"
 
 [[tools."aqua:openai/codex"]]
-version = "rust-v0.169.0"
+version = "rust-v0.171.0"
 backend = "aqua:openai/codex"
-specifiers = ["rust-v0.169.0"]
+specifiers = ["rust-v0.171.0"]
 
 [tools."aqua:openai/codex"."platforms.linux-arm64"]
-checksum = "sha256:c8d0b4ab2a97c595b70b10412d36d0d5464dcef1e1d3246b073d48017cdf5a4f"
+checksum = "sha256:d8c43bee6cf11b01eb18b95f4d7961092bc40228180808859e70dabb7784c1c9"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742914908"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769865205"
 
 [tools."aqua:openai/codex"."platforms.linux-arm64-musl"]
-checksum = "sha256:c8d0b4ab2a97c595b70b10412d36d0d5464dcef1e1d3246b073d48017cdf5a4f"
+checksum = "sha256:d8c43bee6cf11b01eb18b95f4d7961092bc40228180808859e70dabb7784c1c9"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742914908"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769865205"
 
 [tools."aqua:openai/codex"."platforms.linux-x64"]
-checksum = "sha256:3b8ed091149cc63a59046b9f094bcfa21cdb4dda15ede441ce369bcee4a71ba0"
+checksum = "sha256:8391d67757496bfd14893eca6cbf0c96994bf2627566ff1f018f70600c9ef6b3"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742918488"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769869089"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-baseline"]
-checksum = "sha256:3b8ed091149cc63a59046b9f094bcfa21cdb4dda15ede441ce369bcee4a71ba0"
+checksum = "sha256:8391d67757496bfd14893eca6cbf0c96994bf2627566ff1f018f70600c9ef6b3"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742918488"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769869089"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-musl"]
-checksum = "sha256:3b8ed091149cc63a59046b9f094bcfa21cdb4dda15ede441ce369bcee4a71ba0"
+checksum = "sha256:8391d67757496bfd14893eca6cbf0c96994bf2627566ff1f018f70600c9ef6b3"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742918488"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769869089"
 
 [tools."aqua:openai/codex"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:3b8ed091149cc63a59046b9f094bcfa21cdb4dda15ede441ce369bcee4a71ba0"
+checksum = "sha256:8391d67757496bfd14893eca6cbf0c96994bf2627566ff1f018f70600c9ef6b3"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742918488"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769869089"
 
 [tools."aqua:openai/codex"."platforms.macos-arm64"]
-checksum = "sha256:8a232260df7a12c5e83e0b4b7659e1c8d9259b41942517bc0068d8ab55c36461"
+checksum = "sha256:58c88032ec446e72922d911d8f03773102da20c16a6059cf21f6744bce57f210"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742912926"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769863147"
 
 [tools."aqua:openai/codex"."platforms.macos-x64"]
-checksum = "sha256:0a3c392235b4712409495ced02bbe0662ce7a038232766d1c1c34af74e905c2f"
+checksum = "sha256:dd130ea3217b4e6fe4454c99949e0b28e2e8a9ad8da8c3a75f0c7265fab7153b"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742916402"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769866856"
 
 [tools."aqua:openai/codex"."platforms.macos-x64-baseline"]
-checksum = "sha256:0a3c392235b4712409495ced02bbe0662ce7a038232766d1c1c34af74e905c2f"
+checksum = "sha256:dd130ea3217b4e6fe4454c99949e0b28e2e8a9ad8da8c3a75f0c7265fab7153b"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742916402"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769866856"
 
 [tools."aqua:openai/codex"."platforms.windows-x64"]
-checksum = "sha256:456db280d16f4393cd99a398f11b4a14a3ede68b6bd31610ce41fb10d6b65737"
+checksum = "sha256:669941eff23dd8470fbf85d919a03d80c4e3d35b441e3fcd361c0f8630945be8"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742917419"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769868206"
 
 [tools."aqua:openai/codex"."platforms.windows-x64-baseline"]
-checksum = "sha256:456db280d16f4393cd99a398f11b4a14a3ede68b6bd31610ce41fb10d6b65737"
+checksum = "sha256:669941eff23dd8470fbf85d919a03d80c4e3d35b441e3fcd361c0f8630945be8"
 checksum_source = "mise-versions"
-url = "https://github.com/openai/codex/releases/download/rust-v0.169.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
-url_api = "https://api.github.com/repos/openai/codex/releases/assets/742917419"
+url = "https://github.com/openai/codex/releases/download/rust-v0.171.0/codex-package-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/769868206"
 
 [[tools."aqua:rhysd/actionlint"]]
 version = "v1.7.12"
@@ -3550,74 +3550,74 @@ url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/
 provenance = "github-attestations"
 
 [[tools."aqua:twpayne/chezmoi"]]
-version = "2.74.1"
+version = "2.74.2"
 backend = "aqua:twpayne/chezmoi"
-specifiers = ["2.74.1"]
+specifiers = ["2.74.2"]
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-arm64"]
-checksum = "sha256:8c62619c4303770342e7c7e75d168b6cc6efee4ad5e4b994980de7cf794d68e2"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055363"
+checksum = "sha256:bb1521dd02aff3967d61937213110e79ddd6e181e0856cf51e80dba01fda245f"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829528"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-arm64-musl"]
-checksum = "sha256:8c62619c4303770342e7c7e75d168b6cc6efee4ad5e4b994980de7cf794d68e2"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055363"
+checksum = "sha256:bb1521dd02aff3967d61937213110e79ddd6e181e0856cf51e80dba01fda245f"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829528"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64"]
-checksum = "sha256:ae01c66b1a6dbf563667c63fbbd9986b3cfa3c98dd266ddee732f63e8af2e9d1"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_linux-glibc_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055497"
+checksum = "sha256:5f2024119a1860f18f2243b892dd43a79f0fefe2ebef9786ee143f4d5fd69ccb"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_linux-glibc_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780830137"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-baseline"]
-checksum = "sha256:ae01c66b1a6dbf563667c63fbbd9986b3cfa3c98dd266ddee732f63e8af2e9d1"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_linux-glibc_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055497"
+checksum = "sha256:5f2024119a1860f18f2243b892dd43a79f0fefe2ebef9786ee143f4d5fd69ccb"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_linux-glibc_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780830137"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-musl"]
-checksum = "sha256:505d529beaff4ab1ba64bc99a407665148981996ae872549e8217afc58e6616c"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_linux-musl_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055516"
+checksum = "sha256:0570eea5af5dea146d872423a65bdf46f140087fbb01ed279dc0c219e1e1da49"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_linux-musl_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780830165"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:505d529beaff4ab1ba64bc99a407665148981996ae872549e8217afc58e6616c"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_linux-musl_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055516"
+checksum = "sha256:0570eea5af5dea146d872423a65bdf46f140087fbb01ed279dc0c219e1e1da49"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_linux-musl_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780830165"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.macos-arm64"]
-checksum = "sha256:fbc7b86c7b36eb0448e2a99a616b6d32f022d1f3895076ad44f4c5d65a77fe60"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055284"
+checksum = "sha256:fa14debabd557a9bb88a35c2950be6f5a8adf12e1c8cc26a9e0ee62fe0bdef2b"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829970"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.macos-x64"]
-checksum = "sha256:b2229c6ff9eb7d1f10d098aac94241da652dd7df989c7ef35df6777dbe00d397"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055041"
+checksum = "sha256:26c75a1519bde46306a0d4232dcba3223c76683c0162b70438fc2775702dda05"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829526"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.macos-x64-baseline"]
-checksum = "sha256:b2229c6ff9eb7d1f10d098aac94241da652dd7df989c7ef35df6777dbe00d397"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055041"
+checksum = "sha256:26c75a1519bde46306a0d4232dcba3223c76683c0162b70438fc2775702dda05"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829526"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.windows-x64"]
-checksum = "sha256:208b393f9ad266fc10aab514a8adf87ac4dc5bdd968a54b7eb5b2764ca41eda4"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_windows_amd64.zip"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055254"
+checksum = "sha256:6b3a0480d0d31cc72a9ef676ae44bb6a5de1222c7bca11db8799a59e9df0e78a"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_windows_amd64.zip"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829947"
 provenance = "cosign"
 
 [tools."aqua:twpayne/chezmoi"."platforms.windows-x64-baseline"]
-checksum = "sha256:208b393f9ad266fc10aab514a8adf87ac4dc5bdd968a54b7eb5b2764ca41eda4"
-url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.1/chezmoi_2.74.1_windows_amd64.zip"
-url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/733055254"
+checksum = "sha256:6b3a0480d0d31cc72a9ef676ae44bb6a5de1222c7bca11db8799a59e9df0e78a"
+url = "https://github.com/twpayne/chezmoi/releases/download/v2.74.2/chezmoi_2.74.2_windows_amd64.zip"
+url_api = "https://api.github.com/repos/twpayne/chezmoi/releases/assets/780829947"
 provenance = "cosign"
 
 [[tools."aqua:vercel-labs/agent-browser"]]
@@ -3834,328 +3834,328 @@ url = "https://github.com/zellij-org/zellij/releases/download/v0.46.0/zellij-x86
 url_api = "https://api.github.com/repos/zellij-org/zellij/releases/assets/734819371"
 
 [[tools.bun]]
-version = "1.4.4"
+version = "1.4.5"
 backend = "core:bun"
-specifiers = ["1.4.4"]
+specifiers = ["1.4.5"]
 
 [tools.bun."platforms.linux-arm64"]
-checksum = "sha256:baa6bb36f51d6e58561e02bbea825038a9df454f673d6d776e8bbf86f8c7850e"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-aarch64.zip"
+checksum = "sha256:18656a3bf0ea5641f5796ae4213b75255579a70a0fded2f337933785568cdf84"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-aarch64.zip"
 
 [tools.bun."platforms.linux-arm64-musl"]
-checksum = "sha256:57f01b02ac7113c61c935f28f38c2eab849e3c970dab21f8b640a87b1ef65009"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-aarch64-musl.zip"
+checksum = "sha256:d655765d3a0c0fdf707e27c7aa1a4f2c84f1bbc1f759db7e6e3d3c5be414396c"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-aarch64-musl.zip"
 
 [tools.bun."platforms.linux-x64"]
-checksum = "sha256:bf8ccbfb2b0b80159e0f9a6d15c55317add8077534dbc6130a3edb52fccb395c"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64.zip"
+checksum = "sha256:94559b3b528995a49452f9f2404cec74f2efd7d06e0a000a8cd214b02c3666eb"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-x64.zip"
 
 [tools.bun."platforms.linux-x64-baseline"]
-checksum = "sha256:e0446eb55995772eb9894bebae9a6be368d985a8b9271ee124486f9946eedd76"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64-baseline.zip"
+checksum = "sha256:dcb23a18a1c2fff12d57bcef696dbbb42eb67fde29f43816ecb595459a24c463"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-x64-baseline.zip"
 
 [tools.bun."platforms.linux-x64-musl"]
-checksum = "sha256:a5a8ccc5e74dcb883fe974f125a7bdb3b41e5195ed1b870e73f17effd3eb2b2d"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64-musl.zip"
+checksum = "sha256:9b6bdba1fa0914b6adfe48e4438212e2c106d9199b77ba642a9b8a3968a49a59"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-x64-musl.zip"
 
 [tools.bun."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:6e9c37098b293920aed28bfb51ab240e26d23bfdd9bbfecb3ad428ac166549bc"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64-musl-baseline.zip"
+checksum = "sha256:96fb94108eed872ff623ed39007d6b5699a83a5d0086fcfba84921c18145e3e6"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-x64-musl-baseline.zip"
 
 [tools.bun."platforms.macos-arm64"]
-checksum = "sha256:c240d7f0ccb90c263a849fcdb09b7ee62630d921348ed6aafda86b9d577bc510"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-aarch64.zip"
+checksum = "sha256:b5d6bc2e13caf14e57c89661e89efd073ff16165b41bfe43882616410609cd10"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-darwin-aarch64.zip"
 
 [tools.bun."platforms.macos-x64"]
-checksum = "sha256:50a3491f73abc2fe81673171a85762d3bc2cc1680ccecadd983de99adf77977e"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-x64.zip"
+checksum = "sha256:a4972e778cce4b6a194d7d289f326aa61576d71d80b7a53e9da2f3739566e5fd"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-darwin-x64.zip"
 
 [tools.bun."platforms.macos-x64-baseline"]
-checksum = "sha256:d4a155adfbfd09155eb3ba05c9e3a544f39297d7a68616d3c7759f67ab5c47dc"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-x64-baseline.zip"
+checksum = "sha256:fb0121739a7e80e7511b6bfe4d2116422b48ba18a013acadef0c425348e95891"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-darwin-x64-baseline.zip"
 
 [tools.bun."platforms.windows-x64"]
-checksum = "sha256:cd2c0fccc78f3ede1f50ca827a15f063eda13d4d150a3d0674f4f6e323d864a5"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64.zip"
+checksum = "sha256:815ab45ec7f549abf87e6869584b506eab088e24225683957b7e150b47d6de30"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-windows-x64.zip"
 
 [tools.bun."platforms.windows-x64-baseline"]
-checksum = "sha256:0f20ce6674d4f2dbcc8c5d59fdf99f7ba45f8c3b367e0f5781cbfa30a1c78d99"
-url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64-baseline.zip"
+checksum = "sha256:3c081c73865e7a3453a9d514cc2ba3d699880621bcf67bb17241ff5194cb1d4b"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-windows-x64-baseline.zip"
 
 [[tools."github:ZenNotes/tui"]]
-version = "0.17.2"
+version = "0.18.1"
 backend = "github:ZenNotes/tui"
-specifiers = ["v0.17.2"]
+specifiers = ["v0.18.1"]
 
 [tools."github:ZenNotes/tui"."platforms.linux-arm64"]
-checksum = "sha256:1294b0ebcc0ff4864ba8eb34aafbc995aa9b097056e19e71ad5ff429bea66409"
+checksum = "sha256:e6798937df01e68bd12a965261fd1a4c4ee7422575889b43329a3fd29a67892b"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954355"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273512"
 
 [tools."github:ZenNotes/tui"."platforms.linux-arm64-musl"]
-checksum = "sha256:1294b0ebcc0ff4864ba8eb34aafbc995aa9b097056e19e71ad5ff429bea66409"
+checksum = "sha256:e6798937df01e68bd12a965261fd1a4c4ee7422575889b43329a3fd29a67892b"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954355"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273512"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64"]
-checksum = "sha256:5f7d53f1563c0d9ae0f0d552e76e6cc63f0707f43e22f98e4edbe88637583b36"
+checksum = "sha256:3b6f87a06abad7b0075bd6c9e304e96ff80387b2c8bef94defc97a240005677a"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954358"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273515"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64-baseline"]
-checksum = "sha256:5f7d53f1563c0d9ae0f0d552e76e6cc63f0707f43e22f98e4edbe88637583b36"
+checksum = "sha256:3b6f87a06abad7b0075bd6c9e304e96ff80387b2c8bef94defc97a240005677a"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954358"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273515"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64-musl"]
-checksum = "sha256:5f7d53f1563c0d9ae0f0d552e76e6cc63f0707f43e22f98e4edbe88637583b36"
+checksum = "sha256:3b6f87a06abad7b0075bd6c9e304e96ff80387b2c8bef94defc97a240005677a"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954358"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273515"
 
 [tools."github:ZenNotes/tui"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:5f7d53f1563c0d9ae0f0d552e76e6cc63f0707f43e22f98e4edbe88637583b36"
+checksum = "sha256:3b6f87a06abad7b0075bd6c9e304e96ff80387b2c8bef94defc97a240005677a"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954358"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273515"
 
 [tools."github:ZenNotes/tui"."platforms.macos-arm64"]
-checksum = "sha256:9d7e93470156642a87803f3301ac3d67f17053d07cd75f741e60c5c1230e1e41"
+checksum = "sha256:fb26893566292629ae8a232289abc9178dd8f0b6a13b0896eda2b77edb12662d"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954349"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273516"
 
 [tools."github:ZenNotes/tui"."platforms.macos-x64"]
-checksum = "sha256:6090d775a84153dd36082584cf5c95d0c724553537d718c8034d1f95041c2b17"
+checksum = "sha256:95242d01306e8915e775bed271a7152639151d7dc05ee5d5a17b58d815cee40d"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954356"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273514"
 
 [tools."github:ZenNotes/tui"."platforms.macos-x64-baseline"]
-checksum = "sha256:6090d775a84153dd36082584cf5c95d0c724553537d718c8034d1f95041c2b17"
+checksum = "sha256:95242d01306e8915e775bed271a7152639151d7dc05ee5d5a17b58d815cee40d"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954356"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273514"
 
 [tools."github:ZenNotes/tui"."platforms.windows-x64"]
-checksum = "sha256:4dcc5d8ec59aa0da1500a801ffbeb0341f3b59fd4325acd1e7bffd4993ad398d"
+checksum = "sha256:0bf773d120f81a9ce6c8f8e8f23a15adf4f1363801ee5363a5a895db053279c2"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_windows_amd64.zip"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954447"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_windows_amd64.zip"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273568"
 
 [tools."github:ZenNotes/tui"."platforms.windows-x64-baseline"]
-checksum = "sha256:4dcc5d8ec59aa0da1500a801ffbeb0341f3b59fd4325acd1e7bffd4993ad398d"
+checksum = "sha256:0bf773d120f81a9ce6c8f8e8f23a15adf4f1363801ee5363a5a895db053279c2"
 checksum_source = "mise-versions"
-url = "https://github.com/ZenNotes/tui/releases/download/v0.17.2/zn_0.17.2_windows_amd64.zip"
-url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/755954447"
+url = "https://github.com/ZenNotes/tui/releases/download/v0.18.1/zn_0.18.1_windows_amd64.zip"
+url_api = "https://api.github.com/repos/ZenNotes/tui/releases/assets/773273568"
 
 [[tools."github:agavra/tuicr"]]
-version = "0.29.0"
+version = "0.30.0"
 backend = "github:agavra/tuicr"
-specifiers = ["v0.29.0"]
+specifiers = ["v0.30.0"]
 
 [tools."github:agavra/tuicr"."platforms.linux-arm64"]
-checksum = "sha256:9358b1ffebd3106fde728c8f4862ac35745d1d9bb7a7db1e9ded05de8c2b8398"
+checksum = "sha256:b63019815063c757e9f9f3dd5762c58ae8b4c1f2ba63dd34db0432cbaf1593f5"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748369371"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782963222"
 
 [tools."github:agavra/tuicr"."platforms.linux-arm64-musl"]
-checksum = "sha256:94c0cc1672015bc41511657a81b4223596232372715d36131fd16f950b260313"
+checksum = "sha256:01ad73bfbfe957709c4e8d834d988f903159b94e0597cd14758110a0e3e89127"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748371226"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782964141"
 
 [tools."github:agavra/tuicr"."platforms.linux-x64"]
-checksum = "sha256:14d2977a50f976376441d0ff8cf0c5d0f81d6f2b6f4f1b105ddff55c52ffcdd6"
+checksum = "sha256:d2a7299bb1d31e9f5cffeb071316c2e453f62dabb081e18e266ac31da696acbf"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748371659"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782962966"
 
 [tools."github:agavra/tuicr"."platforms.linux-x64-baseline"]
-checksum = "sha256:14d2977a50f976376441d0ff8cf0c5d0f81d6f2b6f4f1b105ddff55c52ffcdd6"
+checksum = "sha256:d2a7299bb1d31e9f5cffeb071316c2e453f62dabb081e18e266ac31da696acbf"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748371659"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782962966"
 
 [tools."github:agavra/tuicr"."platforms.linux-x64-musl"]
-checksum = "sha256:48ba2ee347400a780756bc0c7726792a1a117b59d7920c10b0157bcf085b5128"
+checksum = "sha256:bbd7a358c8450613177359bfbcc4bdbba68c98835311c5e424053a005610c9d2"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748372326"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782965947"
 
 [tools."github:agavra/tuicr"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:48ba2ee347400a780756bc0c7726792a1a117b59d7920c10b0157bcf085b5128"
+checksum = "sha256:bbd7a358c8450613177359bfbcc4bdbba68c98835311c5e424053a005610c9d2"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748372326"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782965947"
 
 [tools."github:agavra/tuicr"."platforms.macos-arm64"]
-checksum = "sha256:3f4677eded21a470c3a14fee01c3a6d04146194a05d7d346a42fc7e612743b84"
+checksum = "sha256:082eb71cb9d6513f47d9571975f31a84318bc08893a306d110112ee6edabd276"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748377554"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782970848"
 
 [tools."github:agavra/tuicr"."platforms.macos-x64"]
-checksum = "sha256:d8460f635012cc4ea5269da4992ffd6211e2c16f2c13cb7094f921def33bfec8"
+checksum = "sha256:4d2dfd4d7d1a8ea4311c1c4232f8a329f3875797a0ce582639a3ba8559800cda"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748390015"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782976344"
 
 [tools."github:agavra/tuicr"."platforms.macos-x64-baseline"]
-checksum = "sha256:d8460f635012cc4ea5269da4992ffd6211e2c16f2c13cb7094f921def33bfec8"
+checksum = "sha256:4d2dfd4d7d1a8ea4311c1c4232f8a329f3875797a0ce582639a3ba8559800cda"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748390015"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782976344"
 
 [tools."github:agavra/tuicr"."platforms.windows-x64"]
-checksum = "sha256:45a616accf2660376a5bc7d0eb9441e55e08bc572b1d3aaedffeb3a2905281a4"
+checksum = "sha256:9fdaf31c92fe680f4fcd1fac58b42ccad98cc4b529981e55a1e9f5a51aa3f21a"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748379657"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782970019"
 
 [tools."github:agavra/tuicr"."platforms.windows-x64-baseline"]
-checksum = "sha256:45a616accf2660376a5bc7d0eb9441e55e08bc572b1d3aaedffeb3a2905281a4"
+checksum = "sha256:9fdaf31c92fe680f4fcd1fac58b42ccad98cc4b529981e55a1e9f5a51aa3f21a"
 checksum_source = "mise-versions"
-url = "https://github.com/agavra/tuicr/releases/download/v0.29.0/tuicr-0.29.0-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/748379657"
+url = "https://github.com/agavra/tuicr/releases/download/v0.30.0/tuicr-0.30.0-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/agavra/tuicr/releases/assets/782970019"
 
 [[tools."github:angristan/fast-resume"]]
-version = "2.14.4"
+version = "2.14.5"
 backend = "github:angristan/fast-resume"
-specifiers = ["v2.14.4"]
+specifiers = ["v2.14.5"]
 unsupported_platforms = [
     "windows-x64",
     "windows-x64-baseline",
 ]
 
 [tools."github:angristan/fast-resume"."platforms.linux-arm64"]
-checksum = "sha256:47a773cff81eef1fb24623acba0085b070dc6607a584fb94a98e29d191f370cf"
+checksum = "sha256:d83526d5033e4c28992afab0df3a7a6f7d42965ed8fe81f0833dfba7cd14bbcf"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743008432"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773521787"
 
 [tools."github:angristan/fast-resume"."platforms.linux-arm64-musl"]
-checksum = "sha256:47a773cff81eef1fb24623acba0085b070dc6607a584fb94a98e29d191f370cf"
+checksum = "sha256:d83526d5033e4c28992afab0df3a7a6f7d42965ed8fe81f0833dfba7cd14bbcf"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743008432"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773521787"
 
 [tools."github:angristan/fast-resume"."platforms.linux-x64"]
-checksum = "sha256:a9bfb61712877ced4bc314fc9fb3018fe90a2406e53f9d2e0d88622de5d8c496"
+checksum = "sha256:d6fd1948350cbeb65af6ca98f952d36c6603750f54c4dffa25b3b6aa8f718ee3"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743010834"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773523580"
 
 [tools."github:angristan/fast-resume"."platforms.linux-x64-baseline"]
-checksum = "sha256:a9bfb61712877ced4bc314fc9fb3018fe90a2406e53f9d2e0d88622de5d8c496"
+checksum = "sha256:d6fd1948350cbeb65af6ca98f952d36c6603750f54c4dffa25b3b6aa8f718ee3"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743010834"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773523580"
 
 [tools."github:angristan/fast-resume"."platforms.linux-x64-musl"]
-checksum = "sha256:a9bfb61712877ced4bc314fc9fb3018fe90a2406e53f9d2e0d88622de5d8c496"
+checksum = "sha256:d6fd1948350cbeb65af6ca98f952d36c6603750f54c4dffa25b3b6aa8f718ee3"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743010834"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773523580"
 
 [tools."github:angristan/fast-resume"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:a9bfb61712877ced4bc314fc9fb3018fe90a2406e53f9d2e0d88622de5d8c496"
+checksum = "sha256:d6fd1948350cbeb65af6ca98f952d36c6603750f54c4dffa25b3b6aa8f718ee3"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-linux-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743010834"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-linux-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773523580"
 
 [tools."github:angristan/fast-resume"."platforms.macos-arm64"]
-checksum = "sha256:48fb9dc490a356c9e04e0ff816c0ac064a410104ce04db9bec0e357e61d9de47"
+checksum = "sha256:d9851b927d810db4fd68be64a4abee78a7293f6a0253f51d1735ae03ba0f1c35"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-macos-arm64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743011605"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-macos-arm64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773525941"
 
 [tools."github:angristan/fast-resume"."platforms.macos-x64"]
-checksum = "sha256:4ce95cae75bea4e08eb4edf55060a82ffceba7a14bade0a65bfc1c21d27061ce"
+checksum = "sha256:daa88dbec95dbdddc1de6fea16b7772a0ff3f93deff3e158482057b6dab014ad"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-macos-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743014749"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-macos-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773526807"
 
 [tools."github:angristan/fast-resume"."platforms.macos-x64-baseline"]
-checksum = "sha256:4ce95cae75bea4e08eb4edf55060a82ffceba7a14bade0a65bfc1c21d27061ce"
+checksum = "sha256:daa88dbec95dbdddc1de6fea16b7772a0ff3f93deff3e158482057b6dab014ad"
 checksum_source = "mise-versions"
-url = "https://github.com/angristan/fast-resume/releases/download/v2.14.4/fast-resume-2.14.4-macos-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/743014749"
+url = "https://github.com/angristan/fast-resume/releases/download/v2.14.5/fast-resume-2.14.5-macos-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/angristan/fast-resume/releases/assets/773526807"
 
 [[tools."github:anthropics/claude-code"]]
-version = "2.1.325"
+version = "2.1.330"
 backend = "github:anthropics/claude-code"
-specifiers = ["v2.1.325"]
+specifiers = ["v2.1.330"]
 
 [tools."github:anthropics/claude-code"."platforms.linux-arm64"]
-checksum = "sha256:2abe2bea8b802190a303f335b0fd09f95eb775457e99df5a4778b09dfab6bbd6"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018489"
+checksum = "sha256:d14fa911fec091b5e0365fa55f900d3b596e4bf5040a9fac79ca417ec370287c"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030060"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-arm64-musl"]
-checksum = "sha256:e2e584d57c80de163b4f31f8dd82109cce1c3f7dcf9b542cddc705ad21d98737"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-linux-arm64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018488"
+checksum = "sha256:74b7fd080b8409e54b9abf910963caf1e909fc54b78fe6ac1763ed2cc225c92c"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-linux-arm64-musl.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030059"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64"]
-checksum = "sha256:9686b0fb1eefbd7f2cc1f53f932516c29cd605e9d976223323a6c6e9a4c9c7fe"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018803"
+checksum = "sha256:4d2cde1b749a0c9badcb7ad2ac49d735eebb66b5d503b6e073b81e356ffd5f54"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030426"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64-baseline"]
-checksum = "sha256:9686b0fb1eefbd7f2cc1f53f932516c29cd605e9d976223323a6c6e9a4c9c7fe"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018803"
+checksum = "sha256:4d2cde1b749a0c9badcb7ad2ac49d735eebb66b5d503b6e073b81e356ffd5f54"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030426"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64-musl"]
-checksum = "sha256:ba798cbed37b7b108cc5898dee27320321eb7e4717081b7ea611c907d2bab3ff"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018492"
+checksum = "sha256:5cedf0900b6ea61a565a2a96b53ffe652b2b0ffe097c55abe1f553792d8eb1e4"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030062"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:ba798cbed37b7b108cc5898dee27320321eb7e4717081b7ea611c907d2bab3ff"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018492"
+checksum = "sha256:5cedf0900b6ea61a565a2a96b53ffe652b2b0ffe097c55abe1f553792d8eb1e4"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030062"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.macos-arm64"]
-checksum = "sha256:b0dc23f2d8c3ef55b2b22f03ef204e98b06b22b6c51a15b66d263b13442c4e03"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018486"
+checksum = "sha256:a7164556091e10d326d891c7c032efb8dae64378cd453012a8f08a2f829da1c4"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030064"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.macos-x64"]
-checksum = "sha256:ea9d1cf6cc3284450208f0e7045849022b6da558000d6f0699d96515f0fd2a0d"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018499"
+checksum = "sha256:ad2c5f581891ab1239592b9b6ef8f70ce3a5b2b229f854394ddf6ba1a943cde6"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030066"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.macos-x64-baseline"]
-checksum = "sha256:ea9d1cf6cc3284450208f0e7045849022b6da558000d6f0699d96515f0fd2a0d"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018499"
+checksum = "sha256:ad2c5f581891ab1239592b9b6ef8f70ce3a5b2b229f854394ddf6ba1a943cde6"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030066"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.windows-x64"]
-checksum = "sha256:682cfcfe2f5ea528b53aa1e85e797061cce72b0c6b42b023f0ef64963d10304a"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-win32-x64.zip"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018888"
+checksum = "sha256:c7b67bd7a404796a7ccb69fca8ebb08580b65b1c76e4f153a80502859dafa4c8"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-win32-x64.zip"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030466"
 provenance = "github-attestations"
 
 [tools."github:anthropics/claude-code"."platforms.windows-x64-baseline"]
-checksum = "sha256:682cfcfe2f5ea528b53aa1e85e797061cce72b0c6b42b023f0ef64963d10304a"
-url = "https://github.com/anthropics/claude-code/releases/download/v2.1.325/claude-win32-x64.zip"
-url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/745018888"
+checksum = "sha256:c7b67bd7a404796a7ccb69fca8ebb08580b65b1c76e4f153a80502859dafa4c8"
+url = "https://github.com/anthropics/claude-code/releases/download/v2.1.330/claude-win32-x64.zip"
+url_api = "https://api.github.com/repos/anthropics/claude-code/releases/assets/773030466"
 provenance = "github-attestations"
 
 [[tools."github:aquaproj/aqua"]]
@@ -4230,145 +4230,145 @@ url_api = "https://api.github.com/repos/aquaproj/aqua/releases/assets/711375037"
 provenance = "github-attestations"
 
 [[tools."github:backnotprop/plannotator"]]
-version = "0.28.66"
+version = "0.29.3"
 backend = "github:backnotprop/plannotator"
-specifiers = ["v0.28.66"]
+specifiers = ["v0.29.3"]
 
 [tools."github:backnotprop/plannotator"."platforms.linux-arm64"]
-checksum = "sha256:8f6388b7b9106d8260002dccee92d219f58d09c66f53400b6c3d90a326446bf9"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-linux-arm64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808069"
+checksum = "sha256:e60088233bf3131b9c0d345db47c860cc459f7c5270edf845e9f21f9139760cb"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-linux-arm64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568936"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-arm64-musl"]
-checksum = "sha256:8f6388b7b9106d8260002dccee92d219f58d09c66f53400b6c3d90a326446bf9"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-linux-arm64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808069"
+checksum = "sha256:e60088233bf3131b9c0d345db47c860cc459f7c5270edf845e9f21f9139760cb"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-linux-arm64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568936"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64"]
-checksum = "sha256:a099dfc1950e44cfd1e232b237b325901f07b7f427f1c46166d88fd66d4d4ce8"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-linux-x64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808042"
+checksum = "sha256:3bc904eadee006393eee05c4439e2b2fa180a1db8126e03ae9403af3bcac98b0"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-linux-x64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568914"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-baseline"]
-checksum = "sha256:a099dfc1950e44cfd1e232b237b325901f07b7f427f1c46166d88fd66d4d4ce8"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-linux-x64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808042"
+checksum = "sha256:3bc904eadee006393eee05c4439e2b2fa180a1db8126e03ae9403af3bcac98b0"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-linux-x64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568914"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl"]
-checksum = "sha256:a099dfc1950e44cfd1e232b237b325901f07b7f427f1c46166d88fd66d4d4ce8"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-linux-x64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808042"
+checksum = "sha256:3bc904eadee006393eee05c4439e2b2fa180a1db8126e03ae9403af3bcac98b0"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-linux-x64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568914"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:a099dfc1950e44cfd1e232b237b325901f07b7f427f1c46166d88fd66d4d4ce8"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-linux-x64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808042"
+checksum = "sha256:3bc904eadee006393eee05c4439e2b2fa180a1db8126e03ae9403af3bcac98b0"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-linux-x64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568914"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-arm64"]
-checksum = "sha256:748d26deeecc4845905182bc8216f3eebb5748e204ab632da027945e3f7be67d"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-darwin-arm64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808065"
+checksum = "sha256:a62f0afe4daa9895f6a4641fc8238238ab4e6cf088d885f28b82a32212161e98"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-darwin-arm64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568926"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-x64"]
-checksum = "sha256:ad36a71729abf0958366d5f6298e50bbbe1ca8a02c68fc6ee98808e4e09bb0bb"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-darwin-x64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808155"
+checksum = "sha256:889a94d6c2ae3e8e90302295fd3d6b8b46dfabd029d53c46c66bfa5d7de00a50"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-darwin-x64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568944"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.macos-x64-baseline"]
-checksum = "sha256:ad36a71729abf0958366d5f6298e50bbbe1ca8a02c68fc6ee98808e4e09bb0bb"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-darwin-x64.tar.xz"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808155"
+checksum = "sha256:889a94d6c2ae3e8e90302295fd3d6b8b46dfabd029d53c46c66bfa5d7de00a50"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-darwin-x64.tar.xz"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568944"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.windows-x64"]
-checksum = "sha256:431fb3ad6934b41970a690c215f2cb199179dc0b0733e37341ccacd9bffbabd5"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-win32-x64.exe"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808029"
+checksum = "sha256:f1a277b041773eea37ac86bdc5bfa8d2404298c2a529c5458603b316284d7a8f"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-win32-x64.exe"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568917"
 provenance = "github-attestations"
 
 [tools."github:backnotprop/plannotator"."platforms.windows-x64-baseline"]
-checksum = "sha256:431fb3ad6934b41970a690c215f2cb199179dc0b0733e37341ccacd9bffbabd5"
-url = "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-win32-x64.exe"
-url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/753808029"
+checksum = "sha256:f1a277b041773eea37ac86bdc5bfa8d2404298c2a529c5458603b316284d7a8f"
+url = "https://github.com/backnotprop/plannotator/releases/download/v0.29.3/plannotator-win32-x64.exe"
+url_api = "https://api.github.com/repos/backnotprop/plannotator/releases/assets/783568917"
 provenance = "github-attestations"
 
 [[tools."github:cesarferreira/stax"]]
-version = "0.120.0"
+version = "0.121.0"
 backend = "github:cesarferreira/stax"
-specifiers = ["v0.120.0"]
+specifiers = ["v0.121.0"]
 
 [tools."github:cesarferreira/stax"."platforms.linux-arm64"]
-checksum = "sha256:fe0342c297676a07b46943fef88b408f6dab8b643f2a25755948769cab146a79"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126486"
+checksum = "sha256:07019feb7c80ea7a5bc916dcf357702433c83d1d3660da143894b7fc41a5d451"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026582"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.linux-arm64-musl"]
-checksum = "sha256:fe0342c297676a07b46943fef88b408f6dab8b643f2a25755948769cab146a79"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126486"
+checksum = "sha256:07019feb7c80ea7a5bc916dcf357702433c83d1d3660da143894b7fc41a5d451"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026582"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.linux-x64"]
-checksum = "sha256:f8c094c411557c1171cd6dd76a80c9493e0853abe07492c942a68ffc56cc2e73"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126481"
+checksum = "sha256:a1c572f1335c47f9f00f414781a685322677b5f18e30aadaa88f687781a8d85f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026581"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.linux-x64-baseline"]
-checksum = "sha256:f8c094c411557c1171cd6dd76a80c9493e0853abe07492c942a68ffc56cc2e73"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126481"
+checksum = "sha256:a1c572f1335c47f9f00f414781a685322677b5f18e30aadaa88f687781a8d85f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026581"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.linux-x64-musl"]
-checksum = "sha256:f8c094c411557c1171cd6dd76a80c9493e0853abe07492c942a68ffc56cc2e73"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126481"
+checksum = "sha256:a1c572f1335c47f9f00f414781a685322677b5f18e30aadaa88f687781a8d85f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026581"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:f8c094c411557c1171cd6dd76a80c9493e0853abe07492c942a68ffc56cc2e73"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126481"
+checksum = "sha256:a1c572f1335c47f9f00f414781a685322677b5f18e30aadaa88f687781a8d85f"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026581"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.macos-arm64"]
-checksum = "sha256:5ca23c608f5cb01f0a3090adb1a814151a138dd04d3bf755b195db455803655f"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126484"
+checksum = "sha256:6af71c0de0aaa89eacaffe72da5ab5f4e0d3c107cf52632c234db008acc0b8a1"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026583"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.macos-x64"]
-checksum = "sha256:2ba38935d8729e5cbf88d5618df5a6f0796ee0defaa60a6321f9d106a3708037"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126490"
+checksum = "sha256:51aea3ef4f74295c033ca11c7ac97d5e93ef9c76aed2d75dab12cf1108cc57d9"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026579"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.macos-x64-baseline"]
-checksum = "sha256:2ba38935d8729e5cbf88d5618df5a6f0796ee0defaa60a6321f9d106a3708037"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126490"
+checksum = "sha256:51aea3ef4f74295c033ca11c7ac97d5e93ef9c76aed2d75dab12cf1108cc57d9"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026579"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.windows-x64"]
-checksum = "sha256:bb0055ac3b9cb29187c997cb5dfd448b6523031d3c2c5a8e19f2d55cd76b6723"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126487"
+checksum = "sha256:0d6b8942a277d51db455fe41e6af7c387a3aacf764f108cb5468db59470ff156"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026580"
 provenance = "github-attestations"
 
 [tools."github:cesarferreira/stax"."platforms.windows-x64-baseline"]
-checksum = "sha256:bb0055ac3b9cb29187c997cb5dfd448b6523031d3c2c5a8e19f2d55cd76b6723"
-url = "https://github.com/cesarferreira/stax/releases/download/v0.120.0/stax-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/747126487"
+checksum = "sha256:0d6b8942a277d51db455fe41e6af7c387a3aacf764f108cb5468db59470ff156"
+url = "https://github.com/cesarferreira/stax/releases/download/v0.121.0/stax-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/cesarferreira/stax/releases/assets/770026580"
 provenance = "github-attestations"
 
 [[tools."github:dlvhdr/gh-dash"]]
@@ -4656,74 +4656,74 @@ url_api = "https://api.github.com/repos/github/gh-stack/releases/assets/67982684
 provenance = "github-attestations"
 
 [[tools."github:janosmiko/lfk"]]
-version = "0.19.18"
+version = "0.19.20"
 backend = "github:janosmiko/lfk"
-specifiers = ["v0.19.18"]
+specifiers = ["v0.19.20"]
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64"]
-checksum = "sha256:6e810dcfbc29526a75ab0177ddd37913e8116b89bcc3886eb5c0dd280f724178"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750334017"
+checksum = "sha256:422e7eb4605d46bc86e69fac0eab9d4cdb0f1248a431d1db66726c1683aa9ed1"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903674"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-arm64-musl"]
-checksum = "sha256:6e810dcfbc29526a75ab0177ddd37913e8116b89bcc3886eb5c0dd280f724178"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750334017"
+checksum = "sha256:422e7eb4605d46bc86e69fac0eab9d4cdb0f1248a431d1db66726c1683aa9ed1"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903674"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64"]
-checksum = "sha256:90a63e349087b5cf0b6ca7c2dcab8a393abcc3b36d3f5a3500573ce5acc45d89"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333919"
+checksum = "sha256:a286d4b6f492eec82ffbee6ec626623cc868c31861a94bbb6e6ea82d7f5731e2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903547"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-baseline"]
-checksum = "sha256:90a63e349087b5cf0b6ca7c2dcab8a393abcc3b36d3f5a3500573ce5acc45d89"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333919"
+checksum = "sha256:a286d4b6f492eec82ffbee6ec626623cc868c31861a94bbb6e6ea82d7f5731e2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903547"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl"]
-checksum = "sha256:90a63e349087b5cf0b6ca7c2dcab8a393abcc3b36d3f5a3500573ce5acc45d89"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333919"
+checksum = "sha256:a286d4b6f492eec82ffbee6ec626623cc868c31861a94bbb6e6ea82d7f5731e2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903547"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:90a63e349087b5cf0b6ca7c2dcab8a393abcc3b36d3f5a3500573ce5acc45d89"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333919"
+checksum = "sha256:a286d4b6f492eec82ffbee6ec626623cc868c31861a94bbb6e6ea82d7f5731e2"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903547"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-arm64"]
-checksum = "sha256:1216feae0e37ef3703dbe42caae67e2212c9470cba00ba971fa29ef6e126c45d"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333923"
+checksum = "sha256:4f6d2a2f567cc587dae1b11e30946d96ecdd1bd04dca566d20f27ac04355a823"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903701"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-x64"]
-checksum = "sha256:baa800b933822863805b82d306a3ac88f94894be94bc9f737e7cc863364e1a08"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750334022"
+checksum = "sha256:d3da549f17fcd32426d28621db587cce20ae6ac44ac393bd8f2eee3928e97aac"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903535"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.macos-x64-baseline"]
-checksum = "sha256:baa800b933822863805b82d306a3ac88f94894be94bc9f737e7cc863364e1a08"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750334022"
+checksum = "sha256:d3da549f17fcd32426d28621db587cce20ae6ac44ac393bd8f2eee3928e97aac"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903535"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.windows-x64"]
-checksum = "sha256:ac9f1c96ca58c3859b8fc10189dbfb13e3aaea391232c6713e5db97a0d3970a5"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_windows_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333924"
+checksum = "sha256:03b244526b0b77d4b8cc3285fe9c1bfcd5653a7eed82468a2b0b4b692f24c334"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903536"
 provenance = "github-attestations"
 
 [tools."github:janosmiko/lfk"."platforms.windows-x64-baseline"]
-checksum = "sha256:ac9f1c96ca58c3859b8fc10189dbfb13e3aaea391232c6713e5db97a0d3970a5"
-url = "https://github.com/janosmiko/lfk/releases/download/v0.19.18/lfk_0.19.18_windows_amd64.zip"
-url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/750333924"
+checksum = "sha256:03b244526b0b77d4b8cc3285fe9c1bfcd5653a7eed82468a2b0b4b692f24c334"
+url = "https://github.com/janosmiko/lfk/releases/download/v0.19.20/lfk_0.19.20_windows_amd64.zip"
+url_api = "https://api.github.com/repos/janosmiko/lfk/releases/assets/782903536"
 provenance = "github-attestations"
 
 [[tools."github:kitlangton/ghui"]]
@@ -4790,74 +4790,74 @@ url = "https://github.com/kitlangton/ghui/releases/download/v0.9.1/ghui-darwin-x
 url_api = "https://api.github.com/repos/kitlangton/ghui/releases/assets/541361928"
 
 [[tools."github:max-sixty/worktrunk"]]
-version = "0.82.0"
+version = "0.83.0"
 backend = "github:max-sixty/worktrunk"
-specifiers = ["v0.82.0"]
+specifiers = ["v0.83.0"]
 
 [tools."github:max-sixty/worktrunk"."platforms.linux-arm64"]
-checksum = "sha256:b907f891bc051dcfc13fa479194e156b356f434a37103522ea1fe1b7ded899b5"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-aarch64-unknown-linux-musl.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809897"
+checksum = "sha256:92c68827a18b037c608b7728bcf7ce1d594771ac814bec7412a35129f276d4ae"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-aarch64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207072"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.linux-arm64-musl"]
-checksum = "sha256:b907f891bc051dcfc13fa479194e156b356f434a37103522ea1fe1b7ded899b5"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-aarch64-unknown-linux-musl.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809897"
+checksum = "sha256:92c68827a18b037c608b7728bcf7ce1d594771ac814bec7412a35129f276d4ae"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-aarch64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207072"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.linux-x64"]
-checksum = "sha256:d1e38cf36d8c14ef0682a6d6617f8a512b1a971feb3dfa437419d00136e19a3e"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809966"
+checksum = "sha256:e0dd5e5eb365890ddc7b255183c227e441fbb7da04cab5b72e54fa80fd21818b"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207130"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.linux-x64-baseline"]
-checksum = "sha256:d1e38cf36d8c14ef0682a6d6617f8a512b1a971feb3dfa437419d00136e19a3e"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809966"
+checksum = "sha256:e0dd5e5eb365890ddc7b255183c227e441fbb7da04cab5b72e54fa80fd21818b"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207130"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.linux-x64-musl"]
-checksum = "sha256:d1e38cf36d8c14ef0682a6d6617f8a512b1a971feb3dfa437419d00136e19a3e"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809966"
+checksum = "sha256:e0dd5e5eb365890ddc7b255183c227e441fbb7da04cab5b72e54fa80fd21818b"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207130"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:d1e38cf36d8c14ef0682a6d6617f8a512b1a971feb3dfa437419d00136e19a3e"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809966"
+checksum = "sha256:e0dd5e5eb365890ddc7b255183c227e441fbb7da04cab5b72e54fa80fd21818b"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207130"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.macos-arm64"]
-checksum = "sha256:6945bc82e0513d0b974c99fb1d30de24e448697fd533ed6b3f442c66a1b3620c"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-aarch64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809895"
+checksum = "sha256:5e489089672b553b6277595875ef3479df011755153021c84def90eddaeef7b8"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207071"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.macos-x64"]
-checksum = "sha256:d9c87668baa1aad2b44d5bfb08074609c5e4a186a0948dfed6e65d6e6c5a7744"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809933"
+checksum = "sha256:9e7f92a037b7dc8cb216a0f323ece11d7ee813572a7762d62fb36c88f33ba917"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207096"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.macos-x64-baseline"]
-checksum = "sha256:d9c87668baa1aad2b44d5bfb08074609c5e4a186a0948dfed6e65d6e6c5a7744"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-apple-darwin.tar.xz"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809933"
+checksum = "sha256:9e7f92a037b7dc8cb216a0f323ece11d7ee813572a7762d62fb36c88f33ba917"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207096"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.windows-x64"]
-checksum = "sha256:224325f876b7e4f381255222e18130d8a7575e2c4284baaba4b233f9c56e35a8"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809945"
+checksum = "sha256:db4f76d81db05ac076566511948a5c8fa792910a7dcb15a1ac23a5409298fae8"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207120"
 provenance = "github-attestations"
 
 [tools."github:max-sixty/worktrunk"."platforms.windows-x64-baseline"]
-checksum = "sha256:224325f876b7e4f381255222e18130d8a7575e2c4284baaba4b233f9c56e35a8"
-url = "https://github.com/max-sixty/worktrunk/releases/download/v0.82.0/worktrunk-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/748809945"
+checksum = "sha256:db4f76d81db05ac076566511948a5c8fa792910a7dcb15a1ac23a5409298fae8"
+url = "https://github.com/max-sixty/worktrunk/releases/download/v0.83.0/worktrunk-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/max-sixty/worktrunk/releases/assets/776207120"
 provenance = "github-attestations"
 
 [[tools."github:modem-dev/hunk"]]
@@ -5558,49 +5558,49 @@ checksum = "sha256:178ab98950ac69ab25069307dc6ade79f3816e414cce95b4da166a115cde1
 url = "https://dl.google.com/go/go1.27.4.windows-amd64.zip"
 
 [[tools."http:droid"]]
-version = "1.13.1"
+version = "1.19.0"
 backend = "http:droid"
-specifiers = ["1.13.1"]
+specifiers = ["1.19.0"]
 unsupported_platforms = [
     "windows-x64",
     "windows-x64-baseline",
 ]
 
 [tools."http:droid"."platforms.linux-arm64"]
-checksum = "sha256:7a3e3b52983fd75bafee5b8fdcfa108b2693a5cd4006d4323b934b97e00ee05d"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/linux/arm64/droid"
+checksum = "sha256:a3d8885f8862fc1e8e8f8a112caeb268e5cf2596abe6a83aaf8f7e9d19e938f5"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/linux/arm64/droid"
 
 [tools."http:droid"."platforms.linux-arm64-musl"]
-checksum = "sha256:7a3e3b52983fd75bafee5b8fdcfa108b2693a5cd4006d4323b934b97e00ee05d"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/linux/arm64/droid"
+checksum = "sha256:a3d8885f8862fc1e8e8f8a112caeb268e5cf2596abe6a83aaf8f7e9d19e938f5"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/linux/arm64/droid"
 
 [tools."http:droid"."platforms.linux-x64"]
-checksum = "sha256:2c15b2204638e022d04d8288ce767d98c0141b31eff37d43fcc2ade9c2e54316"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/linux/x64/droid"
+checksum = "sha256:28051e5ec83b8eb53ed4b8e270a1a496af57e5b3442ba402078aae342acf02e2"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.linux-x64-baseline"]
-checksum = "sha256:2c15b2204638e022d04d8288ce767d98c0141b31eff37d43fcc2ade9c2e54316"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/linux/x64/droid"
+checksum = "sha256:28051e5ec83b8eb53ed4b8e270a1a496af57e5b3442ba402078aae342acf02e2"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.linux-x64-musl"]
-checksum = "sha256:2c15b2204638e022d04d8288ce767d98c0141b31eff37d43fcc2ade9c2e54316"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/linux/x64/droid"
+checksum = "sha256:28051e5ec83b8eb53ed4b8e270a1a496af57e5b3442ba402078aae342acf02e2"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:2c15b2204638e022d04d8288ce767d98c0141b31eff37d43fcc2ade9c2e54316"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/linux/x64/droid"
+checksum = "sha256:28051e5ec83b8eb53ed4b8e270a1a496af57e5b3442ba402078aae342acf02e2"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/linux/x64/droid"
 
 [tools."http:droid"."platforms.macos-arm64"]
-checksum = "sha256:fd2b03090080d45e034bccc71837a25d1f39e0a4ec8063bf9e4f20ab40ab0a54"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/darwin/arm64/droid"
+checksum = "sha256:82e03f60edf7dc09e33bf9b3ff0e6a2347974604be4e6e5fa8fbaa2c436e3723"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/darwin/arm64/droid"
 
 [tools."http:droid"."platforms.macos-x64"]
-checksum = "sha256:811a11420535b5f0a958c7121347d10a04b6961374e91887f4fceaf0d9713769"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/darwin/x64/droid"
+checksum = "sha256:440856b64ff0c89123c26b50971365d0a79572a04aff902a57a0ab98274cd7c3"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/darwin/x64/droid"
 
 [tools."http:droid"."platforms.macos-x64-baseline"]
-checksum = "sha256:811a11420535b5f0a958c7121347d10a04b6961374e91887f4fceaf0d9713769"
-url = "https://downloads.factory.ai/factory-cli/releases/1.13.1/darwin/x64/droid"
+checksum = "sha256:440856b64ff0c89123c26b50971365d0a79572a04aff902a57a0ab98274cd7c3"
+url = "https://downloads.factory.ai/factory-cli/releases/1.19.0/darwin/x64/droid"
 
 [[tools.node]]
 version = "26.13.1"
@@ -5670,16 +5670,16 @@ backend = "npm:bash-language-server"
 specifiers = ["5.8.1"]
 
 [[tools."npm:ctx7"]]
-version = "0.12.2"
-aube = { path = ".mise/locks/npm-ctx7/0.12.2", digest = "sha256:8a9184b2aeb0d80320b568ad9ed830a352ccdf00db1fb00339eec98ff3fbe3a6" }
+version = "0.13.0"
+aube = { path = ".mise/locks/npm-ctx7/0.13.0", digest = "sha256:4e22f463ac7424ba50e673fbb46e70051985215f2a71564e236e4b2650fa8f0a" }
 backend = "npm:ctx7"
-specifiers = ["0.12.2"]
+specifiers = ["0.13.0"]
 
 [[tools."npm:markdownlint-cli"]]
-version = "0.50.0"
-aube = { path = ".mise/locks/npm-markdownlint-cli/0.50.0", digest = "sha256:3742ce7aa88f2d513fc74394d83f191e9a99c779ae1bd1362c407cecd220af3f" }
+version = "0.50.1"
+aube = { path = ".mise/locks/npm-markdownlint-cli/0.50.1", digest = "sha256:69a5c7b8110d58cb5854a3bb8152f2e72853683b2f2fea3413bd66dca2480714" }
 backend = "npm:markdownlint-cli"
-specifiers = ["0.50.0"]
+specifiers = ["0.50.1"]
 
 [[tools."npm:opkg"]]
 version = "0.11.3"
