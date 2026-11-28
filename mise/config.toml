@@ -38,7 +38,7 @@ node = "26.13.1"
 # Locked yamllint dependencies need wheels; do not inherit the host Python.
 python = "3.14"
 rust = "1.100.0"
-usage = "7.4.0"
+usage = "7.4.1"
 
 ## tools
 
@@ -47,7 +47,7 @@ usage = "7.4.0"
 amazon-ecr-credential-helper = "0.13.0"
 # Browser automation CLI for AI agents
 #  https://github.com/vercel-labs/agent-browser
-"aqua:vercel-labs/agent-browser" = "0.43.0"
+"aqua:vercel-labs/agent-browser" = "0.44.0"
 # A CLI tool for code structural search, lint and rewriting
 #  https://github.com/ast-grep/ast-grep
 "aqua:ast-grep/ast-grep" = "0.51.3"
@@ -68,13 +68,13 @@ amazon-ecr-credential-helper = "0.13.0"
 "aqua:twpayne/chezmoi" = "2.74.2"
 #  https://code.claude.com/docs
 #  https://github.com/anthropics/claude-code/
-"github:anthropics/claude-code" = "v2.1.330"
+"github:anthropics/claude-code" = "v2.1.331"
 # GitHub's official command line tool
 #   https://github.com/cli/cli
 "aqua:cli/cli" = "2.105.0"
 # OpenAI's Lightweight coding agent that runs in your terminal
 #  https://github.com/openai/codex
-"aqua:openai/codex" = "rust-v0.171.0"
+"aqua:openai/codex" = "rust-v0.172.0"
 # Context7 Platform - Up-to-date code documentation for LLMs and AI code editors
 #  https://github.com/upstash/context7
 "npm:ctx7" = "0.13.0"
@@ -244,7 +244,7 @@ amazon-ecr-credential-helper = "0.13.0"
 "aqua:stern/stern" = "1.35.0"
 # a modern Linux distribution built for Kubernetes
 #  https://github.com/siderolabs/talos
-"aqua:siderolabs/talos" = "1.14.6"
+"aqua:siderolabs/talos" = "1.14.7"
 # trunk.io
 #   https://github.com/trunk-io/launcher
 "npm:@trunkio/launcher" = "1.3.4"
@@ -257,7 +257,7 @@ amazon-ecr-credential-helper = "0.13.0"
 # workspace manager for your temporary experiments
 #  https://github.com/tassiovirginio/try-rs
 # Upstream publishes Linux x64 and Windows x64 binaries only; Homebrew provides macOS.
-"github:tassiovirginio/try-rs" = { version = "v1.7.14", os = [
+"github:tassiovirginio/try-rs" = { version = "v1.7.15", os = [
   "linux/x64",
   "windows/x64",
 ] }
@@ -280,10 +280,10 @@ amazon-ecr-credential-helper = "0.13.0"
 "aqua:ajeetdsouza/zoxide" = "0.10.0"
 # terminal workspace with batteries included
 #   https://github.com/zellij-org/zellij
-"aqua:zellij-org/zellij" = "0.46.0"
+"aqua:zellij-org/zellij" = "0.46.1"
 # ZenNotes TUI
 #   https://github.com/ZenNotes/tui
-"github:ZenNotes/tui" = "v0.18.1"
+"github:ZenNotes/tui" = "v0.18.2"
 
 # linters & language servers
 # dotfiles baseline; language-specific tools belong in projects
@@ -307,7 +307,7 @@ amazon-ecr-credential-helper = "0.13.0"
 #  https://docs.factory.ai/droid-cli/cli-reference
 # renovate: datasource=npm depName=droid
 [tools."http:droid"]
-version = "1.19.0"
+version = "1.20.0"
 bin = "droid"
 
 [tools."http:droid".platforms]
